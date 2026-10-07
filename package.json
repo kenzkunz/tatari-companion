@@ -1,0 +1,12 @@
+{
+  "name": "milkroad-companion",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/check.mjs && node engine-check.mjs",
+    "preview": "node scripts/preview.mjs"
+  }
+}
