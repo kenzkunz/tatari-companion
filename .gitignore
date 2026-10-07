@@ -1,0 +1,10 @@
+_site/
+node_modules/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+.sites-runtime/
+outputs/
