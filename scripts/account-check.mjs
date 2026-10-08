@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {validateDojoLevels,emptyDojoLevels,accountBadgeIds,websiteUrl} from '../dist/account-model.mjs';
+import {validateDojoLevels,emptyDojoLevels,accountBadgeIds,websiteUrl,profileContactValues,sharedContacts} from '../dist/account-model.mjs';
 const data=JSON.parse(await readFile(new URL('../dist/tatari-data/roster.json',import.meta.url),'utf8'));
 assert.deepEqual(accountBadgeIds(data,emptyDojoLevels()),[]);
 assert.deepEqual(accountBadgeIds(data,{'2':5,'3':0,'4':0,'6':0,'5':0}),[1001,1002,1003,1004,1005]);
@@ -10,3 +10,8 @@ assert.equal(websiteUrl('./account.html','http://127.0.0.1:4181/tatari-companion
 const sql=await readFile('supabase/001_accounts.sql','utf8');for(const table of ['profiles','user_settings'])assert(sql.includes('alter table public.'+table+' enable row level security'));
 const callback=await readFile('dist/auth/callback.mjs','utf8');assert(callback.includes('getSession'));assert(!callback.includes('searchParams.get(\'next\')'));
 console.log('Passed account dojo validation, badge export, callback base paths and migration security structure (offline only).');
+
+const profile=profileContactValues({displayName:' Player ',gameId:' 123 ',discordUsername:' user.name '});assert.deepEqual(sharedContacts(profile),{game_id:'',discord_username:''});
+assert.deepEqual(sharedContacts({...profile,share_game_id:true}),{game_id:'123',discord_username:''});assert.deepEqual(sharedContacts({...profile,share_discord:true}),{game_id:'',discord_username:'user.name'});
+assert.throws(()=>profileContactValues({displayName:'',gameId:'',discordUsername:''}));
+console.log('Passed contact validation and default-hidden independent sharing flags.');
