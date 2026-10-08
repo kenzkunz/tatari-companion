@@ -1,0 +1,1 @@
+export function inventoryStatus(card,quantity,goldExchange=false){if(!Number.isInteger(quantity)||quantity<0)throw Error('Invalid quantity');return {owned:quantity>0,missing:quantity===0,duplicates:Math.max(0,quantity-1),tradeable:quantity>=2&&(!card.gold||goldExchange),label:quantity===0?'LF':quantity===1?'Owned':card.gold&&!goldExchange?'Gold locked':'FT'};}
