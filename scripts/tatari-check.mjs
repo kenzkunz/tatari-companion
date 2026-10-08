@@ -21,3 +21,7 @@ assert.deepEqual(frost.forms.map(f=>databaseDefaults(frost,f)),[{stars:0,foodSta
 assert.equal(compactStat(11669.73),'11.66K');assert.equal(compactStat(122087.2),'122.08K');assert.equal(compactStat(1234567.89),'1.23M');assert.equal(compactStat(999.99),'999');
 for(const u of data.units)for(const f of u.forms){const defaults=databaseDefaults(u,f);if(defaults.stars!==null&&defaults.foodStage!==null)assert(Object.values(calculatedStats(data,u,f,defaults)).every(Number.isFinite));}
 console.log('Passed automatic evolution defaults and compact floor formatting.');
+
+assert(!/#\.[A-Za-z][A-Za-z0-9]*#/.test(JSON.stringify(data)), 'Unresolved skill text placeholder');
+
+for(const u of data.units)for(const f of u.forms)for(const skills of Object.values(f.skills))assert(skills.every(s=>!JSON.stringify(s.name).includes('不用翻译')), 'Internal helper skill leaked into public cards');
