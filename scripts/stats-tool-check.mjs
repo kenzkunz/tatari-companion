@@ -12,3 +12,8 @@ for(const unit of data.units)for(const form of unit.forms)for(const stars of [1,
 console.log('Passed stats tool sample, badge modes, input boundaries, comparisons and every Tatari form.');
 
 assert.deepEqual(dojoBadgeIds(data,2,4),[1001,1002,1003,1004,1005]);assert.equal(dojoBadgeIds(data,2,6).length,7);
+
+const allElements=[2,3,4,6,5];for(const e of allElements)assert.equal(dojoBadgeIds(data,e,6).length,7);
+const allBadges=allElements.flatMap(e=>dojoBadgeIds(data,e,6));assert.equal(new Set(allBadges).size,35);
+assert.deepEqual(resolveBuild(data,{...input,badges:[...input.badges,...dojoBadgeIds(data,3,6)]}).values,result.values);
+console.log('Passed all five dojo selections; stat bonuses remain matched to the selected Tatari element.');
