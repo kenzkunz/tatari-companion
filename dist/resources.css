@@ -7,3 +7,5 @@
 
 .modifier>img{width:auto;height:48px;max-width:60px;flex-shrink:0;object-fit:contain}.need-mode .modifier-grid{grid-template-columns:1fr}.preview-heading{margin-bottom:16px}
 .multipliers button,.multipliers button[aria-pressed=true]{color:#3b2416;text-shadow:none}
+
+.mobile-section-toggle{display:none}@media(max-width:600px){.desktop-section-label{display:none}.calculator-content .mobile-collapsible h2{margin-left:0}.mobile-section-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;border:0;background:none;color:#232838;padding:8px 4px;font:inherit;text-align:left;cursor:pointer}.mobile-section-toggle::after{content:'▾';font-size:20px}.mobile-section-toggle[aria-expanded=false]::after{content:'▸'}.mobile-collapsible.segment-collapsed>.mobile-section-body{display:none}.calculator-panel{min-height:0}.calculator-content section{margin-top:20px}}

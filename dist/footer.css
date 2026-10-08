@@ -2,3 +2,6 @@
 @media(max-width:600px){.footer-inner{padding:26px 20px;gap:14px}.footer-mark{width:30px;height:30px}.footer-copy h2{font-size:15px;margin-bottom:12px}.footer-copy p{font-size:14px}.footer-copy .last-update{margin-top:18px}}
 .site-footer{display:block;padding:0;margin:0}
 @media(max-width:600px){.footer-copy .desktop-break{display:none}}
+
+@media(max-width:600px){.footer-copy h2{font-size:12px;line-height:1.4;margin-bottom:9px}.footer-copy p{font-size:10px;line-height:1.5;margin-bottom:10px}.footer-inner{padding:20px 16px;gap:10px}.footer-mark{width:24px;height:24px}}
+@media(min-width:601px){.footer-copy h2{font-size:13px;margin-bottom:12px}.footer-copy p{font-size:11px;line-height:1.5;margin-bottom:11px}}

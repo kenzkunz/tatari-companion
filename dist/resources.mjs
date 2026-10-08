@@ -41,3 +41,12 @@ $('amount').oninput=()=>{options();schedule();};$('amount').onblur=()=>{try{$('a
 $('event').onchange=()=>{$('event-icon').src='/assets/'+eventIcons[$('event').value];schedule();};
 $('refire').onclick=()=>{refire=!refire;$('refire').setAttribute('aria-checked',String(refire));schedule();};$('gold').onclick=()=>{gold=!gold;$('gold').setAttribute('aria-checked',String(gold));schedule();};
 try{const response=await fetch('/data.json');if(!response.ok)throw Error('Could not load calculator data.');data=await response.json();options();schedule();}catch(error){$('calc-status').textContent=error.message;}
+
+for(const section of document.querySelectorAll('.calculator-content>section')){
+ const heading=section.querySelector('h2');if(!heading||!['Multiplier','Modifier','Quick Tips'].includes(heading.textContent.trim()))continue;
+ const title=heading.textContent.trim(),body=document.createElement('div'),button=document.createElement('button'),label=document.createElement('span');
+ section.classList.add('mobile-collapsible');body.className='mobile-section-body';body.id='mobile-'+title.toLowerCase().replaceAll(' ','-')+'-body';
+ while(heading.nextSibling)body.append(heading.nextSibling);section.append(body);label.className='desktop-section-label';label.textContent=title;
+ button.type='button';button.className='mobile-section-toggle';button.setAttribute('aria-expanded','true');button.setAttribute('aria-controls',body.id);button.textContent=title;
+ button.onclick=()=>{const collapsed=section.classList.toggle('segment-collapsed');button.setAttribute('aria-expanded',String(!collapsed));};heading.replaceChildren(label,button);
+}
