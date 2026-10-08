@@ -12,3 +12,6 @@ export function calculatedStats(data,unit,form,{stars,foodStage,badgeIds=[],auro
  if(form.evolution>=4||lowerTierSpa)for(const id of new Set(spaIds)){const effect=data.spa.find(s=>s.id===Number(id));if(effect)bonuses[effect.stat.slice(0,-2)]+=effect[spaGuest?'guest':'owner'];}
  const core=coreStats(standard,star,form.growth);return Object.fromEntries(Object.keys(core).map(a=>[a,core[a]*(1+bonuses[a]/100)]));
 }
+
+export function databaseDefaults(unit,form){return {stars:minimumStars(unit,form),foodStage:form.evolution<=2?0:form.evolution===3?3:[...unit.feedingStages].sort((a,b)=>a.stage-b.stage).find(r=>['ATK','HP','DEF'].every(a=>r[a+'PR']>=25))?.stage??null};}
+export function compactStat(value){const n=Math.floor(value);if(n>=1000000)return (Math.floor(value/10000)/100).toFixed(2)+'M';if(n>=1000)return (Math.floor(value/10)/100).toFixed(2)+'K';return String(n);}
