@@ -25,3 +25,8 @@ console.log('Passed automatic evolution defaults and compact floor formatting.')
 assert(!/#\.[A-Za-z][A-Za-z0-9]*#/.test(JSON.stringify(data)), 'Unresolved skill text placeholder');
 
 for(const u of data.units)for(const f of u.forms)for(const skills of Object.values(f.skills))assert(skills.every(s=>!JSON.stringify(s.name).includes('不用翻译')), 'Internal helper skill leaked into public cards');
+
+const hordeIds=new Set();for(const u of data.units)for(const f of u.forms){assert(f.skills.normal.every(s=>!JSON.stringify(s.name).includes('不用翻译')));for(const s of f.skills.horde){hordeIds.add(s.id);assert(s.details.length>0,'Missing Horde details '+s.id);assert([3,5,7].includes(s.unlockLevel));assert(!/\$\{\d+\}|#\.[A-Za-z]/.test(JSON.stringify(s)),'Unresolved Horde value '+s.id);}}
+assert.equal(hordeIds.size,201);
+const ice=frost.forms[0].skills.horde[0];assert.deepEqual(ice.details.map(d=>d.text),['180%','30%','Unable to move or attack.','45%','1.5s']);
+console.log('Audited all 67 families / 248 forms; no internal normal cards; 201 Horde skills have resolved in-game detail rows.');
