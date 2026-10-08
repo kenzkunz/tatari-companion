@@ -6,7 +6,7 @@
   "engines": { "node": ">=22" },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node scripts/check.mjs && node engine-check.mjs",
+    "test": "node scripts/check.mjs && node scripts/tatari-check.mjs && node engine-check.mjs",
     "preview": "node scripts/preview.mjs"
   }
 }
