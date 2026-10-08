@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {validateDojoLevels,emptyDojoLevels,accountBadgeIds,websiteUrl} from '../dist/account-model.mjs';
+const data=JSON.parse(await readFile(new URL('../dist/tatari-data/roster.json',import.meta.url),'utf8'));
+assert.deepEqual(accountBadgeIds(data,emptyDojoLevels()),[]);
+assert.deepEqual(accountBadgeIds(data,{'2':5,'3':0,'4':0,'6':0,'5':0}),[1001,1002,1003,1004,1005]);
+for(const bad of [null,[],{}, {'2':8,'3':0,'4':0,'6':0,'5':0},{'2':'5','3':0,'4':0,'6':0,'5':0},{'2':5.5,'3':0,'4':0,'6':0,'5':0}])assert.throws(()=>validateDojoLevels(bad));
+assert.equal(websiteUrl('./auth/callback.html','https://kenzkunz.github.io/tatari-companion/auth-client.mjs'),'https://kenzkunz.github.io/tatari-companion/auth/callback.html');
+assert.equal(websiteUrl('./account.html','http://127.0.0.1:4181/tatari-companion/auth-client.mjs'),'http://127.0.0.1:4181/tatari-companion/account.html');
+const sql=await readFile('supabase/001_accounts.sql','utf8');for(const table of ['profiles','user_settings'])assert(sql.includes('alter table public.'+table+' enable row level security'));
+const callback=await readFile('dist/auth/callback.mjs','utf8');assert(callback.includes('getSession'));assert(!callback.includes('searchParams.get(\'next\')'));
+console.log('Passed account dojo validation, badge export, callback base paths and migration security structure (offline only).');

@@ -1,0 +1,8 @@
+{
+  "package": "@supabase/supabase-js",
+  "version": "2.117.3",
+  "bundler": "esbuild 0.28.2",
+  "sha256": "dda3d185682f9477356f3ec8d6bed09ce80ba1ef0e15eb70067dc9d260658f8d",
+  "source": "https://registry.npmjs.org/@supabase/supabase-js",
+  "format": "browser ESM; bundled; no source map"
+}

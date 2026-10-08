@@ -15,6 +15,7 @@ export async function build(base = '/', destination = '_site') {
       const file = join(dir, entry.name);
       if (entry.isDirectory()) { await visit(file); continue; }
       if (!/\.(html|css|mjs|json)$/.test(file)) continue;
+      if (relative(out, file).replaceAll('\\','/').startsWith('vendor/')) continue; // Third-party SDK must remain byte-identical.
       let text = await readFile(file, 'utf8');
       // Prefix site-local absolute URLs only; external and protocol-relative URLs stay intact.
       text = text.replace(/(["'`])\/(?!\/)(?=[A-Za-z0-9#?]|["'`])/g, '$1' + base);
