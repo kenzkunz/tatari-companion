@@ -24,3 +24,7 @@ body{min-height:100vh;background:#ffbd24 url('/assets/background02.png') center 
 
 /* Keep percentage digits crisp at desktop and mobile sizes. */
 .hunt-layout .recommend strong{font-family:Arial,Helvetica,sans-serif;font-weight:800;font-style:normal;color:#fff;-webkit-text-fill-color:#fff;text-shadow:none;-webkit-text-stroke:1px #111;paint-order:stroke fill;line-height:1.15;letter-spacing:0}
+
+.tile::before{background-image:var(--tile-art,url("treasure-data/tile.png"))}
+
+.hunt-layout .recommend strong{color:#111;-webkit-text-fill-color:#111;-webkit-text-stroke:0;text-shadow:none}
