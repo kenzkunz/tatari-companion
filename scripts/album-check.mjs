@@ -1,9 +1,11 @@
 import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';import {inventoryStatus,albumShareText} from '../dist/album-model.mjs';
 const d=JSON.parse(await readFile('dist/album-data/autumn-tales.json','utf8'));assert.equal(d.cards.length,135);assert.equal(d.sets.length,15);assert.equal(d.cards.filter(c=>c.gold).length,17);assert.equal(new Set(d.cards.map(c=>c.number)).size,135);for(const s of d.sets)assert.equal(s.cards.length,9);
-const normal=d.cards.find(c=>!c.gold),gold=d.cards.find(c=>c.gold);assert.equal(inventoryStatus(normal,0).label,'LF');assert(!inventoryStatus(normal,1).tradeable);assert.equal(inventoryStatus(normal,2).duplicates,1);assert(inventoryStatus(normal,2).tradeable);assert(!inventoryStatus(gold,2,false).tradeable);assert(inventoryStatus(gold,2,true).tradeable);assert(!inventoryStatus(gold,1,true).tradeable);assert.throws(()=>inventoryStatus(normal,-1));
+const normal=d.cards.find(c=>!c.gold),gold=d.cards.find(c=>c.gold);assert.equal(inventoryStatus(normal,0).label,'LF');assert(!inventoryStatus(normal,1).tradeable);assert.equal(inventoryStatus(normal,2).duplicates,1);assert(inventoryStatus(normal,2).tradeable);assert(inventoryStatus(gold,2,false).tradeable);assert(inventoryStatus(gold,2,true).tradeable);assert(!inventoryStatus(gold,1,true).tradeable);assert.throws(()=>inventoryStatus(normal,-1));
 const sql=await readFile('supabase/003_my_album.sql','utf8');assert(!/insert into public.gold_exchange_events/i.test(sql));assert(sql.includes('pg_advisory_xact_lock'));assert(sql.includes('new_qty<>old_qty'));assert(sql.includes('now()>=e.starts_at and now()<e.ends_at'));assert(sql.includes('i.user_id=auth.uid()'));assert(sql.includes('grant select on public.card_inventory to authenticated'));
-console.log('Passed 135-card catalog, quantities, one-copy reserve, locked gold behavior and migration structure (offline).');
+console.log('Passed 135-card catalog, quantities, one-copy reserve, gold arrangements and trade modes and migration structure (offline).');
 
 
 
 const copied=albumShareText({cards:[{number:1,stars:1,gold:false},{number:2,stars:2,gold:true},{number:3,stars:3,gold:false}]},new Map([[2,{quantity:2}],[3,{quantity:1}]]),{discord_username:'player',game_id:'123'},'Flexible Rarity',2,false);assert(copied.includes('★: 1'));assert(copied.includes('★★: 2G'));assert(!copied.includes('★★★:'));assert(copied.includes('Trades left today: 2/3'));assert(copied.includes('`player`'));
+
+assert(!inventoryStatus(normal,2,false,'No Trading').tradeable);const showcase=albumShareText(d,new Map(),{discord_username:'player',game_id:'123'},'No Trading',3);assert(!showcase.includes('FT (For Trade)'));assert(showcase.includes('Mode: No Trading'));
