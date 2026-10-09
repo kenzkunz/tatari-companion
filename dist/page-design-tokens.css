@@ -1,0 +1,54 @@
+
+/* Shared design tokens for both isolated concepts. */
+:root{--preview-width:1180px;--preview-inset:24px;--preview-ink:#282625;--preview-cream:#fffef1;--preview-orange:#ffd15a;--preview-control-size:13px;--preview-label-size:12px}
+.resource-layout,.album-layout{max-width:var(--preview-width);padding-left:var(--preview-inset);padding-right:var(--preview-inset);margin-top:18px}
+.event-tray{max-width:var(--preview-width);padding-left:var(--preview-inset);padding-right:var(--preview-inset);margin-top:18px}
+.calculator-panel,.rewards-panel,.album-topbar,.album-tradebar{border:3px solid var(--preview-ink);border-radius:14px;box-shadow:0 3px #b78525}
+.event-tray button,.set-choice{font-family:Critters,system-ui,sans-serif;font-size:11px;line-height:1.35;border-radius:11px}
+.event-tray img,.set-choice img{width:40px;height:40px}
+.set-choice{flex-basis:92px;min-height:83px}.set-choice[aria-pressed=true]{background:var(--preview-orange);border-color:#ed9900;color:var(--preview-ink)}
+.album-totals>div,.album-tradebar label,#trade-settings,.input-card{font-family:Critters,system-ui,sans-serif;font-size:var(--preview-label-size)}
+.album-tradebar button,.album-tradebar select,#trade-mode-inline,.multipliers button{font-family:Critters,system-ui,sans-serif;font-size:var(--preview-control-size);min-height:34px}
+.album-tradebar input{font-size:16px}.album-tradebar #card-search{flex:0 1 150px;width:150px;min-width:70px}
+.mode-tabs button{font-size:15px}.calculator-content h2,.modifier h3{font-size:15px}.modifier p,#album-status{font:11px/1.5 Poppins,system-ui,sans-serif}
+.album-controls-row{display:flex;align-items:center;gap:8px;margin-top:10px}.album-controls-row .album-tradebar{flex:1;min-width:0;margin-top:0}.album-controls-row .album-view-toolbar{margin:0;flex:0 0 44px;align-items:center;justify-content:center}.album-controls-row #album-view-toggle{width:44px;height:48px}
+@media(max-width:800px){:root{--preview-inset:18px}.resource-layout,.album-layout{margin-top:18px}.event-tray{scroll-padding-left:var(--preview-inset)}.event-tray button{font-size:11px}.event-tray img,.set-choice img{width:40px;height:40px}.input-card{font-size:12px}}
+@media(max-width:700px){.set-choice{flex-basis:83px}.album-tradebar label{margin-left:0;gap:5px;font-size:11px}.album-tradebar{column-gap:6px}.album-tradebar #trade-mode-inline{width:128px}.album-tradebar #card-search{flex:1 1 85px;width:85px}.album-tradebar #trade-settings{font-size:12px}.album-controls-row .album-view-toolbar{flex-basis:40px}.album-controls-row #album-view-toggle{width:40px;height:44px}}
+
+/* Match the album's visual density to the calculator, not only its width. */
+.event-tray button,.set-choice{font-size:13px;line-height:1.35}
+.event-tray button{min-height:76px}.set-choice{flex-basis:116px;min-height:108px;padding:10px 7px;gap:8px}
+.event-tray img{width:40px;height:40px}.set-choice img{width:52px;height:52px}
+.album-topbar{grid-template-columns:210px minmax(0,1fr);padding:14px;gap:14px}
+.album-totals>div{font-size:14px;padding:10px 9px;gap:8px;min-height:40px}.album-totals small{font-size:11px;margin-top:8px}.set-count{font-size:12px;min-width:18px;padding:1px 4px}
+.album-tradebar{padding:12px;gap:10px;min-height:62px}
+.album-tradebar label,.album-tradebar #trade-settings,.album-tradebar button,.album-tradebar select,#trade-mode-inline{font-size:14px}
+.album-tradebar input,.album-tradebar select,.album-tradebar button{min-height:38px}.album-tradebar #trade-mode-inline{width:160px}.album-tradebar #trade-settings img{width:28px;height:28px}.album-tradebar #trades-left{width:44px}.album-tradebar #share-album{font-size:14px;padding:8px 15px}
+#album-status:not(:empty){font-size:13px}.album-controls-row{gap:9px}.album-controls-row #album-view-toggle{width:44px;height:48px}
+@media(max-width:700px){
+ .event-tray button,.set-choice{font-size:12px}.event-tray button{min-height:94px}.set-choice{flex-basis:100px;min-height:100px}.set-choice img{width:48px;height:48px}
+ .album-topbar{grid-template-columns:1fr;padding:11px;gap:9px}.album-totals>div{font-size:13px;min-height:38px;padding:7px}.album-totals small{font-size:10px;margin-top:0}
+ .album-tradebar{padding:10px;gap:8px}.album-tradebar label,.album-tradebar #trade-settings,.album-tradebar button,.album-tradebar select{font-size:13px}.album-tradebar #trade-mode-inline{width:145px}.album-controls-row .album-view-toolbar{flex-basis:44px}.album-controls-row #album-view-toggle{width:44px;height:48px}
+}
+
+/* Album summary above a full-width icon picker. */
+.album-summary{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;background:#fffef1;border:3px solid #282625;border-radius:14px;padding:12px 14px;box-shadow:0 3px #b78525;margin-bottom:12px}
+.album-identity{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:0}.album-identity>strong{font-size:17px}.album-identity>span{font:12px Poppins,system-ui,sans-serif;overflow-wrap:anywhere}.album-season{font-size:17px;text-align:center;white-space:nowrap}
+.album-summary .album-totals{display:flex;justify-content:flex-end;gap:7px}.album-summary .album-totals>div{display:flex;align-items:center;white-space:nowrap;font-size:12px;padding:7px 9px;min-height:36px;margin:0;gap:7px}.album-summary .album-totals img{width:16px;height:22px}.album-summary .album-totals strong{margin-left:5px}
+.album-topbar{display:block;padding:10px 12px}.album-set-strip{gap:9px;padding:0 0 5px}.album-set-strip .set-choice{flex-basis:94px;min-height:90px;padding:8px 6px;justify-content:center}.album-set-strip .set-choice>span{display:none}.album-set-strip .set-choice img{width:72px;height:72px}.album-set-strip .set-count{font-size:12px;right:3px;top:3px}
+@media(max-width:850px){.album-summary{grid-template-columns:minmax(0,1fr) auto;gap:10px}.album-summary .album-totals{grid-column:1/-1;justify-content:center}.album-season{font-size:15px}.album-identity>strong{font-size:15px}}
+@media(max-width:700px){.album-summary{padding:10px;margin-bottom:10px}.album-identity{gap:4px;flex-direction:column;align-items:flex-start}.album-identity>span{font-size:11px}.album-summary .album-totals{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:7px}.album-summary .album-totals>div{font-size:12px;padding:7px;gap:5px}.album-summary .album-totals strong{margin-left:auto}.album-topbar{padding:9px}.album-set-strip .set-choice{flex-basis:86px;min-height:82px}.album-set-strip .set-choice img{width:64px;height:64px}}
+
+/* Album title/ID match the calculator Rewards heading exactly. */
+.album-summary .album-identity>strong,.album-summary #account-album-uid{font-family:Critters,system-ui,sans-serif;font-size:23px;font-weight:700;line-height:1.25;color:#171717}
+.album-summary .album-identity{flex-direction:row;align-items:center}
+.album-set-strip .set-choice[aria-pressed=true]{background:#ffeb99;border-color:#e4b53b;color:#282625}
+@media(max-width:850px){.album-summary .album-identity>strong,.album-summary #account-album-uid{font-size:23px}}
+@media(max-width:700px){.album-summary{grid-template-columns:minmax(0,1fr) auto}.album-summary .album-identity>strong,.album-summary #account-album-uid{font-size:23px}.album-summary #account-album-uid{white-space:normal;overflow-wrap:anywhere;text-align:center}}
+
+@media(max-width:700px){
+ .album-controls-row{display:block}.album-controls-row .album-tradebar{width:100%;display:grid;grid-template-columns:auto minmax(0,1fr);gap:9px 8px}
+ .album-tradebar #trade-mode-inline{width:100%;min-width:0}.album-tradebar label{margin:0;white-space:nowrap}.album-tradebar #card-search{width:100%;min-width:0;margin:0}
+ .album-tradebar #share-album{justify-self:start;grid-column:1;grid-row:3}
+ .album-controls-row .album-tradebar .album-view-toolbar{grid-column:2;grid-row:3;justify-self:end;display:flex;margin:0;width:44px;height:48px}
+}

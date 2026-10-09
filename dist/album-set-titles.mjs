@@ -1,0 +1,1 @@
+const strip=document.getElementById('album-set-strip');function titles(){strip.querySelectorAll('.set-choice').forEach(b=>b.title=b.getAttribute('aria-label')||'');}titles();new MutationObserver(titles).observe(strip,{childList:true});

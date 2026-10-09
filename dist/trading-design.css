@@ -1,0 +1,14 @@
+
+.trading-layout{max-width:1180px;padding:0 24px;margin:18px auto 44px}.trade-filters,.route-search,.trader-table,.trade-route{background:#fffef1;border:3px solid #282625;border-radius:14px;padding:12px;margin:0 0 12px;box-shadow:0 3px #b78525;gap:10px}.trade-filters label{font-size:12px}.trading-layout input,.trading-layout select{font:14px Critters,system-ui,sans-serif;background:#f8f6ed;border:1px solid #c5baa1;border-radius:8px;min-height:38px}.trading-layout button{font:14px Critters,system-ui,sans-serif;border:2px solid #8d6020;background:#ffcf40;color:#282625;border-radius:8px;padding:8px 14px;min-height:38px}.trader-table-heading{font-size:13px;border-bottom:1px solid #d8cfb9;padding-bottom:10px}.trader-row{padding:14px 4px;border-bottom:1px solid #e4dcc9}.trader-card-chip,.trade-card-chip{background:#ffeb99;border:1px solid #e4b53b;border-radius:6px;padding:4px 7px;font-size:12px}.trader-player a{font-size:15px;color:#282625}.trader-player time{font-size:10px}.trade-pagination{margin:15px 0;font-size:12px}.trading-note,.sample-note{font:11px/1.6 Poppins,system-ui,sans-serif;color:#665020}.sample-note{text-align:center}.player-album .album-identity{display:flex;flex-direction:column;align-items:flex-start;gap:4px}.player-album #player-name{font-size:12px;font-weight:normal}.player-album #player-uid{font-family:Critters,system-ui,sans-serif;font-size:23px;line-height:1.25;font-weight:bold}.player-album .album-view-toolbar{margin:8px 0;justify-content:flex-end}
+@media(max-width:700px){.trading-layout{padding:0 18px}.trade-filters,.route-search{flex-wrap:wrap;gap:8px;padding:10px}.trading-layout input,.trading-layout select{font-size:16px}.trader-row{gap:10px}.route-search input{min-width:0;flex:1}.route-search select{width:100%}}
+
+/* Review: tighter card rhythm and stable mobile trader actions. */
+@media(min-width:701px){.album-layout[data-view=grid] #album-sets{max-width:600px;column-gap:10px;row-gap:18px}.album-layout[data-view=grid] .album-card{flex-basis:calc((100% - 20px)/3)}}
+@media(max-width:700px){.album-layout[data-view=grid] .card-art{width:88%}.album-layout[data-view=grid] #album-sets{column-gap:8px;row-gap:17px}.album-layout[data-view=grid] .album-card{flex-basis:calc((100% - 16px)/3)}}
+@media(max-width:480px){
+ .trader-table-heading{display:grid;grid-template-columns:124px minmax(0,1fr);gap:10px}.trader-table-heading>span:last-child{display:none}
+ .trader-row{display:grid;grid-template-columns:124px minmax(0,1fr);gap:10px;align-items:start;padding:14px 0}
+ .trader-row .trader-player{grid-column:1;grid-row:1;min-width:0;align-items:flex-start}.trader-player>div{min-width:0}.trader-player a{overflow-wrap:anywhere}.trader-player time{line-height:1.5}
+ .trader-row .trader-cards{grid-column:2;grid-row:1/3;min-width:0;align-self:start;gap:6px}
+ .trader-row>button{grid-column:1;grid-row:2;justify-self:stretch;margin:0;width:100%;min-height:38px;padding:7px 10px}
+}
