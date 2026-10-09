@@ -1,0 +1,3 @@
+export function validateUid(value){const uid=String(value??'').trim();if(!/^(0|[1-9][0-9]{0,19})$/.test(uid))throw Error('Enter your numeric in-game UID without spaces or leading zeroes.');return uid;}
+export function playerLink(uid,album,moduleUrl){uid=validateUid(uid);if(!Number.isInteger(album)||album<1)throw Error('Invalid album');return new URL('./player/'+uid+'?album='+album,moduleUrl).href;}
+export function playerParameters(url,moduleUrl){const u=new URL(url),base=new URL('.',moduleUrl).pathname,path=u.pathname.startsWith(base)?u.pathname.slice(base.length):'',match=path.match(/^player\/([0-9]{1,20})\/?$/);return {uid:validateUid(match?.[1]??u.searchParams.get('uid')),album:Number(u.searchParams.get('album')||4)};}

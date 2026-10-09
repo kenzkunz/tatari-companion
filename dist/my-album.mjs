@@ -17,3 +17,5 @@ setInterval(async()=>{if(!data)return;const {data:active,error}=await supabase.r
 
 
 $('trade-mode-inline').onchange=async()=>{if(!ready)return;const before=tradeMode;tradeMode=$('trade-mode-inline').value;$('trade-mode-inline').disabled=true;try{await savePrefs();message('');}catch(error){tradeMode=before;message(error.message);}finally{$('trade-mode-inline').disabled=!ready;render();}};
+
+window.addEventListener('game-uid-saved',load);

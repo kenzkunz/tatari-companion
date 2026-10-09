@@ -11,3 +11,5 @@
 .account-dashboard-tabs{display:flex;justify-content:center;gap:10px;margin-bottom:20px}.account-dashboard-tabs a{color:#3b2416;background:#fffef1;border:2px solid #171717;border-radius:9px;padding:9px 14px;text-decoration:none}.account-dashboard-tabs a[aria-current=page]{background:#ffcf40}
 
 .account-panel .trade-sharing-row{display:flex;flex-direction:row;align-items:center;gap:10px;margin:18px 0 5px}.trade-sharing-row input{width:18px;height:18px;padding:0;flex-shrink:0}.trade-sharing-note{font-size:11px!important}
+
+.account-panel input[readonly]{background:#ddd;color:#777;cursor:default}.locked-uid-note{font-size:11px!important;color:#777;margin:5px 0}.account-panel .public-album-row{display:flex;flex-direction:row;align-items:center;gap:10px}.public-album-row input{width:18px;height:18px;padding:0;flex-shrink:0}
