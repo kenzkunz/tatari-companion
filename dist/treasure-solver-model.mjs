@@ -1,7 +1,9 @@
+import {exactDP} from './treasure-solver-dp-model.mjs';
 export function cellsOf(p,n){return Array.from({length:p.w*p.h},(_,i)=>(p.y+Math.floor(i/p.w))*n+p.x+i%p.w);}
 export function placements(t,n){const out=[];for(const [w,h] of [[t.width,t.height],...(t.rotate&&t.width!==t.height?[[t.height,t.width]]:[])])for(let y=0;y<=n-h;y++)for(let x=0;x<=n-w;x++)out.push({id:t.id,x,y,w,h,cells:cellsOf({x,y,w,h},n)});return out;}
-export function estimate(set,n,empty,found,{limit=50000,milliseconds=1800,random=Math.random}={}){
+export function estimate(set,n,empty,found,{limit=50000,milliseconds=1800,random=Math.random,useDP=true,dpStateBudget=900000,dpTimeBudget=2500}={}){
  const blocked=new Set([...empty,...found.flatMap(p=>cellsOf(p,n))]);
+ if(useDP){const dp=exactDP(set,n,blocked,found,{stateBudget:dpStateBudget,timeBudget:dpTimeBudget});if(dp)return dp;}
  const pieces=[];for(const t of set.treasures){const count=t.count-found.filter(p=>p.id===t.id).length;if(count<0)return {error:'Too many copies of this treasure.'};const options=placements(t,n).filter(p=>p.cells.every(c=>!blocked.has(c)));for(let i=0;i<count;i++)pieces.push(options);}
  pieces.sort((a,b)=>a.length-b.length);if(pieces.some(p=>!p.length))return {error:'These observations leave no valid treasure placement. Undo or correct a tile.'};
  const exactSums=Array(n*n).fill(0),occupied=new Set(blocked),path=[];let exactCount=0,nodes=0,aborted=false;const exactStart=Date.now();

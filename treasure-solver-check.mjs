@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
+import {exactDP} from './dist/treasure-solver-dp-model.mjs';
 import {estimate,placements,cellsOf} from './dist/treasure-solver-model.mjs';
 const single={id:1,width:1,height:1,count:1,rotate:false},set={treasures:[single]};
 assert.deepEqual(estimate(set,2,[],[]).probabilities,[.25,.25,.25,.25]);
@@ -11,6 +12,14 @@ assert.deepEqual(cellsOf({x:1,y:0,w:1,h:2},2),[1,3]);
 const domino={treasures:[{id:2,width:1,height:2,rotate:true,count:1}]};
 assert.deepEqual(estimate(domino,2,[],[]).probabilities,[.5,.5,.5,.5]);
 assert.deepEqual(estimate(domino,2,[0],[]).probabilities,[0,.5,.5,1]);
+// Compare the independent frontier DP with complete placement enumeration.
+for(let mask=0;mask<32;mask++)for(const treasures of [
+ [{id:1,width:1,height:2,count:2,rotate:true}],
+ [{id:1,width:1,height:2,count:1,rotate:false},{id:2,width:1,height:1,count:2,rotate:false}],
+ [{id:1,width:1,height:2,count:1,rotate:true},{id:2,width:2,height:1,count:1,rotate:true}],
+]){const empty=Array.from({length:5},(_,i)=>i).filter(i=>mask&(1<<i));const group={treasures};const dp=estimate(group,3,empty,[]),oracle=estimate(group,3,empty,[],{useDP:false});assert.equal(Boolean(dp.error),Boolean(oracle.error));if(!dp.error){assert.equal(dp.method,'dp');assert(oracle.exact);dp.probabilities.forEach((p,i)=>assert(Math.abs(p-oracle.probabilities[i])<1e-12));}}
+const found=[{id:2,x:0,y:0,w:1,h:2}];assert.deepEqual(estimate(domino,3,[8],found).probabilities,estimate(domino,3,[8],found,{useDP:false}).probabilities);
+assert.equal(exactDP(domino,3,new Set(),[],{stateBudget:0}),null);
 const data=JSON.parse(await readFile('dist/treasure-data/stages.json','utf8'));let checked=0;
-for(const stage of data.stages)for(const group of stage.sets){const r=estimate(group,stage.rows,[],[],{limit:1500,milliseconds:120});assert(!r.error,`Stage ${stage.stage}, set ${group.id}: ${r.error}`);const area=group.treasures.reduce((sum,t)=>sum+t.count*t.width*t.height,0);assert(Math.abs(r.probabilities.reduce((a,b)=>a+b,0)-area)<1e-7);assert(r.probabilities.every(p=>p>=0&&p<=1+1e-10));for(const t of group.treasures)await readFile('dist/'+t.image);checked++;}
-console.log(`Treasure solver checks passed: hand-calculated probabilities, observations, rotations, and ${checked} stage sets.`);
+for(const stage of data.stages)for(const group of stage.sets){const r=estimate(group,stage.rows,[],[],{limit:1500,milliseconds:120});assert.equal(r.method,'dp',`Stage ${stage.stage}, set ${group.id} did not use exact DP`);assert(!r.error,`Stage ${stage.stage}, set ${group.id}: ${r.error}`);const area=group.treasures.reduce((sum,t)=>sum+t.count*t.width*t.height,0);assert(Math.abs(r.probabilities.reduce((a,b)=>a+b,0)-area)<1e-7);assert(r.probabilities.every(p=>p>=0&&p<=1+1e-10));for(const t of group.treasures)await readFile('dist/'+t.image);checked++;}
+console.log(`Treasure solver checks passed: hand-calculated probabilities, 96 enumeration comparisons, fallback limits, observations, rotations, and ${checked} stage sets.`);

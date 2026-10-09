@@ -12,3 +12,8 @@
 #album-view-toggle{display:flex;align-items:center;justify-content:center}#album-view-toggle img{width:23px;height:23px;object-fit:contain;filter:brightness(0) invert(1);pointer-events:none}
 
 #album-view-toggle{position:relative;padding:0;width:44px;height:48px}#album-view-toggle img{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);display:block;margin:0}#album-view-toggle .toggle-list-icon{width:24px;height:24px}#album-view-toggle .toggle-grid-icon{width:19px;height:19px}
+
+/* Center each grid row, including partial rows after searching. */
+.album-layout[data-view=grid] #album-sets{display:flex;flex-wrap:wrap;justify-content:center;column-gap:25px}
+.album-layout[data-view=grid] .album-card{flex:0 0 calc((100% - 50px)/3)}
+@media(max-width:700px){.album-layout[data-view=grid] #album-sets{column-gap:12px}.album-layout[data-view=grid] .album-card{flex-basis:calc((100% - 24px)/3)}}
