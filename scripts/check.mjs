@@ -1,3 +1,4 @@
+import {pathToFileURL} from 'node:url';
 import assert from 'node:assert/strict';
 import {readFile, readdir, stat} from 'node:fs/promises';
 import {resolve, join, dirname} from 'node:path';
@@ -14,6 +15,8 @@ async function files(dir) {
 for (const base of ['/', '/milkroad-test/']) {
   await build(base);
   const root=resolve('_site');let checked=0;
+  const {albumShareText}=await import(pathToFileURL(join(root,'album-model.mjs')).href+'?base='+encodeURIComponent(base));
+  assert(albumShareText({cards:[]},new Map(),{},'Same Rarity',3).includes('Trades left today: 3/3'), 'Build changed clipboard text');
   for(const file of await files(root)) {
     if(file.endsWith('.mjs')) execFileSync(process.execPath,['--check',file]);
     if(!/\.(html|css|mjs)$/.test(file)) continue;
