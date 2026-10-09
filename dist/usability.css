@@ -1,0 +1,7 @@
+/* Small usability refinements shared by the existing pages. */
+:where(button,a,input,select,summary):focus-visible{outline:3px solid #55308b;outline-offset:3px}
+.footer-issue{display:inline-flex;align-items:center;min-height:36px;text-decoration:underline}
+@media(max-width:700px){.account-page input,.account-page select,.album-tradebar input,.album-tradebar select,.trading-page input,.trading-page select{font-size:16px}dialog{max-height:calc(100dvh - 24px);overflow-y:auto}.contact-row{overflow-wrap:anywhere}.album-tradebar label{flex-wrap:wrap}.trader-name-link{overflow-wrap:anywhere}}
+.hunt-feedback{background:#fffef1;border:2px solid #3b2416;border-radius:10px;padding:10px;margin:10px auto;font-size:12px;max-width:370px}.hunt-feedback button{display:block;margin:8px auto 0;padding:6px 12px;background:#ffcf40;border:2px solid #3b2416;border-radius:8px;color:#111}
+
+@media(max-width:700px){.account-page input,.account-page select,.album-page input,.album-page select{font-size:16px!important}}
