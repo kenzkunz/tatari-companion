@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node scripts/check.mjs && node scripts/tatari-check.mjs && node scripts/stats-tool-check.mjs && node scripts/account-check.mjs && node scripts/album-check.mjs && node engine-check.mjs",
+    "test": "node scripts/check.mjs && node scripts/tatari-check.mjs && node scripts/stats-tool-check.mjs && node scripts/account-check.mjs && node scripts/album-check.mjs && node scripts/trading-check.mjs && node engine-check.mjs",
     "preview": "node scripts/preview.mjs"
   }
 }

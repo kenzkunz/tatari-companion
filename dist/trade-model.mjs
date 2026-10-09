@@ -1,0 +1,3 @@
+export function safeAvatar(value){try{const u=new URL(value);return u.protocol==='https:'&&(u.hostname==='cdn.discordapp.com'||/^lh[0-9]\.googleusercontent\.com$/.test(u.hostname))?u.href:'';}catch{return '';}}
+export function sortRoutes(routes,sort){return [...routes].sort((a,b)=>sort==='priority'?b.priority-a.priority||a.length-b.length:sort==='newest'?Date.parse(b.updated_at)-Date.parse(a.updated_at)||a.length-b.length:a.length-b.length||b.priority-a.priority);}
+export function compatibleStars(give,receive,mode){return mode==='Any Rarity'||mode==='Flexible Rarity'&&Math.abs(give-receive)<=1||mode==='Same Rarity'&&give===receive;}
