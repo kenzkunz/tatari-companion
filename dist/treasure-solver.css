@@ -15,3 +15,7 @@ body{min-height:100vh;background:#ffbd24 url('/assets/background02.png') center 
 #tile-dialog #rotate{position:absolute;left:calc(50% + var(--parts-half,38px) + 7px);top:50%;transform:translateY(-50%);width:28px;height:28px;min-height:0;padding:0;border:0;background:transparent}#rotate img{width:26px;height:26px;object-fit:contain}
 #tile-dialog #mark-unknown{min-height:0;margin:22px auto 0;padding:5px 12px;border:2px solid #e18700;border-radius:9px;background:#ffcd35;font-size:12px;font-weight:bold;color:#111}
 @media(max-width:420px){.hunt-layout{margin-top:24px}.treasure-combination{margin-top:16px}#tile-dialog{padding-left:15px;padding-right:15px}}
+
+/* Explicit control colors prevent mobile browsers' default blue text. */
+.hunt-layout button,.hunt-layout select{color:#111;-webkit-text-fill-color:#111}
+.hunt-layout button{-webkit-appearance:none;appearance:none}
