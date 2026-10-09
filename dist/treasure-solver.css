@@ -19,3 +19,5 @@ body{min-height:100vh;background:#ffbd24 url('/assets/background02.png') center 
 /* Explicit control colors prevent mobile browsers' default blue text. */
 .hunt-layout button,.hunt-layout select{color:#111;-webkit-text-fill-color:#111}
 .hunt-layout button{-webkit-appearance:none;appearance:none}
+
+.hunt-layout .recommend strong{color:#fff;-webkit-text-fill-color:#fff}
