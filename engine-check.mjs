@@ -15,3 +15,6 @@ for(const [event,variants]of Object.entries(data.party.tables))for(const [varian
 if(Object.keys(data.album.cards).length!==135||data.album.cards['52'].name!=='No Racoons')throw Error('Card dataset mismatch');
 if(JSON.stringify(data)!==before)throw Error('Calculation changed game data');
 console.log(JSON.stringify({binomialMean:mean,binomialVariance:variance,forwardRods:low.machine.rods,reverseOff:off,reverseOn:on,seconds:(performance.now()-start)/1000}));
+
+for(const replay of [false,true])for(let sample=1;sample<=100;sample++){const r=session(new RNG(sample),119,'Raft Race',60,replay,[{total_cost:1,rewards:{pinballs:60}}]);if(r.remaining!==119+r.earned-r.spent)throw Error('Pinball balance mismatch');if(r.reinvested>r.earned||r.reinvested<0)throw Error('Invalid reinvestment');if(r.reinvested!==(replay?Math.max(0,r.spent-119):0))throw Error('Original remainder counted as earned pinballs');}
+console.log('Passed gross/remaining/reinvested accounting with original-budget remainders and replay on/off.');

@@ -1,0 +1,79 @@
+/* Horde additions to the existing event guide styles. */
+body[data-guide=horde] .guide-banner{width:min(480px,100%);margin:24px auto 20px;position:relative}
+body[data-guide=horde] .guide-banner img{display:block;width:100%;height:auto}
+.horde-banner figcaption{position:absolute;left:6%;top:50%;transform:translateY(-50%);max-width:55%;font-size:clamp(22px,3.2vw,31px);line-height:1.1;color:#fff;text-shadow:2px 2px #174360,-2px -2px #174360,2px -2px #174360,-2px 2px #174360}
+body[data-guide=horde] .guide-opening{display:block;padding:14px 26px}
+body[data-guide=horde] .guide-opening p{margin:0;max-width:none;font-size:13px}
+body[data-guide=horde] .guide-events{position:static}
+body[data-guide=horde] .guide-content .guide-footnote{font:11px/1.7 Poppins,system-ui,sans-serif;color:#716a58}
+.horde-chip-list{border:1px solid #d7ceb8;border-radius:10px;max-height:600px;overflow:auto;margin:10px 0}
+.horde-chip{display:grid;grid-template-columns:46px minmax(0,1fr);gap:12px;padding:12px;border-bottom:1px solid #ded5bf;font:12px/1.7 Poppins,system-ui,sans-serif}
+.horde-chip:last-child{border:0}
+.horde-chip img{width:44px;height:44px;object-fit:contain}
+.horde-chip-title{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:3px}
+.horde-chip-title strong{font-weight:600}
+.horde-quality{font-size:10px;padding:1px 7px;border-radius:5px;background:#e2effc;color:#20537a}
+.horde-quality.gold{background:#ffe69b;color:#795118}.horde-quality.rainbow{background:#e8dcff;color:#583781}
+.horde-chip p{margin:0!important;font-size:12px!important;line-height:1.65!important}
+.horde-chip small{display:block;color:#756b58;font-size:10px;margin-top:5px}
+.chip-filters{align-items:end}.chip-filters label:first-child{flex:2}
+.wave-controls{max-width:230px;margin-bottom:12px}
+.horde-wave-list{border:1px solid #d7ceb8;border-radius:10px;max-height:670px;overflow:auto}
+body[data-guide=horde] .horde-wave-list details{margin:0;padding:0;border-top:0;border-bottom:1px solid #ded5bf}
+.horde-wave-list details:last-child{border-bottom:0}
+body[data-guide=horde] .horde-wave-list summary{display:grid;grid-template-columns:65px minmax(0,1fr) 76px;gap:8px;align-items:center;list-style:none;padding:10px 12px;min-height:56px}
+.horde-wave-list summary::-webkit-details-marker{display:none}
+.horde-wave-list summary:after{content:none}
+.horde-wave-label{display:flex;align-items:center;gap:5px;font-weight:600;white-space:nowrap}
+.horde-wave-label:before{content:'▸';font-size:12px;color:#8e6418}.horde-wave-list details[open] .horde-wave-label:before{content:'▾'}
+.horde-wave-bosses{display:flex;flex-wrap:wrap;gap:6px 12px}
+.horde-enemy-tag{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500}
+.horde-enemy-tag img{width:30px;height:30px;object-fit:contain}
+.horde-wave-income{text-align:right;font-size:11px;font-weight:500}
+.horde-wave-income small{display:block;color:#756b58;font-size:9px}
+.horde-wave-income{display:inline-flex;align-items:center;justify-content:flex-end;gap:5px;white-space:nowrap}
+.horde-wave-income img{width:22px;height:22px;object-fit:contain}
+body[data-guide=horde] .horde-wave-list summary,body[data-guide=horde] .horde-wave-list details[open]>summary{color:#282625}
+body[data-guide=horde] .horde-wave-list details[open]>summary{background:#ffeb99;box-shadow:inset 4px 0 #b98212}
+body[data-guide=horde] .horde-wave-list summary:hover{background:#fff4c4;color:#282625}
+body[data-guide=horde] .horde-wave-list details[open]>summary:hover{background:#ffeb99}
+.horde-wave-detail{background:#fff8dd;padding:12px;border-top:1px solid #e7dcc2;font:12px/1.6 Poppins,system-ui,sans-serif}
+.horde-wave-detail p{font-size:11px!important;margin:0 0 10px!important}
+.horde-wave-enemies{display:flex;flex-wrap:wrap;gap:10px 18px}
+.horde-formula{font:12px/1.8 Poppins,system-ui,sans-serif;padding:12px;background:#fff8dd;border:1px solid #ddcd9f;border-radius:8px;margin:8px 0 12px;overflow-wrap:anywhere}
+.horde-skill-heading{display:flex;align-items:center;gap:10px;margin:18px 0 12px;font-size:18px}
+.horde-skill-heading img{width:52px;height:52px;object-fit:contain}
+.horde-skill-track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-items:stretch}
+.horde-skill-card{border:2px solid #282625;border-radius:10px;padding:12px 10px;background:#fff8dd;min-width:0;font:11px/1.6 Poppins,system-ui,sans-serif}
+.horde-skill-card>header{display:flex;justify-content:space-between;gap:8px;margin-bottom:14px;font-family:inherit;font-size:11px;font-weight:600}
+.horde-skill-card>header strong{font-size:12px}
+.horde-skill-card>header span{white-space:nowrap}
+.horde-skill-card h3{font:600 12px/1.5 Poppins,system-ui,sans-serif;margin:12px 0 5px}
+.horde-skill-card p{font-size:11px!important;line-height:1.7!important;min-height:72px}
+.horde-skill-values{display:flex;flex-direction:column;gap:6px;margin:12px 0}
+.horde-skill-value{padding:7px 8px;background:#e6e4e1;border-radius:7px;font-size:10px}
+.horde-skill-value b{font-weight:600}.horde-skill-value span{display:block;margin-top:3px;font-size:10px}
+.horde-budget-lines{display:grid;gap:7px}.horde-budget-lines>span{display:flex;justify-content:space-between;gap:10px}
+.horde-budget-lines>span:last-child{border-top:1px solid #ded5bf;padding-top:8px;margin-top:3px}
+@media(max-width:1050px){.horde-skill-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}.horde-skill-card{flex:0 0 230px;scroll-snap-align:start}.horde-skill-card p{min-height:72px}}
+@media(max-width:800px){body[data-guide=horde] .guide-banner{margin:18px auto 14px}body[data-guide=horde] .guide-opening{padding:12px 18px}.chip-filters label{min-width:130px}.chip-filters label:first-child{flex-basis:100%}.horde-chip{padding:10px;grid-template-columns:37px minmax(0,1fr);gap:9px}.horde-chip img{width:36px;height:36px}.horde-skill-card{flex-basis:78%;max-width:310px}.horde-wave-list summary{grid-template-columns:52px minmax(0,1fr) 59px!important;padding:9px!important}.horde-enemy-tag img{width:25px;height:25px}.horde-enemy-tag{font-size:10px}.horde-wave-label{font-size:11px}.horde-wave-income{font-size:10px}.horde-banner figcaption{font-size:clamp(19px,5vw,28px)}}
+body[data-guide=horde] .horde-energy-value{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;vertical-align:middle}
+body[data-guide=horde] .horde-energy-value img{width:23px;height:23px;object-fit:contain}
+.horde-chip{grid-template-columns:56px minmax(0,1fr)}
+.horde-chip-art{display:block;position:relative;width:56px;height:56px;background-size:100% 100%;background-repeat:no-repeat;overflow:hidden}
+body[data-guide=horde] .horde-chip-art img{position:absolute;max-width:none;transform:translate(-50%,-50%);object-fit:contain}
+body[data-guide=horde] .horde-wave-list summary{font-family:Poppins,system-ui,sans-serif;grid-template-columns:76px minmax(0,1fr) 76px;gap:14px}
+.horde-wave-bosses{gap:8px 17px;padding-left:6px}
+.horde-wave-label,.horde-enemy-tag{font-family:Poppins,system-ui,sans-serif;text-transform:none}
+body[data-guide=horde] .horde-chip-rules li{font-size:12px;line-height:1.7}
+.horde-picker-field{flex:1;min-width:120px;display:flex;flex-direction:column;gap:6px;font:12px Poppins,system-ui,sans-serif}
+.horde-picker{position:relative}
+body[data-guide=horde] #skill-picker{display:flex;align-items:center;gap:7px;width:100%;min-height:45px;padding:6px 9px;border:1px solid #b9aa87;border-radius:8px;background:#fffef1;color:#282625;font:14px Poppins,system-ui,sans-serif;text-align:left;cursor:pointer}
+#skill-picker>span:last-child{margin-left:auto}
+#skill-picker-icon{width:30px;height:30px;object-fit:contain}
+#skill-options{position:absolute;top:calc(100% + 5px);left:0;right:0;max-height:320px;overflow:auto;z-index:8;background:#fffef1;border:2px solid #282625;border-radius:10px;box-shadow:0 4px 12px #0003;padding:5px}
+#skill-options[hidden]{display:none}
+body[data-guide=horde] .horde-tatari-option{display:flex;align-items:center;gap:9px;width:100%;border:0;border-radius:6px;background:transparent;color:#282625;padding:6px 8px;font:13px Poppins,system-ui,sans-serif;cursor:pointer;text-align:left}
+.horde-tatari-option img{width:34px;height:34px;object-fit:contain}
+body[data-guide=horde] .horde-tatari-option:hover,body[data-guide=horde] .horde-tatari-option[aria-selected=true]{background:#ffeb99}
+@media(max-width:800px){.horde-chip{grid-template-columns:56px minmax(0,1fr)}body[data-guide=horde] .horde-wave-list summary{grid-template-columns:58px minmax(0,1fr) 59px!important;gap:9px}.horde-wave-bosses{padding-left:3px;gap:7px 10px}.horde-picker-field{min-width:100px}#skill-options{min-width:200px}}
