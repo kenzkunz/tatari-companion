@@ -1,6 +1,6 @@
 # MilkRoad · Clash of Critters companion
 
-GitHub-ready static website, copied from the current site including its latest Gold Rush countdown fix. Existing UI, calendar, mobile icons, calculator, album, navigation, Ko-fi support links and branded 404 are preserved. No Discord bot files, player records, credentials, or Sites repository history are included.
+Static Clash of Critters companion website with event guides, resource calculators, album and trading pages, a schedule and Treasure Hunt solver. Editable site files live in `dist/`; generated deployment files live in `_site/`. Private Lua research, APKs, bot files, player exports and credentials are not included.
 
 ## Deploy
 
@@ -38,15 +38,15 @@ Then set `PAGES_BASE_PATH=/milkroad-test/` in your shell and run `npm run previe
 - `_site/404.html` preserves the real branded missing-page experience, including working assets and home navigation even at unknown nested paths. GitHub Pages serves it with HTTP 404.
 - `.nojekyll` prevents unwanted processing. Only `_site/` is published.
 
-External links and all calculation rules remain unchanged. Timers use UTC and recalculate in the browser. The game export in `dist/data.json` is curated public game data; there is no live connection to the bot database. Keep filenames case-correct for GitHub's Linux host.
+Timers use UTC and recalculate in the browser. The game export in `dist/data.json` is curated public game data; there is no live connection to the bot database. Keep filenames case-correct for GitHub's Linux host.
 
 ## Validation
 
 `npm test` checks root and repository-subpath builds, local links/assets, route aliases, all JavaScript module syntax and the branded 404. It also runs the existing numerical calculator checks. The preview server uses directory redirects and a real HTTP 404 for missing pages. These are local checks, not a live GitHub deployment.
 
-## Supabase later
+## Account and database work
 
-See [the integration plan](docs/SUPABASE.md). Authentication and database features are not implemented; Login remains disabled. Keep future backend work separate from the current pure game calculations and static UI.
+See [the integration plan](docs/SUPABASE.md) for project background. Account and trading modules are separate from the static guide calculators; the guides do not require login.
 
 ## Hosting references
 
@@ -54,3 +54,21 @@ See [the integration plan](docs/SUPABASE.md). Authentication and database featur
 - [GitHub Pages custom 404](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
 
 The original Sites website and checkout are unchanged by this export.
+
+## Event guides
+
+The Events menu links to five completed guides:
+
+- `events/fishing.html`: luck, bait, fish value/silver calculator and personal reward milestones.
+- `events/cozy-farm.html`: crop-specific support, growth stages, watering, support bonus calculator and milestones.
+- `events/treasure-hunt.html`: four partnership stage totals, keys, chest progression, digging costs and rewards.
+- `events/raft-race.html`: wheel probabilities, estimated raft budget and selectable milestone chest rewards.
+- `events/zobo-shooter.html`: boss attack comparison, power-ups, arena unlock/balance requirements and team milestones.
+
+All milestone lists provide cumulative totals through the selected row. Raft Race options A/B/C replace the corresponding chest in the total; unselected chests are combined into one count. Fishing rod upgrades show the highest unlocked rod level, rather than adding levels together. Treasure Hunt chest totals are separate from single-partnership stage totals; the four-slot planner combines earned stage and unlocked chest rewards.
+
+Shared presentation and behavior are in `dist/guides.css` and `dist/guides.mjs`. Curated browser data is in `dist/guide-data/` and artwork in `dist/guide-assets/`. See [guide data maintenance](dist/guide-data/README.md).
+
+The guides reference recovered v0.49.1 data and user in-game observations. Unverified server mechanics are not promises of guaranteed outcomes. Raft distance is a model average. Shooter welfare parameters do not establish a verified pity counter. Corrections and footer issue reports link to [kenzkunz on Discord](https://discord.com/users/191274229482782720).
+
+After editing, run `npm test` and `npm run build -- --base /tatari-companion/`. Commit source files, not `_site/`. Copying files and passing local checks does not confirm deployment; publish through the existing GitHub Actions workflow.

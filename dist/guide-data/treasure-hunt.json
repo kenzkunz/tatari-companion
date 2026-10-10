@@ -1,0 +1,615 @@
+{
+  "unit": "stage",
+  "rewards": [
+    {
+      "threshold": 1,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 2,
+      "items": [
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 3,
+      "items": [
+        {
+          "type": 12,
+          "id": 110003002,
+          "amount": 1,
+          "name": "Treasure Key",
+          "icon": "/guide-assets/rewards/12-110003002.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 50,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 4,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 5,
+      "items": [
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 15,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 6,
+      "items": [
+        {
+          "type": 12,
+          "id": 110003002,
+          "amount": 1,
+          "name": "Treasure Key",
+          "icon": "/guide-assets/rewards/12-110003002.png"
+        },
+        {
+          "type": 9,
+          "id": 4001,
+          "amount": 1,
+          "name": "Card Pack",
+          "icon": "/guide-assets/fishing/bluecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 7,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 240,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 8,
+      "items": [
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 20,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 9,
+      "items": [
+        {
+          "type": 12,
+          "id": 110003002,
+          "amount": 1,
+          "name": "Treasure Key",
+          "icon": "/guide-assets/rewards/12-110003002.png"
+        },
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 10,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 600,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 11,
+      "items": [
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 25,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 12,
+      "items": [
+        {
+          "type": 12,
+          "id": 110003002,
+          "amount": 1,
+          "name": "Treasure Key",
+          "icon": "/guide-assets/rewards/12-110003002.png"
+        },
+        {
+          "type": 9,
+          "id": 4003,
+          "amount": 1,
+          "name": "Deluxe Card Pack",
+          "icon": "/guide-assets/fishing/goldcardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 13,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 700,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 14,
+      "items": [
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 25,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 15,
+      "items": [
+        {
+          "type": 12,
+          "id": 110003002,
+          "amount": 1,
+          "name": "Treasure Key",
+          "icon": "/guide-assets/rewards/12-110003002.png"
+        },
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 16,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 800,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 17,
+      "items": [
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 30,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 18,
+      "items": [
+        {
+          "type": 12,
+          "id": 110003002,
+          "amount": 1,
+          "name": "Treasure Key",
+          "icon": "/guide-assets/rewards/12-110003002.png"
+        },
+        {
+          "type": 9,
+          "id": 4003,
+          "amount": 1,
+          "name": "Deluxe Card Pack",
+          "icon": "/guide-assets/fishing/goldcardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 19,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 900,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 20,
+      "items": [
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 40,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 21,
+      "items": [
+        {
+          "type": 12,
+          "id": 110003002,
+          "amount": 1,
+          "name": "Treasure Key",
+          "icon": "/guide-assets/rewards/12-110003002.png"
+        },
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 2,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 22,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 1000,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 23,
+      "items": [
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 50,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 24,
+      "items": [
+        {
+          "type": 12,
+          "id": 110003002,
+          "amount": 1,
+          "name": "Treasure Key",
+          "icon": "/guide-assets/rewards/12-110003002.png"
+        },
+        {
+          "type": 9,
+          "id": 4003,
+          "amount": 2,
+          "name": "Deluxe Card Pack",
+          "icon": "/guide-assets/fishing/goldcardpack.png"
+        }
+      ]
+    }
+  ],
+  "chests": [
+    {
+      "threshold": 4,
+      "items": [
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 5,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 500,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "amount": 10,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png"
+        },
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 8,
+      "items": [
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 5,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 1000,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000005,
+          "amount": 10,
+          "name": "Gold Brick",
+          "icon": "/guide-assets/rewards/1001-100000005.png"
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "amount": 20,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png"
+        }
+      ]
+    },
+    {
+      "threshold": 12,
+      "items": [
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 10,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 1500,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 150,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "amount": 30,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png"
+        }
+      ]
+    },
+    {
+      "threshold": 16,
+      "items": [
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 15,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 2000,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000005,
+          "amount": 15,
+          "name": "Gold Brick",
+          "icon": "/guide-assets/rewards/1001-100000005.png"
+        },
+        {
+          "type": 9,
+          "id": 2002,
+          "amount": 20,
+          "name": "Delicate Bento",
+          "icon": "/guide-assets/rewards/9-2002.png"
+        }
+      ]
+    },
+    {
+      "threshold": 20,
+      "items": [
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 15,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 2500,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 200,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        },
+        {
+          "type": 9,
+          "id": 2002,
+          "amount": 20,
+          "name": "Delicate Bento",
+          "icon": "/guide-assets/rewards/9-2002.png"
+        }
+      ]
+    },
+    {
+      "threshold": 24,
+      "items": [
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 15,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 3000,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000005,
+          "amount": 30,
+          "name": "Gold Brick",
+          "icon": "/guide-assets/rewards/1001-100000005.png"
+        },
+        {
+          "type": 9,
+          "id": 2002,
+          "amount": 20,
+          "name": "Delicate Bento",
+          "icon": "/guide-assets/rewards/9-2002.png"
+        }
+      ]
+    },
+    {
+      "threshold": 28,
+      "items": [
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 20,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 4000,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 300,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        },
+        {
+          "type": 9,
+          "id": 2002,
+          "amount": 30,
+          "name": "Delicate Bento",
+          "icon": "/guide-assets/rewards/9-2002.png"
+        }
+      ]
+    },
+    {
+      "threshold": 32,
+      "items": [
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 25,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 5000,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000005,
+          "amount": 45,
+          "name": "Gold Brick",
+          "icon": "/guide-assets/rewards/1001-100000005.png"
+        },
+        {
+          "type": 9,
+          "id": 2002,
+          "amount": 30,
+          "name": "Delicate Bento",
+          "icon": "/guide-assets/rewards/9-2002.png"
+        }
+      ]
+    }
+  ]
+}

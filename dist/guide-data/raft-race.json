@@ -1,0 +1,2941 @@
+{
+  "unit": "m",
+  "rewards": [
+    {
+      "threshold": 500,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 3000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1001,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1001.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1500,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 30,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 2000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1002,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1002.png"
+        }
+      ]
+    },
+    {
+      "threshold": 2500,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 3000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 3000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 30,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 3500,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 4000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1003,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1003.png"
+        }
+      ]
+    },
+    {
+      "threshold": 4500,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 40,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 5000,
+      "items": [
+        {
+          "type": 9,
+          "id": 4001,
+          "amount": 1,
+          "name": "Card Pack",
+          "icon": "/guide-assets/fishing/bluecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 5500,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 6000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1004,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1004.png"
+        }
+      ]
+    },
+    {
+      "threshold": 6500,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 6000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 7000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 7500,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 6000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 8000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1005,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1005.png"
+        }
+      ]
+    },
+    {
+      "threshold": 9000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 10000,
+      "items": [
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 50,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 11000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 12000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1006,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1006.png"
+        }
+      ]
+    },
+    {
+      "threshold": 13000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 6000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 14000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 90,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 15000,
+      "items": [
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 16000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1007,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1007.png"
+        }
+      ]
+    },
+    {
+      "threshold": 18000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 20000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 6000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 22000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 24000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1008,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 26000,
+      "items": [
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 50,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 28000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 30000,
+      "items": [
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 32000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1009,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1009.png"
+        }
+      ]
+    },
+    {
+      "threshold": 36000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 240,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 40000,
+      "items": [
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 100,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 44000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1010,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1010.png"
+        }
+      ]
+    },
+    {
+      "threshold": 48000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 240,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 52000,
+      "items": [
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 56000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1011,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1011.png"
+        }
+      ]
+    },
+    {
+      "threshold": 60000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 240,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 64000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 37500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 68000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1012,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1012.png"
+        }
+      ]
+    },
+    {
+      "threshold": 72000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 210,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 76000,
+      "items": [
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 100,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 80000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1013,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1013.png"
+        }
+      ]
+    },
+    {
+      "threshold": 84000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 210,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 88000,
+      "items": [
+        {
+          "type": 9,
+          "id": 4003,
+          "amount": 1,
+          "name": "Deluxe Card Pack",
+          "icon": "/guide-assets/fishing/goldcardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 92000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1014,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1014.png"
+        }
+      ]
+    },
+    {
+      "threshold": 96000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1017,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1017.png"
+        }
+      ]
+    },
+    {
+      "threshold": 100000,
+      "items": [
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 100,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 104000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1015,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1015.png"
+        }
+      ]
+    },
+    {
+      "threshold": 108000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 112000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 32000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 116000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1016,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1016.png"
+        }
+      ]
+    },
+    {
+      "threshold": 120000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 124000,
+      "items": [
+        {
+          "type": 9,
+          "id": 4001,
+          "amount": 1,
+          "name": "Card Pack",
+          "icon": "/guide-assets/fishing/bluecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 128000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1017,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1017.png"
+        }
+      ]
+    },
+    {
+      "threshold": 132000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 136000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 32000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 140000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1018,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1018.png"
+        }
+      ]
+    },
+    {
+      "threshold": 144000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 148000,
+      "items": [
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 100,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 152000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1019,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1019.png"
+        }
+      ]
+    },
+    {
+      "threshold": 156000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 160000,
+      "items": [
+        {
+          "type": 9,
+          "id": 4003,
+          "amount": 1,
+          "name": "Deluxe Card Pack",
+          "icon": "/guide-assets/fishing/goldcardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 164000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1020,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1020.png"
+        }
+      ]
+    },
+    {
+      "threshold": 168000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 172000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 32000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 176000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1021,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1021.png"
+        }
+      ]
+    },
+    {
+      "threshold": 180000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 184000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 32000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 188000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1022,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1022.png"
+        }
+      ]
+    },
+    {
+      "threshold": 192000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 196000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 32000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 200000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1023,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1023.png"
+        }
+      ]
+    },
+    {
+      "threshold": 204000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 208000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 32000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 212000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1024,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1024.png"
+        }
+      ]
+    },
+    {
+      "threshold": 216000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 220000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 32000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 224000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1025,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1025.png"
+        }
+      ]
+    },
+    {
+      "threshold": 228000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 232000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 32000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 236000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1026,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1026.png"
+        }
+      ]
+    },
+    {
+      "threshold": 240000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 180,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 244000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 32000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 248000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1027,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1027.png"
+        }
+      ]
+    },
+    {
+      "threshold": 256000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 264000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 36000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 272000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1028,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1028.png"
+        }
+      ]
+    },
+    {
+      "threshold": 280000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 288000,
+      "items": [
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 296000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1029,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1029.png"
+        }
+      ]
+    },
+    {
+      "threshold": 304000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 312000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 36000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 320000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1030,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1030.png"
+        }
+      ]
+    },
+    {
+      "threshold": 328000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1017,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1017.png"
+        }
+      ]
+    },
+    {
+      "threshold": 336000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 36000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 344000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1031,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1031.png"
+        }
+      ]
+    },
+    {
+      "threshold": 352000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 360000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 36000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 368000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1032,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1032.png"
+        }
+      ]
+    },
+    {
+      "threshold": 376000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 384000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 36000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 392000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1033,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1033.png"
+        }
+      ]
+    },
+    {
+      "threshold": 400000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 408000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 36000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 416000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1034,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1034.png"
+        }
+      ]
+    },
+    {
+      "threshold": 424000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 432000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 36000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 440000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1035,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1035.png"
+        }
+      ]
+    },
+    {
+      "threshold": 448000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 456000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 36000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 464000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1036,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1036.png"
+        }
+      ]
+    },
+    {
+      "threshold": 472000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        }
+      ]
+    },
+    {
+      "threshold": 480000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 36000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 488000,
+      "items": [
+        {
+          "type": 18,
+          "id": 1037,
+          "amount": 1,
+          "name": "Raft Race Selection Chest",
+          "icon": "/guide-assets/rewards/18-1037.png"
+        }
+      ]
+    },
+    {
+      "threshold": 498000,
+      "items": [
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 50,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    }
+  ],
+  "multipliers": [
+    1,
+    2,
+    3,
+    5,
+    10,
+    20,
+    50,
+    100,
+    150,
+    200,
+    500
+  ],
+  "choice_boxes": [
+    {
+      "id": 1001,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 6800,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 6800
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 1,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 1
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 30,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 30
+        }
+      ]
+    },
+    {
+      "id": 1002,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 7500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 7500
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 1,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 1
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 10,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 10
+        }
+      ]
+    },
+    {
+      "id": 1003,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 3,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 3
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 60
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 1,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "id": 1004,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 5
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 2,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 2
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 20,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 1005,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 5
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 25000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 25000
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 3,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 3
+        }
+      ]
+    },
+    {
+      "id": 1006,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 5
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 160,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 160
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 30,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 30
+        }
+      ]
+    },
+    {
+      "id": 1007,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 35000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 35000
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 5
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 160,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 160
+        }
+      ]
+    },
+    {
+      "id": 1008,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 5
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 26000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 26000
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 40,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 40
+        }
+      ]
+    },
+    {
+      "id": 1009,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 1,
+          "id": 1009,
+          "base_amount": 5,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Wishbox",
+          "amount": 5
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 900,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 900
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 20,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 1010,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 10
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 6,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 6
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 150,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 150
+        }
+      ]
+    },
+    {
+      "id": 1011,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 63000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 63000
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 10
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 8,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 8
+        }
+      ]
+    },
+    {
+      "id": 1012,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 1,
+          "id": 1009,
+          "base_amount": 2,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Wishbox",
+          "amount": 2
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 63000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 63000
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 180,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 180
+        }
+      ]
+    },
+    {
+      "id": 1013,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 10
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 150,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 150
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 45000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 45000
+        }
+      ]
+    },
+    {
+      "id": 1014,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 10
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 120,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 120
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 54000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 54000
+        }
+      ]
+    },
+    {
+      "id": 1015,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 10,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 10
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 10
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 120,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 120
+        }
+      ]
+    },
+    {
+      "id": 1016,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 300,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 300
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 75,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 75
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 5,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 5
+        }
+      ]
+    },
+    {
+      "id": 1017,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 1,
+          "id": 1009,
+          "base_amount": 2,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Wishbox",
+          "amount": 2
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 8,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 8
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 48000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 48000
+        }
+      ]
+    },
+    {
+      "id": 1018,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 10
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 60000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 60000
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 120,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 120
+        }
+      ]
+    },
+    {
+      "id": 1019,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 400,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 400
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 10
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 120,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 120
+        }
+      ]
+    },
+    {
+      "id": 1020,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 360,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 360
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 27000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 27000
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 90,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 90
+        }
+      ]
+    },
+    {
+      "id": 1021,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 10
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 50,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 50
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 120,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 120
+        }
+      ]
+    },
+    {
+      "id": 1022,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 1,
+          "id": 1009,
+          "base_amount": 2,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Wishbox",
+          "amount": 2
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 120,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 120
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 360,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 360
+        }
+      ]
+    },
+    {
+      "id": 1023,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 10
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 24000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 24000
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 50,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 50
+        }
+      ]
+    },
+    {
+      "id": 1024,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 5,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 5
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 300,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 300
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 140,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 140
+        }
+      ]
+    },
+    {
+      "id": 1025,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 480,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 480
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 10
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 60000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 60000
+        }
+      ]
+    },
+    {
+      "id": 1026,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 460,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 460
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 10
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 60000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 60000
+        }
+      ]
+    },
+    {
+      "id": 1027,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 1,
+          "id": 1009,
+          "base_amount": 5,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Wishbox",
+          "amount": 5
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 900,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 900
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 20,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 20
+        }
+      ]
+    },
+    {
+      "id": 1028,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 20,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 20
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 20,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 20
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 108000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 108000
+        }
+      ]
+    },
+    {
+      "id": 1029,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 20,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 20
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 20,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 20
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 120000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 120000
+        }
+      ]
+    },
+    {
+      "id": 1030,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 25,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 25
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 270,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 270
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 600,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 600
+        }
+      ]
+    },
+    {
+      "id": 1031,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 600,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 600
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 150,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 150
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 64000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 64000
+        }
+      ]
+    },
+    {
+      "id": 1032,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 30,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 30
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 270,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 270
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 810,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 810
+        }
+      ]
+    },
+    {
+      "id": 1033,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 25,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 25
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 270,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 270
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 600,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 600
+        }
+      ]
+    },
+    {
+      "id": 1034,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 1002,
+          "base_amount": 30,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Capsule",
+          "amount": 30
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 1080,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 1080
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 150000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 150000
+        }
+      ]
+    },
+    {
+      "id": 1035,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 400,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 400
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 10,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 10
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "base_amount": 45000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Candy",
+          "amount": 45000
+        }
+      ]
+    },
+    {
+      "id": 1036,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 15,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 15
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 480,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 480
+        },
+        {
+          "type": 12,
+          "id": 110004001,
+          "base_amount": 80,
+          "name": "Raft",
+          "icon": "/guide-assets/raft-race/raft.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "<activityskin:TM_AssetName>",
+          "amount": 80
+        }
+      ]
+    },
+    {
+      "id": 1037,
+      "name": "Raft Race Selection Chest",
+      "icon": "ui/icon/teamrun/txui_teamrun_box_icon.png",
+      "selection": "Choose ONE option; do not sum all alternatives.",
+      "options": [
+        {
+          "type": 1,
+          "id": 1009,
+          "base_amount": 5,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Tatari Wishbox",
+          "amount": 5
+        },
+        {
+          "type": 3,
+          "id": 1,
+          "base_amount": 900,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Pinballs",
+          "amount": 900
+        },
+        {
+          "type": 9,
+          "id": 2001,
+          "base_amount": 20,
+          "name": "Bento",
+          "icon": "/guide-assets/rewards/9-2001.png",
+          "status": "config_localized",
+          "is_choice_box": false,
+          "name_source_template": "Bento",
+          "amount": 20
+        }
+      ]
+    }
+  ]
+}

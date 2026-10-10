@@ -1,0 +1,27 @@
+[
+  {
+    "event": "fishing",
+    "source": "txsc_fish_piranha_3102abdf43 - Copy - Copy.png",
+    "sha256": "4344f7f7ed9ee8588e0ba54a7b1249d90ef41565d3e55be789861a251f0fd37f"
+  },
+  {
+    "event": "cozy-farm",
+    "source": "txui_farm_fruit_dragonfruit_0dc11855f4.png",
+    "sha256": "99fb28f39bc54a305f57e28dbb11dcae3c52595b3e1ac46ee942e33407592926"
+  },
+  {
+    "event": "treasure-hunt",
+    "source": "txui_treasurehunt_box_close_72c94395ce.png",
+    "sha256": "b2bb8c4383e2781d011aa3b7640e3d04ec189be71dfb1891a7846677587de0a9"
+  },
+  {
+    "event": "raft-race",
+    "source": "txui_pinball_item_teamrun_rafting_e9aa704d65.png",
+    "sha256": "65e0a30682fed56c47e7325a914fe6f9b212740796b59573c9c1c1c2facce417"
+  },
+  {
+    "event": "zobo-shooter",
+    "source": "txui_battle_icon_monster_2008_1cbe62afb7.png",
+    "sha256": "02733a5eb6ab28ceab0c886e1de76100482cc988051eb0bf2123f567bdffddb7"
+  }
+]

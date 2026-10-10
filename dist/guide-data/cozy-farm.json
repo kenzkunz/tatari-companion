@@ -1,0 +1,2284 @@
+{
+  "unit": "kg",
+  "rewards": [
+    {
+      "threshold": 150,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 2000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 3,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 3200,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 4200,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 4001,
+          "amount": 1,
+          "name": "Card Pack",
+          "icon": "/guide-assets/fishing/bluecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 5300,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 6300,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 7400,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 3,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 8400,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 9600,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 10600,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 4,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 11800,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 12800,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 13900,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 15100,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 16000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 50,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 17100,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 18200,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 19300,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 20000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 21900,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 23000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 24000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 25100,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 26000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 4560,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 27000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 60,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 50,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 33200,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 75,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 17000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 35100,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 17000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 37000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 17000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 41100,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 75,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 100,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 42900,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 90,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 17000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 44700,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 17000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 48500,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 90,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 18000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 53400,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 135,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 8500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 57600,
+      "items": [
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 100,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 59800,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 8500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 64100,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 8500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 4003,
+          "amount": 1,
+          "name": "Deluxe Card Pack",
+          "icon": "/guide-assets/fishing/goldcardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 66100,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 135,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 8500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 70300,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 8500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 74500,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 8500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 76600,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 100,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 88000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 95000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 7,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 99000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 105000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 112000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 9,
+          "id": 4001,
+          "amount": 1,
+          "name": "Card Pack",
+          "icon": "/guide-assets/fishing/bluecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 119000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 7,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 125000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 130000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 136000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 142000,
+      "items": [
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 7,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        },
+        {
+          "type": 9,
+          "id": 4003,
+          "amount": 1,
+          "name": "Deluxe Card Pack",
+          "icon": "/guide-assets/fishing/goldcardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 149000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 156000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 160000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 7,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 165000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 1,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 172000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 179000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 185000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 13000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 7,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 189000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 150,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 15000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 227000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 375,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 260000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 291000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 2,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 322000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 100,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 353000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 386000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 418000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 375,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 448000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 479000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 375,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 512000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 542000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 3,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 573000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 375,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 603000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 636000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 375,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 666000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 697000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 4002,
+          "amount": 1,
+          "name": "Standard Card Pack",
+          "icon": "/guide-assets/fishing/purplecardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 728000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 375,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 758000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 789000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 3,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 819000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 375,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 848000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 879000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 375,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 26500,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 910000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 31000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 10,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 939000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 90,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 968000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 997000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 2,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1025000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1001,
+          "id": 100000008,
+          "amount": 100,
+          "name": "Tatari Scan Capsule",
+          "icon": "/guide-assets/rewards/1001-100000008.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1052000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 4003,
+          "amount": 1,
+          "name": "Deluxe Card Pack",
+          "icon": "/guide-assets/fishing/goldcardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1082000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 90,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1111000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1140000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 2,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1166000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 105,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1196000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1225000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 42000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 2,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1254000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 105,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 9,
+          "id": 4003,
+          "amount": 1,
+          "name": "Deluxe Card Pack",
+          "icon": "/guide-assets/fishing/goldcardpack.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1281000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1310000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 2,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1339000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 105,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1367000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 1002,
+          "amount": 5,
+          "name": "Tatari Capsule",
+          "icon": "/guide-assets/fishing/tatari%20capsule.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1394000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 1,
+          "id": 1009,
+          "amount": 2,
+          "name": "Tatari Wishbox",
+          "icon": "/guide-assets/fishing/wishbox.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1424000,
+      "items": [
+        {
+          "type": 3,
+          "id": 1,
+          "amount": 105,
+          "name": "Pinballs",
+          "icon": "/guide-assets/fishing/pinball.png"
+        },
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 21000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        }
+      ]
+    },
+    {
+      "threshold": 1453000,
+      "items": [
+        {
+          "type": 8,
+          "id": 1,
+          "amount": 62000,
+          "name": "Candy",
+          "icon": "/guide-assets/fishing/candy.png"
+        },
+        {
+          "type": 9,
+          "id": 4003,
+          "amount": 1,
+          "name": "Deluxe Card Pack",
+          "icon": "/guide-assets/fishing/goldcardpack.png"
+        }
+      ]
+    }
+  ],
+  "crops": [
+    {
+      "id": 2,
+      "name": "Dragon Fruit",
+      "support": "Frugling",
+      "icon": "/guide-assets/cozy-farm/crop-2.png",
+      "stages": [
+        "/guide-assets/cozy-farm/crop-2-stage-1.png",
+        "/guide-assets/cozy-farm/crop-2-stage-2.png",
+        "/guide-assets/cozy-farm/crop-2-stage-3.png",
+        "/guide-assets/cozy-farm/crop-2-stage-4.png"
+      ],
+      "stage_geometry": [
+        {
+          "size": [
+            300,
+            300
+          ],
+          "bounds": [
+            126,
+            193,
+            176,
+            249
+          ]
+        },
+        {
+          "size": [
+            150,
+            139
+          ],
+          "bounds": [
+            2,
+            2,
+            150,
+            137
+          ]
+        },
+        {
+          "size": [
+            300,
+            300
+          ],
+          "bounds": [
+            78,
+            90,
+            222,
+            256
+          ]
+        },
+        {
+          "size": [
+            350,
+            350
+          ],
+          "bounds": [
+            59,
+            72,
+            291,
+            314
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Bamboo Shoot",
+      "support": "Pandaroo",
+      "icon": "/guide-assets/cozy-farm/crop-3.png",
+      "stages": [
+        "/guide-assets/cozy-farm/crop-3-stage-1.png",
+        "/guide-assets/cozy-farm/crop-3-stage-2.png",
+        "/guide-assets/cozy-farm/crop-3-stage-3.png",
+        "/guide-assets/cozy-farm/crop-3-stage-4.png"
+      ],
+      "stage_geometry": [
+        {
+          "size": [
+            350,
+            350
+          ],
+          "bounds": [
+            153,
+            232,
+            197,
+            297
+          ]
+        },
+        {
+          "size": [
+            85,
+            133
+          ],
+          "bounds": [
+            2,
+            0,
+            83,
+            131
+          ]
+        },
+        {
+          "size": [
+            300,
+            300
+          ],
+          "bounds": [
+            90,
+            105,
+            206,
+            258
+          ]
+        },
+        {
+          "size": [
+            350,
+            350
+          ],
+          "bounds": [
+            108,
+            111,
+            241,
+            314
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Berry",
+      "support": "Zaplet",
+      "icon": "/guide-assets/cozy-farm/crop-4.png",
+      "stages": [
+        "/guide-assets/cozy-farm/crop-4-stage-1.png",
+        "/guide-assets/cozy-farm/crop-4-stage-2.png",
+        "/guide-assets/cozy-farm/crop-4-stage-3.png",
+        "/guide-assets/cozy-farm/crop-4-stage-4.png"
+      ],
+      "stage_geometry": [
+        {
+          "size": [
+            53,
+            65
+          ],
+          "bounds": [
+            2,
+            2,
+            51,
+            63
+          ]
+        },
+        {
+          "size": [
+            142,
+            127
+          ],
+          "bounds": [
+            2,
+            2,
+            140,
+            125
+          ]
+        },
+        {
+          "size": [
+            300,
+            300
+          ],
+          "bounds": [
+            74,
+            109,
+            227,
+            257
+          ]
+        },
+        {
+          "size": [
+            220,
+            211
+          ],
+          "bounds": [
+            2,
+            2,
+            218,
+            210
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Carrot",
+      "support": "Droppit",
+      "icon": "/guide-assets/cozy-farm/crop-5.png",
+      "stages": [
+        "/guide-assets/cozy-farm/crop-5-stage-1.png",
+        "/guide-assets/cozy-farm/crop-5-stage-2.png",
+        "/guide-assets/cozy-farm/crop-5-stage-3.png",
+        "/guide-assets/cozy-farm/crop-5-stage-4.png"
+      ],
+      "stage_geometry": [
+        {
+          "size": [
+            51,
+            65
+          ],
+          "bounds": [
+            2,
+            2,
+            49,
+            63
+          ]
+        },
+        {
+          "size": [
+            300,
+            300
+          ],
+          "bounds": [
+            96,
+            143,
+            205,
+            252
+          ]
+        },
+        {
+          "size": [
+            146,
+            152
+          ],
+          "bounds": [
+            0,
+            2,
+            145,
+            150
+          ]
+        },
+        {
+          "size": [
+            350,
+            350
+          ],
+          "bounds": [
+            38,
+            92,
+            313,
+            314
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Phantom Fruit",
+      "support": "Maskfry",
+      "icon": "/guide-assets/cozy-farm/crop-6.png",
+      "stages": [
+        "/guide-assets/cozy-farm/crop-6-stage-1.png",
+        "/guide-assets/cozy-farm/crop-6-stage-2.png",
+        "/guide-assets/cozy-farm/crop-6-stage-3.png",
+        "/guide-assets/cozy-farm/crop-6-stage-4.png"
+      ],
+      "stage_geometry": [
+        {
+          "size": [
+            300,
+            300
+          ],
+          "bounds": [
+            115,
+            180,
+            186,
+            252
+          ]
+        },
+        {
+          "size": [
+            300,
+            300
+          ],
+          "bounds": [
+            83,
+            115,
+            210,
+            260
+          ]
+        },
+        {
+          "size": [
+            350,
+            350
+          ],
+          "bounds": [
+            87,
+            122,
+            278,
+            317
+          ]
+        },
+        {
+          "size": [
+            350,
+            350
+          ],
+          "bounds": [
+            67,
+            30,
+            292,
+            313
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Clocko Fruit",
+      "support": "Hootlet",
+      "icon": "/guide-assets/cozy-farm/crop-7.png",
+      "stages": [
+        "/guide-assets/cozy-farm/crop-7-stage-1.png",
+        "/guide-assets/cozy-farm/crop-7-stage-2.png",
+        "/guide-assets/cozy-farm/crop-7-stage-3.png",
+        "/guide-assets/cozy-farm/crop-7-stage-4.png"
+      ],
+      "stage_geometry": [
+        {
+          "size": [
+            65,
+            94
+          ],
+          "bounds": [
+            0,
+            2,
+            63,
+            92
+          ]
+        },
+        {
+          "size": [
+            300,
+            300
+          ],
+          "bounds": [
+            90,
+            118,
+            216,
+            254
+          ]
+        },
+        {
+          "size": [
+            167,
+            164
+          ],
+          "bounds": [
+            2,
+            1,
+            165,
+            163
+          ]
+        },
+        {
+          "size": [
+            350,
+            350
+          ],
+          "bounds": [
+            54,
+            68,
+            297,
+            308
+          ]
+        }
+      ]
+    }
+  ],
+  "watering": {
+    "per_active_crop": 5,
+    "six_crops_total": 30,
+    "support_multiplier_applies": false
+  }
+}
