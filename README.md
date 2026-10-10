@@ -72,3 +72,7 @@ Shared presentation and behavior are in `dist/guides.css` and `dist/guides.mjs`.
 The guides reference recovered v0.49.1 data and user in-game observations. Unverified server mechanics are not promises of guaranteed outcomes. Raft distance is a model average. Shooter welfare parameters do not establish a verified pity counter. Corrections and footer issue reports link to [kenzkunz on Discord](https://discord.com/users/191274229482782720).
 
 After editing, run `npm test` and `npm run build -- --base /tatari-companion/`. Commit source files, not `_site/`. Copying files and passing local checks does not confirm deployment; publish through the existing GitHub Actions workflow.
+
+## Event matchmaking
+
+[Event Matchmaking](dist/events/matchmaking.html) supports per-event plans, budget/style matching, partner slots, Treasure Hunt key targets and consented UID contacts. Apply [migration 008](supabase/008_event_matchmaking.sql) to activate the Supabase backend. See [setup and verification](docs/EVENT-MATCHMAKING.md). The migration and production client are supplied; live activation requires applying the SQL to your project.

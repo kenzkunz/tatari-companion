@@ -6,7 +6,7 @@ const input={pet:11,tier:4,stars:27,food:8,badgeMode:'pick',badges:[1001,1002,10
 const result=resolveBuild(data,input);for(const [a,n] of Object.entries({ATK:44277.95,HP:122087.20,DEF:10506.67}))assert(Math.abs(result.values[a]-n)<.01);
 assert.deepEqual(result.values,resolveBuild(data,{...input,badges:[...input.badges,1001]}).values);
 assert.deepEqual(resolveBuild(data,{...input,badgeMode:'none'}).values,resolveBuild(data,{...input,badges:[]}).values);
-assert.throws(()=>resolveBuild(data,{...input,stars:0}));assert.throws(()=>resolveBuild(data,{...input,food:12}));assert.throws(()=>resolveBuild(data,{...input,tier:9}));
+assert.throws(()=>resolveBuild(data,{...input,stars:0}));assert.throws(()=>resolveBuild(data,{...input,food:17}));assert.throws(()=>resolveBuild(data,{...input,tier:9}));
 assert.equal(advantage(2,1),'left');assert.equal(advantage(1,2),'right');assert.equal(advantage(1,1),null);
 for(const unit of data.units)for(const form of unit.forms)for(const stars of [1,84]){const r=resolveBuild(data,{pet:unit.id,tier:form.evolution,stars,food:1,badgeMode:'none',badges:[]});assert(Object.values(r.values).every(Number.isFinite));assert(Object.values(r.grades).every(Boolean));}
 console.log('Passed stats tool sample, badge modes, input boundaries, comparisons and every Tatari form.');
@@ -17,3 +17,6 @@ const allElements=[2,3,4,6,5];for(const e of allElements)assert.equal(dojoBadgeI
 const allBadges=allElements.flatMap(e=>dojoBadgeIds(data,e,6));assert.equal(new Set(allBadges).size,35);
 assert.deepEqual(resolveBuild(data,{...input,badges:[...input.badges,...dojoBadgeIds(data,3,6)]}).values,result.values);
 console.log('Passed all five dojo selections; stat bonuses remain matched to the selected Tatari element.');
+
+for(const unit of data.units){const max=Math.max(...unit.feedingStages.map(r=>r.stage));for(const food of unit.feedingStages.filter(f=>f.stage>=12&&f.stage<=16).map(f=>f.stage)){const r=resolveBuild(data,{pet:unit.id,tier:unit.forms.at(-1).evolution,stars:84,food,badgeMode:'none',badges:[]});assert(Object.values(r.values).every(Number.isFinite));assert(Object.values(r.grades).every(Boolean));}if(max<16)assert.throws(()=>resolveBuild(data,{pet:unit.id,tier:1,stars:1,food:16,badgeMode:'none',badges:[]}));}
+console.log('Passed food stages 12–16 with actual per-Tatari availability and grade artwork.');

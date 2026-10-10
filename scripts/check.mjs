@@ -36,6 +36,7 @@ for (const base of ['/', '/milkroad-test/']) {
   for(const route of ['schedule','resources','events/cozy-farm','drafter/arena','tools']) {
     assert.equal(await readFile('_site/'+route+'/index.html','utf8'),await readFile('_site/'+route+'.html','utf8'));
   }
+  assert((await readFile('_site/account.mjs','utf8')).includes("(i+1)+' / 7'"), 'Deployment base corrupted badge labels');
   const error=await readFile('_site/404.html','utf8');
   assert(error.includes('Error 404!'));
   assert((await readFile('_site/navigation.mjs','utf8')).includes('https://ko-fi.com/kenzkunz'));
