@@ -6,6 +6,7 @@ insert into public.event_match_definitions(event_name,anchor_start,capacity) val
 insert into public.event_match_definitions(event_name,anchor_start,capacity) values ('Zobo Shooter','2026-09-30T00:00:00+00:00',3);
 insert into public.event_match_definitions(event_name,anchor_start,capacity) values ('Cozy Farm','2026-10-03T00:00:00+00:00',3);
 insert into public.event_match_definitions(event_name,anchor_start,capacity) values ('Fishing Contest','2026-10-06T00:00:00+00:00',3);
+alter table public.event_match_definitions enable row level security;
 revoke all on public.event_match_definitions from public,anon,authenticated;
 create table public.event_match_plans(
  user_id uuid not null references public.profiles(user_id) on delete cascade,

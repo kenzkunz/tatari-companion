@@ -7,3 +7,5 @@ body{background:#ffbd24 url('/assets/background02.png') center top/cover fixed;c
 
 .match-heading-controls{display:flex;align-items:center;gap:20px}.match-heading-controls .match-style-filters{margin:0;padding:0;gap:16px}.match-heading-controls .match-style-filters legend{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0)}.match-heading-controls .find-match-action{margin:0}@media(max-width:700px){.match-heading-controls{width:100%;flex-wrap:wrap;justify-content:space-between;gap:12px}.match-heading-controls .match-style-filters{justify-content:flex-start;gap:10px}}
 @media(max-width:700px){.plan-event-list{display:flex;overflow-x:auto;overflow-y:hidden;gap:10px;scroll-snap-type:x proximity;padding:2px 2px 10px;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}.plan-event-card{flex:0 0 72%;box-sizing:border-box;scroll-snap-align:start;min-width:0}.plan-event-list{scrollbar-width:thin;scrollbar-color:#d4b05a transparent}}
+
+.navbar #navigation>a,.navbar #navigation>details>summary,.navbar .dropdown>a,.navbar .dropdown>span{color:#fff}.navbar #navigation>details.navbar-muted>summary{color:#aaa}
