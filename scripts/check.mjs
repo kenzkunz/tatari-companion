@@ -38,6 +38,7 @@ for (const base of ['/', '/milkroad-test/']) {
   }
   assert((await readFile('_site/account.mjs','utf8')).includes("(i+1)+' / 7'"), 'Deployment base corrupted badge labels');
   assert(!(await readFile('_site/event-matchmaking.mjs','utf8')).includes("n+'"+base+"'"), 'Deployment base corrupted open-slot labels');
+  assert((await readFile('_site/tatari-stats.mjs','utf8')).includes("' / 7'"), 'Deployment base corrupted calculator badge labels');
   const error=await readFile('_site/404.html','utf8');
   assert(error.includes('Error 404!'));
   assert((await readFile('_site/navigation.mjs','utf8')).includes('https://ko-fi.com/kenzkunz'));
