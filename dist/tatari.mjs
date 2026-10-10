@@ -16,14 +16,14 @@ function render(){const f=selected.forms.find(f=>f.evolution===evolution),min=mi
 function renderSkills(){
  for(const m of ['normal','horde']){const button=$(m+'-skills');button.setAttribute('aria-selected',String(mode===m));button.tabIndex=mode===m?0:-1;}
  $('skill-panel').setAttribute('aria-labelledby',mode+'-skills');const f=selected.forms.find(f=>f.evolution===evolution);
- $('skill-list').classList.toggle('normal-tier-list',mode==='normal');
+ $('skill-list').classList.add('normal-tier-list');
  const entries=mode==='normal'?selected.forms.map(form=>({form,skills:form.skills.normal.filter(s=>!text(s.name).includes('不用翻译'))})):hordeSkillCards(f).map(card=>({form:f,...card}));
  $('skill-list').dataset.cardCount=entries.length;
  $('skill-list').replaceChildren(...entries.map(({form,skills,label})=>{const card=el('article',undefined,'skill-card horde-skill-card'+(mode==='normal'?' normal-tier-card':'')),first=skills[0];
  if(mode==='normal'){card.dataset.tier=form.evolution;card.setAttribute('aria-current',String(form.evolution===evolution));card.setAttribute('aria-label',text(form.name)+' · tier '+form.evolution+' skills');}
  const heading=el('div',undefined,'skill-heading');heading.append(el('h2',first?text(first.name):'Skills not recorded'),el('span',mode==='normal'?'Tier '+form.evolution:label,'horde-skill-level'));card.append(heading);
  const description=el('p',undefined,'skill-description');if(mode==='normal')description.append(el('strong',text(form.name),'skill-form-name'));for(const [i,s] of skills.entries()){if(i)description.append(el('strong',text(s.name),'skill-form-name'));description.append(document.createTextNode(text(s.description)));}card.append(description);
- const rows=el('div',undefined,'horde-detail-rows');for(const [i,s] of skills.entries()){if(i)rows.append(el('strong',text(s.name),'extra-skill-heading'));for(const d of s.details){if(mode==='horde'&&label==='Regular'&&text(d.title)==='Arena Factor')continue;const row=el('div',undefined,'horde-detail-row');if(d.type==='Effect'||(mode==='normal'&&d.value===null)){row.append(el('strong',text(d.title)),el('span',text(d.text)));}else row.append(el('strong',[text(d.title),text(d.text)].filter(Boolean).join(' ')));rows.append(row);}}card.append(rows);return card;}));
+ const rows=el('div',undefined,'horde-detail-rows');for(const [i,s] of skills.entries()){if(i)rows.append(el('strong',text(s.name),'extra-skill-heading'));for(const d of s.details){if(mode==='horde'&&label==='Regular'&&text(d.title)==='Arena Factor')continue;const row=el('div',undefined,'horde-detail-row');if(d.type==='Effect'||d.value===null){row.append(el('strong',text(d.title)),el('span',text(d.text)));}else row.append(el('strong',[text(d.title),text(d.text)].filter(Boolean).join(' ')));rows.append(row);}}card.append(rows);return card;}));
  if(mode==='horde')$('skill-list').append(el('p','Horde skill availability depends on evolution and Horde progression.','horde-note'));
 }
 for(const m of ['normal','horde']){$(m+'-skills').onclick=()=>{mode=m;renderSkills();updateLink();};$(m+'-skills').onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();mode=e.key==='Home'?'normal':e.key==='End'?'horde':mode==='normal'?'horde':'normal';renderSkills();$(mode+'-skills').focus();updateLink();}};}

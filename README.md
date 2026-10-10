@@ -77,4 +77,4 @@ After editing, run `npm test` and `npm run build -- --base /tatari-companion/`. 
 
 [Event Matchmaking](dist/events/matchmaking.html) supports per-event plans, budget/style matching, partner slots, Treasure Hunt key targets and consented UID contacts. Apply [migration 008](supabase/008_event_matchmaking.sql) to activate the Supabase backend. See [setup and verification](docs/EVENT-MATCHMAKING.md). The migration and production client are supplied; live activation requires applying the SQL to your project.
 
-Horde skill cards show the current form’s visible Regular skill followed by the three `LDSkill` entries, labeled Regular / Lv 1 / Lv 3 / Lv 7 by user request. The v0.49.1 recovered rank table uses unlock ranks 3 / 5 / 7; the source `unlockLevel` values remain unchanged pending reconciliation with current in-game labels. Hidden helper skills are excluded.
+Horde skill cards show the current form’s visible Regular skill followed by the three `LDSkill` entries, labeled Regular / Lv 3 / Lv 5 / Lv 7, matching the v0.49.1 recovered rank table. Effect names and explanations use the same two-line format on all four cards. Hidden helper skills are excluded.
