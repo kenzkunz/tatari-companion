@@ -32,3 +32,5 @@ body[data-guide=goldrush] .guide-worksheet > .guide-footnote{margin-top:16px}
 
 body[data-guide=goldrush] .guide-banner.gold-banner{display:block;width:min(480px,100%);padding:0;background:transparent;border:0;box-shadow:none;border-radius:0}
 body[data-guide=goldrush] .gold-banner img{display:block;width:100%;height:auto;object-fit:contain}
+
+body[data-guide=goldrush] #loss-hp,body[data-guide=goldrush] #loss-damage{font-size:14px}
