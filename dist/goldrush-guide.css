@@ -1,0 +1,34 @@
+body[data-guide=goldrush] .guide-banner{display:flex;align-items:center;justify-content:center;gap:18px;width:min(480px,100%);margin:24px auto 20px;padding:17px 22px;background:#fff8dd;border:3px solid #282625;border-radius:14px;box-shadow:0 4px #b78525}
+.gold-banner img{width:90px;height:76px;object-fit:contain}.gold-banner figcaption{font-size:32px;color:#282625}
+body[data-guide=goldrush] .guide-opening{display:block;padding:14px 26px}body[data-guide=goldrush] .guide-opening p{max-width:none;margin:0;font-size:13px}
+body[data-guide=goldrush] .guide-footnote{font:11px/1.7 Poppins,system-ui,sans-serif;color:#716a58}
+.gold-icon-value{display:inline-flex;align-items:center;gap:6px;vertical-align:middle;white-space:nowrap}.gold-icon-value img{width:25px;height:25px;object-fit:contain}
+.gold-result-lines{display:grid;gap:8px}.gold-result-lines>span{display:flex;justify-content:space-between;align-items:center;gap:12px}.gold-result-lines>span:last-child{border-top:1px solid #ded5bf;padding-top:9px;margin-top:3px;font-weight:600}
+.gold-result-lines strong{font-weight:600;white-space:nowrap}.gold-formula{font:12px/1.8 Poppins,system-ui,sans-serif;overflow-wrap:anywhere;margin:8px 0}
+.gold-presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:15px}.gold-presets button{border:1px solid #aa7a21;background:#ffcf40;border-radius:7px;padding:8px 12px;color:#282625;font:12px Poppins,system-ui,sans-serif;cursor:pointer}
+.gold-clam-gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin:15px 0}.gold-clam-gallery figure{margin:0;padding:10px 6px;border:1px solid #d7c89d;border-radius:10px;background:#fff8dd;text-align:center}.gold-clam-art{position:relative;height:95px;overflow:hidden}.gold-clam-art img{position:absolute;max-width:none;object-fit:contain;transform:translate(-50%,-50%)}.gold-clam-gallery figcaption{font:600 12px Poppins,system-ui,sans-serif;margin:7px 0 4px}.gold-clam-gallery small{font:10px/1.5 Poppins,system-ui,sans-serif;color:#756b58;display:block}
+.gold-reward-items{display:flex;flex-wrap:wrap;gap:6px 14px}.gold-reward-items b{font-weight:600}
+body[data-guide=goldrush] #gold-reward-list{margin-top:12px}
+.gold-resource-info>div{display:flex;align-items:flex-start;gap:12px}.gold-resource-info>div+div{margin-top:14px}.gold-resource-info img{width:38px;height:38px;object-fit:contain;flex:none}.gold-resource-info p{margin:0!important;font-size:13px!important}
+.gold-reward-item{display:inline-flex;align-items:center;gap:6px}.gold-reward-item img{width:27px;height:27px;object-fit:contain;flex:none}.gold-reward-item>span{font-size:12px}
+body[data-guide=goldrush] .gold-milestone-row{width:100%;border:0;border-bottom:1px solid #ded5bf;background:transparent;color:#282625;text-align:left;cursor:pointer;font:12px/1.7 Poppins,system-ui,sans-serif;align-items:center}
+body[data-guide=goldrush] .gold-milestone-row:hover{background:#fff4c4}body[data-guide=goldrush] .gold-milestone-row[aria-pressed=true]{background:#ffeb99;box-shadow:inset 4px 0 #b98212}
+body[data-guide=goldrush] #gold-team-total .gold-reward-items{margin-top:10px}body[data-guide=goldrush] #gold-team-total .gold-reward-item img{width:30px;height:30px}
+body[data-guide=goldrush] [hidden]{display:none!important}
+body[data-guide=goldrush] .guide-fields select,body[data-guide=goldrush] .guide-fields select option{font-size:14px}
+body[data-guide=goldrush] .guide-content details[open]>summary{background:#ffeb99;color:#282625}
+@media(max-width:800px){body[data-guide=goldrush] .guide-opening{padding:12px 18px}body[data-guide=goldrush] .guide-banner{margin:18px auto 14px;padding:12px 15px;gap:12px}.gold-banner img{width:73px;height:62px}.gold-banner figcaption{font-size:28px}.gold-clam-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.gold-clam-gallery img{height:90px}.gold-result-lines{font-size:12px}.gold-result-lines>span{align-items:flex-start}.gold-result-lines .gold-icon-value img{width:22px;height:22px}}
+
+body[data-guide=goldrush] .rally-worksheet{container-type:inline-size;container-name:rally}
+body[data-guide=goldrush] .rally-fields{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+body[data-guide=goldrush] .rally-fields label{min-width:0}
+body[data-guide=goldrush] .rally-fields input,body[data-guide=goldrush] .rally-fields select{width:100%;min-width:0;box-sizing:border-box}
+body[data-guide=goldrush] .rally-calculation-note{margin-top:20px;margin-bottom:16px}
+body[data-guide=goldrush] .rally-calculation-note p{margin:8px 0 0}
+body[data-guide=goldrush] .guide-example-buttons{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap}
+@container rally (max-width:780px){body[data-guide=goldrush] .rally-fields{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+body[data-guide=goldrush] .guide-worksheet > .guide-footnote{margin-top:16px}
+
+body[data-guide=goldrush] .guide-banner.gold-banner{display:block;width:min(480px,100%);padding:0;background:transparent;border:0;box-shadow:none;border-radius:0}
+body[data-guide=goldrush] .gold-banner img{display:block;width:100%;height:auto;object-fit:contain}
