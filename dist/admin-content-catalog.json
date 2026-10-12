@@ -952,5 +952,179 @@
     "block": "text-16",
     "label": "P · Leaving after a spending limit can protect your budget. There is no verified rule that spending",
     "default": "Leaving after a spending limit can protect your budget. There is no verified rule that spending a fixed number of coins resets the next kill chance or makes a boss “due.” Another player can also finish a target while you are attacking."
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "note-1",
+    "label": "Info box · This guide covers Farm V2. Older feeding-and-harvesting rules are a different version. Its rewa",
+    "default": "This guide covers Farm V2. Older feeding-and-harvesting rules are a different version. Its rewards and formulas should not be mixed with these milestones."
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "note-2",
+    "label": "Info box · Find support by UID. Open Support, use the search button, and enter a trainer’s UID to find the",
+    "default": "Find support by UID. Open Support, use the search button, and enter a trainer’s UID to find the required Tatari and request support. Check its availability and bonus before inviting. Save reliable support UIDs for future rounds."
+  },
+  {
+    "page": "events/fishing.html",
+    "block": "note-2",
+    "label": "Info box · Keep support timing practical. Scatter bait when teammates can fish. A bait boost that expires ",
+    "default": "Keep support timing practical. Scatter bait when teammates can fish. A bait boost that expires while everyone is offline offers little opportunity to use it."
+  },
+  {
+    "page": "events/fishing.html",
+    "block": "note-3",
+    "label": "Info box · Gold and multiplier are different. The published rule explicitly scales silver by the multiplie",
+    "default": "Gold and multiplier are different. The published rule explicitly scales silver by the multiplier. It does not promise the same scaling for gold record gains. Lower multipliers give more paid catch attempts from a fixed rod budget; higher multipliers advance silver in larger steps."
+  },
+  {
+    "page": "events/fishing.html",
+    "block": "note-4",
+    "label": "Info box · Reached your personal silver milestone target? Switch to ×1 for team records. At the same rod l",
+    "default": "Reached your personal silver milestone target? Switch to ×1 for team records. At the same rod level and bait stacks, ×1 gives you more catch attempts from your remaining rods. Each attempt is another chance to improve a team fish record, while higher multipliers mainly help you push silver milestones faster. Coordinate with teammates to fish during an active bait window. ×1 does not increase the chance of a better fish per catch."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "note-1",
+    "label": "Info box · Season 2 reference: All four inspected difficulty settings contain 25 waves of 30 enemies, for ",
+    "default": "Season 2 reference: All four inspected difficulty settings contain 25 waves of 30 enemies, for 750 configured enemies in a full run. This page uses the S2 configuration from v0.49.1; the active server season can change."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "note-2",
+    "label": "Info box · A formation pattern is a starting point. Front-line protection with damage and support behind i",
+    "default": "A formation pattern is a starting point. Front-line protection with damage and support behind it is a practical layout. Placement depends on your Tatari's Horde skills, enemy lanes and the chips you pick. This guide does not claim an optimal lineup."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "note-3",
+    "label": "Info box · Both players receive the full base kill income. A normal kill adds 4 to each player's balance, ",
+    "default": "Both players receive the full base kill income. A normal kill adds 4 to each player's balance, and a boss kill adds 100 to each. The base amount is not divided between teammates."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "note-4",
+    "label": "Info box · Parting Gift adds its own refund. The chip describes +40 Energy Candy when one of your Tatari i",
+    "default": "Parting Gift adds its own refund. The chip describes +40 Energy Candy when one of your Tatari is knocked down. The configured base refund is 40 / 40 / 60 / 60 / 80 / 80 / 100 / 100 by level, rather than a universal +100 at every level."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "note-5",
+    "label": "Info box · Watch formation-changing chips. Shuffle replaces your deployed Tatari; Equalizer resets them to",
+    "default": "Watch formation-changing chips. Shuffle replaces your deployed Tatari; Equalizer resets them to its stated level; Mission Reset removes them for Energy Candy. Read the effect before selecting it, especially after investing in important skill unlocks."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "note-9",
+    "label": "Info box · Horde Reward settlement info. The Energy Candy totals on this page do not establish claimable C",
+    "default": "Horde Reward settlement info. The Energy Candy totals on this page do not establish claimable Candy, Pinballs, daily claim limits or best-result settlement rules. See in-game Horde Invasion screen to check daily and seasonal rewards."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "note-5",
+    "label": "Disclaimer · Goldrush and Dune Rush have different rules. This guide covers Island Goldrush and its underwat",
+    "default": "Goldrush and Dune Rush have different rules. This guide covers Island Goldrush and its underwater clams. The tournament has 20-player teams, 8 leagues and league transfers. Its sand and deepsea variants belong in a separate guide."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "note-7",
+    "label": "Disclaimer · Ownership and defender counts update from the server while attacks are happening. The game reco",
+    "default": "Ownership and defender counts update from the server while attacks are happening. The game records the credited capturer separately from kill MVP. For mining tiles, the in-game text describes league kill totals deciding ownership; that should not be treated as a universal last-hit rule for every tile type."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "note-8",
+    "label": "Info box · Skipping the animation does not create extra hits. Skip goes straight to the settlement display",
+    "default": "Skipping the animation does not create extra hits. Skip goes straight to the settlement display for the server-provided fight records. It can get you back to the controls sooner, but no client rule establishes that it changes hit order or guarantees capture credit. The exact ordering and tie-breakers for simultaneous attacks are server-controlled and are not exposed in this client."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "note-9",
+    "label": "Info box · One trainer and one tile defender are not the same permanent slot. An attack can contain severa",
+    "default": "One trainer and one tile defender are not the same permanent slot. An attack can contain several opponent fights. Which opponent appears is supplied by the server. The random names floating in the map animation are decorative; use the actual battle records to check who you fought. A repeated animation name alone does not prove that you fought the same defender again."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "note-10",
+    "label": "Info box · 6 appointment actions per day. Officer appointments and transferring league leadership share th",
+    "default": "6 appointment actions per day. Officer appointments and transferring league leadership share this limit. Removing a title completely does not consume an action. The in-game rules also describe possible automatic leadership transfer after more than 24 hours of inactivity."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "note-12",
+    "label": "Disclaimer · Follow the election rules shown during preparation. The in-game descriptions cover a highest-Co",
+    "default": "Follow the election rules shown during preparation. The in-game descriptions cover a highest-Combat-Power selection and a voting variant. Higher power can affect selection or candidate eligibility to become Goldrush League Leader."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "note-13",
+    "label": "Info box · Kills and daily attacks are separate counters. One attack can show several opponent fights. The",
+    "default": "Kills and daily attacks are separate counters. One attack can show several opponent fights. The client receives the daily counter from the server; these records do not establish whether every button press or every opponent encounter increments it. Do not assume 11 kills automatically means +20% exhaustion."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "note-17",
+    "label": "Info box · min(available energy drink, max(3, min(50, ceil(50 × enemy damage ÷ formation battle max HP))))",
+    "default": "min(available energy drink, max(3, min(50, ceil(50 × enemy damage ÷ formation battle max HP))))"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "note-18",
+    "label": "Info box · Attacker points and owner harvest are different rewards. Breaking a defense line can grant clai",
+    "default": "Attacker points and owner harvest are different rewards. Breaking a defense line can grant claim points to the attacking side. Damage also reduces the owner's harvest ratio. At zero defenders, the clam defense fails and the owner receives no harvest revenue."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "note-22",
+    "label": "Info box · Reward settlement info. See the in-game Goldrush screen for current daily and final rewards. Ca",
+    "default": "Reward settlement info. See the in-game Goldrush screen for current daily and final rewards. Candy display can scale with the active schedule/account coefficient. Ranking brackets are alternatives, not cumulative milestones; attack and rally reward paths may differ."
+  },
+  {
+    "page": "events/raft-race.html",
+    "block": "note-1",
+    "label": "Info box · “50× went farther for me” is an observation, not proof of better odds. Smaller multipliers offe",
+    "default": "“50× went farther for me” is an observation, not proof of better odds. Smaller multipliers offer more opportunities to stop near a target. Larger multipliers make progress in fewer, larger steps."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "note-2",
+    "label": "Info box · Goldrush discount stacking. A 3% Vanguard discount and 10% active spa discount combine to 13%. ",
+    "default": "Goldrush discount stacking. A 3% Vanguard discount and 10% active spa discount combine to 13%. The same configured spa reduction applies to guests when it is part of their active buff set."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "note-4",
+    "label": "Disclaimer · Owner and guest values above are already the configured buffs. Do not double the owner values a",
+    "default": "Owner and guest values above are already the configured buffs. Do not double the owner values again because of the “200% effects” tooltip. Final combat stats also depend on other bonuses."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "note-6",
+    "label": "Disclaimer · These weights are not the probability of a particular named effect appearing in a complete set.",
+    "default": "These weights are not the probability of a particular named effect appearing in a complete set. Early-drop pity resets, whether opening counts as a draw, and pity carry-over between spa activations are not verified. This pity concerns spa effects, not Sparkle skins."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "note-8",
+    "label": "Disclaimer · This guide based on v0.49.1 data, game descriptions and creator's interpretation. Pity resets i",
+    "default": "This guide based on v0.49.1 data, game descriptions and creator's interpretation. Pity resets is unverified."
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "note-1",
+    "label": "Info box · A displayed stage is not necessarily completed. If you are still digging stage 7, enter stage 6",
+    "default": "A displayed stage is not necessarily completed. If you are still digging stage 7, enter stage 6 in a completed-stage planner."
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "note-1",
+    "label": "Info box · Higher quality improves chance proportionally. A 4.15% base chance becomes 4.565% with Rainbow,",
+    "default": "Higher quality improves chance proportionally. A 4.15% base chance becomes 4.565% with Rainbow, not 14.15%."
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "note-2",
+    "label": "Info box · Collect power-ups in the ×1 arena. Its lower cost gives you more attacks from the same coin bud",
+    "default": "Collect power-ups in the ×1 arena. Its lower cost gives you more attacks from the same coin budget, creating more opportunities to defeat Zobos and collect power-ups. Save them for higher-multiplier arenas. This gives more attempts, not a higher drop chance per kill."
   }
 ]
