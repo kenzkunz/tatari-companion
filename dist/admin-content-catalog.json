@@ -246,7 +246,7 @@
     "page": "events/horde.html",
     "block": "text-6",
     "label": "P · Energy Candy is the in-round currency. It is separate from Candy and Pinballs claimed outside t",
-    "default": "Energy Candy is the in-round currency. It is separate from Candy and Pinballs claimed outside the battle.",
+    "default": "@rich-v1:[{\"text\":\"Energy Candy / Energizer is the in-round currency. It is separate from Candy and Pinballs claimed outside the battle.\"}]",
     "order": 13,
     "section": "economy",
     "sectionTitle": "Energy Candy: income during battle"
@@ -300,7 +300,7 @@
     "page": "events/horde.html",
     "block": "text-12",
     "label": "P · The Lv 1 row is a new deployment. Total cost includes that deployment and each listed upgrade. ",
-    "default": "The Lv 1 row is a new deployment. Total cost includes that deployment and each listed upgrade. Death refunds depend on the Tatari's level and an eligibility check; do not assume every summoned unit or forced removal qualifies.",
+    "default": "@rich-v1:[{\"text\":\"The Lv 1 row is a new deployment. Total cost includes that deployment and each listed upgrade. Death refunds depend on the Tatari's level and an eligibility check.\"}]",
     "order": 20,
     "section": "levels",
     "sectionTitle": "Levels, costs and death refunds"
@@ -390,7 +390,7 @@
     "page": "events/horde.html",
     "block": "text-23",
     "label": "P · On mobile, swipe through all four cards. Only visible game skill cards are included; internal h",
-    "default": "On mobile, swipe through all four cards. Only visible game skill cards are included; internal helper skills are excluded. Arena Factor rows are omitted for Horde.",
+    "default": "@rich-v1:[{\"text\":\"On mobile, swipe through all four cards. Only visible game skill cards are included. Arena Factor rows are omitted for Horde.\"}]",
     "order": 39,
     "section": "skills",
     "sectionTitle": "Tatari Horde skill cards"
@@ -426,7 +426,7 @@
     "page": "events/island-goldrush.html",
     "block": "text-3",
     "label": "P · The main goal is to build your league's point production by claiming tiles and clams across the",
-    "default": "The main goal is to build your league's point production by claiming tiles and clams across the six configured days. Coordinate a strategy with your league, choose useful routes and high-value targets, and capture or retake tiles effectively. Attacks contain individual opponent fights: your Tatari skills and formation decide those fights, while Energy Drinks cover the battle cost.",
+    "default": "@rich-v1:[{\"text\":\"The main goal is to build your league's point production by claiming tiles and clams across the six configured days. Coordinate a strategy with your league, choose useful routes and high-value tiles, and capture or retake tiles effectively. Attacks contain individual opponent fights: your Tatari skills and formation decide those fights, while Energy Drinks cover the battle cost.\"}]",
     "order": 3,
     "section": "play",
     "sectionTitle": "How Goldrush works"
@@ -435,7 +435,7 @@
     "page": "events/island-goldrush.html",
     "block": "text-4",
     "label": "P · Energy Drinks / Cans are the battle resource used to boost your Tatari in Goldrush. The amount ",
-    "default": "Energy Drinks / Cans are the battle resource used to boost your Tatari in Goldrush. The amount allocated determines your boost level. Energy Drinks expire after the event ends.",
+    "default": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"Energy Drinks / Cans\"}]},{\"text\":\" are the battle resource used to boost your Tatari in Goldrush. The amount allocated determines your boost level. Energy Drinks expire after the event ends (Day VI).\"}]",
     "order": 4,
     "section": "play",
     "sectionTitle": "How Goldrush works"
@@ -444,7 +444,7 @@
     "page": "events/island-goldrush.html",
     "block": "text-5",
     "label": "P · Super Drinks are condensed cans used for Dunerush Tournament. The verified tournament conversio",
-    "default": "Super Drinks are condensed cans used for Dunerush Tournament. The verified tournament conversion prompt uses a 1:1 amount when Energy Drinks are insufficient; check the prompt before confirming.",
+    "default": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"Super Drinks\"}]},{\"text\":\" are cans used for Dunerush Tournament. The verified goldrush conversion rate uses a 1:1 amount when Energy Drinks are insufficient.\"}]",
     "order": 5,
     "section": "play",
     "sectionTitle": "How Goldrush works"
@@ -462,7 +462,7 @@
     "page": "events/island-goldrush.html",
     "block": "text-7",
     "label": "P · Taking a tile and earning a reward are separate steps. A near-cleared tile can produce a short ",
-    "default": "Taking a tile and earning a reward are separate steps. A near-cleared tile can produce a short attack, but its low defender count is not an explicit percentage refund rule.",
+    "default": "@rich-v1:[{\"text\":\"Taking a tile and earning a reward are separate steps. A near-cleared tile can produce a short attack, but its low defender count is not an explicit percentage refunded cans.\"}]",
     "order": 12,
     "section": "plan",
     "sectionTitle": "Before you attack"
@@ -516,7 +516,7 @@
     "page": "events/island-goldrush.html",
     "block": "text-13",
     "label": "P · The Island schedule has six day entries. Clams are listed on Days 2, 4 and 6; territory score r",
-    "default": "The Island schedule has six day entries. Clams are listed on Days 2, 4 and 6; territory score rates also change across the event.",
+    "default": "@rich-v1:[{\"text\":\"The Island schedule has six day entries. Clams are listed on Days 2, 4 and 6; tile production rates also change across the event.\"}]",
     "order": 21,
     "section": "days",
     "sectionTitle": "Daily unlocks and score"
@@ -588,7 +588,7 @@
     "page": "events/island-goldrush.html",
     "block": "text-21",
     "label": "P · The game calculates the next attack’s Energy Drink cost using your daily attack count plus one.",
-    "default": "The game calculates the next attack’s Energy Drink cost using your daily attack count plus one. After 10 counted daily attacks, the next attack uses the +20% cost modifier.",
+    "default": "@rich-v1:[{\"text\":\"The game calculates the next attack’s Energy Drink cost using your daily attack count plus one. After 10 counted daily attacks, the next attack uses the exhaustion rate cost modifier.\"}]",
     "order": 31,
     "section": "fatigue",
     "sectionTitle": "Exhaustion increases Energy Drink cost"
@@ -606,7 +606,7 @@
     "page": "events/island-goldrush.html",
     "block": "text-23",
     "label": "P · Tatari attacks, skills, buffs, debuffs, defense and elemental matchups determine the fight. GvG",
-    "default": "Tatari attacks, skills, buffs, debuffs, defense and elemental matchups determine the fight. GvG uses PvP Arena Factor and the 0.8 / 1.2 elemental factors. Selected Energy Drinks boosts ATK and HP; it does not give a DEF bonus in the inspected table.",
+    "default": "@rich-v1:[{\"text\":\"Tatari attacks, skills, buffs, debuffs, defense and elemental matchups determine the fight. Goldrush uses PvP Arena Factor and the 0.8 / 1.2 elemental factors. Selected Energy Drinks boosts ATK and HP and no DEF bonus.\"}]",
     "order": 34,
     "section": "battle",
     "sectionTitle": "There is a real battle behind each result"
@@ -615,7 +615,7 @@
     "page": "events/island-goldrush.html",
     "block": "text-24",
     "label": "P · After combat, a separate calculation uses the enemy side's recorded total damage relative to yo",
-    "default": "After combat, a separate calculation uses the enemy side's recorded total damage relative to your formation's total battle maximum HP. This is cumulative damage, not damage per second.",
+    "default": "@rich-v1:[{\"text\":\"After combat, a separate calculation uses the enemy side's recorded total damage relative to your formation's total battle maximum HP. This is cumulative damage, not damage per second or opponent's total ATK.\"}]",
     "order": 35,
     "section": "battle",
     "sectionTitle": "There is a real battle behind each result"
@@ -642,7 +642,7 @@
     "page": "events/island-goldrush.html",
     "block": "text-27",
     "label": "P · The result label uses remaining formation HP, not the number of drinks spent.",
-    "default": "The result label uses remaining formation HP, not the number of drinks spent.",
+    "default": "@rich-v1:[{\"text\":\"The result label uses remaining formation HP on that fight, not the number of drinks spent.\"}]",
     "order": 39,
     "section": "battle",
     "sectionTitle": "There is a real battle behind each result"
@@ -705,7 +705,7 @@
     "page": "events/island-goldrush.html",
     "block": "text-34",
     "label": "P · Rallies allow trainers in the same league to attack together. A higher tier adds more participa",
-    "default": "Rallies allow trainers in the same league to attack together. A higher tier adds more participant slots and a modestly larger stat contribution; paying three times the base cost does not triple the stat bonus.",
+    "default": "@rich-v1:[{\"text\":\"Rallies allow trainers in the same league to attack together. A higher tier adds more participant slots and a larger total kills contribution; paying three times the base cost does not triple the stat bonus.\"}]",
     "order": 47,
     "section": "rally",
     "sectionTitle": "Rally attacks"
@@ -867,7 +867,7 @@
     "page": "events/sparkly-spa.html",
     "block": "text-1",
     "label": "P · Choose your buffs, share a soak and collect Sparkle Tatari.",
-    "default": "Choose your buffs, share a soak and collect Sparkle Tatari.",
+    "default": "Choose your buffs, share spa and collect Sparkle Tatari.",
     "order": 1,
     "section": "intro",
     "sectionTitle": "Clash of Critters : Unofficial Companion App"
@@ -885,7 +885,7 @@
     "page": "events/sparkly-spa.html",
     "block": "text-3",
     "label": "P · Open your own spa or visit a friend’s spa to give eligible Tatari temporary buffs. The active e",
-    "default": "Open your own spa or visit a friend’s spa to give eligible Tatari temporary buffs. The active effect set can improve combat, reduce Goldrush costs or provide daily benefits. Dreamy Sparkle effects also let you collect new Tatari appearances.",
+    "default": "Open your own spa or visit a friend’s spa to give tier IV Tatari temporary buffs. The active effect set can improve combat, reduce Goldrush costs or provide daily benefits. Dreamy Sparkle effects also let you collect new Tatari appearances.",
     "order": 3,
     "section": "start",
     "sectionTitle": "How Sparkly Spa works"
@@ -903,7 +903,7 @@
     "page": "events/sparkly-spa.html",
     "block": "text-5",
     "label": "P · Goldrush MVP rewards provide Spa Soap. The configured regular Goldrush reward is 180, 160, 150 ",
-    "default": "Goldrush MVP rewards provide Spa Soap. The configured regular Goldrush reward is 180, 160, 150 or 140 soaps for league ranks 1–4. The soap shop also contains packs of 10, 20, 50 and 100; use the in-game shop for prices and availability.",
+    "default": "Goldrush MVP rewards provide Spa Soap. Island Goldrush reward is 180, 160, 150 or 140 soaps for league ranks I–IV. \nGame shop also contains packs of 10, 20, 50 and 100 Soaps. Check the in-game shop for prices and availability.",
     "order": 5,
     "section": "resources",
     "sectionTitle": "Spa Soap and activation"
@@ -1101,7 +1101,7 @@
     "page": "events/sparkly-spa.html",
     "block": "text-27",
     "label": "P · As the host, pay one soap to generate a candidate set, compare it with your current set, then c",
-    "default": "As the host, pay one soap to generate a candidate set, compare it with your current set, then choose whether to replace it. Your current set remains active during the preview. Rerolling again replaces the candidate list.",
+    "default": "As the host, pay one soap to reroll a spa buffs set, compare it with your current buff set, then choose whether to replace it. Your current set remains active during the preview. Rerolling again replaces the preview buffs set.",
     "order": 29,
     "section": "rerolls",
     "sectionTitle": "Rerolls and pity"
@@ -1137,7 +1137,7 @@
     "page": "events/sparkly-spa.html",
     "block": "text-31",
     "label": "P · Choose a Tatari family to see its five Standard and two Rare T4 appearances. Select an image to",
-    "default": "Choose a Tatari family to see its five Standard and two Rare T4 appearances. Select an image to view it at full size.",
+    "default": "@rich-v1:[{\"text\":\"Choose a Tatari family to see its five Standard and two Rare T4 appearances.\"}]",
     "order": 38,
     "section": "colors",
     "sectionTitle": "Sparkle colors"
@@ -1488,7 +1488,7 @@
     "page": "events/horde.html",
     "block": "note-2",
     "label": "Info box · A formation pattern is a starting point. Front-line protection with damage and support behind i",
-    "default": "A formation pattern is a starting point. Front-line protection with damage and support behind it is a practical layout. Placement depends on your Tatari's Horde skills, enemy lanes and the chips you pick. This guide does not claim an optimal lineup.",
+    "default": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"A formation pattern is a starting point.\"}]},{\"text\":\" Front-line protection with damage and support behind it is a practical layout. Placement depends on your Tatari's Horde skills, enemy lanes and the chips you pick. This guide does not provide an optimal lineup.\"}]",
     "order": 11,
     "section": "prepare",
     "sectionTitle": "Before you start"
@@ -1542,7 +1542,7 @@
     "page": "events/island-goldrush.html",
     "block": "note-7",
     "label": "Disclaimer · Ownership and defender counts update from the server while attacks are happening. The game reco",
-    "default": "Ownership and defender counts update from the server while attacks are happening. The game records the credited capturer separately from kill MVP. For mining tiles, the in-game text describes league kill totals deciding ownership; that should not be treated as a universal last-hit rule for every tile type.",
+    "default": "@rich-v1:[{\"text\":\"Ownership and defender counts update from the server while attacks are happening. The game records the credited capturer separately from kill MVP. For mining tiles, the in-game text describes league kill totals deciding kill MVP; however last-hit determines who capture the tile.\"}]",
     "order": 14,
     "section": "plan",
     "sectionTitle": "Before you attack"
@@ -1551,7 +1551,7 @@
     "page": "events/island-goldrush.html",
     "block": "note-8",
     "label": "Info box · Skipping the animation does not create extra hits. Skip goes straight to the settlement display",
-    "default": "Skipping the animation does not create extra hits. Skip goes straight to the settlement display for the server-provided fight records. It can get you back to the controls sooner, but no client rule establishes that it changes hit order or guarantees capture credit. The exact ordering and tie-breakers for simultaneous attacks are server-controlled and are not exposed in this client.",
+    "default": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"Skipping the animation does not create extra hits.\"}]},{\"text\":\" Skip goes straight to the settlement display for the server-provided fight records. It can get you back to the controls sooner, but no client rule establishes that it changes hit order or guarantees last-hit. The exact ordering and tie-breakers for simultaneous attacks are server-controlled and are not exposed in the game data.\"}]",
     "order": 15,
     "section": "plan",
     "sectionTitle": "Before you attack"
@@ -1560,7 +1560,7 @@
     "page": "events/island-goldrush.html",
     "block": "note-9",
     "label": "Info box · One trainer and one tile defender are not the same permanent slot. An attack can contain severa",
-    "default": "One trainer and one tile defender are not the same permanent slot. An attack can contain several opponent fights. Which opponent appears is supplied by the server. The random names floating in the map animation are decorative; use the actual battle records to check who you fought. A repeated animation name alone does not prove that you fought the same defender again.",
+    "default": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"One trainer and one tile defender are not the same permanent slot.\"}]},{\"text\":\" An attack can contain several opponent fights. Which opponent appears is supplied randomly by the server. The random names floating in the map animation are decorative; use the actual battle records to check who you fought. You may fought same trainer on single attack.\"}]",
     "order": 18,
     "section": "tiles",
     "sectionTitle": "Tile health and point production"
@@ -1569,7 +1569,7 @@
     "page": "events/island-goldrush.html",
     "block": "note-10",
     "label": "Info box · 6 appointment actions per day. Officer appointments and transferring league leadership share th",
-    "default": "6 appointment actions per day. Officer appointments and transferring league leadership share this limit. Removing a title completely does not consume an action. The in-game rules also describe possible automatic leadership transfer after more than 24 hours of inactivity.",
+    "default": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"6 appointment actions per day.\"}]},{\"text\":\" Officer appointments and transferring league leadership share this limit. Removing a title completely does not consume an action. The in-game rules also describe possible automatic league leader transfer after more than 24 hours of inactivity.\"}]",
     "order": 24,
     "section": "leaders",
     "sectionTitle": "League roles and daily changes"
@@ -1578,7 +1578,7 @@
     "page": "events/island-goldrush.html",
     "block": "note-12",
     "label": "Disclaimer · Follow the election rules shown during preparation. The in-game descriptions cover a highest-Co",
-    "default": "Follow the election rules shown during preparation. The in-game descriptions cover a highest-Combat-Power selection and a voting variant. Higher power can affect selection or candidate eligibility to become Goldrush League Leader.",
+    "default": "@rich-v1:[{\"text\":\"Follow the election rules shown during preparation / goldrush registration day. The in-game descriptions cover a highest-Combat-Power selection and a voting variant. Higher power can affect selection or candidate eligibility to become Goldrush League Leader.\"}]",
     "order": 25,
     "section": "leaders",
     "sectionTitle": "League roles and daily changes"
@@ -1587,7 +1587,7 @@
     "page": "events/island-goldrush.html",
     "block": "note-13",
     "label": "Info box · Kills and daily attacks are separate counters. One attack can show several opponent fights. The",
-    "default": "Kills and daily attacks are separate counters. One attack can show several opponent fights. The client receives the daily counter from the server; these records do not establish whether every button press or every opponent encounter increments it. Do not assume 11 kills automatically means +20% exhaustion.",
+    "default": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"Kills and daily attacks are separate counters.\"}]},{\"text\":\" One attack can show several opponent fights. The client receives the daily counter from the server. Do not assume 11 kills automatically means +20% exhaustion.\"}]",
     "order": 32,
     "section": "fatigue",
     "sectionTitle": "Exhaustion increases Energy Drink cost"
@@ -1632,7 +1632,7 @@
     "page": "events/sparkly-spa.html",
     "block": "note-2",
     "label": "Info box · Goldrush discount stacking. A 3% Vanguard discount and 10% active spa discount combine to 13%. ",
-    "default": "Goldrush discount stacking. A 3% Vanguard discount and 10% active spa discount combine to 13%. The same configured spa reduction applies to guests when it is part of their active buff set.",
+    "default": "**Goldrush discount stacking.** example : 3% Vanguard discount and 10% active spa discount combine to 13%. ",
     "order": 26,
     "section": "guests",
     "sectionTitle": "Hosts and guests"
@@ -1641,7 +1641,7 @@
     "page": "events/sparkly-spa.html",
     "block": "note-4",
     "label": "Disclaimer · Owner and guest values above are already the configured buffs. Do not double the owner values a",
-    "default": "Owner and guest values above are already the configured buffs. Do not double the owner values again because of the “200% effects” tooltip. Final combat stats also depend on other bonuses.",
+    "default": "Host and guest values above are already the configured buffs. Do not double the owner values again because of the “200% effects” tooltip. Final combat stats also depend on other bonuses.",
     "order": 27,
     "section": "guests",
     "sectionTitle": "Hosts and guests"
@@ -1650,7 +1650,7 @@
     "page": "events/sparkly-spa.html",
     "block": "note-6",
     "label": "Disclaimer · These weights are not the probability of a particular named effect appearing in a complete set.",
-    "default": "These weights are not the probability of a particular named effect appearing in a complete set. Early-drop pity resets, whether opening counts as a draw, and pity carry-over between spa activations are not verified. This pity concerns spa effects, not Sparkle skins.",
+    "default": "@rich-v1:[{\"text\":\"These chance percentage are not the probability of a particular named effect appearing in a complete set. Pity resets, whether opening counts as a draw, and pity carry-over between spa activations are not verified. This pity concerns spa effects, not Sparkle skins.\"}]",
     "order": 30,
     "section": "rerolls",
     "sectionTitle": "Rerolls and pity"
