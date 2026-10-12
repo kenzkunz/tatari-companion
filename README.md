@@ -34,7 +34,7 @@ Then set `PAGES_BASE_PATH=/milkroad-test/` in your shell and run `npm run previe
 - `dist/` is the editable static source, retained from the current website.
 - `scripts/build.mjs` creates `_site/` with deployment-base-aware links, CSS assets, module URLs, workers and data requests. Never edit `_site/` directly.
 - Both `/schedule.html` and `/schedule/` work; `/schedule` redirects to the directory on the static host. Every existing HTML page gets an equivalent directory index, except the home page and 404. Nested event/drafter/database pages behave the same way.
-- Fragment routes such as `tools.html#cards` and `tools.html#exchange` retain the existing album behavior. No SPA fallback replaces missing URLs with the home page.
+- No SPA fallback replaces missing URLs with the home page. The retired legacy Tools page is no longer published.
 - `_site/404.html` preserves the real branded missing-page experience, including working assets and home navigation even at unknown nested paths. GitHub Pages serves it with HTTP 404.
 - `.nojekyll` prevents unwanted processing. Only `_site/` is published.
 

@@ -33,7 +33,7 @@ for (const base of ['/', '/milkroad-test/']) {
     }
     if(file.endsWith('.mjs')) assert(!/(["'`])\/(?!\/)(?:assets|data\.json|worker\.mjs)/.test(text.replaceAll(base,'SITEBASE/')),file);
   }
-  for(const route of ['schedule','resources','events/cozy-farm','drafter/arena','tools']) {
+  for(const route of ['schedule','resources','events/cozy-farm','drafter/arena']) {
     assert.equal(await readFile('_site/'+route+'/index.html','utf8'),await readFile('_site/'+route+'.html','utf8'));
   }
   assert((await readFile('_site/account.mjs','utf8')).includes("(i+1)+' / 7'"), 'Deployment base corrupted badge labels');
@@ -42,7 +42,6 @@ for (const base of ['/', '/milkroad-test/']) {
   const error=await readFile('_site/404.html','utf8');
   assert(error.includes('Error 404!'));
   assert((await readFile('_site/navigation.mjs','utf8')).includes('https://ko-fi.com/kenzkunz'));
-  assert((await readFile('_site/tools/index.html','utf8')).includes('href="'+base+'tools.html#cards"'));
   console.log('Checked '+checked+' local references, clean-route aliases, modules and branded 404 at '+base);
 }
 await build('/');
