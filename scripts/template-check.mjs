@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';
 import {readFile,readdir} from 'node:fs/promises';
-const source=await readFile('dist/events/sparkly-spa.html','utf8');
-const header=source.match(/<header class="navbar">[\s\S]*?<\/header>/)[0],footer=source.match(/<footer\b[\s\S]*?<\/footer>/)[0];
+import {chrome,normalizeChrome} from './shared-chrome.mjs';
+const {navbar:header,footer}=await chrome();
 let count=0;
 for(const folder of ['dist/events','dist/information']){
  let names;try{names=await readdir(folder);}catch(e){if(e.code==='ENOENT')continue;throw e;}
  for(const name of names.filter(n=>n.endsWith('.html'))){const text=await readFile(folder+'/'+name,'utf8');if(!text.includes('public-info-page'))continue;count++;
-  assert(text.includes(header),name+' has stale or missing navbar');assert(text.includes(footer),name+' has stale or missing footer');
+  assert(normalizeChrome(text).includes(normalizeChrome(header)),name+' has stale or missing navbar');assert(text.includes(footer),name+' has stale or missing footer');
   for(const file of ['home.css','footer.css','guides.css','information-template.css','navigation.mjs'])assert(text.includes('/'+file),name+' missing '+file);
   assert(text.includes('class="guide-paper"'));assert(text.includes('class="guide-index"'));assert(text.includes('data-site-banner'));
   const ids=[...text.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length,name+' duplicated element ID');

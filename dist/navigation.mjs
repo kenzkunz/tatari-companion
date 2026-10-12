@@ -5,6 +5,6 @@ function closeMenus(){dropdowns.forEach(d=>d.open=false);nav.classList.remove('o
 document.addEventListener('click',event=>{if(!event.target.closest('.navbar'))closeMenus();});document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenus();});
 document.getElementById('support')?.addEventListener('click',()=>location.assign('https://ko-fi.com/kenzkunz'));
 
-import './account-nav.mjs';
+void import('./account-nav.mjs');
 
-import './site-content.mjs';
+void import('./site-content.mjs');

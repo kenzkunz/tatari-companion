@@ -4,7 +4,7 @@
 
 For guides, general in-game information and other non-custom public pages, start from `templates/public-information/starter.json` and `scripts/create-information-page.mjs`. Read `docs/PUBLIC-PAGE-DESIGN.md` first. Reuse the existing guide design instead of inventing new page styling.
 
-Public navbar and footer are fixed shared chrome and must be present. The generator reads the current canonical chrome from `dist/events/sparkly-spa.html`; do not hand-copy an older menu. Site navigation changes must be reflected consistently across public pages.
+Public navbar and footer are fixed shared chrome and must be present. The generator reads the current canonical chrome from `components/public-navbar.html` and `components/public-footer.html`; do not hand-copy an older menu. Run `npm run chrome:sync` after changing shared chrome. Site navigation changes must be reflected consistently across public pages.
 
 Use Critters headings, Poppins body text, the existing yellow background and cream panels. Keep spacing compact with breathing room. Normally only content, banners, icons and related game artwork vary. Use the approved info/disclaimer boxes, tables and connected expandable rows.
 

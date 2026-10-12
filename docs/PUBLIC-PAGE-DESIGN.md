@@ -53,7 +53,7 @@ An existing page is not overwritten by default. `--overwrite` is an explicit reg
 
 ## Shared chrome maintenance
 
-The generator extracts the current navbar/footer from `dist/events/sparkly-spa.html` at generation time. This avoids a frozen copy of an older menu. Changes to public navigation/footer still need the existing site-wide update workflow. The template checker compares generated pages against the current canonical chrome and confirms required styles/scripts.
+The generator reads `components/public-navbar.html` and `components/public-footer.html`. Edit these shared sources, then run `npm run chrome:sync` to update all public pages. Run `npm test` to catch missing or inconsistent chrome. The admin dashboard retains its standalone layout. Shared navbar styling lives in `dist/public-navbar.css`; page-specific layouts stay in their existing stylesheets. Original pages are backed up under ignored `design-rollbacks/public-chrome/` on first sync.
 
 ## Source of truth
 

@@ -17,3 +17,6 @@ design-rollbacks/admin-sync-*/
 
 # Local template regeneration backups
 design-rollbacks/template-*/
+
+# Shared chrome rollback backups
+design-rollbacks/public-chrome/
