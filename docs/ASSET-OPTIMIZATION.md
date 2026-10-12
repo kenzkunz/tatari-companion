@@ -9,3 +9,6 @@ Static HTML/CSS/JSON/module references and the dynamically generated home walkin
 scripts/asset-optimization-manifest.json records original/derivative paths, sizes and hashes. Shared navigation and new-page templates reference optimized assets too. npm test and the GitHub Pages build pass; representative Home, Spa, Tatari database, stats calculator and Album pages passed local image-loading checks.
 
 Private conversion candidates, text backups, source backups and WebM comparison files live in D:/COC-Website-Optimization. Those are not public exports. WebM candidates are not wired into the site: they need video-element and browser-alpha validation, while animated WebP preserves the existing image-element behavior. This pass does not replace Bob's newly extracted animation library.
+
+## Verified cleanup
+135 superseded album-card PNGs were removed after verifying every catalog entry uses its hash-checked WebP replacement. Original files are backed up at D:/COC-Website-Optimization/cleanup-backup/album-data/cards. This reclaims approximately 43.9 MiB. Other original assets remain until dynamic paths and published CMS banner references are audited.
