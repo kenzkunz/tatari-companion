@@ -11,3 +11,6 @@ outputs/
 
 # Local dashboard export backups
 design-rollbacks/admin-sync-*/
+
+# Private version snapshots and review archives
+.game-audits/

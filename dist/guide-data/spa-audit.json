@@ -1,0 +1,420 @@
+{
+  "version": "0.49.1",
+  "buffs": [
+    {
+      "ID": 1001,
+      "Group": 1,
+      "Param": 50,
+      "GuestParam": 0,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": false,
+      "typeName": "AuroraProgressEnable",
+      "qualityName": "Diamond"
+    },
+    {
+      "ID": 2001,
+      "Group": 2,
+      "Param": 10000,
+      "GuestParam": 0,
+      "DailyTriggerCount": 15,
+      "IsBattleBuff": false,
+      "typeName": "ShinyProbIncrease",
+      "qualityName": "Red"
+    },
+    {
+      "ID": 3001,
+      "Group": 3,
+      "Param": 4000,
+      "GuestParam": 0,
+      "DailyTriggerCount": 5,
+      "IsBattleBuff": false,
+      "typeName": "FeedProgressDouble",
+      "qualityName": "Purple"
+    },
+    {
+      "ID": 3002,
+      "Group": 3,
+      "Param": 6000,
+      "GuestParam": 0,
+      "DailyTriggerCount": 5,
+      "IsBattleBuff": false,
+      "typeName": "FeedProgressDouble",
+      "qualityName": "Golden"
+    },
+    {
+      "ID": 3003,
+      "Group": 3,
+      "Param": 8000,
+      "GuestParam": 0,
+      "DailyTriggerCount": 5,
+      "IsBattleBuff": false,
+      "typeName": "FeedProgressDouble",
+      "qualityName": "Red"
+    },
+    {
+      "ID": 5001,
+      "Group": 5,
+      "Param": 1,
+      "GuestParam": 0,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": false,
+      "typeName": "KeepCandyWhenRobbed",
+      "qualityName": "Purple"
+    },
+    {
+      "ID": 6001,
+      "Group": 6,
+      "Param": 1,
+      "GuestParam": 0,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "AttributeBoostWithoutEvoLimit",
+      "qualityName": "Golden"
+    },
+    {
+      "ID": 7001,
+      "Group": 7,
+      "Param": 4000,
+      "GuestParam": 0,
+      "DailyTriggerCount": 4,
+      "IsBattleBuff": false,
+      "typeName": "FoodFactoryIdleDouble",
+      "qualityName": "Purple"
+    },
+    {
+      "ID": 7002,
+      "Group": 7,
+      "Param": 6000,
+      "GuestParam": 0,
+      "DailyTriggerCount": 4,
+      "IsBattleBuff": false,
+      "typeName": "FoodFactoryIdleDouble",
+      "qualityName": "Golden"
+    },
+    {
+      "ID": 7003,
+      "Group": 7,
+      "Param": 8000,
+      "GuestParam": 0,
+      "DailyTriggerCount": 4,
+      "IsBattleBuff": false,
+      "typeName": "FoodFactoryIdleDouble",
+      "qualityName": "Red"
+    },
+    {
+      "ID": 8001,
+      "Group": 8,
+      "Param": 500,
+      "GuestParam": 300,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "BossDamageIncrease",
+      "qualityName": "Purple"
+    },
+    {
+      "ID": 8002,
+      "Group": 8,
+      "Param": 1000,
+      "GuestParam": 600,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "BossDamageIncrease",
+      "qualityName": "Golden"
+    },
+    {
+      "ID": 8003,
+      "Group": 8,
+      "Param": 2000,
+      "GuestParam": 1200,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "BossDamageIncrease",
+      "qualityName": "Red"
+    },
+    {
+      "ID": 9001,
+      "Group": 9,
+      "Param": 400,
+      "GuestParam": 0,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": false,
+      "typeName": "GVGBattleSupplyCostReduce",
+      "qualityName": "Purple"
+    },
+    {
+      "ID": 9002,
+      "Group": 9,
+      "Param": 600,
+      "GuestParam": 0,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": false,
+      "typeName": "GVGBattleSupplyCostReduce",
+      "qualityName": "Golden"
+    },
+    {
+      "ID": 9003,
+      "Group": 9,
+      "Param": 1000,
+      "GuestParam": 0,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": false,
+      "typeName": "GVGBattleSupplyCostReduce",
+      "qualityName": "Red"
+    },
+    {
+      "ID": 10001,
+      "Group": 10,
+      "Param": 6,
+      "GuestParam": 0,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": false,
+      "typeName": "HotSpringFriendCapacityIncrease",
+      "qualityName": "Purple"
+    },
+    {
+      "ID": 10002,
+      "Group": 10,
+      "Param": 8,
+      "GuestParam": 0,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": false,
+      "typeName": "HotSpringFriendCapacityIncrease",
+      "qualityName": "Golden"
+    },
+    {
+      "ID": 10003,
+      "Group": 10,
+      "Param": 10,
+      "GuestParam": 0,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": false,
+      "typeName": "HotSpringFriendCapacityIncrease",
+      "qualityName": "Red"
+    },
+    {
+      "ID": 12001,
+      "Group": 12,
+      "Param": 500,
+      "GuestParam": 300,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "AttackIncrease",
+      "qualityName": "Purple"
+    },
+    {
+      "ID": 12002,
+      "Group": 12,
+      "Param": 1000,
+      "GuestParam": 600,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "AttackIncrease",
+      "qualityName": "Golden"
+    },
+    {
+      "ID": 12003,
+      "Group": 12,
+      "Param": 2000,
+      "GuestParam": 1200,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "AttackIncrease",
+      "qualityName": "Red"
+    },
+    {
+      "ID": 13001,
+      "Group": 13,
+      "Param": 500,
+      "GuestParam": 300,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "HPIncrease",
+      "qualityName": "Purple"
+    },
+    {
+      "ID": 13002,
+      "Group": 13,
+      "Param": 1000,
+      "GuestParam": 600,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "HPIncrease",
+      "qualityName": "Golden"
+    },
+    {
+      "ID": 13003,
+      "Group": 13,
+      "Param": 2000,
+      "GuestParam": 1200,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "HPIncrease",
+      "qualityName": "Red"
+    },
+    {
+      "ID": 14001,
+      "Group": 14,
+      "Param": 500,
+      "GuestParam": 300,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "DefenseIncrease",
+      "qualityName": "Purple"
+    },
+    {
+      "ID": 14002,
+      "Group": 14,
+      "Param": 1000,
+      "GuestParam": 600,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "DefenseIncrease",
+      "qualityName": "Golden"
+    },
+    {
+      "ID": 14003,
+      "Group": 14,
+      "Param": 2000,
+      "GuestParam": 1200,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "DefenseIncrease",
+      "qualityName": "Red"
+    },
+    {
+      "ID": 15002,
+      "Group": 15,
+      "Param": 500,
+      "GuestParam": 300,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "DamageIncrease",
+      "qualityName": "Golden"
+    },
+    {
+      "ID": 15003,
+      "Group": 15,
+      "Param": 1000,
+      "GuestParam": 600,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "DamageIncrease",
+      "qualityName": "Red"
+    },
+    {
+      "ID": 16002,
+      "Group": 16,
+      "Param": 500,
+      "GuestParam": 300,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "DamageReduction",
+      "qualityName": "Golden"
+    },
+    {
+      "ID": 16003,
+      "Group": 16,
+      "Param": 1000,
+      "GuestParam": 600,
+      "DailyTriggerCount": 0,
+      "IsBattleBuff": true,
+      "typeName": "DamageReduction",
+      "qualityName": "Red"
+    }
+  ],
+  "parameters": [
+    {
+      "Asset": {},
+      "Param": 1,
+      "Value": 7,
+      "Weights": {},
+      "name": "DurationDays"
+    },
+    {
+      "Asset": {
+        "1": 1,
+        "2": 35,
+        "3": 100
+      },
+      "Param": 2,
+      "Value": 0,
+      "Weights": {},
+      "name": "OpenCost"
+    },
+    {
+      "Asset": {},
+      "Param": 3,
+      "Value": 40,
+      "Weights": {},
+      "name": "MaxMemberCount"
+    },
+    {
+      "Asset": {},
+      "Param": 4,
+      "Value": 4,
+      "Weights": {},
+      "name": "PetMinEvoTID"
+    },
+    {
+      "Asset": {
+        "1": 1,
+        "2": 35,
+        "3": 1
+      },
+      "Param": 5,
+      "Value": 0,
+      "Weights": {},
+      "name": "RerollCost"
+    },
+    {
+      "Asset": {},
+      "Param": 6,
+      "Value": 10,
+      "Weights": {},
+      "name": "SmallPityDrawCount"
+    },
+    {
+      "Asset": {},
+      "Param": 7,
+      "Value": 35,
+      "Weights": {},
+      "name": "BigPityDrawCount"
+    },
+    {
+      "Asset": {},
+      "Param": 8,
+      "Value": 0,
+      "Weights": {
+        "1": 2,
+        "2": 33,
+        "3": 3,
+        "4": 50,
+        "5": 4,
+        "6": 17
+      },
+      "name": "AttributeCountWeights"
+    },
+    {
+      "Asset": {},
+      "Param": 9,
+      "Value": 0,
+      "Weights": {
+        "1": 1,
+        "2": 41,
+        "3": 2,
+        "4": 36,
+        "5": 3,
+        "6": 20,
+        "7": 4,
+        "8": 3
+      },
+      "name": "AttributeQualityWeights"
+    }
+  ],
+  "skinCounts": {
+    "families": 10,
+    "standardPerFamily": 5,
+    "rarePerFamily": 2,
+    "statBonuses": 0
+  }
+}

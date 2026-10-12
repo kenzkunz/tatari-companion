@@ -1,3 +1,4 @@
+import './admin-version-audit.mjs';
 import {installVisualEditor} from './admin-editor.mjs';
 import {installMedia} from './admin-media.mjs';
 import {renderFormatted,wrapSelection,serializeInline} from './content-format.mjs';

@@ -1,0 +1,667 @@
+{
+  "formatVersion": 1,
+  "baselineNote": "Existing website data is a baseline, not proof that all current live mechanics are verified.",
+  "guides": [
+    {
+      "key": "cozy-farm",
+      "title": "Cozy Farm",
+      "baselineVersion": "0.49.1",
+      "lastVerified": null,
+      "sections": [
+        {
+          "key": "play",
+          "title": "Grow first, collect milestones"
+        },
+        {
+          "key": "crops",
+          "title": "Six crops, specific support Tatari"
+        },
+        {
+          "key": "growth",
+          "title": "Growth stages and upgrade bonuses"
+        },
+        {
+          "key": "watering",
+          "title": "Watering: how much weight?"
+        },
+        {
+          "key": "plan",
+          "title": "Arrange support before fertilizing"
+        },
+        {
+          "key": "math",
+          "title": "Crits and support are separate boosts"
+        },
+        {
+          "key": "worksheet",
+          "title": "Estimate a support bonus"
+        },
+        {
+          "key": "tips",
+          "title": "Support matters most"
+        },
+        {
+          "key": "support-directory",
+          "title": "Community support directory"
+        },
+        {
+          "key": "rewards",
+          "title": "Reward milestones"
+        }
+      ],
+      "sources": [
+        {
+          "file": "guide-data/cozy-farm.json",
+          "kind": "data",
+          "sections": [
+            "play",
+            "crops",
+            "growth",
+            "watering",
+            "plan",
+            "math",
+            "worksheet",
+            "tips",
+            "support-directory",
+            "rewards"
+          ]
+        },
+        {
+          "file": "guides.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "crops",
+            "growth",
+            "watering",
+            "plan",
+            "math",
+            "worksheet",
+            "tips",
+            "support-directory",
+            "rewards"
+          ]
+        }
+      ],
+      "openQuestions": [
+        "Live server behavior and descriptions still need human review."
+      ]
+    },
+    {
+      "key": "fishing",
+      "title": "Fishing Contest",
+      "baselineVersion": "0.49.1",
+      "lastVerified": null,
+      "sections": [
+        {
+          "key": "play",
+          "title": "How it works"
+        },
+        {
+          "key": "plan",
+          "title": "Before you fish"
+        },
+        {
+          "key": "math",
+          "title": "What the numbers mean"
+        },
+        {
+          "key": "worksheet",
+          "title": "Try Fish Calculator"
+        },
+        {
+          "key": "tips",
+          "title": "Useful habits, without folklore"
+        },
+        {
+          "key": "rewards",
+          "title": "Reward milestones"
+        }
+      ],
+      "sources": [
+        {
+          "file": "guide-data/fishing.json",
+          "kind": "data",
+          "sections": [
+            "play",
+            "plan",
+            "math",
+            "worksheet",
+            "tips",
+            "rewards"
+          ]
+        },
+        {
+          "file": "guides.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "plan",
+            "math",
+            "worksheet",
+            "tips",
+            "rewards"
+          ]
+        },
+        {
+          "file": "engine.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "plan",
+            "math",
+            "worksheet",
+            "tips",
+            "rewards"
+          ]
+        }
+      ],
+      "openQuestions": [
+        "Live server behavior and descriptions still need human review."
+      ]
+    },
+    {
+      "key": "horde",
+      "title": "Horde Invasion",
+      "baselineVersion": "0.49.1",
+      "lastVerified": null,
+      "sections": [
+        {
+          "key": "play",
+          "title": "How it works"
+        },
+        {
+          "key": "prepare",
+          "title": "Before you start"
+        },
+        {
+          "key": "economy",
+          "title": "Energy Candy: income during battle"
+        },
+        {
+          "key": "levels",
+          "title": "Levels, costs and death refunds"
+        },
+        {
+          "key": "chips",
+          "title": "Chip catalogue"
+        },
+        {
+          "key": "waves",
+          "title": "Wave and boss roster"
+        },
+        {
+          "key": "combat",
+          "title": "Horde stats and damage"
+        },
+        {
+          "key": "skills",
+          "title": "Tatari Horde skill cards"
+        },
+        {
+          "key": "tips",
+          "title": "Useful habits"
+        }
+      ],
+      "sources": [
+        {
+          "file": "guide-data/horde.json",
+          "kind": "data",
+          "sections": [
+            "play",
+            "prepare",
+            "economy",
+            "levels",
+            "chips",
+            "waves",
+            "combat",
+            "skills",
+            "tips"
+          ]
+        },
+        {
+          "file": "horde-guide.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "prepare",
+            "economy",
+            "levels",
+            "chips",
+            "waves",
+            "combat",
+            "skills",
+            "tips"
+          ]
+        },
+        {
+          "file": "horde-cards-model.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "prepare",
+            "economy",
+            "levels",
+            "chips",
+            "waves",
+            "combat",
+            "skills",
+            "tips"
+          ]
+        }
+      ],
+      "openQuestions": [
+        "Live server behavior and descriptions still need human review."
+      ]
+    },
+    {
+      "key": "island-goldrush",
+      "title": "Island Goldrush",
+      "baselineVersion": "0.49.1",
+      "lastVerified": null,
+      "sections": [
+        {
+          "key": "play",
+          "title": "How Goldrush works"
+        },
+        {
+          "key": "plan",
+          "title": "Before you attack"
+        },
+        {
+          "key": "tiles",
+          "title": "Tile health and point production"
+        },
+        {
+          "key": "days",
+          "title": "Daily unlocks and score"
+        },
+        {
+          "key": "leaders",
+          "title": "League roles and daily changes"
+        },
+        {
+          "key": "supply",
+          "title": "Energy Drink boosts"
+        },
+        {
+          "key": "fatigue",
+          "title": "Exhaustion increases Energy Drink cost"
+        },
+        {
+          "key": "battle",
+          "title": "There is a real battle behind each result"
+        },
+        {
+          "key": "worksheet",
+          "title": "Estimate Energy Drink Loss"
+        },
+        {
+          "key": "clams",
+          "title": "Clam harvests and defense lines"
+        },
+        {
+          "key": "rally",
+          "title": "Rally attacks"
+        },
+        {
+          "key": "rewards",
+          "title": "Goldrush rewards"
+        },
+        {
+          "key": "team-milestones",
+          "title": "Goldrush team milestone rewards"
+        },
+        {
+          "key": "tips",
+          "title": "Useful habits"
+        }
+      ],
+      "sources": [
+        {
+          "file": "guide-data/goldrush.json",
+          "kind": "data",
+          "sections": [
+            "play",
+            "plan",
+            "tiles",
+            "days",
+            "leaders",
+            "supply",
+            "fatigue",
+            "battle",
+            "worksheet",
+            "clams",
+            "rally",
+            "rewards",
+            "team-milestones",
+            "tips"
+          ]
+        },
+        {
+          "file": "goldrush-guide.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "plan",
+            "tiles",
+            "days",
+            "leaders",
+            "supply",
+            "fatigue",
+            "battle",
+            "worksheet",
+            "clams",
+            "rally",
+            "rewards",
+            "team-milestones",
+            "tips"
+          ]
+        }
+      ],
+      "openQuestions": [
+        "Live server behavior and descriptions still need human review.",
+        "Rally deduction/count progression is an observational model, not verified server code."
+      ]
+    },
+    {
+      "key": "raft-race",
+      "title": "Raft Race",
+      "baselineVersion": "0.49.1",
+      "lastVerified": null,
+      "sections": [
+        {
+          "key": "play",
+          "title": "Personal rafts, shared distance"
+        },
+        {
+          "key": "plan",
+          "title": "Coordinate progress and reward choices"
+        },
+        {
+          "key": "math",
+          "title": "What the wheel actually promises"
+        },
+        {
+          "key": "worksheet",
+          "title": "Compare your raft budget"
+        },
+        {
+          "key": "tips",
+          "title": "Choose a multiplier for control"
+        },
+        {
+          "key": "rewards",
+          "title": "Reward milestones"
+        }
+      ],
+      "sources": [
+        {
+          "file": "guide-data/raft-race.json",
+          "kind": "data",
+          "sections": [
+            "play",
+            "plan",
+            "math",
+            "worksheet",
+            "tips",
+            "rewards"
+          ]
+        },
+        {
+          "file": "guides.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "plan",
+            "math",
+            "worksheet",
+            "tips",
+            "rewards"
+          ]
+        },
+        {
+          "file": "engine.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "plan",
+            "math",
+            "worksheet",
+            "tips",
+            "rewards"
+          ]
+        }
+      ],
+      "openQuestions": [
+        "Live server behavior and descriptions still need human review."
+      ]
+    },
+    {
+      "key": "sparkly-spa",
+      "title": "Sparkly Spa",
+      "baselineVersion": "0.49.1",
+      "lastVerified": null,
+      "sections": [
+        {
+          "key": "start",
+          "title": "How Sparkly Spa works"
+        },
+        {
+          "key": "resources",
+          "title": "Spa Soap and activation"
+        },
+        {
+          "key": "buffs",
+          "title": "Spa Buffs"
+        },
+        {
+          "key": "guests",
+          "title": "Hosts and guests"
+        },
+        {
+          "key": "rerolls",
+          "title": "Rerolls and pity"
+        },
+        {
+          "key": "sparkle",
+          "title": "Sparkle Tatari and daily progress"
+        },
+        {
+          "key": "colors",
+          "title": "Sparkle colors"
+        },
+        {
+          "key": "tips",
+          "title": "Useful habits"
+        },
+        {
+          "key": "limits",
+          "title": "What still needs verification"
+        }
+      ],
+      "sources": [
+        {
+          "file": "guide-data/spa-audit.json",
+          "kind": "data",
+          "sections": [
+            "start",
+            "resources",
+            "buffs",
+            "guests",
+            "rerolls",
+            "sparkle",
+            "colors",
+            "tips",
+            "limits"
+          ]
+        }
+      ],
+      "openQuestions": [
+        "Live server behavior and descriptions still need human review.",
+        "Pity resets and carry-over are unverified.",
+        "Daily trigger failure/bulk-action accounting is unverified."
+      ]
+    },
+    {
+      "key": "treasure-hunt",
+      "title": "Treasure Hunt",
+      "baselineVersion": "0.49.1",
+      "lastVerified": null,
+      "sections": [
+        {
+          "key": "play",
+          "title": "Shared boards, separate partnerships"
+        },
+        {
+          "key": "plan",
+          "title": "Make a plan with your partners"
+        },
+        {
+          "key": "worksheet",
+          "title": "Four-slot reward check"
+        },
+        {
+          "key": "math",
+          "title": "Choose a dig with better odds"
+        },
+        {
+          "key": "tips",
+          "title": "Bombs, moles and digging costs"
+        },
+        {
+          "key": "rewards",
+          "title": "Reward milestones"
+        },
+        {
+          "key": "chests",
+          "title": "Chest progression"
+        }
+      ],
+      "sources": [
+        {
+          "file": "guide-data/treasure-hunt.json",
+          "kind": "data",
+          "sections": [
+            "play",
+            "plan",
+            "worksheet",
+            "math",
+            "tips",
+            "rewards",
+            "chests"
+          ]
+        },
+        {
+          "file": "guides.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "plan",
+            "worksheet",
+            "math",
+            "tips",
+            "rewards",
+            "chests"
+          ]
+        },
+        {
+          "file": "engine.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "plan",
+            "worksheet",
+            "math",
+            "tips",
+            "rewards",
+            "chests"
+          ]
+        }
+      ],
+      "openQuestions": [
+        "Live server behavior and descriptions still need human review."
+      ]
+    },
+    {
+      "key": "zobo-shooter",
+      "title": "Zobo Shooter",
+      "baselineVersion": "0.49.1",
+      "lastVerified": null,
+      "sections": [
+        {
+          "key": "play",
+          "title": "Every attack is a chance"
+        },
+        {
+          "key": "plan",
+          "title": "Choose your Tatari and arena"
+        },
+        {
+          "key": "powerups",
+          "title": "Power-ups"
+        },
+        {
+          "key": "worksheet",
+          "title": "Compare a boss attack"
+        },
+        {
+          "key": "math",
+          "title": "Points, cost, and risk"
+        },
+        {
+          "key": "tips",
+          "title": "Set a budget, not an imaginary guarantee"
+        },
+        {
+          "key": "rewards",
+          "title": "Reward milestones"
+        }
+      ],
+      "sources": [
+        {
+          "file": "guide-data/zobo-shooter.json",
+          "kind": "data",
+          "sections": [
+            "play",
+            "plan",
+            "powerups",
+            "worksheet",
+            "math",
+            "tips",
+            "rewards"
+          ]
+        },
+        {
+          "file": "guides.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "plan",
+            "powerups",
+            "worksheet",
+            "math",
+            "tips",
+            "rewards"
+          ]
+        },
+        {
+          "file": "engine.mjs",
+          "kind": "code",
+          "sections": [
+            "play",
+            "plan",
+            "powerups",
+            "worksheet",
+            "math",
+            "tips",
+            "rewards"
+          ]
+        }
+      ],
+      "openQuestions": [
+        "Live server behavior and descriptions still need human review."
+      ]
+    }
+  ]
+}
