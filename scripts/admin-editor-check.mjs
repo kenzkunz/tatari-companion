@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {encodeRich,parseRich,richHTML,safeLink} from '../dist/rich-text.mjs';
+import {inlineTokens} from '../dist/content-format.mjs';
+import {validateSubmission,availability} from '../dist/admin-model.mjs';
+const example=[{text:'Before '},{tag:'strong',children:[{text:'bold '},{tag:'em',children:[{text:'italic'}]}]},{tag:'br'},{tag:'u',children:[{text:'underlined'}]},{tag:'a',href:'/events/sparkly-spa.html',children:[{text:'Spa guide'}]}];
+assert.deepEqual(parseRich(encodeRich(example)),example);
+assert(richHTML(example).includes('<strong>bold <em>italic</em></strong>'));
+assert(richHTML([{text:'<img src=x onerror=alert(1)>'}]).includes('&lt;img'));
+for(const href of ['javascript:alert(1)','data:text/html,x','//evil.example','https://example.com/\nscript','https://user:pass@example.com'])assert.equal(safeLink(href),null);
+assert.throws(()=>encodeRich([{tag:'script',children:[{text:'alert(1)'}]}]));
+assert.throws(()=>encodeRich([{tag:'a',href:'javascript:alert(1)',children:[{text:'x'}]}]));
+assert.throws(()=>encodeRich([{text:'x'.repeat(20001)}]));
+assert.equal(parseRich('Existing plain text'),null);assert.equal(inlineTokens('**Existing bold**')[0].tag,'strong');
+assert.throws(()=>validateSubmission({uid:'123',crop:2,bonus:100,permission:false}));
+assert.equal(availability({exhausted:3,reveals:1,worked:0}),'Hidden this round');
+console.log('Passed rich-text round trips, legacy formatting, XSS/link rejection, content limits and UID consent.');

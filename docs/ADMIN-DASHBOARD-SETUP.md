@@ -10,13 +10,13 @@ Built for the existing GitHub Pages frontend and Supabase backend. Public page: 
 
 ## Workflows
 
-- Content: choose a page/block → edit plain text → save draft → preview → publish. Published text is loaded from Supabase on the next page load. Restore original text removes the override; Version history can restore earlier published values. Revision conflicts reject stale edits.
+- Content: choose a page/block → edit text → save draft → preview → publish. Published text is loaded from Supabase on the next page load. Restore original text removes the override; Version history can restore earlier published values. Revision conflicts reject stale edits.
 - Farm: signed-in users explicitly confirm UID-sharing permission, submit UID/crop/bonus, then wait for review. Only an administrator can approve, reject, hide or restore listings. UID is excluded from directory results and returned only by an authenticated reveal request. Reports require a prior reveal; unique reveals/reports reset by the UTC 12-hour bucket. Three exhaustion reports hide a row; 50 reveals are a warning, not a guarantee of exhaustion.
 - Existing farm-support local prototype is preserved and not imported. No demo/player records are seeded.
 
 ## Security / limits
 
-All underlying new tables have RLS enabled and no direct anon/authenticated grants. RPCs perform authorization and validation; admin membership is not writable from the client. Public content API exposes only published text. Admin history and UID submissions are private. Rendering uses `textContent`, so HTML entered by an administrator is displayed as text rather than executed.
+All underlying new tables have RLS enabled and no direct anon/authenticated grants. RPCs perform authorization and validation; admin membership is not writable from the client. Public content API exposes only published text. Admin history and UID submissions are private. Rendering uses validated formatting nodes; arbitrary HTML and unsafe links are rejected. See ADMIN-EDITOR-SYNC.md for visual editing, media controls and synchronization.
 
 Initial implementation intentionally manages guide text and Cozy Farm approvals. GitHub remains the source of layouts, banners, reward data, formulas and deployment. The catalog must be updated when new editable blocks/pages are added; preserve `data-site-content` keys during future page regeneration.
 

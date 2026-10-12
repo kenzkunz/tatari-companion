@@ -8,3 +8,6 @@ node_modules/
 Thumbs.db
 .sites-runtime/
 outputs/
+
+# Local dashboard export backups
+design-rollbacks/admin-sync-*/
