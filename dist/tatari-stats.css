@@ -21,3 +21,5 @@
 .stats-tool .star-dialog{max-width:calc(100vw - 24px)}
 
 .stats-tool .dialog-close{width:48px;min-width:48px;height:52px;padding:0;border:0;border-radius:0;background:transparent url('/tatari-data/images/close-button-bg.png') center/contain no-repeat;display:flex;align-items:center;justify-content:center;cursor:pointer}.stats-tool .dialog-close img{width:26px;height:26px;object-fit:contain;pointer-events:none}
+
+.spa-modifiers{margin:16px 0 0;padding:12px;border:1px solid #d7c69b;border-radius:12px;min-width:0}.spa-modifiers legend{font-weight:600;padding:0 6px}.spa-tier-toggle{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:13px}.spa-tier-toggle input{width:18px;height:18px;flex:none}.spa-help{font-size:12px;line-height:1.6;margin:8px 0 0;color:#665f52}

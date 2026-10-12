@@ -20,3 +20,13 @@ console.log('Passed all five dojo selections; stat bonuses remain matched to the
 
 for(const unit of data.units){const max=Math.max(...unit.feedingStages.map(r=>r.stage));for(const food of unit.feedingStages.filter(f=>f.stage>=12&&f.stage<=16).map(f=>f.stage)){const r=resolveBuild(data,{pet:unit.id,tier:unit.forms.at(-1).evolution,stars:84,food,badgeMode:'none',badges:[]});assert(Object.values(r.values).every(Number.isFinite));assert(Object.values(r.grades).every(Boolean));}if(max<16)assert.throws(()=>resolveBuild(data,{pet:unit.id,tier:1,stars:1,food:16,badgeMode:'none',badges:[]}));}
 console.log('Passed food stages 12–16 with actual per-Tatari availability and grade artwork.');
+
+// Spa is additive with food/dojo, applies independently per stat and respects T4.
+const {coreStats}=await import('../dist/tatari-model.mjs'); const plain=coreStats(data.standards500[result.unit.element],data.stars[input.stars],result.form.growth);
+const spa=resolveBuild(data,{...input,spa:{ATK:20,HP:6,DEF:0}});
+for(const [stat,percent] of Object.entries({ATK:20,HP:6,DEF:0}))assert(Math.abs(spa.values[stat]-(result.values[stat]+plain[stat]*percent/100))<.00001);
+const lower={...input,tier:1,spa:{ATK:20,HP:10,DEF:5}};
+assert.deepEqual(resolveBuild(data,lower).values,resolveBuild(data,{...lower,spa:{}}).values);
+assert(resolveBuild(data,{...lower,lowerTierSpa:true}).values.ATK>resolveBuild(data,lower).values.ATK);
+for(const value of [-1,101,NaN,Infinity])assert.throws(()=>resolveBuild(data,{...input,spa:{ATK:value}}));
+console.log('Passed independent Spa percentages, additive stacking, tier restriction and invalid input checks.');
