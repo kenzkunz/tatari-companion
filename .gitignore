@@ -14,3 +14,6 @@ design-rollbacks/admin-sync-*/
 
 # Private version snapshots and review archives
 .game-audits/
+
+# Local template regeneration backups
+design-rollbacks/template-*/

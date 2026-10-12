@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "scope": "Guides and general game information; custom tools/admin keep their own layouts",
+  "colors": {
+    "ink": "#282625",
+    "paper": "#fffef1",
+    "panel": "#fff8dd",
+    "info": "#ffeb99",
+    "accent": "#b98212",
+    "tableHeader": "#eee9dd"
+  },
+  "typography": {
+    "heading": "Critters",
+    "body": "Poppins",
+    "bodyPx": 14,
+    "bodyLineHeight": 1.8,
+    "sectionHeadingPx": 22,
+    "tablePx": 12,
+    "infoBoxPx": 13,
+    "inputPx": 14
+  },
+  "spacing": {
+    "sectionTopPx": 24,
+    "contentPaddingPx": 26,
+    "tableCellPaddingPx": 9,
+    "fieldGapPx": 12,
+    "noteMarginPx": 16
+  },
+  "layout": {
+    "shellMaxWidthPx": 1180,
+    "sidebarWidthPx": 170,
+    "bannerMaxWidthPx": 480
+  }
+}

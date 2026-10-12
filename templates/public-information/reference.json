@@ -1,0 +1,143 @@
+{
+  "type": "information",
+  "slug": "design-reference",
+  "title": "Guide design reference",
+  "lead": "The agreed starting template for guides and general game information. These are component examples, not game rules.",
+  "sections": [
+    {
+      "id": "text",
+      "title": "Text and spacing",
+      "blocks": [
+        {
+          "id": "intro",
+          "type": "text",
+          "text": "Use a clear opening sentence, **bold for important phrases**, *italic for emphasis*, and __underline__ sparingly. Keep paragraphs short enough to scan."
+        },
+        {
+          "id": "steps",
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "Lead with the practical information.",
+            "Explain the relevant details.",
+            "State specific uncertainty without adding unrelated warnings."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boxes",
+      "title": "Info and disclaimer boxes",
+      "blocks": [
+        {
+          "id": "info",
+          "type": "info",
+          "title": "Info box.",
+          "text": "Use this yellow box for useful explanations, tips and examples."
+        },
+        {
+          "id": "disclaimer",
+          "type": "disclaimer",
+          "title": "Disclaimer box.",
+          "text": "Use the same box with a warning icon for a specific limitation or unverified mechanic."
+        }
+      ]
+    },
+    {
+      "id": "tables",
+      "title": "Tables and game icons",
+      "blocks": [
+        {
+          "id": "example",
+          "type": "table",
+          "columns": [
+            "Component",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Resource value",
+              {
+                "icon": "/guide-assets/goldrush/drink.png",
+                "value": "Example",
+                "alt": "Energy Drink"
+              }
+            ],
+            [
+              "Boost level",
+              {
+                "icon": "/guide-assets/goldrush/boost.png",
+                "value": "Example",
+                "alt": "Boost"
+              }
+            ],
+            [
+              "Exhaustion",
+              {
+                "icon": "/guide-assets/goldrush/exhausted.png",
+                "value": "Example",
+                "alt": "Exhaustion"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "expansion",
+      "title": "Expandable rows",
+      "blocks": [
+        {
+          "id": "rows",
+          "type": "accordion",
+          "items": [
+            {
+              "title": "First expandable row",
+              "icon": "/guide-assets/goldrush/boost.png",
+              "blocks": [
+                {
+                  "id": "text",
+                  "type": "text",
+                  "text": "Connected rows use thin borders and consistent padding."
+                }
+              ]
+            },
+            {
+              "title": "Open row example",
+              "open": true,
+              "blocks": [
+                {
+                  "id": "text",
+                  "type": "text",
+                  "text": "An expanded row uses a yellow highlight, dark readable text and breathing room below the heading."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "artwork",
+      "title": "Game assets",
+      "blocks": [
+        {
+          "id": "gallery",
+          "type": "assets",
+          "items": [
+            {
+              "src": "/guide-assets/goldrush/clam-whole.png",
+              "caption": "Game artwork",
+              "alt": "Whole clam"
+            },
+            {
+              "src": "/guide-assets/goldrush/clam-base.png",
+              "caption": "Related game artwork",
+              "alt": "Large Sea Crystal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
