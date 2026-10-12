@@ -126,12 +126,12 @@
           "type": "assets",
           "items": [
             {
-              "src": "/guide-assets/goldrush/clam-whole.png",
+              "src": "/guide-assets/goldrush/clam-whole.webp",
               "caption": "Game artwork",
               "alt": "Whole clam"
             },
             {
-              "src": "/guide-assets/goldrush/clam-base.png",
+              "src": "/guide-assets/goldrush/clam-base.webp",
               "caption": "Related game artwork",
               "alt": "Large Sea Crystal"
             }

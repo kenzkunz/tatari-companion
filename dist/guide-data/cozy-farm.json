@@ -73,7 +73,7 @@
           "id": 4001,
           "amount": 1,
           "name": "Card Pack",
-          "icon": "/guide-assets/fishing/bluecardpack.png"
+          "icon": "/guide-assets/fishing/bluecardpack.webp"
         }
       ]
     },
@@ -92,7 +92,7 @@
           "id": 4002,
           "amount": 1,
           "name": "Standard Card Pack",
-          "icon": "/guide-assets/fishing/purplecardpack.png"
+          "icon": "/guide-assets/fishing/purplecardpack.webp"
         }
       ]
     },
@@ -301,7 +301,7 @@
           "id": 4002,
           "amount": 1,
           "name": "Standard Card Pack",
-          "icon": "/guide-assets/fishing/purplecardpack.png"
+          "icon": "/guide-assets/fishing/purplecardpack.webp"
         }
       ]
     },
@@ -529,7 +529,7 @@
           "id": 4002,
           "amount": 1,
           "name": "Standard Card Pack",
-          "icon": "/guide-assets/fishing/purplecardpack.png"
+          "icon": "/guide-assets/fishing/purplecardpack.webp"
         }
       ]
     },
@@ -681,7 +681,7 @@
           "id": 4003,
           "amount": 1,
           "name": "Deluxe Card Pack",
-          "icon": "/guide-assets/fishing/goldcardpack.png"
+          "icon": "/guide-assets/fishing/goldcardpack.webp"
         }
       ]
     },
@@ -852,7 +852,7 @@
           "id": 4001,
           "amount": 1,
           "name": "Card Pack",
-          "icon": "/guide-assets/fishing/bluecardpack.png"
+          "icon": "/guide-assets/fishing/bluecardpack.webp"
         }
       ]
     },
@@ -947,7 +947,7 @@
           "id": 4003,
           "amount": 1,
           "name": "Deluxe Card Pack",
-          "icon": "/guide-assets/fishing/goldcardpack.png"
+          "icon": "/guide-assets/fishing/goldcardpack.webp"
         }
       ]
     },
@@ -1194,7 +1194,7 @@
           "id": 4002,
           "amount": 1,
           "name": "Standard Card Pack",
-          "icon": "/guide-assets/fishing/purplecardpack.png"
+          "icon": "/guide-assets/fishing/purplecardpack.webp"
         }
       ]
     },
@@ -1403,7 +1403,7 @@
           "id": 4002,
           "amount": 1,
           "name": "Standard Card Pack",
-          "icon": "/guide-assets/fishing/purplecardpack.png"
+          "icon": "/guide-assets/fishing/purplecardpack.webp"
         }
       ]
     },
@@ -1631,7 +1631,7 @@
           "id": 4003,
           "amount": 1,
           "name": "Deluxe Card Pack",
-          "icon": "/guide-assets/fishing/goldcardpack.png"
+          "icon": "/guide-assets/fishing/goldcardpack.webp"
         }
       ]
     },
@@ -1764,7 +1764,7 @@
           "id": 4003,
           "amount": 1,
           "name": "Deluxe Card Pack",
-          "icon": "/guide-assets/fishing/goldcardpack.png"
+          "icon": "/guide-assets/fishing/goldcardpack.webp"
         }
       ]
     },
@@ -1897,7 +1897,7 @@
           "id": 4003,
           "amount": 1,
           "name": "Deluxe Card Pack",
-          "icon": "/guide-assets/fishing/goldcardpack.png"
+          "icon": "/guide-assets/fishing/goldcardpack.webp"
         }
       ]
     }
@@ -1911,8 +1911,8 @@
       "stages": [
         "/guide-assets/cozy-farm/crop-2-stage-1.png",
         "/guide-assets/cozy-farm/crop-2-stage-2.png",
-        "/guide-assets/cozy-farm/crop-2-stage-3.png",
-        "/guide-assets/cozy-farm/crop-2-stage-4.png"
+        "/guide-assets/cozy-farm/crop-2-stage-3.webp",
+        "/guide-assets/cozy-farm/crop-2-stage-4.webp"
       ],
       "stage_geometry": [
         {
@@ -1973,8 +1973,8 @@
       "stages": [
         "/guide-assets/cozy-farm/crop-3-stage-1.png",
         "/guide-assets/cozy-farm/crop-3-stage-2.png",
-        "/guide-assets/cozy-farm/crop-3-stage-3.png",
-        "/guide-assets/cozy-farm/crop-3-stage-4.png"
+        "/guide-assets/cozy-farm/crop-3-stage-3.webp",
+        "/guide-assets/cozy-farm/crop-3-stage-4.webp"
       ],
       "stage_geometry": [
         {
@@ -2035,8 +2035,8 @@
       "stages": [
         "/guide-assets/cozy-farm/crop-4-stage-1.png",
         "/guide-assets/cozy-farm/crop-4-stage-2.png",
-        "/guide-assets/cozy-farm/crop-4-stage-3.png",
-        "/guide-assets/cozy-farm/crop-4-stage-4.png"
+        "/guide-assets/cozy-farm/crop-4-stage-3.webp",
+        "/guide-assets/cozy-farm/crop-4-stage-4.webp"
       ],
       "stage_geometry": [
         {
@@ -2098,7 +2098,7 @@
         "/guide-assets/cozy-farm/crop-5-stage-1.png",
         "/guide-assets/cozy-farm/crop-5-stage-2.png",
         "/guide-assets/cozy-farm/crop-5-stage-3.png",
-        "/guide-assets/cozy-farm/crop-5-stage-4.png"
+        "/guide-assets/cozy-farm/crop-5-stage-4.webp"
       ],
       "stage_geometry": [
         {
@@ -2159,8 +2159,8 @@
       "stages": [
         "/guide-assets/cozy-farm/crop-6-stage-1.png",
         "/guide-assets/cozy-farm/crop-6-stage-2.png",
-        "/guide-assets/cozy-farm/crop-6-stage-3.png",
-        "/guide-assets/cozy-farm/crop-6-stage-4.png"
+        "/guide-assets/cozy-farm/crop-6-stage-3.webp",
+        "/guide-assets/cozy-farm/crop-6-stage-4.webp"
       ],
       "stage_geometry": [
         {
@@ -2221,8 +2221,8 @@
       "stages": [
         "/guide-assets/cozy-farm/crop-7-stage-1.png",
         "/guide-assets/cozy-farm/crop-7-stage-2.png",
-        "/guide-assets/cozy-farm/crop-7-stage-3.png",
-        "/guide-assets/cozy-farm/crop-7-stage-4.png"
+        "/guide-assets/cozy-farm/crop-7-stage-3.webp",
+        "/guide-assets/cozy-farm/crop-7-stage-4.webp"
       ],
       "stage_geometry": [
         {

@@ -117,7 +117,7 @@
           "id": 4001,
           "amount": 1,
           "name": "Card Pack",
-          "icon": "/guide-assets/fishing/bluecardpack.png"
+          "icon": "/guide-assets/fishing/bluecardpack.webp"
         }
       ]
     },
@@ -273,7 +273,7 @@
           "id": 4002,
           "amount": 1,
           "name": "Standard Card Pack",
-          "icon": "/guide-assets/fishing/purplecardpack.png"
+          "icon": "/guide-assets/fishing/purplecardpack.webp"
         }
       ]
     },
@@ -369,7 +369,7 @@
           "id": 4002,
           "amount": 1,
           "name": "Standard Card Pack",
-          "icon": "/guide-assets/fishing/purplecardpack.png"
+          "icon": "/guide-assets/fishing/purplecardpack.webp"
         }
       ]
     },
@@ -441,7 +441,7 @@
           "id": 4002,
           "amount": 1,
           "name": "Standard Card Pack",
-          "icon": "/guide-assets/fishing/purplecardpack.png"
+          "icon": "/guide-assets/fishing/purplecardpack.webp"
         }
       ]
     },
@@ -549,7 +549,7 @@
           "id": 4003,
           "amount": 1,
           "name": "Deluxe Card Pack",
-          "icon": "/guide-assets/fishing/goldcardpack.png"
+          "icon": "/guide-assets/fishing/goldcardpack.webp"
         }
       ]
     },
@@ -657,7 +657,7 @@
           "id": 4001,
           "amount": 1,
           "name": "Card Pack",
-          "icon": "/guide-assets/fishing/bluecardpack.png"
+          "icon": "/guide-assets/fishing/bluecardpack.webp"
         }
       ]
     },
@@ -765,7 +765,7 @@
           "id": 4003,
           "amount": 1,
           "name": "Deluxe Card Pack",
-          "icon": "/guide-assets/fishing/goldcardpack.png"
+          "icon": "/guide-assets/fishing/goldcardpack.webp"
         }
       ]
     },
@@ -1089,7 +1089,7 @@
           "id": 4002,
           "amount": 1,
           "name": "Standard Card Pack",
-          "icon": "/guide-assets/fishing/purplecardpack.png"
+          "icon": "/guide-assets/fishing/purplecardpack.webp"
         }
       ]
     },

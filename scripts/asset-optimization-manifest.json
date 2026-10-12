@@ -1,0 +1,3447 @@
+{
+  "schemaVersion": 1,
+  "encoding": "lossless WebP; exact RGBA pixels; matching animation frames and durations",
+  "originalsRetained": true,
+  "assets": [
+    {
+      "source": "album-data/cards/autumn001-autumn-arrives-false.png",
+      "webp": "album-data/cards/autumn001-autumn-arrives-false.webp",
+      "originalBytes": 260595,
+      "webpBytes": 172296,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "78964aa615f2373f32046befb56dba7579cf9cee883bc6bd281fc6ba110f35aa"
+    },
+    {
+      "source": "album-data/cards/autumn002-chestnut-circle-false.png",
+      "webp": "album-data/cards/autumn002-chestnut-circle-false.webp",
+      "originalBytes": 338414,
+      "webpBytes": 228072,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "7be93700672421f986b1022946c064d36c49219f2a36dcacfc0b7f0ca87bf9dc"
+    },
+    {
+      "source": "album-data/cards/autumn003-ripened-pear-false.png",
+      "webp": "album-data/cards/autumn003-ripened-pear-false.webp",
+      "originalBytes": 267481,
+      "webpBytes": 183394,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "f2f292c7946b50d384ce69c3b06d7e0fdb532a30fcda9dd17b0b080521cb54d3"
+    },
+    {
+      "source": "album-data/cards/autumn004-autumn-haul-false.png",
+      "webp": "album-data/cards/autumn004-autumn-haul-false.webp",
+      "originalBytes": 283869,
+      "webpBytes": 193330,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "554b77038648aa48962a7305c1d2b953ac923872c71274bae5b673add6c7d18a"
+    },
+    {
+      "source": "album-data/cards/autumn005-pear-scream-false.png",
+      "webp": "album-data/cards/autumn005-pear-scream-false.webp",
+      "originalBytes": 287093,
+      "webpBytes": 193616,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a53865f292d48fbb2a3fab0fee48f065146116e1928014671e8a767f0235d22b"
+    },
+    {
+      "source": "album-data/cards/autumn006-fresh-stock-false.png",
+      "webp": "album-data/cards/autumn006-fresh-stock-false.webp",
+      "originalBytes": 326439,
+      "webpBytes": 211706,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "2d7ef4059c0a46edca83dfa1a265c432ece1feaa20595d666dee931c5e1af8e4"
+    },
+    {
+      "source": "album-data/cards/autumn007-copycats-false.png",
+      "webp": "album-data/cards/autumn007-copycats-false.webp",
+      "originalBytes": 352606,
+      "webpBytes": 240086,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a0d6b39a3896e9f78dd01991966430e3ff2461c50b7d271823aee0e22cd8e66d"
+    },
+    {
+      "source": "album-data/cards/autumn008-cozy-pear-autumn-false.png",
+      "webp": "album-data/cards/autumn008-cozy-pear-autumn-false.webp",
+      "originalBytes": 322730,
+      "webpBytes": 216740,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "f5e5ee42bd850bfd2e680ddcdbf726126a274fcd28d245fefebd3f4232309746"
+    },
+    {
+      "source": "album-data/cards/autumn009-berry-picnic-false.png",
+      "webp": "album-data/cards/autumn009-berry-picnic-false.webp",
+      "originalBytes": 309280,
+      "webpBytes": 212740,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "2eeef7959561427aa4981fc3e8c87111696e9200657d1095a1416a7a8578c389"
+    },
+    {
+      "source": "album-data/cards/autumn010-paws-off-false.png",
+      "webp": "album-data/cards/autumn010-paws-off-false.webp",
+      "originalBytes": 280832,
+      "webpBytes": 192050,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9df34999f174be3b340c9584e915fb58f4a27ce1ea1afbc7ab20104b56778afb"
+    },
+    {
+      "source": "album-data/cards/autumn011-leafy-nest-false.png",
+      "webp": "album-data/cards/autumn011-leafy-nest-false.webp",
+      "originalBytes": 226353,
+      "webpBytes": 152536,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "335a7cc301ab729530f26fb4ce656470420143eff5ebee2828573428cf1f2afc"
+    },
+    {
+      "source": "album-data/cards/autumn012-filter-on-false.png",
+      "webp": "album-data/cards/autumn012-filter-on-false.webp",
+      "originalBytes": 288113,
+      "webpBytes": 198278,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "dff36262d314fffdbfa1fe230a14c963ce06b74482990140dc9885c60a21a57b"
+    },
+    {
+      "source": "album-data/cards/autumn013-shoulder-perch-false.png",
+      "webp": "album-data/cards/autumn013-shoulder-perch-false.webp",
+      "originalBytes": 254486,
+      "webpBytes": 173530,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "852f235e819612c02642cb9cbb406d0bf363e5623479308f9868075002475c47"
+    },
+    {
+      "source": "album-data/cards/autumn014-the-admirer-false.png",
+      "webp": "album-data/cards/autumn014-the-admirer-false.webp",
+      "originalBytes": 365104,
+      "webpBytes": 241268,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "59fa5a8ca67a58430ec1265411a605c98ead3f98412524cbcdee6531ef0dbd38"
+    },
+    {
+      "source": "album-data/cards/autumn015-masterpiece-false.png",
+      "webp": "album-data/cards/autumn015-masterpiece-false.webp",
+      "originalBytes": 258287,
+      "webpBytes": 170282,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "12597017a720a0d37ce276365d06818ecba9793a54acdae2e3c6f8178bf808e0"
+    },
+    {
+      "source": "album-data/cards/autumn016-sugar-rush-false.png",
+      "webp": "album-data/cards/autumn016-sugar-rush-false.webp",
+      "originalBytes": 269654,
+      "webpBytes": 182818,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "479cde8ef2a9a5e79546b1f937ff9b87af0243509ecf750cbeb3151709d4160c"
+    },
+    {
+      "source": "album-data/cards/autumn017-take-cover-false.png",
+      "webp": "album-data/cards/autumn017-take-cover-false.webp",
+      "originalBytes": 326008,
+      "webpBytes": 222642,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "49cbbb069d59d7af7c10b4b692a912ae6832e7cc5d8dc8f29500758d62fdfc56"
+    },
+    {
+      "source": "album-data/cards/autumn018-give-it-back-false.png",
+      "webp": "album-data/cards/autumn018-give-it-back-false.webp",
+      "originalBytes": 386875,
+      "webpBytes": 258942,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "d20b0675eee97dfcdda107de24d7db431c5836d4f86d1c4bb054351dd6c7328c"
+    },
+    {
+      "source": "album-data/cards/autumn019-lake-reflection-false.png",
+      "webp": "album-data/cards/autumn019-lake-reflection-false.webp",
+      "originalBytes": 387099,
+      "webpBytes": 260130,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "35748b7521fa7b92d5072d044f3b409a9044ba7d28924bc785840a089e484c67"
+    },
+    {
+      "source": "album-data/cards/autumn020-swinging-high-false.png",
+      "webp": "album-data/cards/autumn020-swinging-high-false.webp",
+      "originalBytes": 436463,
+      "webpBytes": 291038,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "07edfc32731a165716616342f2f684067198ba5f0e4dd4d6fccf1045bb6b1d45"
+    },
+    {
+      "source": "album-data/cards/autumn021-autumn-outing-false.png",
+      "webp": "album-data/cards/autumn021-autumn-outing-false.webp",
+      "originalBytes": 400008,
+      "webpBytes": 270902,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "2efcb4792a85521b271254ef564dc64363c506afa2d0609597d96742dc662d7d"
+    },
+    {
+      "source": "album-data/cards/autumn022-shroom-magic-false.png",
+      "webp": "album-data/cards/autumn022-shroom-magic-false.webp",
+      "originalBytes": 379351,
+      "webpBytes": 255288,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c3db0834a8317b8338b85d19e70167272456a0a9e54b7cab2bc6aea551652cfc"
+    },
+    {
+      "source": "album-data/cards/autumn023-hare-hazard-false.png",
+      "webp": "album-data/cards/autumn023-hare-hazard-false.webp",
+      "originalBytes": 349873,
+      "webpBytes": 234500,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "edaddbf1186c3cc5456b00f04dbc7e881212ed52c5069e80cee7c6a5a67f9206"
+    },
+    {
+      "source": "album-data/cards/autumn024-drip-drop-false.png",
+      "webp": "album-data/cards/autumn024-drip-drop-false.webp",
+      "originalBytes": 357854,
+      "webpBytes": 239278,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "0d0fa9982e8e8b0b2cbbaaaee157ed441c2ee0c5f7c8318d14afc50476d898f1"
+    },
+    {
+      "source": "album-data/cards/autumn025-sky-siesta-false.png",
+      "webp": "album-data/cards/autumn025-sky-siesta-false.webp",
+      "originalBytes": 359046,
+      "webpBytes": 246568,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e44e7533199851598e30c8e8187fe7bf2d9c816042e5545957e24de46a4379b8"
+    },
+    {
+      "source": "album-data/cards/autumn026-drifting-dream-false.png",
+      "webp": "album-data/cards/autumn026-drifting-dream-false.webp",
+      "originalBytes": 415575,
+      "webpBytes": 278226,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "1eb6d2c1ad8b219e216dbc65f6b33d077179422071be19f467c763e988b41d80"
+    },
+    {
+      "source": "album-data/cards/autumn027-lunar-leap-false.png",
+      "webp": "album-data/cards/autumn027-lunar-leap-false.webp",
+      "originalBytes": 371597,
+      "webpBytes": 250376,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "458c1a45f452468b90475d243a66819037f179513c2d48e5001d409da14e548d"
+    },
+    {
+      "source": "album-data/cards/autumn028-snake-scarf-false.png",
+      "webp": "album-data/cards/autumn028-snake-scarf-false.webp",
+      "originalBytes": 236593,
+      "webpBytes": 158348,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a305c5ff95fe4cf5e093c13c157fb53bfef51f17a3c0579063ea828cc997706d"
+    },
+    {
+      "source": "album-data/cards/autumn029-knock-knock-false.png",
+      "webp": "album-data/cards/autumn029-knock-knock-false.webp",
+      "originalBytes": 376534,
+      "webpBytes": 245222,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "3c93ee76575101729e8b6a778cd29a420ba2a907da9e571961cca2c13d167d40"
+    },
+    {
+      "source": "album-data/cards/autumn030-baguette-thief-false.png",
+      "webp": "album-data/cards/autumn030-baguette-thief-false.webp",
+      "originalBytes": 358459,
+      "webpBytes": 240952,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "947eaa1f58e34066a506a76c808aa52f688683e5b5bb4c110f6752c9bc9e7337"
+    },
+    {
+      "source": "album-data/cards/autumn031-rain-watching-false.png",
+      "webp": "album-data/cards/autumn031-rain-watching-false.webp",
+      "originalBytes": 266930,
+      "webpBytes": 176344,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "fd038cb37fc16214a2a6584b9844e6c7eb8618b0b5c88519d40407a8876c5775"
+    },
+    {
+      "source": "album-data/cards/autumn032-tea-time-false.png",
+      "webp": "album-data/cards/autumn032-tea-time-false.webp",
+      "originalBytes": 389967,
+      "webpBytes": 257016,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ca625a4ea9fc27b3e1f2f3e7bb2eea3399f7292dec2d89255cc8a8aa08cc0a44"
+    },
+    {
+      "source": "album-data/cards/autumn033-just-yawning-false.png",
+      "webp": "album-data/cards/autumn033-just-yawning-false.webp",
+      "originalBytes": 338651,
+      "webpBytes": 222644,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "7fc2a042f420fd7e67fcf0f67bfa913119e16095e80dae9c7b831a56d49bf281"
+    },
+    {
+      "source": "album-data/cards/autumn034-refined-tastes-false.png",
+      "webp": "album-data/cards/autumn034-refined-tastes-false.webp",
+      "originalBytes": 278558,
+      "webpBytes": 184956,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "339992b55f7177e074e2912adc1a955458a3fed4ca8742dd270b4c6adbf2609e"
+    },
+    {
+      "source": "album-data/cards/autumn035-cobra-alert-false.png",
+      "webp": "album-data/cards/autumn035-cobra-alert-false.webp",
+      "originalBytes": 376913,
+      "webpBytes": 247818,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a42161b0c230149fb8169e1c5f8e0f0b4227045a9c265a1310f28239c15fd985"
+    },
+    {
+      "source": "album-data/cards/autumn036-ginger-treats-false.png",
+      "webp": "album-data/cards/autumn036-ginger-treats-false.webp",
+      "originalBytes": 361763,
+      "webpBytes": 241690,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "82bc406078b0ddad95623184a6e42dd4bc4eccd02c4881dce5421394f3879f95"
+    },
+    {
+      "source": "album-data/cards/autumn037-volt-strike-false.png",
+      "webp": "album-data/cards/autumn037-volt-strike-false.webp",
+      "originalBytes": 351187,
+      "webpBytes": 231816,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c699a88f6080064c9570b4a39a9feb8c9f723fc1f079a53c4a71c9630bfa165c"
+    },
+    {
+      "source": "album-data/cards/autumn038-among-leaves-false.png",
+      "webp": "album-data/cards/autumn038-among-leaves-false.webp",
+      "originalBytes": 339329,
+      "webpBytes": 226088,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "1928f059875368e4d5807cba088991836ab35d09de6b5f64ffbe3dd54d8565c3"
+    },
+    {
+      "source": "album-data/cards/autumn039-acorn-express-false.png",
+      "webp": "album-data/cards/autumn039-acorn-express-false.webp",
+      "originalBytes": 364665,
+      "webpBytes": 238982,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9fc193d2cc05c4de1eef2afa4797e4b27514ca607a1d07025feaa587c6286e27"
+    },
+    {
+      "source": "album-data/cards/autumn040-photo-bomb-false.png",
+      "webp": "album-data/cards/autumn040-photo-bomb-false.webp",
+      "originalBytes": 320223,
+      "webpBytes": 211568,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "948810abbb6316e82b10b41a4e2e009e6e9d7d66ea9d593afdc7d5d8ab4255b3"
+    },
+    {
+      "source": "album-data/cards/autumn041-windchaser-false.png",
+      "webp": "album-data/cards/autumn041-windchaser-false.webp",
+      "originalBytes": 391027,
+      "webpBytes": 264264,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c0a6095f2f9c1c9a89aec5f2feae151e5d40550ef86bb600a0b0a247ede23e43"
+    },
+    {
+      "source": "album-data/cards/autumn042-hero-s-stance-false.png",
+      "webp": "album-data/cards/autumn042-hero-s-stance-false.webp",
+      "originalBytes": 370113,
+      "webpBytes": 252844,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "8269d3573f8bd918fc90bf88a0905494c2c89463b5b5eccdb13c8a2da6b29bb5"
+    },
+    {
+      "source": "album-data/cards/autumn043-granny-wolf-false.png",
+      "webp": "album-data/cards/autumn043-granny-wolf-false.webp",
+      "originalBytes": 420380,
+      "webpBytes": 280182,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "5d5866b8ddf6aa842008ced5f8ec3637c0edcdda8b6f6eeec020eff5ebae51e0"
+    },
+    {
+      "source": "album-data/cards/autumn044-moonhowler-false.png",
+      "webp": "album-data/cards/autumn044-moonhowler-false.webp",
+      "originalBytes": 467084,
+      "webpBytes": 309754,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b96029ea1b3e34cf28cb819178b0407d9b8ccbb2c0d7cbeb594b566331ceb7d5"
+    },
+    {
+      "source": "album-data/cards/autumn045-heartfelt-gift-false.png",
+      "webp": "album-data/cards/autumn045-heartfelt-gift-false.webp",
+      "originalBytes": 369594,
+      "webpBytes": 249820,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c63c5d5ce565653ffab96020f7b93104b93d4bfb6e4ac71e0e2ff327a286bfef"
+    },
+    {
+      "source": "album-data/cards/autumn046-big-catch-false.png",
+      "webp": "album-data/cards/autumn046-big-catch-false.webp",
+      "originalBytes": 293711,
+      "webpBytes": 192402,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "0e5052c3c6b165ad6aea9851d6011a87076fd89bf5c5b556e2b3330318a4a814"
+    },
+    {
+      "source": "album-data/cards/autumn047-hanging-decor-false.png",
+      "webp": "album-data/cards/autumn047-hanging-decor-false.webp",
+      "originalBytes": 347595,
+      "webpBytes": 234506,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "719f4b01eaf3dd9580b0fc282c671c668cb29f78d2b0c79bcdc00c55edb80ac2"
+    },
+    {
+      "source": "album-data/cards/autumn048-boo-false.png",
+      "webp": "album-data/cards/autumn048-boo-false.webp",
+      "originalBytes": 370278,
+      "webpBytes": 246076,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "cf664cc59bb76ed1861a30af445fd8443189d5332158525bfc1dbe92e9b8f9cf"
+    },
+    {
+      "source": "album-data/cards/autumn049-leaf-racer-false.png",
+      "webp": "album-data/cards/autumn049-leaf-racer-false.webp",
+      "originalBytes": 286536,
+      "webpBytes": 191176,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "014dad8ccb814d62a79a414698dde4c234623b72dd05961fed10b7bf351af3fe"
+    },
+    {
+      "source": "album-data/cards/autumn050-have-a-bite-false.png",
+      "webp": "album-data/cards/autumn050-have-a-bite-false.webp",
+      "originalBytes": 307090,
+      "webpBytes": 203456,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "def9d85eeec4984b937246bcd3c9d7b631c6fe349ef235f000c9a8150cd87cf3"
+    },
+    {
+      "source": "album-data/cards/autumn051-moonlit-bandit-false.png",
+      "webp": "album-data/cards/autumn051-moonlit-bandit-false.webp",
+      "originalBytes": 315068,
+      "webpBytes": 212024,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "3779e7b4724044e57d6e481d6282ecd156d69a915aa4f5f6cd60ad66ee84494a"
+    },
+    {
+      "source": "album-data/cards/autumn052-no-racoons-false.png",
+      "webp": "album-data/cards/autumn052-no-racoons-false.webp",
+      "originalBytes": 359271,
+      "webpBytes": 238038,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "695c37d1a7daca52d5be24a380a37ce775580491d46708ab7aa90f3ffd21f14c"
+    },
+    {
+      "source": "album-data/cards/autumn053-heart-thief-false.png",
+      "webp": "album-data/cards/autumn053-heart-thief-false.webp",
+      "originalBytes": 285054,
+      "webpBytes": 194086,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "15191a721836bf8cc2943d550d451c2d380110e8fec407b622a922c37641157d"
+    },
+    {
+      "source": "album-data/cards/autumn054-night-prowler-false.png",
+      "webp": "album-data/cards/autumn054-night-prowler-false.webp",
+      "originalBytes": 294936,
+      "webpBytes": 197096,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "49bd0977b103533381cc584f738daca64d6ba31c62b2237bb421b585f22dec2f"
+    },
+    {
+      "source": "album-data/cards/autumn055-strange-forms-false.png",
+      "webp": "album-data/cards/autumn055-strange-forms-false.webp",
+      "originalBytes": 357052,
+      "webpBytes": 229880,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "32f94143a52dc23836d47e1256c9c37c56e03ed391493e42e1f17d1251e5b969"
+    },
+    {
+      "source": "album-data/cards/autumn056-boat-practice-false.png",
+      "webp": "album-data/cards/autumn056-boat-practice-false.webp",
+      "originalBytes": 252484,
+      "webpBytes": 168264,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "58a4a0ca4048111555139711092dd3c56b738414c9bb4505e4179603de0e7608"
+    },
+    {
+      "source": "album-data/cards/autumn057-danger-ahead-false.png",
+      "webp": "album-data/cards/autumn057-danger-ahead-false.webp",
+      "originalBytes": 299179,
+      "webpBytes": 196196,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c552eea82892b7ec7f5442e31a3b09b2acbb412c1fbad8e0eb0503afed198cae"
+    },
+    {
+      "source": "album-data/cards/autumn058-need-something-false.png",
+      "webp": "album-data/cards/autumn058-need-something-false.webp",
+      "originalBytes": 333149,
+      "webpBytes": 223786,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "35f8a5d0d4b5ce2ecf5f951cd598fce54f12648dc3fe3368d9efb15a81cc760b"
+    },
+    {
+      "source": "album-data/cards/autumn059-bath-buddy-false.png",
+      "webp": "album-data/cards/autumn059-bath-buddy-false.webp",
+      "originalBytes": 382267,
+      "webpBytes": 257334,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ae9c0da81d55defbb7d7a481f90be7d0261476e46e042e7b9d5a67eb7442b5ca"
+    },
+    {
+      "source": "album-data/cards/autumn060-odd-flavors-false.png",
+      "webp": "album-data/cards/autumn060-odd-flavors-false.webp",
+      "originalBytes": 284777,
+      "webpBytes": 186508,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b07af7dcaf0690680171d5252757432bdc1b88e959fbc09a53f243386dd772e7"
+    },
+    {
+      "source": "album-data/cards/autumn061-proper-dapper-false.png",
+      "webp": "album-data/cards/autumn061-proper-dapper-false.webp",
+      "originalBytes": 369884,
+      "webpBytes": 243796,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e004db699ec82a42061f4418570a734e969c429976d5b7ca2a1b7eb6e316c9f8"
+    },
+    {
+      "source": "album-data/cards/autumn062-gloomy-tunes-false.png",
+      "webp": "album-data/cards/autumn062-gloomy-tunes-false.webp",
+      "originalBytes": 278846,
+      "webpBytes": 178068,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ad34b82e7a86b28e14d1c4e8fb11a2c398693275f228a7d51e43d05bb4b65a28"
+    },
+    {
+      "source": "album-data/cards/autumn063-deepsea-visitor-true.png",
+      "webp": "album-data/cards/autumn063-deepsea-visitor-true.webp",
+      "originalBytes": 291911,
+      "webpBytes": 192694,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "2604d85d1bda76ef38c68e55b6873b5bc4ae3027f661bef8c5062a96364a6947"
+    },
+    {
+      "source": "album-data/cards/autumn064-fluttery-friend-false.png",
+      "webp": "album-data/cards/autumn064-fluttery-friend-false.webp",
+      "originalBytes": 461428,
+      "webpBytes": 312268,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "3088fc63638c2665500b71204eaa18990e9009c29cce9914652cfc4225292daf"
+    },
+    {
+      "source": "album-data/cards/autumn065-prance-prowl-false.png",
+      "webp": "album-data/cards/autumn065-prance-prowl-false.webp",
+      "originalBytes": 321245,
+      "webpBytes": 212426,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a91bc3ee2923c44e8da35bc100650140d0450f1c7e37090ec86ee783107c1949"
+    },
+    {
+      "source": "album-data/cards/autumn066-stop-sniff-false.png",
+      "webp": "album-data/cards/autumn066-stop-sniff-false.webp",
+      "originalBytes": 449521,
+      "webpBytes": 308660,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c79a6f2167c18e3ad424eab3c9fb1fef3e44976e15232b5126ca55086e42003f"
+    },
+    {
+      "source": "album-data/cards/autumn067-roaring-rouse-false.png",
+      "webp": "album-data/cards/autumn067-roaring-rouse-false.webp",
+      "originalBytes": 410502,
+      "webpBytes": 275684,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "7695fe1a5a0dd21c558250cc6888ae07dece106848db9451d43783435050a69b"
+    },
+    {
+      "source": "album-data/cards/autumn068-tiger-bae-false.png",
+      "webp": "album-data/cards/autumn068-tiger-bae-false.webp",
+      "originalBytes": 394235,
+      "webpBytes": 264050,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "785d6f7633cdc7be79dee521226345dc8890cf0a9e7b261cbb93cc2bb23e3f02"
+    },
+    {
+      "source": "album-data/cards/autumn069-waterfall-wisdom-false.png",
+      "webp": "album-data/cards/autumn069-waterfall-wisdom-false.webp",
+      "originalBytes": 447994,
+      "webpBytes": 302640,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "6740c25fb790448eaf31186c3bd875c97485ac3da3d9d228c7fe47351600d21e"
+    },
+    {
+      "source": "album-data/cards/autumn070-distant-dreams-false.png",
+      "webp": "album-data/cards/autumn070-distant-dreams-false.webp",
+      "originalBytes": 282157,
+      "webpBytes": 195036,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9e75afa4926619ffd281c07ff440155d665e548203d23706a96616031377088b"
+    },
+    {
+      "source": "album-data/cards/autumn071-pumpkin-rampage-false.png",
+      "webp": "album-data/cards/autumn071-pumpkin-rampage-false.webp",
+      "originalBytes": 413663,
+      "webpBytes": 279426,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "bcfef73ed6e076655d9e085b91eaa4037af71259f11b10961d7319b89f4722be"
+    },
+    {
+      "source": "album-data/cards/autumn072-bonfire-night-true.png",
+      "webp": "album-data/cards/autumn072-bonfire-night-true.webp",
+      "originalBytes": 531748,
+      "webpBytes": 364994,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "413e9063d05963a7246a6827ea55dee0cea045216bff1c20470f6af2113546c1"
+    },
+    {
+      "source": "album-data/cards/autumn073-letting-loose-false.png",
+      "webp": "album-data/cards/autumn073-letting-loose-false.webp",
+      "originalBytes": 412051,
+      "webpBytes": 272700,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "28358bc2608f7a3cf7f707292c2be19b892604858d28835c446fb8ad6cd4ce7f"
+    },
+    {
+      "source": "album-data/cards/autumn074-spicy-spin-false.png",
+      "webp": "album-data/cards/autumn074-spicy-spin-false.webp",
+      "originalBytes": 290367,
+      "webpBytes": 183258,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "fbc29de1652811830a852814ca0d7e5bb84c5d75267d2a5855d3120117992b96"
+    },
+    {
+      "source": "album-data/cards/autumn075-no-thoughts-false.png",
+      "webp": "album-data/cards/autumn075-no-thoughts-false.webp",
+      "originalBytes": 303766,
+      "webpBytes": 196304,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e25947f024de7e8e031cc4f237159c112756612595be762fa7e6b47fe2bee748"
+    },
+    {
+      "source": "album-data/cards/autumn076-moonfisher-false.png",
+      "webp": "album-data/cards/autumn076-moonfisher-false.webp",
+      "originalBytes": 481168,
+      "webpBytes": 324030,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "74b22e64634cd396849b30c81678b874881cbf5e16e2903b5aff429936b75cd7"
+    },
+    {
+      "source": "album-data/cards/autumn077-tree-slide-false.png",
+      "webp": "album-data/cards/autumn077-tree-slide-false.webp",
+      "originalBytes": 351574,
+      "webpBytes": 231304,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "1307d8b8231c1b44d350de91a1037ba3ae1919cca2820eccb6f1837d82e5eb39"
+    },
+    {
+      "source": "album-data/cards/autumn078-prank-partners-false.png",
+      "webp": "album-data/cards/autumn078-prank-partners-false.webp",
+      "originalBytes": 337729,
+      "webpBytes": 222794,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e89dc7b095a9a714bf00a5525b1c05b51b78360eff03d660d0def39cbe18859f"
+    },
+    {
+      "source": "album-data/cards/autumn079-cloud-gazing-false.png",
+      "webp": "album-data/cards/autumn079-cloud-gazing-false.webp",
+      "originalBytes": 302839,
+      "webpBytes": 191426,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "6c196881340008bdb89430fca98d46fd5ddd54faead2b151319975c3e6a1b2c8"
+    },
+    {
+      "source": "album-data/cards/autumn080-this-you-true.png",
+      "webp": "album-data/cards/autumn080-this-you-true.webp",
+      "originalBytes": 334251,
+      "webpBytes": 220780,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "7fbca513cfbc15b70d1c7b28aabfe26da74cd1b856e6c9a6c4479ec59734d391"
+    },
+    {
+      "source": "album-data/cards/autumn081-monkey-king-false.png",
+      "webp": "album-data/cards/autumn081-monkey-king-false.webp",
+      "originalBytes": 336056,
+      "webpBytes": 216450,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "5864bb652dba5d5bbc625abcbcbf71ba02508fe4180445f24b226ddd3814e974"
+    },
+    {
+      "source": "album-data/cards/autumn082-face-off-false.png",
+      "webp": "album-data/cards/autumn082-face-off-false.webp",
+      "originalBytes": 351943,
+      "webpBytes": 246936,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "aaaaab32ce349f75a95f99b4a8adbebd38440c93ecbb87197076181651142d38"
+    },
+    {
+      "source": "album-data/cards/autumn083-total-devotion-false.png",
+      "webp": "album-data/cards/autumn083-total-devotion-false.webp",
+      "originalBytes": 281674,
+      "webpBytes": 191304,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "490b684a17930c4304ca97108cc5fb2adb044246c0681ef5dbf855c6e69643a9"
+    },
+    {
+      "source": "album-data/cards/autumn084-many-options-false.png",
+      "webp": "album-data/cards/autumn084-many-options-false.webp",
+      "originalBytes": 307437,
+      "webpBytes": 208342,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9e46db273d5ca75e3907450cc2dffaf52f5aa3394236241299d760a1bd699c0a"
+    },
+    {
+      "source": "album-data/cards/autumn085-moonlit-lake-false.png",
+      "webp": "album-data/cards/autumn085-moonlit-lake-false.webp",
+      "originalBytes": 424305,
+      "webpBytes": 285526,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ffe79f41f69af8dcd58cf661a480c7e9343692b15c00a44cfabc934ff7f30e7b"
+    },
+    {
+      "source": "album-data/cards/autumn086-orchid-bloom-false.png",
+      "webp": "album-data/cards/autumn086-orchid-bloom-false.webp",
+      "originalBytes": 283853,
+      "webpBytes": 194530,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "3df75d1e0771d06f8d1e9690854a1ae9021cf38b75f16689860a195bfdebcc83"
+    },
+    {
+      "source": "album-data/cards/autumn087-petal-slash-false.png",
+      "webp": "album-data/cards/autumn087-petal-slash-false.webp",
+      "originalBytes": 290775,
+      "webpBytes": 198548,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "116b98e04125cfa05838160a192867b6935e980cbca3fb714d314b91bcc5d8fa"
+    },
+    {
+      "source": "album-data/cards/autumn088-floral-crown-false.png",
+      "webp": "album-data/cards/autumn088-floral-crown-false.webp",
+      "originalBytes": 328535,
+      "webpBytes": 218526,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "2fc4c609298d7417049c2d42cd0c0f96c5aa6e019926d3a917bb5fdc75470893"
+    },
+    {
+      "source": "album-data/cards/autumn089-tea-party-false.png",
+      "webp": "album-data/cards/autumn089-tea-party-false.webp",
+      "originalBytes": 342377,
+      "webpBytes": 226040,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "0cab04f25edfe093a6bec63ccc78380b2ddad9755e0029656530bc54793b8d89"
+    },
+    {
+      "source": "album-data/cards/autumn090-flower-haven-true.png",
+      "webp": "album-data/cards/autumn090-flower-haven-true.webp",
+      "originalBytes": 373654,
+      "webpBytes": 256148,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "084b541b70fd97905c190206d5bb4ddcdb701de3678a75d82ed6d57f2d9d89e8"
+    },
+    {
+      "source": "album-data/cards/autumn091-meal-misfortune-false.png",
+      "webp": "album-data/cards/autumn091-meal-misfortune-false.webp",
+      "originalBytes": 293337,
+      "webpBytes": 195308,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "7caa996d073308ff90db3927e8b465b230ce90249fbcc9e7009eb675811680f8"
+    },
+    {
+      "source": "album-data/cards/autumn092-dinner-dilemma-false.png",
+      "webp": "album-data/cards/autumn092-dinner-dilemma-false.webp",
+      "originalBytes": 268632,
+      "webpBytes": 178240,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e3ff623d5fd67e1ce1368f34a583ba22db7adb600b3d3fa0ddcc34f7c4c8b8e5"
+    },
+    {
+      "source": "album-data/cards/autumn093-feline-bonding-false.png",
+      "webp": "album-data/cards/autumn093-feline-bonding-false.webp",
+      "originalBytes": 283275,
+      "webpBytes": 190534,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "427ce364c7caa52b6e586853f50731ead7d2f9fcd0b5bb24181e3fbd60942af8"
+    },
+    {
+      "source": "album-data/cards/autumn094-sunset-field-false.png",
+      "webp": "album-data/cards/autumn094-sunset-field-false.webp",
+      "originalBytes": 373127,
+      "webpBytes": 250450,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "2ad8bbd9bc78308b0b6039d0ff2f71cad5c1bfe8178b76aa939f2de8cd920103"
+    },
+    {
+      "source": "album-data/cards/autumn095-midnight-magic-false.png",
+      "webp": "album-data/cards/autumn095-midnight-magic-false.webp",
+      "originalBytes": 338965,
+      "webpBytes": 228122,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "15a8e3952efee635e9b03191eea512dd415f26bd20e275b140df0398eab5bf75"
+    },
+    {
+      "source": "album-data/cards/autumn096-wise-words-true.png",
+      "webp": "album-data/cards/autumn096-wise-words-true.webp",
+      "originalBytes": 259478,
+      "webpBytes": 171086,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c5b85e80e2dcb604a1dee98f4f4f43c17bba1ed146045af53dce6a042dfb0f3c"
+    },
+    {
+      "source": "album-data/cards/autumn097-maple-meeting-false.png",
+      "webp": "album-data/cards/autumn097-maple-meeting-false.webp",
+      "originalBytes": 285113,
+      "webpBytes": 198120,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4fba8e23cc8acbf6aabd8f06e4c4a2a2152d59f6ffdc933f5742ca70a4eb2427"
+    },
+    {
+      "source": "album-data/cards/autumn098-idle-paws-true.png",
+      "webp": "album-data/cards/autumn098-idle-paws-true.webp",
+      "originalBytes": 335444,
+      "webpBytes": 226180,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c51079bd1266829a3578754a9717a2c05afdf960f2337ca763704ed69ba16508"
+    },
+    {
+      "source": "album-data/cards/autumn099-day-s-work-false.png",
+      "webp": "album-data/cards/autumn099-day-s-work-false.webp",
+      "originalBytes": 336482,
+      "webpBytes": 225274,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "71254df1e76b2af3d3ae2dcf197dc26581474bd31fc4b39ad49741e057547aea"
+    },
+    {
+      "source": "album-data/cards/autumn100-low-energy-false.png",
+      "webp": "album-data/cards/autumn100-low-energy-false.webp",
+      "originalBytes": 268937,
+      "webpBytes": 182060,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "303faf4781664d1413edb39e88711cb05b474f777ce1e31db9a310e59970ac3f"
+    },
+    {
+      "source": "album-data/cards/autumn101-desk-job-false.png",
+      "webp": "album-data/cards/autumn101-desk-job-false.webp",
+      "originalBytes": 297694,
+      "webpBytes": 201696,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "d68dbfb2d481f7e52af26372e5d285e072d77639147edf0754f1609bc8a03194"
+    },
+    {
+      "source": "album-data/cards/autumn102-fish-watching-false.png",
+      "webp": "album-data/cards/autumn102-fish-watching-false.webp",
+      "originalBytes": 275105,
+      "webpBytes": 185548,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "81568428f1cb48b34615293887843dae8b08b29447dd191e444e15c538de048e"
+    },
+    {
+      "source": "album-data/cards/autumn103-knitting-time-false.png",
+      "webp": "album-data/cards/autumn103-knitting-time-false.webp",
+      "originalBytes": 349065,
+      "webpBytes": 237154,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9af5eb34de7afff169d61b0c47bb57ba446ba840cf537e4d9d0f376be6059fb9"
+    },
+    {
+      "source": "album-data/cards/autumn104-comfort-food-false.png",
+      "webp": "album-data/cards/autumn104-comfort-food-false.webp",
+      "originalBytes": 387020,
+      "webpBytes": 260676,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "2c2a46a4f40752fba9497506c55b6d32bf122a8bad913204b17ac9c455adfb9a"
+    },
+    {
+      "source": "album-data/cards/autumn105-splendid-night-false.png",
+      "webp": "album-data/cards/autumn105-splendid-night-false.webp",
+      "originalBytes": 362866,
+      "webpBytes": 241148,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "d317113e2c9c5148ecc556551e4c57bdb97087b022dc4060e02eb6559e6010c3"
+    },
+    {
+      "source": "album-data/cards/autumn106-festive-duty-true.png",
+      "webp": "album-data/cards/autumn106-festive-duty-true.webp",
+      "originalBytes": 384423,
+      "webpBytes": 259062,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b72d3e0aac7b4de501467a11ccce5797854fdd1cc9d8c26721b8801a31b6a295"
+    },
+    {
+      "source": "album-data/cards/autumn107-kitty-mambo-false.png",
+      "webp": "album-data/cards/autumn107-kitty-mambo-false.webp",
+      "originalBytes": 364601,
+      "webpBytes": 252730,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "91f52964f078c2a22a109e5493f407758cc45bf759c381f0bc41c344049cc465"
+    },
+    {
+      "source": "album-data/cards/autumn108-hallowed-night-true.png",
+      "webp": "album-data/cards/autumn108-hallowed-night-true.webp",
+      "originalBytes": 452630,
+      "webpBytes": 306100,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "63d65bfa8ce792f0d1d8b8daf28059ebf749910af2a850b3fa867ad0225b7811"
+    },
+    {
+      "source": "album-data/cards/autumn109-cheer-up-false.png",
+      "webp": "album-data/cards/autumn109-cheer-up-false.webp",
+      "originalBytes": 266884,
+      "webpBytes": 180208,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "60a320bd92b7929dc6b6ed29adf9da268469bb0d700a95c63651ce2158b40270"
+    },
+    {
+      "source": "album-data/cards/autumn110-sweet-moments-false.png",
+      "webp": "album-data/cards/autumn110-sweet-moments-false.webp",
+      "originalBytes": 330623,
+      "webpBytes": 227850,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "71f8f0a25733fb7dc3cacf19184ff5df2260d356461d12c1a50e71a857f5e64a"
+    },
+    {
+      "source": "album-data/cards/autumn111-center-stage-false.png",
+      "webp": "album-data/cards/autumn111-center-stage-false.webp",
+      "originalBytes": 294836,
+      "webpBytes": 200302,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "db2093f5663970eaf0a1a556420c5f5d33fb72e0d37d9287288029c988b8b957"
+    },
+    {
+      "source": "album-data/cards/autumn112-onward-together-false.png",
+      "webp": "album-data/cards/autumn112-onward-together-false.webp",
+      "originalBytes": 306129,
+      "webpBytes": 206094,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "0da3d120842fbb9738185bef56608480f957c4e29a292cb8b8dfc0107c769f7f"
+    },
+    {
+      "source": "album-data/cards/autumn113-make-a-wish-true.png",
+      "webp": "album-data/cards/autumn113-make-a-wish-true.webp",
+      "originalBytes": 307969,
+      "webpBytes": 206512,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "08e40efc7a366429ee70b1eaad90c79a079b1eece399641bdcbf764f531baf4f"
+    },
+    {
+      "source": "album-data/cards/autumn114-novice-witch-true.png",
+      "webp": "album-data/cards/autumn114-novice-witch-true.webp",
+      "originalBytes": 340369,
+      "webpBytes": 234460,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "021e3d8182f38c9b799b157498f0bdf399d0d4e717e37fa41be8cec688f3a4ac"
+    },
+    {
+      "source": "album-data/cards/autumn115-shroom-slumber-false.png",
+      "webp": "album-data/cards/autumn115-shroom-slumber-false.webp",
+      "originalBytes": 533411,
+      "webpBytes": 359870,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "793c1e0df2db1274d2ab5227f5b7d780a4bee9cb9f6e1cbfd13eda8a4a3af58a"
+    },
+    {
+      "source": "album-data/cards/autumn116-starlit-ride-false.png",
+      "webp": "album-data/cards/autumn116-starlit-ride-false.webp",
+      "originalBytes": 282573,
+      "webpBytes": 192628,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "686becb108c62cd2f704e2def4f15e24a1cb1e4db27ac88ecbaaa85691df26c2"
+    },
+    {
+      "source": "album-data/cards/autumn117-co-star-true.png",
+      "webp": "album-data/cards/autumn117-co-star-true.webp",
+      "originalBytes": 459066,
+      "webpBytes": 337546,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b399a9eb6544a2b838820333eef5c9b50a0871a9b8d1ecea5620057a3508ba99"
+    },
+    {
+      "source": "album-data/cards/autumn118-beauty-sleep-false.png",
+      "webp": "album-data/cards/autumn118-beauty-sleep-false.webp",
+      "originalBytes": 383913,
+      "webpBytes": 258632,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "f735a8757b825a400e2b56541c8a3d06fa7347745b12b493c0f0d2d72f4cc2ea"
+    },
+    {
+      "source": "album-data/cards/autumn119-today-s-outfit-false.png",
+      "webp": "album-data/cards/autumn119-today-s-outfit-false.webp",
+      "originalBytes": 318545,
+      "webpBytes": 215368,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c7eed5c42cfd64140d0cb28ddeda79d71f495e13ff0746d993c27e5e3dcf88ca"
+    },
+    {
+      "source": "album-data/cards/autumn120-my-little-hippo-false.png",
+      "webp": "album-data/cards/autumn120-my-little-hippo-false.webp",
+      "originalBytes": 414768,
+      "webpBytes": 284996,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "8e61dcd931daa94362edb28f00f347049dd263aee80751a745289acef9012f7e"
+    },
+    {
+      "source": "album-data/cards/autumn121-no-crowd-needed-true.png",
+      "webp": "album-data/cards/autumn121-no-crowd-needed-true.webp",
+      "originalBytes": 286686,
+      "webpBytes": 191562,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "6cd3b25cade05c9aaebef451074c51ec746218de9d8a0e2e0ddb3c84bc48760a"
+    },
+    {
+      "source": "album-data/cards/autumn122-momopo-rage-false.png",
+      "webp": "album-data/cards/autumn122-momopo-rage-false.webp",
+      "originalBytes": 243999,
+      "webpBytes": 167642,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b929d43a53a0255972b100cbec5ad4baaadac8657fc7a57d1c305cfee65ccdc0"
+    },
+    {
+      "source": "album-data/cards/autumn123-classy-bath-true.png",
+      "webp": "album-data/cards/autumn123-classy-bath-true.webp",
+      "originalBytes": 355847,
+      "webpBytes": 237536,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b45acf2bd6c9a44aea2e9cf1aed82422cf057f0be46147357159361e47aaede9"
+    },
+    {
+      "source": "album-data/cards/autumn124-graceful-steps-false.png",
+      "webp": "album-data/cards/autumn124-graceful-steps-false.webp",
+      "originalBytes": 474148,
+      "webpBytes": 319090,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9f7802a42280df8126c4a7b4e633a3ac6b9a469481dbaa54ac9b3b4943cc6fcd"
+    },
+    {
+      "source": "album-data/cards/autumn125-come-play-true.png",
+      "webp": "album-data/cards/autumn125-come-play-true.webp",
+      "originalBytes": 335265,
+      "webpBytes": 221706,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b3e3d959147ce63c90d416204ce53e949ea8c33c70fa3e83987fa94d13339ef9"
+    },
+    {
+      "source": "album-data/cards/autumn126-washing-up-false.png",
+      "webp": "album-data/cards/autumn126-washing-up-false.webp",
+      "originalBytes": 244712,
+      "webpBytes": 165206,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "736038ec47e1da3afea9445c1d9afcf19751ccb9dc5da521124641409da6e920"
+    },
+    {
+      "source": "album-data/cards/autumn127-creative-spark-false.png",
+      "webp": "album-data/cards/autumn127-creative-spark-false.webp",
+      "originalBytes": 242384,
+      "webpBytes": 165760,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "80cbaab061c5b422ea36c23de9c46d40cddb532942ab54fbf6e65a1bd447d463"
+    },
+    {
+      "source": "album-data/cards/autumn128-fox-in-the-box-false.png",
+      "webp": "album-data/cards/autumn128-fox-in-the-box-false.webp",
+      "originalBytes": 487596,
+      "webpBytes": 337188,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "636a26df54043cd7efb4bfa39867f67bb65a050aa12deb946afe59dae2b4ab2a"
+    },
+    {
+      "source": "album-data/cards/autumn129-nap-buddies-false.png",
+      "webp": "album-data/cards/autumn129-nap-buddies-false.webp",
+      "originalBytes": 262552,
+      "webpBytes": 175968,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ac74505ea008618a55309d56e9f4410a85cfa16af1c40a6111ca93277b6d99c3"
+    },
+    {
+      "source": "album-data/cards/autumn130-trick-or-treat-false.png",
+      "webp": "album-data/cards/autumn130-trick-or-treat-false.webp",
+      "originalBytes": 289241,
+      "webpBytes": 201090,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "3e30aac3729b08f0ab0c62435e0be8b0c3d7cc6a802526834141aaac97e8741f"
+    },
+    {
+      "source": "album-data/cards/autumn131-patience-pays-true.png",
+      "webp": "album-data/cards/autumn131-patience-pays-true.webp",
+      "originalBytes": 410149,
+      "webpBytes": 275658,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "eb12f088240a65bc1bd90058256462e961543548037d6d929fa784c77861670d"
+    },
+    {
+      "source": "album-data/cards/autumn132-signature-move-false.png",
+      "webp": "album-data/cards/autumn132-signature-move-false.webp",
+      "originalBytes": 268525,
+      "webpBytes": 186788,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "6f6bf29022cd60067334fa1bc692d444365e9eed556e4d5865d2a350334e89fc"
+    },
+    {
+      "source": "album-data/cards/autumn133-old-tricks-false.png",
+      "webp": "album-data/cards/autumn133-old-tricks-false.webp",
+      "originalBytes": 528176,
+      "webpBytes": 358742,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ba81a28eab52b5c8668c34c4025864471a86abe808be8fa86381a8d41fd8e24c"
+    },
+    {
+      "source": "album-data/cards/autumn134-try-a-bite-true.png",
+      "webp": "album-data/cards/autumn134-try-a-bite-true.webp",
+      "originalBytes": 326997,
+      "webpBytes": 221022,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "33c89b0923a07d9a16f1c964b49785bfef06c6e911c94ac8b73975c99526214f"
+    },
+    {
+      "source": "album-data/cards/autumn135-grand-entrance-true.png",
+      "webp": "album-data/cards/autumn135-grand-entrance-true.webp",
+      "originalBytes": 355346,
+      "webpBytes": 243474,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "cc0a68d13410450943c7b174ce86e5c61ec04e69bb5082a2c888287fc4a7094e"
+    },
+    {
+      "source": "album-data/sets/autumnset01.png",
+      "webp": "album-data/sets/autumnset01.webp",
+      "originalBytes": 60944,
+      "webpBytes": 42322,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "12ccac9bbbafff3a90a75c4e9903ccf7d8ef9a7ffe7491eb8bc32a214a937573"
+    },
+    {
+      "source": "album-data/sets/autumnset02.png",
+      "webp": "album-data/sets/autumnset02.webp",
+      "originalBytes": 52124,
+      "webpBytes": 37040,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c55ca2ee1e40423a5b9e74bfd0e9c0bf5eea347ab6973690d73584b8cf6dd47f"
+    },
+    {
+      "source": "album-data/sets/autumnset03.png",
+      "webp": "album-data/sets/autumnset03.webp",
+      "originalBytes": 52704,
+      "webpBytes": 36900,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "5cd1eb22e0bd767203a817ee27c833a7d496bb011e67ea0bf39cdf6d0e643dfc"
+    },
+    {
+      "source": "album-data/sets/autumnset04.png",
+      "webp": "album-data/sets/autumnset04.webp",
+      "originalBytes": 50057,
+      "webpBytes": 34012,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "fab6c499ad4d5e0e3dcaa724bd2bb5e369240d7a55b36fb9bf02c56e965eec30"
+    },
+    {
+      "source": "album-data/sets/autumnset05.png",
+      "webp": "album-data/sets/autumnset05.webp",
+      "originalBytes": 54554,
+      "webpBytes": 38430,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "fc6d79b77dbd4918ddda2c3c79015257cd03027d78f612dd919390444c362b4f"
+    },
+    {
+      "source": "album-data/sets/autumnset06.png",
+      "webp": "album-data/sets/autumnset06.webp",
+      "originalBytes": 54173,
+      "webpBytes": 37564,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "75f3fdc4ae8f9b6caccd747be44b3502f21cba2523306ab97e1fdde3f22996b6"
+    },
+    {
+      "source": "album-data/sets/autumnset07.png",
+      "webp": "album-data/sets/autumnset07.webp",
+      "originalBytes": 59187,
+      "webpBytes": 41106,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "fdc3ac41bde0a1557be1b8c014d03228799654184679f91cb1ca853d6077d233"
+    },
+    {
+      "source": "album-data/sets/autumnset08.png",
+      "webp": "album-data/sets/autumnset08.webp",
+      "originalBytes": 59233,
+      "webpBytes": 41200,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "643a558b033a41c874f44d04d34178de0628635ae08f20d25f79d484269e4e36"
+    },
+    {
+      "source": "album-data/sets/autumnset09.png",
+      "webp": "album-data/sets/autumnset09.webp",
+      "originalBytes": 59744,
+      "webpBytes": 39688,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "88d146613a7c3736dcc5ac9c9bc481afd35927367d04f2f9f943dfcb5cc895d1"
+    },
+    {
+      "source": "album-data/sets/autumnset10.png",
+      "webp": "album-data/sets/autumnset10.webp",
+      "originalBytes": 53086,
+      "webpBytes": 37512,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c2f104ef3298485355e19e70fbd7df1ae6032527a4d3a987e5c49ca52d6a2d60"
+    },
+    {
+      "source": "album-data/sets/autumnset11.png",
+      "webp": "album-data/sets/autumnset11.webp",
+      "originalBytes": 57898,
+      "webpBytes": 38982,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "067332f2648bffe92b6f2f49b92413e1638a2eab270b49b9cefeda4c71f73197"
+    },
+    {
+      "source": "album-data/sets/autumnset12.png",
+      "webp": "album-data/sets/autumnset12.webp",
+      "originalBytes": 50980,
+      "webpBytes": 35738,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b6c334b55dee849651de45e9d1dd05bb2d76be77b717541c7dfd20304e6fee35"
+    },
+    {
+      "source": "album-data/sets/autumnset13.png",
+      "webp": "album-data/sets/autumnset13.webp",
+      "originalBytes": 55692,
+      "webpBytes": 39244,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "5afb507589e543633fd7aadc6cffa4470d5239b4ecf2e89811237e6698aef4f5"
+    },
+    {
+      "source": "album-data/sets/autumnset14.png",
+      "webp": "album-data/sets/autumnset14.webp",
+      "originalBytes": 58971,
+      "webpBytes": 40300,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e634ec496169f3246f11d8258edf20f72b96c493c221ac84d3dadcd0113bb4d3"
+    },
+    {
+      "source": "album-data/sets/autumnset15.png",
+      "webp": "album-data/sets/autumnset15.webp",
+      "originalBytes": 54963,
+      "webpBytes": 38770,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "52963983a99b4956466c99faffb0909f41730ff3e06f3934039f2752d81bf9fc"
+    },
+    {
+      "source": "album-data/ui/collection.png",
+      "webp": "album-data/ui/collection.webp",
+      "originalBytes": 57052,
+      "webpBytes": 38872,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "1ba53872b10e243e03f459dace594ebdba2ba7c8fad1db1650fae2b9b4a73faa"
+    },
+    {
+      "source": "album-data/ui/gold.png",
+      "webp": "album-data/ui/gold.webp",
+      "originalBytes": 68023,
+      "webpBytes": 47020,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "898131413ca96c0a50b6524c7c178b1a30efd8c04c1933f23f0005427a927dda"
+    },
+    {
+      "source": "assets/background01.png",
+      "webp": "assets/background01.webp",
+      "originalBytes": 1864823,
+      "webpBytes": 1445552,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "32321eb571b0ef7808922fee83f5affee7a2d553d8a50ff1196a937e81fee6a7"
+    },
+    {
+      "source": "assets/background02.png",
+      "webp": "assets/background02.webp",
+      "originalBytes": 1407963,
+      "webpBytes": 1029750,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e68e1ab59a2d91dc9d26ee895b2ece42d90e0c3b5f837f78508ad954493bee5c"
+    },
+    {
+      "source": "assets/background03.png",
+      "webp": "assets/background03.webp",
+      "originalBytes": 643109,
+      "webpBytes": 448294,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a792275db5833e0548ea62b12de71c81c2bead6d8dce565dcef2e18df53d37b5"
+    },
+    {
+      "source": "assets/blowfin-walk.gif",
+      "webp": "assets/blowfin-walk.webp",
+      "originalBytes": 121771,
+      "webpBytes": 85460,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "27f3a32391bbcca52e58bf498ef9ac8942a3182083fbd8bafb8842bad86f7ac6"
+    },
+    {
+      "source": "assets/blueflick-walk.gif",
+      "webp": "assets/blueflick-walk.webp",
+      "originalBytes": 1568968,
+      "webpBytes": 1175602,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "38dfcbedd2ffebd52800bfdd5f2723a70d19508276aa987f9930bb4cd342808c"
+    },
+    {
+      "source": "assets/budboo-walk.gif",
+      "webp": "assets/budboo-walk.webp",
+      "originalBytes": 165670,
+      "webpBytes": 128956,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "d15372da42710125c3218708440878ee1451d49fd58c8b194f17da112b1ec926"
+    },
+    {
+      "source": "assets/catch.png",
+      "webp": "assets/catch.webp",
+      "originalBytes": 25722,
+      "webpBytes": 19492,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "6b6e83cc463fccad1137f32049206ab4152299f4a45222fde6553b2bead317ad"
+    },
+    {
+      "source": "assets/cheerling-walk.gif",
+      "webp": "assets/cheerling-walk.webp",
+      "originalBytes": 1266586,
+      "webpBytes": 918914,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "2ba65afe4831cc740c0da0713e21d31dfa173ac75605f574406abf07f9fff54b"
+    },
+    {
+      "source": "assets/cindermunk-walk.gif",
+      "webp": "assets/cindermunk-walk.webp",
+      "originalBytes": 956133,
+      "webpBytes": 716604,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "f7ef005f59ca10dc590ce4cf6f3a12c016d2d258ab0d69726b9964caa0d50748"
+    },
+    {
+      "source": "assets/cindermunk-walk.png",
+      "webp": "assets/cindermunk-walk.webp",
+      "originalBytes": 74348,
+      "webpBytes": 29894,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "f7ef005f59ca10dc590ce4cf6f3a12c016d2d258ab0d69726b9964caa0d50748"
+    },
+    {
+      "source": "assets/droppit-walk.gif",
+      "webp": "assets/droppit-walk.webp",
+      "originalBytes": 52521,
+      "webpBytes": 42362,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "7537de999ed7c8d8f5f669a4089fa17c4e4ba7254a7d8dd85ee18740532858d9"
+    },
+    {
+      "source": "assets/frostnip-walk.gif",
+      "webp": "assets/frostnip-walk.webp",
+      "originalBytes": 2410547,
+      "webpBytes": 1745226,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "64ad23e73606b6bbbecdbef0244e6a65113de63ba049607b95ae716c255a9213"
+    },
+    {
+      "source": "assets/frugling-walk.gif",
+      "webp": "assets/frugling-walk.webp",
+      "originalBytes": 259368,
+      "webpBytes": 196246,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "adf8602135038bfe90cd2bd632b78bab13902e01b3e59f62738ad8436bfc0556"
+    },
+    {
+      "source": "assets/goonbug.png",
+      "webp": "assets/goonbug.webp",
+      "originalBytes": 47797,
+      "webpBytes": 30400,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "19d6047651f0e78c6c6abd42f2da62ccb03fcdee09f019774398a7f06d25b0db"
+    },
+    {
+      "source": "assets/island-goldrush.png",
+      "webp": "assets/island-goldrush.webp",
+      "originalBytes": 84723,
+      "webpBytes": 60784,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "af1f114be5f902ae3b581f2edcb20abee9ef0eb1ca219aeb0dbde77474c96b25"
+    },
+    {
+      "source": "assets/logo.png",
+      "webp": "assets/logo.webp",
+      "originalBytes": 263905,
+      "webpBytes": 181304,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "0b8678304985df458873574b93631565e9d337c35cc21813045ab99aa3886c70"
+    },
+    {
+      "source": "assets/nav-logo.png",
+      "webp": "assets/nav-logo.webp",
+      "originalBytes": 336612,
+      "webpBytes": 224642,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a385137d0d3a9432173bb1bf01f39f78ef9a98243f5616c30f224ac2e1721d4e"
+    },
+    {
+      "source": "assets/punchimp-walk.gif",
+      "webp": "assets/punchimp-walk.webp",
+      "originalBytes": 576078,
+      "webpBytes": 438394,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "2073291a6c27c169802b4e46e265d1812a79b5db53ecf0693069d2b1b0cc217f"
+    },
+    {
+      "source": "assets/pyropup-walk.gif",
+      "webp": "assets/pyropup-walk.webp",
+      "originalBytes": 1191866,
+      "webpBytes": 909552,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "a07c40f20c0abf38bb5ffcbb27e9562a876827df6d7e39e4c1ceb7250c31c970"
+    },
+    {
+      "source": "assets/sparkit-walk.gif",
+      "webp": "assets/sparkit-walk.webp",
+      "originalBytes": 1187461,
+      "webpBytes": 935402,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "d801ae9932c045961c36c9cbf517f86b8cba365baaa86a2850c0473ce8848214"
+    },
+    {
+      "source": "assets/sparklyspa.png",
+      "webp": "assets/sparklyspa.webp",
+      "originalBytes": 83809,
+      "webpBytes": 58808,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "5f7bf18930d74ed65b952ee26ef2df1f16e6b60e5b76f26fc6d2fd1317889a60"
+    },
+    {
+      "source": "assets/zapup-walk.gif",
+      "webp": "assets/zapup-walk.webp",
+      "originalBytes": 119075,
+      "webpBytes": 84182,
+      "verified": true,
+      "animated": true,
+      "selected": true,
+      "webpSHA256": "54be7156217fd4fd67f1f1b4727bd5c72fa0fa6bc745811a745781cec35c6334"
+    },
+    {
+      "source": "guide-assets/cozy-farm/banner.png",
+      "webp": "guide-assets/cozy-farm/banner.webp",
+      "originalBytes": 125413,
+      "webpBytes": 90682,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "2b9108ac038cfa71ba0f50c4a8d75ec595ca59c5a2af4a68d81cac4796ff4666"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crit.png",
+      "webp": "guide-assets/cozy-farm/crit.webp",
+      "originalBytes": 30769,
+      "webpBytes": 25412,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "edb916feee177f9bb18979660a33d723cc05ac7c2347a07ada46868b1067b878"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crop-2-stage-3.png",
+      "webp": "guide-assets/cozy-farm/crop-2-stage-3.webp",
+      "originalBytes": 35606,
+      "webpBytes": 25286,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "15feac4d82b8ef1e0b131a3999602182e38976a7194338719153feb32258c6e9"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crop-2-stage-4.png",
+      "webp": "guide-assets/cozy-farm/crop-2-stage-4.webp",
+      "originalBytes": 62448,
+      "webpBytes": 43980,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "8fe961c741dcd03936cc6aa013801a06acdaedd435e285240ff44e05f3a93178"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crop-3-stage-3.png",
+      "webp": "guide-assets/cozy-farm/crop-3-stage-3.webp",
+      "originalBytes": 25986,
+      "webpBytes": 17850,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "7b23e27c3cc751176f55ebae1604f77d2c8b6c452269af077a8d38fecd4183df"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crop-3-stage-4.png",
+      "webp": "guide-assets/cozy-farm/crop-3-stage-4.webp",
+      "originalBytes": 38726,
+      "webpBytes": 26968,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "5745da57d2cfbe7f7c961cb68adbfc79f25590a40d7dbaad4166d4bf86cf4a21"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crop-4-stage-3.png",
+      "webp": "guide-assets/cozy-farm/crop-4-stage-3.webp",
+      "originalBytes": 32698,
+      "webpBytes": 22630,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "40178ba8b76b6b795e109b97dbbe710291b2d86650ab9022194a1f5d7c6f45ea"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crop-4-stage-4.png",
+      "webp": "guide-assets/cozy-farm/crop-4-stage-4.webp",
+      "originalBytes": 57499,
+      "webpBytes": 40950,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "bd99421d522b3f805f6fe7836f0598742d3a0b1dbe6b6d24157ea7cd1bfbd9d9"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crop-5-stage-4.png",
+      "webp": "guide-assets/cozy-farm/crop-5-stage-4.webp",
+      "originalBytes": 71231,
+      "webpBytes": 49774,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "cf8ab5b9ba92d5d14be397b72b055d3a302c5679462d4a4d31a1cd1f2004391d"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crop-6-stage-3.png",
+      "webp": "guide-assets/cozy-farm/crop-6-stage-3.webp",
+      "originalBytes": 42794,
+      "webpBytes": 29222,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4a35e2eb189e9a9f4b0daef1db585e858c2a385ffc97c6611991daa352473006"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crop-6-stage-4.png",
+      "webp": "guide-assets/cozy-farm/crop-6-stage-4.webp",
+      "originalBytes": 66574,
+      "webpBytes": 46544,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9da553b2ab49efe1f43ac168b463a35fb74882c0a8ab579452d60577c4918c57"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crop-7-stage-3.png",
+      "webp": "guide-assets/cozy-farm/crop-7-stage-3.webp",
+      "originalBytes": 34634,
+      "webpBytes": 25556,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4b7f186d4a460d9d37b39273497d4aab89462980468184d0529288355f16eb87"
+    },
+    {
+      "source": "guide-assets/cozy-farm/crop-7-stage-4.png",
+      "webp": "guide-assets/cozy-farm/crop-7-stage-4.webp",
+      "originalBytes": 60140,
+      "webpBytes": 41062,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "547711fc7472bae884fa7fb988515dcace38da21095f4b09afb0eee890e5bc24"
+    },
+    {
+      "source": "guide-assets/cozy-farm/maskfry.png",
+      "webp": "guide-assets/cozy-farm/maskfry.webp",
+      "originalBytes": 24347,
+      "webpBytes": 17524,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a0d81d1788a5265c414aecdb40a6898c97492deb3199c2510a2c160fa88fef5d"
+    },
+    {
+      "source": "guide-assets/fishing/bait.png",
+      "webp": "guide-assets/fishing/bait.webp",
+      "originalBytes": 38462,
+      "webpBytes": 26234,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4e8cd031c5b35958f6c2312716560305ff686fa2be49a01162e9484e4a9e9f26"
+    },
+    {
+      "source": "guide-assets/fishing/banner.png",
+      "webp": "guide-assets/fishing/banner.webp",
+      "originalBytes": 116654,
+      "webpBytes": 82932,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "09af327ff13f1813c3fc89f66f2aa59152b34b321a06835203cd2204af9a3107"
+    },
+    {
+      "source": "guide-assets/fishing/bluecardpack.png",
+      "webp": "guide-assets/fishing/bluecardpack.webp",
+      "originalBytes": 29519,
+      "webpBytes": 21292,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b2eb7990b05aee7e42ee6b8d6b45df7ad37d1e15a226fd46726fbd313769cc8a"
+    },
+    {
+      "source": "guide-assets/fishing/goldcardpack.png",
+      "webp": "guide-assets/fishing/goldcardpack.webp",
+      "originalBytes": 28871,
+      "webpBytes": 21560,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "1fb59b7c66fb9eca42853e5171c60499f87c4c3b4a9246f05d12b6201f1a921f"
+    },
+    {
+      "source": "guide-assets/fishing/purplecardpack.png",
+      "webp": "guide-assets/fishing/purplecardpack.webp",
+      "originalBytes": 27863,
+      "webpBytes": 21194,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "0708701b8649fe29ff2a9f31c4b332553b38bbe02d60ad4f8b0351f8f9417ef6"
+    },
+    {
+      "source": "guide-assets/fishing/rainboxcardpack.png",
+      "webp": "guide-assets/fishing/rainboxcardpack.webp",
+      "originalBytes": 30946,
+      "webpBytes": 22742,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "db75ed32ad927a61d59afec410632727c9e1e202428a21ed769ef0d5d72a36df"
+    },
+    {
+      "source": "guide-assets/fishing/txsc_fish_basket03_388e56e546 - Copy - Copy.png",
+      "webp": "guide-assets/fishing/txsc_fish_basket03_388e56e546 - Copy - Copy.webp",
+      "originalBytes": 52668,
+      "webpBytes": 38308,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "d967c24c4f9599083da46fbf0700747323335c796b9b11f17f2ead5f9e284096"
+    },
+    {
+      "source": "guide-assets/fishing.png",
+      "webp": "guide-assets/fishing.webp",
+      "originalBytes": 72375,
+      "webpBytes": 51380,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c19fca69c367f7d65250605ad0efce889b8b42c9345884eda43c1b1544b4d2b8"
+    },
+    {
+      "source": "guide-assets/goldrush/clam-base.png",
+      "webp": "guide-assets/goldrush/clam-base.webp",
+      "originalBytes": 36998,
+      "webpBytes": 26446,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "2ba22492ebf73dfd9923ef43df6d4977f815801aa97fcbaa4fd30791c674fed2"
+    },
+    {
+      "source": "guide-assets/goldrush/clam-closed.png",
+      "webp": "guide-assets/goldrush/clam-closed.webp",
+      "originalBytes": 74465,
+      "webpBytes": 52132,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "06892f1f18dcec228000185dd17bad226756e835ed99d345abde0b49a0d9d0ac"
+    },
+    {
+      "source": "guide-assets/goldrush/clam-damaged.png",
+      "webp": "guide-assets/goldrush/clam-damaged.webp",
+      "originalBytes": 79351,
+      "webpBytes": 54776,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4e15db2c7523c589e5d0c8a23741e94397709f93ea9cf82e2cc7edaaf3f75747"
+    },
+    {
+      "source": "guide-assets/goldrush/clam-whole.png",
+      "webp": "guide-assets/goldrush/clam-whole.webp",
+      "originalBytes": 147171,
+      "webpBytes": 106188,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "241a9b29e9045e69a8cfc71296d4852ae7986ff0d0497e5db693e045f9f0a1aa"
+    },
+    {
+      "source": "guide-assets/goldrush/clam-wrecked.png",
+      "webp": "guide-assets/goldrush/clam-wrecked.webp",
+      "originalBytes": 116118,
+      "webpBytes": 81786,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "8f1a9e1f687a395b4d054ee1a2dc1b8cd5ebe5e99fa28c08e05092d9c5534c6e"
+    },
+    {
+      "source": "guide-assets/goldrush/reward-19-2.png",
+      "webp": "guide-assets/goldrush/reward-19-2.webp",
+      "originalBytes": 24327,
+      "webpBytes": 18398,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "89b78f5049a008d7d2fc27298c6cdb5c097fe2aff59020e35ebf9863012caa35"
+    },
+    {
+      "source": "guide-assets/goldrush/reward-8-1.png",
+      "webp": "guide-assets/goldrush/reward-8-1.webp",
+      "originalBytes": 25478,
+      "webpBytes": 19726,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "19463a2d6e948dd06322a911c06dd5ced155f6a8e92823b6a3b165f5929e0032"
+    },
+    {
+      "source": "guide-assets/goldrush/reward-9-4001.png",
+      "webp": "guide-assets/goldrush/reward-9-4001.webp",
+      "originalBytes": 29519,
+      "webpBytes": 21292,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b2eb7990b05aee7e42ee6b8d6b45df7ad37d1e15a226fd46726fbd313769cc8a"
+    },
+    {
+      "source": "guide-assets/goldrush/reward-9-4002.png",
+      "webp": "guide-assets/goldrush/reward-9-4002.webp",
+      "originalBytes": 27863,
+      "webpBytes": 21194,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "0708701b8649fe29ff2a9f31c4b332553b38bbe02d60ad4f8b0351f8f9417ef6"
+    },
+    {
+      "source": "guide-assets/goldrush/reward-9-4003.png",
+      "webp": "guide-assets/goldrush/reward-9-4003.webp",
+      "originalBytes": 28871,
+      "webpBytes": 21560,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "1fb59b7c66fb9eca42853e5171c60499f87c4c3b4a9246f05d12b6201f1a921f"
+    },
+    {
+      "source": "guide-assets/horde/banner.png",
+      "webp": "guide-assets/horde/banner.webp",
+      "originalBytes": 99054,
+      "webpBytes": 68122,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "80916cc1c5d6c1e0451b6949e18ea94f662c9ed16ef8b807bdfc4d7f6b66f06a"
+    },
+    {
+      "source": "guide-assets/raft-race/banner.png",
+      "webp": "guide-assets/raft-race/banner.webp",
+      "originalBytes": 138595,
+      "webpBytes": 97818,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "552e07afea48b69d17f2e5b6746145692387698d3a30de7ce56223b0ff6c1313"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/tier-4.png",
+      "webp": "guide-assets/spa/sparkle/tier-4.webp",
+      "originalBytes": 34952,
+      "webpBytes": 25752,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b92b5f57d4befc60d675c55c656022aeaabe2a56bbaa60b8955615a259c85319"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_2.webp",
+      "originalBytes": 51828,
+      "webpBytes": 37810,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "5c2b4c3cfaa7c6b3555e55f5a137f7a912ef39873ae4fad838539399e122f4d0"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_3.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_3.webp",
+      "originalBytes": 54391,
+      "webpBytes": 40270,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ad25fbbaeb71c808642e4250d9bc11703213bcddfe09cd3dd335bf5c13895525"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_4.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_4.webp",
+      "originalBytes": 54125,
+      "webpBytes": 38932,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "6669afd7b74ae23e579edd903588fe6597ddb9116704b4ae7df310d3bd553c2a"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_5.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_5.webp",
+      "originalBytes": 51344,
+      "webpBytes": 37662,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9a15c3e8c06ac99663d5fd830fd9041afd4c5c1aadb9d8662907aee9e9d1137a"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_6.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_6.webp",
+      "originalBytes": 54605,
+      "webpBytes": 41694,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "5ab836f56c24090163a867bd8443bc63001ff5abf69ebf61104f86953096155c"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_rare_1.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_rare_1.webp",
+      "originalBytes": 55674,
+      "webpBytes": 40282,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "3354bbe0bd7fa936b26e2e15890cac401b9490e9f2415dfa4cf38c3510706177"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_rare_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_11_04_color_rare_2.webp",
+      "originalBytes": 53793,
+      "webpBytes": 40910,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c1f8c931ec735c4b4997c357d7168e6bffb76e3d47944c84fd5fb5752176a551"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_2.webp",
+      "originalBytes": 53643,
+      "webpBytes": 42316,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "d607e98d3bb5a7505c0f542c50213e5ecfb8d96a448126f98e115ba4a7f6da98"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_3.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_3.webp",
+      "originalBytes": 53793,
+      "webpBytes": 41560,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "886a5538a7c98bffe9831a6de61bf4a1646ea6f2467832695d4d3fbb7b212024"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_4.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_4.webp",
+      "originalBytes": 54112,
+      "webpBytes": 41354,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "87affb0936631380df6c73125396b6012b1090847e9c995a2e3dd7acd173dc61"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_5.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_5.webp",
+      "originalBytes": 55621,
+      "webpBytes": 43170,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "2d870d1830d7364ad59cdc71266ed640f43f0c33309ecb8582ac4945431505da"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_6.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_6.webp",
+      "originalBytes": 49911,
+      "webpBytes": 39032,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "34b12f7400bc99e7d85887d7560e62d799e0bb6a6fd9ad32976f8fc36735af3e"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_rare_1.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_rare_1.webp",
+      "originalBytes": 56205,
+      "webpBytes": 42974,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "f1c22dd70937b9c1274a844d551e1e0197b2eb406acfc05fbc56023042e03f7f"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_rare_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_13_04_color_rare_2.webp",
+      "originalBytes": 54854,
+      "webpBytes": 43172,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ebfc4680fb56fa3fb62210f5940aa31a57d28b157a01029993ef766973171bd4"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_2.webp",
+      "originalBytes": 50537,
+      "webpBytes": 35648,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e82b6b409d716c6cfd674bbbe94e14e2f4bee0f54e5bdf857fe239b41effe689"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_3.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_3.webp",
+      "originalBytes": 52537,
+      "webpBytes": 38844,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "6737e16fa9cea933741bc3ed1e581585ff57686d0a9eeec5b3335f1be161812b"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_4.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_4.webp",
+      "originalBytes": 52083,
+      "webpBytes": 37194,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "5a128ee6814e060cc8870282566a9a2b0b738d5b7b2dfed4551c9721594aeeb0"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_5.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_5.webp",
+      "originalBytes": 52247,
+      "webpBytes": 39050,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9f2b37db5c3acef4ec7d52c78163cb68f360ffe8d261e5994d6389da024807d0"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_6.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_6.webp",
+      "originalBytes": 52740,
+      "webpBytes": 36812,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "60a36401ddf4fc4fca500c79ff37e67d473f282f78ee1ed7dfbc2e1829f8bbbb"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_rare_1.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_rare_1.webp",
+      "originalBytes": 55572,
+      "webpBytes": 41222,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e9a32e74ec96556062abda4163d300a731fbb4878276339f44dfd2d3ae6ef422"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_rare_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_14_04_color_rare_2.webp",
+      "originalBytes": 54515,
+      "webpBytes": 41220,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b34162bddf33dba226157c019b2e6725dfa1bab7bcee4476fb056dc2a9bd1337"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_2.webp",
+      "originalBytes": 53464,
+      "webpBytes": 40204,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c959c3b74584a9bc69ad60eb82e0755c7bd224873824b499311fd27e4219dfc9"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_3.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_3.webp",
+      "originalBytes": 50235,
+      "webpBytes": 37030,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "dadf29931a7382cadee0a2b338af1685a04ee2bedebadb636284f626bceeeb08"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_4.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_4.webp",
+      "originalBytes": 52158,
+      "webpBytes": 38704,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "5ebb4fb10c59f396b65bfad1d143a2edbb8d048794995931cc86c9a04686838e"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_5.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_5.webp",
+      "originalBytes": 50466,
+      "webpBytes": 36264,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "441a9e4737e647ce7c45ed323b73fb74c284e03a14b7bc340ed6548566e58f18"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_6.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_6.webp",
+      "originalBytes": 45562,
+      "webpBytes": 28588,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e21f45190870f24c8649939f2efcebbf93923dfa33d08aa1475671c6364e1074"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_rare_1.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_rare_1.webp",
+      "originalBytes": 53098,
+      "webpBytes": 39392,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "bb6326c668ddd4b866211f1156860619e71e6eab736c600a00fa49f5a39fabc5"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_rare_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_15_04_color_rare_2.webp",
+      "originalBytes": 53946,
+      "webpBytes": 40322,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "03f3ff1179cef43c420117228b0d6bf6bbd7cbb82c048dadd3df60a9d473a5da"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_2.webp",
+      "originalBytes": 46324,
+      "webpBytes": 34300,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "90942629f25efa035488113298692e658f7447b0630bd6974ecf863596da41da"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_3.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_3.webp",
+      "originalBytes": 44447,
+      "webpBytes": 32502,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e63b90a376ca689093493345a58fe976d67378c1c0d6968922902794c138042f"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_4.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_4.webp",
+      "originalBytes": 46274,
+      "webpBytes": 34078,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "6b821a593415e5ef14a1f0c21fb245c87f15fbbdda18aa14fc2b31ac0a831daa"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_5.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_5.webp",
+      "originalBytes": 44018,
+      "webpBytes": 30600,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c8c7b8d4346cdc3bb0009336b8f11cf5ae93a5dc1011bb0f90e0e7d6c92dfe8d"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_6.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_6.webp",
+      "originalBytes": 44686,
+      "webpBytes": 30654,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "af33cba7dd799522a1c6323df93c449aaa47b397722d8f74001a9164226b2efa"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_rare_1.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_rare_1.webp",
+      "originalBytes": 48466,
+      "webpBytes": 36042,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "47b99a0386a9a9f1cc6b9e71bd6534ff7cc6e5aafcd19d05082262dda9b74dc0"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_rare_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_17_04_color_rare_2.webp",
+      "originalBytes": 46213,
+      "webpBytes": 34578,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e0119c3d958769071a35e1090e75a82d02d6b409624aa109baff81cf93c2c0ea"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_2.webp",
+      "originalBytes": 58207,
+      "webpBytes": 40336,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "018672e0971a1e3520d1dc57bf133182ca0727d62d954a3adf7e218c23774107"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_3.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_3.webp",
+      "originalBytes": 58430,
+      "webpBytes": 42396,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "46fb26cf366f128ebc62986f0308d4fabe0765b59492828e8993a6afefbd3c86"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_4.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_4.webp",
+      "originalBytes": 58396,
+      "webpBytes": 42714,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "8ef9909b781cbdb30e9e84c7c3e226b83794ecaece86a773267f1c6b9872970a"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_5.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_5.webp",
+      "originalBytes": 58575,
+      "webpBytes": 43378,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4736be52908897e114ef0e52c69a22a8a2ded1d366075a8ced528d02854f7aac"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_6.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_6.webp",
+      "originalBytes": 58381,
+      "webpBytes": 42914,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "754a3de4f5c4a447efdb7b1fee13a4e0acac532054f8865bd6cf7ea6ed9820df"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_rare_1.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_rare_1.webp",
+      "originalBytes": 65061,
+      "webpBytes": 49818,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "54367c6de3c75f00e67d65e3e5d9801297285a20b28e2efd47a912eb762a4ec5"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_rare_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_18_04_color_rare_2.webp",
+      "originalBytes": 63026,
+      "webpBytes": 48700,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "0d34588a0b0ae1383cd5faea75a03f40b7bf4b025cccd31ab3699210129a142f"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_2.webp",
+      "originalBytes": 53188,
+      "webpBytes": 42036,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c52c14552d0cc41dcdec9a9cdc55271503b935f19a8f97697de1e1c21be31a9c"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_3.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_3.webp",
+      "originalBytes": 49554,
+      "webpBytes": 38958,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4f7634cd7b99e144ad10b3dd33201cd23259dcb251390aac7adfd33d5abb0a41"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_4.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_4.webp",
+      "originalBytes": 50701,
+      "webpBytes": 38452,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "baf7da1afc8ec09dbd50c2a2d634597cd16217ecf202db206f1327d1247bf8fd"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_5.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_5.webp",
+      "originalBytes": 48778,
+      "webpBytes": 37330,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "8a8700254d13c02268f9430d01ada6769ce9520aac4f5792d571a6dd767e225a"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_6.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_6.webp",
+      "originalBytes": 51036,
+      "webpBytes": 39444,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "f1010996cb15e38afd33e4b4bc560450b0f5b7777b9e9eb4e417dc6d0c589b66"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_rare_1.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_rare_1.webp",
+      "originalBytes": 55577,
+      "webpBytes": 43556,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "41b35d149424c7d0cea35f20c50cbc9f44620d39b44e6cd2bcc7273968899830"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_rare_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_20_04_color_rare_2.webp",
+      "originalBytes": 55625,
+      "webpBytes": 44252,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "49b7f63bb7e9779da8a4f1b54c52d28f4cea783c4b5c4cd89aa2b58e86195039"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_2.webp",
+      "originalBytes": 50936,
+      "webpBytes": 38738,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "dfaec14bd1cd2ba02120714fc9ed3ccf19650e96381d0d13b790e97a87192538"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_3.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_3.webp",
+      "originalBytes": 50846,
+      "webpBytes": 37084,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "0a0e0cec419e1a627b27cf54a32d4958083fc1010b2bf34f34aec6ad1c59d673"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_4.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_4.webp",
+      "originalBytes": 51092,
+      "webpBytes": 37506,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "672bc5173cb97c83238ad48f565a74ff3f95f25635adcd4e0fc5de5c9833ae77"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_5.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_5.webp",
+      "originalBytes": 50300,
+      "webpBytes": 34522,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ff64c178b33776f066df138460bf38d54b22617a879101dfb54898912ec0906b"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_6.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_6.webp",
+      "originalBytes": 50828,
+      "webpBytes": 39282,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a8863b891279c8a3c379c3951c742d7dc56c3c9220479bbad49c17222e563a73"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_rare_1.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_rare_1.webp",
+      "originalBytes": 53938,
+      "webpBytes": 41636,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9fb675b449432173cac96c8ec316b3241468f48575438328a69aa1951d94ef01"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_rare_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_21_04_color_rare_2.webp",
+      "originalBytes": 50788,
+      "webpBytes": 38776,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "03340ea548897441975b67512cd79c5b743313e9ddb4da651659a082843c156a"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_2.webp",
+      "originalBytes": 53030,
+      "webpBytes": 40128,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c0095b9aec42c48e1c612aaf138f9c5ce314e317e4ef4a10da45c0f6a5bf0d78"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_3.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_3.webp",
+      "originalBytes": 51452,
+      "webpBytes": 36314,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "68d18c774d3be982adadbaaa024f74456c75d18b1aeed5ef1f33feed417465de"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_4.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_4.webp",
+      "originalBytes": 53129,
+      "webpBytes": 38080,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "44dfd097ca9150ab266bbc0b382c860ea2a5a4c4b03ffef5c79e0ed23e120735"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_5.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_5.webp",
+      "originalBytes": 51584,
+      "webpBytes": 36996,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a3bcc64584417fce60cd5f9683a927a8125724172aedd1d04b5c964dd2b7a1c7"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_6.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_6.webp",
+      "originalBytes": 54140,
+      "webpBytes": 39684,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "607ab882887965ca51f326969eea9faf98dcc03aa6ea2fa2bf0bbb9a349ba36a"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_rare_1.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_rare_1.webp",
+      "originalBytes": 57958,
+      "webpBytes": 42376,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b22b81e70071644304d61d4fb2dd1fb5b5cd4769f59a3ee2f974ed2f7599de66"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_rare_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_22_04_color_rare_2.webp",
+      "originalBytes": 54267,
+      "webpBytes": 40536,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "7103a41f5ebe8268c7d31b4256f20a7ec36972f2741793f027ce9ea6ed31e7f2"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_2.webp",
+      "originalBytes": 52976,
+      "webpBytes": 39576,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "36931f89fb94a1b10e3143658e00ad85aec68701ac03770b0bab466a0fe32e63"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_3.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_3.webp",
+      "originalBytes": 53096,
+      "webpBytes": 38266,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c316b59aafc01a6d4b1a2c00c9897117e04861349b7bdfa48ed156b6e96277bc"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_4.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_4.webp",
+      "originalBytes": 53676,
+      "webpBytes": 41068,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b0e458e477b32c385764d466f8b81c7b280403eafda5ce0e71a1ae28e8daf147"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_5.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_5.webp",
+      "originalBytes": 53554,
+      "webpBytes": 39840,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "034012fa98920835f038add72c14dcf728afaf69d08fbf431b0ff964236a1bb5"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_6.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_6.webp",
+      "originalBytes": 52839,
+      "webpBytes": 40820,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "52c49f903f76c311fc6692a4eb0523e884c1debe5dfd0baf55cb29c3c75ab595"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_rare_1.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_rare_1.webp",
+      "originalBytes": 45954,
+      "webpBytes": 32960,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "8a0fe7b206fc690479541c0f3baf313ab0aa20cafca7ad25708d75fc6e7091c2"
+    },
+    {
+      "source": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_rare_2.png",
+      "webp": "guide-assets/spa/sparkle/txui_pet_head_24_04_color_rare_2.webp",
+      "originalBytes": 54240,
+      "webpBytes": 42720,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "d44017dca93ecd6992219cd96f49147cefe98061c403d50365b8aea0d65ee80c"
+    },
+    {
+      "source": "guide-assets/spa/txui_homestead_magicalhotspring_410.png",
+      "webp": "guide-assets/spa/txui_homestead_magicalhotspring_410.webp",
+      "originalBytes": 39989,
+      "webpBytes": 30828,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "3fff719f36bc1c01436e3623ee7f989a5c641526a23f788ff8c1c44900a28daa"
+    },
+    {
+      "source": "guide-assets/treasure-hunt/banner.png",
+      "webp": "guide-assets/treasure-hunt/banner.webp",
+      "originalBytes": 146353,
+      "webpBytes": 107612,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "27ce473752d646176576363bd5064fe0a73d2b0b189476ec6566c900113e9364"
+    },
+    {
+      "source": "guide-assets/treasure-hunt/chest1.png",
+      "webp": "guide-assets/treasure-hunt/chest1.webp",
+      "originalBytes": 62815,
+      "webpBytes": 41942,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "bbc47e770493559b21cfafd3305b14a8a444c00f54c130c601471e2752bdf4ce"
+    },
+    {
+      "source": "guide-assets/treasure-hunt/chest2.png",
+      "webp": "guide-assets/treasure-hunt/chest2.webp",
+      "originalBytes": 68446,
+      "webpBytes": 46850,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "7e6e2ca42b1222449b89ed65c7eb4482be9f6fae056b66326529fb6c52402592"
+    },
+    {
+      "source": "guide-assets/treasure-hunt/chest3.png",
+      "webp": "guide-assets/treasure-hunt/chest3.webp",
+      "originalBytes": 79850,
+      "webpBytes": 58314,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4f084fd311220d8de985aa41ae984dcb731019fbefb780ba6e625c15ff201bce"
+    },
+    {
+      "source": "guide-assets/treasure-hunt.png",
+      "webp": "guide-assets/treasure-hunt.webp",
+      "originalBytes": 79850,
+      "webpBytes": 58314,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4f084fd311220d8de985aa41ae984dcb731019fbefb780ba6e625c15ff201bce"
+    },
+    {
+      "source": "guide-assets/zobo-shooter/banner.png",
+      "webp": "guide-assets/zobo-shooter/banner.webp",
+      "originalBytes": 158434,
+      "webpBytes": 113536,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "5a84a7fc36c332d5b802db201fab589b5be0a6e95a3714e06757f44c3c3d1978"
+    },
+    {
+      "source": "tatari-data/images/badge-1001.png",
+      "webp": "tatari-data/images/badge-1001.webp",
+      "originalBytes": 56237,
+      "webpBytes": 40072,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a04547c8f65a32dcf1ccb1af9f82c2c155947d911229ed5a46cd4965e1573424"
+    },
+    {
+      "source": "tatari-data/images/badge-1002.png",
+      "webp": "tatari-data/images/badge-1002.webp",
+      "originalBytes": 101727,
+      "webpBytes": 68104,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "f23168315a90a9cd5eee3e5069fc639353e1d20d69d3ef2b2bc0b738ae8e691f"
+    },
+    {
+      "source": "tatari-data/images/badge-1003.png",
+      "webp": "tatari-data/images/badge-1003.webp",
+      "originalBytes": 77606,
+      "webpBytes": 52494,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "17765c8333f326979bc04cfa31d42101dbf86510932f20ed1c855eff794ac83a"
+    },
+    {
+      "source": "tatari-data/images/badge-1004.png",
+      "webp": "tatari-data/images/badge-1004.webp",
+      "originalBytes": 85433,
+      "webpBytes": 57986,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "61f53f0f1e365450e14f57fb3e9f01ee7c562150d468955aae39e425ce3b433d"
+    },
+    {
+      "source": "tatari-data/images/badge-1005.png",
+      "webp": "tatari-data/images/badge-1005.webp",
+      "originalBytes": 88165,
+      "webpBytes": 60374,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4e987df7c2a2dc9dbb484f8a64aefb337b34779bac4c2a0519e0d2b6c23f205d"
+    },
+    {
+      "source": "tatari-data/images/badge-1006.png",
+      "webp": "tatari-data/images/badge-1006.webp",
+      "originalBytes": 76336,
+      "webpBytes": 51240,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "d241b1525037141ebfa9ffacebf29273642449be54286da4cffb22fc1b3ff110"
+    },
+    {
+      "source": "tatari-data/images/badge-1007.png",
+      "webp": "tatari-data/images/badge-1007.webp",
+      "originalBytes": 82265,
+      "webpBytes": 55634,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "937cf2e6817912ba20675b7f53896f5cc8c9f2e344851fb155baa21521126eb6"
+    },
+    {
+      "source": "tatari-data/images/badge-2001.png",
+      "webp": "tatari-data/images/badge-2001.webp",
+      "originalBytes": 60852,
+      "webpBytes": 42146,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9ffd906740a1a8ff7a947a20662074b41df44c34abb8acc3b2e2e39ff781ba1e"
+    },
+    {
+      "source": "tatari-data/images/badge-2002.png",
+      "webp": "tatari-data/images/badge-2002.webp",
+      "originalBytes": 63194,
+      "webpBytes": 43144,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ec63dd97aa0c20c0b24cca7827dd80c8ced591217cc3ff98024320266df5cc2f"
+    },
+    {
+      "source": "tatari-data/images/badge-2003.png",
+      "webp": "tatari-data/images/badge-2003.webp",
+      "originalBytes": 90488,
+      "webpBytes": 60392,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "405e87c438a4d9de32c8d41868b141e69164c799e1e90c7f143e4cb9a29006e8"
+    },
+    {
+      "source": "tatari-data/images/badge-2004.png",
+      "webp": "tatari-data/images/badge-2004.webp",
+      "originalBytes": 89498,
+      "webpBytes": 60766,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "8d3f9a029dbe87396ef6970cc3d6616f0a34fd3e13fef03441576919d5fd0a94"
+    },
+    {
+      "source": "tatari-data/images/badge-2005.png",
+      "webp": "tatari-data/images/badge-2005.webp",
+      "originalBytes": 81918,
+      "webpBytes": 52290,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "7d8d6ace1caaaf9500e1ecb7ffb9fdce5a0c4783b1303f97dbe0fcc35b19935a"
+    },
+    {
+      "source": "tatari-data/images/badge-2006.png",
+      "webp": "tatari-data/images/badge-2006.webp",
+      "originalBytes": 92497,
+      "webpBytes": 64494,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ab938a3e6244614ebe35e0f8311c8356a22f6783a6f8448b1e05c77cb610d7c6"
+    },
+    {
+      "source": "tatari-data/images/badge-2007.png",
+      "webp": "tatari-data/images/badge-2007.webp",
+      "originalBytes": 100930,
+      "webpBytes": 67470,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "64670e2c2498d0400ec9f66cd4e4ceb4530fbf04ffd830b89943d4e8fcb7fbd5"
+    },
+    {
+      "source": "tatari-data/images/badge-3001.png",
+      "webp": "tatari-data/images/badge-3001.webp",
+      "originalBytes": 91661,
+      "webpBytes": 59504,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e6e05ed975b25e1995563e553991cde9fb4fad6f686d07d29c278eb3eb2aad98"
+    },
+    {
+      "source": "tatari-data/images/badge-3002.png",
+      "webp": "tatari-data/images/badge-3002.webp",
+      "originalBytes": 71698,
+      "webpBytes": 48080,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b4fe96e9a8d5be4a36f0d2fee86017aac0c2f5e9421b0461b92c2877da7964b3"
+    },
+    {
+      "source": "tatari-data/images/badge-3003.png",
+      "webp": "tatari-data/images/badge-3003.webp",
+      "originalBytes": 80698,
+      "webpBytes": 52898,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9d46e0d2cf16706bc2f3b2d55aa9c6d8a70d11d3b312b35aaa772477aa1dfdbc"
+    },
+    {
+      "source": "tatari-data/images/badge-3004.png",
+      "webp": "tatari-data/images/badge-3004.webp",
+      "originalBytes": 79425,
+      "webpBytes": 52278,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "8c81c122fd93d0524e8be95d30b4dd82c0bdf552f32f21859fd62ab45939a396"
+    },
+    {
+      "source": "tatari-data/images/badge-3005.png",
+      "webp": "tatari-data/images/badge-3005.webp",
+      "originalBytes": 84084,
+      "webpBytes": 55524,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "32c4a04200aae48c22ba4bad834a0da0a7a1abecf32f5d7597467cc0a3988830"
+    },
+    {
+      "source": "tatari-data/images/badge-3006.png",
+      "webp": "tatari-data/images/badge-3006.webp",
+      "originalBytes": 120800,
+      "webpBytes": 79868,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "d5b541ea2c76394cfafc357c1417b66ed632846452921c2dd6cbb7b8d6b10b97"
+    },
+    {
+      "source": "tatari-data/images/badge-3007.png",
+      "webp": "tatari-data/images/badge-3007.webp",
+      "originalBytes": 88338,
+      "webpBytes": 59942,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4305039a0a98080fc1eb8433472ea3516d36df37169b66c0611dffa061ff4006"
+    },
+    {
+      "source": "tatari-data/images/badge-4001.png",
+      "webp": "tatari-data/images/badge-4001.webp",
+      "originalBytes": 70001,
+      "webpBytes": 44630,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "02f8d321d5e47107f96d4418d93dc73c8629a0ee0eb6e0f7a6f924379d2fdfff"
+    },
+    {
+      "source": "tatari-data/images/badge-4002.png",
+      "webp": "tatari-data/images/badge-4002.webp",
+      "originalBytes": 65428,
+      "webpBytes": 40372,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "87b483533108a0225b0c9bb116fa9a7acac73749de5d2ea041aa724ea6f89616"
+    },
+    {
+      "source": "tatari-data/images/badge-4003.png",
+      "webp": "tatari-data/images/badge-4003.webp",
+      "originalBytes": 92045,
+      "webpBytes": 59856,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "d87bdfc26c7bd1a7815cfea378907b83d0073f846d09f6e11b42af2ad41956e2"
+    },
+    {
+      "source": "tatari-data/images/badge-4004.png",
+      "webp": "tatari-data/images/badge-4004.webp",
+      "originalBytes": 77144,
+      "webpBytes": 49612,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a2faa14d4a1f7b71d8f5f9cc9a89ebca1cdbf5ab0b6a5cfac69b376ed7c5c4a4"
+    },
+    {
+      "source": "tatari-data/images/badge-4005.png",
+      "webp": "tatari-data/images/badge-4005.webp",
+      "originalBytes": 72729,
+      "webpBytes": 46296,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "eaeb50cac7c4359e167533a9cde6e250b62a53fae857f0a66a444a27420affac"
+    },
+    {
+      "source": "tatari-data/images/badge-4006.png",
+      "webp": "tatari-data/images/badge-4006.webp",
+      "originalBytes": 103707,
+      "webpBytes": 70198,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9b0be3fdb08ca00f8829ecae91b83117bbbd4de20c0c401f7aaeecf8c773039a"
+    },
+    {
+      "source": "tatari-data/images/badge-4007.png",
+      "webp": "tatari-data/images/badge-4007.webp",
+      "originalBytes": 87157,
+      "webpBytes": 57660,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "a2e0cba97ba3742d31d756bf32bfe8a0f6308c243628d7a4f185d3882dcd6399"
+    },
+    {
+      "source": "tatari-data/images/badge-5001.png",
+      "webp": "tatari-data/images/badge-5001.webp",
+      "originalBytes": 66529,
+      "webpBytes": 45488,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4a1d8af1188f38cf92a781072cc4f721410cc401b780c709e8b8f65784078a15"
+    },
+    {
+      "source": "tatari-data/images/badge-5002.png",
+      "webp": "tatari-data/images/badge-5002.webp",
+      "originalBytes": 78851,
+      "webpBytes": 53294,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4ca2663aaf92707d733e316d8bdee5562c814b2907f91869668792bdfb7de589"
+    },
+    {
+      "source": "tatari-data/images/badge-5003.png",
+      "webp": "tatari-data/images/badge-5003.webp",
+      "originalBytes": 76582,
+      "webpBytes": 52040,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "2e7d7ceb1309783b34e3873686cd8f8405c0e2924bfdd67b03c1405ba0ad1257"
+    },
+    {
+      "source": "tatari-data/images/badge-5004.png",
+      "webp": "tatari-data/images/badge-5004.webp",
+      "originalBytes": 134742,
+      "webpBytes": 89932,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "912500cb50dd9105e6bf12b4efc525a378d3ad8ee4fade426c7a24ae65228ab2"
+    },
+    {
+      "source": "tatari-data/images/badge-5005.png",
+      "webp": "tatari-data/images/badge-5005.webp",
+      "originalBytes": 81549,
+      "webpBytes": 52858,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "92d6d1470cda17c639a4d0d51f43c16bcf24ffc543ecd23c519efee137c7a84d"
+    },
+    {
+      "source": "tatari-data/images/badge-5006.png",
+      "webp": "tatari-data/images/badge-5006.webp",
+      "originalBytes": 80999,
+      "webpBytes": 55086,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9861cbe31b7970db406f92188203974251c33810135e7382535df0ecae31991d"
+    },
+    {
+      "source": "tatari-data/images/badge-5007.png",
+      "webp": "tatari-data/images/badge-5007.webp",
+      "originalBytes": 97606,
+      "webpBytes": 65400,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "ee6437d29678a6be9044cd4e85dad5c80738280dee52271cbc3617733cfe2282"
+    },
+    {
+      "source": "tatari-data/images/tier-1.png",
+      "webp": "tatari-data/images/tier-1.webp",
+      "originalBytes": 30011,
+      "webpBytes": 20670,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "981519090dbdd685f33d089742b9e6ba8a8bced2530c63fc1427ab5b56cc9dcf"
+    },
+    {
+      "source": "tatari-data/images/tier-3.png",
+      "webp": "tatari-data/images/tier-3.webp",
+      "originalBytes": 35643,
+      "webpBytes": 26960,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "4729daedce2b0142c17cc2fa2bbd96072f45a6ad7c0643c1a89e4c7ab852fdde"
+    },
+    {
+      "source": "tatari-data/images/tier-4.png",
+      "webp": "tatari-data/images/tier-4.webp",
+      "originalBytes": 34952,
+      "webpBytes": 25752,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "b92b5f57d4befc60d675c55c656022aeaabe2a56bbaa60b8955615a259c85319"
+    },
+    {
+      "source": "tatari-data/images/versus.png",
+      "webp": "tatari-data/images/versus.webp",
+      "originalBytes": 65788,
+      "webpBytes": 48662,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "fac9d4499fe91d02acae515ea9b6e61822865b4e3d3155233b1918fb8cec9ed5"
+    },
+    {
+      "source": "tatari-data/stars/73.png",
+      "webp": "tatari-data/stars/73.webp",
+      "originalBytes": 30860,
+      "webpBytes": 21040,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "648ee9ab4dc4f7c39fc4f6feeef278e72f78e17b52b0cec9171595eab881502a"
+    },
+    {
+      "source": "tatari-data/stars/74.png",
+      "webp": "tatari-data/stars/74.webp",
+      "originalBytes": 31018,
+      "webpBytes": 21116,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "f9686e957c4e9c07ebfdc57d8598d2cb645a02a40da075e5f9b40a6b795a2f24"
+    },
+    {
+      "source": "tatari-data/stars/75.png",
+      "webp": "tatari-data/stars/75.webp",
+      "originalBytes": 31181,
+      "webpBytes": 21084,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "f940c05a74fa6ab2e8dbc5e479041999d54d741ebe42fa6d5ebeeeddb3aa3f92"
+    },
+    {
+      "source": "tatari-data/stars/76.png",
+      "webp": "tatari-data/stars/76.webp",
+      "originalBytes": 31372,
+      "webpBytes": 21390,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e649119489732d99c0eacde4100942a38bcab4176654004351c1c81e4178b977"
+    },
+    {
+      "source": "tatari-data/stars/77.png",
+      "webp": "tatari-data/stars/77.webp",
+      "originalBytes": 31503,
+      "webpBytes": 21580,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "721f1c58d179ea9a3d489d796fff5cf110c091b606bcc9acca79fd4189b7f1f6"
+    },
+    {
+      "source": "tatari-data/stars/78.png",
+      "webp": "tatari-data/stars/78.webp",
+      "originalBytes": 31327,
+      "webpBytes": 21374,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "6df0989a28e1bbbbf9513d0ee9389d4a8edb8e0d661b6eab57c6bc73722e251a"
+    },
+    {
+      "source": "tatari-data/stars/79.png",
+      "webp": "tatari-data/stars/79.webp",
+      "originalBytes": 36402,
+      "webpBytes": 26402,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "3394183b39e58d18f5cf564f1b0bb28306a2f3f1fedea262f3cc537dd2c0c3f1"
+    },
+    {
+      "source": "tatari-data/stars/80.png",
+      "webp": "tatari-data/stars/80.webp",
+      "originalBytes": 36553,
+      "webpBytes": 26284,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "713044f042414a193925619bb8e0c889cb7a2b304d0feeaaedad619bfdfcb957"
+    },
+    {
+      "source": "tatari-data/stars/81.png",
+      "webp": "tatari-data/stars/81.webp",
+      "originalBytes": 36801,
+      "webpBytes": 27058,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "80d08a07e6476e048b17eac667910eedb454680c4b940348e28cd016d07daf70"
+    },
+    {
+      "source": "tatari-data/stars/82.png",
+      "webp": "tatari-data/stars/82.webp",
+      "originalBytes": 37020,
+      "webpBytes": 26984,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "e0769eda7048cbe374d3653f1dd5cb4642a3a583242073fb9a63cc0e299f0192"
+    },
+    {
+      "source": "tatari-data/stars/83.png",
+      "webp": "tatari-data/stars/83.webp",
+      "originalBytes": 37212,
+      "webpBytes": 26306,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "993a543a6c7628f7c2cb70a237de640cb9c1454aeef0ed32c77a19069606ee56"
+    },
+    {
+      "source": "tatari-data/stars/84.png",
+      "webp": "tatari-data/stars/84.webp",
+      "originalBytes": 36845,
+      "webpBytes": 26192,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "c3ecf574e0bab50461c2972ad2ec9acb31826044100c10546cf6af8a368ed436"
+    },
+    {
+      "source": "treasure-data/ground.png",
+      "webp": "treasure-data/ground.webp",
+      "originalBytes": 184586,
+      "webpBytes": 122342,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "817e2d7ba1bc2cfab17144fa9c4539ef32f515f93a2b10373fedc6231bb1e325"
+    },
+    {
+      "source": "treasure-data/txui_treasurehunt_grid_book.png",
+      "webp": "treasure-data/txui_treasurehunt_grid_book.webp",
+      "originalBytes": 30151,
+      "webpBytes": 22448,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "bb1241c9ff048b86d4c758a5b4479f36bfee685734e1a147037190af5e0fe250"
+    },
+    {
+      "source": "treasure-data/txui_treasurehunt_grid_booktwo.png",
+      "webp": "treasure-data/txui_treasurehunt_grid_booktwo.webp",
+      "originalBytes": 29686,
+      "webpBytes": 21720,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "399627f79f2977c06fc96f80bc78fd5f423a0268ab9deb5321a153ec358304f3"
+    },
+    {
+      "source": "treasure-data/txui_treasurehunt_grid_radio.png",
+      "webp": "treasure-data/txui_treasurehunt_grid_radio.webp",
+      "originalBytes": 37033,
+      "webpBytes": 28324,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "7cb6dcd093d37a4c3b09c0cec5c63cefa5a50e41e90c806323180aad7d26572d"
+    },
+    {
+      "source": "treasure-data/txui_treasurehunt_grid_spaceship.png",
+      "webp": "treasure-data/txui_treasurehunt_grid_spaceship.webp",
+      "originalBytes": 57591,
+      "webpBytes": 38922,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "72ca30de100e57189b7b2026282feac354d40c553b5b9db049b9260b709f3fb4"
+    },
+    {
+      "source": "treasure-data/txui_treasurehunt_grid_statue.png",
+      "webp": "treasure-data/txui_treasurehunt_grid_statue.webp",
+      "originalBytes": 40649,
+      "webpBytes": 27554,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "f5df196af2c7ac0fd237525f2c1dae25e62fa10b4abf8367966e1a7484f91368"
+    },
+    {
+      "source": "treasure-data/txui_treasurehunt_grid_tv.png",
+      "webp": "treasure-data/txui_treasurehunt_grid_tv.webp",
+      "originalBytes": 39944,
+      "webpBytes": 28940,
+      "verified": true,
+      "animated": false,
+      "selected": true,
+      "webpSHA256": "9197f14fbabc35833394e86fdf0ab1a54a44461c0fe4af038cd5b5045f9657da"
+    }
+  ]
+}
