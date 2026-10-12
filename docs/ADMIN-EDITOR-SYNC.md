@@ -27,3 +27,7 @@ The sync command downloads only published banners from this repository's configu
 For future guide rebuilds, keep existing `data-site-content` keys, update the catalog and add new blocks through a migration. Existing Supabase overrides continue to take precedence; review conflicts before publishing a new factual version. Restore original text uses the deployed GitHub baseline. Do not rerun migration 009 to synchronize.
 
 Backend policies and uploads require validation in the live Supabase project after applying 012. Offline tests do not prove live Storage permissions.
+
+## Dashboard layout
+
+The admin page has its own `admin-dashboard.css` and does not import the public website styles or navigation. Desktop uses sidebar/editor/preview panes. Mobile uses a navigation drawer and Edit/Preview tabs. Public website styling remains inside the sandboxed page preview. Farm support retains its existing public layout.
