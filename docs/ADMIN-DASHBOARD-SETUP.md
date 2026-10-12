@@ -1,0 +1,27 @@
+# Admin dashboard setup
+
+Built for the existing GitHub Pages frontend and Supabase backend. Public page: `/admin.html`; Cozy Farm directory: `/farm-support.html`. Content edits cover registered guide headings and paragraphs, not executable HTML, calculator formulas, reward tables or images.
+
+## Activate once
+
+1. Back up the Supabase database. Apply `supabase/009_admin_content_farm.sql` in the Supabase SQL Editor. It seeds administrator user `f95bfea9-d7d3-49f5-827a-646c11f32ffb`; that account must already exist in Authentication. This migration was prepared but not executed by Codex.
+2. Commit/push the website files and migration through your usual GitHub workflow.
+3. Sign in with that account and open Account → Open admin dashboard. No service-role secret is required in the browser.
+
+## Workflows
+
+- Content: choose a page/block → edit plain text → save draft → preview → publish. Published text is loaded from Supabase on the next page load. Restore original text removes the override; Version history can restore earlier published values. Revision conflicts reject stale edits.
+- Farm: signed-in users explicitly confirm UID-sharing permission, submit UID/crop/bonus, then wait for review. Only an administrator can approve, reject, hide or restore listings. UID is excluded from directory results and returned only by an authenticated reveal request. Reports require a prior reveal; unique reveals/reports reset by the UTC 12-hour bucket. Three exhaustion reports hide a row; 50 reveals are a warning, not a guarantee of exhaustion.
+- Existing farm-support local prototype is preserved and not imported. No demo/player records are seeded.
+
+## Security / limits
+
+All underlying new tables have RLS enabled and no direct anon/authenticated grants. RPCs perform authorization and validation; admin membership is not writable from the client. Public content API exposes only published text. Admin history and UID submissions are private. Rendering uses `textContent`, so HTML entered by an administrator is displayed as text rather than executed.
+
+Initial implementation intentionally manages guide text and Cozy Farm approvals. GitHub remains the source of layouts, banners, reward data, formulas and deployment. The catalog must be updated when new editable blocks/pages are added; preserve `data-site-content` keys during future page regeneration.
+
+Before live use, test non-admin denial, administrator editing, draft invisibility, publish/restore, stale revision rejection, submission/approval, UID reveal privacy and report thresholds against the real Supabase project. Offline checks do not establish live database behavior.
+
+## Disable / rollback
+
+Remove the assigned user from `public.site_admins` in SQL to revoke dashboard access. Public content can be reset per block via Restore original text. Keep audit/history data when disabling the feature. File backups are under the Milkroad workspace `design-rollbacks/admin-dashboard`.

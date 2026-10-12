@@ -1,0 +1,956 @@
+[
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-1",
+    "label": "P · A strong support Tatari helps every future fertilizer dose. Arrange support before spending, th",
+    "default": "A strong support Tatari helps every future fertilizer dose. Arrange support before spending, then grow toward the next reward."
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-2",
+    "label": "H2 · Grow first, collect milestones",
+    "default": "Grow first, collect milestones"
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-3",
+    "label": "P · The newer Farm V2 event lasts six 12-hour rounds. Crop weight accumulates through the event. Fe",
+    "default": "The newer Farm V2 event lasts six 12-hour rounds. Crop weight accumulates through the event. Fertilizing, watering, natural growth, and support Tatari all contribute to heavier yields."
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-4",
+    "label": "H2 · Six crops, specific support Tatari",
+    "default": "Six crops, specific support Tatari"
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-5",
+    "label": "P · The default crop pool has six crops. Each requires its own support Tatari family; an unrelated ",
+    "default": "The default crop pool has six crops. Each requires its own support Tatari family; an unrelated Tatari cannot replace it. Support from your own camp or another trainer is assigned to that crop’s plot, not every crop on the farm."
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-6",
+    "label": "H2 · Growth stages and upgrade bonuses",
+    "default": "Growth stages and upgrade bonuses"
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-7",
+    "label": "P · Each threshold applies to one crop. Claiming an eligible upgrade adds the listed flat bonus wei",
+    "default": "Each threshold applies to one crop. Claiming an eligible upgrade adds the listed flat bonus weight toward progression; it is not a percentage boost to fertilizer or watering."
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-8",
+    "label": "H2 · Watering: how much weight?",
+    "default": "Watering: how much weight?"
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-9",
+    "label": "P · Watering adds a flat amount to each crop with positive weight. An empty plot does not count. Th",
+    "default": "Watering adds a flat amount to each crop with positive weight. An empty plot does not count. The inspected watering calculation does not apply your support percentage or fertilizer crit multiplier. If only four crops are active, the total is 4 × 5 = 20."
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-10",
+    "label": "H2 · Arrange support before fertilizing",
+    "default": "Arrange support before fertilizing"
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-11",
+    "label": "H2 · Crits and support are separate boosts",
+    "default": "Crits and support are separate boosts"
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-12",
+    "label": "H2 · Estimate a support bonus",
+    "default": "Estimate a support bonus"
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-13",
+    "label": "P · Use the support Tatari’s client-summary star, evolution, and food values. This checks the recov",
+    "default": "Use the support Tatari’s client-summary star, evolution, and food values. This checks the recovered support formula, not a full harvest prediction."
+  },
+  {
+    "page": "events/cozy-farm.html",
+    "block": "text-14",
+    "label": "H2 · Support matters most",
+    "default": "Support matters most"
+  },
+  {
+    "page": "events/fishing.html",
+    "block": "text-1",
+    "label": "P · Silver rewards your catches. Gold rewards a better team record. Plan for those two goals separa",
+    "default": "Silver rewards your catches. Gold rewards a better team record. Plan for those two goals separately."
+  },
+  {
+    "page": "events/fishing.html",
+    "block": "text-2",
+    "label": "H2 · How it works",
+    "default": "How it works"
+  },
+  {
+    "page": "events/fishing.html",
+    "block": "text-3",
+    "label": "P · Choose a rod multiplier, catch a fish, and earn silver based on its type and weight. Silver unl",
+    "default": "Choose a rod multiplier, catch a fish, and earn silver based on its type and weight. Silver unlocks your personal milestone rewards and rod upgrades. A better record for a species also earns gold for your team."
+  },
+  {
+    "page": "events/fishing.html",
+    "block": "text-4",
+    "label": "H2 · Before you fish",
+    "default": "Before you fish"
+  },
+  {
+    "page": "events/fishing.html",
+    "block": "text-5",
+    "label": "H2 · What the numbers mean",
+    "default": "What the numbers mean"
+  },
+  {
+    "page": "events/fishing.html",
+    "block": "text-6",
+    "label": "P · Luck Level equals rod level plus active bait stacks in the inspected client. Higher luck change",
+    "default": "Luck Level equals rod level plus active bait stacks in the inspected client. Higher luck changes both rarity chances and weight-tier chances. It does not identify which fish will appear next."
+  },
+  {
+    "page": "events/fishing.html",
+    "block": "text-7",
+    "label": "H2 · Try Fish Calculator",
+    "default": "Try Fish Calculator"
+  },
+  {
+    "page": "events/fishing.html",
+    "block": "text-8",
+    "label": "H2 · Useful habits, without folklore",
+    "default": "Useful habits, without folklore"
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-1",
+    "label": "P · A shared battlefield, separate energy balances, and meaningful skill unlocks. Build a plan with",
+    "default": "A shared battlefield, separate energy balances, and meaningful skill unlocks. Build a plan with your partner, then adapt it to the waves and chips you receive."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-2",
+    "label": "H2 · How it works",
+    "default": "How it works"
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-3",
+    "label": "P · Before the battle starts, set up a formation of 15 Tatari to bring into Horde Invasion. During ",
+    "default": "Before the battle starts, set up a formation of 15 Tatari to bring into Horde Invasion. During the run, choose from three-card summon offers drawn from that pool to deploy up to 10 active Tatari on the field. Upgrade their in-run levels, move them into useful positions, and choose chips that strengthen your setup. Two players defend the shared battlefield together."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-4",
+    "label": "H2 · Before you start",
+    "default": "Before you start"
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-5",
+    "label": "H2 · Energy Candy: income during battle",
+    "default": "Energy Candy: income during battle"
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-6",
+    "label": "P · Energy Candy is the in-round currency. It is separate from Candy and Pinballs claimed outside t",
+    "default": "Energy Candy is the in-round currency. It is separate from Candy and Pinballs claimed outside the battle."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-7",
+    "label": "H3 · Passive income becomes smaller over time",
+    "default": "Passive income becomes smaller over time"
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-8",
+    "label": "H3 · Estimated Energizers obtained",
+    "default": "Estimated Energizers obtained"
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-9",
+    "label": "P · This does not count any extra income from chips or death refunds, and does not subtract Energiz",
+    "default": "This does not count any extra income from chips or death refunds, and does not subtract Energizers spent. It assumes all enemies through the selected wave were defeated and uses a 30-second window per completed wave for passive income. Actual passive income depends on battle duration."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-10",
+    "label": "H2 · Levels, costs and death refunds",
+    "default": "Levels, costs and death refunds"
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-11",
+    "label": "P · The standard in-run level cap is Lv 7. A chip that explicitly raises the cap can enable Lv 8. N",
+    "default": "The standard in-run level cap is Lv 7. A chip that explicitly raises the cap can enable Lv 8. New Horde skills unlock at Lv 3, Lv 5 and Lv 7."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-12",
+    "label": "P · The Lv 1 row is a new deployment. Total cost includes that deployment and each listed upgrade. ",
+    "default": "The Lv 1 row is a new deployment. Total cost includes that deployment and each listed upgrade. Death refunds depend on the Tatari's level and an eligibility check; do not assume every summoned unit or forced removal qualifies."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-13",
+    "label": "H2 · Chip catalogue",
+    "default": "Chip catalogue"
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-14",
+    "label": "P · Browse all 49 chip variants and their in-game effect descriptions. Match a chip to the Tatari y",
+    "default": "Browse all 49 chip variants and their in-game effect descriptions. Match a chip to the Tatari you have deployed, your available energy and the current board."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-16",
+    "label": "H2 · Wave and boss roster",
+    "default": "Wave and boss roster"
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-17",
+    "label": "P · All four S2 difficulties use the same enemy roster and spawn formation. Choose a difficulty to ",
+    "default": "All four S2 difficulties use the same enemy roster and spawn formation. Choose a difficulty to see its stat multipliers inside each expanded wave."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-18",
+    "label": "P · These are configured enemies. Skill-created summons, escapes and live server changes can affect",
+    "default": "These are configured enemies. Skill-created summons, escapes and live server changes can affect a real battle. ATK / DEF / HP values are wave multipliers, not the boss's final stats."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-19",
+    "label": "H2 · Horde stats and damage",
+    "default": "Horde stats and damage"
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-20",
+    "label": "P · These values describe the added component. Full buff stacking and rebuild order still need inte",
+    "default": "These values describe the added component. Full buff stacking and rebuild order still need integration validation before using them to predict final battle stats."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-21",
+    "label": "H2 · Tatari Horde skill cards",
+    "default": "Tatari Horde skill cards"
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-22",
+    "label": "P · Select a Tatari and evolution to inspect the regular skill and Horde upgrades. Effect descripti",
+    "default": "Select a Tatari and evolution to inspect the regular skill and Horde upgrades. Effect descriptions and numeric rows use the same format as the Tatari database."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-23",
+    "label": "P · On mobile, swipe through all four cards. Only visible game skill cards are included; internal h",
+    "default": "On mobile, swipe through all four cards. Only visible game skill cards are included; internal helper skills are excluded. Arena Factor rows are omitted for Horde."
+  },
+  {
+    "page": "events/horde.html",
+    "block": "text-24",
+    "label": "H2 · Useful habits",
+    "default": "Useful habits"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-1",
+    "label": "P · Fight for territory, protect your league's clams, and understand where your battle supply goes.",
+    "default": "Fight for territory, protect your league's clams, and understand where your battle supply goes."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-2",
+    "label": "H2 · How Goldrush works",
+    "default": "How Goldrush works"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-3",
+    "label": "P · The main goal is to build your league's point production by claiming tiles and clams across the",
+    "default": "The main goal is to build your league's point production by claiming tiles and clams across the six configured days. Coordinate a strategy with your league, choose useful routes and high-value targets, and capture or retake tiles effectively. Attacks contain individual opponent fights: your Tatari skills and formation decide those fights, while Energy Drinks cover the battle cost."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-4",
+    "label": "P · Energy Drinks / Cans are the battle resource used to boost your Tatari in Goldrush. The amount ",
+    "default": "Energy Drinks / Cans are the battle resource used to boost your Tatari in Goldrush. The amount allocated determines your boost level. Energy Drinks expire after the event ends."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-5",
+    "label": "P · Super Drinks are condensed cans used for Dunerush Tournament. The verified tournament conversio",
+    "default": "Super Drinks are condensed cans used for Dunerush Tournament. The verified tournament conversion prompt uses a 1:1 amount when Energy Drinks are insufficient; check the prompt before confirming."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-6",
+    "label": "H2 · Before you attack",
+    "default": "Before you attack"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-7",
+    "label": "P · Taking a tile and earning a reward are separate steps. A near-cleared tile can produce a short ",
+    "default": "Taking a tile and earning a reward are separate steps. A near-cleared tile can produce a short attack, but its low defender count is not an explicit percentage refund rule."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-8",
+    "label": "H3 · When several players attack the same tile",
+    "default": "When several players attack the same tile"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-9",
+    "label": "H2 · Tile health and point production",
+    "default": "Tile health and point production"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-10",
+    "label": "P · The tile's health bar represents its remaining defenders, not the combined HP of the Tatari fig",
+    "default": "The tile's health bar represents its remaining defenders, not the combined HP of the Tatari fighting in one battle. The battle record identifies an opposing trainer or NPC; defeating opponent formations contributes to reducing the defender count."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-11",
+    "label": "P · These are base values before the daily production rate. Applicable home-territory shields incre",
+    "default": "These are base values before the daily production rate. Applicable home-territory shields increase defender capacity by 20%, 40% or 80%; they do not add a fixed 20, 40 or 80 defenders. Clam defense and harvest rewards are listed separately below."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-12",
+    "label": "H2 · Daily unlocks and score",
+    "default": "Daily unlocks and score"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-13",
+    "label": "P · The Island schedule has six day entries. Clams are listed on Days 2, 4 and 6; territory score r",
+    "default": "The Island schedule has six day entries. Clams are listed on Days 2, 4 and 6; territory score rates also change across the event."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-14",
+    "label": "P · Use the event screen for actual start, preparation, battle and settlement countdowns. These are",
+    "default": "Use the event screen for actual start, preparation, battle and settlement countdowns. These are day-based rules, not a prediction of the next server calendar date. The configured score percentages apply to base production: 50% means 0.5×, and 120% means 1.2×."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-15",
+    "label": "H2 · League roles and daily changes",
+    "default": "League roles and daily changes"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-16",
+    "label": "H2 · Energy Drink boosts",
+    "default": "Energy Drink boosts"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-17",
+    "label": "P · The available Energy Drinks amount determines the highest boost level it reaches. For example, ",
+    "default": "The available Energy Drinks amount determines the highest boost level it reaches. For example, 20–29 Energy Drinks gives Lv 2. The ordinary boost cap is Lv 10; rally levels are listed separately below."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-18",
+    "label": "H3 · Check the initial Energy Drink cost",
+    "default": "Check the initial Energy Drink cost"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-19",
+    "label": "P · This estimates the initial Energy Drink allocation cost at the selected threshold. It does not ",
+    "default": "This estimates the initial Energy Drink allocation cost at the selected threshold. It does not predict final spending or unused Energy Drinks returned after the attack. Enter only the spa discount currently active."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-20",
+    "label": "H2 · Exhaustion increases Energy Drink cost",
+    "default": "Exhaustion increases Energy Drink cost"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-21",
+    "label": "P · The game calculates the next attack’s Energy Drink cost using your daily attack count plus one.",
+    "default": "The game calculates the next attack’s Energy Drink cost using your daily attack count plus one. After 10 counted daily attacks, the next attack uses the +20% cost modifier."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-22",
+    "label": "H2 · There is a real battle behind each result",
+    "default": "There is a real battle behind each result"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-23",
+    "label": "P · Tatari attacks, skills, buffs, debuffs, defense and elemental matchups determine the fight. GvG",
+    "default": "Tatari attacks, skills, buffs, debuffs, defense and elemental matchups determine the fight. GvG uses PvP Arena Factor and the 0.8 / 1.2 elemental factors. Selected Energy Drinks boosts ATK and HP; it does not give a DEF bonus in the inspected table."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-24",
+    "label": "P · After combat, a separate calculation uses the enemy side's recorded total damage relative to yo",
+    "default": "After combat, a separate calculation uses the enemy side's recorded total damage relative to your formation's total battle maximum HP. This is cumulative damage, not damage per second."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-25",
+    "label": "P · Tile health is not an input to that formula. Healing can restore your remaining HP while total ",
+    "default": "Tile health is not an input to that formula. Healing can restore your remaining HP while total damage already recorded remains. The green bar in Battle Details shows remaining formation HP, not remaining cans."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-26",
+    "label": "H3 · Battle Details result labels",
+    "default": "Battle Details result labels"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-27",
+    "label": "P · The result label uses remaining formation HP, not the number of drinks spent.",
+    "default": "The result label uses remaining formation HP, not the number of drinks spent."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-28",
+    "label": "H2 · Estimate Energy Drink Loss",
+    "default": "Estimate Energy Drink Loss"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-29",
+    "label": "P · This calculator tests a simple model to check the formula using displayed formation HP multipli",
+    "default": "This calculator tests a simple model to check the formula using displayed formation HP multiplied by the battle HP buff. It does not predict how many cans you will lose before a battle, because opponent damage is only known after the battle result."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-30",
+    "label": "P · Energy Drink loss is capped by the supply available for that fight; exhaustion and discounts ar",
+    "default": "Energy Drink loss is capped by the supply available for that fight; exhaustion and discounts are separate. Use damage from all opponent Tatari."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-31",
+    "label": "H2 · Clam harvests and defense lines",
+    "default": "Clam harvests and defense lines"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-32",
+    "label": "P · Island clams are assigned to the four leagues on Days 2, 4 and 6. Each has a maximum of 3,000 d",
+    "default": "Island clams are assigned to the four leagues on Days 2, 4 and 6. Each has a maximum of 3,000 defenders. Their opening state comes from the server, and the active harvest screen counts down to the next daily boundary."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-33",
+    "label": "H2 · Rally attacks",
+    "default": "Rally attacks"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-34",
+    "label": "P · Rallies allow trainers in the same league to attack together. A higher tier adds more participa",
+    "default": "Rallies allow trainers in the same league to attack together. A higher tier adds more participant slots and a modestly larger stat contribution; paying three times the base cost does not triple the stat bonus."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-35",
+    "label": "P · To host a rally, you must first spend 5,000 Energy Drinks to unlock it. All rallies have a 5-mi",
+    "default": "To host a rally, you must first spend 5,000 Energy Drinks to unlock it. All rallies have a 5-minute preparation timer. The host can select who joins; if the host does not choose, the system selects members randomly."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-36",
+    "label": "H3 · Rally calculator",
+    "default": "Rally calculator"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-37",
+    "label": "P · Attack completed means your daily attack count before the rally. Tile HP means the remaining de",
+    "default": "Attack completed means your daily attack count before the rally. Tile HP means the remaining defenders on that tile. The server calculation is not verified; this calculator is based on user-experience data."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-38",
+    "label": "H2 · Goldrush team milestone rewards",
+    "default": "Goldrush team milestone rewards"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-39",
+    "label": "P · Team points unlock these rewards in sequence. Select a milestone to see the combined rewards fr",
+    "default": "Team points unlock these rewards in sequence. Select a milestone to see the combined rewards from the first row through that threshold."
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-40",
+    "label": "H2 · Useful habits",
+    "default": "Useful habits"
+  },
+  {
+    "page": "events/island-goldrush.html",
+    "block": "text-41",
+    "label": "P · The Hot Spring discount means a currently active spa buff that specifically reduces GvG Energy ",
+    "default": "The Hot Spring discount means a currently active spa buff that specifically reduces GvG Energy Drink consumption. It does not apply to every spa buff."
+  },
+  {
+    "page": "events/raft-race.html",
+    "block": "text-1",
+    "label": "P · Your rafts are personal. Your distance helps the whole team. Reach milestones together and choo",
+    "default": "Your rafts are personal. Your distance helps the whole team. Reach milestones together and choose the rewards you actually need."
+  },
+  {
+    "page": "events/raft-race.html",
+    "block": "text-2",
+    "label": "H2 · Personal rafts, shared distance",
+    "default": "Personal rafts, shared distance"
+  },
+  {
+    "page": "events/raft-race.html",
+    "block": "text-3",
+    "label": "P · Four teammates contribute to one distance total. Each player spends their own rafts. Everyone c",
+    "default": "Four teammates contribute to one distance total. Each player spends their own rafts. Everyone can claim a milestone once the team reaches its distance."
+  },
+  {
+    "page": "events/raft-race.html",
+    "block": "text-4",
+    "label": "P · Some milestones give a choice box. Pick one option; a box does not grant every listed item.",
+    "default": "Some milestones give a choice box. Pick one option; a box does not grant every listed item."
+  },
+  {
+    "page": "events/raft-race.html",
+    "block": "text-5",
+    "label": "H2 · Coordinate progress and reward choices",
+    "default": "Coordinate progress and reward choices"
+  },
+  {
+    "page": "events/raft-race.html",
+    "block": "text-6",
+    "label": "H2 · What the wheel actually promises",
+    "default": "What the wheel actually promises"
+  },
+  {
+    "page": "events/raft-race.html",
+    "block": "text-7",
+    "label": "H2 · Compare your raft budget",
+    "default": "Compare your raft budget"
+  },
+  {
+    "page": "events/raft-race.html",
+    "block": "text-8",
+    "label": "P · Paid-spin mean distance is 5.82m before free spins. If free spins use the same independent dist",
+    "default": "Paid-spin mean distance is 5.82m before free spins. If free spins use the same independent distribution and can chain, the expected total becomes about 6.47m per paid raft. This is a model average, not a guaranteed return."
+  },
+  {
+    "page": "events/raft-race.html",
+    "block": "text-9",
+    "label": "H2 · Choose a multiplier for control",
+    "default": "Choose a multiplier for control"
+  },
+  {
+    "page": "events/raft-race.html",
+    "block": "text-10",
+    "label": "P · A multiplier scales both cost and distance. Under the same wheel distribution, changing it does",
+    "default": "A multiplier scales both cost and distance. Under the same wheel distribution, changing it does not change expected distance per raft; it changes the number of paid attempts and the size of each result."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-1",
+    "label": "P · Choose your buffs, share a soak and collect Sparkle Tatari.",
+    "default": "Choose your buffs, share a soak and collect Sparkle Tatari."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-2",
+    "label": "H2 · How Sparkly Spa works",
+    "default": "How Sparkly Spa works"
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-3",
+    "label": "P · Open your own spa or visit a friend’s spa to give eligible Tatari temporary buffs. The active e",
+    "default": "Open your own spa or visit a friend’s spa to give eligible Tatari temporary buffs. The active effect set can improve combat, reduce Goldrush costs or provide daily benefits. Dreamy Sparkle effects also let you collect new Tatari appearances."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-4",
+    "label": "H2 · Spa Soap and activation",
+    "default": "Spa Soap and activation"
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-5",
+    "label": "P · Goldrush MVP rewards provide Spa Soap. The configured regular Goldrush reward is 180, 160, 150 ",
+    "default": "Goldrush MVP rewards provide Spa Soap. The configured regular Goldrush reward is 180, 160, 150 or 140 soaps for league ranks 1–4. The soap shop also contains packs of 10, 20, 50 and 100; use the in-game shop for prices and availability."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-6",
+    "label": "H2 · Spa Buffs",
+    "default": "Spa Buffs"
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-7",
+    "label": "P · Each set contains two to four effects. Expand an effect to compare its available rarities and o",
+    "default": "Each set contains two to four effects. Expand an effect to compare its available rarities and owner/guest values."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-8",
+    "label": "P · Gain 50 Sparkle progress per eligible daily settlement.",
+    "default": "Gain 50 Sparkle progress per eligible daily settlement."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-9",
+    "label": "P · This doubles the chance of obtaining Glitter; it does not give a 100% Glitter chance.",
+    "default": "This doubles the chance of obtaining Glitter; it does not give a 100% Glitter chance."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-10",
+    "label": "P · A chance to double feeding progress.",
+    "default": "A chance to double feeding progress."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-11",
+    "label": "P · Avoid losing candy when challenged.",
+    "default": "Avoid losing candy when challenged."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-12",
+    "label": "P · Allow Tatari below T4 to receive active spa combat buffs. This effect grants no stat bonus by i",
+    "default": "Allow Tatari below T4 to receive active spa combat buffs. This effect grants no stat bonus by itself."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-13",
+    "label": "P · A chance for the food factory to produce double Bentos.",
+    "default": "A chance for the food factory to produce double Bentos."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-14",
+    "label": "P · Increase damage to bosses.",
+    "default": "Increase damage to bosses."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-15",
+    "label": "P · Reduce Goldrush Energy Drink costs.",
+    "default": "Reduce Goldrush Energy Drink costs."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-16",
+    "label": "P · Increase trainer capacity in the spa.",
+    "default": "Increase trainer capacity in the spa."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-17",
+    "label": "P · Add an ATK percentage buff.",
+    "default": "Add an ATK percentage buff."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-18",
+    "label": "P · Add an HP percentage buff.",
+    "default": "Add an HP percentage buff."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-19",
+    "label": "P · Add a DEF percentage buff.",
+    "default": "Add a DEF percentage buff."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-20",
+    "label": "P · Add a damage-dealt buff.",
+    "default": "Add a damage-dealt buff."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-21",
+    "label": "P · Add a damage-reduction buff.",
+    "default": "Add a damage-reduction buff."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-22",
+    "label": "H2 · Hosts and guests",
+    "default": "Hosts and guests"
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-23",
+    "label": "P · Host your own spa. Win Goldrush MVP and meet the T4 requirement to obtain your spa, then spend ",
+    "default": "Host your own spa. Win Goldrush MVP and meet the T4 requirement to obtain your spa, then spend Spa Soap to open it. Only the host generates, rerolls and replaces that spa’s buff set."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-24",
+    "label": "P · Choose a friend’s spa. You do not need your own MVP to visit. Use the Spa Station to compare yo",
+    "default": "Choose a friend’s spa. You do not need your own MVP to visit. Use the Spa Station to compare your friends’ open spas and choose the buff set you want, provided there is a free slot and any required approval. Guests receive the host’s active set; they cannot reroll it independently. Your Tatari can benefit from only one spa at a time."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-25",
+    "label": "P · Friends can enter directly when the owner enables free joining. Otherwise, a join request needs",
+    "default": "Friends can enter directly when the owner enables free joining. Otherwise, a join request needs approval. Leaving, being removed or spa expiry ends the active benefits. Viewing another spa alone does not activate it."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-26",
+    "label": "H2 · Rerolls and pity",
+    "default": "Rerolls and pity"
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-27",
+    "label": "P · As the host, pay one soap to generate a candidate set, compare it with your current set, then c",
+    "default": "As the host, pay one soap to generate a candidate set, compare it with your current set, then choose whether to replace it. Your current set remains active during the preview. Rerolling again replaces the candidate list."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-28",
+    "label": "H2 · Sparkle Tatari and daily progress",
+    "default": "Sparkle Tatari and daily progress"
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-29",
+    "label": "P · Duplicate appearances convert into one Glitter Fruit. Each supported Tatari has five Standard a",
+    "default": "Duplicate appearances convert into one Glitter Fruit. Each supported Tatari has five Standard and two Rare appearances. All configured Sparkle appearance ATK, HP and DEF bonus fields are zero; the spa’s temporary buffs are a separate benefit."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-30",
+    "label": "H2 · Sparkle colors",
+    "default": "Sparkle colors"
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-31",
+    "label": "P · Choose a Tatari family to see its five Standard and two Rare T4 appearances. Select an image to",
+    "default": "Choose a Tatari family to see its five Standard and two Rare T4 appearances. Select an image to view it at full size."
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-32",
+    "label": "H2 · Useful habits",
+    "default": "Useful habits"
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-33",
+    "label": "H2 · What still needs verification",
+    "default": "What still needs verification"
+  },
+  {
+    "page": "events/sparkly-spa.html",
+    "block": "text-34",
+    "label": "P · Golden-card probability and temporary Sparkle effect types exist in the enums but have no confi",
+    "default": "Golden-card probability and temporary Sparkle effect types exist in the enums but have no configured effect rows in this version. They are not listed as obtainable buffs."
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-1",
+    "label": "P · Four partnerships, four shared boards. Each third completed stage gives a key; every four keys ",
+    "default": "Four partnerships, four shared boards. Each third completed stage gives a key; every four keys unlock another chest."
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-2",
+    "label": "H2 · Shared boards, separate partnerships",
+    "default": "Shared boards, separate partnerships"
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-3",
+    "label": "P · Pair with four partners. Each partnership advances its own shared board. Clearing a stage grant",
+    "default": "Pair with four partners. Each partnership advances its own shared board. Clearing a stage grants its stage rewards; stages 3, 6, 9, and so on also grant one key."
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-4",
+    "label": "H2 · Make a plan with your partners",
+    "default": "Make a plan with your partners"
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-5",
+    "label": "H2 · Four-slot reward check",
+    "default": "Four-slot reward check"
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-6",
+    "label": "P · This projects eligible stage and chest rewards for one player. It assumes each eligible reward ",
+    "default": "This projects eligible stage and chest rewards for one player. It assumes each eligible reward is claimed and excludes the initial Pickaxe grant."
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-7",
+    "label": "H2 · Choose a dig with better odds",
+    "default": "Choose a dig with better odds"
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-8",
+    "label": "P · The solver eliminates arrangements that cross empty tiles or overlap confirmed treasures. Its p",
+    "default": "The solver eliminates arrangements that cross empty tiles or overlap confirmed treasures. Its percentages describe the chance of a tile containing an undiscovered treasure under an equal-valid-layout model."
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-9",
+    "label": "P · Record every tile revealed in-game, including free reveals from bombs. The solver needs the res",
+    "default": "Record every tile revealed in-game, including free reveals from bombs. The solver needs the resulting empty or treasure information, not a separate bomb simulation."
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-10",
+    "label": "H2 · Bombs, moles and digging costs",
+    "default": "Bombs, moles and digging costs"
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-11",
+    "label": "H3 · Pickaxe cost per dig",
+    "default": "Pickaxe cost per dig"
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-12",
+    "label": "H2 · Chest progression",
+    "default": "Chest progression"
+  },
+  {
+    "page": "events/treasure-hunt.html",
+    "block": "text-13",
+    "label": "P · Select a chest to total rewards from all chests up to it.",
+    "default": "Select a chest to total rewards from all chests up to it."
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-1",
+    "label": "P · Use your strongest eligible Tatari quality, pick an arena you can enter, and understand the cha",
+    "default": "Use your strongest eligible Tatari quality, pick an arena you can enter, and understand the chance behind each attack."
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-2",
+    "label": "H2 · Every attack is a chance",
+    "default": "Every attack is a chance"
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-3",
+    "label": "P · Zobos enter the arena and leave after a time. Each paid attack consumes coins according to the ",
+    "default": "Zobos enter the arena and leave after a time. Each paid attack consumes coins according to the arena multiplier. Defeating a Zobo earns points; team score unlocks milestones."
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-4",
+    "label": "P · Your team shares points. According to the published rules, item drops from your own kills are n",
+    "default": "Your team shares points. According to the published rules, item drops from your own kills are not shared."
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-5",
+    "label": "H2 · Choose your Tatari and arena",
+    "default": "Choose your Tatari and arena"
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-6",
+    "label": "H2 · Power-ups",
+    "default": "Power-ups"
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-7",
+    "label": "P · Defeating Zobos can drop Lock On and Enrage. Drops from your own kills belong to you; they are ",
+    "default": "Defeating Zobos can drop Lock On and Enrage. Drops from your own kills belong to you; they are not shared with teammates."
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-8",
+    "label": "P · Auto-target Zobos through obstacles.",
+    "default": "Auto-target Zobos through obstacles."
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-9",
+    "label": "P · Increase your attack speed.",
+    "default": "Increase your attack speed."
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-10",
+    "label": "H2 · Compare a boss attack",
+    "default": "Compare a boss attack"
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-11",
+    "label": "H2 · Points, cost, and risk",
+    "default": "Points, cost, and risk"
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-12",
+    "label": "P · For the same target, a higher arena multiplier increases points and cost together. It does not ",
+    "default": "For the same target, a higher arena multiplier increases points and cost together. It does not by itself improve expected points per coin. Later arenas add different bosses, so the target pool still matters."
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-13",
+    "label": "H3 · Arena requirements",
+    "default": "Arena requirements"
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-14",
+    "label": "P · Unlock requirements count total Zobo Coins earned. Coins in hand are your current balance, a se",
+    "default": "Unlock requirements count total Zobo Coins earned. Coins in hand are your current balance, a separate entry requirement."
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-15",
+    "label": "H2 · Set a budget, not an imaginary guarantee",
+    "default": "Set a budget, not an imaginary guarantee"
+  },
+  {
+    "page": "events/zobo-shooter.html",
+    "block": "text-16",
+    "label": "P · Leaving after a spending limit can protect your budget. There is no verified rule that spending",
+    "default": "Leaving after a spending limit can protect your budget. There is no verified rule that spending a fixed number of coins resets the next kill chance or makes a boss “due.” Another player can also finish a target while you are attacking."
+  }
+]

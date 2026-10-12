@@ -6,3 +6,5 @@ document.addEventListener('click',event=>{if(!event.target.closest('.navbar'))cl
 document.getElementById('support')?.addEventListener('click',()=>location.assign('https://ko-fi.com/kenzkunz'));
 
 import './account-nav.mjs';
+
+import './site-content.mjs';
