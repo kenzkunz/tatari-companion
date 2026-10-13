@@ -6,3 +6,5 @@ Ambient decisions: 80% Move, 10% Rest (10 complete loops), 10% Eat (2 loops). We
 Pyropup rolls Anger at 10% when entering the middle 20% of the walking area, with a 12-second special cooldown. Moving Zapup reacts with HowlB at 80%. Frugling rolls BurnJump at 10% when crossing Sparkit/Pyropup/Blueflick. Actions stay within the existing homepage character area; all media is decorative and does not intercept clicks. Animated WebP fallback is used on iOS or unsupported/erroring WebM playback. Hidden pages pause animation; animations always play while the page is visible, as explicitly requested.
 
 Size multipliers relative to the prior .85 body scale: Sparkit and Zapup 1.10; Frugling and Pyropup 1.25. Punchimp removed from selection; no playback toggle.
+
+Depth ordering uses each character canvas bottom Y: higher positions render behind lower positions. Sparkit, Pyropup and Frugling received another 10% size increase.

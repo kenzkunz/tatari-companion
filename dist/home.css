@@ -23,3 +23,6 @@
 
 #field .tatari[data-name="Sparkit"],#field .tatari[data-name="Zapup"]{--body-scale:.935}
 #field .tatari[data-name="Frugling"],#field .tatari[data-name="Pyropup"]{--body-scale:1.0625}
+
+#field .tatari[data-name="Sparkit"]{--body-scale:1.0285}
+#field .tatari[data-name="Pyropup"],#field .tatari[data-name="Frugling"]{--body-scale:1.16875}
