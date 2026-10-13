@@ -28,3 +28,5 @@
 @media(min-width:1000px){.skill-list.normal-tier-list{position:relative;left:50%;transform:translateX(-50%);width:calc(133.333333% + 4px);max-width:calc(100vw - 40px);grid-auto-columns:calc((100% - 36px)/4);overflow-x:visible}.skill-list.normal-tier-list[data-card-count="2"]{width:calc(66.666667% - 4px);grid-auto-columns:calc((100% - 12px)/2)}}
 
 .skill-effect-tags{display:flex;flex-wrap:wrap;gap:6px;padding-top:12px;align-self:end}.skill-effect-tag{font:11px/1.5 Poppins,sans-serif;border:1px solid #d6c6a3;border-radius:6px;padding:4px 7px;color:inherit;background:transparent}
+
+.horde-detail-row.skill-effect-slot{background:#ffdf71}

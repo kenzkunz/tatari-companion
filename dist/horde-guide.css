@@ -77,3 +77,5 @@ body[data-guide=horde] .horde-tatari-option{display:flex;align-items:center;gap:
 .horde-tatari-option img{width:34px;height:34px;object-fit:contain}
 body[data-guide=horde] .horde-tatari-option:hover,body[data-guide=horde] .horde-tatari-option[aria-selected=true]{background:#ffeb99}
 @media(max-width:800px){.horde-chip{grid-template-columns:56px minmax(0,1fr)}body[data-guide=horde] .horde-wave-list summary{grid-template-columns:58px minmax(0,1fr) 59px!important;gap:9px}.horde-wave-bosses{padding-left:3px;gap:7px 10px}.horde-picker-field{min-width:100px}#skill-options{min-width:200px}}
+
+.horde-skill-value.skill-effect-slot{background:#ffdf71}

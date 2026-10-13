@@ -1,0 +1,2 @@
+let names=new Set();try{const response=await fetch(new URL('./tatari-data/effect-catalog.json',import.meta.url));if(response.ok){const data=await response.json();names=new Set(Object.values(data.effects).flatMap(effect=>[effect.name,...(effect.aliases||[])]).filter(Boolean).map(name=>name.trim().toLowerCase()))}}catch{}
+export function isSkillEffectDetail(detail,title){if(String(title).toLowerCase().includes('arena factor'))return false;return detail.type==='Effect'||Boolean(detail.buffId||detail.BuffID)||detail.value===null&&names.has(String(title).trim().toLowerCase())}
