@@ -17,3 +17,5 @@
 /* One centered Ko-fi badge shared by home and status pages. */
 .support{left:50%;right:auto;transform:translateX(-50%);gap:0;isolation:isolate}.support span{line-height:1;border-radius:24px;padding:18px 32px;margin-right:-28px}.support img{display:block;position:relative;z-index:1;flex-shrink:0;width:clamp(96px,7.3vw,140px);height:auto;object-fit:contain}
 @media(max-width:900px){.support span{padding:14px 24px;margin-right:-24px}.support img{width:96px}}
+
+#field .tatari{pointer-events:none}#field .tatari>video,#field .tatari>img{display:block;width:100%;height:auto;object-fit:contain}#field .tatari>[hidden]{display:none}
