@@ -12,7 +12,7 @@ export function chipTargets(chip,draft,known,player){
  else if([35,36,39,45,49].includes(chip.id)){targets=team;if(chip.id===45)condition='After movement, for 30 seconds';if(chip.id===36)condition='When knocked down'}
  else if(chip.id===47){const counts=new Map();team.forEach(m=>counts.set(m.entry.element,(counts.get(m.entry.element)||0)+1));const min=Math.min(...counts.values());targets=team.filter(m=>counts.get(m.entry.element)===min)}
  else if(chip.id===48){targets=team.filter(m=>m.level===4);condition=targets.length>=3?'Triggers once with 3 Lv 4 Tatari':'Requires 3 Lv 4 Tatari'}
- else if(chip.id===32)condition='Requires only one Tatari in front; exact targeting needs validation';
+ else if(chip.id===32){targets=team.filter(m=>team.filter(other=>other.index%cols===m.index%cols&&Math.floor(other.index/cols)<Math.floor(m.index/cols)).length===1);condition='45% DMG Boost with exactly one of your Tatari ahead in the same column; gaps are allowed.'}
  else condition='Formation or battle effect; no individual stat targets';
  return {targets,condition};
 }
