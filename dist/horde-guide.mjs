@@ -1,3 +1,4 @@
+import {withoutAuraDescription,withoutAuraDetails} from './horde-skill-presentation.mjs';
 import {isSkillEffectDetail} from './skill-effect-style.mjs';
 import {hordeSkillCards} from '/horde-cards-model.mjs';
 const $=id=>document.getElementById(id),fmt=n=>Math.round(n).toLocaleString('en-US');
@@ -70,8 +71,8 @@ try{
     $('skill-heading').replaceChildren(picture('/tatari-data/'+f.portrait,text(f.name)),node('strong',text(f.name)));
     $('skill-cards').replaceChildren(...hordeSkillCards(f).map(card=>{
       const article=node('article',undefined,'horde-skill-card'),header=node('header');header.append(node('strong',card.label),node('span',card.label==='Regular'?'Base skill':'Skill unlock'));article.append(header);
-      for(const s of card.skills){article.append(node('h3',text(s.name)),node('p',text(s.description)));const values=node('div',undefined,'horde-skill-values');
-        for(const d of s.details||[]){const title=text(d.title);if(title.toLowerCase().includes('arena factor'))continue;const v=node('div',undefined,'horde-skill-value');v.classList.toggle('skill-effect-slot',isSkillEffectDetail(d,title));v.append(node('b',title+(d.type==='Effect'||d.value===null?'':' '+text(d.text))));if(d.type==='Effect'||d.value===null)v.append(node('span',text(d.text)));values.append(v);}article.append(values);
+      for(const s of card.skills){article.append(node('h3',text(s.name)),node('p',withoutAuraDescription(s.description)));const values=node('div',undefined,'horde-skill-values');
+        for(const d of withoutAuraDetails(s.details)){const title=text(d.title);if(title.toLowerCase().includes('arena factor'))continue;const v=node('div',undefined,'horde-skill-value');v.classList.toggle('skill-effect-slot',isSkillEffectDetail(d,title));v.append(node('b',title+(d.type==='Effect'||d.value===null?'':' '+text(d.text))));if(d.type==='Effect'||d.value===null)v.append(node('span',text(d.text)));values.append(v);}article.append(values);
       }return article;
     }));$('skill-cards').scrollLeft=0;
   }
