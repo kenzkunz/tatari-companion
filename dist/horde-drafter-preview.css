@@ -178,3 +178,5 @@ dialog .share-preview{background:#ffecd0;border-color:#d6a260}
 #unit-effects{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 
 .navbar{line-height:normal}
+
+.board[data-mode="dojo"]{background:#456bac;border-color:#456bac}
