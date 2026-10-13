@@ -1,12 +1,15 @@
 import './navigation.mjs';
-import {createWorld} from './home-behavior.mjs';
-const manifest=await(await fetch('home-tatari.json')).json(),field=document.getElementById('field'),mobile=matchMedia('(max-width:900px)');
-let world,frame=0,last=0;
-const paused=()=>false;
-function fallbackToImage(c){c.fallback=true;c.renderedToken=-1;c.ready=false;render(c)}
-
-function populate(){field.replaceChildren();const count=mobile.matches?1+Math.floor(Math.random()*2):3+Math.floor(Math.random()*3);world=createWorld(manifest.characters,{count});for(const [i,c] of world.walkers.entries()){const wrapper=document.createElement('div');wrapper.className='tatari';wrapper.dataset.name=c.name;wrapper.dataset.tier='1';wrapper.dataset.appearance=c.variant;wrapper.setAttribute('aria-hidden','true');wrapper.style.bottom=(i%3*2)+'%';wrapper.style.zIndex=String(3-i%3);const video=document.createElement('video');video.muted=true;video.autoplay=true;video.playsInline=true;video.preload='none';video.disablePictureInPicture=true;video.setAttribute('muted','');video.setAttribute('playsinline','');const fallback=document.createElement('img');fallback.alt='';fallback.draggable=false;fallback.hidden=true;wrapper.append(video,fallback);field.append(wrapper);c.node=wrapper;c.video=video;c.image=fallback;c.renderedToken=-1;c.fallback=!video.canPlayType('video/webm; codecs="vp9"')||/iPad|iPhone|iPod/.test(navigator.userAgent);video.onended=()=>{if(c.action==='Disable'){video.pause();return}world.loopEnded(c);if(c.loops>0&&c.renderedToken===c.token){video.currentTime=0;video.play().catch(()=>{})}};video.oncanplay=()=>{c.ready=true;if(document.hidden||paused())video.pause();else video.play().catch(()=>fallbackToImage(c))};video.onerror=()=>fallbackToImage(c);fallback.onload=()=>{c.ready=true};render(c)}start()}
-function render(c){const clip=manifest.characters[c.name][c.variant][c.action];if(c.renderedToken!==c.token){c.renderedToken=c.token;c.node.dataset.action=c.action;if(c.fallback){c.video.pause();c.video.hidden=true;c.image.hidden=false;c.image.src=clip.webp}else{c.image.hidden=true;c.video.hidden=false;c.video.loop=c.action==='Move';c.video.src=clip.webm;c.video.load();const token=c.token;setTimeout(()=>{if(c.token===token&&!c.fallback&&c.video.readyState<2)fallbackToImage(c)},8000)}}const size=c.node.getBoundingClientRect().width,travel=Math.max(0,field.clientWidth-size);c.node.style.left=c.x*travel+'px';c.node.style.transform='scaleX('+c.dir+')'}
-function animate(now){frame=0;if(document.hidden||paused())return;const dt=last?Math.min((now-last)/1000,.05):0;last=now;world.tick(dt);world.walkers.forEach(render);frame=requestAnimationFrame(animate)}
-function start(){cancelAnimationFrame(frame);last=0;for(const c of world?.walkers||[]){if(document.hidden||paused())c.video.pause();else if(!c.fallback)c.video.play().catch(()=>fallbackToImage(c))}if(!document.hidden&&!paused())frame=requestAnimationFrame(animate)}
-mobile.addEventListener('change',populate);document.addEventListener('visibilitychange',start);new ResizeObserver(()=>world?.walkers.forEach(render)).observe(field);populate();
+import {randomWalkSpeed,avoidCrowding} from './walking.mjs';
+// Only the user's eight tier-1 Tataris are eligible.
+const roster=['Zapup','Frostnip','Pyropup','Frugling','Blueflick','Sparkit','Cheerling','Punchimp'];
+const pool=[...roster];for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+const selected=pool.slice(0,3+Math.floor(Math.random()*3));
+const mobile=matchMedia('(max-width: 900px)'),mobileCount=1+Math.floor(Math.random()*2);
+const field=document.getElementById('field');let last=0,frame=0;
+let critters=[];
+function populate(){field.replaceChildren();const visible=selected.slice(0,mobile.matches?mobileCount:selected.length);critters=visible.map((name,i)=>{const image=document.createElement('img');image.className='tatari';image.alt='';image.draggable=false;image.dataset.tier='1';image.dataset.name=name;image.src='assets/'+name.toLowerCase()+'-walk.webp';image.style.bottom=(i%3*2)+'%';image.style.zIndex=String(3-i%3);field.append(image);const x=(i+.3)/visible.length;return{name,image,x,target:Math.random(),speed:randomWalkSpeed(),size:image.getBoundingClientRect().width,wait:0,avoid:0};});critters.forEach(render);}
+mobile.addEventListener('change',populate);
+function render(c){const width=field.clientWidth,size=c.image.getBoundingClientRect().width,travel=Math.max(0,width-size);c.image.style.left=(c.x*travel)+'px';c.image.style.transform=`scaleX(${c.target>=c.x?1:-1})`;}
+function animate(now){frame=0;if(document.hidden)return;const dt=last?Math.min((now-last)/1000,.05):0;last=now;avoidCrowding(critters,field.clientWidth,dt);critters.forEach(c=>{if(c.wait>0)c.wait-=dt;else{c.x+=Math.sign(c.target-c.x)*c.speed*dt;if(Math.abs(c.target-c.x)<.004){c.x=c.target;c.target=.02+Math.random()*.96;c.speed=randomWalkSpeed();c.wait=.4+Math.random()*.8;}}render(c);});frame=requestAnimationFrame(animate);}
+function start(){cancelAnimationFrame(frame);last=0;if(!document.hidden)frame=requestAnimationFrame(animate);}
+document.addEventListener('visibilitychange',start);new ResizeObserver(()=>critters.forEach(c=>{c.size=c.image.getBoundingClientRect().width;render(c);})).observe(field);populate();start();
