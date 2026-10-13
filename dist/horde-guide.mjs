@@ -1,4 +1,4 @@
-import {withoutAuraDescription,withoutAuraDetails} from './horde-skill-presentation.mjs';
+import {withoutAuraDescription,withoutAuraDetails} from './horde-skill-presentation.mjs?v=aura-section3';
 import {isSkillEffectDetail} from './skill-effect-style.mjs';
 import {hordeSkillCards} from '/horde-cards-model.mjs';
 const $=id=>document.getElementById(id),fmt=n=>Math.round(n).toLocaleString('en-US');
