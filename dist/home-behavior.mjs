@@ -1,4 +1,4 @@
-export const ROSTER=['Zapup','Frostnip','Pyropup','Frugling','Blueflick','Sparkit','Punchimp'];
+export const ROSTER=['Zapup','Frostnip','Pyropup','Frugling','Blueflick','Sparkit'];
 export const ambientAction=random=>{const roll=random();return roll<.8?'Move':roll<.9?'Rest':'Eat'};
 export const appearance=(variants,random)=>random()<.01&&variants.color_1?'color_1':'default';
 export function createWorld(manifest,{random=Math.random,count=5}={}){
