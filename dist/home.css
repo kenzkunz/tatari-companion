@@ -19,3 +19,5 @@
 @media(max-width:900px){.support span{padding:14px 24px;margin-right:-24px}.support img{width:96px}}
 
 #field .tatari{pointer-events:none}#field .tatari>video,#field .tatari>img{display:block;width:100%;height:auto;object-fit:contain}#field .tatari>[hidden]{display:none}
+
+.home-motion-toggle{position:absolute;left:16px;bottom:16px;z-index:8;background:#282625;color:#fff;border:1px solid #fff7;border-radius:8px;padding:8px 12px;font:12px Poppins,sans-serif;min-height:36px;cursor:pointer}
