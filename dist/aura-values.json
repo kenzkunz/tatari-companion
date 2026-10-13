@@ -1,0 +1,37 @@
+{
+  "2": {
+    "name": "Aura: Water",
+    "base": 0.5,
+    "cap": 2.5,
+    "otherElementMultiplier": 0.5,
+    "kind": "heal"
+  },
+  "3": {
+    "name": "Aura: Fire",
+    "base": 2.5,
+    "cap": 12.5,
+    "otherElementMultiplier": 0.5,
+    "kind": "buff"
+  },
+  "4": {
+    "name": "Aura: Grass",
+    "base": 4.0,
+    "cap": 20.0,
+    "otherElementMultiplier": 0.5,
+    "kind": "buff"
+  },
+  "6": {
+    "name": "Aura: Rock",
+    "base": 3.5,
+    "cap": 17.5,
+    "otherElementMultiplier": 0.5,
+    "kind": "buff"
+  },
+  "5": {
+    "name": "Aura: Lightning",
+    "base": 4.0,
+    "cap": 20.0,
+    "otherElementMultiplier": 0.5,
+    "kind": "buff"
+  }
+}

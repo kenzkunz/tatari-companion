@@ -1,0 +1,2 @@
+export function costToLevel(level,costs){if(!Number.isInteger(level)||level<1||level>costs.length)throw Error('Invalid Horde level.');return costs.slice(0,level).reduce((sum,n)=>sum+n,0)}
+export function formationCost(cells,mode,costs){const total={p1:0,p2:0,total:0};for(const cell of cells){if(!cell)continue;const cost=costToLevel(cell.level,costs),key=mode==='duo'&&cell.player===2?'p2':'p1';total[key]+=cost;total.total+=cost}return total}

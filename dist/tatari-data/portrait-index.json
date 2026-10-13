@@ -1,0 +1,3337 @@
+{
+  "version": "0.49.1",
+  "images": [
+    {
+      "stableUnitId": 1,
+      "englishName": "HermitCrab",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__HermitCrab__unit-1__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 1,
+      "englishName": "HermitCrab",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__HermitCrab__unit-1__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 10,
+      "englishName": "ElectricEel",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__ElectricEel__unit-10__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 10,
+      "englishName": "ElectricEel",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__ElectricEel__unit-10__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 11,
+      "englishName": "CatIce",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__CatIce__unit-11__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 11,
+      "englishName": "CatIce",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__CatIce__unit-11__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 11,
+      "englishName": "CatIce",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__CatIce__unit-11__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 11,
+      "englishName": "CatIce",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__CatIce__unit-11__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 11,
+      "englishName": "CatIce",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__CatIce__unit-11__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 11,
+      "englishName": "CatIce",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__CatIce__unit-11__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 11,
+      "englishName": "CatIce",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__CatIce__unit-11__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 11,
+      "englishName": "CatIce",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__CatIce__unit-11__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 12,
+      "englishName": "Cerberus",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Cerberus__unit-12__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 12,
+      "englishName": "Cerberus",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Cerberus__unit-12__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 12,
+      "englishName": "Cerberus",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Cerberus__unit-12__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 12,
+      "englishName": "Cerberus",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Cerberus__unit-12__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 12,
+      "englishName": "Cerberus",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Cerberus__unit-12__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 12,
+      "englishName": "Cerberus",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Cerberus__unit-12__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 12,
+      "englishName": "Cerberus",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Cerberus__unit-12__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 12,
+      "englishName": "Cerberus",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Cerberus__unit-12__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 13,
+      "englishName": "Pitaya",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pitaya__unit-13__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 13,
+      "englishName": "Pitaya",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pitaya__unit-13__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 13,
+      "englishName": "Pitaya",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pitaya__unit-13__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 13,
+      "englishName": "Pitaya",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pitaya__unit-13__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 13,
+      "englishName": "Pitaya",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pitaya__unit-13__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 13,
+      "englishName": "Pitaya",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pitaya__unit-13__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 13,
+      "englishName": "Pitaya",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pitaya__unit-13__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 13,
+      "englishName": "Pitaya",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pitaya__unit-13__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 14,
+      "englishName": "Godzilla",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Godzilla__unit-14__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 14,
+      "englishName": "Godzilla",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Godzilla__unit-14__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 14,
+      "englishName": "Godzilla",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Godzilla__unit-14__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 14,
+      "englishName": "Godzilla",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Godzilla__unit-14__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 14,
+      "englishName": "Godzilla",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Godzilla__unit-14__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 14,
+      "englishName": "Godzilla",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Godzilla__unit-14__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 14,
+      "englishName": "Godzilla",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Godzilla__unit-14__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 14,
+      "englishName": "Godzilla",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Godzilla__unit-14__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 15,
+      "englishName": "Lion",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Lion__unit-15__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 15,
+      "englishName": "Lion",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Lion__unit-15__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 15,
+      "englishName": "Lion",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Lion__unit-15__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 15,
+      "englishName": "Lion",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Lion__unit-15__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 15,
+      "englishName": "Lion",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Lion__unit-15__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 15,
+      "englishName": "Lion",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Lion__unit-15__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 15,
+      "englishName": "Lion",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Lion__unit-15__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 15,
+      "englishName": "Lion",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Lion__unit-15__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 16,
+      "englishName": "Seal",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Seal__unit-16__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 16,
+      "englishName": "Seal",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Seal__unit-16__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 16,
+      "englishName": "Seal",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Seal__unit-16__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 16,
+      "englishName": "Seal",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Seal__unit-16__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 16,
+      "englishName": "Seal",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Seal__unit-16__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 16,
+      "englishName": "Seal",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Seal__unit-16__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 16,
+      "englishName": "Seal",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Seal__unit-16__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 16,
+      "englishName": "Seal",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Seal__unit-16__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 17,
+      "englishName": "Salamander",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Salamander__unit-17__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 17,
+      "englishName": "Salamander",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Salamander__unit-17__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 17,
+      "englishName": "Salamander",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Salamander__unit-17__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 17,
+      "englishName": "Salamander",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Salamander__unit-17__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 17,
+      "englishName": "Salamander",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Salamander__unit-17__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 17,
+      "englishName": "Salamander",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Salamander__unit-17__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 17,
+      "englishName": "Salamander",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Salamander__unit-17__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 17,
+      "englishName": "Salamander",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Salamander__unit-17__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 18,
+      "englishName": "Mantis",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Mantis__unit-18__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 18,
+      "englishName": "Mantis",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Mantis__unit-18__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 18,
+      "englishName": "Mantis",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Mantis__unit-18__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 18,
+      "englishName": "Mantis",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Mantis__unit-18__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 18,
+      "englishName": "Mantis",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Mantis__unit-18__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 18,
+      "englishName": "Mantis",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Mantis__unit-18__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 18,
+      "englishName": "Mantis",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Mantis__unit-18__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 18,
+      "englishName": "Mantis",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Mantis__unit-18__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 19,
+      "englishName": "Tortoise",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Tortoise__unit-19__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 19,
+      "englishName": "Tortoise",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Tortoise__unit-19__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 19,
+      "englishName": "Tortoise",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Tortoise__unit-19__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 19,
+      "englishName": "Tortoise",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Tortoise__unit-19__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 19,
+      "englishName": "Tortoise",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Tortoise__unit-19__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 19,
+      "englishName": "Tortoise",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Tortoise__unit-19__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 19,
+      "englishName": "Tortoise",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Tortoise__unit-19__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 19,
+      "englishName": "Tortoise",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Tortoise__unit-19__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 2,
+      "englishName": "Chipmunk",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Chipmunk__unit-2__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 2,
+      "englishName": "Chipmunk",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Chipmunk__unit-2__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 20,
+      "englishName": "Deer",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Deer__unit-20__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 20,
+      "englishName": "Deer",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Deer__unit-20__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 20,
+      "englishName": "Deer",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Deer__unit-20__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 20,
+      "englishName": "Deer",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Deer__unit-20__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 20,
+      "englishName": "Deer",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Deer__unit-20__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 20,
+      "englishName": "Deer",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Deer__unit-20__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 20,
+      "englishName": "Deer",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Deer__unit-20__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 20,
+      "englishName": "Deer",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Deer__unit-20__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 21,
+      "englishName": "Aplysia",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Aplysia__unit-21__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 21,
+      "englishName": "Aplysia",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Aplysia__unit-21__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 21,
+      "englishName": "Aplysia",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Aplysia__unit-21__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 21,
+      "englishName": "Aplysia",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Aplysia__unit-21__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 21,
+      "englishName": "Aplysia",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Aplysia__unit-21__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 21,
+      "englishName": "Aplysia",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Aplysia__unit-21__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 21,
+      "englishName": "Aplysia",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Aplysia__unit-21__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 21,
+      "englishName": "Aplysia",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Aplysia__unit-21__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 22,
+      "englishName": "Fox",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fox__unit-22__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 22,
+      "englishName": "Fox",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fox__unit-22__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 22,
+      "englishName": "Fox",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fox__unit-22__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 22,
+      "englishName": "Fox",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fox__unit-22__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 22,
+      "englishName": "Fox",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fox__unit-22__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 22,
+      "englishName": "Fox",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fox__unit-22__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 22,
+      "englishName": "Fox",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fox__unit-22__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 22,
+      "englishName": "Fox",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fox__unit-22__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 23,
+      "englishName": "Dichotomus",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Dichotomus__unit-23__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 23,
+      "englishName": "Dichotomus",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Dichotomus__unit-23__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 23,
+      "englishName": "Dichotomus",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Dichotomus__unit-23__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 23,
+      "englishName": "Dichotomus",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Dichotomus__unit-23__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 23,
+      "englishName": "Dichotomus",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Dichotomus__unit-23__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 23,
+      "englishName": "Dichotomus",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Dichotomus__unit-23__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 23,
+      "englishName": "Dichotomus",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Dichotomus__unit-23__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 23,
+      "englishName": "Dichotomus",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Dichotomus__unit-23__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 24,
+      "englishName": "Monkey",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Monkey__unit-24__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 24,
+      "englishName": "Monkey",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Monkey__unit-24__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 24,
+      "englishName": "Monkey",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Monkey__unit-24__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 24,
+      "englishName": "Monkey",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Monkey__unit-24__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 24,
+      "englishName": "Monkey",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Monkey__unit-24__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 24,
+      "englishName": "Monkey",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Monkey__unit-24__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 24,
+      "englishName": "Monkey",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Monkey__unit-24__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 24,
+      "englishName": "Monkey",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Monkey__unit-24__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 25,
+      "englishName": "Wolf",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Wolf__unit-25__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 25,
+      "englishName": "Wolf",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Wolf__unit-25__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 25,
+      "englishName": "Wolf",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Wolf__unit-25__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 25,
+      "englishName": "Wolf",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Wolf__unit-25__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 25,
+      "englishName": "Wolf",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Wolf__unit-25__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 25,
+      "englishName": "Wolf",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Wolf__unit-25__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 25,
+      "englishName": "Wolf",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Wolf__unit-25__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 25,
+      "englishName": "Wolf",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Wolf__unit-25__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 26,
+      "englishName": "Penguin",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Penguin__unit-26__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 26,
+      "englishName": "Penguin",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Penguin__unit-26__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 26,
+      "englishName": "Penguin",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Penguin__unit-26__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 26,
+      "englishName": "Penguin",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Penguin__unit-26__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 26,
+      "englishName": "Penguin",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Penguin__unit-26__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 26,
+      "englishName": "Penguin",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Penguin__unit-26__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 26,
+      "englishName": "Penguin",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Penguin__unit-26__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 26,
+      "englishName": "Penguin",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Penguin__unit-26__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 27,
+      "englishName": "Butterflame",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Butterflame__unit-27__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 27,
+      "englishName": "Butterflame",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Butterflame__unit-27__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 27,
+      "englishName": "Butterflame",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Butterflame__unit-27__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 27,
+      "englishName": "Butterflame",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Butterflame__unit-27__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 27,
+      "englishName": "Butterflame",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Butterflame__unit-27__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 27,
+      "englishName": "Butterflame",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Butterflame__unit-27__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 27,
+      "englishName": "Butterflame",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Butterflame__unit-27__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 27,
+      "englishName": "Butterflame",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Butterflame__unit-27__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 28,
+      "englishName": "Panda",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Panda__unit-28__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 28,
+      "englishName": "Panda",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Panda__unit-28__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 28,
+      "englishName": "Panda",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Panda__unit-28__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 28,
+      "englishName": "Panda",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Panda__unit-28__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 28,
+      "englishName": "Panda",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Panda__unit-28__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 28,
+      "englishName": "Panda",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Panda__unit-28__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 28,
+      "englishName": "Panda",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Panda__unit-28__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 28,
+      "englishName": "Panda",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Panda__unit-28__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 29,
+      "englishName": "Diglett",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Diglett__unit-29__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 29,
+      "englishName": "Diglett",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Diglett__unit-29__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 29,
+      "englishName": "Diglett",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Diglett__unit-29__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 29,
+      "englishName": "Diglett",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Diglett__unit-29__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 29,
+      "englishName": "Diglett",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Diglett__unit-29__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 29,
+      "englishName": "Diglett",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Diglett__unit-29__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 29,
+      "englishName": "Diglett",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Diglett__unit-29__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 29,
+      "englishName": "Diglett",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Diglett__unit-29__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 3,
+      "englishName": "Bird",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Bird__unit-3__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 3,
+      "englishName": "Bird",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Bird__unit-3__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 30,
+      "englishName": "Unicorn",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Unicorn__unit-30__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 30,
+      "englishName": "Unicorn",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Unicorn__unit-30__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 30,
+      "englishName": "Unicorn",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Unicorn__unit-30__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 30,
+      "englishName": "Unicorn",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Unicorn__unit-30__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 30,
+      "englishName": "Unicorn",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Unicorn__unit-30__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 30,
+      "englishName": "Unicorn",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Unicorn__unit-30__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 30,
+      "englishName": "Unicorn",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Unicorn__unit-30__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 30,
+      "englishName": "Unicorn",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Unicorn__unit-30__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 31,
+      "englishName": "Fiddler",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fiddler__unit-31__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 31,
+      "englishName": "Fiddler",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fiddler__unit-31__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 31,
+      "englishName": "Fiddler",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fiddler__unit-31__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 31,
+      "englishName": "Fiddler",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fiddler__unit-31__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 31,
+      "englishName": "Fiddler",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fiddler__unit-31__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 31,
+      "englishName": "Fiddler",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fiddler__unit-31__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 31,
+      "englishName": "Fiddler",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fiddler__unit-31__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 31,
+      "englishName": "Fiddler",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fiddler__unit-31__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 32,
+      "englishName": "Lobster",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Lobster__unit-32__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 32,
+      "englishName": "Lobster",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Lobster__unit-32__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 32,
+      "englishName": "Lobster",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Lobster__unit-32__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 32,
+      "englishName": "Lobster",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Lobster__unit-32__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 32,
+      "englishName": "Lobster",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Lobster__unit-32__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 32,
+      "englishName": "Lobster",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Lobster__unit-32__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 32,
+      "englishName": "Lobster",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Lobster__unit-32__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 32,
+      "englishName": "Lobster",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Lobster__unit-32__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 33,
+      "englishName": "SunFlower",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__SunFlower__unit-33__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 33,
+      "englishName": "SunFlower",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__SunFlower__unit-33__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 33,
+      "englishName": "SunFlower",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__SunFlower__unit-33__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 33,
+      "englishName": "SunFlower",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__SunFlower__unit-33__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 33,
+      "englishName": "SunFlower",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__SunFlower__unit-33__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 33,
+      "englishName": "SunFlower",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__SunFlower__unit-33__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 33,
+      "englishName": "SunFlower",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__SunFlower__unit-33__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 33,
+      "englishName": "SunFlower",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__SunFlower__unit-33__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 34,
+      "englishName": "Kangaroo",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Kangaroo__unit-34__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 34,
+      "englishName": "Kangaroo",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Kangaroo__unit-34__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 34,
+      "englishName": "Kangaroo",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Kangaroo__unit-34__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 34,
+      "englishName": "Kangaroo",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Kangaroo__unit-34__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 34,
+      "englishName": "Kangaroo",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Kangaroo__unit-34__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 34,
+      "englishName": "Kangaroo",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Kangaroo__unit-34__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 34,
+      "englishName": "Kangaroo",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Kangaroo__unit-34__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 34,
+      "englishName": "Kangaroo",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Kangaroo__unit-34__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 35,
+      "englishName": "Toucan",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Toucan__unit-35__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 35,
+      "englishName": "Toucan",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Toucan__unit-35__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 35,
+      "englishName": "Toucan",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Toucan__unit-35__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 35,
+      "englishName": "Toucan",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Toucan__unit-35__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 35,
+      "englishName": "Toucan",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Toucan__unit-35__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 35,
+      "englishName": "Toucan",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Toucan__unit-35__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 35,
+      "englishName": "Toucan",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Toucan__unit-35__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 35,
+      "englishName": "Toucan",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Toucan__unit-35__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 36,
+      "englishName": "Chameleon",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Chameleon__unit-36__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 36,
+      "englishName": "Chameleon",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Chameleon__unit-36__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 36,
+      "englishName": "Chameleon",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Chameleon__unit-36__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 36,
+      "englishName": "Chameleon",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Chameleon__unit-36__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 36,
+      "englishName": "Chameleon",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Chameleon__unit-36__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 36,
+      "englishName": "Chameleon",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Chameleon__unit-36__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 36,
+      "englishName": "Chameleon",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Chameleon__unit-36__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 36,
+      "englishName": "Chameleon",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Chameleon__unit-36__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 37,
+      "englishName": "Pig",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pig__unit-37__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 37,
+      "englishName": "Pig",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pig__unit-37__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 37,
+      "englishName": "Pig",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pig__unit-37__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 37,
+      "englishName": "Pig",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pig__unit-37__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 37,
+      "englishName": "Pig",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pig__unit-37__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 37,
+      "englishName": "Pig",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pig__unit-37__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 37,
+      "englishName": "Pig",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pig__unit-37__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 37,
+      "englishName": "Pig",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pig__unit-37__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 38,
+      "englishName": "Spider",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Spider__unit-38__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 38,
+      "englishName": "Spider",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Spider__unit-38__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 38,
+      "englishName": "Spider",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Spider__unit-38__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 38,
+      "englishName": "Spider",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Spider__unit-38__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 38,
+      "englishName": "Spider",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Spider__unit-38__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 38,
+      "englishName": "Spider",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Spider__unit-38__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 38,
+      "englishName": "Spider",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Spider__unit-38__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 38,
+      "englishName": "Spider",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Spider__unit-38__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 39,
+      "englishName": "Snail",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Snail__unit-39__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 39,
+      "englishName": "Snail",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Snail__unit-39__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 39,
+      "englishName": "Snail",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Snail__unit-39__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 39,
+      "englishName": "Snail",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Snail__unit-39__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 39,
+      "englishName": "Snail",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Snail__unit-39__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 39,
+      "englishName": "Snail",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Snail__unit-39__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 39,
+      "englishName": "Snail",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Snail__unit-39__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 39,
+      "englishName": "Snail",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Snail__unit-39__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 4,
+      "englishName": "Hedgehog",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Hedgehog__unit-4__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 4,
+      "englishName": "Hedgehog",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Hedgehog__unit-4__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 40,
+      "englishName": "Rabbit",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Rabbit__unit-40__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 40,
+      "englishName": "Rabbit",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Rabbit__unit-40__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 40,
+      "englishName": "Rabbit",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Rabbit__unit-40__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 40,
+      "englishName": "Rabbit",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Rabbit__unit-40__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 40,
+      "englishName": "Rabbit",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Rabbit__unit-40__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 40,
+      "englishName": "Rabbit",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Rabbit__unit-40__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 40,
+      "englishName": "Rabbit",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Rabbit__unit-40__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 40,
+      "englishName": "Rabbit",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Rabbit__unit-40__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 41,
+      "englishName": "Jellyfish",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Jellyfish__unit-41__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 41,
+      "englishName": "Jellyfish",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Jellyfish__unit-41__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 41,
+      "englishName": "Jellyfish",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Jellyfish__unit-41__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 41,
+      "englishName": "Jellyfish",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Jellyfish__unit-41__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 41,
+      "englishName": "Jellyfish",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Jellyfish__unit-41__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 41,
+      "englishName": "Jellyfish",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Jellyfish__unit-41__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 41,
+      "englishName": "Jellyfish",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Jellyfish__unit-41__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 41,
+      "englishName": "Jellyfish",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Jellyfish__unit-41__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 42,
+      "englishName": "FireTiger",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__FireTiger__unit-42__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 42,
+      "englishName": "FireTiger",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__FireTiger__unit-42__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 42,
+      "englishName": "FireTiger",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__FireTiger__unit-42__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 42,
+      "englishName": "FireTiger",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__FireTiger__unit-42__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 42,
+      "englishName": "FireTiger",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__FireTiger__unit-42__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 42,
+      "englishName": "FireTiger",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__FireTiger__unit-42__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 42,
+      "englishName": "FireTiger",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__FireTiger__unit-42__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 42,
+      "englishName": "FireTiger",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__FireTiger__unit-42__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 43,
+      "englishName": "Cactus",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Cactus__unit-43__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 43,
+      "englishName": "Cactus",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Cactus__unit-43__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 43,
+      "englishName": "Cactus",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Cactus__unit-43__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 43,
+      "englishName": "Cactus",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Cactus__unit-43__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 43,
+      "englishName": "Cactus",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Cactus__unit-43__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 43,
+      "englishName": "Cactus",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Cactus__unit-43__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 43,
+      "englishName": "Cactus",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Cactus__unit-43__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 43,
+      "englishName": "Cactus",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Cactus__unit-43__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 44,
+      "englishName": "DungBeetle",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__DungBeetle__unit-44__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 44,
+      "englishName": "DungBeetle",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__DungBeetle__unit-44__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 44,
+      "englishName": "DungBeetle",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__DungBeetle__unit-44__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 44,
+      "englishName": "DungBeetle",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__DungBeetle__unit-44__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 44,
+      "englishName": "DungBeetle",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__DungBeetle__unit-44__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 44,
+      "englishName": "DungBeetle",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__DungBeetle__unit-44__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 44,
+      "englishName": "DungBeetle",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__DungBeetle__unit-44__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 44,
+      "englishName": "DungBeetle",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__DungBeetle__unit-44__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 45,
+      "englishName": "BigHornSheep",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__BigHornSheep__unit-45__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 45,
+      "englishName": "BigHornSheep",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__BigHornSheep__unit-45__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 45,
+      "englishName": "BigHornSheep",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__BigHornSheep__unit-45__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 45,
+      "englishName": "BigHornSheep",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__BigHornSheep__unit-45__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 45,
+      "englishName": "BigHornSheep",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__BigHornSheep__unit-45__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 45,
+      "englishName": "BigHornSheep",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__BigHornSheep__unit-45__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 45,
+      "englishName": "BigHornSheep",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__BigHornSheep__unit-45__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 45,
+      "englishName": "BigHornSheep",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__BigHornSheep__unit-45__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 46,
+      "englishName": "WaterFly",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__WaterFly__unit-46__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 46,
+      "englishName": "WaterFly",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__WaterFly__unit-46__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 46,
+      "englishName": "WaterFly",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__WaterFly__unit-46__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 46,
+      "englishName": "WaterFly",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__WaterFly__unit-46__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 46,
+      "englishName": "WaterFly",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__WaterFly__unit-46__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 46,
+      "englishName": "WaterFly",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__WaterFly__unit-46__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 46,
+      "englishName": "WaterFly",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__WaterFly__unit-46__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 46,
+      "englishName": "WaterFly",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__WaterFly__unit-46__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 47,
+      "englishName": "Skunk",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Skunk__unit-47__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 47,
+      "englishName": "Skunk",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Skunk__unit-47__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 47,
+      "englishName": "Skunk",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Skunk__unit-47__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 47,
+      "englishName": "Skunk",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Skunk__unit-47__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 47,
+      "englishName": "Skunk",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Skunk__unit-47__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 47,
+      "englishName": "Skunk",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Skunk__unit-47__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 47,
+      "englishName": "Skunk",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Skunk__unit-47__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 47,
+      "englishName": "Skunk",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Skunk__unit-47__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 48,
+      "englishName": "Mushroom",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Mushroom__unit-48__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 48,
+      "englishName": "Mushroom",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Mushroom__unit-48__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 48,
+      "englishName": "Mushroom",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Mushroom__unit-48__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 48,
+      "englishName": "Mushroom",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Mushroom__unit-48__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 48,
+      "englishName": "Mushroom",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Mushroom__unit-48__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 48,
+      "englishName": "Mushroom",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Mushroom__unit-48__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 48,
+      "englishName": "Mushroom",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Mushroom__unit-48__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 48,
+      "englishName": "Mushroom",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Mushroom__unit-48__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 49,
+      "englishName": "Fisnake",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fisnake__unit-49__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 49,
+      "englishName": "Fisnake",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fisnake__unit-49__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 49,
+      "englishName": "Fisnake",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fisnake__unit-49__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 49,
+      "englishName": "Fisnake",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fisnake__unit-49__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 49,
+      "englishName": "Fisnake",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fisnake__unit-49__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 49,
+      "englishName": "Fisnake",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fisnake__unit-49__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 49,
+      "englishName": "Fisnake",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Fisnake__unit-49__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 49,
+      "englishName": "Fisnake",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Fisnake__unit-49__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 5,
+      "englishName": "DogElectric",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__DogElectric__unit-5__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 5,
+      "englishName": "DogElectric",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__DogElectric__unit-5__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 50,
+      "englishName": "NekoE",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__NekoE__unit-50__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 50,
+      "englishName": "NekoE",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__NekoE__unit-50__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 50,
+      "englishName": "NekoE",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__NekoE__unit-50__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 50,
+      "englishName": "NekoE",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__NekoE__unit-50__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 50,
+      "englishName": "NekoE",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__NekoE__unit-50__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 50,
+      "englishName": "NekoE",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__NekoE__unit-50__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 50,
+      "englishName": "NekoE",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__NekoE__unit-50__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 50,
+      "englishName": "NekoE",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__NekoE__unit-50__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 51,
+      "englishName": "Octopus",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Octopus__unit-51__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 51,
+      "englishName": "Octopus",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Octopus__unit-51__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 51,
+      "englishName": "Octopus",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Octopus__unit-51__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 51,
+      "englishName": "Octopus",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Octopus__unit-51__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 51,
+      "englishName": "Octopus",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Octopus__unit-51__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 51,
+      "englishName": "Octopus",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Octopus__unit-51__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 51,
+      "englishName": "Octopus",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Octopus__unit-51__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 51,
+      "englishName": "Octopus",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Octopus__unit-51__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 52,
+      "englishName": "NekoF",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__NekoF__unit-52__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 52,
+      "englishName": "NekoF",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__NekoF__unit-52__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 52,
+      "englishName": "NekoF",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__NekoF__unit-52__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 52,
+      "englishName": "NekoF",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__NekoF__unit-52__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 52,
+      "englishName": "NekoF",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__NekoF__unit-52__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 52,
+      "englishName": "NekoF",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__NekoF__unit-52__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 52,
+      "englishName": "NekoF",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__NekoF__unit-52__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 52,
+      "englishName": "NekoF",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__NekoF__unit-52__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 53,
+      "englishName": "Alpaca",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Alpaca__unit-53__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 53,
+      "englishName": "Alpaca",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Alpaca__unit-53__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 53,
+      "englishName": "Alpaca",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Alpaca__unit-53__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 53,
+      "englishName": "Alpaca",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Alpaca__unit-53__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 53,
+      "englishName": "Alpaca",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Alpaca__unit-53__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 53,
+      "englishName": "Alpaca",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Alpaca__unit-53__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 53,
+      "englishName": "Alpaca",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Alpaca__unit-53__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 53,
+      "englishName": "Alpaca",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Alpaca__unit-53__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 54,
+      "englishName": "Pangolin",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pangolin__unit-54__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 54,
+      "englishName": "Pangolin",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pangolin__unit-54__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 54,
+      "englishName": "Pangolin",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pangolin__unit-54__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 54,
+      "englishName": "Pangolin",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pangolin__unit-54__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 54,
+      "englishName": "Pangolin",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pangolin__unit-54__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 54,
+      "englishName": "Pangolin",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pangolin__unit-54__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 54,
+      "englishName": "Pangolin",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Pangolin__unit-54__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 54,
+      "englishName": "Pangolin",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Pangolin__unit-54__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 55,
+      "englishName": "Bat",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Bat__unit-55__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 55,
+      "englishName": "Bat",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Bat__unit-55__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 55,
+      "englishName": "Bat",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Bat__unit-55__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 55,
+      "englishName": "Bat",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Bat__unit-55__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 55,
+      "englishName": "Bat",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Bat__unit-55__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 55,
+      "englishName": "Bat",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Bat__unit-55__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 55,
+      "englishName": "Bat",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Bat__unit-55__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 55,
+      "englishName": "Bat",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Bat__unit-55__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 56,
+      "englishName": "CthulhuFish",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__CthulhuFish__unit-56__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 56,
+      "englishName": "CthulhuFish",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__CthulhuFish__unit-56__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 56,
+      "englishName": "CthulhuFish",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__CthulhuFish__unit-56__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 56,
+      "englishName": "CthulhuFish",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__CthulhuFish__unit-56__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 56,
+      "englishName": "CthulhuFish",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__CthulhuFish__unit-56__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 56,
+      "englishName": "CthulhuFish",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__CthulhuFish__unit-56__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 56,
+      "englishName": "CthulhuFish",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__CthulhuFish__unit-56__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 56,
+      "englishName": "CthulhuFish",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__CthulhuFish__unit-56__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 57,
+      "englishName": "Blowfish",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Blowfish__unit-57__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 57,
+      "englishName": "Blowfish",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Blowfish__unit-57__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 57,
+      "englishName": "Blowfish",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Blowfish__unit-57__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 57,
+      "englishName": "Blowfish",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Blowfish__unit-57__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 57,
+      "englishName": "Blowfish",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Blowfish__unit-57__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 57,
+      "englishName": "Blowfish",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Blowfish__unit-57__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 57,
+      "englishName": "Blowfish",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Blowfish__unit-57__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 57,
+      "englishName": "Blowfish",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Blowfish__unit-57__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 58,
+      "englishName": "Owl",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Owl__unit-58__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 58,
+      "englishName": "Owl",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Owl__unit-58__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 58,
+      "englishName": "Owl",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Owl__unit-58__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 58,
+      "englishName": "Owl",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Owl__unit-58__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 58,
+      "englishName": "Owl",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Owl__unit-58__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 58,
+      "englishName": "Owl",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Owl__unit-58__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 58,
+      "englishName": "Owl",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Owl__unit-58__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 58,
+      "englishName": "Owl",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Owl__unit-58__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 59,
+      "englishName": "Hippo",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Hippo__unit-59__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 59,
+      "englishName": "Hippo",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Hippo__unit-59__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 59,
+      "englishName": "Hippo",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Hippo__unit-59__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 59,
+      "englishName": "Hippo",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Hippo__unit-59__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 59,
+      "englishName": "Hippo",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Hippo__unit-59__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 59,
+      "englishName": "Hippo",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Hippo__unit-59__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 59,
+      "englishName": "Hippo",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Hippo__unit-59__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 59,
+      "englishName": "Hippo",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Hippo__unit-59__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 6,
+      "englishName": "Capybara",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Capybara__unit-6__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 6,
+      "englishName": "Capybara",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Capybara__unit-6__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 60,
+      "englishName": "Firefly",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Firefly__unit-60__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 60,
+      "englishName": "Firefly",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Firefly__unit-60__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 60,
+      "englishName": "Firefly",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Firefly__unit-60__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 60,
+      "englishName": "Firefly",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Firefly__unit-60__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 60,
+      "englishName": "Firefly",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Firefly__unit-60__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 60,
+      "englishName": "Firefly",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Firefly__unit-60__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 60,
+      "englishName": "Firefly",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Firefly__unit-60__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 60,
+      "englishName": "Firefly",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Firefly__unit-60__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 61,
+      "englishName": "Polarbear",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Polarbear__unit-61__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 61,
+      "englishName": "Polarbear",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Polarbear__unit-61__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 61,
+      "englishName": "Polarbear",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Polarbear__unit-61__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 61,
+      "englishName": "Polarbear",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Polarbear__unit-61__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 61,
+      "englishName": "Polarbear",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Polarbear__unit-61__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 61,
+      "englishName": "Polarbear",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Polarbear__unit-61__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 61,
+      "englishName": "Polarbear",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Polarbear__unit-61__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 61,
+      "englishName": "Polarbear",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Polarbear__unit-61__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 62,
+      "englishName": "Toad",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Toad__unit-62__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 62,
+      "englishName": "Toad",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Toad__unit-62__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 62,
+      "englishName": "Toad",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Toad__unit-62__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 62,
+      "englishName": "Toad",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Toad__unit-62__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 62,
+      "englishName": "Toad",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Toad__unit-62__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 62,
+      "englishName": "Toad",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Toad__unit-62__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 62,
+      "englishName": "Toad",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Toad__unit-62__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 62,
+      "englishName": "Toad",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Toad__unit-62__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 63,
+      "englishName": "Flytrap",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Flytrap__unit-63__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 63,
+      "englishName": "Flytrap",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Flytrap__unit-63__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 63,
+      "englishName": "Flytrap",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Flytrap__unit-63__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 63,
+      "englishName": "Flytrap",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Flytrap__unit-63__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 63,
+      "englishName": "Flytrap",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Flytrap__unit-63__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 63,
+      "englishName": "Flytrap",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Flytrap__unit-63__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 63,
+      "englishName": "Flytrap",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Flytrap__unit-63__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 63,
+      "englishName": "Flytrap",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Flytrap__unit-63__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 64,
+      "englishName": "Raccoon",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Raccoon__unit-64__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 64,
+      "englishName": "Raccoon",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Raccoon__unit-64__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 64,
+      "englishName": "Raccoon",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Raccoon__unit-64__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 64,
+      "englishName": "Raccoon",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Raccoon__unit-64__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 64,
+      "englishName": "Raccoon",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Raccoon__unit-64__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 64,
+      "englishName": "Raccoon",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Raccoon__unit-64__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 64,
+      "englishName": "Raccoon",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Raccoon__unit-64__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 64,
+      "englishName": "Raccoon",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Raccoon__unit-64__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 65,
+      "englishName": "Caviinae",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Caviinae__unit-65__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 65,
+      "englishName": "Caviinae",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Caviinae__unit-65__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 65,
+      "englishName": "Caviinae",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Caviinae__unit-65__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 65,
+      "englishName": "Caviinae",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Caviinae__unit-65__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 65,
+      "englishName": "Caviinae",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Caviinae__unit-65__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 65,
+      "englishName": "Caviinae",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Caviinae__unit-65__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 65,
+      "englishName": "Caviinae",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Caviinae__unit-65__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 65,
+      "englishName": "Caviinae",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Caviinae__unit-65__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 66,
+      "englishName": "Dolphin",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Dolphin__unit-66__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 66,
+      "englishName": "Dolphin",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Dolphin__unit-66__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 66,
+      "englishName": "Dolphin",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Dolphin__unit-66__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 66,
+      "englishName": "Dolphin",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Dolphin__unit-66__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 66,
+      "englishName": "Dolphin",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Dolphin__unit-66__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 66,
+      "englishName": "Dolphin",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Dolphin__unit-66__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 66,
+      "englishName": "Dolphin",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Dolphin__unit-66__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 66,
+      "englishName": "Dolphin",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Dolphin__unit-66__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 69,
+      "englishName": "Opossum",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Opossum__unit-69__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 69,
+      "englishName": "Opossum",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Opossum__unit-69__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 69,
+      "englishName": "Opossum",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Opossum__unit-69__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 69,
+      "englishName": "Opossum",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Opossum__unit-69__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 69,
+      "englishName": "Opossum",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Opossum__unit-69__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 69,
+      "englishName": "Opossum",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Opossum__unit-69__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 69,
+      "englishName": "Opossum",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Opossum__unit-69__evolution-4__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 69,
+      "englishName": "Opossum",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Opossum__unit-69__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 7,
+      "englishName": "Sparrow",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Sparrow__unit-7__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 7,
+      "englishName": "Sparrow",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Sparrow__unit-7__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 8,
+      "englishName": "DuckPear",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__DuckPear__unit-8__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 8,
+      "englishName": "DuckPear",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__DuckPear__unit-8__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 9,
+      "englishName": "Boar",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Boar__unit-9__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 9,
+      "englishName": "Boar",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Boar__unit-9__evolution-2__appearance-default.webp"
+    }
+  ]
+}

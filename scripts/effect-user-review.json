@@ -1,0 +1,114 @@
+{
+  "Bind": {
+    "group": "debuff",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Danger": {
+    "group": "other",
+    "hiddenTag": true,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Foxflame": {
+    "group": "other",
+    "hiddenTag": true,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Frail": {
+    "group": "other",
+    "hiddenTag": true,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Ice Sculpture": {
+    "group": "other",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Invisibility": {
+    "group": "other",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Lackeys": {
+    "group": "other",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Octobuddy": {
+    "group": "other",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Paw Pals": {
+    "group": "other",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Play Dead": {
+    "group": "other",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Poison Zone": {
+    "group": "other",
+    "hiddenTag": false,
+    "reportedStackable": true,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Prepared": {
+    "group": "other",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Pull": {
+    "group": "other",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Sleep": {
+    "group": "debuff",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Stun": {
+    "group": "debuff",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  },
+  "Windows": {
+    "group": "other",
+    "hiddenTag": false,
+    "reportedStackable": false,
+    "evidence": "user-experience-provisional",
+    "verified": false
+  }
+}
