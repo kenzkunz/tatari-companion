@@ -104,3 +104,7 @@ $('effect-dialog').addEventListener('click',event=>{if(event.target===$('effect-
 document.querySelectorAll('[data-zobo-type]').forEach(b=>b.onclick=()=>{zoboType=b.dataset.zoboType;zoboCandidate=null;renderPicker();renderCandidate()});
 
 function withoutAura(text){return String(text).split(/(?<=[.!?])\s+/).filter(sentence=>! /\bAura\s*:/i.test(sentence)).join(' ').trim()}
+
+function closeDrafterDropdowns(target){for(const menu of document.querySelectorAll('.draft-more[open],.formation-advanced[open]'))if(!target||!menu.contains(target))menu.open=false;for(const field of document.querySelectorAll('.boss-picker'))if(!target||!field.contains(target)){const list=field.querySelector('.boss-options');if(list)list.hidden=true;field.querySelector('.boss-select')?.setAttribute('aria-expanded','false')}}
+document.addEventListener('click',event=>closeDrafterDropdowns(event.target));
+document.addEventListener('keydown',event=>{if(event.key==='Escape')closeDrafterDropdowns()});

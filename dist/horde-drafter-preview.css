@@ -176,3 +176,5 @@ dialog .share-preview{background:#ffecd0;border-color:#d6a260}
 @media(max-width:600px){.summary-panel #summaries{gap:12px}}
 
 #unit-effects{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+
+.navbar{line-height:normal}
