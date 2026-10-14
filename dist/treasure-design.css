@@ -14,3 +14,6 @@
 .stage-picker #stage-number{font-family:Critters,system-ui,sans-serif;font-size:16px;font-weight:normal}
 .hunt-layout .recommend strong{-webkit-text-stroke:4px #111;paint-order:stroke fill;text-shadow:1px 1px 0 #111,-1px 1px 0 #111,1px -1px 0 #111,-1px -1px 0 #111}
 @media(max-width:480px){.stage-picker #stage-number{font-family:Critters,system-ui,sans-serif;font-size:16px;font-weight:normal}.hunt-layout .recommend strong{-webkit-text-stroke:3px #111}}
+
+/* Clear and Undo use the standard Drafter button treatment. */
+.hunt-layout .hunt-actions button{display:inline-flex;justify-content:center;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border:1px solid #d6c6a3;border-radius:8px;background:#fffef1;color:#282625;font:600 13px/1.5 Poppins,sans-serif;text-decoration:none;box-shadow:none;text-transform:none;letter-spacing:normal;text-shadow:none;-webkit-text-stroke:0;transition:filter .15s,transform .15s}.hunt-layout .hunt-actions #clear{background:#ffcf40;border:1px solid #a27311;color:#342700}.hunt-layout .hunt-actions img{width:20px;height:20px;object-fit:contain}.hunt-layout .hunt-actions button:hover:enabled{filter:brightness(.96)}.hunt-layout .hunt-actions button:active:enabled{transform:translateY(1px)}
