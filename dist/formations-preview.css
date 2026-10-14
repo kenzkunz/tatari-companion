@@ -10,4 +10,6 @@
 
 .formation-entry{display:flex;flex-direction:column}.formation-entry>.row{margin-top:auto;padding-top:14px}
 
-.formation-library{max-width:1760px}.formation-list{grid-template-columns:repeat(5,minmax(0,1fr))}@media(max-width:1500px){.formation-list{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:1200px){.formation-list{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:900px){.formation-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:550px){.formation-list{grid-template-columns:minmax(0,1fr)}}
+/* Keep the general page width; fit compact cards within it. */
+.formation-list{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.formation-entry{padding:12px}.formation-entry h2{font-size:18px;line-height:1.15;margin:9px 0 4px;overflow-wrap:anywhere}.formation-entry .caption{font-size:10px;line-height:1.45;margin:0 0 5px;overflow-wrap:anywhere}.formation-card-note{font-size:10px;line-height:1.5;margin:5px 0 0}.formation-entry>.row{gap:6px;padding-top:10px}.formation-entry>.row .btn{font-size:11px;padding:7px 10px;min-height:34px}
+@media(max-width:1050px){.formation-list{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:850px){.formation-list{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:650px){.formation-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:450px){.formation-list{grid-template-columns:minmax(0,1fr)}}
