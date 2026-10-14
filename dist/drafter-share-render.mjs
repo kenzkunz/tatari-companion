@@ -1,3 +1,4 @@
+import {formationName} from './formation-name.mjs';
 import {boards,owner} from './drafter-model-v2.mjs';
 export async function drawFormation({canvas,draft,known,summaries,title,author,notes='',theme='light',everything}){
  await document.fonts.ready;
@@ -10,7 +11,7 @@ export async function drawFormation({canvas,draft,known,summaries,title,author,n
  const summaryY=y0+Math.max(boardHeight, everything?planHeight:0)+42;
  const effectsHeight=Math.max(0,...layouts.map(s=>48+s.groups.reduce((n,g)=>n+g.height+12,0)));
  const noteLines=notes?wrapLines(ctx,notes,width-80):[];canvas.width=width;canvas.height=(everything?summaryY+benchHeight+effectsHeight+64:y0+boardHeight+60)+(noteLines.length?34+noteLines.length*24:0);
- ctx.fillStyle=paper;ctx.fillRect(0,0,width,canvas.height);ctx.fillStyle=ink;ctx.font='bold 30px Poppins,sans-serif';ctx.fillText(short(title||draft.name||'Untitled formation',everything?60:36),40,52);ctx.font='16px Poppins,sans-serif';ctx.fillStyle=muted;ctx.fillText(draft.gameMode.toUpperCase()+' · '+(draft.mode==='duo'?'Duo':'Solo')+' · '+b.rows+'×'+b.cols+' · '+draft.cells.filter(Boolean).length+' Tatari',40,84);if(author)ctx.fillText('By '+short(author,60),40,110);
+ ctx.fillStyle=paper;ctx.fillRect(0,0,width,canvas.height);ctx.fillStyle=ink;ctx.font='bold 30px Poppins,sans-serif';ctx.fillText(short(title||draft.name||'Untitled formation',everything?60:36),40,52);ctx.font='16px Poppins,sans-serif';ctx.fillStyle=muted;ctx.fillText(formationName(draft),40,84);if(author)ctx.fillText('By '+short(author,60),40,110);
  const keys=[...new Set([...draft.cells.filter(Boolean).map(c=>c.key),...draft.steps.flatMap(s=>s.keys)])];
  const load=field=>Promise.all(keys.map(async key=>{const image=new Image();image.src=known.get(key)?.[field]||known.get(key)?.image;try{await image.decode();return[key,image]}catch{return[key,null]}}));
  const images=new Map(await load('image')),heads=new Map(await load('playerhead'));
