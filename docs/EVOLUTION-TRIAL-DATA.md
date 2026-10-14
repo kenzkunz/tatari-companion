@@ -1,0 +1,3 @@
+Evolution Trial uses dist/tatari-data/roster.json (v0.49.1). Star thresholds and quest IDs checked against recovered UnitEvolutionTrial.lua and Quest.lua in D:/COC-Dataminer/library/versions/0.49.1/config/reconstructed/Config. These are reconstructed tables from decoded Lua bytecode, not original source.
+
+Fishing/Zobo Shooter combined-counter requirements were previously flattened to QuestText. The condition Counter(54)+Counter(77)/100 >= target preserves both alternatives and mixed progress. Corrected 14 roster requirements on 14 October 2026. Quest IDs are retained for traceability. Other exported translations have not all been audited for alternative tasks.
