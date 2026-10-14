@@ -5,3 +5,9 @@
 
 @media(max-width:600px){.footer-copy h2{font-size:12px;line-height:1.4;margin-bottom:9px}.footer-copy p{font-size:10px;line-height:1.5;margin-bottom:10px}.footer-inner{padding:20px 16px;gap:10px}.footer-mark{width:24px;height:24px}}
 @media(min-width:601px){.footer-copy h2{font-size:13px;margin-bottom:12px}.footer-copy p{font-size:11px;line-height:1.5;margin-bottom:11px}}
+
+/* Keep short pages full-height while long pages grow with their content. */
+html:has(body > .site-footer){min-height:100%}
+body:has(> .site-footer){min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+body:has(> .site-footer)>:not(.site-footer){flex-shrink:0}
+body>.site-footer{flex-shrink:0;margin-top:auto;width:100%}
