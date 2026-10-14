@@ -12,7 +12,7 @@ export async function drawFormation({canvas,draft,known,summaries,title,author,n
  const planHeight=players.reduce((height,p)=>height+58+draft.steps.filter(s=>s.player===p).reduce((n,s)=>n+70+(s.note?28:0),0),50);
  const summaryY=y0+Math.max(boardHeight, everything?planHeight:0)+42;
  const effectsHeight=Math.max(0,...layouts.map(s=>48+s.groups.reduce((n,g)=>n+g.height+12,0)));
- const noteLines=notes?wrapLines(ctx,notes,width-80):[];canvas.width=width;canvas.height=(everything?summaryY+benchHeight+effectsHeight+64:y0+boardHeight+60)+(noteLines.length?34+noteLines.length*24:0);
+ canvas.width=width;canvas.height=(everything?summaryY+benchHeight+effectsHeight+64:y0+boardHeight+60);
  ctx.fillStyle=paper;ctx.fillRect(0,0,width,canvas.height);ctx.fillStyle=ink;ctx.font='bold 30px Poppins,sans-serif';ctx.fillText(short(title||draft.name||'Untitled formation',everything?60:36),40,52);ctx.font='16px Poppins,sans-serif';ctx.fillStyle=muted;ctx.fillText(formationName(draft),40,84);if(author)ctx.fillText('By '+short(author,60),40,110);
  if(draft.gameMode==='horde'&&draft.mode==='duo'){
  costConfig??=fetch('/drafter-energizer-costs.json').then(r=>{if(!r.ok)throw Error('Could not load Energizer costs.');return r.json()}).catch(e=>{costConfig=null;throw e});
@@ -29,7 +29,7 @@ export async function drawFormation({canvas,draft,known,summaries,title,author,n
  if(everything){let by=summaryY;ctx.font='bold 20px Poppins,sans-serif';ctx.fillStyle='#51483a';ctx.fillText('BENCH',40,by+20);by+=52;for(const bench of benches){tag(ctx,'P'+bench.player,40,by,playerColor(bench.player),'#282625',16);by+=38;bench.keys.forEach((key,i)=>{const x=40+(i%14)*76,y=by+Math.floor(i/14)*82;art(key,x,y,58,58,true);ctx.font='12px Poppins,sans-serif';ctx.fillStyle='#51483a';ctx.fillText(short(known.get(key)?.name||'',11),x,y+74)});by+=Math.max(1,Math.ceil(bench.keys.length/14))*82}
  for(const [index,summary] of layouts.entries()){const x=40+index*560;let y=summaryY+benchHeight;tag(ctx,'P'+summary.player,x,y,playerColor(summary.player),'#282625',16);y+=48;for(const group of summary.groups){ctx.font='bold 18px Poppins,sans-serif';ctx.fillStyle='#51483a';ctx.fillText(group.name.toUpperCase(),x,y+20);for(const item of group.items){const tx=x+item.x,ty=y+34+item.row*44;ctx.fillStyle=group.name==='Debuffs'?'#faeaea':group.name==='Heals'?'#eaf4eb':'#fff1b5';ctx.strokeStyle=group.name==='Debuffs'?'#cf6570':'#b59237';ctx.setLineDash(item.future?[5,3]:[]);ctx.beginPath();ctx.roundRect(tx,ty,item.width,34,6);ctx.fill();ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#282625';ctx.font='600 18px Poppins,sans-serif';ctx.fillText(item.label,tx+12,ty+24,item.width-24)}y+=group.height+12}}
  }
- if(noteLines.length){ctx.fillStyle=ink;ctx.font='16px Poppins,sans-serif';noteLines.forEach((line,i)=>ctx.fillText(line,40,canvas.height-60-(noteLines.length-1-i)*24))}ctx.fillStyle=muted;ctx.font='14px Poppins,sans-serif';ctx.fillText('Clash of Critters Companion App · Formation Planner',40,canvas.height-24);
+ ctx.fillStyle=muted;ctx.font='14px Poppins,sans-serif';ctx.fillText('Clash of Critters Companion App · Formation Planner',40,canvas.height-24);
 }
 function playerColor(p){return p===1?'#1ea5fe':'#f72a57'}
 function short(text,max){text=String(text);return text.length>max?text.slice(0,max-1)+'…':text}
