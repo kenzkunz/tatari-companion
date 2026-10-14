@@ -8,3 +8,5 @@ body.resource-page .resource-layout{display:grid;grid-template-columns:390px min
 .resource-page .resource-layout .input-card input#amount{height:22px;min-height:22px;padding:9px;box-sizing:content-box;width:calc(100% - 20px)}
 
 .resource-layout .calculator-panel{min-height:0}.pinball-accounting-note{font:11px/1.6 Poppins,system-ui,sans-serif;color:#776b55;margin:16px 0 0}@media(max-width:420px){.resource-page .resource-layout #rewards .reward-row>strong{font-size:12px;gap:8px}.resource-page .resource-layout #rewards .reward-label{font-size:11px;max-width:52%}.resource-layout .reward-row>img{width:26px;height:26px;flex-basis:26px}}
+
+.resource-page .event-tray button{font:600 13px/1.5 Poppins,system-ui,sans-serif;text-transform:none;letter-spacing:normal}
