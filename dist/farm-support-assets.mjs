@@ -1,0 +1,1 @@
+export const supportHeads={"Frugling": "images/txui_playerhead_13_01_8100e620.webp", "Pandaroo": "images/txui_playerhead_28_01_2fffe6df.webp", "Zaplet": "images/txui_playerhead_55_01_ec18e207.webp", "Droppit": "images/txui_playerhead_21_01_390dfae7.webp", "Maskfry": "images/txui_playerhead_56_01_646e7e4d.webp", "Hootlet": "images/txui_playerhead_58_01_bf9453e6.webp"};
