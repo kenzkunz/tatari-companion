@@ -15,4 +15,4 @@
 #tile-dialog.site-modal .treasure-choice{background:#ffecd0;font:11px/1.3 Poppins,system-ui,sans-serif}
 #tile-dialog.site-modal .treasure-choice[aria-pressed=true]{background:#ffe0ab;border-color:#bc741c}
 #tile-dialog.site-modal #placement-note{font:12px/1.6 Poppins,system-ui,sans-serif;text-align:center}
-#tile-dialog.site-modal #mark-unknown{display:block;margin:18px auto 0;border:1px solid #bc741c;background:#ffad32;font:600 12px Poppins,system-ui,sans-serif;padding:8px 12px}
+#tile-dialog.site-modal #mark-unknown{display:block;box-sizing:border-box;margin:18px auto 0;min-height:44px;padding:10px 16px;border:1px solid #a27311;border-radius:8px;background:#ffcf40;color:#342700;font:600 13px/1.5 Poppins,system-ui,sans-serif;text-transform:none}#tile-dialog.site-modal #mark-unknown:hover{filter:brightness(.96)}
