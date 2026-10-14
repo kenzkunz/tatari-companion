@@ -1118,8 +1118,8 @@
   {
     "page": "events/sparkly-spa.html",
     "block": "text-29",
-    "label": "P · Duplicate appearances convert into one Glitter Fruit. Each supported Tatari has five Standard a",
-    "default": "Duplicate appearances convert into one Glitter Fruit. Each supported Tatari has five Standard and two Rare appearances. All configured Sparkle appearance ATK, HP and DEF bonus fields are zero; the spa’s temporary buffs are a separate benefit.",
+    "label": "P · Duplicate Sparkle appearances convert into Glitter Fruits. Check the reward amount shown on the result screen; duplicates are not confirmed to always give one fruit. Each supported Tatari has five Standard a",
+    "default": "Duplicate Sparkle appearances convert into Glitter Fruits. Check the reward amount shown on the result screen; duplicates are not confirmed to always give one fruit. Each supported Tatari has five Standard and two Rare appearances. All configured Sparkle appearance ATK, HP and DEF bonus fields are zero; the spa’s temporary buffs are a separate benefit.",
     "order": 36,
     "section": "sparkle",
     "sectionTitle": "Sparkle Tatari and daily progress"
