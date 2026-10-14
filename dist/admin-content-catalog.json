@@ -2100,7 +2100,7 @@
     "page": "events/sparkly-spa.html",
     "block": "list-3",
     "label": "Step · Select a T4 Tatari with permanent Glitter unlocked and a supported Sparkle appearance. Temporar",
-    "default": "Select a T4 Tatari with permanent Glitter unlocked and a supported Sparkle appearance. Temporary Glitter does not qualify.",
+    "default": "Select a T4 Tatari with permanent Glitter unlocked and a supported Sparkle appearance. Only Glitter obtained tatari eligible to get Sparkle skins",
     "order": 34,
     "section": "sparkle",
     "sectionTitle": "Sparkle Tatari and daily progress"
