@@ -1,3 +1,4 @@
+@import url('/page-layout.css');
 /* Shared public navbar, scoped so legacy tools keep their own content layout. */
 @font-face{font-family:Critters;src:url('/assets/game-font.ttf') format('truetype');font-display:swap}
 .navbar{position:relative;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:3vw;margin:16px;padding:10px 2vw;background:#282625;color:#fff;border:0;border-radius:24px;min-height:78px;height:auto;font-family:Critters,system-ui,sans-serif}

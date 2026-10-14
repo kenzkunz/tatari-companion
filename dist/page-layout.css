@@ -1,0 +1,7 @@
+/* General public content width. Keep independent tools and forms readable inside it. */
+:root{--public-content-width:1280px}
+body:has(>.navbar)>main{box-sizing:border-box;width:100%;max-width:var(--public-content-width);margin-left:auto;margin-right:auto}
+body:has(>.navbar)>main.account-layout>.account-panel,body:has(>.navbar)>main.account-layout>#signed-in,body:has(>.navbar)>main.account-layout>#signed-out{max-width:820px;margin-left:auto;margin-right:auto}
+body:has(>.navbar)>main.hunt-layout>:not(dialog){max-width:600px;margin-left:auto;margin-right:auto}
+body:has(>.navbar)>main.hunt-layout>.board-frame{max-width:460px}
+.event-tray,.preview-heading-bar,.footer-inner{box-sizing:border-box;max-width:var(--public-content-width);margin-left:auto;margin-right:auto}

@@ -58,3 +58,5 @@ The generator reads `components/public-navbar.html` and `components/public-foote
 ## Source of truth
 
 This document, the tokens and reusable components are the agreement for future generated information pages. Repository AGENTS.md instructs future Codex work to use this starting point. No personal skill or plugin installation is required.
+
+General public content uses the shared 1280px maximum in dist/page-layout.css, loaded through public-navbar.css. Keep responsive page gutters and narrower inner tools/forms; do not override the outer width per page. The admin workspace and modal sizes are independent.
