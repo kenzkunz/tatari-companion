@@ -199,3 +199,5 @@ dialog .share-preview{background:#ffecd0;border-color:#d6a260}
 #priority-player{padding:3px;gap:3px}#priority-player button{min-height:34px;padding:5px 10px;font-size:12px;line-height:20px}.priority-unit{box-sizing:border-box;width:44px;height:44px;min-height:44px;padding:5px;display:flex;align-items:center;justify-content:center}.priority-unit img{width:30px;height:30px;object-fit:contain}@media(max-width:700px){#priority-player button{min-height:40px}}
 
 .formation-actions .formation-advanced>summary::after{display:none}
+
+.share-close-icon{width:44px;height:44px;min-height:44px;padding:0;font-size:22px;flex:none}
