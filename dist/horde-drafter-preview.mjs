@@ -9,7 +9,7 @@ const auraValues=await (await fetch('/aura-values.json')).json();
 import {formationCost} from './drafter-energizer.mjs';
 const energizerConfig=await (await fetch('/drafter-energizer-costs.json')).json();
 import {saveAccountFormation,readFormation,accountUser} from './formation-api.mjs';
-import {installShare} from './drafter-share.mjs';
+import {installShare} from './drafter-share.mjs?v=20261015-1';
 import {effectSources,groupOf,effectName,effectInfo,effectAllowed} from './own-effects.mjs';
 import {owner,cleanDraft,canPlace,boards,cleanContext} from './drafter-model-v2.mjs';
 const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e},img=(path,alt='')=>{const e=el('img');e.src=path;e.alt=alt;e.draggable=false;return e};
