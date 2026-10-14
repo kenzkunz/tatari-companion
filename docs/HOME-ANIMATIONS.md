@@ -1,8 +1,0 @@
-# Homepage Tier 1 animations
-Six characters only: Zapup, Frostnip, Pyropup, Frugling, Blueflick and Sparkit. Source: 0.49.1 animation export. Only required Tier 1 actions and default/color_1 variants are shipped. Zapup has no color_1 export and falls back to default. Rare appearance roll is 1% per selected character. Desktop randomly uses 3-5 characters; mobile 1-2.
-
-Ambient decisions: 80% Move, 10% Rest (10 complete loops), 10% Eat (2 loops). WebM end events count action loops; mirrored direction is maintained during stationary actions. Encounters have a 10-second cooldown: first check Frugling Stab (20%) and Zapup/Sparkit HowlA+Shock (50%), otherwise 50% passing with one faster walker / 50% duel. Duels: both Attack twice; one Cheers twice and resumes; the other plays Death once, holds Disable 3 seconds, then resumes.
-
-Pyropup rolls Anger at 10% when entering the middle 20% of the walking area, with a 12-second special cooldown. Moving Zapup reacts with HowlB at 80%. Frugling rolls BurnJump at 10% when crossing Sparkit/Pyropup/Blueflick. Actions stay within the existing homepage character area; all media is decorative and does not intercept clicks. Animated WebP fallback is used on iOS or unsupported/erroring WebM playback. Hidden pages pause animation; animations always play while the page is visible, as explicitly requested.
-
-Size multipliers relative to the prior .85 body scale: Sparkit and Zapup 1.10; Frugling and Pyropup 1.25. Punchimp removed from selection; no playback toggle.

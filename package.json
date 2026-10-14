@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node scripts/check.mjs && node scripts/tatari-check.mjs && node scripts/stats-tool-check.mjs && node scripts/account-check.mjs && node scripts/album-check.mjs && node scripts/trading-check.mjs && node scripts/player-check.mjs && node engine-check.mjs && node treasure-solver-check.mjs && node scripts/admin-editor-check.mjs && node scripts/version-audit-check.mjs && node scripts/template-check.mjs && node scripts/public-chrome-check.mjs && node scripts/effect-catalog-check.mjs && node scripts/backend-support-check.mjs && node scripts/home-animation-check.mjs",
+    "test": "node scripts/check.mjs && node scripts/tatari-check.mjs && node scripts/stats-tool-check.mjs && node scripts/account-check.mjs && node scripts/album-check.mjs && node scripts/trading-check.mjs && node scripts/player-check.mjs && node engine-check.mjs && node treasure-solver-check.mjs && node scripts/admin-editor-check.mjs && node scripts/version-audit-check.mjs && node scripts/template-check.mjs && node scripts/public-chrome-check.mjs && node scripts/effect-catalog-check.mjs && node scripts/backend-support-check.mjs",
     "preview": "node scripts/preview.mjs",
     "chrome:sync": "node scripts/sync-public-chrome.mjs --apply"
   }

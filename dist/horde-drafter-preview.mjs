@@ -57,7 +57,7 @@ function formationFilename(value){const date=new Intl.DateTimeFormat('en-CA',{ye
 async function persistAccount(publish){save();if(!draft.name.trim()){status('Give your formation a name before saving or publishing.');$('draft-name').focus();return}if(publish&&!confirm('Publish this formation to the public formation list? Your private saved copy will remain in your account.'))return;const buttons=[$('account-save'),$('account-publish')];buttons.forEach(b=>b.disabled=true);try{const payload=cleanDraft(draft,known),result=await saveAccountFormation({id:recordId,revision:recordRevision,name:draft.name,payload,publish});recordId=result.id;recordRevision=result.revision;const url=new URL(location.href);url.searchParams.set('formation',recordId);url.searchParams.set('private','1');url.hash='';history.replaceState(null,'',url);status(publish?'Published to the formation list and saved in your account.':'Private changes saved. Any published snapshot is unchanged until you publish again.')}catch(error){status(error.message)}finally{buttons.forEach(b=>b.disabled=false)}}
 $('account-save').onclick=()=>persistAccount(false);$('account-publish').onclick=()=>persistAccount(true);
 
-const nav=document.getElementById("navigation"),menu=document.querySelector(".menu-toggle");menu.onclick=()=>{const open=nav.classList.toggle("open");menu.setAttribute("aria-expanded",String(open))};
+
 
 for(const id of ["export","import"]){document.getElementById(id).addEventListener("click",()=>document.querySelector(".draft-more").open=false)}
 
