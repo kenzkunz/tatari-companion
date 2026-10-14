@@ -1,0 +1,3573 @@
+{
+  "version": "0.49.1",
+  "families": 67,
+  "forms": 248,
+  "requirements": 342,
+  "alternativeRequirements": 67,
+  "missing": [
+    [
+      3301,
+      "icon",
+      "txui_trial_boss"
+    ],
+    [
+      31433,
+      "icon",
+      "txui_trial_monster"
+    ],
+    [
+      3413,
+      "icon",
+      "txui_trial_boss"
+    ],
+    [
+      3415,
+      "icon",
+      "txui_trial_monster"
+    ],
+    [
+      35213,
+      "icon",
+      "txui_trial_monster"
+    ],
+    [
+      3420,
+      "icon",
+      "txui_trial_boss"
+    ],
+    [
+      3421,
+      "icon",
+      "txui_trial_monster"
+    ],
+    [
+      35323,
+      "icon",
+      "txui_trial_monster"
+    ],
+    [
+      35353,
+      "icon",
+      "txui_trial_monster"
+    ],
+    [
+      3433,
+      "icon",
+      "txui_trial_monster"
+    ],
+    [
+      35433,
+      "icon",
+      "txui_trial_monster"
+    ],
+    [
+      5311,
+      "icon",
+      "txui_trial_monster"
+    ],
+    [
+      5511,
+      "icon",
+      "txui_trial_monster"
+    ],
+    [
+      35553,
+      "icon",
+      "txui_trial_monster"
+    ],
+    [
+      15561,
+      "icon",
+      "txui_trial_boss"
+    ]
+  ],
+  "rows": [
+    {
+      "unitId": 11,
+      "tier": 1,
+      "questId": 3401,
+      "condition": "ed.ConditionX.Counter(39)>=300",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 11,
+      "tier": 2,
+      "questId": 3211,
+      "condition": "ed.ConditionX.PetFeedLevel(11)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 11,
+      "tier": 2,
+      "questId": 3302,
+      "condition": "ed.ConditionX.FinishedStageTID()>=640",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 11,
+      "tier": 3,
+      "questId": 35111,
+      "condition": "ed.ConditionX.PetFeedLevelRank(11)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 11,
+      "tier": 3,
+      "questId": 35112,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(53)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_teamrun.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 11,
+      "tier": 3,
+      "questId": 35113,
+      "condition": "ed.ConditionX.PetTIDCountByElementStar(\\\"Water\\\",24,\\\"Blue\\\")>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 12,
+      "tier": 1,
+      "questId": 3402,
+      "condition": "ed.ConditionX.Counter(40)>=30 or ed.ConditionX.PetFeedLevelRank(12)>=16",
+      "icons": [
+        "/evolution-assets/food-cookie.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 12,
+      "tier": 2,
+      "questId": 3212,
+      "condition": "ed.ConditionX.PetFeedLevel(12)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 12,
+      "tier": 2,
+      "questId": 3304,
+      "condition": "ed.ConditionX.Counter(38)>=15000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 12,
+      "tier": 3,
+      "questId": 35121,
+      "condition": "ed.ConditionX.PetFeedLevelRank(12)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 12,
+      "tier": 3,
+      "questId": 35122,
+      "condition": "ed.ConditionX.Counter(70)>=20000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 12,
+      "tier": 3,
+      "questId": 35123,
+      "condition": "ed.ConditionX.Counter(62)>=15 or ed.ConditionX.PetFeedLevelRank(12)>=16",
+      "icons": [
+        "/evolution-assets/food-pizza.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 13,
+      "tier": 1,
+      "questId": 3403,
+      "condition": "ed.ConditionX.Counter(38)>=400",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 13,
+      "tier": 2,
+      "questId": 3213,
+      "condition": "ed.ConditionX.PetFeedLevel(13)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 13,
+      "tier": 2,
+      "questId": 3301,
+      "condition": "ed.ConditionX.Best(3)>=12",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 13,
+      "tier": 3,
+      "questId": 35131,
+      "condition": "ed.ConditionX.PetFeedLevelRank(13)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 13,
+      "tier": 3,
+      "questId": 35132,
+      "condition": "ed.ConditionX.Counter(38)>=45000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 13,
+      "tier": 3,
+      "questId": 35133,
+      "condition": "ed.ConditionX.Counter(63)>=30",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_gift.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 14,
+      "tier": 1,
+      "questId": 3404,
+      "condition": "ed.ConditionX.Counter(39)>=300",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 14,
+      "tier": 2,
+      "questId": 3214,
+      "condition": "ed.ConditionX.PetFeedLevel(14)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 14,
+      "tier": 2,
+      "questId": 3305,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 14,
+      "tier": 3,
+      "questId": 31431,
+      "condition": "ed.ConditionX.PetFeedLevelRank(14)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 14,
+      "tier": 3,
+      "questId": 31432,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 14,
+      "tier": 3,
+      "questId": 31433,
+      "condition": "ed.ConditionX.Counter(110)>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 15,
+      "tier": 1,
+      "questId": 3405,
+      "condition": "ed.ConditionX.Counter(95)>=20",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 15,
+      "tier": 2,
+      "questId": 3215,
+      "condition": "ed.ConditionX.PetFeedLevel(15)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 15,
+      "tier": 2,
+      "questId": 3306,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=70",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 15,
+      "tier": 3,
+      "questId": 35151,
+      "condition": "ed.ConditionX.PetFeedLevelRank(15)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 15,
+      "tier": 3,
+      "questId": 35152,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 15,
+      "tier": 3,
+      "questId": 35153,
+      "condition": "ed.ConditionX.PetTIDCountByElementStar(\\\"Electric\\\",24,\\\"Blue\\\")>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 16,
+      "tier": 1,
+      "questId": 3406,
+      "condition": "ed.ConditionX.Counter(38)>=2400",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 16,
+      "tier": 2,
+      "questId": 3216,
+      "condition": "ed.ConditionX.PetFeedLevel(16)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 16,
+      "tier": 2,
+      "questId": 3307,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(53)>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_teamrun.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 16,
+      "tier": 3,
+      "questId": 35161,
+      "condition": "ed.ConditionX.PetFeedLevelRank(16)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 16,
+      "tier": 3,
+      "questId": 35162,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 16,
+      "tier": 3,
+      "questId": 35163,
+      "condition": "ed.ConditionX.Counter(38)>=40000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 17,
+      "tier": 1,
+      "questId": 3407,
+      "condition": "ed.ConditionX.Counter(38)>=1000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 17,
+      "tier": 2,
+      "questId": 3217,
+      "condition": "ed.ConditionX.PetFeedLevel(17)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 17,
+      "tier": 2,
+      "questId": 3308,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(76)/2>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 17,
+      "tier": 3,
+      "questId": 35221,
+      "condition": "ed.ConditionX.PetFeedLevelRank(17)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 17,
+      "tier": 3,
+      "questId": 35222,
+      "condition": "ed.ConditionX.Counter(70)>=20000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 17,
+      "tier": 3,
+      "questId": 35223,
+      "condition": "ed.ConditionX.Counter(38)>=40000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 18,
+      "tier": 1,
+      "questId": 3408,
+      "condition": "ed.ConditionX.Counter(34)>=20",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 18,
+      "tier": 2,
+      "questId": 3218,
+      "condition": "ed.ConditionX.PetFeedLevel(18)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 18,
+      "tier": 2,
+      "questId": 3304,
+      "condition": "ed.ConditionX.Counter(38)>=15000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 18,
+      "tier": 3,
+      "questId": 35231,
+      "condition": "ed.ConditionX.PetFeedLevelRank(18)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 18,
+      "tier": 3,
+      "questId": 35232,
+      "condition": "ed.ConditionX.Counter(38)>=45000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 18,
+      "tier": 3,
+      "questId": 35233,
+      "condition": "ed.ConditionX.PetTIDCountByElementStar(\\\"Grass\\\",24,\\\"Blue\\\")>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 19,
+      "tier": 1,
+      "questId": 3409,
+      "condition": "ed.ConditionX.Counter(27)>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 19,
+      "tier": 2,
+      "questId": 3219,
+      "condition": "ed.ConditionX.PetFeedLevel(19)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 19,
+      "tier": 2,
+      "questId": 3305,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 19,
+      "tier": 3,
+      "questId": 35191,
+      "condition": "ed.ConditionX.PetFeedLevelRank(19)>=9",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 19,
+      "tier": 3,
+      "questId": 35192,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 19,
+      "tier": 3,
+      "questId": 35193,
+      "condition": "ed.ConditionX.BadgeCountByElement(\\\"Earth\\\")>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_dojo.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 20,
+      "tier": 1,
+      "questId": 3410,
+      "condition": "ed.ConditionX.Counter(39)>=300",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 20,
+      "tier": 2,
+      "questId": 3220,
+      "condition": "ed.ConditionX.PetFeedLevel(20)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 20,
+      "tier": 2,
+      "questId": 3306,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=70",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 20,
+      "tier": 3,
+      "questId": 35251,
+      "condition": "ed.ConditionX.PetFeedLevelRank(20)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 20,
+      "tier": 3,
+      "questId": 35252,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 20,
+      "tier": 3,
+      "questId": 35253,
+      "condition": "ed.ConditionX.Counter(71)>=15 or ed.ConditionX.PetFeedLevelRank(20)>=16",
+      "icons": [
+        "/evolution-assets/food-tempura.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 21,
+      "tier": 1,
+      "questId": 3411,
+      "condition": "ed.ConditionX.Counter(66)>=1",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 21,
+      "tier": 2,
+      "questId": 3221,
+      "condition": "ed.ConditionX.PetFeedLevel(21)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 21,
+      "tier": 2,
+      "questId": 3307,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(53)>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_teamrun.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 21,
+      "tier": 3,
+      "questId": 32131,
+      "condition": "ed.ConditionX.PetFeedLevelRank(21)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 21,
+      "tier": 3,
+      "questId": 32132,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 21,
+      "tier": 3,
+      "questId": 32133,
+      "condition": "ed.ConditionX.Counter(109)>=60",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_card.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 22,
+      "tier": 1,
+      "questId": 3412,
+      "condition": "ed.ConditionX.Counter(38)>=2400",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 22,
+      "tier": 2,
+      "questId": 3222,
+      "condition": "ed.ConditionX.PetFeedLevel(22)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 22,
+      "tier": 2,
+      "questId": 3308,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(76)/2>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 22,
+      "tier": 3,
+      "questId": 32231,
+      "condition": "ed.ConditionX.PetFeedLevelRank(22)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 22,
+      "tier": 3,
+      "questId": 32232,
+      "condition": "ed.ConditionX.Counter(70)>=20000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 22,
+      "tier": 3,
+      "questId": 32233,
+      "condition": "ed.ConditionX.PetTIDCountByElementStar(\\\"Fire\\\",24,\\\"Blue\\\")>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 23,
+      "tier": 1,
+      "questId": 3413,
+      "condition": "ed.ConditionX.Counter(96)>=10",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 23,
+      "tier": 2,
+      "questId": 3223,
+      "condition": "ed.ConditionX.PetFeedLevel(23)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 23,
+      "tier": 2,
+      "questId": 3304,
+      "condition": "ed.ConditionX.Counter(38)>=15000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 23,
+      "tier": 3,
+      "questId": 32331,
+      "condition": "ed.ConditionX.PetFeedLevelRank(23)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 23,
+      "tier": 3,
+      "questId": 32332,
+      "condition": "ed.ConditionX.Counter(38)>=45000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 23,
+      "tier": 3,
+      "questId": 32333,
+      "condition": "ed.ConditionX.Counter(74)>=15 or ed.ConditionX.PetFeedLevelRank(23)>=16",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 24,
+      "tier": 1,
+      "questId": 3414,
+      "condition": "ed.ConditionX.Counter(32)>=1",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 24,
+      "tier": 2,
+      "questId": 3224,
+      "condition": "ed.ConditionX.PetFeedLevel(24)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 24,
+      "tier": 2,
+      "questId": 3305,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 24,
+      "tier": 3,
+      "questId": 35241,
+      "condition": "ed.ConditionX.PetFeedLevelRank(24)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 24,
+      "tier": 3,
+      "questId": 35242,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 24,
+      "tier": 3,
+      "questId": 35243,
+      "condition": "ed.ConditionX.PetTIDCountByElementStar(\\\"Earth\\\",24,\\\"Blue\\\")>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 25,
+      "tier": 1,
+      "questId": 3415,
+      "condition": "ed.ConditionX.Counter(97)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 25,
+      "tier": 2,
+      "questId": 3225,
+      "condition": "ed.ConditionX.PetFeedLevel(25)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 25,
+      "tier": 2,
+      "questId": 3306,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=70",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 25,
+      "tier": 3,
+      "questId": 36251,
+      "condition": "ed.ConditionX.PetFeedLevelRank(25)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 25,
+      "tier": 3,
+      "questId": 36252,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 25,
+      "tier": 3,
+      "questId": 36253,
+      "condition": "ed.ConditionX.BadgeCountByElement(\\\"Electric\\\")>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_dojo.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 26,
+      "tier": 1,
+      "questId": 3416,
+      "condition": "ed.ConditionX.Counter(67)>=3 or ed.ConditionX.PetFeedLevelRank(26)>=16",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 26,
+      "tier": 2,
+      "questId": 3226,
+      "condition": "ed.ConditionX.PetFeedLevel(26)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 26,
+      "tier": 2,
+      "questId": 3307,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(53)>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_teamrun.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 26,
+      "tier": 3,
+      "questId": 35211,
+      "condition": "ed.ConditionX.PetFeedLevelRank(26)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 26,
+      "tier": 3,
+      "questId": 35212,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(53)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_teamrun.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 26,
+      "tier": 3,
+      "questId": 35213,
+      "condition": "ed.ConditionX.Counter(111)>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 27,
+      "tier": 1,
+      "questId": 3417,
+      "condition": "ed.ConditionX.Counter(98)>=10",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 27,
+      "tier": 2,
+      "questId": 3227,
+      "condition": "ed.ConditionX.PetFeedLevel(27)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 27,
+      "tier": 2,
+      "questId": 3308,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(76)/2>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 27,
+      "tier": 3,
+      "questId": 35271,
+      "condition": "ed.ConditionX.PetFeedLevelRank(27)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 27,
+      "tier": 3,
+      "questId": 35272,
+      "condition": "ed.ConditionX.Counter(70)>=20000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 27,
+      "tier": 3,
+      "questId": 35273,
+      "condition": "ed.ConditionX.PetTIDCountByElementStar(\\\"Fire\\\",24,\\\"Blue\\\")>=4",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 28,
+      "tier": 1,
+      "questId": 3418,
+      "condition": "ed.ConditionX.Counter(99)>=3 or ed.ConditionX.PetFeedLevelRank(28)>=16",
+      "icons": [
+        "/evolution-assets/food-salad.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 28,
+      "tier": 2,
+      "questId": 3228,
+      "condition": "ed.ConditionX.PetFeedLevel(28)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 28,
+      "tier": 2,
+      "questId": 3304,
+      "condition": "ed.ConditionX.Counter(38)>=15000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 28,
+      "tier": 3,
+      "questId": 35281,
+      "condition": "ed.ConditionX.PetFeedLevelRank(28)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 28,
+      "tier": 3,
+      "questId": 35282,
+      "condition": "ed.ConditionX.Counter(38)>=45000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 28,
+      "tier": 3,
+      "questId": 35283,
+      "condition": "ed.ConditionX.Counter(93)>=15 or ed.ConditionX.PetFeedLevelRank(28)>=16",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 29,
+      "tier": 1,
+      "questId": 3419,
+      "condition": "ed.ConditionX.Counter(35)>=1",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 29,
+      "tier": 2,
+      "questId": 3229,
+      "condition": "ed.ConditionX.PetFeedLevel(29)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 29,
+      "tier": 2,
+      "questId": 3305,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 29,
+      "tier": 3,
+      "questId": 35291,
+      "condition": "ed.ConditionX.PetFeedLevelRank(29)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 29,
+      "tier": 3,
+      "questId": 35292,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 29,
+      "tier": 3,
+      "questId": 35293,
+      "condition": "ed.ConditionX.Counter(63)>=50",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_gift.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 30,
+      "tier": 1,
+      "questId": 3420,
+      "condition": "ed.ConditionX.Counter(100)>=10",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 30,
+      "tier": 2,
+      "questId": 3230,
+      "condition": "ed.ConditionX.PetFeedLevel(30)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 30,
+      "tier": 2,
+      "questId": 3306,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=70",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 30,
+      "tier": 3,
+      "questId": 35301,
+      "condition": "ed.ConditionX.PetFeedLevelRank(30)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 30,
+      "tier": 3,
+      "questId": 35302,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 30,
+      "tier": 3,
+      "questId": 35303,
+      "condition": "ed.ConditionX.PetTIDCountByElementStar(\\\"Electric\\\",24,\\\"Blue\\\")>=4",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 31,
+      "tier": 1,
+      "questId": 3421,
+      "condition": "ed.ConditionX.Counter(106)>=1",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 31,
+      "tier": 2,
+      "questId": 3231,
+      "condition": "ed.ConditionX.PetFeedLevel(31)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 31,
+      "tier": 2,
+      "questId": 3307,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(53)>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_teamrun.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 31,
+      "tier": 3,
+      "questId": 35311,
+      "condition": "ed.ConditionX.PetFeedLevelRank(31)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 31,
+      "tier": 3,
+      "questId": 35312,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 31,
+      "tier": 3,
+      "questId": 35313,
+      "condition": "ed.ConditionX.Counter(63)>=50",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_gift.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 32,
+      "tier": 1,
+      "questId": 3422,
+      "condition": "ed.ConditionX.Counter(44)>=800",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 32,
+      "tier": 2,
+      "questId": 3232,
+      "condition": "ed.ConditionX.PetFeedLevel(32)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 32,
+      "tier": 2,
+      "questId": 3308,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(76)/2>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 32,
+      "tier": 3,
+      "questId": 35321,
+      "condition": "ed.ConditionX.PetFeedLevelRank(32)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 32,
+      "tier": 3,
+      "questId": 35322,
+      "condition": "ed.ConditionX.Counter(70)>=20000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 32,
+      "tier": 3,
+      "questId": 35323,
+      "condition": "ed.ConditionX.Counter(118)>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 33,
+      "tier": 1,
+      "questId": 3423,
+      "condition": "ed.ConditionX.Counter(101)>=800",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinballtree.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 33,
+      "tier": 2,
+      "questId": 3233,
+      "condition": "ed.ConditionX.PetFeedLevel(33)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 33,
+      "tier": 2,
+      "questId": 3304,
+      "condition": "ed.ConditionX.Counter(38)>=15000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 33,
+      "tier": 3,
+      "questId": 35331,
+      "condition": "ed.ConditionX.PetFeedLevelRank(33)>=9",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 33,
+      "tier": 3,
+      "questId": 35332,
+      "condition": "ed.ConditionX.Counter(38)>=45000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 33,
+      "tier": 3,
+      "questId": 35333,
+      "condition": "ed.ConditionX.Counter(102)>=20",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_build.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 34,
+      "tier": 1,
+      "questId": 3424,
+      "condition": "ed.ConditionX.Counter(94)>=30",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_gvg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 34,
+      "tier": 2,
+      "questId": 3234,
+      "condition": "ed.ConditionX.PetFeedLevel(34)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 34,
+      "tier": 2,
+      "questId": 3305,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 34,
+      "tier": 3,
+      "questId": 35341,
+      "condition": "ed.ConditionX.PetFeedLevelRank(34)>=9",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 34,
+      "tier": 3,
+      "questId": 35342,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 34,
+      "tier": 3,
+      "questId": 35343,
+      "condition": "ed.ConditionX.Counter(94)>=400",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_gvg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 35,
+      "tier": 1,
+      "questId": 3425,
+      "condition": "ed.ConditionX.Counter(41)>=10 or ed.ConditionX.PetFeedLevelRank(35)>=16",
+      "icons": [
+        "/evolution-assets/food-pudding.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 35,
+      "tier": 2,
+      "questId": 3235,
+      "condition": "ed.ConditionX.PetFeedLevel(35)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 35,
+      "tier": 2,
+      "questId": 3306,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=70",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 35,
+      "tier": 3,
+      "questId": 35351,
+      "condition": "ed.ConditionX.PetFeedLevelRank(35)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 35,
+      "tier": 3,
+      "questId": 35352,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 35,
+      "tier": 3,
+      "questId": 35353,
+      "condition": "ed.ConditionX.Counter(123)>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 36,
+      "tier": 1,
+      "questId": 3426,
+      "condition": "ed.ConditionX.Counter(102)>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_build.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 36,
+      "tier": 2,
+      "questId": 3236,
+      "condition": "ed.ConditionX.PetFeedLevel(36)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 36,
+      "tier": 2,
+      "questId": 3307,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(53)>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_teamrun.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 36,
+      "tier": 3,
+      "questId": 35361,
+      "condition": "ed.ConditionX.PetFeedLevelRank(36)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 36,
+      "tier": 3,
+      "questId": 35362,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 36,
+      "tier": 3,
+      "questId": 35363,
+      "condition": "ed.ConditionX.Counter(63)>=50",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_gift.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 37,
+      "tier": 1,
+      "questId": 3427,
+      "condition": "ed.ConditionX.Counter(55)>=1 and ed.ConditionX.Counter(56)>=1 and ed.ConditionX.Counter(57)>=1",
+      "icons": [
+        "/evolution-assets/food-cookie.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 37,
+      "tier": 2,
+      "questId": 3237,
+      "condition": "ed.ConditionX.PetFeedLevel(37)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 37,
+      "tier": 2,
+      "questId": 3308,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(76)/2>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 37,
+      "tier": 3,
+      "questId": 35371,
+      "condition": "ed.ConditionX.PetFeedLevelRank(37)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 37,
+      "tier": 3,
+      "questId": 35372,
+      "condition": "ed.ConditionX.Counter(70)>=20000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 37,
+      "tier": 3,
+      "questId": 35373,
+      "condition": "ed.ConditionX.Counter(57)>=60 or ed.ConditionX.PetFeedLevelRank(37)>=16",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 38,
+      "tier": 1,
+      "questId": 3428,
+      "condition": "ed.ConditionX.Counter(101)>=800",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinballtree.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 38,
+      "tier": 2,
+      "questId": 3238,
+      "condition": "ed.ConditionX.PetFeedLevel(38)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 38,
+      "tier": 2,
+      "questId": 3304,
+      "condition": "ed.ConditionX.Counter(38)>=15000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 38,
+      "tier": 3,
+      "questId": 35381,
+      "condition": "ed.ConditionX.PetFeedLevelRank(38)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 38,
+      "tier": 3,
+      "questId": 35382,
+      "condition": "ed.ConditionX.Counter(38)>=45000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 38,
+      "tier": 3,
+      "questId": 35383,
+      "condition": "ed.ConditionX.PetTIDCountByElementStar(\\\"Grass\\\",24,\\\"Blue\\\")>=4",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 39,
+      "tier": 1,
+      "questId": 3429,
+      "condition": "ed.ConditionX.Counter(27)>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 39,
+      "tier": 2,
+      "questId": 3239,
+      "condition": "ed.ConditionX.PetFeedLevel(39)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 39,
+      "tier": 2,
+      "questId": 3305,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 39,
+      "tier": 3,
+      "questId": 35391,
+      "condition": "ed.ConditionX.PetFeedLevelRank(39)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 39,
+      "tier": 3,
+      "questId": 35392,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 39,
+      "tier": 3,
+      "questId": 35393,
+      "condition": "ed.ConditionX.Counter(63)>=50",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_gift.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 40,
+      "tier": 1,
+      "questId": 3430,
+      "condition": "ed.ConditionX.Counter(24)>=10",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 40,
+      "tier": 2,
+      "questId": 3240,
+      "condition": "ed.ConditionX.PetFeedLevel(40)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 40,
+      "tier": 2,
+      "questId": 3306,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=70",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 40,
+      "tier": 3,
+      "questId": 34031,
+      "condition": "ed.ConditionX.PetFeedLevelRank(40)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 40,
+      "tier": 3,
+      "questId": 34032,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 40,
+      "tier": 3,
+      "questId": 34033,
+      "condition": "ed.ConditionX.Counter(75)>=15 or ed.ConditionX.PetFeedLevelRank(40)>=16",
+      "icons": [
+        "/evolution-assets/food-tempura.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 41,
+      "tier": 1,
+      "questId": 3431,
+      "condition": "ed.ConditionX.Counter(102)>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_build.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 41,
+      "tier": 2,
+      "questId": 3241,
+      "condition": "ed.ConditionX.PetFeedLevel(41)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 41,
+      "tier": 2,
+      "questId": 3307,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(53)>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_teamrun.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 41,
+      "tier": 3,
+      "questId": 35411,
+      "condition": "ed.ConditionX.PetFeedLevelRank(41)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 41,
+      "tier": 3,
+      "questId": 35412,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 41,
+      "tier": 3,
+      "questId": 35413,
+      "condition": "ed.ConditionX.BadgeCountByElement(\\\"Water\\\")>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_dojo.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 42,
+      "tier": 1,
+      "questId": 3432,
+      "condition": "ed.ConditionX.Counter(60)>=20",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 42,
+      "tier": 2,
+      "questId": 3242,
+      "condition": "ed.ConditionX.PetFeedLevel(42)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 42,
+      "tier": 2,
+      "questId": 3308,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(76)/2>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 42,
+      "tier": 3,
+      "questId": 35421,
+      "condition": "ed.ConditionX.PetFeedLevelRank(42)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 42,
+      "tier": 3,
+      "questId": 35422,
+      "condition": "ed.ConditionX.Counter(70)>=20000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 42,
+      "tier": 3,
+      "questId": 35423,
+      "condition": "ed.ConditionX.Counter(117)>=20",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_gvg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 43,
+      "tier": 1,
+      "questId": 3433,
+      "condition": "ed.ConditionX.Counter(104)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 43,
+      "tier": 2,
+      "questId": 3243,
+      "condition": "ed.ConditionX.PetFeedLevel(43)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 43,
+      "tier": 2,
+      "questId": 3304,
+      "condition": "ed.ConditionX.Counter(38)>=15000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 43,
+      "tier": 3,
+      "questId": 35431,
+      "condition": "ed.ConditionX.PetFeedLevelRank(43)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 43,
+      "tier": 3,
+      "questId": 35432,
+      "condition": "ed.ConditionX.Counter(38)>=45000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 43,
+      "tier": 3,
+      "questId": 35433,
+      "condition": "ed.ConditionX.Counter(139)>=150",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 44,
+      "tier": 1,
+      "questId": 3434,
+      "condition": "ed.ConditionX.Counter(24)>=10",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 44,
+      "tier": 2,
+      "questId": 3244,
+      "condition": "ed.ConditionX.PetFeedLevel(44)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 44,
+      "tier": 2,
+      "questId": 3305,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 44,
+      "tier": 3,
+      "questId": 35441,
+      "condition": "ed.ConditionX.PetFeedLevelRank(44)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 44,
+      "tier": 3,
+      "questId": 35442,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 44,
+      "tier": 3,
+      "questId": 35443,
+      "condition": "ed.ConditionX.Counter(114)>=200",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_catch.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 45,
+      "tier": 1,
+      "questId": 3435,
+      "condition": "ed.ConditionX.Counter(59)>=3 or ed.ConditionX.PetFeedLevelRank(45)>=16",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 45,
+      "tier": 2,
+      "questId": 3245,
+      "condition": "ed.ConditionX.PetFeedLevel(45)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 45,
+      "tier": 2,
+      "questId": 3306,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=70",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 45,
+      "tier": 3,
+      "questId": 35451,
+      "condition": "ed.ConditionX.PetFeedLevelRank(45)>=8",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 45,
+      "tier": 3,
+      "questId": 35452,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 45,
+      "tier": 3,
+      "questId": 35453,
+      "condition": "ed.ConditionX.Counter(112)>=60 or ed.ConditionX.PetFeedLevelRank(45)>=16",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 46,
+      "tier": 1,
+      "questId": 3436,
+      "condition": "ed.ConditionX.Counter(68)>=10",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 46,
+      "tier": 2,
+      "questId": 3246,
+      "condition": "ed.ConditionX.PetFeedLevel(46)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 46,
+      "tier": 2,
+      "questId": 3307,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(53)>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_teamrun.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 46,
+      "tier": 3,
+      "questId": 35461,
+      "condition": "ed.ConditionX.PetFeedLevelRank(46)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 46,
+      "tier": 3,
+      "questId": 35462,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 46,
+      "tier": 3,
+      "questId": 35463,
+      "condition": "ed.ConditionX.BadgeCountByElement(\\\"Water\\\")>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_dojo.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 47,
+      "tier": 1,
+      "questId": 3437,
+      "condition": "ed.ConditionX.Counter(61)>=30 or ed.ConditionX.PetFeedLevelRank(47)>=16",
+      "icons": [
+        "/evolution-assets/food-cookie.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 47,
+      "tier": 2,
+      "questId": 3247,
+      "condition": "ed.ConditionX.PetFeedLevel(47)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 47,
+      "tier": 2,
+      "questId": 3308,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(76)/2>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 47,
+      "tier": 3,
+      "questId": 35471,
+      "condition": "ed.ConditionX.PetFeedLevelRank(47)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 47,
+      "tier": 3,
+      "questId": 35472,
+      "condition": "ed.ConditionX.Counter(70)>=20000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 47,
+      "tier": 3,
+      "questId": 35473,
+      "condition": "ed.ConditionX.BadgeCountByElement(\\\"Fire\\\")>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_dojo.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 48,
+      "tier": 1,
+      "questId": 3438,
+      "condition": "ed.ConditionX.Counter(33)>=2",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_daily.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 48,
+      "tier": 2,
+      "questId": 3248,
+      "condition": "ed.ConditionX.PetFeedLevel(48)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 48,
+      "tier": 2,
+      "questId": 3304,
+      "condition": "ed.ConditionX.Counter(38)>=15000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 48,
+      "tier": 3,
+      "questId": 35481,
+      "condition": "ed.ConditionX.PetFeedLevelRank(48)>=9",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 48,
+      "tier": 3,
+      "questId": 35482,
+      "condition": "ed.ConditionX.Counter(38)>=45000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 48,
+      "tier": 3,
+      "questId": 35483,
+      "condition": "ed.ConditionX.BadgeCountByElement(\\\"Grass\\\")>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_dojo.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 49,
+      "tier": 1,
+      "questId": 3439,
+      "condition": "ed.ConditionX.Counter(39)>=300",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 49,
+      "tier": 2,
+      "questId": 3249,
+      "condition": "ed.ConditionX.PetFeedLevel(49)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 49,
+      "tier": 2,
+      "questId": 3305,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 49,
+      "tier": 3,
+      "questId": 35491,
+      "condition": "ed.ConditionX.PetFeedLevelRank(49)>=9",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 49,
+      "tier": 3,
+      "questId": 35492,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 49,
+      "tier": 3,
+      "questId": 35493,
+      "condition": "ed.ConditionX.Counter(114)>=200",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_catch.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 50,
+      "tier": 1,
+      "questId": 3440,
+      "condition": "ed.ConditionX.Counter(38)>=2400",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 50,
+      "tier": 2,
+      "questId": 3250,
+      "condition": "ed.ConditionX.PetFeedLevel(50)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 50,
+      "tier": 2,
+      "questId": 3306,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=70",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 50,
+      "tier": 3,
+      "questId": 35501,
+      "condition": "ed.ConditionX.PetFeedLevelRank(50)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 50,
+      "tier": 3,
+      "questId": 35502,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 50,
+      "tier": 3,
+      "questId": 35503,
+      "condition": "ed.ConditionX.Counter(38)>=40000 or ed.ConditionX.PetEvoTID(52)>=4",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 51,
+      "tier": 1,
+      "questId": 5111,
+      "condition": "ed.ConditionX.Counter(103)>=40",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_catch.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 51,
+      "tier": 2,
+      "questId": 5121,
+      "condition": "ed.ConditionX.PetFeedLevel(51)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 51,
+      "tier": 2,
+      "questId": 5122,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 51,
+      "tier": 3,
+      "questId": 35511,
+      "condition": "ed.ConditionX.PetFeedLevelRank(51)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 51,
+      "tier": 3,
+      "questId": 35512,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 51,
+      "tier": 3,
+      "questId": 35513,
+      "condition": "ed.ConditionX.Counter(117)>=20",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_gvg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 52,
+      "tier": 1,
+      "questId": 5211,
+      "condition": "ed.ConditionX.Counter(72)>=10",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 52,
+      "tier": 2,
+      "questId": 5221,
+      "condition": "ed.ConditionX.PetFeedLevel(52)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 52,
+      "tier": 2,
+      "questId": 5222,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 52,
+      "tier": 3,
+      "questId": 35521,
+      "condition": "ed.ConditionX.PetFeedLevelRank(52)>=9",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 52,
+      "tier": 3,
+      "questId": 35522,
+      "condition": "ed.ConditionX.Counter(70)>=20000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 52,
+      "tier": 3,
+      "questId": 35523,
+      "condition": "ed.ConditionX.Counter(38)>=40000 or ed.ConditionX.PetEvoTID(50)>=4",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 53,
+      "tier": 1,
+      "questId": 5311,
+      "condition": "ed.ConditionX.Counter(105)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 53,
+      "tier": 2,
+      "questId": 5321,
+      "condition": "ed.ConditionX.PetFeedLevel(53)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 53,
+      "tier": 2,
+      "questId": 5322,
+      "condition": "ed.ConditionX.Counter(38)>=15000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 53,
+      "tier": 3,
+      "questId": 35531,
+      "condition": "ed.ConditionX.PetFeedLevelRank(53)>=9",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 53,
+      "tier": 3,
+      "questId": 35532,
+      "condition": "ed.ConditionX.Counter(38)>=45000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 53,
+      "tier": 3,
+      "questId": 35533,
+      "condition": "ed.ConditionX.Counter(109)>=60",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_card.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 54,
+      "tier": 1,
+      "questId": 5411,
+      "condition": "ed.ConditionX.Counter(73)>=3 or ed.ConditionX.PetFeedLevelRank(54)>=16",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 54,
+      "tier": 2,
+      "questId": 5421,
+      "condition": "ed.ConditionX.PetFeedLevel(54)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 54,
+      "tier": 2,
+      "questId": 5422,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=70",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 54,
+      "tier": 3,
+      "questId": 35541,
+      "condition": "ed.ConditionX.PetFeedLevelRank(54)>=9",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 54,
+      "tier": 3,
+      "questId": 35542,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 54,
+      "tier": 3,
+      "questId": 35543,
+      "condition": "ed.ConditionX.Counter(140)>=15 or ed.ConditionX.PetFeedLevelRank(54)>=16",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 55,
+      "tier": 1,
+      "questId": 5511,
+      "condition": "ed.ConditionX.Counter(107)>=1",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 55,
+      "tier": 2,
+      "questId": 5521,
+      "condition": "ed.ConditionX.PetFeedLevel(55)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 55,
+      "tier": 2,
+      "questId": 5522,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 55,
+      "tier": 3,
+      "questId": 35551,
+      "condition": "ed.ConditionX.PetFeedLevelRank(55)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 55,
+      "tier": 3,
+      "questId": 35552,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 55,
+      "tier": 3,
+      "questId": 35553,
+      "condition": "ed.ConditionX.Counter(119)>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 56,
+      "tier": 1,
+      "questId": 15561,
+      "condition": "ed.ConditionX.Counter(48)>=10",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 56,
+      "tier": 2,
+      "questId": 25561,
+      "condition": "ed.ConditionX.PetFeedLevel(56)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 56,
+      "tier": 2,
+      "questId": 25562,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 56,
+      "tier": 3,
+      "questId": 35561,
+      "condition": "ed.ConditionX.PetFeedLevelRank(56)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 56,
+      "tier": 3,
+      "questId": 35562,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 56,
+      "tier": 3,
+      "questId": 35563,
+      "condition": "ed.ConditionX.Counter(109)>=60",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_card.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 57,
+      "tier": 1,
+      "questId": 15571,
+      "condition": "ed.ConditionX.Counter(113)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_foodbox.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 57,
+      "tier": 2,
+      "questId": 25571,
+      "condition": "ed.ConditionX.PetFeedLevel(57)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 57,
+      "tier": 2,
+      "questId": 25572,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 57,
+      "tier": 3,
+      "questId": 35571,
+      "condition": "ed.ConditionX.PetFeedLevelRank(57)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 57,
+      "tier": 3,
+      "questId": 35572,
+      "condition": "ed.ConditionX.Counter(70)>=20000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 57,
+      "tier": 3,
+      "questId": 35573,
+      "condition": "ed.ConditionX.Counter(113)>=24",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_foodbox.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 58,
+      "tier": 1,
+      "questId": 15581,
+      "condition": "ed.ConditionX.Counter(33)>=2",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_daily.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 58,
+      "tier": 2,
+      "questId": 25581,
+      "condition": "ed.ConditionX.PetFeedLevel(58)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 58,
+      "tier": 2,
+      "questId": 25582,
+      "condition": "ed.ConditionX.Counter(38)>=15000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 58,
+      "tier": 3,
+      "questId": 35581,
+      "condition": "ed.ConditionX.PetFeedLevelRank(58)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 58,
+      "tier": 3,
+      "questId": 35582,
+      "condition": "ed.ConditionX.Counter(38)>=45000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 58,
+      "tier": 3,
+      "questId": 35583,
+      "condition": "ed.ConditionX.BadgeCount()>=25",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_dojo.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 59,
+      "tier": 1,
+      "questId": 15591,
+      "condition": "ed.ConditionX.Counter(108)>=10 or ed.ConditionX.PetFeedLevelRank(59)>=16",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 59,
+      "tier": 2,
+      "questId": 25591,
+      "condition": "ed.ConditionX.PetFeedLevel(59)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 59,
+      "tier": 2,
+      "questId": 25592,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 59,
+      "tier": 3,
+      "questId": 35591,
+      "condition": "ed.ConditionX.PetFeedLevelRank(59)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 59,
+      "tier": 3,
+      "questId": 35592,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 59,
+      "tier": 3,
+      "questId": 35593,
+      "condition": "ed.ConditionX.Counter(109)>=60",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_card.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 60,
+      "tier": 1,
+      "questId": 15601,
+      "condition": "ed.ConditionX.Counter(24)>=20",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 60,
+      "tier": 2,
+      "questId": 25601,
+      "condition": "ed.ConditionX.PetFeedLevel(60)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 60,
+      "tier": 2,
+      "questId": 25602,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 60,
+      "tier": 3,
+      "questId": 35601,
+      "condition": "ed.ConditionX.PetFeedLevelRank(60)>=9",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 60,
+      "tier": 3,
+      "questId": 35602,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 60,
+      "tier": 3,
+      "questId": 35603,
+      "condition": "ed.ConditionX.Counter(115)>=15",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_shiningfood.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 61,
+      "tier": 1,
+      "questId": 15611,
+      "condition": "ed.ConditionX.Counter(125)>=30 or ed.ConditionX.PetFeedLevelRank(61)>=16",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 61,
+      "tier": 2,
+      "questId": 25611,
+      "condition": "ed.ConditionX.PetFeedLevel(61)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 61,
+      "tier": 2,
+      "questId": 25612,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 61,
+      "tier": 3,
+      "questId": 35611,
+      "condition": "ed.ConditionX.PetFeedLevelRank(61)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 61,
+      "tier": 3,
+      "questId": 35612,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 61,
+      "tier": 3,
+      "questId": 35613,
+      "condition": "ed.ConditionX.Counter(124)>=15 or ed.ConditionX.PetFeedLevelRank(61)>=16",
+      "icons": [
+        "/evolution-assets/food-sushi.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 62,
+      "tier": 1,
+      "questId": 15621,
+      "condition": "ed.ConditionX.Counter(120)>=10 or ed.ConditionX.PetFeedLevelRank(62)>=16",
+      "icons": [
+        "/evolution-assets/food-soda.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 62,
+      "tier": 2,
+      "questId": 25621,
+      "condition": "ed.ConditionX.PetFeedLevel(62)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 62,
+      "tier": 2,
+      "questId": 25622,
+      "condition": "ed.ConditionX.Counter(29)>=5000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 62,
+      "tier": 3,
+      "questId": 35621,
+      "condition": "ed.ConditionX.PetFeedLevelRank(62)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 62,
+      "tier": 3,
+      "questId": 35622,
+      "condition": "ed.ConditionX.Counter(70)>=20000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_powerdrink.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 62,
+      "tier": 3,
+      "questId": 35623,
+      "condition": "ed.ConditionX.Counter(121)>=15 or ed.ConditionX.PetFeedLevelRank(62)>=16",
+      "icons": [
+        "/evolution-assets/food-pizza.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 63,
+      "tier": 1,
+      "questId": 15631,
+      "condition": "ed.ConditionX.Counter(102)>=10",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_build.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 63,
+      "tier": 2,
+      "questId": 25631,
+      "condition": "ed.ConditionX.PetFeedLevel(63)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 63,
+      "tier": 2,
+      "questId": 25632,
+      "condition": "ed.ConditionX.Counter(38)>=15000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 63,
+      "tier": 3,
+      "questId": 35631,
+      "condition": "ed.ConditionX.PetFeedLevelRank(63)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 63,
+      "tier": 3,
+      "questId": 35632,
+      "condition": "ed.ConditionX.Counter(38)>=45000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_pinball.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 63,
+      "tier": 3,
+      "questId": 35633,
+      "condition": "ed.ConditionX.Counter(122)>=120 or ed.ConditionX.PetFeedLevelRank(63)>=16",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 64,
+      "tier": 1,
+      "questId": 15641,
+      "condition": "ed.ConditionX.Counter(134)>=50",
+      "icons": [
+        "/evolution-assets/food-cookie.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 64,
+      "tier": 2,
+      "questId": 25641,
+      "condition": "ed.ConditionX.PetFeedLevel(64)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 64,
+      "tier": 2,
+      "questId": 25642,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=40",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 64,
+      "tier": 3,
+      "questId": 35641,
+      "condition": "ed.ConditionX.PetFeedLevelRank(64)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 64,
+      "tier": 3,
+      "questId": 35642,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 64,
+      "tier": 3,
+      "questId": 35643,
+      "condition": "ed.ConditionX.Counter(115)>=15",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_shiningfood.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 65,
+      "tier": 1,
+      "questId": 15651,
+      "condition": "ed.ConditionX.Counter(39)>=300",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_battle.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 65,
+      "tier": 2,
+      "questId": 25651,
+      "condition": "ed.ConditionX.PetFeedLevel(65)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 65,
+      "tier": 2,
+      "questId": 25652,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 65,
+      "tier": 3,
+      "questId": 35651,
+      "condition": "ed.ConditionX.PetFeedLevelRank(65)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 65,
+      "tier": 3,
+      "questId": 35652,
+      "condition": "ed.ConditionX.Counter(53)+ed.ConditionX.Counter(54)>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_teamrun.png",
+        "/evolution-assets/trial-txui_trial_fish.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 65,
+      "tier": 3,
+      "questId": 35653,
+      "condition": "ed.ConditionX.Counter(63)>=50",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_gift.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 66,
+      "tier": 1,
+      "questId": 15661,
+      "condition": "ed.ConditionX.Counter(102)>=5",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_build.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 66,
+      "tier": 2,
+      "questId": 25661,
+      "condition": "ed.ConditionX.PetFeedLevel(66)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 66,
+      "tier": 2,
+      "questId": 25662,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=2000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 66,
+      "tier": 3,
+      "questId": 35661,
+      "condition": "ed.ConditionX.PetFeedLevelRank(66)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 66,
+      "tier": 3,
+      "questId": 35662,
+      "condition": "ed.ConditionX.Counter(54)+ed.ConditionX.Counter(77)/100>=6000",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_fish.png",
+        "/evolution-assets/trial-txui_trial_trap.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 66,
+      "tier": 3,
+      "questId": 35663,
+      "condition": "ed.ConditionX.Counter(117)>=20",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_gvg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 69,
+      "tier": 1,
+      "questId": 15691,
+      "condition": "ed.ConditionX.Counter(138)>=1",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 69,
+      "tier": 2,
+      "questId": 25691,
+      "condition": "ed.ConditionX.PetFeedLevel(69)>=3",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 69,
+      "tier": 2,
+      "questId": 25692,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=70",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 69,
+      "tier": 3,
+      "questId": 35691,
+      "condition": "ed.ConditionX.PetFeedLevelRank(69)>=7",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_feed.png"
+      ],
+      "hasAlternative": false
+    },
+    {
+      "unitId": 69,
+      "tier": 3,
+      "questId": 35692,
+      "condition": "ed.ConditionX.Counter(43)+ed.ConditionX.Counter(76)/60>=120",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_treasure.png",
+        "/evolution-assets/trial-txui_trial_farm.png"
+      ],
+      "hasAlternative": true
+    },
+    {
+      "unitId": 69,
+      "tier": 3,
+      "questId": 35693,
+      "condition": "ed.ConditionX.Counter(138)>=15",
+      "icons": [
+        "/evolution-assets/trial-txui_trial_egg.png"
+      ],
+      "hasAlternative": false
+    }
+  ]
+}
