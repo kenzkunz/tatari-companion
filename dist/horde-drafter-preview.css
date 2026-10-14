@@ -185,3 +185,5 @@ dialog .share-preview{background:#ffecd0;border-color:#d6a260}
 .board .board-cell{min-width:0;min-height:0;aspect-ratio:1;box-sizing:border-box;position:relative}
 .board .board-cell>img{position:absolute;left:50%;top:50%;width:95%;height:95%;max-width:95%;max-height:95%;object-fit:contain;transform:translate(-50%,-50%)}
 .board .board-cell.boss-zobo>img{top:auto;bottom:0;width:200%;height:200%;max-width:none;max-height:none;transform:translateX(-50%)}
+
+.picker-tabs,#picker-player{padding:3px;gap:3px}.picker-tabs button,#picker-player button{min-height:34px;padding:5px 10px;font-size:12px;line-height:20px}.picker-tabs{margin-bottom:10px}#picker-player{margin-bottom:10px}@media(max-width:700px){.picker-tabs button,#picker-player button{min-height:40px}}
