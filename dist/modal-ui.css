@@ -27,3 +27,5 @@
 #tile-dialog.site-modal #treasures{justify-content:center}
 
 #tile-dialog.site-modal .treasure-choice,#tile-dialog.site-modal .treasure-choice span{-webkit-text-stroke:0;text-shadow:none;letter-spacing:normal}
+
+#tile-dialog.site-modal .treasure-choice{display:inline-flex;align-items:center;justify-content:flex-start;gap:8px;min-height:44px;width:100px;height:124px;padding:10px 16px;border:1px solid transparent;border-radius:8px;transition:filter .15s,transform .15s;text-decoration:none;font:600 13px/1.5 Poppins,sans-serif}#tile-dialog.site-modal .treasure-choice span{font:600 13px/1.5 Poppins,sans-serif;min-height:20px}#tile-dialog.site-modal .treasure-choice img{max-width:66px;max-height:72px}#tile-dialog.site-modal .treasure-choice:hover{filter:brightness(.96)}#tile-dialog.site-modal .treasure-choice:active{transform:translateY(1px)}
