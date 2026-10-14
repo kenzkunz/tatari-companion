@@ -1,8 +1,10 @@
+import {formationCost} from './drafter-energizer.mjs';
+let costConfig;
 import {formationName} from './formation-name.mjs';
 import {boards,owner} from './drafter-model-v2.mjs';
 export async function drawFormation({canvas,draft,known,summaries,title,author,notes='',theme='light',everything}){
  await document.fonts.ready;
- const b=boards[draft.gameMode],width=everything?1160:680,boardWidth=everything?520:600,cell=boardWidth/b.cols,boardHeight=cell*b.rows,x0=40,y0=132;
+ const b=boards[draft.gameMode],width=everything?1160:680,boardWidth=everything?520:600,cell=boardWidth/b.cols,boardHeight=cell*b.rows,x0=40,y0=draft.gameMode==='horde'&&draft.mode==='duo'?176:132;
  const dark=theme==='dark',paper=dark?'#2f3136':'#f2f3f4',ink=dark?'#f2f0e8':'#282625',muted=dark?'#b8bdc7':'#6c6353';const ctx=canvas.getContext('2d'),players=draft.mode==='duo'?[1,2]:[1],columnWidth=players.length===2?524:1080;
  const layouts=summaries.map(summary=>({...summary,groups:summary.groups.map(group=>{let x=0,row=0;const items=group.items.map(item=>{const active=new Set(item.providers.filter(p=>p.active).map(p=>p.key)).size;const future=item.providers.filter(p=>!p.active);const level=future.length?Math.min(...future.map(p=>p.level)):null;const label=item.name+(level?' · Lv '+level:'');ctx.font='600 18px Poppins,sans-serif';const width=Math.min(columnWidth,ctx.measureText(label).width+24);if(x&&x+width>columnWidth){x=0;row++}const result={label,width,x,row,future:active===0&&future.length>0};x+=width+10;return result});return {...group,items,height:42+(row+1)*44}})}));
  const benches=players.map(player=>({player,keys:[...new Set([...draft.cells.flatMap((c,i)=>c&&owner(i,draft.mode,c)===player?[c.key]:[]),...draft.steps.filter(s=>s.player===player).flatMap(s=>s.keys)])]}));
@@ -12,6 +14,12 @@ export async function drawFormation({canvas,draft,known,summaries,title,author,n
  const effectsHeight=Math.max(0,...layouts.map(s=>48+s.groups.reduce((n,g)=>n+g.height+12,0)));
  const noteLines=notes?wrapLines(ctx,notes,width-80):[];canvas.width=width;canvas.height=(everything?summaryY+benchHeight+effectsHeight+64:y0+boardHeight+60)+(noteLines.length?34+noteLines.length*24:0);
  ctx.fillStyle=paper;ctx.fillRect(0,0,width,canvas.height);ctx.fillStyle=ink;ctx.font='bold 30px Poppins,sans-serif';ctx.fillText(short(title||draft.name||'Untitled formation',everything?60:36),40,52);ctx.font='16px Poppins,sans-serif';ctx.fillStyle=muted;ctx.fillText(formationName(draft),40,84);if(author)ctx.fillText('By '+short(author,60),40,110);
+ if(draft.gameMode==='horde'&&draft.mode==='duo'){
+ costConfig??=fetch('/drafter-energizer-costs.json').then(r=>{if(!r.ok)throw Error('Could not load Energizer costs.');return r.json()}).catch(e=>{costConfig=null;throw e});
+ const costs=formationCost(draft.cells,draft.mode,(await costConfig).costs),icon=new Image();icon.src='/guide-assets/horde/energizer.png';await icon.decode();
+ const y=132,right=x0+boardWidth;tag(ctx,'P1',x0,y,playerColor(1),'#282625',16);ctx.drawImage(icon,x0+44,y,28,28);ctx.font='600 18px Poppins,sans-serif';ctx.fillStyle=ink;ctx.fillText(costs.p1.toLocaleString('en'),x0+80,y+21);
+ ctx.font='600 16px Poppins,sans-serif';const tagWidth=ctx.measureText('P2').width+16;tag(ctx,'P2',right-tagWidth,y,playerColor(2),'#282625',16);ctx.drawImage(icon,right-tagWidth-36,y,28,28);ctx.font='600 18px Poppins,sans-serif';ctx.fillStyle=ink;ctx.textAlign='right';ctx.fillText(costs.p2.toLocaleString('en'),right-tagWidth-44,y+21);ctx.textAlign='left';
+ }
  const keys=[...new Set([...draft.cells.filter(Boolean).map(c=>c.key),...draft.steps.flatMap(s=>s.keys)])];
  const load=field=>Promise.all(keys.map(async key=>{const image=new Image();image.src=known.get(key)?.[field]||known.get(key)?.image;try{await image.decode();return[key,image]}catch{return[key,null]}}));
  const images=new Map(await load('image')),heads=new Map(await load('playerhead'));
