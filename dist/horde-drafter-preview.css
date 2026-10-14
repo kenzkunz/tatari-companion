@@ -187,3 +187,5 @@ dialog .share-preview{background:#ffecd0;border-color:#d6a260}
 .board .board-cell.boss-zobo>img{top:auto;bottom:0;width:200%;height:200%;max-width:none;max-height:none;transform:translateX(-50%)}
 
 .picker-tabs,#picker-player{padding:3px;gap:3px}.picker-tabs button,#picker-player button{min-height:34px;padding:5px 10px;font-size:12px;line-height:20px}.picker-tabs{margin-bottom:10px}#picker-player{margin-bottom:10px}@media(max-width:700px){.picker-tabs button,#picker-player button{min-height:40px}}
+
+.enemy-field{position:relative}.collapse-full-field{position:absolute;top:-12px;right:8px;z-index:3;width:28px;height:24px;min-height:24px;padding:0;display:grid;place-items:center;border:1px solid #607528;border-radius:6px;background:#fff6df;color:#425419;font:18px/1 sans-serif;cursor:pointer}.collapse-full-field:hover{background:#ffdf71}.collapse-full-field:focus-visible{outline:2px solid #ffad32;outline-offset:2px}
