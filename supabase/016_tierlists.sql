@@ -19,7 +19,7 @@ begin
  if coalesce(p->>'gameMode','') not in ('Horde','Arena','Boss','Custom') or coalesce(p->>'tier','')!~'^[1-4]$' then raise exception 'Invalid tierlist mode';end if;
  if jsonb_typeof(p->'title') is distinct from 'string' or char_length(p->>'title') not between 1 and 80 or char_length(coalesce(p->>'notes',''))>500 then raise exception 'Invalid tierlist text';end if;
  if jsonb_typeof(p->'rows') is distinct from 'array' then raise exception 'Invalid tierlist rows';end if;
- if jsonb_array_length(p->'rows')<>5 then raise exception 'Tierlist requires five rows';end if;
+ if jsonb_array_length(p->'rows') not between 1 and 20 then raise exception 'Tierlist requires 1–20 rows';end if;
  for r in select value from jsonb_array_elements(p->'rows') loop
   if jsonb_typeof(r) is distinct from 'object' or jsonb_typeof(r->'label') is distinct from 'string' or char_length(r->>'label') not between 1 and 16 or coalesce(r->>'color','')!~'^#[0-9a-fA-F]{6}$' or jsonb_typeof(r->'units') is distinct from 'array' then raise exception 'Invalid ranking row';end if;
   if jsonb_array_length(r->'units')>67 then raise exception 'Too many Tatari';end if;
