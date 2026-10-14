@@ -195,3 +195,5 @@ dialog .share-preview{background:#ffecd0;border-color:#d6a260}
 .formation-notes-panel{margin:18px 0}.formation-notes-panel h2{margin:0 0 12px}.formation-notes-panel textarea{box-sizing:border-box;width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);font:13px/1.6 Poppins,sans-serif;resize:vertical}.formation-notes-panel .visually-hidden{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%)}
 
 .formation-actions .formation-advanced>summary{border:2px solid #282625;border-radius:11px;background:#fffef1}.formation-actions .formation-advanced>summary img{display:block;width:25px;height:25px;object-fit:contain}
+
+#priority-player{padding:3px;gap:3px}#priority-player button{min-height:34px;padding:5px 10px;font-size:12px;line-height:20px}.priority-unit{box-sizing:border-box;width:44px;height:44px;min-height:44px;padding:5px;display:flex;align-items:center;justify-content:center}.priority-unit img{width:30px;height:30px;object-fit:contain}@media(max-width:700px){#priority-player button{min-height:40px}}
