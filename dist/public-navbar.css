@@ -8,3 +8,15 @@
 .legacy-tools .site-footer{display:block;padding:0;height:auto}.legacy-tools>.navbar{flex-wrap:nowrap}.legacy-tools .app>aside{top:0}.legacy-tools .app nav[aria-label=Tools] a{font-family:'DM Sans',sans-serif}.legacy-tools .skip{position:absolute;top:-100px;left:20px;z-index:50;background:#282625;padding:12px;color:#fff}.legacy-tools .skip:focus{top:10px}
 @media(max-width:1100px){.navbar{gap:16px}.navbar .brand,.navbar .brand img{width:100px;flex-basis:100px}.navbar nav{gap:12px}.navbar nav>a,.navbar summary{font-size:16px}.navbar summary{gap:5px}}
 @media(max-width:900px){.navbar{margin:12px;padding:10px 16px;border-radius:18px;min-height:66px;gap:12px}.navbar .brand,.navbar .brand img{width:100px;flex-basis:100px}.navbar .menu-toggle{display:flex;align-items:center;min-height:44px;font-size:20px}.navbar nav{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;padding:16px;background:#282625;border-radius:18px;max-height:calc(100svh - 110px);overflow:auto}.navbar nav.open{display:flex;flex-direction:column;align-items:stretch;gap:4px}.navbar nav>a,.navbar summary{font-size:20px;padding:8px 12px}.navbar details .dropdown{position:static;min-width:0;max-width:none;box-shadow:none;padding:0 12px 10px;background:#36332f;margin:4px 0 8px}.navbar .languages summary::after{content:'Language';display:block;font-size:16px}}
+
+/* Canonical compact chrome: sizing is independent of each page's body styles. */
+.navbar.navbar{box-sizing:border-box;line-height:normal;margin:12px;min-height:62px;padding:8px 2vw;border-radius:19px;gap:20px}
+.navbar.navbar *{box-sizing:border-box}
+.navbar.navbar .brand{flex:0 0 104px;width:104px}
+.navbar.navbar .brand img{width:104px;max-height:46px}
+.navbar.navbar #navigation{justify-content:center;gap:clamp(12px,2vw,38px)}
+.navbar.navbar #navigation>a,.navbar.navbar #navigation>details>summary{font-size:clamp(14px,1.1vw,20px);line-height:normal}
+.navbar.navbar .account-nav{font-family:Critters,system-ui,sans-serif;font-size:clamp(16px,1.5vw,22.4px);line-height:normal;padding:5px;min-height:0}
+.navbar.navbar .languages img{width:27px;height:27px}
+@media(min-width:901px) and (max-width:1100px){.navbar.navbar{gap:14px}.navbar.navbar .brand{flex-basis:84px;width:84px}.navbar.navbar .brand img{width:84px}.navbar.navbar #navigation{gap:10px}}
+@media(max-width:900px){.navbar.navbar{min-height:66px;padding:10px 16px;border-radius:18px;gap:8px}.navbar.navbar .brand{flex-basis:100px;width:100px;margin-right:auto}.navbar.navbar .brand img{width:100px}.navbar.navbar #navigation{align-items:stretch;gap:4px}.navbar.navbar #navigation>a,.navbar.navbar #navigation>details>summary{font-size:20px}.navbar.navbar .menu-toggle{font-size:18px;line-height:normal}}
