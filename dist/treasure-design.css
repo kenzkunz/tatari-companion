@@ -17,3 +17,6 @@
 
 /* Clear and Undo use the standard Drafter button treatment. */
 .hunt-layout .hunt-actions button{display:inline-flex;justify-content:center;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border:1px solid #d6c6a3;border-radius:8px;background:#fffef1;color:#282625;font:600 13px/1.5 Poppins,sans-serif;text-decoration:none;box-shadow:none;text-transform:none;letter-spacing:normal;text-shadow:none;-webkit-text-stroke:0;transition:filter .15s,transform .15s}.hunt-layout .hunt-actions #clear{background:#ffcf40;border:1px solid #a27311;color:#342700}.hunt-layout .hunt-actions img{width:20px;height:20px;object-fit:contain}.hunt-layout .hunt-actions button:hover:enabled{filter:brightness(.96)}.hunt-layout .hunt-actions button:active:enabled{transform:translateY(1px)}
+
+/* Updated tile artwork and pickaxe recommendation marker. */
+.hunt-board .tile::before{width:100%;height:100%}.hunt-layout .recommend{inset:4% 0;gap:0}.hunt-layout .recommend strong{position:relative;z-index:1;font-size:clamp(10px,2vw,16px);line-height:1.1}.hunt-layout .recommend img{width:46%;height:48%;object-fit:contain}.hunt-board .tile.empty::before{display:none}
