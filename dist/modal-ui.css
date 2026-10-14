@@ -1,0 +1,18 @@
+/* Shared orange modal shell; feature content stays in each page stylesheet. */
+.site-modal{box-sizing:border-box;width:min(520px,calc(100vw - 28px));max-height:90svh;padding:0;border:1px solid #d6a260;border-radius:14px;background:#fff4df;color:#282625;overflow:auto;font-family:Poppins,system-ui,sans-serif;text-align:left}
+.site-modal::backdrop{background:#0006}
+.site-modal>.modal-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;background:#ffe1b1;border-bottom:1px solid #d6a260}
+.site-modal>.modal-head h2,.site-modal>.modal-head h3{margin:0;font:24px/1.25 Critters,system-ui,sans-serif}
+.site-modal .modal-close{display:grid;place-items:center;flex:none;width:44px;height:44px;min-height:44px;padding:0;border:1px solid #d6a260;border-radius:8px;background:#fff4df;color:#282625;cursor:pointer}
+.site-modal .modal-close img{width:22px;height:22px;object-fit:contain}
+.site-modal>.modal-body{padding:20px;background:#fff4df}
+.site-modal .modal-close:focus-visible{outline:3px solid #ffad32;outline-offset:2px}
+#tile-dialog.site-modal{width:min(520px,calc(100vw - 28px));padding:0;border:1px solid #d6a260;border-radius:14px;color:#282625;font-family:Poppins,system-ui,sans-serif;text-align:left}
+#tile-dialog.site-modal #tile-title{margin:0;font:24px/1.25 Critters,system-ui,sans-serif}
+#tile-dialog.site-modal #close-dialog{position:static;width:44px;height:44px;min-height:44px;padding:0;border:1px solid #d6a260;border-radius:8px;background:#fff4df}
+#tile-dialog.site-modal #close-dialog img{width:22px;height:22px}
+#tile-dialog.site-modal .treasure-options{justify-content:center;flex-wrap:wrap}
+#tile-dialog.site-modal .treasure-choice{background:#ffecd0;font:11px/1.3 Poppins,system-ui,sans-serif}
+#tile-dialog.site-modal .treasure-choice[aria-pressed=true]{background:#ffe0ab;border-color:#bc741c}
+#tile-dialog.site-modal #placement-note{font:12px/1.6 Poppins,system-ui,sans-serif;text-align:center}
+#tile-dialog.site-modal #mark-unknown{display:block;margin:18px auto 0;border:1px solid #bc741c;background:#ffad32;font:600 12px Poppins,system-ui,sans-serif;padding:8px 12px}
