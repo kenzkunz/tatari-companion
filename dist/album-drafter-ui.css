@@ -9,3 +9,5 @@
 @media(max-width:600px){.album-layout .album-topbar,.album-layout .album-set-strip-wrap,.album-layout .album-tradebar,.album-layout .album-artwork-panel{padding:12px}.album-set-navigation{gap:8px}.album-set-navigation span{font-size:10px}.album-layout .album-tradebar button{font-size:11px;padding:8px 10px}}
 
 .album-layout .album-summary{box-sizing:border-box;background:#fffef1;border:1px solid #d8c49b;border-radius:14px;box-shadow:0 4px 0 #00000008;padding:18px}.album-layout #album-view-toggle{border:1px solid #d8c49b;border-radius:8px;box-shadow:none;background:#fff6df}.album-layout .album-summary strong{font-family:Poppins,system-ui,sans-serif}
+
+.album-layout .album-artwork-panel{background:transparent;border:0;box-shadow:none;padding:0;margin-top:18px}.album-layout .album-set-navigation{position:static;display:flex;background:transparent;border:0;border-radius:0;box-shadow:none;width:auto;max-height:none;padding:0;flex:none;margin:24px 0 0;justify-content:center;align-items:center;gap:16px}.album-set-navigation button{flex:none}
