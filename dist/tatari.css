@@ -59,3 +59,6 @@
 /* Trial requirements share the skill-detail box treatment. */
 .evolution-trial-list .trial-step-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:10px;border-bottom:0;padding-bottom:6px}.evolution-trial-list .trial-target-name{margin:0;min-width:0}.evolution-trial-list .trial-stars{align-self:center;justify-self:end}.evolution-trial-list .trial-required-stars{width:64px;max-width:64px;height:24px;object-fit:contain;object-position:right center}
 .evolution-trial-list .trial-requirement-rows{gap:6px;margin-top:8px}.evolution-trial-list .trial-requirement-row{border:0;border-radius:8px;background:#fff6df;padding:10px;gap:8px;align-items:center}.evolution-trial-list .trial-requirement-icons{flex-basis:30px}.evolution-trial-list .trial-requirement-icon{width:26px;height:26px}.evolution-trial-list .trial-next-evolution .trial-requirement-row{background:#fff8df}
+
+/* White trial cards; identify the next evolution with an orange border. */
+.evolution-trial-list .evolution-trial-step,.evolution-trial-list .evolution-trial-step.trial-next-evolution{background:#fff;border:3px solid transparent;box-shadow:0 4px 0 #00000008}.evolution-trial-list .evolution-trial-step.trial-next-evolution{border-color:#ffad32}
