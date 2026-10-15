@@ -1,5 +1,5 @@
 import {createAlbumPage} from './album-page-view.mjs?v=owner1';
-import {playerLink} from './player-model.mjs';
+import {playerShareLink as playerLink} from './player-model.mjs?v=share-preview1';
 import {supabase,currentUser} from './auth-client.mjs';
 import {albumShareText} from './album-model.mjs?v=share5';
 const $=id=>document.getElementById(id),root=new URL('./album-data/',import.meta.url);
