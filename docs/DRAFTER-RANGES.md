@@ -9,3 +9,5 @@ Stage, Boss and Horde use normal component geometry. Badge Dojo uses the Arena p
 The pale column-four line came from legacy `.board-cell.p2-cell:nth-child(6n+4)` divider rules. Both were removed. Keyboard focus remains visible as an inset white dashed outline, avoiding clipped yellow focus edges.
 
 Validation: source-derived geometry fixtures, all-form board-bound clipping, unsupported-mode behavior, immutability, and off-board target exclusion; full site test/build. Chromium browser checks exercised settings, full field, candidate/field hover, mouse movement, real CDP touch movement, unit editing, chip isolation, mobile layout and disabled overlays. The P2 column-four computed border now matches the other edges. Physical mobile Safari has not been tested.
+
+Skill range is currently hidden and forcibly disabled, including previously saved preferences. Its dataset and geometry code are retained for later per-Tatari review. Attack range remains available for verification.

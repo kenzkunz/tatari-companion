@@ -17,6 +17,8 @@ const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const e=document.cre
 let rangeData=null,rangeSubject=null,rangeDragging=false;
 const rangeOptions={attack:false,skill:false};
 try{Object.assign(rangeOptions,JSON.parse(localStorage.getItem('milkroad-range-options')||'{}'))}catch{}
+// Skill preview is suspended while attack tiles are reviewed; ignore any saved skill preference.
+rangeOptions.skill=false;
 const rangeReady=fetch('/drafter-ranges.json').then(r=>{if(!r.ok)throw Error('Range data unavailable');return r.json()}).then(data=>{rangeData=data;paintRanges()}).catch(()=>{});
 const labels={2:'Water',3:'Fire',4:'Grass',5:'Lightning',6:'Rock'};let recordId=null,recordRevision=null;let entries=[],known=new Map(),candidate=null,pickPlayer=1,player=1,selectedPriority=new Set(),editing=null;let draft={schema:1,ownershipVersion:2,gameMode:'horde',context:{},name:'',mode:'duo',cells:Array(36).fill(null),steps:[]};
 function status(text){$('status').textContent=text}
@@ -124,15 +126,15 @@ function clearRanges(){rangeSubject=null;document.querySelectorAll('.range-attac
 function previewRanges(index,unit){clearRanges();if(!unit||zoboCandidate||document.querySelector('.chip-hover-target'))return;rangeSubject={index,...unit};paintRanges()}
 function paintRanges(){
  const help=$('range-help');if(!help)return;
- const enabled=rangeOptions.attack||rangeOptions.skill,profile=rangeProfile(draft.gameMode);
+ const enabled=rangeOptions.attack,profile=rangeProfile(draft.gameMode);
  help.hidden=!enabled;
- help.textContent=!profile?'Range previews are not available for this mode yet.':!rangeData?'Range data unavailable. Placement still works.':'Attack: blue · Skill: orange. Possible coverage; targeted skills and Dojo include possible target positions/facings. Custom skill changes are not simulated.';
+ help.textContent=!profile?'Range previews are not available for this mode yet.':!rangeData?'Range data unavailable. Placement still works.':'Attack range: blue. Configured preview under review; custom range changes are not simulated.';
  if(!enabled||!profile||!rangeData||!rangeSubject)return;
  const size=boards[draft.gameMode],enemyRows=$('enemy-field').hidden?0:size.rows;
  const tiles=rangeTiles(rangeData,{...rangeSubject,mode:draft.gameMode,...size,enemyRows});
- const mark=(selector,offset)=>document.querySelectorAll(selector).forEach(tile=>{const i=Number(tile.dataset.cell??tile.dataset.enemyCell)+offset;tile.classList.toggle('range-attack',rangeOptions.attack&&tiles.attack.has(i));tile.classList.toggle('range-skill',rangeOptions.skill&&tiles.skill.has(i))});
+ const mark=(selector,offset)=>document.querySelectorAll(selector).forEach(tile=>{const i=Number(tile.dataset.cell??tile.dataset.enemyCell)+offset;tile.classList.toggle('range-attack',rangeOptions.attack&&tiles.attack.has(i));tile.classList.remove('range-skill')});
  mark('#board .board-cell',enemyRows*size.cols);if(enemyRows)mark('#enemy-field .enemy-cell',0);
 }
-for(const [id,key] of [['attack-range','attack'],['skill-range','skill']]){const checkbox=$(id);checkbox.checked=!!rangeOptions[key];checkbox.onchange=()=>{rangeOptions[key]=checkbox.checked;try{localStorage.setItem('milkroad-range-options',JSON.stringify(rangeOptions))}catch{}const subject=rangeSubject;clearRanges();rangeSubject=subject;paintRanges()}}
+for(const [id,key] of [['attack-range','attack'],['skill-range','skill']]){const checkbox=$(id);checkbox.checked=!!rangeOptions[key];checkbox.onchange=()=>{rangeOptions[key]=key==='attack'&&checkbox.checked;try{localStorage.setItem('milkroad-range-options',JSON.stringify(rangeOptions))}catch{}const subject=rangeSubject;clearRanges();rangeSubject=subject;paintRanges()}}
 $('board').addEventListener('pointerleave',()=>{if(!rangeDragging)clearRanges()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){rangeDragging=false;clearRanges()}});
