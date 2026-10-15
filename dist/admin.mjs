@@ -1,3 +1,4 @@
+import {installUIDListing} from './admin-uid-listing.mjs';
 import './admin-version-audit.mjs';
 import {installVisualEditor} from './admin-editor.mjs';
 import {installMedia} from './admin-media.mjs';
@@ -6,6 +7,7 @@ import {supabase,currentUser,login} from './auth-client.mjs';
 import {validateText} from './admin-model.mjs';
 const $=id=>document.getElementById(id),el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 let state={blocks:[],requests:[],listings:[],audit:[]},active=null,busy=false;
+const uidListings=installUIDListing({supabase,status});
 const visual=installVisualEditor($('content-text'));
 const media=installMedia({getActive:()=>active,getPage:()=>$('page-select').value,run,status});
 const root=new URL('.',import.meta.url);
@@ -26,11 +28,10 @@ function choosePage(){
 }
 function lists(){
  const filter=$('queue-filter').value;const rows=state.requests.filter(r=>filter==='all'||r.status===filter);$('queue-list').replaceChildren(...rows.map(r=>{const card=el('article');card.className='admin-queue-row';const heading=el('strong',r.game_uid+' · '+r.bonus+'%');const text=el('p','Crop '+r.crop_id+' · '+r.status+' · '+new Date(r.created_at).toLocaleString());const note=el('p',r.note||'No submitter note');card.append(heading,text,note);if(r.status==='pending'){const label=el('label','Review note'),input=el('textarea');input.maxLength=1000;input.rows=2;label.append(input);card.append(label);for(const [title,decision] of [['Approve','approved'],['Reject','rejected']]){const button=el('button',title);button.type='button';button.disabled=busy;button.onclick=()=>run(async()=>{await rpc('review',{id:r.id,revision:r.revision,decision,note:input.value});await load();status('Submission '+decision+'.');});card.append(button);}}else card.append(el('p',r.review_note||'Reviewed'));return card;}));if(!rows.length)$('queue-list').append(el('p','No submissions in this view.'));
- $('approved-list').replaceChildren(...state.listings.map(r=>{const row=el('article');row.className='admin-queue-row';row.append(el('strong',r.game_uid+' · Crop '+r.crop_id+' · +'+r.bonus+'%'));const button=el('button',r.enabled?'Hide listing':'Restore listing');button.type='button';button.onclick=()=>run(async()=>{await rpc('listing',{id:r.id,enabled:!r.enabled});await load();status('Listing visibility updated.');});row.append(button);return row;}));
  $('audit-list').replaceChildren(...state.audit.map(a=>el('li',new Date(a.created_at).toLocaleString()+' · '+a.action+' · '+a.target)));
  $('pending-count').textContent=state.requests.filter(r=>r.status==='pending').length;$('page-count').textContent=new Set(state.blocks.map(b=>b.page_key)).size;
 }
-async function load(){const page=$('page-select').value,block=$('block-select').value;state=await rpc('load');const pages=[...new Set(state.blocks.map(b=>b.page_key))];$('page-select').replaceChildren(...pages.map(p=>{const o=el('option',p.replace('events/','').replace('.html','').replaceAll('-',' ').replace(/\b\w/g,c=>c.toUpperCase()));o.value=p;return o;}));if(pages.includes(page))$('page-select').value=page;choosePage();if(state.blocks.some(b=>b.page_key===$('page-select').value&&b.block_key===block)){$('block-select').value=block;selectBlock();}lists();await media.refresh();}
+async function load(){const page=$('page-select').value,block=$('block-select').value;state=await rpc('load');const pages=[...new Set(state.blocks.map(b=>b.page_key))];$('page-select').replaceChildren(...pages.map(p=>{const o=el('option',p.replace('events/','').replace('.html','').replaceAll('-',' ').replace(/\b\w/g,c=>c.toUpperCase()));o.value=p;return o;}));if(pages.includes(page))$('page-select').value=page;choosePage();if(state.blocks.some(b=>b.page_key===$('page-select').value&&b.block_key===block)){$('block-select').value=block;selectBlock();}lists();await uidListings.refresh();await media.refresh();}
 async function gate(){const user=await currentUser();$('admin-tools').hidden=true;$('admin-gate').hidden=false;if(!user){$('gate-message').textContent='Sign in with your administrator account.';$('admin-login').hidden=false;return;}const {data,error}=await supabase.rpc('is_site_admin');if(error){$('gate-message').textContent='Admin database setup is not active yet. Apply migration 009 and sign in again.';return;}if(data!==true){$('gate-message').textContent='This account does not have administrator access.';$('admin-login').hidden=true;return;}$('admin-gate').hidden=true;status('Loading dashboard…');await load();$('admin-tools').hidden=false;status('Dashboard ready.');}
 $('admin-login').onclick=()=>login('discord').catch(e=>status(e.message));
 $('page-select').onchange=choosePage;$('block-select').onchange=selectBlock;$('queue-filter').onchange=lists;
