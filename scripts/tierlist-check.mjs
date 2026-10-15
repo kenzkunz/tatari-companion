@@ -4,3 +4,9 @@ const {units}=JSON.parse(await readFile('dist/tatari-data/roster.json','utf8'));
 const all=defaults();all.tier=0;all.view="chart";all.chart.positions={"11-3":{x:120,y:-2},"999-1":{x:50,y:50}};const c=cleanList(all,units);assert.deepEqual(c.chart.positions,{"11-3":{x:100,y:0}});const legacy={...defaults(),rows:defaults().rows};legacy.rows[0].units=[11];assert.deepEqual(cleanList(legacy,units).rows[0].units,["11-4"]);console.log("Passed all-tier/chart coordinates and legacy family migration.");
 
 const {appearances,entryFor}=await import('../dist/tierlist-model.mjs');assert.equal(Object.values(appearances).filter(a=>a.appearance==='glitter').length,228);assert.equal(Object.values(appearances).filter(a=>a.appearance==='sparkle').length,70);for(const key of Object.keys(appearances)){assert(entryFor(units,key));await readFile('dist/'+appearances[key].src)}const skins=defaults();skins.appearance='sparkle';skins.rows[0].units=['11-4','11-4-flash','11-4-color_2'];assert.deepEqual(cleanList(decodeList(encodeList(skins)),units),skins);assert.equal(entryFor(units,'11-4-color_999'),null);console.log('Passed all 298 appearance assets and independent mixed-appearance ranking keys.');
+
+const {artworkFor}=await import('../dist/tierlist-model.mjs');
+const character={...defaults(),imageStyle:'character'};assert.equal(cleanList(decodeList(encodeList(character)),units).imageStyle,'character');assert.equal(cleanList({...defaults(),imageStyle:undefined},units).imageStyle,'icon');
+for(const u of units)for(const f of u.forms){const e=entryFor(units,`${u.id}-${f.evolution}`);assert.equal(artworkFor(e,'character'),'tatari-data/'+f.portrait);await readFile('dist/'+artworkFor(e,'character'));assert.equal(artworkFor(e,'icon'),e.src)}
+for(const k of Object.keys(appearances))assert.equal(artworkFor(entryFor(units,k),'character'),appearances[k].src);
+console.log('Passed Character/Icon persistence, legacy defaults, all character assets and appearance-preserving fallback.');
