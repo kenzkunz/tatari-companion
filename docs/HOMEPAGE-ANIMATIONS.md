@@ -1,0 +1,13 @@
+# Homepage animation preview
+
+Homepage refinement requested 15 October 2026. Uses the existing landscape, logo, shared navigation and footer. The roster contains: Zapup, Pyropup, Sparkit (Fox artwork), Frostnip (Icecat artwork), Frugling. Desktop randomly selects four or five actors, and mobile selects two. Overall size is 1.2 times the original scene size, with Pyropup and Frugling additionally scaled 1.4, Sparkit 1.2, and Frostnip 0.85. Ground positions follow the grass horizon after background cover cropping. Each non-Zapup actor independently has a 3% glitter chance at page load.
+
+Only required actions from the supplied Homepage folder are copied into assets/homepage. Zapup uses the updated original WebPs, including Rest. No WebM conversions or raw extraction files are included. manifest.json records frame durations and alpha bounds. Disable is a single-frame image, held for six seconds by the scene model.
+
+Movement decisions occur after 6–14 second walking stretches. Rest, Idle and Eat each have a 10% chance, with the requested duration ranges. Remaining outcomes continue walking. Depth follows foot Y; leftward travel mirrors the whole animation. Modest vertical wandering lets lanes change. Body collisions use the Move animation's visible alpha bounds rather than the transparent square canvas.
+
+Interaction probabilities are rolled once at each eligible approach, crossing or idle-target encounter. Sparkit/Zapup shock gets its 20% special roll before the independent 10% battle fallback. At Frugling's two-thirds crossing, Pyropup/Sparkit receive the 20% burn roll before the independent 20% stab fallback. The other pairings receive the stab roll. Pyropup has a 50% smell chance behind an idle same-direction target. Pair cooldowns prevent per-frame repeated rolls. A global pair lock covers the entire sequence, including Death, Disable, both BurnJumps and BurnRun. Other actors continue their ordinary actions.
+
+ImageDecoder renders WebP frames onto canvases with animation time linked to movement speed. Once-only actions use the measured source duration. Buffers load on demand, and decoders close on action changes. Hidden tabs stop the scene. The scene plays automatically with no pause control, as requested. Browsers without ImageDecoder fall back to native animated WebP playback, which does not provide frame-rate control; precise speed synchronization is available in Chromium browsers. This fallback retains the scene timers.
+
+Checks: node scripts/home-scene-check.mjs exercises all sequence transitions, directions, pair locking, probabilities, natural encounter triggers and asset paths. Desktop/mobile browser checks cover WebP decoding, automatic playback, overflow and the existing chrome.
