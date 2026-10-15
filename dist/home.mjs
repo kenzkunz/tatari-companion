@@ -1,4 +1,4 @@
-import './navigation.mjs';
+
 import {HomeScene,selectRoster,groundLayout} from './home-scene-model.mjs';
 const field=document.getElementById('field');
 const manifest=await (await fetch(new URL('./assets/homepage/manifest.json',import.meta.url))).json();

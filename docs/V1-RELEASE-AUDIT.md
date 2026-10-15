@@ -43,3 +43,9 @@ Changed stylesheet URLs ensure browsers request these fixes rather than keeping 
 - The footer's static Last Update date is still 7 October 2026. Choose the final public release date/version as part of the release, rather than changing it during this audit.
 
 Release recommendation: the public UI and signed-in read-only screens are suitable for a v1 release candidate after these fixes deploy. A controlled save/publish round trip and physical-phone/Safari smoke test are still needed before claiming the complete app is fully verified. The UID empty-history feedback was verified with an isolated browser fixture that permits only load/history actions.
+
+## Correction following the homepage menu report
+
+The original audit tested the shared mobile menu on the database page but did not tap the homepage menu. Its release-readiness conclusion was too broad. The homepage, Schedule, Pinball Calculator and Event Matchmaking each imported unversioned navigation from their page module while their HTML also loaded a versioned navigation module. Two independent handlers toggled the menu open and closed on one tap.
+
+Removed those four redundant imports and made shared navigation initialization idempotent. Browser regression checks now tap the menu on all 42 public HTML pages, expand Tools, check a visible destination, close with Escape, and open/close again with the menu button. Desktop dropdowns were checked on all four affected pages. scripts/navigation-check.mjs also tests duplicate initialization and enforces one shared HTML entry per public page. Remaining account-write and real-device limitations above still apply.

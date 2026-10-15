@@ -1,5 +1,5 @@
 import {loadAppData} from './site-data.mjs?v=site-data5';
-import './navigation.mjs';
+
 import {PAYOUTS,UNLOCKS,unlocked} from './engine.mjs';
 const $=id=>document.getElementById(id),fmt=n=>Math.round(n).toLocaleString('en-US');
 const worker=new Worker('/worker.mjs?v=pinball-accounting1',{type:'module'}),pending=new Map();let counter=0,revision=0,data,mode='have',multiplier=60,refire=true,gold=true,delay;

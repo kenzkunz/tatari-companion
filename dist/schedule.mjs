@@ -1,5 +1,5 @@
 import {loadAppData} from './site-data.mjs?v=site-data5';
-import './navigation.mjs';
+
 import {upcomingTime,eventIcon} from './schedule-display.mjs';
 import {DAY,regularAt,pvpAt,hordeAt,dayEvents} from './schedule-model.mjs';
 const names=['Cozy Farm','Fishing Contest','Treasure Hunt','Raft Race','Zobo Shooter','Gold Rush #1','Gold Rush #2','Gold Rush #3','Dune Rush'];
