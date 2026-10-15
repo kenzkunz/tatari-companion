@@ -54,3 +54,5 @@ supabase/tests/021_admin_site_data.sql is a rollback-only database check: non-ad
 Browser fixture tests cover schedule draft/preview/publish, footer rendering, guide edits/preview/history restore, read-only Horde state and mobile width. Production verification should inspect new panel loading and existing data without publishing invented game changes.
 
 Deployment verification: migrations 020–022 were applied to the existing Supabase project. The rollback SQL checks passed against that database on 15 October 2026; their fixtures and temporary published values were rolled back. Public content values remain unchanged until an administrator publishes an edit.
+
+Additional live rollback verification in supabase/tests/022_schedule_approval.sql passed: a deleted UID can be re-approved without retaining deleted state; schedule publication synchronizes server recurrence; unsafe footer URLs are rejected. The live public endpoint returns HTTP 200, and an isolated browser test confirmed that a published guide quantity and footer title are applied to public rendering without changing production records.
