@@ -31,3 +31,5 @@
 .appearance-selection{flex-basis:100%;flex-grow:0;height:44px;min-height:44px;padding:3px;align-items:center}.appearance-selection button{height:36px;min-height:36px;padding:5px 12px;line-height:20px;white-space:nowrap}.maker-controls .appearance-selection{flex:0 0 100%;max-width:400px}
 
 .pool-header-actions .image-style-selection{flex:none;align-self:center}.pool-header-actions .image-style-selection button{min-height:44px;white-space:nowrap}
+
+.maker-controls .appearance-selection{flex:1 1 230px;max-width:none}.maker-controls .tier-selection{flex:1 1 280px}.element-filter{display:flex;flex:none;height:44px;min-height:44px;padding:2px;gap:2px;align-items:center}.element-filter button{display:grid;place-items:center;width:38px;min-width:38px;height:38px;min-height:38px;padding:5px}.element-filter img{display:block;width:26px;height:26px;object-fit:contain;pointer-events:none}@media(max-width:600px){.element-filter{height:48px}.element-filter button{width:44px;min-width:44px;height:44px;min-height:44px}}
