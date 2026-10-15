@@ -28,3 +28,5 @@ body{min-height:100vh;background:#ffbd24 url('/assets/background02.webp') center
 .tile::before{background-image:var(--tile-art,url("treasure-data/tile.png"))}
 
 .hunt-layout .recommend strong{color:#111;-webkit-text-fill-color:#111;-webkit-text-stroke:0;text-shadow:none}
+/* Keep the arrows visually compact while giving them a comfortable hit area. */
+.treasure-combination>button{flex-basis:44px;min-width:44px;min-height:44px;display:grid;place-items:center}

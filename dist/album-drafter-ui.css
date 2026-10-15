@@ -18,3 +18,9 @@
 
 /* Keep toolbar dropdowns and collection badges in the body typeface. */
 .album-layout #trade-mode-inline,.album-layout #trade-mode-inline option,.album-layout #trade-dialog select,.album-layout #trade-dialog option{font:500 12px/1.5 Poppins,system-ui,sans-serif}.album-layout .album-totals>div,.album-layout .album-totals span,.album-layout .album-totals strong{font-family:Poppins,system-ui,sans-serif}.album-layout .album-totals strong{font-weight:600}.album-layout .album-tradebar #card-search{flex:0 1 200px;width:200px;min-width:170px}@media(max-width:700px){.album-layout .album-tradebar #card-search{flex:1 1 180px;width:180px;min-width:170px}}
+/* Release audit: keep every toolbar field inside narrow phone layouts. */
+@media(max-width:700px){
+ .album-layout .album-tradebar label{grid-column:1/-1;grid-row:2;min-width:0}
+ .album-layout .album-tradebar #card-search{grid-column:1/-1;grid-row:3;width:100%;min-width:0;max-width:100%;margin:0}
+ .album-layout .album-tradebar #share-album,.album-layout .album-tradebar .album-view-toolbar{grid-row:4}
+}

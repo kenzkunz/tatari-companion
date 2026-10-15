@@ -201,3 +201,8 @@ dialog .share-preview{background:#ffecd0;border-color:#d6a260}
 .formation-actions .formation-advanced>summary::after{display:none}
 
 .share-close-icon{width:44px;height:44px;min-height:44px;padding:0;font-size:22px;flex:none}
+/* Keep Solo/Duo controls inside their context field on narrow phones. */
+#mode-context-fields .context-grid>.field{min-width:0}
+#mode-context-fields .mode-switch{min-width:0;width:100%;max-width:100%}
+#mode-context-fields .mode-switch button{min-width:0;flex:1;padding-left:8px;padding-right:8px}
+@media(max-width:380px){.board-panel>.panel-title{flex-wrap:wrap}.board-panel .formation-actions{margin-left:auto;max-width:100%}}

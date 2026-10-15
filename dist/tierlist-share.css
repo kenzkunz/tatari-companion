@@ -25,3 +25,5 @@
 
 /* Fit the complete generated canvas, including its title and footer. */
 #tierlist-share .share-preview{height:60svh;min-height:0;max-height:60svh;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:12px}#tierlist-share #share-preview{width:100%;height:100%;max-width:100%;max-height:100%;min-width:0;object-fit:contain;object-position:center;margin:0}@media(max-width:700px){#tierlist-share .share-preview{height:45svh;max-height:45svh;padding:8px}}
+/* Match the desktop rule's specificity so the phone preview gets a full row. */
+@media(max-width:700px){#tierlist-share .share-layout{grid-template-columns:minmax(0,1fr)}#tierlist-share .share-preview-column,#tierlist-share .share-controls{min-width:0;width:100%}}
