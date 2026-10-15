@@ -1,5 +1,5 @@
 import {formationName} from './formation-name.mjs';
-import {chipTargets} from './drafter-chips.mjs';
+import {chipTargets} from './drafter-chips.mjs?v=exile-allies1';
 const hordePickerData=await (await fetch('/guide-data/horde.json')).json();
 const zoboArtwork=await (await fetch('/zobo-art.json')).json();
 const zoboEntries=[...new Map(hordePickerData.waves.flatMap(w=>w.enemies).map(e=>[e.id,e])).values()].map(z=>({...z,icon:zoboArtwork[z.id]||z.icon})).sort((a,b)=>a.name.localeCompare(b.name));
