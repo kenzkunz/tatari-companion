@@ -2,7 +2,7 @@ import {initAlbumView} from './album-view.mjs';
 import {playerLink} from './player-model.mjs';
 import {supabase,currentUser} from './auth-client.mjs';import {albumShareText} from './album-model.mjs';
 const $=id=>document.getElementById(id),root=new URL('./album-data/',import.meta.url),el=(t,s,c)=>{const n=document.createElement(t);if(s!==undefined)n.textContent=s;if(c)n.className=c;return n;};
-let data,user,profile={},ready=false,gold=false,revision=0,selectedSet=1,tradeMode='Same Rarity',tradesLeft=3;const inventory=new Map(),priorities=new Map(),pending=new Set();
+let data,user,profile={},ready=false,gold=false,revision=0,selectedSet=(()=>{const n=Number(new URL(location.href).searchParams.get('set'));return Number.isInteger(n)&&n>=1&&n<=15?n:1})(),tradeMode='Same Rarity',tradesLeft=3;const inventory=new Map(),priorities=new Map(),pending=new Set();
 function message(s){$('album-status').textContent=s;}
 function render(){renderSetNavigation();let total=0,golds=0;for(const c of data.cards)if((inventory.get(c.number)?.quantity||0)>0){total++;if(c.gold)golds++;}$('album-progress').textContent=ready?total+' / 135':'— / 135';$('gold-progress').textContent=ready?golds+' / 17':'— / 17';$('trade-mode-inline').value=tradeMode;
  $('album-set-strip').replaceChildren(...data.sets.map(set=>{const b=el('button',undefined,'set-choice');b.type='button';b.setAttribute('aria-label',set.name);b.setAttribute('aria-pressed',String(set.number===selectedSet));const picture=el('img');picture.src=new URL(set.image,root);picture.alt=set.name;const count=ready?set.cards.filter(n=>(inventory.get(n)?.quantity||0)>0).length:0;b.append(picture,el('span',set.name),el('small',String(count),'set-count'));b.onclick=()=>{selectedSet=set.number;render();};return b;}));

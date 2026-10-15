@@ -6,3 +6,13 @@ assert.deepEqual(playerParameters('http://127.0.0.1:4184/tatari-companion/player
 const sql=await readFile('supabase/006_required_uid_player_albums.sql','utf8');assert(sql.includes('profiles_game_uid_unique'));assert(sql.includes('revoke delete on public.profiles'));assert(sql.includes('old.game_id'));assert(sql.includes('(p.album_public or p.trade_enabled)'));
 const guard=await readFile('dist/uid-guard.mjs','utf8');assert(guard.includes("addEventListener('cancel',e=>e.preventDefault())"));assert(!guard.includes("textContent='Close'"));
 console.log('Passed UID validation, pretty/direct player links, immutable schema safeguards and required dialog cancellation guard.');
+
+const {collectionTotals,cardsInSet,selectedAlbumSet}=await import('../dist/player-album-model.mjs');
+const sampleCards=[{number:1,set:1,gold:false},{number:2,set:1,gold:true},{number:3,set:2,gold:false}],sampleInventory=new Map([[1,2],[2,1]]);
+assert.deepEqual(collectionTotals(sampleCards,sampleInventory),{collected:2,gold:1,extras:1});assert.deepEqual(cardsInSet(sampleCards,1,'duplicates',sampleInventory).map(c=>c.number),[1]);assert.deepEqual(cardsInSet(sampleCards,2,'missing',sampleInventory).map(c=>c.number),[3]);assert.equal(selectedAlbumSet('https://example.com/player/1?set=15',15),15);for(const set of ['0','16','NaN','1.5'])assert.equal(selectedAlbumSet('https://example.com/player/1?set='+set,15),0);
+console.log('Passed public album totals, extra-copy counting, missing/duplicate filters and safe set links.');
+
+const {cardsForAlbumList}=await import('../dist/player-album-model.mjs');
+const categoryCards=[{number:1,gold:false},{number:2,gold:true},{number:3,gold:false},{number:4,gold:true},{number:5,gold:false}],categoryInventory=new Map([[3,3],[4,2],[5,1]]);
+assert.deepEqual(cardsForAlbumList(categoryCards,categoryInventory,'lf').map(c=>c.number),[1]);assert.deepEqual(cardsForAlbumList(categoryCards,categoryInventory,'lf-gold').map(c=>c.number),[2]);assert.deepEqual(cardsForAlbumList(categoryCards,categoryInventory,'ft').map(c=>c.number),[3,4]);assert.equal(collectionTotals(cardsForAlbumList(categoryCards,categoryInventory,'ft'),categoryInventory).extras,3);assert.deepEqual(cardsForAlbumList(categoryCards,new Map(categoryCards.map(c=>[c.number,1])),'lf'),[]);
+console.log('Passed exclusive missing normal/gold categories, duplicate quantities and empty card lists.');
