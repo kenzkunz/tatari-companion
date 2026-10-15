@@ -8,5 +8,5 @@ const {appearances,entryFor}=await import('../dist/tierlist-model.mjs');assert.e
 const {artworkFor}=await import('../dist/tierlist-model.mjs');
 const character={...defaults(),imageStyle:'character'};assert.equal(cleanList(decodeList(encodeList(character)),units).imageStyle,'character');assert.equal(cleanList({...defaults(),imageStyle:undefined},units).imageStyle,'icon');
 for(const u of units)for(const f of u.forms){const e=entryFor(units,`${u.id}-${f.evolution}`);assert.equal(artworkFor(e,'character'),'tatari-data/'+f.portrait);await readFile('dist/'+artworkFor(e,'character'));assert.equal(artworkFor(e,'icon'),e.src)}
-for(const k of Object.keys(appearances))assert.equal(artworkFor(entryFor(units,k),'character'),appearances[k].src);
+for(const k of Object.keys(appearances)){const e=entryFor(units,k),src=artworkFor(e,'character');if(appearances[k].appearance==='glitter'){assert(src.includes('appearance-color_1'));await readFile('dist/'+src)}else assert.equal(src,appearances[k].src)}
 console.log('Passed Character/Icon persistence, legacy defaults, all character assets and appearance-preserving fallback.');

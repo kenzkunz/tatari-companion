@@ -1,6 +1,6 @@
 import {renderChart} from './tierlist-chart.mjs?v=20261015-1';
-import {defaults,cleanList,moveUnit,entryFor,artworkFor,appearances,encodeList,decodeList} from './tierlist-model.mjs?v=image-style1';
-import {drawTierlist} from './tierlist-render.mjs?v=image-style1';
+import {defaults,cleanList,moveUnit,entryFor,artworkFor,appearances,encodeList,decodeList} from './tierlist-model.mjs?v=glitter-character1';
+import {drawTierlist} from './tierlist-render.mjs?v=glitter-character1';
 import {saveTierlist,readTierlist} from './tierlist-api.mjs?v=20261015-1';
 import {searchMatches} from './tatari-model.mjs';
 const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n},key='tatari-tierlist-v1';let state=defaults(),units=[],selected=null,dragged=null,recordId=null,revision=null;
