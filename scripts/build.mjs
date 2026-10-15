@@ -1,3 +1,4 @@
+import {generateImageWorker} from './generate-image-worker.mjs';
 import {cp, readdir, readFile, writeFile, mkdir, rm} from 'node:fs/promises';
 import {resolve, join, relative} from 'node:path';
 export function normalizeBase(value = '/') {
@@ -31,6 +32,7 @@ export async function build(base = '/', destination = '_site') {
     }
   }
   await visit(out);
+  await generateImageWorker(out);
   // Real directory indexes allow clean links and refresh without SPA redirects.
   async function aliases(dir) {
     for (const entry of await readdir(dir, {withFileTypes:true})) {

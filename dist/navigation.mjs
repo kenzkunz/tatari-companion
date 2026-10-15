@@ -1,3 +1,4 @@
+import './image-cache-register.mjs';
 const nav=document.getElementById('navigation'),menu=document.querySelector('.menu-toggle');
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
 const dropdowns=[...nav.querySelectorAll('details')];dropdowns.forEach(d=>d.addEventListener('toggle',()=>{if(d.open)dropdowns.forEach(other=>{if(other!==d)other.open=false;});}));

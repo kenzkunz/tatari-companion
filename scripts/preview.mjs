@@ -3,7 +3,7 @@ import {readFile, stat} from 'node:fs/promises';
 import {resolve, extname, sep} from 'node:path';
 const base = process.env.PAGES_BASE_PATH || '/';
 const root = resolve('_site');
-const mime = {'.html':'text/html','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.png':'image/png','.gif':'image/gif','.ttf':'font/ttf','.svg':'image/svg+xml'};
+const mime = {'.html':'text/html','.mjs':'text/javascript','.js':'text/javascript','.webp':'image/webp','.css':'text/css','.json':'application/json','.png':'image/png','.gif':'image/gif','.ttf':'font/ttf','.svg':'image/svg+xml'};
 createServer(async (req,res)=>{
   try {
     const path = decodeURIComponent(new URL(req.url,'http://localhost').pathname);
