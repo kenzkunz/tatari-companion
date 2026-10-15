@@ -1,4 +1,4 @@
-import {loadGuideData} from './site-data.mjs';
+import {loadGuideData} from './site-data.mjs?v=site-data5';
 import {withoutAuraDescription,withoutAuraDetails} from './horde-skill-presentation.mjs?v=aura-section3';
 import {isSkillEffectDetail} from './skill-effect-style.mjs';
 import {hordeSkillCards} from '/horde-cards-model.mjs';

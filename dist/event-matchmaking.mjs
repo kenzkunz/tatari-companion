@@ -1,4 +1,4 @@
-import {loadAppData} from './site-data.mjs';
+import {loadAppData} from './site-data.mjs?v=site-data5';
 import './navigation.mjs';import {supabase,currentUser} from './auth-client.mjs';import {regularAt} from './schedule-model.mjs';
 const $=id=>document.getElementById(id),fmt=n=>n.toLocaleString('en-US'),date=n=>new Intl.DateTimeFormat('en',{day:'numeric',month:'short',timeZone:'UTC'}).format(n);
 const icons={'Fishing Contest':'fishingcontest.png','Cozy Farm':'cozyfarm.png','Treasure Hunt':'treasurehunt.png','Raft Race':'raftrace.png','Zobo Shooter':'zoboshooter.png'},styles={casual:'Casual',competitive:'Competitive',glitter:'Glitter Fruit'};

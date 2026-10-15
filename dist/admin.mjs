@@ -1,5 +1,5 @@
-import {installSiteData} from './admin-site-data.mjs';
-import {installUIDListing} from './admin-uid-listing.mjs';
+import {installSiteData} from './admin-site-data.mjs?v=site-data5';
+import {installUIDListing} from './admin-uid-listing.mjs?v=site-data5';
 import './admin-version-audit.mjs';
 import {installVisualEditor} from './admin-editor.mjs';
 import {installMedia} from './admin-media.mjs';

@@ -1,4 +1,4 @@
-import {loadGuideData} from './site-data.mjs';
+import {loadGuideData} from './site-data.mjs?v=site-data5';
 const $=id=>document.getElementById(id),fmt=n=>Number(n).toLocaleString('en-US',{maximumFractionDigits:2});
 const el=(tag,value,cls)=>{const n=document.createElement(tag);if(value!==undefined)n.textContent=value;if(cls)n.className=cls;return n;};
 const img=(src,alt='')=>{const n=el('img');n.src=src;n.alt=alt;n.loading='lazy';return n;};

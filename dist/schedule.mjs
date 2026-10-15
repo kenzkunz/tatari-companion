@@ -1,4 +1,4 @@
-import {loadAppData} from './site-data.mjs';
+import {loadAppData} from './site-data.mjs?v=site-data5';
 import './navigation.mjs';
 import {upcomingTime,eventIcon} from './schedule-display.mjs';
 import {DAY,regularAt,pvpAt,hordeAt,dayEvents} from './schedule-model.mjs';

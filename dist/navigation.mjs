@@ -9,4 +9,4 @@ void import('./account-nav.mjs');
 
 void import('./site-content.mjs');
 
-void import('./site-footer.mjs');
+void import('./site-footer.mjs?v=site-data5');

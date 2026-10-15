@@ -1,4 +1,4 @@
-import {loadAppData} from './site-data.mjs';
+import {loadAppData} from './site-data.mjs?v=site-data5';
 import './navigation.mjs';
 import {PAYOUTS,UNLOCKS,unlocked} from './engine.mjs';
 const $=id=>document.getElementById(id),fmt=n=>Math.round(n).toLocaleString('en-US');

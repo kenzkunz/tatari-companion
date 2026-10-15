@@ -1,4 +1,4 @@
-import {loadGuideData} from './site-data.mjs';
+import {loadGuideData} from './site-data.mjs?v=site-data5';
 const page=document.body.dataset.guide,$=s=>document.querySelector(s),fmt=n=>Math.round(n).toLocaleString('en-US');
 const data=await loadGuideData(page);
 const worksheet=page==='fishing'?$('#fish-calculator'):page==='cozy-farm'?$('#support-calculator'):page==='treasure-hunt'?$('#hunt-calculator'):page==='raft-race'?$('#raft-calculator'):page==='zobo-shooter'?$('#shooter-calculator'):$('#worksheet');
