@@ -211,7 +211,8 @@ dialog .share-preview{background:#ffecd0;border-color:#d6a260}
 .advanced-options{min-width:180px}.advanced-options label{min-height:44px;white-space:nowrap}
 .range-help{font-size:11px;margin:0 0 10px;line-height:1.6}
 .board-cell.range-attack::after,.enemy-cell.range-attack::after,.board-cell.range-skill::after,.enemy-cell.range-skill::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:2;box-sizing:border-box}
-.board-cell.range-attack::after,.enemy-cell.range-attack::after{background:#159ce344;border:2px solid #1479bf}
+.board-cell.range-attack::after,.enemy-cell.range-attack::after{background:url('/assets/attack-range-tile.png') center/100% 100% no-repeat;border:0;opacity:.7;z-index:0}
+.board-cell.range-attack>img,.enemy-cell.range-attack>img{z-index:1}
 .board-cell.range-skill::after,.enemy-cell.range-skill::after{background:#ff991f44;border:2px dashed #db6500}
 .board-cell.range-attack.range-skill::after,.enemy-cell.range-attack.range-skill::after{background:linear-gradient(135deg,#159ce344 50%,#ff991f44 50%);border:2px solid #1479bf;outline:2px dashed #db6500;outline-offset:-5px}
 .enemy-cell{position:relative}.board-cell .cell-player,.board-cell .cell-level{z-index:3}

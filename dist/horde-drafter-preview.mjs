@@ -128,7 +128,7 @@ function paintRanges(){
  const help=$('range-help');if(!help)return;
  const enabled=rangeOptions.attack,profile=rangeProfile(draft.gameMode);
  help.hidden=!enabled;
- help.textContent=!profile?'Range previews are not available for this mode yet.':!rangeData?'Range data unavailable. Placement still works.':'Attack range: blue. Configured preview under review; custom range changes are not simulated.';
+ help.textContent=!profile?'Range previews are not available for this mode yet.':!rangeData?'Range data unavailable. Placement still works.':'Attack range: yellow tiles. Configured preview under review; custom range changes are not simulated.';
  if(!enabled||!profile||!rangeData||!rangeSubject)return;
  const size=boards[draft.gameMode],enemyRows=$('enemy-field').hidden?0:size.rows;
  const tiles=rangeTiles(rangeData,{...rangeSubject,mode:draft.gameMode,...size,enemyRows});
