@@ -1,7 +1,7 @@
-import {installSiteData} from './admin-site-data.mjs?v=site-data7';
-import {installUIDListing} from './admin-uid-listing.mjs?v=v1-audit';
+import {installSiteData} from './admin-site-data.mjs?v=custom-dialogs1';
+import {installUIDListing} from './admin-uid-listing.mjs?v=custom-dialogs1';
 import './admin-version-audit.mjs';
-import {installVisualEditor} from './admin-editor.mjs';
+import {installVisualEditor} from './admin-editor.mjs?v=custom-dialogs1';
 import {installMedia} from './admin-media.mjs';
 import {renderFormatted,wrapSelection,serializeInline} from './content-format.mjs';
 import {supabase,currentUser,login} from './auth-client.mjs';
