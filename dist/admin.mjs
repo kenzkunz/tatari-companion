@@ -1,4 +1,4 @@
-import {installSiteData} from './admin-site-data.mjs?v=site-data5';
+import {installSiteData} from './admin-site-data.mjs?v=site-data7';
 import {installUIDListing} from './admin-uid-listing.mjs?v=site-data5';
 import './admin-version-audit.mjs';
 import {installVisualEditor} from './admin-editor.mjs';
