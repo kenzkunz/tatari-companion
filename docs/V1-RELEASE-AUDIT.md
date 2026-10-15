@@ -21,6 +21,7 @@ Public UI audit completed against the deployed GitHub Pages site, followed by lo
 | Tierlist share preview collapsed into a narrow phone column | Added a responsive rule with matching specificity; preview occupies a full row and retains the complete generated image. |
 | Treasure combination arrows had 20 px hit areas | Hit areas are 44 x 44 px while the artwork stays compact. |
 | Stats account-settings action was 19–22 px tall with faint, tiny text | 44 px minimum height, readable body type and pointer feedback. |
+| UID History gave no feedback when its result was empty | Loading, empty-history and loaded feedback now distinguish a completed request from a silent button. |
 
 Changed stylesheet URLs ensure browsers request these fixes rather than keeping the previous CSS.
 
@@ -34,11 +35,11 @@ Changed stylesheet URLs ensure browsers request these fixes rather than keeping 
 
 ## Remaining release checks and limitations
 
-- Signed-in account saving, public publishing, real UID submission/moderation and admin editors were not exercised in this audit. Automatic approval review denied reading the authenticated admin tab because it contains private content outside the public-site audit scope. A separately authorized signed-in check is needed before claiming end-to-end account/admin release readiness.
+- The user subsequently authorized a read-only signed-in audit. The account profile/dojo layout, locked UID, admin mobile navigation, UID listing/create/notes dialogs, Events & Schedule, Footer & Links, and Guide Data were inspected. Shared Horde source data correctly disables editing. No account data, listing visibility, settings, drafts or published content were changed. Temporary browser tabs and viewport overrides were cleaned up. Save/publish/moderation transactions remain untested in this read-only audit.
 - Desktop and phone checks used Chromium with emulated viewport sizes. Physical iPhone/Android touch, Safari/WebKit and Firefox are not certified by this run. Native animated-WebP fallback lacks precise frame-rate control where ImageDecoder is unavailable, as documented in HOMEPAGE-ANIMATIONS.md.
 - The homepage still has a substantial cold download. The image cache improves repeat visits after activation; it does not eliminate first-download cost or make account/live-data features work offline.
 - Homepage automatic motion remains enabled without a pause control according to the user's explicit design decision. This is a known reduced-motion/accessibility exception, not an accessibility certification.
 - Disabled/under-construction routes and coming-later languages remain outside the implemented v1 feature set. No placeholder feature was represented as complete.
 - The footer's static Last Update date is still 7 October 2026. Choose the final public release date/version as part of the release, rather than changing it during this audit.
 
-Public UI recommendation: suitable for a v1 release candidate after these fixes deploy. Complete the separately authorized signed-in checks and a physical-phone/Safari smoke test before declaring the complete app fully verified.
+Release recommendation: the public UI and signed-in read-only screens are suitable for a v1 release candidate after these fixes deploy. A controlled save/publish round trip and physical-phone/Safari smoke test are still needed before claiming the complete app is fully verified. The UID empty-history feedback was verified with an isolated browser fixture that permits only load/history actions.
