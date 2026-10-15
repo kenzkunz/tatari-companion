@@ -1,7 +1,8 @@
+import {loadGuideData} from './site-data.mjs';
 const $=id=>document.getElementById(id),fmt=n=>Number(n).toLocaleString('en-US',{maximumFractionDigits:2});
 const el=(tag,value,cls)=>{const n=document.createElement(tag);if(value!==undefined)n.textContent=value;if(cls)n.className=cls;return n;};
 const img=(src,alt='')=>{const n=el('img');n.src=src;n.alt=alt;n.loading='lazy';return n;};
-const data=await fetch('/guide-data/goldrush.json').then(r=>{if(!r.ok)throw Error('Goldrush data unavailable');return r.json();});
+const data=await loadGuideData('goldrush');
 function supply(n){const v=el('span',undefined,'gold-icon-value');v.append(el('span',fmt(n)),img(data.assets.drink,'Energy Drinks'));return v;}
 function iconText(icon,text,alt=''){const v=el('span',undefined,'gold-icon-value');v.append(img(icon,alt),el('span',text));return v;}
 function exhaustionValue(value){const n=el('span',undefined,'gold-icon-value');n.append(el('strong','+'+value+'%'),img(data.assets.exhausted,'Exhaustion'));return n;}

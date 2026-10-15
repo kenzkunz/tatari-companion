@@ -1,5 +1,6 @@
+import {loadGuideData} from './site-data.mjs';
 const page=document.body.dataset.guide,$=s=>document.querySelector(s),fmt=n=>Math.round(n).toLocaleString('en-US');
-const data=await fetch('/guide-data/'+page+'.json').then(r=>{if(!r.ok)throw Error('Guide data unavailable');return r.json();});
+const data=await loadGuideData(page);
 const worksheet=page==='fishing'?$('#fish-calculator'):page==='cozy-farm'?$('#support-calculator'):page==='treasure-hunt'?$('#hunt-calculator'):page==='raft-race'?$('#raft-calculator'):page==='zobo-shooter'?$('#shooter-calculator'):$('#worksheet');
 function field(label,id,value,type='number'){const l=document.createElement('label');l.append(document.createTextNode(label));const input=document.createElement('input');input.id=id;input.type=type;input.value=value;if(type==='number'){input.min='0';input.step='1';}l.append(input);return l;}
 function selector(label,id,options){const l=document.createElement('label');l.append(document.createTextNode(label));const s=document.createElement('select');s.id=id;for(const [value,name] of options)s.add(new Option(name,value));l.append(s);return l;}

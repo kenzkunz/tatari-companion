@@ -8,3 +8,5 @@ document.getElementById('support')?.addEventListener('click',()=>location.assign
 void import('./account-nav.mjs');
 
 void import('./site-content.mjs');
+
+void import('./site-footer.mjs');

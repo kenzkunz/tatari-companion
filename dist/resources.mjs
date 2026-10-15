@@ -1,3 +1,4 @@
+import {loadAppData} from './site-data.mjs';
 import './navigation.mjs';
 import {PAYOUTS,UNLOCKS,unlocked} from './engine.mjs';
 const $=id=>document.getElementById(id),fmt=n=>Math.round(n).toLocaleString('en-US');
@@ -41,7 +42,7 @@ $('have-tab').onclick=()=>changeMode('have');$('need-tab').onclick=()=>changeMod
 $('amount').oninput=()=>{options();schedule();};$('amount').onblur=()=>{try{$('amount').value=fmt(amount());}catch{}};
 $('event').onchange=()=>{$('event-icon').src='/assets/'+eventIcons[$('event').value];schedule();};
 $('refire').onclick=()=>{refire=!refire;$('refire').setAttribute('aria-checked',String(refire));schedule();};$('gold').onclick=()=>{gold=!gold;$('gold').setAttribute('aria-checked',String(gold));schedule();};
-try{const response=await fetch('/data.json');if(!response.ok)throw Error('Could not load calculator data.');data=await response.json();options();schedule();}catch(error){$('calc-status').textContent=error.message;}
+try{data=await loadAppData();options();schedule();}catch(error){$('calc-status').textContent=error.message;}
 
 for(const section of document.querySelectorAll('.calculator-content>section')){
  const heading=section.querySelector('h2');if(!heading||!['Multiplier','Modifier','Quick Tips'].includes(heading.textContent.trim()))continue;

@@ -4,7 +4,7 @@ Built for the existing GitHub Pages frontend and Supabase backend. Public page: 
 
 ## Activate once
 
-1. Back up the Supabase database. Apply `supabase/009_admin_content_farm.sql` in the Supabase SQL Editor. It seeds administrator user `f95bfea9-d7d3-49f5-827a-646c11f32ffb`; that account must already exist in Authentication. This migration was prepared but not executed by Codex.
+1. Back up the Supabase database. Apply `supabase/009_admin_content_farm.sql` in the Supabase SQL Editor. It seeds administrator user `f95bfea9-d7d3-49f5-827a-646c11f32ffb`; that account must already exist in Authentication. Migration 009 is part of the deployed baseline. For a new project, apply it once; do not rerun it on the existing project.
 2. Commit/push the website files and migration through your usual GitHub workflow.
 3. Sign in with that account and open Account → Open admin dashboard. No service-role secret is required in the browser.
 
@@ -25,3 +25,7 @@ Before live use, test non-admin denial, administrator editing, draft invisibilit
 ## Disable / rollback
 
 Remove the assigned user from `public.site_admins` in SQL to revoke dashboard access. Public content can be reset per block via Restore original text. Keep audit/history data when disabling the feature. File backups are under the Milkroad workspace `design-rollbacks/admin-dashboard`.
+
+## Current structured-data workspaces
+
+Migrations 020–022 add UID identity/revision/history consistency and bounded Schedule, Footer & Links, and Guide Data editors. See [ADMIN-SITE-DATA.md](ADMIN-SITE-DATA.md) for deployment, source/derived ownership and test boundaries. Guide data does not make calculator formulas or coupled game-mechanic records freely editable. Banner upload support already exists through migration 012.

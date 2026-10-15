@@ -1,3 +1,4 @@
+import {loadGuideData} from './site-data.mjs';
 import {withoutAuraDescription,withoutAuraDetails} from './horde-skill-presentation.mjs?v=aura-section3';
 import {isSkillEffectDetail} from './skill-effect-style.mjs';
 import {hordeSkillCards} from '/horde-cards-model.mjs';
@@ -6,7 +7,7 @@ const text=v=>typeof v==='string'?v:v?.en||v?.zh||'';
 const node=(tag,value,className)=>{const n=document.createElement(tag);if(value!==undefined)n.textContent=value;if(className)n.className=className;return n;};
 const picture=(src,alt='')=>{const n=node('img');n.src=src;n.alt=alt;n.loading='lazy';return n;};
 const energyValue=value=>{const n=node('span',undefined,'horde-energy-value');n.append(picture('/guide-assets/horde/energizer.png','Energizers'),node('span',fmt(value)));return n;};
-const data=await fetch('/guide-data/horde.json').then(r=>{if(!r.ok)throw Error('Horde guide data unavailable');return r.json();});
+const data=await loadGuideData('horde');
 const selectedWaves=()=>data.waves.filter(w=>w.difficulty===Number($('wave-difficulty').value));
 const enemyTag=e=>{const n=node('span',undefined,'horde-enemy-tag');n.append(picture(e.icon),node('span',e.name+(e.count>1?' ×'+e.count:'')));return n;};
 
