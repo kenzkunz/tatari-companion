@@ -19,6 +19,8 @@ jobs:
       - name: Configure Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Install test dependencies
+        run: npm ci
       - name: Check routes and calculator
         run: npm test
       - name: Build for the actual Pages URL

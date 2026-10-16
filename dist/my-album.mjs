@@ -1,3 +1,4 @@
+import {readTradePreferences,writeTradePreferences,watchTradePreferences} from './exchange-preferences.mjs';
 import {createAlbumPage} from './album-page-view.mjs?v=owner1';
 import {playerShareLink as playerLink} from './player-model.mjs?v=share-preview1';
 import {supabase,currentUser} from './auth-client.mjs';
@@ -15,7 +16,10 @@ function renderShare(){
  $('share-privacy-note').hidden=!!link;$('album-share-template').value=albumShareText(data,inventory,profile,tradeMode,tradesLeft,includeGold,link,{removeLowStars,freeLowStars});
 }
 async function ensureActor(expectedId=user?.id){if(preview)return;const actor=await currentUser();if(!actor||actor.id!==expectedId)throw Error('Your account changed. Please log in again.')}
-async function savePrefs(){if(preview)return;const token=revision,actorId=user?.id;await ensureActor(actorId);if(token!==revision||actorId!==user?.id)throw Error('Your account changed. Please retry.');const row={user_id:user.id,season_id:data.season,rarity_mode:tradeMode,trades_left_today:tradesLeft,accept_equal:tradeMode==='Same Rarity'||tradeMode==='Flexible Rarity',accept_up:tradeMode==='Flexible Rarity',accept_down:tradeMode==='Flexible Rarity',accept_any:tradeMode==='Any Rarity'};const {error}=await supabase.from('album_trade_preferences').upsert(row,{onConflict:'user_id,season_id'});if(error)throw error}
+async function savePrefs(patch={rarity_mode:tradeMode,trades_left_today:tradesLeft}){await ensureActor();await writeTradePreferences(data.season,patch,preview)}
+async function syncTradePreferences(){if(!ready||prefsBusy||!data)return;try{const prefs=await readTradePreferences(data.season,preview);tradeMode=prefs.rarity_mode;tradesLeft=prefs.trades_left_today;if($('album-share-dialog').open)renderShare()}catch{}}
+watchTradePreferences(syncTradePreferences);
+
 async function adjust(card,delta){
  if(!ready||pending.has(card.number))return;const token=revision;pending.add(card.number);view.setPending(card.number,true);
  try{let row;if(preview){row={card_number:card.number,quantity:Math.max(0,Math.min(999,(inventory.get(card.number)?.quantity||0)+delta))}}else{await ensureActor();if(token!==revision||!ready)return;const {data:rows,error}=await supabase.rpc('album_adjust_quantity',{p_season:data.season,p_card:card.number,p_delta:delta});if(error)throw error;if(!rows?.length)throw Error('Save could not be confirmed.');row=rows[0]}
@@ -25,7 +29,7 @@ async function adjust(card,delta){
 async function load(){
  if(!data)return;const token=++revision;ready=false;inventory.clear();priorities.clear();pending.clear();profile={};view.clear();$('share-album').disabled=true;view.status('Loading your album…');
  try{
-  if(preview){user={id:'local-preview'};profile={game_id:'18691234',discord_username:'Sample collector',album_public:true};for(const number of [1,2,3,4,5,6,7,8,9,55,56,57,59,60,61,91,92,93,95])inventory.set(number,{card_number:number,quantity:[2,93,95].includes(number)?2:1});tradeMode='Same Rarity';tradesLeft=3}
+  if(preview){user={id:'local-preview'};profile={game_id:'18691234',discord_username:'Sample collector',album_public:true};for(const number of [1,2,3,4,5,6,7,8,9,55,56,57,59,60,61,91,92,93,95])inventory.set(number,{card_number:number,quantity:[2,93,95].includes(number)?2:1});const prefs=await readTradePreferences(data.season,true);tradeMode=prefs.rarity_mode;tradesLeft=prefs.trades_left_today}
   else{user=await currentUser();if(token!==revision)return;if(!user){view.status('Log in to manage your album.');return}
    const [cards,prefs,priority,contact]=await Promise.all([supabase.from('card_inventory').select('card_number,quantity,updated_at').eq('user_id',user.id).eq('season_id',data.season),supabase.from('album_trade_preferences').select('*').eq('user_id',user.id).eq('season_id',data.season).maybeSingle(),supabase.from('album_priorities').select('set_number,priority').eq('user_id',user.id).eq('season_id',data.season),supabase.from('profiles').select('game_id,discord_username,album_public,trade_enabled').eq('user_id',user.id).maybeSingle()]);
    if(token!==revision)return;for(const response of [cards,prefs,priority,contact])if(response.error)throw response.error;
@@ -40,12 +44,12 @@ $('close-album-share').onclick=()=>$('album-share-dialog').close();
 $('share-include-gold').onchange=()=>{includeGold=$('share-include-gold').checked;renderShare()};
 $('share-attempts').onchange=async()=>{
  if(!ready||prefsBusy)return;const before=tradesLeft,token=revision,next=Number($('share-attempts').value);if(!Number.isInteger(next)||next<0||next>3)return;tradesLeft=next;prefsBusy=true;renderShare();
- try{await savePrefs();if(token===revision)$('share-status').textContent=preview?'':'Exchange attempts updated.'}
+ try{await savePrefs({trades_left_today:tradesLeft});if(token===revision)$('share-status').textContent=preview?'':'Exchange attempts updated.'}
  catch(error){if(token===revision){tradesLeft=before;$('share-status').textContent=error.message}}finally{prefsBusy=false;if(ready)renderShare()}
 };
 $('share-remove-low').onchange=()=>{removeLowStars=$('share-remove-low').checked;renderShare()};
 $('share-free-low').onchange=()=>{freeLowStars=$('share-free-low').checked;renderShare()};
-$('share-trade-mode').onchange=async()=>{if(!ready||prefsBusy)return;const before=tradeMode,token=revision,next=$('share-trade-mode').value;if(!['Any Rarity','Same Rarity'].includes(next))return;tradeMode=next;prefsBusy=true;renderShare();try{await savePrefs();if(token===revision)$('share-status').textContent=preview?'':'Trade setting updated.'}catch(error){if(token===revision){tradeMode=before;$('share-status').textContent=error.message}}finally{prefsBusy=false;if(ready)renderShare()}};
+$('share-trade-mode').onchange=async()=>{if(!ready||prefsBusy)return;const before=tradeMode,token=revision,next=$('share-trade-mode').value;if(!['Any Rarity','Same Rarity'].includes(next))return;tradeMode=next;prefsBusy=true;renderShare();try{await savePrefs({rarity_mode:tradeMode});if(token===revision)$('share-status').textContent=preview?'':'Trade setting updated.'}catch(error){if(token===revision){tradeMode=before;$('share-status').textContent=error.message}}finally{prefsBusy=false;if(ready)renderShare()}};
 $('copy-album-template').onclick=async()=>{if(!ready||prefsBusy)return;try{await ensureActor();await navigator.clipboard.writeText($('album-share-template').value);$('share-status').textContent='Template copied.'}catch(error){$('share-status').textContent='Could not copy: '+error.message}};
 $('trade-settings').onclick=()=>{if(!ready)return;settingsSet=view.selectedSet();$('rarity-mode').value=tradeMode;$('set-priority').value=priorities.get(settingsSet)||2;$('trade-status').textContent='';$('trade-dialog').showModal()};
 $('close-trade').onclick=()=>$('trade-dialog').close();

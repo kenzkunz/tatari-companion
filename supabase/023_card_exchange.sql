@@ -1,0 +1,103 @@
+-- Card Exchange backend. Apply after 022. All writes pass through authenticated RPCs.
+begin;
+create table public.exchange_presence(user_id uuid primary key references auth.users on delete cascade,last_seen timestamptz not null default now());
+create table public.exchange_blocks(owner_id uuid references auth.users on delete cascade,peer_id uuid references auth.users on delete cascade,primary key(owner_id,peer_id),check(owner_id<>peer_id));
+create table public.exchange_chat_state(owner_id uuid references auth.users on delete cascade,peer_id uuid references auth.users on delete cascade,read_at timestamptz not null default '-infinity',deleted_at timestamptz not null default '-infinity',primary key(owner_id,peer_id),check(owner_id<>peer_id));
+create table public.exchange_messages(id uuid primary key default gen_random_uuid(),sender_id uuid not null references auth.users on delete cascade,recipient_id uuid not null references auth.users on delete cascade,body text not null check(char_length(btrim(body)) between 1 and 1000),created_at timestamptz not null default clock_timestamp(),check(sender_id<>recipient_id));
+create index exchange_messages_recipient on public.exchange_messages(recipient_id,created_at desc);
+create index exchange_messages_sender on public.exchange_messages(sender_id,created_at desc);
+create table public.exchange_requests(id uuid primary key default gen_random_uuid(),sender_id uuid not null references auth.users on delete cascade,recipient_id uuid not null references auth.users on delete cascade,season_id text not null references public.album_seasons,give_card smallint not null,receive_card smallint not null,initiator_id uuid not null references auth.users,status text not null default 'pending' check(status in ('pending','recalled')),created_at timestamptz not null default clock_timestamp(),expires_at timestamptz not null default (clock_timestamp()+interval '7 days'),foreign key(season_id,give_card) references public.album_cards,foreign key(season_id,receive_card) references public.album_cards,check(sender_id<>recipient_id),check(give_card<>receive_card),check(initiator_id in (sender_id,recipient_id)));
+create unique index exchange_pending_unique on public.exchange_requests(sender_id,recipient_id,season_id,give_card,receive_card,initiator_id) where status='pending';
+create index exchange_requests_recipient on public.exchange_requests(recipient_id,created_at desc);
+alter table public.exchange_presence enable row level security;
+alter table public.exchange_blocks enable row level security;
+alter table public.exchange_chat_state enable row level security;
+alter table public.exchange_messages enable row level security;
+alter table public.exchange_requests enable row level security;
+revoke all on public.exchange_presence,public.exchange_blocks,public.exchange_chat_state,public.exchange_messages,public.exchange_requests from public,anon,authenticated;
+-- No direct client table grants: the functions below project only authorized data.
+create function public.exchange_blocked(a uuid,b uuid) returns boolean language sql stable security definer set search_path=pg_catalog as $$select exists(select 1 from public.exchange_blocks where (owner_id=a and peer_id=b) or (owner_id=b and peer_id=a))$$;
+revoke all on function public.exchange_blocked(uuid,uuid) from public,anon,authenticated;
+create function public.exchange_cleanup() returns void language sql security definer set search_path=pg_catalog as $$delete from public.exchange_messages where created_at<=now()-interval '7 days';delete from public.exchange_requests where expires_at<=now();delete from public.exchange_presence where last_seen<now()-interval '90 days';$$;
+revoke all on function public.exchange_cleanup() from public,anon,authenticated;
+create function public.exchange_action(p_action text,p_payload jsonb default '{}'::jsonb) returns jsonb language plpgsql security definer set search_path=pg_catalog as $$
+declare actor uuid:=auth.uid();peer uuid;rid uuid;req public.exchange_requests;msg text;season text:=coalesce(p_payload->>'season','autumn-tales');give_no smallint;receive_no smallint;initiator uuid;result jsonb;since timestamptz;seen timestamptz;give_stars smallint;receive_stars smallint;eligible boolean;
+begin
+ if actor is null then raise exception 'Log in to use Card Exchange.' using errcode='42501';end if;
+ if jsonb_typeof(p_payload)<>'object' then raise exception 'Invalid request.';end if;
+ -- A per-account transaction lock serializes sends, blocks and rate checks.
+ perform pg_advisory_xact_lock(hashtextextended(actor::text,0));
+ if p_action='heartbeat' then
+  insert into public.exchange_presence(user_id,last_seen) values(actor,clock_timestamp()) on conflict(user_id) do update set last_seen=excluded.last_seen;return '{}'::jsonb;
+ elsif p_action='offline' then
+  update public.exchange_presence set last_seen=least(last_seen,now()-interval '91 seconds') where user_id=actor;return '{}'::jsonb;
+ elsif p_action='requests' then
+  select coalesce(jsonb_agg(jsonb_build_object('id',r.id,'direction',case when r.sender_id=actor then 'sent' else 'received' end,'person',jsonb_build_object('id',p.user_id,'name',p.display_name,'online',coalesce(ep.last_seen>now()-interval '90 seconds',false),'last_seen',ep.last_seen),'give',case when r.sender_id=actor then r.give_card else r.receive_card end,'receive',case when r.sender_id=actor then r.receive_card else r.give_card end,'initiator_id',r.initiator_id,'at',extract(epoch from r.created_at)*1000) order by r.created_at desc),'[]'::jsonb) into result from public.exchange_requests r join public.profiles p on p.user_id=case when r.sender_id=actor then r.recipient_id else r.sender_id end left join public.exchange_presence ep on ep.user_id=p.user_id where actor in(r.sender_id,r.recipient_id) and r.status='pending' and r.expires_at>now() and not public.exchange_blocked(actor,p.user_id);return result;
+ elsif p_action='recall' then
+  rid:=(p_payload->>'id')::uuid;update public.exchange_requests set status='recalled' where id=rid and sender_id=actor and status='pending';if not found then raise exception 'Request is unavailable.';end if;return '{}'::jsonb;
+ elsif p_action='inbox' then
+  with peers as(select recipient_id peer from public.exchange_messages where sender_id=actor and created_at>now()-interval '7 days' union select sender_id from public.exchange_messages where recipient_id=actor and created_at>now()-interval '7 days' union select peer_id from public.exchange_blocks where owner_id=actor),items as(
+   select p.user_id,p.display_name,ep.last_seen,coalesce(st.read_at,'-infinity') read_at,coalesce(st.deleted_at,'-infinity') deleted_at,exists(select 1 from public.exchange_blocks b where b.owner_id=actor and b.peer_id=p.user_id) blocked from peers join public.profiles p on p.user_id=peers.peer left join public.exchange_presence ep on ep.user_id=p.user_id left join public.exchange_chat_state st on st.owner_id=actor and st.peer_id=p.user_id)
+  select coalesce(jsonb_agg(jsonb_build_object('id',i.user_id,'name',i.display_name,'online',coalesce(i.last_seen>now()-interval '90 seconds',false),'lastSeen',i.last_seen,'blocked',i.blocked,'read',case when i.read_at='-infinity' then 0 else extract(epoch from i.read_at)*1000 end,'unread',not i.blocked and exists(select 1 from public.exchange_messages m where m.sender_id=i.user_id and m.recipient_id=actor and m.created_at>greatest(i.read_at,i.deleted_at,now()-interval '7 days')),'messages',coalesce((select jsonb_agg(jsonb_build_object('text',m.body,'at',extract(epoch from m.created_at)*1000,'mine',m.sender_id=actor) order by m.created_at) from (select * from public.exchange_messages m where ((m.sender_id=actor and m.recipient_id=i.user_id) or (m.recipient_id=actor and m.sender_id=i.user_id)) and m.created_at>greatest(i.deleted_at,now()-interval '7 days') order by m.created_at desc limit 1)m),'[]'::jsonb))) ,'[]'::jsonb) into result from items i where i.blocked or exists(select 1 from public.exchange_messages m where actor in(m.sender_id,m.recipient_id) and i.user_id in(m.sender_id,m.recipient_id) and m.created_at>greatest(i.deleted_at,now()-interval '7 days'));return result;
+ end if;
+ peer:=(p_payload->>'peer')::uuid;if peer is null or peer=actor or not exists(select 1 from public.profiles where user_id=peer) then raise exception 'Player is unavailable.';end if;
+ -- Pair lock prevents concurrent block/send/request races in either direction.
+ perform pg_advisory_xact_lock(hashtextextended(least(actor,peer)::text||greatest(actor,peer)::text,1));
+ if p_action='block' then
+  insert into public.exchange_blocks values(actor,peer) on conflict do nothing;update public.exchange_requests set status='recalled' where status='pending' and actor in(sender_id,recipient_id) and peer in(sender_id,recipient_id);return '{}'::jsonb;
+ elsif p_action='unblock' then delete from public.exchange_blocks where owner_id=actor and peer_id=peer;return '{}'::jsonb;
+ elsif p_action='delete' then
+  insert into public.exchange_chat_state(owner_id,peer_id,deleted_at,read_at) values(actor,peer,clock_timestamp(),clock_timestamp()) on conflict(owner_id,peer_id) do update set deleted_at=excluded.deleted_at,read_at=excluded.read_at;return '{}'::jsonb;
+ elsif p_action='thread' then
+  select coalesce(deleted_at,'-infinity') into since from public.exchange_chat_state where owner_id=actor and peer_id=peer;since:=coalesce(since,'-infinity');seen:=clock_timestamp();
+  select coalesce(jsonb_agg(jsonb_build_object('id',m.id,'text',m.body,'at',extract(epoch from m.created_at)*1000,'mine',m.sender_id=actor,'read',m.created_at<=coalesce(other.read_at,'-infinity')) order by m.created_at),'[]'::jsonb) into result from (select * from public.exchange_messages where ((sender_id=actor and recipient_id=peer) or(sender_id=peer and recipient_id=actor)) and created_at>greatest(since,now()-interval '7 days') order by created_at desc limit 200)m left join public.exchange_chat_state other on other.owner_id=peer and other.peer_id=actor;
+  insert into public.exchange_chat_state(owner_id,peer_id,read_at) values(actor,peer,seen) on conflict(owner_id,peer_id) do update set read_at=excluded.read_at;
+  return jsonb_build_object('messages',result,'blocked',public.exchange_blocked(actor,peer),'blocked_by_me',exists(select 1 from public.exchange_blocks where owner_id=actor and peer_id=peer));
+ end if;
+ if p_action not in('send','gift','request') then raise exception 'Unknown exchange action.';end if;
+ if public.exchange_blocked(actor,peer) then raise exception 'Messaging with this player is unavailable.';end if;
+ if not exists(select 1 from public.profiles where user_id=actor and game_id<>'') then raise exception 'Set your game UID in Account first.';end if;
+ eligible:=exists(select 1 from public.profiles p where p.user_id=peer and p.trade_enabled and p.game_id<>'' and coalesce((select rarity_mode from public.album_trade_preferences where user_id=peer and season_id=season),'Same Rarity')<>'No Trading');
+ if not eligible and not (p_action='send' and exists(select 1 from public.exchange_messages where sender_id=peer and recipient_id=actor and created_at>now()-interval '7 days')) then raise exception 'This player is not accepting new exchanges.';end if;
+ if p_action in('gift','request') then
+  give_no:=(p_payload->>'give')::smallint;receive_no:=(p_payload->>'receive')::smallint;
+  if not exists(select 1 from public.profiles where user_id=actor and trade_enabled) or coalesce((select rarity_mode from public.album_trade_preferences where user_id=actor and season_id=season),'Same Rarity')='No Trading' then raise exception 'Enable trading visibility in Account first.';end if;
+  if not exists(select 1 from public.card_inventory where user_id=actor and season_id=season and card_number=give_no and quantity>=2) or exists(select 1 from public.card_inventory where user_id=peer and season_id=season and card_number=give_no and quantity>0) or not public.trade_card_available(season,give_no) then raise exception 'This offered card is no longer available.';end if;
+ end if;
+ if p_action='request' then
+  if not exists(select 1 from public.card_inventory where user_id=peer and season_id=season and card_number=receive_no and quantity>=2) or exists(select 1 from public.card_inventory where user_id=actor and season_id=season and card_number=receive_no and quantity>0) or not public.trade_card_available(season,receive_no) then raise exception 'This requested card is no longer available.';end if;
+  select stars into give_stars from public.album_cards where season_id=season and card_number=give_no;select stars into receive_stars from public.album_cards where season_id=season and card_number=receive_no;
+  if not public.trade_accepts(actor,season,give_stars,receive_stars) or not public.trade_accepts(peer,season,receive_stars,give_stars) then raise exception 'Trade settings no longer allow this exchange.';end if;
+  initiator:=case p_payload->>'initiator' when 'them' then peer when 'me' then actor else null end;if initiator is null then raise exception 'Choose who initiates the exchange.';end if;
+  if coalesce((select trades_left_today from public.album_trade_preferences where user_id=initiator and season_id=season),3)<1 then raise exception 'The initiator has no attempts remaining.';end if;
+  update public.exchange_requests set status='recalled' where sender_id=actor and recipient_id=peer and status='pending' and expires_at<=now();
+  if (select count(*) from public.exchange_requests where sender_id=actor and created_at>now()-interval '1 minute')>=20 then raise exception 'Please wait before sending more requests.';end if;
+  insert into public.exchange_requests(sender_id,recipient_id,season_id,give_card,receive_card,initiator_id) values(actor,peer,season,give_no,receive_no,initiator) on conflict(sender_id,recipient_id,season_id,give_card,receive_card,initiator_id) where status='pending' do update set status='pending' returning id into rid;return jsonb_build_object('id',rid);
+ end if;
+ msg:=case when p_action='gift' then 'i have free card no. '||give_no else btrim(p_payload->>'text') end;
+ if msg is null or char_length(msg) not between 1 and 1000 then raise exception 'Messages must contain 1–1000 characters.';end if;
+ if (select count(*) from public.exchange_messages where sender_id=actor and created_at>now()-interval '1 minute')>=20 then raise exception 'Please wait before sending more messages.';end if;
+ insert into public.exchange_messages(sender_id,recipient_id,body) values(actor,peer,msg) returning id into rid;return jsonb_build_object('id',rid);
+end $$;
+revoke all on function public.exchange_action(text,jsonb) from public,anon;
+grant execute on function public.exchange_action(text,jsonb) to authenticated;
+create or replace function public.exchange_listings(p_season text,p_star integer default null,p_type text default null,p_mode text default null,p_initiator text default null,p_online boolean default false,p_attempts boolean default false,p_limit integer default 20,p_offset integer default 0) returns jsonb language sql stable security definer set search_path=pg_catalog as $$
+with listings as (
+ select p.user_id,p.game_id,p.display_name,p.avatar_url,ep.last_seen,coalesce(pref.rarity_mode,'Same Rarity') rarity_mode,coalesce(pref.trades_left_today,3) trades_left_today,
+ (select max(i.updated_at) from public.card_inventory i where i.user_id=p.user_id and i.season_id=p_season and i.quantity>=2 and public.trade_card_available(p_season,i.card_number)) freshness,
+ (select jsonb_agg(i.card_number order by i.card_number) from public.card_inventory i join public.album_cards c using(season_id,card_number) where i.user_id=p.user_id and i.season_id=p_season and i.quantity>=2 and public.trade_card_available(p_season,i.card_number) and (p_type is null or c.gold=(p_type='gold')) and (p_star is null or c.stars=p_star)) ft,
+ (select coalesce(jsonb_agg(jsonb_build_object('give',a.card_number,'receive',b.card_number) order by a.card_number,b.card_number),'[]'::jsonb) from public.card_inventory yours join public.album_cards a on a.season_id=yours.season_id and a.card_number=yours.card_number cross join public.card_inventory theirs join public.album_cards b on b.season_id=theirs.season_id and b.card_number=theirs.card_number where yours.user_id=auth.uid() and exists(select 1 from public.profiles own where own.user_id=auth.uid() and own.game_id<>'') and yours.season_id=p_season and yours.quantity>=2 and theirs.user_id=p.user_id and theirs.season_id=p_season and theirs.quantity>=2 and public.trade_card_available(p_season,a.card_number) and public.trade_card_available(p_season,b.card_number) and (p_type is null or b.gold=(p_type='gold')) and (p_star is null or b.stars=p_star) and not exists(select 1 from public.card_inventory k where k.user_id=p.user_id and k.season_id=p_season and k.card_number=a.card_number and k.quantity>0) and not exists(select 1 from public.card_inventory k where k.user_id=auth.uid() and k.season_id=p_season and k.card_number=b.card_number and k.quantity>0) and public.trade_accepts(auth.uid(),p_season,a.stars,b.stars) and public.trade_accepts(p.user_id,p_season,b.stars,a.stars)) swaps
+ from public.profiles p left join public.exchange_presence ep on ep.user_id=p.user_id left join public.album_trade_preferences pref on pref.user_id=p.user_id and pref.season_id=p_season where p.trade_enabled and p.game_id<>'' and coalesce((select preferences.rarity_mode from public.album_trade_preferences preferences where preferences.user_id=p.user_id and preferences.season_id=p_season),'Same Rarity')<>'No Trading' and p.user_id is distinct from auth.uid() and not public.exchange_blocked(auth.uid(),p.user_id) and (not p_online or ep.last_seen>now()-interval '90 seconds') and (not p_attempts or coalesce(pref.trades_left_today,3)>0) and (p_mode is null or coalesce(pref.rarity_mode,'Same Rarity')=p_mode) and (p_initiator is null or (p_initiator='them' and coalesce(pref.trades_left_today,3)>0) or (p_initiator='me' and auth.uid() is not null and coalesce((select mine.trades_left_today from public.album_trade_preferences mine where mine.user_id=auth.uid() and mine.season_id=p_season),3)>0))
+),page as (select * from listings where ft is not null order by freshness desc,user_id limit least(50,greatest(1,p_limit)) offset greatest(0,p_offset))
+select coalesce(jsonb_agg(jsonb_build_object('id',user_id,'uid',game_id,'name',display_name,'avatar',avatar_url,'updated_at',freshness,'online',coalesce(last_seen>now()-interval '90 seconds',false),'last_seen',last_seen,'rarity_mode',rarity_mode,'trades_left_today',trades_left_today,'ft',ft,'swaps',swaps) order by freshness desc,user_id),'[]'::jsonb) from page
+$$;
+revoke all on function public.exchange_listings(text,integer,text,text,text,boolean,boolean,integer,integer) from public;
+grant execute on function public.exchange_listings(text,integer,text,text,text,boolean,boolean,integer,integer) to anon,authenticated;
+-- Reads always exclude expired rows, even if the cleanup job is delayed.
+do $job$ begin
+ if exists(select 1 from pg_extension where extname='pg_cron') then
+  perform cron.schedule('card-exchange-retention','17 * * * *','select public.exchange_cleanup()');
+ else raise notice 'Enable pg_cron, then run the documented exchange retention schedule.';
+ end if;
+end $job$;
+commit;
