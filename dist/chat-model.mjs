@@ -5,3 +5,4 @@ export function sameStarCount(swaps,cards){const stars=new Map(cards.map(c=>[c.n
 
 export function possibleMatchCount(swaps){return new Set((swaps||[]).map(s=>s.receive)).size}
 export function giftOnlyCards(row){const paired=new Set((row.swaps||[]).map(s=>s.give));return [...new Set(row.gifts||[])].filter(n=>!paired.has(n))}
+export function requestGiftCards(row){const paired=new Set((row.swaps||[]).map(s=>s.receive));return [...new Set(row.gift_requests||[])].filter(n=>!paired.has(n))}

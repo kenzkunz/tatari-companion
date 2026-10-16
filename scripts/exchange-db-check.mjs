@@ -10,6 +10,7 @@ create function public.trade_accepts(u uuid,s text,g smallint,r smallint) return
 insert into auth.users values('${a}'),('${b}'),('${c}');insert into profiles(user_id,game_id,display_name,trade_enabled) values('${a}','111','Alice',true),('${b}','222','Bob',true),('${c}','333','Private',false);insert into album_seasons values('autumn-tales');insert into album_cards values('autumn-tales',1,1,false,1),('autumn-tales',2,1,false,1),('autumn-tales',3,2,false,1),('autumn-tales',4,4,true,1);insert into card_inventory(user_id,season_id,card_number,quantity) values('${a}','autumn-tales',1,2),('${b}','autumn-tales',2,2),('${b}','autumn-tales',3,2),('${b}','autumn-tales',4,2);insert into album_trade_preferences(user_id,season_id) values('${a}','autumn-tales'),('${b}','autumn-tales');`);
 await db.exec(await readFile('supabase/023_card_exchange.sql','utf8'));
 await db.exec(await readFile('supabase/025_exchange_gift_matches.sql','utf8'));
+await db.exec(await readFile('supabase/026_exchange_request_gifts.sql','utf8'));
 const actor=async id=>db.query("select set_config('request.jwt.claim.sub',$1,false)",[id||'']);const rpc=async(action,payload={})=>(await db.query('select public.exchange_action($1,$2::jsonb) result',[action,JSON.stringify(payload)])).rows[0].result;
 const fails=async(fn,pattern)=>assert.rejects(fn,pattern);
 await actor(null);await fails(()=>rpc('heartbeat'),/Log in/);await db.exec('set role anon');await fails(()=>db.query('select * from exchange_messages'),/permission denied/);await fails(()=>rpc('heartbeat'),/permission denied/);await db.exec('reset role');
@@ -36,4 +37,15 @@ let anyListing=(await db.query("select exchange_listings('autumn-tales') result"
 let filteredGift=(await db.query("select exchange_listings('autumn-tales',1,'normal') result")).rows[0].result[0];assert.deepEqual(filteredGift.gifts,[1]);assert.equal(filteredGift.swaps.length,0);
 await db.query('update card_inventory set quantity=1 where user_id=$1 and card_number=1',[a]);assert.equal((await db.query("select exchange_listings('autumn-tales',1,'normal') result")).rows[0].result.length,0);
 await db.exec('rollback');console.log('Passed gift-only recipients without return cards, cross-star mutual preferences, filtered gifts and one-copy reserve.');
+const recoverableFailure=async(fn,pattern)=>{await db.exec('savepoint expected_failure');try{await fails(fn,pattern)}finally{await db.exec('rollback to savepoint expected_failure');await db.exec('release savepoint expected_failure')}};
+await db.exec('begin');await actor(a);await db.exec("update exchange_messages set created_at=now()-interval '8 days'");
+await db.query('update card_inventory set quantity=1 where user_id=$1',[a]);await db.query('insert into card_inventory(user_id,season_id,card_number,quantity) values($1,$2,1,1)',[b,'autumn-tales']);
+let requestGifts=(await db.query("select exchange_listings('autumn-tales') result")).rows[0].result[0];assert(requestGifts.gift_requests.includes(2));assert.equal(requestGifts.swaps.length,0);
+await rpc('request_gift',{peer:b,receive:2});await actor(b);assert.equal((await rpc('thread',{peer:a})).messages.at(-1).text,'Could you gift me card no. 2?');await actor(a);
+await recoverableFailure(()=>rpc('request_gift',{peer:b,receive:1}),/no longer available/);await recoverableFailure(()=>rpc('request_gift',{peer:b,receive:999}),/no longer available/);
+await db.query('update card_inventory set quantity=1 where user_id=$1 and card_number=2',[b]);await recoverableFailure(()=>rpc('request_gift',{peer:b,receive:2}),/no longer available/);
+await db.query('update card_inventory set quantity=2 where user_id=$1 and card_number=2',[b]);await actor(b);await rpc('block',{peer:a});await actor(a);await recoverableFailure(()=>rpc('request_gift',{peer:b,receive:2}),/unavailable/);await actor(b);await rpc('unblock',{peer:a});await actor(a);
+await db.query('update card_inventory set quantity=2 where user_id=$1 and card_number=1',[a]);assert((await db.query("select exchange_listings('autumn-tales') result")).rows[0].result[0].gift_requests.includes(2));
+await db.query('delete from card_inventory where user_id=$1 and card_number=1',[b]);assert.deepEqual((await db.query("select exchange_listings('autumn-tales') result")).rows[0].result[0].gift_requests,[]);await recoverableFailure(()=>rpc('request_gift',{peer:b,receive:2}),/spare they need/);
+await db.exec('rollback');console.log('Passed request-gift listing, chat text, missing-card validation, last-copy protection, blocks and no-return-card rule.');
 await db.close();console.log('Passed real Postgres exchange tests: auth isolation, visibility, blocks, read/unread, deletion, retention, matching, duplicate requests, recall, attempts, and one-copy reserve.');
