@@ -16,6 +16,7 @@ create function realtime.topic() returns text language sql as $$select current_s
 create table realtime.notifications(topic text,event text,payload jsonb,private boolean);
 create function realtime.send(payload jsonb,event text,topic text,private boolean) returns void language sql as $$insert into realtime.notifications values(topic,event,payload,private)$$;`);
 await db.exec(await readFile('supabase/027_exchange_realtime.sql','utf8'));
+await db.exec(await readFile('supabase/030_exchange_authorization_probe.sql','utf8'));
 const actor=async id=>db.query("select set_config('request.jwt.claim.sub',$1,false)",[id||'']);const rpc=async(action,payload={})=>(await db.query('select public.exchange_action($1,$2::jsonb) result',[action,JSON.stringify(payload)])).rows[0].result;
 const fails=async(fn,pattern)=>assert.rejects(fn,pattern);
 await actor(null);await fails(()=>rpc('heartbeat'),/Log in/);await db.exec('set role anon');await fails(()=>db.query('select * from exchange_messages'),/permission denied/);await fails(()=>rpc('heartbeat'),/permission denied/);await db.exec('reset role');
@@ -57,8 +58,8 @@ await db.exec('rollback');console.log('Passed request-gift listing, chat text, m
 await actor(a);await fails(()=>rpc('send',{peer:b,text:'bad season',season:'invented'}),/Unsupported album season/);
 await fails(()=>rpc('send',{peer:b,text:'wrong actor',expected_actor:b}),/account changed/);
 await actor(c);await fails(()=>rpc('heartbeat',{expected_actor:a}),/account changed/);
-await db.exec(`insert into realtime.messages values('exchange:${a}','broadcast',true),('exchange:${b}','broadcast',true),('exchange:${a}','broadcast',false);`);
-await actor(a);await db.query("select set_config('realtime.topic',$1,false)",['exchange:'+a]);await db.exec('set role authenticated');assert.equal((await db.query('select * from realtime.messages')).rows.length,1);await db.exec('reset role');
+await db.exec(`insert into realtime.messages values('exchange:${a}','broadcast',true),('exchange:${b}','broadcast',true),('exchange:${a}','broadcast',false),('exchange:${a}','broadcast',null);`);
+await actor(a);await db.query("select set_config('realtime.topic',$1,false)",['exchange:'+a]);await db.exec('set role authenticated');assert.equal((await db.query('select * from realtime.messages')).rows.length,3);await db.exec('reset role');
 await db.query("select set_config('realtime.topic',$1,false)",['exchange:'+b]);await db.exec('set role authenticated');assert.equal((await db.query('select * from realtime.messages')).rows.length,0);await db.exec('reset role');
 await db.exec('delete from exchange_messages;delete from realtime.notifications');await actor(a);await rpc('send',{peer:b,text:'private notification',expected_actor:a});
 let notifications=(await db.query('select * from realtime.notifications')).rows;assert.deepEqual(new Set(notifications.map(x=>x.topic)),new Set(['exchange:'+a,'exchange:'+b]));assert(notifications.every(x=>x.private&&!JSON.stringify(x.payload).includes('private notification')));
