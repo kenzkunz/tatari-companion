@@ -11,6 +11,11 @@ insert into auth.users values('${a}'),('${b}'),('${c}');insert into profiles(use
 await db.exec(await readFile('supabase/023_card_exchange.sql','utf8'));
 await db.exec(await readFile('supabase/025_exchange_gift_matches.sql','utf8'));
 await db.exec(await readFile('supabase/026_exchange_request_gifts.sql','utf8'));
+await db.exec(`create schema realtime;create table realtime.messages(topic text,extension text,private boolean);alter table realtime.messages enable row level security;grant usage on schema realtime to authenticated;grant select on realtime.messages to authenticated;
+create function realtime.topic() returns text language sql as $$select current_setting('realtime.topic',true)$$;
+create table realtime.notifications(topic text,event text,payload jsonb,private boolean);
+create function realtime.send(payload jsonb,event text,topic text,private boolean) returns void language sql as $$insert into realtime.notifications values(topic,event,payload,private)$$;`);
+await db.exec(await readFile('supabase/027_exchange_realtime.sql','utf8'));
 const actor=async id=>db.query("select set_config('request.jwt.claim.sub',$1,false)",[id||'']);const rpc=async(action,payload={})=>(await db.query('select public.exchange_action($1,$2::jsonb) result',[action,JSON.stringify(payload)])).rows[0].result;
 const fails=async(fn,pattern)=>assert.rejects(fn,pattern);
 await actor(null);await fails(()=>rpc('heartbeat'),/Log in/);await db.exec('set role anon');await fails(()=>db.query('select * from exchange_messages'),/permission denied/);await fails(()=>rpc('heartbeat'),/permission denied/);await db.exec('reset role');
@@ -48,4 +53,31 @@ await db.query('update card_inventory set quantity=2 where user_id=$1 and card_n
 await db.query('update card_inventory set quantity=2 where user_id=$1 and card_number=1',[a]);assert((await db.query("select exchange_listings('autumn-tales') result")).rows[0].result[0].gift_requests.includes(2));
 await db.query('delete from card_inventory where user_id=$1 and card_number=1',[b]);assert.deepEqual((await db.query("select exchange_listings('autumn-tales') result")).rows[0].result[0].gift_requests,[]);await recoverableFailure(()=>rpc('request_gift',{peer:b,receive:2}),/spare they need/);
 await db.exec('rollback');console.log('Passed request-gift listing, chat text, missing-card validation, last-copy protection, blocks and no-return-card rule.');
+// New security boundaries and private invalidations.
+await actor(a);await fails(()=>rpc('send',{peer:b,text:'bad season',season:'invented'}),/Unsupported album season/);
+await fails(()=>rpc('send',{peer:b,text:'wrong actor',expected_actor:b}),/account changed/);
+await actor(c);await fails(()=>rpc('heartbeat',{expected_actor:a}),/account changed/);
+await db.exec(`insert into realtime.messages values('exchange:${a}','broadcast',true),('exchange:${b}','broadcast',true),('exchange:${a}','broadcast',false);`);
+await actor(a);await db.query("select set_config('realtime.topic',$1,false)",['exchange:'+a]);await db.exec('set role authenticated');assert.equal((await db.query('select * from realtime.messages')).rows.length,1);await db.exec('reset role');
+await db.query("select set_config('realtime.topic',$1,false)",['exchange:'+b]);await db.exec('set role authenticated');assert.equal((await db.query('select * from realtime.messages')).rows.length,0);await db.exec('reset role');
+await db.exec('delete from exchange_messages;delete from realtime.notifications');await actor(a);await rpc('send',{peer:b,text:'private notification',expected_actor:a});
+let notifications=(await db.query('select * from realtime.notifications')).rows;assert.deepEqual(new Set(notifications.map(x=>x.topic)),new Set(['exchange:'+a,'exchange:'+b]));assert(notifications.every(x=>x.private&&!JSON.stringify(x.payload).includes('private notification')));
+await actor(b);await rpc('thread',{peer:a});let notificationCount=(await db.query('select count(*)::int n from realtime.notifications')).rows[0].n;await rpc('thread',{peer:a});assert.equal((await db.query('select count(*)::int n from realtime.notifications')).rows[0].n,notificationCount,'Reading unchanged thread must not broadcast again');
+console.log('Passed private realtime channel isolation, minimal notifications, unchanged-read loop prevention, unsupported season and expected-actor guards.');
+// Account deletion runs only against disposable local users, never production accounts.
+await db.exec(`create schema storage;create table storage.objects(owner_id text,owner uuid);
+alter table profiles drop constraint profiles_user_id_fkey;alter table profiles add constraint profiles_user_id_fkey foreign key(user_id) references auth.users(id) on delete cascade;
+create table farm_support_listings(game_uid text);
+create table farm_support_requests(submitted_by uuid not null constraint farm_support_requests_submitted_by_fkey references auth.users,reviewed_by uuid constraint farm_support_requests_reviewed_by_fkey references auth.users);
+create table deletion_personal_data(user_id uuid references auth.users on delete cascade,secret text);`);
+for(const table of ['site_content_versions','site_admin_audit','site_banner_versions','site_version_audits','site_version_findings','site_guide_reviews','site_data_versions'])await db.exec(`create table ${table}(actor uuid not null constraint ${table}_actor_fkey references auth.users,body text);`);
+await db.exec(await readFile('supabase/028_delete_own_account.sql','utf8'));
+const deleteOwn=(id,confirmation)=>db.query('select delete_own_account($1,$2)',[id,confirmation]);
+await actor(null);await fails(()=>deleteOwn(a,'DELETE'),/requires/);await actor(a);await fails(()=>deleteOwn(b,'DELETE'),/requires/);await fails(()=>deleteOwn(a,'delete'),/requires/);
+await db.query('insert into storage.objects(owner_id) values($1)',[a]);await fails(()=>deleteOwn(a,'DELETE'),/uploaded site media/);assert.equal((await db.query('select count(*)::int n from auth.users')).rows[0].n,3);await db.exec('delete from storage.objects');
+await db.query("insert into site_content_versions values($1,'Published guide')",[a]);await db.query("insert into deletion_personal_data values($1,'private album'),($2,'other account')",[a,b]);await db.exec("insert into farm_support_listings values('111'),('222')");await db.query('insert into farm_support_requests values($1,$2),($2,$1)',[a,b]);
+await actor(a);await deleteOwn(a,'DELETE');assert.equal((await db.query('select count(*)::int n from auth.users')).rows[0].n,2);assert.equal((await db.query('select count(*)::int n from profiles where user_id=$1',[a])).rows[0].n,0);assert.equal((await db.query('select * from deletion_personal_data')).rows[0].user_id,b);assert.equal((await db.query('select * from site_content_versions')).rows[0].actor,null);assert.equal((await db.query('select * from site_content_versions')).rows[0].body,'Published guide');assert.equal((await db.query('select * from farm_support_listings')).rows[0].game_uid,'222');assert.equal((await db.query('select * from farm_support_requests')).rows[0].reviewed_by,null);await fails(()=>rpc('heartbeat'),/no longer exists/);
+await actor(b);await db.exec('set role anon');await fails(()=>deleteOwn(b,'DELETE'),/permission denied/);await db.exec('reset role');
+console.log('Passed local-only deletion: exact confirmation, actor isolation, storage guard, personal cascades, anonymized history, remaining-user preservation and deleted-token rejection.');
+await db.exec("create function public.claim_game_uid(p_uid text,p_display_name text) returns text language sql as $$select p_uid$$");await db.exec(await readFile('supabase/029_checked_uid_claim.sql','utf8'));await actor(b);await fails(()=>db.query('select claim_game_uid_checked($1,$2,$3)',['123','Player',c]),/account changed/);assert.equal((await db.query('select claim_game_uid_checked($1,$2,$3) uid',['123','Player',b])).rows[0].uid,'123');
 await db.close();console.log('Passed real Postgres exchange tests: auth isolation, visibility, blocks, read/unread, deletion, retention, matching, duplicate requests, recall, attempts, and one-copy reserve.');

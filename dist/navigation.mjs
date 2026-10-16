@@ -9,7 +9,7 @@ document.addEventListener('click',event=>{if(!event.target.closest('.navbar'))cl
 document.getElementById('support')?.addEventListener('click',()=>location.assign('https://ko-fi.com/kenzkunz'));
 }
 
-void import('./account-nav.mjs');
+void import('./account-nav.mjs?v=switch1');
 
 void import('./site-content.mjs');
 

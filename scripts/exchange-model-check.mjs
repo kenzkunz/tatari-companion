@@ -11,3 +11,5 @@ assert.equal(possibleMatchCount({swaps:[{give:1,receive:3},{give:2,receive:3},{g
 assert.deepEqual(requestGiftCards({swaps:[],gift_requests:[2,2]}),[2]);assert.deepEqual(requestGiftCards({swaps:[{give:1,receive:2}],gift_requests:[2,3]}),[3]);console.log('Passed request-gift card deduplication and reciprocal row exclusion.');
 
 assert.equal(possibleMatchCount({gifts:[1,1]}),1);assert.equal(possibleMatchCount({gift_requests:[3,3]}),1);assert.equal(possibleMatchCount({swaps:[{give:1,receive:3},{give:2,receive:3}],gifts:[1,2,4,4],gift_requests:[3,5,5]}),3);assert.equal(possibleMatchCount({}),0);console.log('Passed combined reciprocal, gift-only and request-gift counts without duplicates.');
+
+await import('./exchange-realtime-check.mjs');

@@ -12,6 +12,7 @@ export async function auditChrome({apply=false}={}){
   if(!text.includes('href="/public-navbar.css'))text=text.replace('</head>','<link rel="stylesheet" href="/public-navbar.css"></head>');
   if(!text.includes('href="/footer.css'))text=text.replace('</head>','<link rel="stylesheet" href="/footer.css"></head>');
   if(!text.includes('src="/navigation.mjs')&&!text.includes("import './navigation.mjs'"))text=text.replace('</body>','<script type="module" src="/navigation.mjs"></script></body>');
+  if(!text.includes('src="/site-messages.mjs'))text=text.replace('</body>','<script type="module" src="/site-messages.mjs?v=1"></script></body>');
   if(page==='tools.html'){text=text.replace('<body>','<body class="legacy-tools">').replace('<main>','<main id="main">');}
   if(text!==original){const dest=path.join('design-rollbacks/public-chrome',page);await mkdir(path.dirname(dest),{recursive:true});try{await copyFile(file,dest,1);}catch(e){if(e.code!=='EEXIST')throw e;}await writeFile(file,text);}
  }
