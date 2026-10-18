@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {validateRoster,emptyRoster,rosterKey,starCost,foodGrade,sortRosterUnits,rosterPortrait,hasGlitter} from '../dist/my-tatari-model.mjs';
+import {validateRoster,emptyRoster,rosterKey,starCost,foodGrade,sortRosterUnits,rosterPortrait,hasGlitter,rosterTier} from '../dist/my-tatari-model.mjs';
 const catalog=JSON.parse(await readFile('dist/tatari-data/roster.json','utf8'));
 catalog.starProgression=JSON.parse(await readFile('dist/tatari-data/star-progression.json','utf8'));
 const roster=emptyRoster();roster.accountLevel=1739;for(const u of catalog.units){roster.units[u.id]={owned:true,tier:u.forms.at(-1).evolution,stars:84,food:u.feedingStages.at(-1).stage,copies:0,glitter:false};}
@@ -34,3 +34,8 @@ assert(!(await readFile('dist/account.html','utf8')).includes('id="account-dojos
 assert((await readFile('dist/my-badges.html','utf8')).includes('id="account-dojos"'));
 assert(!ui.includes('roster-import'));assert(!ui.includes('roster-export'));
 console.log('Passed shared account tabs, separated badge settings and cloud-only roster controls.');
+
+for(const u of catalog.units)for(const f of u.forms){const tier=rosterTier(u,f.evolution);assert.equal(tier,u.id<=10?f.evolution-1:f.evolution);await readFile('dist/tatari-data/images/tier-'+tier+'.png')}
+assert.equal(rosterTier(catalog.units[0],2),1);assert.equal(rosterTier(catalog.units[31],3),3);
+const mixed=sortRosterUnits([catalog.units[0],catalog.units[10]],{1:{owned:true,tier:2,stars:84},11:{owned:true,tier:2,stars:1}});assert.equal(mixed[0].id,11);
+console.log('Passed T0–T4 background mapping and sorting by display tier without changing saved evolution IDs.');

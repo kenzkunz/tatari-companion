@@ -5,7 +5,11 @@ export function rosterKey(actor){return 'tatari-roster-local-v1:'+actor}
 
 export function foodGrade(unit,food,catalog){const stage=unit.feedingStages.find(s=>s.stage===food);if(!stage)throw Error('Invalid food level');const ranks=Object.values(catalog.foodRanks).sort((a,b)=>a.RankID-b.RankID);const grades=['ATK','HP','DEF'].map(attr=>ranks.filter(r=>stage[attr+'PR']>=r[attr+'PRMax']).at(-1)||ranks[0]);return grades.sort((a,b)=>a.RankID-b.RankID)[0]}
 
-export function sortRosterUnits(units,records){return [...units].sort((a,b)=>{const x=records[a.id]||{owned:false,tier:a.forms[0].evolution,stars:1},y=records[b.id]||{owned:false,tier:b.forms[0].evolution,stars:1};return Number(y.owned)-Number(x.owned)||y.tier-x.tier||y.stars-x.stars||a.id-b.id})}
+export function sortRosterUnits(units,records){return [...units].sort((a,b)=>{const x=records[a.id]||{owned:false,tier:a.forms[0].evolution,stars:1},y=records[b.id]||{owned:false,tier:b.forms[0].evolution,stars:1};return Number(y.owned)-Number(x.owned)||rosterTier(b,y.tier)-rosterTier(a,x.tier)||y.stars-x.stars||a.id-b.id})}
 
 export function rosterPortrait(unit,record,catalog){const form=unit.forms.find(f=>f.evolution===record.tier)||unit.forms[0];return record.glitter?(catalog.portraits?.find(p=>p.stableUnitId===unit.id&&p.evolution===form.evolution&&p.appearance==='color_1')?.image||form.portrait):form.portrait}
 export function hasGlitter(unit,tier,catalog){return !!catalog.portraits?.some(p=>p.stableUnitId===unit.id&&p.evolution===tier&&p.appearance==='color_1')}
+
+// Pet.lua UnitQuality 2 families (IDs 1–10) begin at display tier 0.
+// Keep stored evolution IDs unchanged for portraits, stats and existing saves.
+export function rosterTier(unit,evolution){return evolution-(unit.id>=1&&unit.id<=10?1:0)}
