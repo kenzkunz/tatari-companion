@@ -7,3 +7,5 @@ Migration 038 creates private roster storage and a non-client-readable validatio
 Cloud loads do not silently import browser data. Import browser roster offers an explicit replacement confirmation. Browser copies remain available if importing fails. A save conflict keeps edits open; Refresh roster reloads the latest account version. Other devices see changes on load or Refresh roster. No roster publication or realtime subscription is enabled.
 
 Checks: scripts/my-tatari-check.mjs and scripts/my-tatari-db-check.mjs run through account-check in npm test. No raw Lua or private research exports are shipped. Stat-based recommendations and battle solving are not implemented.
+
+Localhost and GitHub Pages have separate browser storage. Export roster on the local preview, then Import file on the signed-in live page and confirm replacement to transfer it. JSON imports are size-limited and validated before confirmation.

@@ -29,3 +29,5 @@ body{background:#ffbd24 url('/assets/background02.webp') center top/cover fixed}
 .roster-food-track small{text-shadow:none;-webkit-text-stroke:2px #111827;paint-order:stroke fill;color:#fff;font-weight:800}
 
 .roster-cloud-actions{display:flex;justify-content:flex-end;gap:8px;margin:0 0 12px}.roster-cloud-actions .btn{font-size:11px;min-height:38px}.roster-cloud-actions [hidden]{display:none}#roster-import-dialog{width:min(450px,calc(100vw - 24px));padding:22px;border:1px solid #d6b483;border-radius:12px;background:#fff7e5;color:#282625}#roster-import-dialog::backdrop{background:#161222b0}#roster-import-dialog h2{margin-top:0}#roster-import-dialog p{font:12px/1.6 Poppins,sans-serif}.roster-import-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
+
+.roster-cloud-actions{flex-wrap:wrap}
