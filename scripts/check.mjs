@@ -36,7 +36,7 @@ for (const base of ['/', '/milkroad-test/']) {
   for(const route of ['schedule','resources','events/cozy-farm','drafter/arena']) {
     assert.equal(await readFile('_site/'+route+'/index.html','utf8'),await readFile('_site/'+route+'.html','utf8'));
   }
-  assert((await readFile('_site/account.mjs','utf8')).includes("(i+1)+' / 7'"), 'Deployment base corrupted badge labels');
+  assert((await readFile('_site/my-badges.mjs','utf8')).includes("(i+1)+' / 7'"), 'Deployment base corrupted badge labels');
   assert(!(await readFile('_site/event-matchmaking.mjs','utf8')).includes("n+'"+base+"'"), 'Deployment base corrupted open-slot labels');
   assert((await readFile('_site/tatari-stats.mjs','utf8')).includes("' / 7'"), 'Deployment base corrupted calculator badge labels');
   const error=await readFile('_site/404.html','utf8');
