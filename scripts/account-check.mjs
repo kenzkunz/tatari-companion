@@ -17,3 +17,5 @@ assert.throws(()=>profileContactValues({displayName:'',gameId:'',discordUsername
 console.log('Passed contact validation and default-hidden independent sharing flags.');
 
 await import('./my-tatari-check.mjs');
+
+await import('./evolution-planner-check.mjs');
