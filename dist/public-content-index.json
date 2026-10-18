@@ -1,0 +1,126 @@
+{
+  "site": "https://kenzkunz.github.io/tatari-companion/",
+  "scope": "Public page discovery only; no personal records or game-data bulk export",
+  "pages": [
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/database/tatari.html",
+      "title": "Tatari Database | Clash of Critters Companion",
+      "description": "Browse Tatari evolutions, elements, classes and skills. Compare the published game data and check the version notes before planning upgrades."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/drafter/horde.html",
+      "title": "Formation Planner | Clash of Critters Companion",
+      "description": "Build and share Clash of Critters formations, review team skills and plan Tatari placement with the companion formation tool."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/drafter/tierlist.html",
+      "title": "Tatari Tier List Maker | Clash of Critters Companion",
+      "description": "Create and share your own Tatari tier list using Clash of Critters artwork. Your rankings are community opinions, not official ratings."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/events/cozy-farm.html",
+      "title": "Cozy Farm Guide | Clash of Critters Companion",
+      "description": "Understand Cozy Farm growth, support bonuses, fertilizer, watering and milestones. Check the guide version and assumptions before planning."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/events/fishing.html",
+      "title": "Fishing Contest Guide | Clash of Critters Companion",
+      "description": "Learn how the Fishing Contest works, review fishing equipment and rewards, and plan progress using the companion guide."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/events/horde.html",
+      "title": "Horde Invasion Guide | Clash of Critters Companion",
+      "description": "Review Horde Invasion mechanics, Energy Candy, chips and team planning. Check seasonal notes and documented uncertainties before choosing a build."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/events/island-goldrush.html",
+      "title": "Island Goldrush Guide | Clash of Critters Companion",
+      "description": "Learn Island Goldrush team planning, event rules and rewards. Review the companion guide and confirm current event details in game."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/events/matchmaking.html",
+      "title": "Event Team Finder | Clash of Critters Companion",
+      "description": "Find community teammates for Clash of Critters events. Review event timing and coordinate with players through the companion site."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/events/raft-race.html",
+      "title": "Raft Race Guide | Clash of Critters Companion",
+      "description": "Explore Raft Race mechanics, Tatari planning and rewards with a version-aware Clash of Critters community guide."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/events/sparkly-spa.html",
+      "title": "Sparkly Spa Guide | Clash of Critters Companion",
+      "description": "Learn about Sparkly Spa access, Spa Soap, T4 Tatari effects and Sparkle appearances. Review the source version and guide limitations."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/events/treasure-hunt.html",
+      "title": "Treasure Hunt Guide | Clash of Critters Companion",
+      "description": "Understand Treasure Hunt mechanics, tools and rewards, then use the companion solver to plan your next dig."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/events/zobo-shooter.html",
+      "title": "Zobo Shooter Guide | Clash of Critters Companion",
+      "description": "Review Zobo Shooter mechanics, rewards and planning tips. Check the current guide version before applying event-specific advice."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/farm-support.html",
+      "title": "Farm Support UID Directory | Clash of Critters",
+      "description": "Find community-submitted Farm Support UIDs and compare listed bonuses. Listings are reviewed by site admins and are not official game verification."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/formations.html",
+      "title": "Community Formations | Clash of Critters Companion",
+      "description": "Browse player-shared Clash of Critters formations for ideas. Community builds reflect their authors and should be checked against the current game version."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/",
+      "title": "Clash of Critters Companion | Guides, Tools & Codes",
+      "description": "Plan your Clash of Critters progress with Tatari guides, formation tools, event schedules, redeem codes and community card exchange."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/information/creators.html",
+      "title": "Clash of Critters Creators | Artiar & Community Videos",
+      "description": "Explore Clash of Critters videos from featured creators, including Artiar. Visit their channels and copy an available in-game creator code."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/information/patch-notes.html",
+      "title": "Clash of Critters Patch Notes & Upcoming Updates",
+      "description": "Read published Clash of Critters update notes, check release dates and follow original announcements. Future-dated entries are marked as upcoming."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/information/redeem-codes.html",
+      "title": "Clash of Critters Redeem Codes | Community Reports",
+      "description": "Copy Clash of Critters redeem codes, review listed rewards and see community Working or Not working reports. Availability may vary by account."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/resources.html",
+      "title": "Pinball Calculator | Clash of Critters Companion",
+      "description": "Estimate Clash of Critters Pinball resources with the companion calculator. Compare ranges and assumptions; results are estimates, not guarantees."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/schedule.html",
+      "title": "Event Schedule & Reset Timers | Clash of Critters",
+      "description": "Check the Clash of Critters event calendar, registration windows and reset timers. Confirm current in-game announcements for schedule changes."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/tatari-stats.html",
+      "title": "Tatari Stats Calculator | Clash of Critters Companion",
+      "description": "Compare Tatari stats across evolutions, stars, food and dojo settings. Review calculation assumptions and the published data version."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/tierlists.html",
+      "title": "Community Tatari Tier Lists | Clash of Critters",
+      "description": "Explore player-created Tatari tier lists and different ranking approaches. These rankings are community opinions, not official recommendations."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/trading.html",
+      "title": "Card Exchange Finder | Clash of Critters Companion",
+      "description": "Find collectors with matching spare cards, compare trade preferences and arrange exchanges in game. The companion site does not transfer game items."
+    },
+    {
+      "url": "https://kenzkunz.github.io/tatari-companion/treasure-solver.html",
+      "title": "Treasure Hunt Solver | Clash of Critters Companion",
+      "description": "Mark your Treasure Hunt discoveries and compare estimated dig chances. Solver results depend on the selected layout and recorded observations."
+    }
+  ]
+}

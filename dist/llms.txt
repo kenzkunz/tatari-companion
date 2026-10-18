@@ -1,0 +1,36 @@
+# Clash of Critters Companion
+
+> An unofficial community companion with public game guides, tools and Community links.
+
+## Public pages
+
+- [Tatari Database | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/database/tatari.html): Browse Tatari evolutions, elements, classes and skills. Compare the published game data and check the version notes before planning upgrades.
+- [Formation Planner | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/drafter/horde.html): Build and share Clash of Critters formations, review team skills and plan Tatari placement with the companion formation tool.
+- [Tatari Tier List Maker | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/drafter/tierlist.html): Create and share your own Tatari tier list using Clash of Critters artwork. Your rankings are community opinions, not official ratings.
+- [Cozy Farm Guide | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/events/cozy-farm.html): Understand Cozy Farm growth, support bonuses, fertilizer, watering and milestones. Check the guide version and assumptions before planning.
+- [Fishing Contest Guide | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/events/fishing.html): Learn how the Fishing Contest works, review fishing equipment and rewards, and plan progress using the companion guide.
+- [Horde Invasion Guide | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/events/horde.html): Review Horde Invasion mechanics, Energy Candy, chips and team planning. Check seasonal notes and documented uncertainties before choosing a build.
+- [Island Goldrush Guide | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/events/island-goldrush.html): Learn Island Goldrush team planning, event rules and rewards. Review the companion guide and confirm current event details in game.
+- [Event Team Finder | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/events/matchmaking.html): Find community teammates for Clash of Critters events. Review event timing and coordinate with players through the companion site.
+- [Raft Race Guide | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/events/raft-race.html): Explore Raft Race mechanics, Tatari planning and rewards with a version-aware Clash of Critters community guide.
+- [Sparkly Spa Guide | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/events/sparkly-spa.html): Learn about Sparkly Spa access, Spa Soap, T4 Tatari effects and Sparkle appearances. Review the source version and guide limitations.
+- [Treasure Hunt Guide | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/events/treasure-hunt.html): Understand Treasure Hunt mechanics, tools and rewards, then use the companion solver to plan your next dig.
+- [Zobo Shooter Guide | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/events/zobo-shooter.html): Review Zobo Shooter mechanics, rewards and planning tips. Check the current guide version before applying event-specific advice.
+- [Farm Support UID Directory | Clash of Critters](https://kenzkunz.github.io/tatari-companion/farm-support.html): Find community-submitted Farm Support UIDs and compare listed bonuses. Listings are reviewed by site admins and are not official game verification.
+- [Community Formations | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/formations.html): Browse player-shared Clash of Critters formations for ideas. Community builds reflect their authors and should be checked against the current game version.
+- [Clash of Critters Companion | Guides, Tools & Codes](https://kenzkunz.github.io/tatari-companion/): Plan your Clash of Critters progress with Tatari guides, formation tools, event schedules, redeem codes and community card exchange.
+- [Clash of Critters Creators | Artiar & Community Videos](https://kenzkunz.github.io/tatari-companion/information/creators.html): Explore Clash of Critters videos from featured creators, including Artiar. Visit their channels and copy an available in-game creator code.
+- [Clash of Critters Patch Notes & Upcoming Updates](https://kenzkunz.github.io/tatari-companion/information/patch-notes.html): Read published Clash of Critters update notes, check release dates and follow original announcements. Future-dated entries are marked as upcoming.
+- [Clash of Critters Redeem Codes | Community Reports](https://kenzkunz.github.io/tatari-companion/information/redeem-codes.html): Copy Clash of Critters redeem codes, review listed rewards and see community Working or Not working reports. Availability may vary by account.
+- [Pinball Calculator | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/resources.html): Estimate Clash of Critters Pinball resources with the companion calculator. Compare ranges and assumptions; results are estimates, not guarantees.
+- [Event Schedule & Reset Timers | Clash of Critters](https://kenzkunz.github.io/tatari-companion/schedule.html): Check the Clash of Critters event calendar, registration windows and reset timers. Confirm current in-game announcements for schedule changes.
+- [Tatari Stats Calculator | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/tatari-stats.html): Compare Tatari stats across evolutions, stars, food and dojo settings. Review calculation assumptions and the published data version.
+- [Community Tatari Tier Lists | Clash of Critters](https://kenzkunz.github.io/tatari-companion/tierlists.html): Explore player-created Tatari tier lists and different ranking approaches. These rankings are community opinions, not official recommendations.
+- [Card Exchange Finder | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/trading.html): Find collectors with matching spare cards, compare trade preferences and arrange exchanges in game. The companion site does not transfer game items.
+- [Treasure Hunt Solver | Clash of Critters Companion](https://kenzkunz.github.io/tatari-companion/treasure-solver.html): Mark your Treasure Hunt discoveries and compare estimated dig chances. Solver results depend on the selected layout and recorded observations.
+
+## Scope and accuracy
+
+These links lead to public HTML pages. Follow their source versions, formulas and uncertainty notes. Community formations and tier lists represent player opinions. Live codes and patch notes may change; consult the published pages for current entries. The exchange finder helps players arrange exchanges in game and does not transfer items.
+
+Private accounts, chats, player inventories, administration, drafts and unfinished pages are excluded from this index. This file is a discovery aid, not an access control or a guarantee of accuracy.

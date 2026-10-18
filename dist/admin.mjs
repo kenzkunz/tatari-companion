@@ -1,5 +1,5 @@
-import {installCommunity} from './admin-community.mjs';
-import {communityPreview} from './community-client.mjs';
+import {installCommunity} from './admin-community.mjs?v=recovery1';
+import {communityPreview} from './community-client.mjs?v=recovery1';
 import {installSiteData} from './admin-site-data.mjs?v=custom-dialogs1';
 import {installUIDListing} from './admin-uid-listing.mjs?v=custom-dialogs1';
 import './admin-version-audit.mjs';
@@ -47,7 +47,7 @@ $('reset-content').onclick=()=>run(async()=>{await rpc('unpublish',{page:active.
 $('preview-content').onclick=()=>{try{visual.sync();}catch(e){status(e.message);return;}const frame=$('content-preview');const block=frame.contentDocument?.querySelector('[data-site-content="'+active?.block_key+'"]');if(block){renderFormatted(block,$('content-text').value);block.style.outline='3px solid #b98212';block.scrollIntoView({block:'center'});status('Preview updated; no public change.');}else status('Wait for the page preview to load, then try again.');};
 $('show-history').onclick=()=>run(async()=>{const history=await rpc('history',{page:active.page_key,block:active.block_key});$('history-list').replaceChildren(...history.map(v=>{const li=el('li',new Date(v.created_at).toLocaleString()+' · '+(v.body===null?'Original page text':v.body.slice(0,100)));const b=el('button','Restore this version');b.onclick=()=>run(async()=>{await rpc('restore',{page:active.page_key,block:active.block_key,revision:active.revision,version:v.id});await load();status('Earlier published version restored.');});li.append(b);return li;}));if(!history.length)$('history-list').append(el('li','No publication history yet.'));});
 $('refresh-admin').onclick=()=>run(async()=>{await load();status('Dashboard refreshed.');});
-for(const button of document.querySelectorAll('[data-panel]'))button.onclick=()=>{for(const b of document.querySelectorAll('[data-panel]'))b.setAttribute('aria-pressed',String(b===button));for(const panel of document.querySelectorAll('.admin-panel'))panel.hidden=panel.id!==button.dataset.panel;};
+for(const button of document.querySelectorAll('[data-panel]'))button.onclick=()=>{if(button.dataset.communityKind)return;for(const b of document.querySelectorAll('[data-panel]'))b.setAttribute('aria-pressed',String(b===button));for(const panel of document.querySelectorAll('.admin-panel'))panel.hidden=panel.id!==button.dataset.panel;};
 supabase.auth.onAuthStateChange(()=>setTimeout(()=>gate().catch(e=>status(e.message)),0));gate().catch(e=>status(e.message));
 
 $('content-preview').addEventListener('load',()=>{

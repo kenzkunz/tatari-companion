@@ -1,0 +1,5 @@
+import {blankCommunityEntry,COMMUNITY_KINDS} from './community-model.mjs';
+export const RECOVERY_AGE=7*86400000;
+export function recoveryKey(actor,kind,id='new'){if(!actor||!COMMUNITY_KINDS.includes(kind))throw Error('Invalid recovery scope.');return 'community-draft-recovery-v1:'+actor+':'+kind+':'+(id||'new');}
+export function recoveryRecord(actor,state,now=Date.now()){const value={actor,kind:state.kind,id:state.active?.id||null,revision:state.active?.revision??null,at:now,values:structuredClone(state.values)};if(JSON.stringify(value).length>100000)throw Error('Recovery draft is too large.');return value;}
+export function validRecovery(value,actor,now=Date.now()){if(!value||value.actor!==actor||!COMMUNITY_KINDS.includes(value.kind)||!Number.isFinite(value.at)||value.at<=now-RECOVERY_AGE||value.at>now+60000||!value.values||typeof value.values!=='object'||Array.isArray(value.values))return false;const allowed=Object.keys(blankCommunityEntry(value.kind));return Object.keys(value.values).every(k=>allowed.includes(k))&&JSON.stringify(value).length<=100000;}

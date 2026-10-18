@@ -1,0 +1,3 @@
+import {supabase,currentUser} from './auth-client.mjs';
+let generation=0;supabase.auth.onAuthStateChange(event=>{if(event!=='TOKEN_REFRESHED')generation++;});
+export async function exchangeThreadPage(peer,before=null){const token=generation,actor=await currentUser();if(!actor||token!==generation)throw Error('Log in to read messages.');const {data,error}=await supabase.rpc('exchange_thread_page',{p_peer:peer,p_expected_actor:actor.id,p_before_at:before?.cursor_at??null,p_before_id:before?.id??null});if(error)throw Error(error.code==='PGRST202'?'Message history update is not active yet.':error.message);if(token!==generation||(await currentUser())?.id!==actor.id)throw Error('Your account changed.');return data;}

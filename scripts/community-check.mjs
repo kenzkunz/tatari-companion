@@ -1,3 +1,4 @@
+import {recoveryKey,recoveryRecord,validRecovery,RECOVERY_AGE} from '../dist/community-recovery-model.mjs';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {PGlite} from '@electric-sql/pglite';
@@ -20,7 +21,7 @@ assert.equal(publicCommunityEntries([{id:'public',kind:'code',draft:{...code,rew
 const defaults=JSON.parse(await readFile('dist/community-defaults.json','utf8'));for(const row of defaults)validateCommunityEntry(row.kind,row.draft,{publish:row.kind==='creator'});
 const db=new PGlite(),a='00000000-0000-0000-0000-000000000001',b='00000000-0000-0000-0000-000000000002';
 await db.exec(`create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth to anon,authenticated;grant execute on function auth.uid() to anon,authenticated;insert into auth.users values('${a}'),('${b}');create function public.is_site_admin() returns boolean language sql as $$select auth.uid()='${a}'::uuid$$;create table site_admin_audit(actor uuid references auth.users on delete set null,action text,target text,details jsonb);`);
-await db.exec(await readFile('supabase/031_community_publishing.sql','utf8'));await db.exec(await readFile('supabase/032_community_votes.sql','utf8'));
+await db.exec(await readFile('supabase/031_community_publishing.sql','utf8'));await db.exec(await readFile('supabase/032_community_votes.sql','utf8'));await db.exec(await readFile('supabase/036_community_draft_restore.sql','utf8'));
 const actor=id=>db.query("select set_config('request.jwt.claim.sub',$1,false)",[id||'']);
 const rpc=async(action,payload={})=>(await db.query('select community_workspace($1,$2) r',[action,JSON.stringify({expected_actor:a,...payload})])).rows[0].r;
 const published=async()=>(await db.query('select public_community_entries() r')).rows[0].r;
@@ -40,6 +41,12 @@ await assert.rejects(()=>rpc('create',{kind:'creator',content:{...defaults[0].dr
 await assert.rejects(()=>rpc('create',{kind:'creator',content:{...defaults[0].draft,avatar_url:'https://evil.test/avatar.png'}}),/profile image/);
 assert.equal(codeWorkingStatus(code,{dislikes:10}),'Working');assert.equal(codeWorkingStatus(code,{dislikes:11}),'Not working');assert.equal(codeWorkingStatus({...code,status_override:'Working'},{dislikes:999}),'Working');assert.equal(codeWorkingStatus({...code,status_override:'Not working'},{dislikes:0}),'Not working');assert.equal(patchStatus({released_on:'2026-10-19'},'2026-10-18'),'Upcoming patch');assert.equal(patchStatus({released_on:'2026-10-18'},'2026-10-18'),'Patch notes');
 row=await rpc('publish',{id:row.id,revision:row.revision});
+const savedPublic=structuredClone((await published()).find(r=>r.id===row.id).content);const previous=(await rpc('history',{id:row.id})).find(v=>v.snapshot.draft.rewards==='Fixture reward');
+const restore=async(id,version,revision,expected=a)=>(await db.query('select community_restore_draft($1,$2,$3,$4) r',[id,version,revision,expected])).rows[0].r;
+await assert.rejects(()=>restore(row.id,previous.id,999),/changed/);await assert.rejects(async()=>restore(note.id,previous.id,(await rpc('get',{id:note.id})).revision),/belong/);await assert.rejects(()=>restore(row.id,previous.id,row.revision,b),/Administrator/);
+row=await restore(row.id,previous.id,row.revision);assert.equal(row.draft.rewards,'Fixture reward');assert.deepEqual((await published()).find(r=>r.id===row.id).content,savedPublic);assert.equal((await rpc('history',{id:row.id}))[0].action,'restore');
+await db.exec('reset role');await actor(b);await db.exec('set role authenticated');await assert.rejects(()=>restore(row.id,previous.id,row.revision,b),/Administrator/);await db.exec('reset role');await actor(a);await db.exec('set role anon');await assert.rejects(()=>restore(row.id,previous.id,row.revision),/permission denied/);await db.exec('reset role');await db.exec('set role authenticated');
+const recovery=recoveryRecord(a,{kind:'code',active:row,values:code},1000000000);assert(validRecovery(recovery,a,1000000001));assert(!validRecovery(recovery,b,1000000001));assert(!validRecovery(recovery,a,1000000000+RECOVERY_AGE));assert(!validRecovery({...recovery,values:{admin:true}},a,1000000001));assert.notEqual(recoveryKey(a,'code',row.id),recoveryKey(b,'code',row.id));
 const vote=(id,value,who=a)=>db.query('select vote_community_code($1,$2,$3)',[id,value,who]);
 const totals=async()=>(await db.query('select community_code_votes() r')).rows[0].r.find(v=>v.id===row.id);
 await vote(row.id,-1);await vote(row.id,-1);assert.equal((await totals()).dislikes,1);await vote(row.id,1);assert.equal((await totals()).likes,1);assert.equal((await totals()).dislikes,0);await vote(row.id,0);assert.equal((await totals()).likes,0);
