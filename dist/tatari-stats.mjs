@@ -1,5 +1,5 @@
 import {loadRoster} from './my-tatari-client.mjs';
-import {rosterTier} from './my-tatari-model.mjs?v=tier-map2';
+import {rosterTier} from './my-tatari-model.mjs?v=level-cap2400';
 import {currentUser,loadSettings,accountUrl,supabase} from './auth-client.mjs';
 import {accountBadgeIds} from './account-model.mjs';
 import {searchMatches,compactStat} from './tatari-model.mjs';
