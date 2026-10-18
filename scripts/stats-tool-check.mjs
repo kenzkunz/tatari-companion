@@ -30,3 +30,16 @@ assert.deepEqual(resolveBuild(data,lower).values,resolveBuild(data,{...lower,spa
 assert(resolveBuild(data,{...lower,lowerTierSpa:true}).values.ATK>resolveBuild(data,lower).values.ATK);
 for(const value of [-1,101,NaN,Infinity])assert.throws(()=>resolveBuild(data,{...input,spa:{ATK:value}}));
 console.log('Passed independent Spa percentages, additive stacking, tier restriction and invalid input checks.');
+
+const {buildStandard,applyOwnedTatari}=await import('../dist/tatari-stats-model.mjs');
+data.levelStandards=JSON.parse(await readFile('dist/tatari-data/level-standards.json','utf8'));
+for(const element of [2,3,4,5,6])assert.deepEqual(buildStandard(data,element,{statMode:'normal',level:500,progress:0}),Object.fromEntries(['ATK','HP','DEF'].map(k=>[k+'Standard',data.standards500[element][k+'Standard']])));
+assert.deepEqual(buildStandard(data,2,{statMode:'normal',level:1}),{ATKStandard:15,HPStandard:50,DEFStandard:5});
+for(const element of [2,3,4,5,6])for(const level of [1,32,33,500,1739,2400])for(const progress of Object.keys(data.levelStandards.levels[level]))assert(Object.values(buildStandard(data,element,{statMode:'normal',level,progress})).every(n=>Number.isFinite(n)&&n>0));
+for(const build of [{level:0},{level:2401},{level:1.5},{level:1,progress:4},{level:500,progress:5}])assert.throws(()=>buildStandard(data,2,{statMode:'normal',...build}));
+assert.deepEqual(resolveBuild(data,{...input,statMode:'normal',level:500,progress:0}).values,result.values);
+const normal=resolveBuild(data,{...input,statMode:'normal',level:1739});assert(normal.values.ATK>result.values.ATK);
+assert(resolveBuild(data,{...input,food:0,statMode:'normal',level:1}).values.ATK>0);
+const saved={accountLevel:1739,units:{11:{owned:true,tier:4,stars:27,food:0}}};const before=JSON.stringify(saved),manual={...input,level:500};const applied=applyOwnedTatari(manual,saved);assert.equal(applied.level,1739);assert.equal(applied.food,0);assert.equal(manual.food,8);assert.equal(JSON.stringify(saved),before);assert.throws(()=>applyOwnedTatari({...manual,pet:22},saved));
+const normalSpa=resolveBuild(data,{...input,statMode:'normal',level:1739,spa:{ATK:20}});const normalCore=coreStats(buildStandard(data,2,{statMode:'normal',level:1739}),data.stars[input.stars],result.form.growth);assert(Math.abs(normalSpa.values.ATK-normal.values.ATK-normalCore.ATK*.2)<1e-6);
+console.log('Passed normal levels 1–2400, element upgrade steps, exact level-500 parity, stage-zero food, account roster copying and level-aware Spa.');
