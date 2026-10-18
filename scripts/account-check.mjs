@@ -15,3 +15,5 @@ const profile=profileContactValues({displayName:' Player ',gameId:' 123 ',discor
 assert.deepEqual(sharedContacts({...profile,share_game_id:true}),{game_id:'123',discord_username:''});assert.deepEqual(sharedContacts({...profile,share_discord:true}),{game_id:'',discord_username:'user.name'});
 assert.throws(()=>profileContactValues({displayName:'',gameId:'',discordUsername:''}));
 console.log('Passed contact validation and default-hidden independent sharing flags.');
+
+await import('./my-tatari-check.mjs');
