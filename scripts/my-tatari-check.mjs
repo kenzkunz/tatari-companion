@@ -26,3 +26,5 @@ catalog.portraits=JSON.parse(await readFile('dist/tatari-data/portrait-index.jso
 const full=structuredClone(legacy);full.units[1].copies=9;assert.equal(validateRoster(full,catalog).units[1].copies,8);console.log('Passed required-minus-one progress cap and normalization of older full-progress saves.');
 
 await import('./my-tatari-db-check.mjs');
+
+const ui=await readFile('dist/my-tatari.mjs','utf8');assert(ui.includes("if(!user){document.querySelector('.roster-local-note').textContent='Log in to manage your Tatari'"));assert(ui.includes("if(!ready||saving||actor==='preview')return false"));console.log('Passed login-required editing on localhost and production, with export-only legacy recovery.');
