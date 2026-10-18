@@ -4,3 +4,7 @@
 .community-page .guide-layout{display:block}.community-page .community-nav{display:flex;justify-content:center;gap:0;width:fit-content;max-width:100%;margin:0 auto 18px;padding:4px;border:1px solid #d5bd7c;border-radius:10px;background:#fff7dc;flex-wrap:nowrap}.community-page .community-nav a{background:transparent;border-color:transparent;border-radius:7px;text-align:center}.community-page .community-nav a[aria-current=page]{background:#ffcf40;border-color:#e6b235}.creator-actions{display:flex;gap:8px;flex-wrap:wrap}@media(max-width:700px){.community-page .community-nav a{font-size:10px;padding:8px;min-height:42px}.creator-actions .community-button{width:100%}}
 
 .community-badge.working{background:#e2efdb;color:#375730}.community-badge.not-working{background:#f6dbd4;color:#8a3828}.vote-button[aria-pressed=true]{background:#ffcf40;border-color:#8d6020}
+
+/* Content tabs must not inherit the global mobile menu's absolute positioning. */
+.community-page nav.community-nav{position:static;inset:auto;flex:none;max-height:none;overflow:visible;z-index:auto;align-items:stretch}
+@media(max-width:900px){.community-page nav.community-nav{display:grid;grid-template-columns:1fr 1.35fr .85fr;width:100%;max-width:440px;margin:0 auto 18px}.community-page nav.community-nav>a{min-width:0;min-height:44px;white-space:normal;font-size:11px;line-height:1.4;padding:8px 6px;overflow-wrap:normal}}
