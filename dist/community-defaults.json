@@ -1,0 +1,361 @@
+[
+  {
+    "id": "95bc3aa5-8fef-4644-a746-a95121fd0930",
+    "kind": "creator",
+    "revision": 1,
+    "draft": {
+      "name": "Artiar",
+      "description": "Clash of Critters guides, evolution priorities, Horde Invasion strategies and game updates.",
+      "channel_url": "https://www.youtube.com/@artiar-dislyte4093",
+      "avatar_url": "assets/creators/artiar.jpg",
+      "featured": true,
+      "videos": [
+        {
+          "title": "UPDATED Evolution Priority Guide (T1 → T3) | What To Evolve FIRST October | Clash Of Critters",
+          "url": "https://www.youtube.com/watch?v=6jEz3pvPZqg",
+          "topic": "Evolution",
+          "thumbnail": "assets/creators/artiar-6jEz3pvPZqg.jpg"
+        },
+        {
+          "title": "Horde Invasion S3: NEW Bosses, Attack Mechanics & Wave Order + Butterfly Lv7 Dmg | Clash Of Critters",
+          "url": "https://www.youtube.com/watch?v=k6Qdc16tnqE",
+          "topic": "Horde Invasion",
+          "thumbnail": "assets/creators/artiar-k6Qdc16tnqE.jpg"
+        },
+        {
+          "title": "Sparkle Skin PERMANENT ? How To Farm Glitter Fruit With This Spa System ? | Clash Of Critters",
+          "url": "https://www.youtube.com/watch?v=xAUCG9JAjGY",
+          "topic": "Sparkly Spa",
+          "thumbnail": "assets/creators/artiar-xAUCG9JAjGY.jpg"
+        }
+      ],
+      "creator_code": "ARTIARYT"
+    },
+    "published": {
+      "name": "Artiar",
+      "description": "Clash of Critters guides, evolution priorities, Horde Invasion strategies and game updates.",
+      "channel_url": "https://www.youtube.com/@artiar-dislyte4093",
+      "avatar_url": "assets/creators/artiar.jpg",
+      "featured": true,
+      "videos": [
+        {
+          "title": "UPDATED Evolution Priority Guide (T1 → T3) | What To Evolve FIRST October | Clash Of Critters",
+          "url": "https://www.youtube.com/watch?v=6jEz3pvPZqg",
+          "topic": "Evolution",
+          "thumbnail": "assets/creators/artiar-6jEz3pvPZqg.jpg"
+        },
+        {
+          "title": "Horde Invasion S3: NEW Bosses, Attack Mechanics & Wave Order + Butterfly Lv7 Dmg | Clash Of Critters",
+          "url": "https://www.youtube.com/watch?v=k6Qdc16tnqE",
+          "topic": "Horde Invasion",
+          "thumbnail": "assets/creators/artiar-k6Qdc16tnqE.jpg"
+        },
+        {
+          "title": "Sparkle Skin PERMANENT ? How To Farm Glitter Fruit With This Spa System ? | Clash Of Critters",
+          "url": "https://www.youtube.com/watch?v=xAUCG9JAjGY",
+          "topic": "Sparkly Spa",
+          "thumbnail": "assets/creators/artiar-xAUCG9JAjGY.jpg"
+        }
+      ],
+      "creator_code": "ARTIARYT"
+    },
+    "published_at": "2026-10-17T00:00:00Z"
+  },
+  {
+    "id": "0d8f8ccf-f405-5dc9-acaf-6badf154e23c",
+    "kind": "code",
+    "revision": 1,
+    "draft": {
+      "code": "TATAMOON",
+      "rewards": "Rewards not specified.",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published": {
+      "code": "TATAMOON",
+      "rewards": "Rewards not specified.",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published_at": "2026-10-17T00:00:00Z"
+  },
+  {
+    "id": "c6e11321-ff8a-54b2-92d5-d1a3d68c4423",
+    "kind": "code",
+    "revision": 1,
+    "draft": {
+      "code": "openfestc",
+      "rewards": "Rewards not specified.",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published": {
+      "code": "openfestc",
+      "rewards": "Rewards not specified.",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published_at": "2026-10-17T00:00:00Z"
+  },
+  {
+    "id": "81235412-2078-5df8-a7a3-3cd66afb7663",
+    "kind": "code",
+    "revision": 1,
+    "draft": {
+      "code": "openfestb26",
+      "rewards": "Rewards not specified.",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published": {
+      "code": "openfestb26",
+      "rewards": "Rewards not specified.",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published_at": "2026-10-17T00:00:00Z"
+  },
+  {
+    "id": "8c90abbf-0d46-5456-8032-9e32940a1a8c",
+    "kind": "code",
+    "revision": 1,
+    "draft": {
+      "code": "openfesta26",
+      "rewards": "Rewards not specified.",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published": {
+      "code": "openfesta26",
+      "rewards": "Rewards not specified.",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published_at": "2026-10-17T00:00:00Z"
+  },
+  {
+    "id": "e9985d38-5e2a-5a31-8563-d8e3a744f155",
+    "kind": "code",
+    "revision": 1,
+    "draft": {
+      "code": "tatatata",
+      "rewards": "Rewards not specified.",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published": {
+      "code": "tatatata",
+      "rewards": "Rewards not specified.",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published_at": "2026-10-17T00:00:00Z"
+  },
+  {
+    "id": "e1ecb849-75d6-5d96-a315-aa6d1ad1c565",
+    "kind": "code",
+    "revision": 1,
+    "draft": {
+      "code": "welcomegift",
+      "rewards": "100× Pinballs, 6× Tatari Capsules",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published": {
+      "code": "welcomegift",
+      "rewards": "100× Pinballs, 6× Tatari Capsules",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published_at": "2026-10-17T00:00:00Z"
+  },
+  {
+    "id": "5d110fa6-dd4d-5e4f-a33d-fa20fcce5ab2",
+    "kind": "code",
+    "revision": 1,
+    "draft": {
+      "code": "weeklygift",
+      "rewards": "50× Pinballs, 5× Tatari Capsules",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "One-time use only.",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published": {
+      "code": "weeklygift",
+      "rewards": "50× Pinballs, 5× Tatari Capsules",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "One-time use only.",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published_at": "2026-10-17T00:00:00Z"
+  },
+  {
+    "id": "92372874-0790-5083-9a8d-6114463e2314",
+    "kind": "code",
+    "revision": 1,
+    "draft": {
+      "code": "Hellotatari",
+      "rewards": "100× Pinballs, 3× Tatari Capsules, 4,000× Candy",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published": {
+      "code": "Hellotatari",
+      "rewards": "100× Pinballs, 3× Tatari Capsules, 4,000× Candy",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published_at": "2026-10-17T00:00:00Z"
+  },
+  {
+    "id": "3883e522-e274-58d0-a627-f54cba239aa5",
+    "kind": "code",
+    "revision": 1,
+    "draft": {
+      "code": "goonbug",
+      "rewards": "4,000× Candy, 1 Lunchbox, 1 Goonbug",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published": {
+      "code": "goonbug",
+      "rewards": "4,000× Candy, 1 Lunchbox, 1 Goonbug",
+      "status": "Active",
+      "expires_on": "",
+      "checked_on": "",
+      "source_url": "",
+      "note": "",
+      "status_override": "Auto",
+      "dislike_threshold": "10"
+    },
+    "published_at": "2026-10-17T00:00:00Z"
+  },
+  {
+    "id": "3a4b5b1a-6eb9-582f-a40f-fe30761b2c0a",
+    "kind": "patch",
+    "revision": 1,
+    "draft": {
+      "title": "0.47.1 Patch Notes",
+      "version": "0.47.1",
+      "released_on": "",
+      "source_url": "https://coc-club.farlightgames.com/",
+      "source_verified": true,
+      "summary": "Introduces Ringtail, Morphanessa and Blechlama, a camp day/night cycle, Carnival Rush and the Raft Race theme. Also updates Goldrush rewards, card filters and Horde fixes."
+    },
+    "published": null,
+    "published_at": null
+  },
+  {
+    "id": "76e5ee2c-e829-5b2c-b34e-51f2e2e73743",
+    "kind": "patch",
+    "revision": 1,
+    "draft": {
+      "title": "0.46.1 Patch Notes",
+      "version": "0.46.1",
+      "released_on": "",
+      "source_url": "https://coc-club.farlightgames.com/",
+      "source_verified": true,
+      "summary": "Adds Snowcub, Lordopus and Dharmadder. Introduces seasonal Horde Invasion and changes Cozy Farm, with further adjustments to chips, rewards and battle behavior."
+    },
+    "published": null,
+    "published_at": null
+  },
+  {
+    "id": "347bc754-c906-5e60-bb21-b79af27d0c92",
+    "kind": "patch",
+    "revision": 1,
+    "draft": {
+      "title": "0.45.1 Patch Notes",
+      "version": "0.45.1",
+      "released_on": "",
+      "source_url": "https://coc-club.farlightgames.com/",
+      "source_verified": true,
+      "summary": "Adds Cavyzap, Technocan and Blastniff, expands chapter stages, introduces underwater Goldrush and adds Auto Feed. Includes fixes for Tatari, camp and events."
+    },
+    "published": null,
+    "published_at": null
+  }
+]

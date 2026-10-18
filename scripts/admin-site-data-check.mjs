@@ -16,3 +16,5 @@ const uid=await readFile('supabase/020_uid_listing_consistency.sql','utf8');asse
 assert.equal(new URL('rest/v1/rpc/published_site_data','https://example.supabase.co').pathname,'/rest/v1/rpc/published_site_data');const publicLoader=await readFile('dist/site-data.mjs','utf8');assert(publicLoader.includes("new URL('rest/v1/rpc/published_site_data',SUPABASE_URL)"));
 const sql=await readFile('supabase/021_admin_site_data.sql','utf8');assert(sql.includes('public.is_site_admin()'));assert(sql.includes('r.draft_values'));assert(sql.includes('public.publish_match_schedule(next_values)'));assert(sql.includes('from public,anon,authenticated'));assert(sql.includes('def.cycle_days'));
 console.log('Passed all 10 source catalogs, locked derived fields, anchor-aware rotations, duplicate-event rejection, bounds, dates, safe URLs, prototype defense and recomputed hourly values. SQL checks are structural; use rollback tests for database behavior.');
+
+await import('./community-check.mjs');

@@ -2203,5 +2203,122 @@
     "order": 7,
     "section": "plan",
     "sectionTitle": "Choose your Tatari and arena"
+  },
+  {
+    "page": "information/redeem-codes.html",
+    "block": "text-intro",
+    "label": "Introduction",
+    "default": "Find codes to claim in Clash of Critters. Check their status and copy a code before redeeming it in game.",
+    "order": 1,
+    "section": "intro",
+    "sectionTitle": "Introduction"
+  },
+  {
+    "page": "information/redeem-codes.html",
+    "block": "text-redeeming-title",
+    "label": "Heading · How to redeem",
+    "default": "How to redeem",
+    "order": 4,
+    "section": "redeeming",
+    "sectionTitle": "How to redeem"
+  },
+  {
+    "page": "information/redeem-codes.html",
+    "block": "text-redeeming-details",
+    "label": "Text · Copy a code, open the code redemption screen in game, and paste it exactly as shown. If a code ",
+    "default": "Copy a code, open the code redemption screen in game, and paste it exactly as shown. If a code fails, check its expiry, account requirements and whether you already claimed it.",
+    "order": 5,
+    "section": "redeeming",
+    "sectionTitle": "How to redeem"
+  },
+  {
+    "page": "information/patch-notes.html",
+    "block": "text-intro",
+    "label": "Introduction",
+    "default": "Developer announcements, release dates and links to the original patch notes.",
+    "order": 1,
+    "section": "intro",
+    "sectionTitle": "Introduction"
+  },
+  {
+    "page": "information/patch-notes.html",
+    "block": "text-updates-title",
+    "label": "Heading · Latest updates",
+    "default": "Latest updates",
+    "order": 2,
+    "section": "updates",
+    "sectionTitle": "Latest updates"
+  },
+  {
+    "page": "information/patch-notes.html",
+    "block": "text-updates-intro",
+    "label": "Text · Read the original announcement for the complete changes. Short summaries on this page are writt",
+    "default": "Read the original announcement for the complete changes. Short summaries on this page are written by the companion site.",
+    "order": 3,
+    "section": "updates",
+    "sectionTitle": "Latest updates"
+  },
+  {
+    "page": "information/patch-notes.html",
+    "block": "text-about-title",
+    "label": "Heading · About these notes",
+    "default": "About these notes",
+    "order": 4,
+    "section": "about",
+    "sectionTitle": "About these notes"
+  },
+  {
+    "page": "information/patch-notes.html",
+    "block": "text-about-details",
+    "label": "Text · Entries link to developer announcements. Creator reactions and opinions belong on the Creators ",
+    "default": "Entries link to developer announcements. Creator reactions and opinions belong on the Creators page and are not official patch notes.",
+    "order": 5,
+    "section": "about",
+    "sectionTitle": "About these notes"
+  },
+  {
+    "page": "information/creators.html",
+    "block": "text-intro",
+    "label": "Introduction",
+    "default": "Guides, builds and videos from the Clash of Critters community.",
+    "order": 1,
+    "section": "intro",
+    "sectionTitle": "Introduction"
+  },
+  {
+    "page": "information/creators.html",
+    "block": "text-featured-title",
+    "label": "Heading · Featured creators",
+    "default": "Featured creators",
+    "order": 2,
+    "section": "featured",
+    "sectionTitle": "Featured creators"
+  },
+  {
+    "page": "information/creators.html",
+    "block": "text-featured-intro",
+    "label": "Text · Explore selected Clash of Critters videos and support the people behind them.",
+    "default": "Explore selected Clash of Critters videos and support the people behind them.",
+    "order": 3,
+    "section": "featured",
+    "sectionTitle": "Featured creators"
+  },
+  {
+    "page": "information/creators.html",
+    "block": "text-about-title",
+    "label": "Heading · About our creators",
+    "default": "About our creators",
+    "order": 4,
+    "section": "about",
+    "sectionTitle": "About our creators"
+  },
+  {
+    "page": "information/creators.html",
+    "block": "text-about-details",
+    "label": "Text · Videos remain on their creators’ channels. Creator opinions and recommendations are credited to",
+    "default": "Videos remain on their creators’ channels. Creator opinions and recommendations are credited to their authors.",
+    "order": 5,
+    "section": "about",
+    "sectionTitle": "About our creators"
   }
 ]

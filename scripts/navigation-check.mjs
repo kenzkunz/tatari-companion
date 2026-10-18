@@ -8,7 +8,7 @@ const classes=new Set(),nav={dataset:{},classList:{toggle(name){if(classes.has(n
 const attributes={},menu={...listeners(),setAttribute:(name,value)=>attributes[name]=value};
 const document={...listeners(),getElementById:id=>id==='navigation'?nav:null,querySelector:()=>menu};
 const source=(await readFile('dist/navigation.mjs','utf8')).replace(/^import .*;\s*$/gm,'').replace(/^void import\(.*\);\s*$/gm,'');
-for(let i=0;i<2;i++)vm.runInNewContext(source,{document});
+for(let i=0;i<2;i++)vm.runInNewContext(source,{document,location:{hostname:'example.com'}});
 assert.equal(menu.events.click.length,1,'Multiple module URLs must not install multiple click handlers');
 const click=()=>menu.events.click[0]();click();assert(classes.has('open'));assert.equal(attributes['aria-expanded'],'true');click();assert(!classes.has('open'));assert.equal(attributes['aria-expanded'],'false');
 click();document.events.keydown[0]({key:'Escape'});assert(!classes.has('open'));

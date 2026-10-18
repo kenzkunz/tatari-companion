@@ -1,0 +1,43 @@
+{
+  "retrieved_on": "2026-10-17",
+  "channel": "https://www.youtube.com/@artiar-dislyte4093",
+  "avatar_source": "https://yt3.googleusercontent.com/5kK0HPYzn5KUlpfai6vHzbNZbdbvj2qRj2G2ACXdmFPJUDkYSwXHdMQxnPFqghlw-2O-8qOmlg=s900-c-k-c0x00ffffff-no-rj",
+  "assets": [
+    {
+      "file": "dist/assets/creators/artiar.jpg",
+      "sha256": "fbba049940cdb793249ac636bcf746e7f0a89cfd91b34b43626da458e6915d92"
+    },
+    {
+      "file": "dist/assets/creators/artiar-6jEz3pvPZqg.jpg",
+      "sha256": "c766a2c59ad574139554792b6d3ffd65664020739e6e9a78dddc4e1789cbcb6b"
+    },
+    {
+      "file": "dist/assets/creators/artiar-k6Qdc16tnqE.jpg",
+      "sha256": "b77b0a8ebfb250502c1eeb0e3ef86c557a5ebccf53c1c8eefe3196fc89cdc2ae"
+    },
+    {
+      "file": "dist/assets/creators/artiar-xAUCG9JAjGY.jpg",
+      "sha256": "f0a61afcffe0896ad8ddf624e07d8a4f0530e4741123a8d1d951195aa61c32dc"
+    }
+  ],
+  "videos": [
+    {
+      "title": "UPDATED Evolution Priority Guide (T1 → T3) | What To Evolve FIRST October | Clash Of Critters",
+      "url": "https://www.youtube.com/watch?v=6jEz3pvPZqg",
+      "topic": "Evolution",
+      "thumbnail": "assets/creators/artiar-6jEz3pvPZqg.jpg"
+    },
+    {
+      "title": "Horde Invasion S3: NEW Bosses, Attack Mechanics & Wave Order + Butterfly Lv7 Dmg | Clash Of Critters",
+      "url": "https://www.youtube.com/watch?v=k6Qdc16tnqE",
+      "topic": "Horde Invasion",
+      "thumbnail": "assets/creators/artiar-k6Qdc16tnqE.jpg"
+    },
+    {
+      "title": "Sparkle Skin PERMANENT ? How To Farm Glitter Fruit With This Spa System ? | Clash Of Critters",
+      "url": "https://www.youtube.com/watch?v=xAUCG9JAjGY",
+      "topic": "Sparkly Spa",
+      "thumbnail": "assets/creators/artiar-xAUCG9JAjGY.jpg"
+    }
+  ]
+}

@@ -8,7 +8,7 @@ for(const folder of ['dist/events','dist/information']){
  for(const name of names.filter(n=>n.endsWith('.html'))){const text=await readFile(folder+'/'+name,'utf8');if(!text.includes('public-info-page'))continue;count++;
   assert(normalizeChrome(text).includes(normalizeChrome(header)),name+' has stale or missing navbar');assert(text.includes(footer),name+' has stale or missing footer');
   for(const file of ['home.css','footer.css','guides.css','information-template.css','navigation.mjs'])assert(text.includes('/'+file),name+' missing '+file);
-  assert(text.includes('class="guide-paper"'));assert(text.includes('class="guide-index"'));assert(text.includes('data-site-banner'));
+  assert(text.includes('class="guide-paper"'));if(!text.includes('community-page'))assert(text.includes('class="guide-index"'));else assert(!text.includes('class="guide-index"'));assert(text.includes('data-site-banner'));
   const ids=[...text.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length,name+' duplicated element ID');
   const blocks=[...text.matchAll(/data-site-content="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(blocks).size,blocks.length,name+' duplicated content block');
  }

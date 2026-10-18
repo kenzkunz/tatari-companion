@@ -1,3 +1,5 @@
+import {installCommunity} from './admin-community.mjs';
+import {communityPreview} from './community-client.mjs';
 import {installSiteData} from './admin-site-data.mjs?v=custom-dialogs1';
 import {installUIDListing} from './admin-uid-listing.mjs?v=custom-dialogs1';
 import './admin-version-audit.mjs';
@@ -10,6 +12,7 @@ const $=id=>document.getElementById(id),el=(tag,text)=>{const n=document.createE
 let state={blocks:[],requests:[],listings:[],audit:[]},active=null,busy=false;
 const uidListings=installUIDListing({supabase,status,onChange:refreshAudit});
 const siteData=installSiteData({supabase,status,onChange:refreshAudit});
+const community=installCommunity({status});
 const visual=installVisualEditor($('content-text'));
 const media=installMedia({getActive:()=>active,getPage:()=>$('page-select').value,run,status});
 const root=new URL('.',import.meta.url);
@@ -34,8 +37,8 @@ function lists(){
  $('pending-count').textContent=state.requests.filter(r=>r.status==='pending').length;$('page-count').textContent=new Set(state.blocks.map(b=>b.page_key)).size;
 }
 async function refreshAudit(){try{const next=await rpc('load');state.audit=next.audit;lists();}catch{status('Saved. Refresh Activity history to see the latest change.');}}
-async function load(){const page=$('page-select').value,block=$('block-select').value;state=await rpc('load');const pages=[...new Set(state.blocks.map(b=>b.page_key))];$('page-select').replaceChildren(...pages.map(p=>{const o=el('option',p.replace('events/','').replace('.html','').replaceAll('-',' ').replace(/\b\w/g,c=>c.toUpperCase()));o.value=p;return o;}));if(pages.includes(page))$('page-select').value=page;choosePage();if(state.blocks.some(b=>b.page_key===$('page-select').value&&b.block_key===block)){$('block-select').value=block;selectBlock();}lists();await Promise.allSettled([uidListings.refresh(),media.refresh(),siteData.refresh()]);}
-async function gate(){const user=await currentUser();$('admin-tools').hidden=true;$('admin-gate').hidden=false;if(!user){$('gate-message').textContent='Sign in with your administrator account.';$('admin-login').hidden=false;return;}const {data,error}=await supabase.rpc('is_site_admin');if(error){$('gate-message').textContent='Admin database setup is not active yet. Apply migration 009 and sign in again.';return;}if(data!==true){$('gate-message').textContent='This account does not have administrator access.';$('admin-login').hidden=true;return;}$('admin-gate').hidden=true;status('Loading dashboard…');await load();$('admin-tools').hidden=false;status('Dashboard ready.');}
+async function load(){const page=$('page-select').value,block=$('block-select').value;state=await rpc('load');const pages=[...new Set(state.blocks.map(b=>b.page_key))];$('page-select').replaceChildren(...pages.map(p=>{const o=el('option',p.replace('events/','').replace('.html','').replaceAll('-',' ').replace(/\b\w/g,c=>c.toUpperCase()));o.value=p;return o;}));if(pages.includes(page))$('page-select').value=page;choosePage();if(state.blocks.some(b=>b.page_key===$('page-select').value&&b.block_key===block)){$('block-select').value=block;selectBlock();}lists();await Promise.allSettled([uidListings.refresh(),media.refresh(),siteData.refresh(),community.refresh()]);}
+async function gate(){if(communityPreview&&new URL(location.href).searchParams.get('community')==='1'){$('admin-gate').hidden=true;$('admin-tools').hidden=false;await community.startPreview();status('Local community preview · changes stay in this browser.');return;}const user=await currentUser();$('admin-tools').hidden=true;$('admin-gate').hidden=false;if(!user){$('gate-message').textContent='Sign in with your administrator account.';$('admin-login').hidden=false;return;}const {data,error}=await supabase.rpc('is_site_admin');if(error){$('gate-message').textContent='Admin database setup is not active yet. Apply migration 009 and sign in again.';return;}if(data!==true){$('gate-message').textContent='This account does not have administrator access.';$('admin-login').hidden=true;return;}$('admin-gate').hidden=true;status('Loading dashboard…');await load();$('admin-tools').hidden=false;status('Dashboard ready.');}
 $('admin-login').onclick=()=>login('discord').catch(e=>status(e.message));
 $('page-select').onchange=choosePage;$('block-select').onchange=selectBlock;$('queue-filter').onchange=lists;
 $('save-draft').onclick=()=>run(async()=>{visual.sync();await rpc('save',{page:active.page_key,block:active.block_key,revision:active.revision,text:validateText($('content-text').value)});await load();status('Draft saved. Public text is unchanged.');});

@@ -14,3 +14,6 @@ void import('./account-nav.mjs?v=switch1');
 void import('./site-content.mjs');
 
 void import('./site-footer.mjs?v=site-data5');
+
+// Community publishing is reviewed locally without touching hosted entries.
+if(['localhost','127.0.0.1','[::1]'].includes(location.hostname))for(const a of document.querySelectorAll('a[href*="/information/"]'))if(/\/(redeem-codes|patch-notes|creators)\.html$/.test(a.pathname))a.search='?preview=1';
