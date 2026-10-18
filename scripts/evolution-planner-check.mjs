@@ -26,3 +26,14 @@ await assert.rejects(()=>finishEvolution(catalog,'actor-one',goalToFinish,{load:
 console.log('Passed finish evolution: fresh roster merge, tier-only update, preserved settings, expected revision, repeat/no-downgrade and failure handling (offline).');
 
 const nav=await readFile('components/public-navbar.html','utf8');assert(nav.includes('<a href="/evolution-planner.html">Evolution Trial Planner</a>'));assert(!nav.includes('aria-disabled="true">Evolution Trial</span>'));
+
+const {finishMinimums}=await import('../dist/evolution-planner-model.mjs');
+const minimum=finishMinimums(catalog.units.find(u=>u.id===13),4);
+assert.throws(()=>completedGoalRoster(catalog,roster,goalToFinish),/at least .* stars/);
+assert.throws(()=>completedGoalRoster(catalog,latest,goalToFinish,{stars:minimum.stars,food:0,copies:0}),/food level/);
+const actual={stars:minimum.stars,food:minimum.food,copies:0};
+const confirmed=completedGoalRoster(catalog,roster,goalToFinish,actual);assert.equal(confirmed.units[13].tier,4);assert.equal(confirmed.units[13].stars,minimum.stars);assert.equal(confirmed.units[13].food,minimum.food);assert.deepEqual(confirmed.units[11],roster.units[11]);
+assert.throws(()=>completedGoalRoster(catalog,roster,goalToFinish,{...actual,copies:999}),/copy progress/);
+await assert.rejects(()=>finishEvolution(catalog,'actor-one',{...goalToFinish,expected:roster.units[13],settings:actual},{load:async()=>({roster:latest,revision:19}),save:async()=>{throw Error('Unexpected save')}}),/changed on another device/);
+const optionalUnit=catalog.units.find(u=>u.forms.some(f=>f.trial?.quests?.some(q=>q.condition.includes(' or ed.ConditionX.PetFeedLevelRank'))));assert(optionalUnit);assert(finishMinimums(optionalUnit,4).food<16);
+console.log('Passed finish minimums, explicit actual values, invalid copies, selected-unit conflicts and optional food alternatives (offline).');

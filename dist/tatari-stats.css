@@ -29,3 +29,5 @@
 .stats-account-settings{display:flex;flex-wrap:wrap;gap:4px 18px;margin-bottom:14px;padding:10px 12px;border:1px solid #d6c6a3;border-radius:9px;background:#fff7dc;font:12px/1.5 Poppins,sans-serif}.stats-account-settings label{display:flex;gap:8px;align-items:center;min-height:36px;cursor:pointer}.stats-account-settings input{width:18px;height:18px;accent-color:#d99300}.stats-account-settings small,.stats-account-settings>a{flex-basis:100%;font-size:12px}.stats-account-settings label:has(input:disabled){opacity:.65}.build-panel button:disabled,.build-panel select:disabled{opacity:.65;cursor:default}.stats-basis{text-align:center;font:12px/1.5 Poppins,sans-serif;margin:0 0 14px}.battle-selector{flex-wrap:wrap}.battle-selector select{max-width:100%}.stats-tool .build-field-grid input[type=number]{height:56px}
 
 @media(min-width:851px){.comparison-mode .result-pet{margin-top:20px}}
+
+.comparison-mode .build-editors{grid-template-columns:repeat(2,minmax(0,1fr))}.comparison-mode .build-panel{min-width:0}.comparison-mode .build-panel fieldset{min-width:0}@media(max-width:360px){.comparison-mode .build-editors{grid-template-columns:minmax(0,1fr)}}

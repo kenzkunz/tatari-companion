@@ -27,7 +27,7 @@ const full=structuredClone(legacy);full.units[1].copies=9;assert.equal(validateR
 
 await import('./my-tatari-db-check.mjs');
 
-const ui=await readFile('dist/my-tatari.mjs','utf8');assert(ui.includes("if(!user){document.querySelector('.roster-local-note').textContent='Log in to manage your Tatari'"));assert(ui.includes("if(!ready||saving||actor==='preview')return false"));console.log('Passed login-required editing on localhost and production, without guest editing.');
+const ui=await readFile('dist/my-tatari.mjs','utf8');assert(ui.includes("$('roster-login').hidden=!!user"));assert(ui.includes("if(!ready||saving||actor==='preview')return false"));console.log('Passed login-required editing on localhost and production, without guest editing.');
 
 for(const page of ['account','my-badges','my-tatari']){const html=await readFile('dist/'+page+'.html','utf8');for(const route of ['account','my-badges','my-tatari'])assert(html.includes('href="/'+route+'.html"'));assert.equal((html.match(/aria-current="page"/g)||[]).length,1)}
 assert(!(await readFile('dist/account.html','utf8')).includes('id="account-dojos"'));
