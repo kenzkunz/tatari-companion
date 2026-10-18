@@ -17,7 +17,7 @@
 .navbar.navbar .brand img{width:104px;max-height:46px}
 .navbar.navbar #navigation{justify-content:center;gap:clamp(12px,2vw,38px)}
 .navbar.navbar #navigation>a,.navbar.navbar #navigation>details>summary{font-size:clamp(14px,1.1vw,20px);line-height:normal}
-.navbar.navbar .account-nav{font-family:Critters,system-ui,sans-serif;font-size:clamp(16px,1.5vw,22.4px);line-height:normal;padding:5px;min-height:0}
+.navbar.navbar .account-nav{font-family:Critters,system-ui,sans-serif;font-size:clamp(16px,1.5vw,22.4px);line-height:normal;padding:5px;min-height:0;border:0;background:transparent;color:#fff;text-transform:uppercase;cursor:pointer;flex-shrink:0;margin-left:auto}.navbar.navbar .account-nav:hover{color:#ffcf40}
 .navbar.navbar .languages img{width:27px;height:27px}
 @media(min-width:901px) and (max-width:1100px){.navbar.navbar{gap:14px}.navbar.navbar .brand{flex-basis:84px;width:84px}.navbar.navbar .brand img{width:84px}.navbar.navbar #navigation{gap:10px}}
 @media(max-width:900px){.navbar.navbar{min-height:66px;padding:10px 16px;border-radius:18px;gap:8px}.navbar.navbar .brand{flex-basis:100px;width:100px;margin-right:auto}.navbar.navbar .brand img{width:100px}.navbar.navbar #navigation{align-items:stretch;gap:4px}.navbar.navbar #navigation>a,.navbar.navbar #navigation>details>summary{font-size:20px}.navbar.navbar .menu-toggle{font-size:18px;line-height:normal}}
