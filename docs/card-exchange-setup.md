@@ -30,3 +30,15 @@ Until 023 is applied, the live page reports that the database update is required
 Rollback: revert the frontend commit first. Keep the exchange tables/data until a backup is verified; do not drop messages or requests during routine rollback.
 
 The two-option Trade Setting filter uses All Rarity as the unrestricted listing view and Equal Rarity to show equal-rarity partners. The personal setting and listing labels map Any Rarity to All Rarity and Same Rarity to Equal Rarity; stored preference values remain unchanged.
+
+## Foil variants (migration 040)
+
+Apply `040_album_foil_variants.sql` before releasing the updated album and exchange pages. Existing quantities and requests default to Normal; no copies are added. `has_foil` marks ownership inside the combined quantity. `trade_foil` is the selected advertised variant, and requires at least two total copies and foil ownership. One normal plus one foil therefore permits offering either variant; the owner chooses which. The marker does not claim a separate foil count.
+
+A zero quantity clears foil ownership, and fewer than two total copies clears the foil offer. Public albums expose these fields only through the existing public/trading visibility rule. The authenticated metadata RPC cannot edit someone else's inventory. Raw inventory writes remain unavailable to clients.
+
+`exchange_search_variants` adds independent `p_receive_foil` / `p_give_foil` flags. False means Normal, true means Foil. The card-search filters run before pagination. Foil collectors can need a foil even when their combined quantity is nonzero. Normal missing-card logic still follows ordinary album ownership. The old listing RPCs retain Normal defaults for older clients.
+
+Requests retain `give_foil` / `receive_foil` from the sender perspective and reverse them for the recipient. Variant choices are part of pending-request identity. Server-generated trade, gift and gift-request messages identify both card number and variant. Stars, gold availability, mutual preferences, blocks, attempts and existing expiry rules are preserved. These are coordination requests and do not move or reserve game cards.
+
+Run `node scripts/foil-db-check.mjs` for offline Postgres coverage. No production migration or deployment is performed by this check.

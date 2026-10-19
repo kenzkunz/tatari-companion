@@ -17,3 +17,10 @@ assert(!inventoryStatus(normal,2,false,'No Trading').tradeable);const showcase=a
 console.log('Passed exact Discord template, separate gold rows, share links, separate free cards, low-star filtering and one-copy reserve.');
 
 assert(!plain.includes(' : —'));assert(!withGold.includes(' : —'));assert(!free.includes(' : —'));console.log('Passed omission of empty normal, gold and free rarity rows.');
+
+const foilInventory=new Map([[1,{quantity:2,has_foil:true,trade_foil:true}],[6,{quantity:2,has_foil:true,trade_foil:true}]]);
+const foilShare=albumShareText(shareData,foilInventory,shareProfile,'Any Rarity',3,false,'',{showFoil:true});
+assert(foilShare.includes('1 (Foil)'));assert(foilShare.includes('Foil Owned'));assert(foilShare.includes('Foil For Trade**\n1'));assert(!foilShare.includes('Foil For Trade**\n1, 6'),'Gold exclusion also applies to foil offers');
+foilInventory.set(1,{quantity:1,has_foil:true,trade_foil:false});assert(!albumShareText(shareData,foilInventory,shareProfile,'Any Rarity',3,false,'',{showFoil:true}).includes('1 (Foil)'));
+assert(albumShareText(shareData,foilInventory,shareProfile,'No Trading',3,false,'',{showFoil:true}).includes('Foil owned: 1, 6'));
+console.log('Passed foil share labels, one combined reserve, gold exclusion and collection-only sharing.');
