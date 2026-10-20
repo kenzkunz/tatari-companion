@@ -18,3 +18,5 @@ const sql=await readFile('supabase/021_admin_site_data.sql','utf8');assert(sql.i
 console.log('Passed all 10 source catalogs, locked derived fields, anchor-aware rotations, duplicate-event rejection, bounds, dates, safe URLs, prototype defense and recomputed hourly values. SQL checks are structural; use rollback tests for database behavior.');
 
 await import('./community-check.mjs');
+
+await import('./announcement-check.mjs');

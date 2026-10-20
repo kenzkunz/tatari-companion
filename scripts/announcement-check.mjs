@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {PGlite} from '@electric-sql/pglite';
+const db=new PGlite();
+await db.exec(`create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;create function public.is_site_admin() returns boolean language sql as $$select coalesce(auth.uid()='00000000-0000-0000-0000-000000000001'::uuid,false)$$;create table public.event_match_definitions(event_name text,anchor_start timestamptz);create table public.event_match_plans(event_name text,event_start timestamptz);create table public.site_admin_audit(actor uuid,action text,target text,details jsonb);insert into auth.users values('00000000-0000-0000-0000-000000000001');`);
+const original=(await readFile('supabase/021_admin_site_data.sql','utf8')).split('-- Internal helpers')[0];await db.exec(original+'commit;');
+await db.exec(await readFile('supabase/041_site_announcements.sql','utf8'));
+const call=(action,payload={})=>db.query('select public.admin_site_data($1,$2::jsonb) as value',[action,JSON.stringify(payload)]);
+await assert.rejects(call('load'),/Administrator/);
+let publicRow=(await db.query("select public.published_site_data('announcement') as value")).rows[0].value;assert.equal(publicRow.values.visibility,'Visible');
+await db.query("select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-000000000001',false)");
+const values={...publicRow.values,visibility:'Hidden'};
+await assert.rejects(call('save',{key:'announcement',revision:0,values:{...values,extraUrl:'javascript:alert(1)'}}),/HTTPS/);
+await call('save',{key:'announcement',revision:0,values});
+assert.equal((await db.query("select public.published_site_data('announcement') as value")).rows[0].value.values.visibility,'Visible');
+await assert.rejects(call('publish',{key:'announcement',revision:0,reason:'Test'}),/changed/);
+await call('publish',{key:'announcement',revision:1,reason:'Disable announcement test'});
+assert.equal((await db.query("select public.published_site_data('announcement') as value")).rows[0].value.values.visibility,'Hidden');
+assert.equal((await call('history',{key:'announcement'})).rows[0].value.length,2);
+await db.exec(await readFile('supabase/041_site_announcements.sql','utf8'));
+assert.equal((await db.query("select revision from site_data_records where key='announcement'")).rows[0].revision,2);
+await db.close();console.log('Announcement database passed: admin gate, safe links, draft isolation, stale revision rejection, publish/hide, history and repeat migration preservation.');
+

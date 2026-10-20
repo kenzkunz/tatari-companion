@@ -1,4 +1,5 @@
 import './image-cache-register.mjs';
+void import('./site-announcement.mjs');
 const nav=document.getElementById('navigation'),menu=document.querySelector('.menu-toggle');
 if(nav&&menu&&nav.dataset.navigationReady!=='true'){
 nav.dataset.navigationReady='true';
