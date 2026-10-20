@@ -1,5 +1,5 @@
 import {SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY} from './supabase-config.mjs';
-import {baselines} from './site-data-baselines.mjs';
+import {baselines} from './site-data-baselines.mjs?v=announcement1';
 import {applySourceValues,guideDerived} from './site-data-model.mjs?v=site-data5';
 const cache=new Map(),root=new URL('.',import.meta.url);
 export function publishedData(key){if(!cache.has(key))cache.set(key,(async()=>{const abort=new AbortController(),timer=setTimeout(()=>abort.abort(),2500);try{const response=await fetch(new URL('rest/v1/rpc/published_site_data',SUPABASE_URL),{method:'POST',headers:{apikey:SUPABASE_PUBLISHABLE_KEY,'Content-Type':'application/json'},body:JSON.stringify({p_key:key}),signal:abort.signal});if(!response.ok)return null;const record=await response.json();return record&&record.baseline===baselines[key]?record:null;}catch{return null;}finally{clearTimeout(timer)}})());return cache.get(key);}
