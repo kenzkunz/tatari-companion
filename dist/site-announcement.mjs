@@ -1,4 +1,4 @@
-import {publishedData} from './site-data.mjs?v=announcement1';
+import {publishedData} from './site-data.mjs?v=announcement2';
 import {renderAnnouncement} from './announcement-view.mjs';
 const header=document.querySelector('header:has(.navbar),header.navbar')??document.querySelector('.navbar')?.closest('header');
 if(header&&!document.body.classList.contains('admin-app')){
