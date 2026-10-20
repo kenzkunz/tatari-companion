@@ -1,5 +1,5 @@
 import {publishedData} from './site-data.mjs?v=announcement2';
-import {renderAnnouncement} from './announcement-view.mjs?v=scroll1';
+import {renderAnnouncement} from './announcement-view.mjs?v=ticker1';
 const header=document.querySelector('header:has(.navbar),header.navbar')??document.querySelector('.navbar')?.closest('header');
 if(header&&!document.body.classList.contains('admin-app')){
  const record=await publishedData('announcement');
