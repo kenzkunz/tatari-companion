@@ -1,5 +1,5 @@
 import {readTradePreferences,writeTradePreferences,watchTradePreferences} from './exchange-preferences.mjs';
-import {createAlbumPage} from './album-page-view.mjs?v=foil1';
+import {createAlbumPage} from './album-page-view.mjs?v=foil-shine2';
 import {playerShareLink as playerLink} from './player-model.mjs?v=share-preview1';
 import {supabase,currentUser} from './auth-client.mjs';
 import {albumShareText} from './album-model.mjs?v=foil1';

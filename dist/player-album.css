@@ -72,3 +72,26 @@
 .foil-badge{position:absolute;top:8px;right:8px;background:#ede1ff;color:#472272;border:2px solid #7952a4;border-radius:7px;padding:3px 7px;font:600 12px Poppins,sans-serif}.foil-controls{margin:12px 0;border:1px solid #cdbb8e;border-radius:10px;padding:10px}.foil-controls label{display:flex;align-items:center;gap:8px;min-height:44px;font-size:13px}.foil-controls input{width:20px;height:20px}.foil-controls .caption{margin:6px 0}
 
 .foil-controls input{flex:none;min-height:20px;padding:0}.foil-controls label:has(input:disabled){opacity:.6;cursor:not-allowed}.foil-badge{white-space:nowrap}
+
+/* Foil is an ownership variant independent of Gold. These recovered flashcard
+   textures are composited for the web; the original material binding is unverified. */
+.public-card.has-foil,.card-detail-frame.has-foil{isolation:isolate}
+.card-detail-frame{position:relative;max-width:210px;width:60%;margin:0 auto 18px}
+.card-detail-frame #card-detail-art{width:100%;max-width:none;margin:0}
+.foil-overlay{position:absolute;inset:0;overflow:hidden;border-radius:6%;pointer-events:none;z-index:1;mix-blend-mode:screen}
+.foil-prism,.foil-pattern,.foil-glint{position:absolute;inset:0;pointer-events:none}
+/* Show the recovered packed-color mask as a visible holographic layer rather
+   than reducing it to luminance, which loses its colored border and motifs. */
+.foil-prism{background:url('./album-data/ui/foil/mask.png') center/100% 100%;mix-blend-mode:screen;opacity:.34;filter:saturate(.75)}
+.foil-pattern{background:url('./album-data/ui/foil/noise.png') center/100% 100%;mix-blend-mode:screen;opacity:.55}
+.foil-glint{inset:auto;left:9%;top:20%;width:27%;aspect-ratio:1;background:url('./album-data/ui/foil/star.png') center/contain no-repeat;mix-blend-mode:screen;opacity:0;animation:foil-glimmer 5.4s ease-in-out infinite;animation-delay:calc(var(--sparkle-index)*-.87s)}
+.foil-glint:nth-of-type(4){left:65%;top:12%;width:23%}
+.foil-glint:nth-of-type(5){left:58%;top:64%;width:31%}
+.foil-glint:nth-of-type(6){left:16%;top:77%;width:24%}
+.foil-glint:nth-of-type(7){left:42%;top:40%;width:20%}
+.foil-glint:nth-of-type(8){left:75%;top:43%;width:19%}
+.foil-overlay::after{content:'';position:absolute;inset:-30% -90%;background:linear-gradient(115deg,transparent 38%,#96ebff11 43%,#fff9 49%,#ffaaff44 53%,transparent 60%);transform:translateX(-40%);animation:foil-sweep 6s ease-in-out infinite;opacity:.45}
+.public-card .card-stars,.public-card .card-name,.public-card .card-state,.public-card .foil-badge{z-index:2}
+@keyframes foil-sweep{0%,20%{transform:translateX(-40%);opacity:0}35%{opacity:.45}65%{opacity:.45}80%,100%{transform:translateX(40%);opacity:0}}
+@keyframes foil-glimmer{0%,10%,65%,100%{opacity:0;transform:scale(.35) rotate(-12deg)}28%{opacity:.95;transform:scale(1.12) rotate(0)}43%{opacity:.55;transform:scale(.8) rotate(8deg)}}
+@media(prefers-reduced-motion:reduce){.foil-glint,.foil-overlay::after{animation:none}.foil-glint{opacity:.55;transform:none}.foil-overlay::after{transform:translateX(0);opacity:.18}}
