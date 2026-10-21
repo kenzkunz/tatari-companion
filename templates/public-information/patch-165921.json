@@ -73,11 +73,6 @@
               "Voltkit, Hootlet, Momopo, Glowfly and Poakie"
             ]
           ]
-        },
-        {
-          "id": "limits",
-          "type": "text",
-          "text": "The records confirm additions, not their availability on a particular account or release date. Cosmetic records are separate from saved Glitter ownership."
         }
       ]
     },
@@ -88,12 +83,12 @@
         {
           "id": "halloween",
           "type": "text",
-          "text": "Trick-or-Treat reward configuration and the strings “Trick-or-Treat Time!” and “Halloween Fun!” are present. The event dates and exact replacement schedule are not established, so the site calendar has not been rescheduled from this evidence alone."
+          "text": "Trick-or-Treat reward configuration and the strings “Trick-or-Treat Time!” and “Halloween Fun!” are present. The event dates and exact replacement schedule remain unknown, so the site calendar has not been updated yet."
         },
         {
           "id": "battles",
           "type": "text",
-          "text": "All 429 new and 404 changed battle setups are now mapped and included in the website’s battle dataset. The changed setups affect 404 stages in chapters 24–29. Of the new files, 404 preserve earlier setups under new references for later chapters; 25 contain Season 3 Horde waves. Enemy level, star and ATK/DEF/HP multiplier records are unchanged. The stage setup preview is hidden for now. The battle dataset is retained; encounter effects are not connected to the planner’s buff/debuff tags. This updates encounter data, not battle-simulation accuracy."
+          "text": "All 429 new and 404 changed battle setups are now mapped and included in the website’s battle dataset. The changed setups affect 404 stages in chapters 24–29. Of the new files, 404 preserve earlier setups under new references for later chapters; 25 contain Season 3 Horde waves. Enemy level, star and ATK/DEF/HP multiplier records are unchanged."
         }
       ]
     },
@@ -841,7 +836,7 @@
         {
           "id": "tooltips",
           "type": "text",
-          "text": "86 existing Horde detail entries changed, but many edits only correct labels, formatting, historical comparison values or buff/nerf arrows. Those display edits must not be counted as additional combat changes. Bonobean’s new active skill illustrates why this matters: current minimum/maximum interval fields are 22/26 seconds, while its comparison metadata lists 12/16."
+          "text": "86 existing Horde detail entries changed, but many edits only correct labels, formatting, historical comparison values or buff/nerf arrows. Those display edits must not be counted as additional combat changes."
         }
       ]
     },
@@ -856,9 +851,8 @@
             "Goldrush weekly giftbox limit",
             "Boss Challenge merge changes",
             "Halloween event dates and replacement timing",
-            "Exact match to the live server payload",
-            "Meaning and consumer binding of new Horde parameters 39 (200) and 40 (5)",
-            "Selection of the official Horde parameter override and unusual Shuffle edge cases"
+            "Exact match to the live server data",
+            "Meaning of new Horde parameters 39 and 40"
           ]
         }
       ]
