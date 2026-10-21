@@ -19,3 +19,5 @@ console.log('Passed contact validation and default-hidden independent sharing fl
 await import('./my-tatari-check.mjs');
 
 await import('./evolution-planner-check.mjs');
+
+await import('./roster-bulk-check.mjs');

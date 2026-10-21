@@ -13,3 +13,19 @@ export function hasGlitter(unit,tier,catalog){return !!catalog.portraits?.some(p
 // Pet.lua UnitQuality 2 families (IDs 1–10) begin at display tier 0.
 // Keep stored evolution IDs unchanged for portraits, stats and existing saves.
 export function rosterTier(unit,evolution){return evolution-(unit.id>=1&&unit.id<=10?1:0)}
+
+// Evolution trials define the minimum stars for reaching a form, not a maximum:
+// players can keep raising stars without completing the next evolution trial.
+export function tierStarRange(unit,tier){if(!unit.forms.some(f=>f.evolution===tier))throw Error('Unsupported tier');return {min:Math.max(1,...unit.forms.filter(f=>f.evolution<tier).map(f=>f.trial?.requiredStars??1)),max:84}}
+export function tierFoodMinimum(unit,tier){if(!unit.forms.some(f=>f.evolution===tier))throw Error('Unsupported tier');let food=unit.feedingStages[0].stage;for(const f of unit.forms.filter(f=>f.evolution<tier))for(const q of f.trial?.quests??[]){const m=(q.condition||'').replaceAll('\\','').match(/^ed\.ConditionX\.PetFeedLevel(?:Rank)?\((\d+)\)>=(\d+)$/);if(m&&Number(m[1])===unit.id)food=Math.max(food,Number(m[2]))}if(!unit.feedingStages.some(f=>f.stage===food))throw Error('Food minimum unavailable');return food}
+export function bulkTierPlan(catalog,roster,ids,displayTier,{minimumFood=true}={}){
+ if(!Number.isInteger(displayTier)||displayTier<0||displayTier>4)throw Error('Choose a tier from 0 to 4');
+ const next=structuredClone(roster),changes=[],skipped=[];
+ for(const id of new Set(ids)){const unit=catalog.units.find(u=>u.id===Number(id)),before=roster.units[id];if(!unit||!before?.owned){skipped.push({id,reason:'Not owned'});continue}
+ const form=unit.forms.find(f=>rosterTier(unit,f.evolution)===displayTier);if(!form){skipped.push({id,name:unit.forms[0].name.en,reason:'Tier '+displayTier+' unavailable'});continue}
+ const range=tierStarRange(unit,form.evolution),stars=Math.max(before.stars,range.min),after={...before,tier:form.evolution,stars,food:minimumFood?Math.max(before.food,tierFoodMinimum(unit,form.evolution)):before.food,copies:stars===before.stars?before.copies:0};
+ if(before.tier===after.tier&&before.stars===after.stars&&before.food===after.food){skipped.push({id,name:form.name.en,reason:'Already set'});continue}
+ next.units[id]=after;changes.push({id,name:form.name.en,before,after,fromTier:rosterTier(unit,before.tier),toTier:displayTier});
+ }
+ validateRoster(next,catalog);return {next,changes,skipped};
+}
