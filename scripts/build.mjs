@@ -1,4 +1,5 @@
 import {generateImageWorker} from './generate-image-worker.mjs';
+import {shareThumbnail} from './share-thumbnail.mjs';
 import {cp, readdir, readFile, writeFile, mkdir, rm} from 'node:fs/promises';
 import {resolve, join, relative} from 'node:path';
 export function normalizeBase(value = '/') {
@@ -23,6 +24,7 @@ export async function build(base = '/', destination = '_site') {
       text = text.replace(/(["'`])\/(?!\/)(?=[A-Za-z0-9#?]|["'`])/g, '$1' + base);
       if (entry.name.endsWith('.css')) text = text.replace(/url\(\/(?!\/)/g, 'url(' + base);
       if (entry.name.endsWith('.html')) {
+        text = shareThumbnail(text);
         const page = relative(out, file).replaceAll('\\','/');
         text = text.replace(/href=(["'])#/g, 'href=$1' + base + page + '#');
         // Also makes relative URLs and fragment navigation safe on nested aliases and 404s.
