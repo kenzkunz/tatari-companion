@@ -829,7 +829,7 @@
             "All eight deployment/upgrade costs, death refunds, rank stat multipliers and skill unlock indexes are unchanged.",
             "Energy recovery is unchanged: start at 400, initially gain 25 every 5 seconds, decrease the periodic gain by 5 every 90 seconds, and gain 4 per normal kill or 100 per boss kill.",
             "The rank, season-rank and wave reward tables and the balance table are unchanged.",
-            "Horde’s configured level reference remains 500. Normal account-level inputs and Supabase saves accept 1–3,600.",
+            "Horde’s configured level reference remains 500. Normal account-level inputs accept 1–3,600.",
             "New parameters 39 and 40 remain unknown."
           ]
         },
