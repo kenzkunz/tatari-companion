@@ -1,0 +1,189 @@
+{
+  "type": "information",
+  "slug": "patch-165921",
+  "title": "October update: confirmed data findings",
+  "lead": "Checked 21 October 2026 against patch 165921. These are companion-site findings from recovered configuration data, separate from official patch notes.",
+  "sections": [
+    {
+      "id": "status",
+      "title": "What has been checked",
+      "blocks": [
+        {
+          "id": "evidence",
+          "type": "info",
+          "title": "Useful patch data; live identity unverified.",
+          "text": "Patch 165921 contains the additions below. Its exact relationship to the live server payload has not been established. Unchanged website datasets are not automatically verified for this patch."
+        },
+        {
+          "id": "scope",
+          "type": "text",
+          "text": "The stats calculator and My Tatari now support recorded account levels 1–3,600. The Horde / Goldrush calculator remains a fixed level-500 comparison. Existing values through level 2,400 match the previous export exactly."
+        }
+      ]
+    },
+    {
+      "id": "tatari",
+      "title": "Bonobean and account levels",
+      "blocks": [
+        {
+          "id": "bonobean",
+          "type": "text",
+          "text": "Bonobean is linked to UnitID 68. Its Horde configuration includes two passive skills (6891 and 6892) and one active skill (6893). This confirms the records exist; detailed skill behavior and complete artwork integration are still under review."
+        },
+        {
+          "id": "coverage",
+          "type": "table",
+          "columns": [
+            "Item",
+            "Finding"
+          ],
+          "rows": [
+            [
+              "Account-level table",
+              "Extended from 2,400 to 3,600"
+            ],
+            [
+              "Existing levels 1–2,400",
+              "No change in exported element steps or stat standards"
+            ],
+            [
+              "Calculator formulas",
+              "Existing formulas retained; new levels use recorded tables, not extrapolation"
+            ],
+            [
+              "Bonobean full tool integration",
+              "Pending complete artwork, localized skill and trial review"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "horde",
+      "title": "Horde Season 3 configuration",
+      "blocks": [
+        {
+          "id": "difficulties",
+          "type": "text",
+          "text": "The S3 configuration maps to parameter set 103 and lists Difficulties 1–6. Difficulty 6 uses DefenseID 10306. The older S3 configuration listed only Difficulties 1–4."
+        },
+        {
+          "id": "records",
+          "type": "table",
+          "columns": [
+            "Difficulty",
+            "Configured defense record"
+          ],
+          "rows": [
+            [
+              "1",
+              "10301"
+            ],
+            [
+              "2",
+              "10302"
+            ],
+            [
+              "3",
+              "10303"
+            ],
+            [
+              "4",
+              "10304"
+            ],
+            [
+              "5",
+              "10305"
+            ],
+            [
+              "6",
+              "10306"
+            ]
+          ]
+        },
+        {
+          "id": "seasons",
+          "type": "disclaimer",
+          "text": "The detailed wave, chip and economy tables currently shown in the Horde guide remain Season 2 reference data. They have not been relabelled as Season 3. Specific chip numbers and Horde skill balance changes are not verified by these findings."
+        }
+      ]
+    },
+    {
+      "id": "collectibles",
+      "title": "Collectible additions",
+      "blocks": [
+        {
+          "id": "accessories",
+          "type": "text",
+          "text": "Original and color accessory variants are present for Zapup, Sparkit, Pandaroo, Cheerling, Lullely, Funglet, Taptail, Budboo, Cavyzap, Ringtail and Popa."
+        },
+        {
+          "id": "other",
+          "type": "table",
+          "columns": [
+            "Category",
+            "Additions"
+          ],
+          "rows": [
+            [
+              "Exclusive Tatari backgrounds",
+              "Five"
+            ],
+            [
+              "Chat emojis",
+              "Punchimp, Snowcub and Bonobean"
+            ],
+            [
+              "Expression bubbles",
+              "Voltkit, Hootlet, Momopo, Glowfly and Poakie"
+            ]
+          ]
+        },
+        {
+          "id": "limits",
+          "type": "text",
+          "text": "The records confirm additions, not their availability on a particular account or release date. Cosmetic records are separate from saved Glitter ownership."
+        }
+      ]
+    },
+    {
+      "id": "events",
+      "title": "Halloween and battle setup",
+      "blocks": [
+        {
+          "id": "halloween",
+          "type": "text",
+          "text": "Trick-or-Treat reward configuration and the strings “Trick-or-Treat Time!” and “Halloween Fun!” are present. The event dates and exact replacement schedule are not established, so the site calendar has not been rescheduled from this evidence alone."
+        },
+        {
+          "id": "battles",
+          "type": "text",
+          "text": "The patch contains 429 new and 404 changed StageBattle files. These counts describe files, not player-facing changes. Their chapter mapping is still under review; formation recommendations have not been recalibrated from the counts alone."
+        }
+      ]
+    },
+    {
+      "id": "pending",
+      "title": "Still unverified",
+      "blocks": [
+        {
+          "id": "unknowns",
+          "type": "list",
+          "items": [
+            "Goldrush weekly giftbox limit",
+            "Horde chip balance values",
+            "Specific Horde skill balance changes",
+            "Boss Challenge merge changes",
+            "Halloween event dates and replacement timing",
+            "Exact match to the live server payload"
+          ]
+        },
+        {
+          "id": "source",
+          "type": "text",
+          "text": "Evidence: recovered Unit, Pet, ProfilePicture, UnitLevel, UnitAttrLevel, LuckyDefenseSeasonConfig, LuckyDefenseConfig and PetCollectible records, plus decoded English language data. Raw game code and packages are kept offline."
+        }
+      ]
+    }
+  ]
+}

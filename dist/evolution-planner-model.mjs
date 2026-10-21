@@ -1,4 +1,4 @@
-import {starCost,validateRoster} from './my-tatari-model.mjs?v=level-cap2400';
+import {starCost,validateRoster} from './my-tatari-model.mjs?v=patch165921';
 import {DAY,regularAt,pvpAt,hordeAt} from './schedule-model.mjs';
 export const MAX_GOALS=5;
 const elements={Water:2,Fire:3,Grass:4,Electric:5,Earth:6};

@@ -2320,5 +2320,212 @@
     "order": 5,
     "section": "about",
     "sectionTitle": "About our creators"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-intro",
+    "label": "Introduction",
+    "default": "Checked 21 October 2026 against patch 165921. These are companion-site findings from recovered configuration data, separate from official patch notes.",
+    "order": 1,
+    "section": "intro",
+    "sectionTitle": "Introduction"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-status-title",
+    "label": "Heading · What has been checked",
+    "default": "What has been checked",
+    "order": 2,
+    "section": "status",
+    "sectionTitle": "What has been checked"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "note-status-evidence",
+    "label": "Info box · Useful patch data; live identity unverified. Patch 165921 contains the additions below. Its exa",
+    "default": "Useful patch data; live identity unverified. Patch 165921 contains the additions below. Its exact relationship to the live server payload has not been established. Unchanged website datasets are not automatically verified for this patch.",
+    "order": 3,
+    "section": "status",
+    "sectionTitle": "What has been checked"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-status-scope",
+    "label": "Text · The stats calculator and My Tatari now support recorded account levels 1–3,600. The Horde / Gol",
+    "default": "The stats calculator and My Tatari now support recorded account levels 1–3,600. The Horde / Goldrush calculator remains a fixed level-500 comparison. Existing values through level 2,400 match the previous export exactly.",
+    "order": 4,
+    "section": "status",
+    "sectionTitle": "What has been checked"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-tatari-title",
+    "label": "Heading · Bonobean and account levels",
+    "default": "Bonobean and account levels",
+    "order": 5,
+    "section": "tatari",
+    "sectionTitle": "Bonobean and account levels"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-tatari-bonobean",
+    "label": "Text · Bonobean is linked to UnitID 68. Its Horde configuration includes two passive skills (6891 and ",
+    "default": "Bonobean is linked to UnitID 68. Its Horde configuration includes two passive skills (6891 and 6892) and one active skill (6893). This confirms the records exist; detailed skill behavior and complete artwork integration are still under review.",
+    "order": 6,
+    "section": "tatari",
+    "sectionTitle": "Bonobean and account levels"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-horde-title",
+    "label": "Heading · Horde Season 3 configuration",
+    "default": "Horde Season 3 configuration",
+    "order": 7,
+    "section": "horde",
+    "sectionTitle": "Horde Season 3 configuration"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-horde-difficulties",
+    "label": "Text · The S3 configuration maps to parameter set 103 and lists Difficulties 1–6. Difficulty 6 uses De",
+    "default": "The S3 configuration maps to parameter set 103 and lists Difficulties 1–6. Difficulty 6 uses DefenseID 10306. The older S3 configuration listed only Difficulties 1–4.",
+    "order": 8,
+    "section": "horde",
+    "sectionTitle": "Horde Season 3 configuration"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "note-horde-seasons",
+    "label": "Disclaimer · The detailed wave, chip and economy tables currently shown in the Horde guide remain Season 2 r",
+    "default": "The detailed wave, chip and economy tables currently shown in the Horde guide remain Season 2 reference data. They have not been relabelled as Season 3. Specific chip numbers and Horde skill balance changes are not verified by these findings.",
+    "order": 9,
+    "section": "horde",
+    "sectionTitle": "Horde Season 3 configuration"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-collectibles-title",
+    "label": "Heading · Collectible additions",
+    "default": "Collectible additions",
+    "order": 10,
+    "section": "collectibles",
+    "sectionTitle": "Collectible additions"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-collectibles-accessories",
+    "label": "Text · Original and color accessory variants are present for Zapup, Sparkit, Pandaroo, Cheerling, Lull",
+    "default": "Original and color accessory variants are present for Zapup, Sparkit, Pandaroo, Cheerling, Lullely, Funglet, Taptail, Budboo, Cavyzap, Ringtail and Popa.",
+    "order": 11,
+    "section": "collectibles",
+    "sectionTitle": "Collectible additions"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-collectibles-limits",
+    "label": "Text · The records confirm additions, not their availability on a particular account or release date. ",
+    "default": "The records confirm additions, not their availability on a particular account or release date. Cosmetic records are separate from saved Glitter ownership.",
+    "order": 12,
+    "section": "collectibles",
+    "sectionTitle": "Collectible additions"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-events-title",
+    "label": "Heading · Halloween and battle setup",
+    "default": "Halloween and battle setup",
+    "order": 13,
+    "section": "events",
+    "sectionTitle": "Halloween and battle setup"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-events-halloween",
+    "label": "Text · Trick-or-Treat reward configuration and the strings “Trick-or-Treat Time!” and “Halloween Fun!”",
+    "default": "Trick-or-Treat reward configuration and the strings “Trick-or-Treat Time!” and “Halloween Fun!” are present. The event dates and exact replacement schedule are not established, so the site calendar has not been rescheduled from this evidence alone.",
+    "order": 14,
+    "section": "events",
+    "sectionTitle": "Halloween and battle setup"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-events-battles",
+    "label": "Text · The patch contains 429 new and 404 changed StageBattle files. These counts describe files, not ",
+    "default": "The patch contains 429 new and 404 changed StageBattle files. These counts describe files, not player-facing changes. Their chapter mapping is still under review; formation recommendations have not been recalibrated from the counts alone.",
+    "order": 15,
+    "section": "events",
+    "sectionTitle": "Halloween and battle setup"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-pending-title",
+    "label": "Heading · Still unverified",
+    "default": "Still unverified",
+    "order": 16,
+    "section": "pending",
+    "sectionTitle": "Still unverified"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "list-pending-unknowns-1",
+    "label": "List item · Goldrush weekly giftbox limit",
+    "default": "Goldrush weekly giftbox limit",
+    "order": 17,
+    "section": "pending",
+    "sectionTitle": "Still unverified"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "list-pending-unknowns-2",
+    "label": "List item · Horde chip balance values",
+    "default": "Horde chip balance values",
+    "order": 18,
+    "section": "pending",
+    "sectionTitle": "Still unverified"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "list-pending-unknowns-3",
+    "label": "List item · Specific Horde skill balance changes",
+    "default": "Specific Horde skill balance changes",
+    "order": 19,
+    "section": "pending",
+    "sectionTitle": "Still unverified"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "list-pending-unknowns-4",
+    "label": "List item · Boss Challenge merge changes",
+    "default": "Boss Challenge merge changes",
+    "order": 20,
+    "section": "pending",
+    "sectionTitle": "Still unverified"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "list-pending-unknowns-5",
+    "label": "List item · Halloween event dates and replacement timing",
+    "default": "Halloween event dates and replacement timing",
+    "order": 21,
+    "section": "pending",
+    "sectionTitle": "Still unverified"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "list-pending-unknowns-6",
+    "label": "List item · Exact match to the live server payload",
+    "default": "Exact match to the live server payload",
+    "order": 22,
+    "section": "pending",
+    "sectionTitle": "Still unverified"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-pending-source",
+    "label": "Text · Evidence: recovered Unit, Pet, ProfilePicture, UnitLevel, UnitAttrLevel, LuckyDefenseSeasonConf",
+    "default": "Evidence: recovered Unit, Pet, ProfilePicture, UnitLevel, UnitAttrLevel, LuckyDefenseSeasonConfig, LuckyDefenseConfig and PetCollectible records, plus decoded English language data. Raw game code and packages are kept offline.",
+    "order": 23,
+    "section": "pending",
+    "sectionTitle": "Still unverified"
   }
 ]

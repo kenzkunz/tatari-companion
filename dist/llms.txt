@@ -34,3 +34,5 @@
 These links lead to public HTML pages. Follow their source versions, formulas and uncertainty notes. Community formations and tier lists represent player opinions. Live codes and patch notes may change; consult the published pages for current entries. The exchange finder helps players arrange exchanges in game and does not transfer items.
 
 Private accounts, chats, player inventories, administration, drafts and unfinished pages are excluded from this index. This file is a discovery aid, not an access control or a guarantee of accuracy.
+
+- [Patch 165921 findings](https://kenzkunz.github.io/tatari-companion/information/patch-165921.html): Reconstructed config evidence for Bonobean, account levels through 3600 and Horde S3 Difficulties 1–6. Exact live payload identity is unverified; Horde wave/chip tools still use S2 reference data.

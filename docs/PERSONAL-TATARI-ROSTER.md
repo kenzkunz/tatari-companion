@@ -12,4 +12,4 @@ Checks run through account-check in npm test. No raw Lua or private research exp
 
 Tier display: Pet.lua UnitQuality 2 families (IDs 1–10) map stored evolution 1/2 to tier 0/1. Other families retain tier 1–4. Backgrounds: blue T0, purple T1, yellow T2, red T3, rainbow T4. Sorting and editor labels use this display tier; cloud records and portrait IDs keep their original evolution IDs. T0 uses original txui_pet_bag_quality_03_013f919af2.png artwork.
 
-Account level is temporarily capped at 2400 in the editor, model validation and database (migration 039), matching recorded normal-stat coverage. Existing rows are not rewritten.
+Account level is capped at 3600 in the editor, model validation and database (migration 042), using recorded patch-165921 level tables, matching recorded normal-stat coverage. Existing rows are not rewritten.

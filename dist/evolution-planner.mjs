@@ -1,9 +1,9 @@
 import {finishEvolution} from './evolution-planner-client.mjs?v=finish2';
 import {currentUser,supabase,loadSettings,accountUrl} from './auth-client.mjs';
 import {loadRoster} from './my-tatari-client.mjs';
-import {rosterTier,starCost,foodGrade} from './my-tatari-model.mjs?v=level-cap2400';
+import {rosterTier,starCost,foodGrade} from './my-tatari-model.mjs?v=patch165921';
 import {loadAppData} from './site-data.mjs?v=site-data5';
-import {MAX_GOALS,completedGoalRoster,finishMinimums,planGoal,validateGoals,trialKey,eventWindows} from './evolution-planner-model.mjs?v=finish2';
+import {MAX_GOALS,completedGoalRoster,finishMinimums,planGoal,validateGoals,trialKey,eventWindows} from './evolution-planner-model.mjs?v=patch165921';
 const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n},root=new URL('./tatari-data/',import.meta.url);
 const image=(path,alt)=>{const n=el('img');n.src=new URL(path,root);n.alt=alt;n.loading='lazy';return n};
 let catalog,schedule,roster,levels=null,actor=null,generation=0,goals=[],progress={},wishboxes=0,plans=[],finishing=false,finishSelection=null;

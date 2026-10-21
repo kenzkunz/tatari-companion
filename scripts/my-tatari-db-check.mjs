@@ -5,13 +5,14 @@ const db=new PGlite(),a='00000000-0000-0000-0000-000000000001',b='00000000-0000-
 await db.exec(`create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key);create function auth.uid() returns uuid language sql as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth to authenticated,anon;grant execute on function auth.uid() to authenticated,anon;insert into auth.users values('${a}'),('${b}');`);
 await db.exec(await readFile('supabase/038_personal_tatari_rosters.sql','utf8'));
 await db.exec(await readFile('supabase/039_personal_tatari_level_cap.sql','utf8'));
+await db.exec(await readFile('supabase/042_tatari_level_cap_3600.sql','utf8'));
 const actor=async id=>db.query("select set_config('request.jwt.claim.sub',$1,false)",[id||'']);
-const roster={version:1,accountLevel:2400,units:{1:{owned:true,tier:2,stars:30,food:5,copies:8,glitter:false}}};
+const roster={version:1,accountLevel:3600,units:{1:{owned:true,tier:2,stars:30,food:5,copies:8,glitter:false}}};
 const save=async(value=roster,revision=0,expected=a)=>(await db.query('select public.save_tatari_roster($1::jsonb,$2,$3) result',[JSON.stringify(value),revision,expected])).rows[0].result;
 await actor(a);await db.exec('set role authenticated');const saved=await save();assert.equal(saved.revision,1);assert.deepEqual(saved.roster,roster);assert.equal((await db.query('select * from public.tatari_rosters')).rows.length,1);
 await assert.rejects(()=>save(roster,0),/another device/);await assert.rejects(()=>save(roster,1,b),/account changed/);await assert.rejects(()=>db.exec("update public.tatari_rosters set revision=99"),/permission denied/);
 for(const [field,value] of [['stars',85],['stars',1.5],['tier',4],['food',99],['copies',9],['copies',-1],['owned','yes'],['glitter','yes']]){const bad=structuredClone(roster);bad.units[1][field]=value;await assert.rejects(()=>save(bad,1),/Invalid|Copy progress/)}
-await assert.rejects(()=>save({...roster,accountLevel:0},1),/Invalid/);await assert.rejects(()=>save({...roster,accountLevel:2401},1),/account_level_cap/);await assert.rejects(()=>save({...roster,units:{999:roster.units[1]}},1),/Unknown/);
+await assert.rejects(()=>save({...roster,accountLevel:0},1),/Invalid/);await assert.rejects(()=>save({...roster,accountLevel:3601},1),/account_level_cap/);await assert.rejects(()=>save({...roster,units:{999:roster.units[1]}},1),/Unknown/);
 const max=structuredClone(roster);max.units[1].stars=84;max.units[1].copies=1;await assert.rejects(()=>save(max,1),/Copy progress/);max.units[1].copies=0;assert.equal((await save(max,1)).revision,2);
 await actor(b);assert.equal((await db.query('select * from public.tatari_rosters')).rows.length,0);await assert.rejects(()=>save(roster,0,a),/account changed/);assert.equal((await save(roster,0,b)).revision,1);
 await db.exec('reset role;set role anon');await assert.rejects(()=>db.query('select * from public.tatari_rosters'),/permission denied/);await assert.rejects(()=>save(),/permission denied/);await db.exec('reset role');

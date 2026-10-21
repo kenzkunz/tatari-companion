@@ -6,7 +6,7 @@ catalog.starProgression=JSON.parse(await readFile('dist/tatari-data/star-progres
 const roster=emptyRoster();roster.accountLevel=1739;for(const u of catalog.units){roster.units[u.id]={owned:true,tier:u.forms.at(-1).evolution,stars:84,food:u.feedingStages.at(-1).stage,copies:0,glitter:false};}
 assert.deepEqual(validateRoster(roster,catalog),roster);assert.notEqual(rosterKey('one'),rosterKey('two'));
 for(const field of ['tier','stars','food']){const bad=structuredClone(roster);bad.units[catalog.units[0].id][field]=999;assert.throws(()=>validateRoster(bad,catalog));}
-for(const level of [0,1.5,2401,100000])assert.throws(()=>validateRoster({...roster,accountLevel:level},catalog));
+for(const level of [0,1.5,3601,100000])assert.throws(()=>validateRoster({...roster,accountLevel:level},catalog));
 assert.throws(()=>validateRoster({...roster,units:{999:{owned:true,tier:1,stars:1,food:0}}},catalog));
 console.log('Passed all 67 roster families, supported tiers/food/stars, invalid inputs and account storage separation.');
 
@@ -40,4 +40,4 @@ assert.equal(rosterTier(catalog.units[0],2),1);assert.equal(rosterTier(catalog.u
 const mixed=sortRosterUnits([catalog.units[0],catalog.units[10]],{1:{owned:true,tier:2,stars:84},11:{owned:true,tier:2,stars:1}});assert.equal(mixed[0].id,11);
 console.log('Passed T0–T4 background mapping and sorting by display tier without changing saved evolution IDs.');
 
-assert.equal(validateRoster({...roster,accountLevel:2400},catalog).accountLevel,2400);
+assert.equal(validateRoster({...roster,accountLevel:3600},catalog).accountLevel,3600);
