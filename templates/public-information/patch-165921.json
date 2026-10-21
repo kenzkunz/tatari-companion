@@ -93,7 +93,7 @@
         {
           "id": "battles",
           "type": "text",
-          "text": "All 429 new and 404 changed battle setups are now mapped and included in the website’s battle dataset. The changed setups affect 404 stages in chapters 24–29. Of the new files, 404 preserve earlier setups under new references for later chapters; 25 contain Season 3 Horde waves. Enemy level, star and ATK/DEF/HP multiplier records are unchanged. The formation planner’s Stage mode now shows the configured enemy roster, lanes and spawn sequence. This updates encounter data, not battle-simulation accuracy."
+          "text": "All 429 new and 404 changed battle setups are now mapped and included in the website’s battle dataset. The changed setups affect 404 stages in chapters 24–29. Of the new files, 404 preserve earlier setups under new references for later chapters; 25 contain Season 3 Horde waves. Enemy level, star and ATK/DEF/HP multiplier records are unchanged. The stage setup preview is hidden for now. The battle dataset is retained; encounter effects are not connected to the planner’s buff/debuff tags. This updates encounter data, not battle-simulation accuracy."
         }
       ]
     },
