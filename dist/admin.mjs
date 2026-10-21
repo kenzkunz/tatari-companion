@@ -1,6 +1,6 @@
 import {installCommunity} from './admin-community.mjs?v=recovery1';
 import {communityPreview} from './community-client.mjs?v=recovery1';
-import {installSiteData} from './admin-site-data.mjs?v=ticker1';
+import {installSiteData} from './admin-site-data.mjs?v=ticker2';
 import {installUIDListing} from './admin-uid-listing.mjs?v=custom-dialogs1';
 import './admin-version-audit.mjs';
 import {installVisualEditor} from './admin-editor.mjs?v=custom-dialogs1';

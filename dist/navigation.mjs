@@ -1,5 +1,5 @@
 import './image-cache-register.mjs';
-void import('./site-announcement.mjs?v=ticker1');
+void import('./site-announcement.mjs?v=ticker2');
 const nav=document.getElementById('navigation'),menu=document.querySelector('.menu-toggle');
 if(nav&&menu&&nav.dataset.navigationReady!=='true'){
 nav.dataset.navigationReady='true';

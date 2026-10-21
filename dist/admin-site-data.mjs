@@ -2,7 +2,7 @@ import {confirmDialog} from './site-dialogs.mjs?v=1';
 import {applySourceValues,guideDerived,validateEditorValues} from './site-data-model.mjs?v=site-data5';
 import {regularAt,pvpAt,DAY} from './schedule-model.mjs';
 import {renderFooter} from './site-footer.mjs?v=footer2';
-import {renderAnnouncement} from './announcement-view.mjs?v=ticker1';
+import {renderAnnouncement} from './announcement-view.mjs?v=ticker2';
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n;};
 const friendly={attackRewards:'Attack rewards',leagueDaily:'League daily rewards',teamDaily:'Team daily rewards',teamFinal:'Team final rewards',leagueFinal:'League final rewards',teamMilestones:'Team milestones',mvp:'MVP rewards'};
 const date=ms=>new Intl.DateTimeFormat('en-GB',{timeZone:'UTC',dateStyle:'medium'}).format(ms);
