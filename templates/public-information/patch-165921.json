@@ -169,355 +169,591 @@
           ],
           "rows": [
             [
-              "Frostnip",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_11_01_dfb0e692.webp",
+                "alt": "",
+                "value": "Frostnip"
+              },
               "Ice Burst",
               "Freeze chance",
               "45% → 60%"
             ],
             [
-              "Frostnip",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_11_01_dfb0e692.webp",
+                "alt": "",
+                "value": "Frostnip"
+              },
               "Frost Path",
               "Freeze chance",
               "45% → 60%"
             ],
             [
-              "Frugling",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_13_01_8100e620.webp",
+                "alt": "",
+                "value": "Frugling"
+              },
               "Quick Slice",
               "Duration",
               "6 → 8"
             ],
             [
-              "Frugling",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_13_01_8100e620.webp",
+                "alt": "",
+                "value": "Frugling"
+              },
               "Fruit Rain",
               "Duration",
               "3 → 4"
             ],
             [
-              "Manteeny",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_18_01_96fe962f.webp",
+                "alt": "",
+                "value": "Manteeny"
+              },
               "Petal Blades",
               "Damage factor",
               "220% → 180%"
             ],
             [
-              "Manteeny",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_18_01_96fe962f.webp",
+                "alt": "",
+                "value": "Manteeny"
+              },
               "Wild Slashes",
               "Damage factor",
               "80% → 70%"
             ],
             [
-              "Voltfawn",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_20_01_1b463520.webp",
+                "alt": "",
+                "value": "Voltfawn"
+              },
               "Bolt Trigger",
               "Trigger chance",
               "20% → 30%"
             ],
             [
-              "Voltfawn",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_20_01_1b463520.webp",
+                "alt": "",
+                "value": "Voltfawn"
+              },
               "Bolt Cleaver",
               "Paralysis chance",
               "45% → 60%"
             ],
             [
-              "Sparkit",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_22_01_c81ab6a9.webp",
+                "alt": "",
+                "value": "Sparkit"
+              },
               "Flame Sprout",
               "Minimum trigger interval",
               "3 → 2"
             ],
             [
-              "Sparkit",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_22_01_c81ab6a9.webp",
+                "alt": "",
+                "value": "Sparkit"
+              },
               "Flame Sprout",
               "Maximum trigger interval",
               "5 → 4"
             ],
             [
-              "Goonbug",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_23_01_ce66cf3f.webp",
+                "alt": "",
+                "value": "Goonbug"
+              },
               "Vital Fumes",
               "ATK increase",
               "15% → 20%"
             ],
             [
-              "Punchimp",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_24_01_03006971.webp",
+                "alt": "",
+                "value": "Punchimp"
+              },
               "Barricade",
               "Duration",
               "3 → 4"
             ],
             [
-              "Punchimp",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_24_01_03006971.webp",
+                "alt": "",
+                "value": "Punchimp"
+              },
               "Staff Cyclone",
               "Damage factor",
               "180% → 190%"
             ],
             [
-              "Voltkit",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_25_01_baa6a907.webp",
+                "alt": "",
+                "value": "Voltkit"
+              },
               "Target Lock",
               "Damage factor",
               "100% → 120%"
             ],
             [
-              "Voltkit",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_25_01_baa6a907.webp",
+                "alt": "",
+                "value": "Voltkit"
+              },
               "Bolt Slash",
               "Damage factor",
               "600% → 720%"
             ],
             [
-              "Waddledo",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_26_01_b501464e.webp",
+                "alt": "",
+                "value": "Waddledo"
+              },
               "Ice Strike",
               "Damage factor",
               "200% → 240%"
             ],
             [
-              "Pandaroo",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_28_01_2fffe6df.webp",
+                "alt": "",
+                "value": "Pandaroo"
+              },
               "Bambattle",
               "Effective hits",
               "24 → 30"
             ],
             [
-              "Sparkeet",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_35_01_d64c8893.webp",
+                "alt": "",
+                "value": "Sparkeet"
+              },
               "Full Charge",
               "Minimum cooldown",
               "15 → 12"
             ],
             [
-              "Sparkeet",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_35_01_d64c8893.webp",
+                "alt": "",
+                "value": "Sparkeet"
+              },
               "Full Charge",
               "Maximum cooldown",
               "30 → 24"
             ],
             [
-              "Souphog",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_37_01_633b9381.webp",
+                "alt": "",
+                "value": "Souphog"
+              },
               "Free Snacks",
               "Maximum trigger interval",
               "10 → 8"
             ],
             [
-              "Sackling",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_38_01_871cdf02.webp",
+                "alt": "",
+                "value": "Sackling"
+              },
               "Spider Lair",
               "Damage factor",
               "240% → 270%"
             ],
             [
-              "Sackling",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_38_01_871cdf02.webp",
+                "alt": "",
+                "value": "Sackling"
+              },
               "Spider Lair",
               "Inherited HP ratio",
               "8% → 12%"
             ],
             [
-              "Shardsnail",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_39_01_299c1db7.webp",
+                "alt": "",
+                "value": "Shardsnail"
+              },
               "Gem Burst",
               "Damage factor",
               "140% → 160%"
             ],
             [
-              "Shardsnail",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_39_01_299c1db7.webp",
+                "alt": "",
+                "value": "Shardsnail"
+              },
               "Gem Resonance",
               "Damage factor",
               "180% → 200%"
             ],
             [
-              "Shardsnail",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_39_01_299c1db7.webp",
+                "alt": "",
+                "value": "Shardsnail"
+              },
               "Gem Resonance",
               "Crystallize chance",
               "20% → 30%"
             ],
             [
-              "Humbug",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_44_01_63982a4e.webp",
+                "alt": "",
+                "value": "Humbug"
+              },
               "Boom Ball",
               "Damage factor",
               "125% → 160%"
             ],
             [
-              "Fluffle",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_45_01_80bcc5d3.webp",
+                "alt": "",
+                "value": "Fluffle"
+              },
               "Cloud Crash",
               "Cloud damage factor",
               "200% → 240%"
             ],
             [
-              "Fluffle",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_45_01_80bcc5d3.webp",
+                "alt": "",
+                "value": "Fluffle"
+              },
               "Grim Skies",
               "Dark cloud damage factor",
               "220% → 240%"
             ],
             [
-              "Dewgrub",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_46_01_7496d324.webp",
+                "alt": "",
+                "value": "Dewgrub"
+              },
               "Aqua Flutter",
               "Damage factor",
               "45% → 200%"
             ],
             [
-              "Dewgrub",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_46_01_7496d324.webp",
+                "alt": "",
+                "value": "Dewgrub"
+              },
               "Torrential Flutter",
               "Damage factor",
               "18% → 100%"
             ],
             [
-              "Dewgrub",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_46_01_7496d324.webp",
+                "alt": "",
+                "value": "Dewgrub"
+              },
               "Torrential Flutter",
               "Minimum cooldown",
               "16 → 12"
             ],
             [
-              "Dewgrub",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_46_01_7496d324.webp",
+                "alt": "",
+                "value": "Dewgrub"
+              },
               "Torrential Flutter",
               "Maximum cooldown",
               "20 → 18"
             ],
             [
-              "Dewgrub",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_46_01_7496d324.webp",
+                "alt": "",
+                "value": "Dewgrub"
+              },
               "Torrential Flutter",
               "Sleep chance",
               "12% → 50%"
             ],
             [
-              "Fumekit",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_47_01_4c0edb47.webp",
+                "alt": "",
+                "value": "Fumekit"
+              },
               "Firework Frenzy",
               "Minimum cooldown",
               "18 → 12"
             ],
             [
-              "Fumekit",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_47_01_4c0edb47.webp",
+                "alt": "",
+                "value": "Fumekit"
+              },
               "Firework Frenzy",
               "Maximum cooldown",
               "22 → 18"
             ],
             [
-              "Taptail",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_49_01_980fda66.webp",
+                "alt": "",
+                "value": "Taptail"
+              },
               "Karmic Gains",
               "Projectile count",
               "8 → 10"
             ],
             [
-              "Kittazap",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_50_01_8e337efc.webp",
+                "alt": "",
+                "value": "Kittazap"
+              },
               "Golden Charity",
               "Target count",
               "2 → 3"
             ],
             [
-              "Flameow",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_52_01_56d3f51e.webp",
+                "alt": "",
+                "value": "Flameow"
+              },
               "More Jewels",
               "Damage factor",
               "20% → 150%"
             ],
             [
-              "Drilleroo",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_54_01_4bb88a18.webp",
+                "alt": "",
+                "value": "Drilleroo"
+              },
               "Crowd Crusher",
               "Base shield ratio",
               "7% → 10%"
             ],
             [
-              "Drilleroo",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_54_01_4bb88a18.webp",
+                "alt": "",
+                "value": "Drilleroo"
+              },
               "Crowd Crusher",
               "Extra shield ratio",
               "0.01 → 0.015"
             ],
             [
-              "Maskfry",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_56_01_646e7e4d.webp",
+                "alt": "",
+                "value": "Maskfry"
+              },
               "Primordial Boon",
               "Shield ratio",
               "40% → 28%"
             ],
             [
-              "Momopo",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_59_01_0f1c69e5.webp",
+                "alt": "",
+                "value": "Momopo"
+              },
               "Pink Protection",
               "Base blocks",
               "4 → 6"
             ],
             [
-              "Momopo",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_59_01_0f1c69e5.webp",
+                "alt": "",
+                "value": "Momopo"
+              },
               "Pink Protection",
               "Extra blocks per evolution",
               "1 → 2"
             ],
             [
-              "Glowfly",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_60_01_018dda93.webp",
+                "alt": "",
+                "value": "Glowfly"
+              },
               "Luminous Bolt",
               "Ongoing healing (% Max HP)",
               "2.5 → 3"
             ],
             [
-              "Glowfly",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_60_01_018dda93.webp",
+                "alt": "",
+                "value": "Glowfly"
+              },
               "Luminous Bolt",
               "Burst healing (% Max HP)",
               "7.5 → 9"
             ],
             [
-              "Glowfly",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_60_01_018dda93.webp",
+                "alt": "",
+                "value": "Glowfly"
+              },
               "Fulgur Fusion",
               "Ongoing healing (% Max HP)",
               "2.5 → 3"
             ],
             [
-              "Glowfly",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_60_01_018dda93.webp",
+                "alt": "",
+                "value": "Glowfly"
+              },
               "Fulgur Fusion",
               "Burst healing (% Max HP)",
               "7.5 → 9"
             ],
             [
-              "Glowfly",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_60_01_018dda93.webp",
+                "alt": "",
+                "value": "Glowfly"
+              },
               "Radiant Glow",
               "Ongoing healing (% Max HP)",
               "2.5 → 3"
             ],
             [
-              "Glowfly",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_60_01_018dda93.webp",
+                "alt": "",
+                "value": "Glowfly"
+              },
               "Radiant Glow",
               "Burst healing (% Max HP)",
               "7.5 → 9"
             ],
             [
-              "Snowcub",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_61_01_829c74fb.webp",
+                "alt": "",
+                "value": "Snowcub"
+              },
               "Always Cola",
               "Total trigger chance",
               "30% → 40%"
             ],
             [
-              "Poakie",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_62_01_1e9eee2a.webp",
+                "alt": "",
+                "value": "Poakie"
+              },
               "Croaker Chant",
               "Minimum cooldown",
               "14 → 16"
             ],
             [
-              "Poakie",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_62_01_1e9eee2a.webp",
+                "alt": "",
+                "value": "Poakie"
+              },
               "Croaker Chant",
               "Maximum cooldown",
               "20 → 22"
             ],
             [
-              "Poakie",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_62_01_1e9eee2a.webp",
+                "alt": "",
+                "value": "Poakie"
+              },
               "Oil Onsen",
               "Ignite damage factor",
               "50% → 40%"
             ],
             [
-              "Poakie",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_62_01_1e9eee2a.webp",
+                "alt": "",
+                "value": "Poakie"
+              },
               "Oil Onsen",
               "Extra damage factor",
               "450% → 400%"
             ],
             [
-              "Budboo",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_63_01_b8c63357.webp",
+                "alt": "",
+                "value": "Budboo"
+              },
               "Bitter Bane",
               "AoE damage factor",
               "100% → 80%"
             ],
             [
-              "Ringtail",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_64_01_10171ee6.webp",
+                "alt": "",
+                "value": "Ringtail"
+              },
               "Con Man's Code",
               "Returned healing factor",
               "20% → 40%"
             ],
             [
-              "Ringtail",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_64_01_10171ee6.webp",
+                "alt": "",
+                "value": "Ringtail"
+              },
               "Con Man's Code",
               "ATK steal modifier",
               "-5% → -4%"
             ],
             [
-              "Ringtail",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_64_01_10171ee6.webp",
+                "alt": "",
+                "value": "Ringtail"
+              },
               "Con Man's Code",
               "ATK increase",
               "15% → 24%"
             ],
             [
-              "Popa",
+              {
+                "icon": "/tatari-data/images/txui_playerhead_69_01_9ebfd3be.webp",
+                "alt": "",
+                "value": "Popa"
+              },
               "Possum Support",
               "Healing factor",
               "15% → 20%"
