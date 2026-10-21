@@ -2,7 +2,7 @@
   "type": "information",
   "slug": "patch-165921",
   "title": "October update: confirmed data findings",
-  "lead": "Checked 21 October 2026 against patch 165921. These are companion-site findings from recovered configuration data, separate from official patch notes.",
+  "lead": "Checked 21 October 2026 new patch. These are companion-site findings, separate from official patch notes.",
   "sections": [
     {
       "id": "status",
@@ -11,13 +11,13 @@
         {
           "id": "evidence",
           "type": "info",
-          "title": "Useful patch data; live identity unverified.",
-          "text": "Patch 165921 contains the additions below. Its exact relationship to the live server payload has not been established. Unchanged website datasets are not automatically verified for this patch."
+          "title": "Patch data are not in-game verified.",
+          "text": "New Patch contains the additions below. Unchanged website datasets are not automatically verified for this patch."
         },
         {
           "id": "scope",
           "type": "text",
-          "text": "The stats calculator and My Tatari now support recorded account levels 1–3,600. The Horde / Goldrush calculator remains a fixed level-500 comparison. Existing values through level 2,400 match the previous export exactly."
+          "text": "With new level cap at 3,600, the stats calculator and My Tatari now support recorded account levels 1–3,600. The Horde / Goldrush calculator remains a fixed level-500 comparison."
         }
       ]
     },
@@ -28,33 +28,7 @@
         {
           "id": "bonobean",
           "type": "text",
-          "text": "Bonobean (UnitID 68), Titanape, Grangutan and Primakong are now integrated across My Tatari, the database, stats calculator, evolution planner, Horde guide/drafter and tierlist tools. Normal and Glitter portraits use the supplied images. Food levels 0–16, evolution trials and source-resolved regular/Horde skills are included."
-        },
-        {
-          "id": "coverage",
-          "type": "table",
-          "columns": [
-            "Item",
-            "Finding"
-          ],
-          "rows": [
-            [
-              "Account-level table",
-              "Extended from 2,400 to 3,600"
-            ],
-            [
-              "Existing levels 1–2,400",
-              "No change in exported element steps or stat standards"
-            ],
-            [
-              "Calculator formulas",
-              "Existing formulas retained; new levels use recorded tables, not extrapolation"
-            ],
-            [
-              "Bonobean integration",
-              "All four forms, normal/Glitter artwork, account saves, stats, trials and drafting tools"
-            ]
-          ]
+          "text": "Bonobean, Titanape, Grangutan and Primakong are now integrated across My Tatari, the database, stats calculator, evolution planner, Horde guide/drafter and tierlist tools."
         }
       ]
     },
@@ -65,46 +39,7 @@
         {
           "id": "difficulties",
           "type": "text",
-          "text": "The S3 configuration maps to parameter set 103 and lists Difficulties 1–6. Difficulty 6 uses DefenseID 10306. The older S3 configuration listed only Difficulties 1–4."
-        },
-        {
-          "id": "records",
-          "type": "table",
-          "columns": [
-            "Difficulty",
-            "Configured defense record"
-          ],
-          "rows": [
-            [
-              "1",
-              "10301"
-            ],
-            [
-              "2",
-              "10302"
-            ],
-            [
-              "3",
-              "10303"
-            ],
-            [
-              "4",
-              "10304"
-            ],
-            [
-              "5",
-              "10305"
-            ],
-            [
-              "6",
-              "10306"
-            ]
-          ]
-        },
-        {
-          "id": "seasons",
-          "type": "disclaimer",
-          "text": "Season 3 waves, chip values and existing Tatari skill cards are now integrated. The six difficulty settings retain a rank coefficient of 100 and reference the same balance and energy-recovery settings as S2."
+          "text": "The S3 lists Difficulties 1–6. The obtained data show Difficulty 6 has twice Difficulty 4’s enemy ATK and HP; DEF increases by a smaller amount."
         }
       ]
     },
@@ -169,7 +104,7 @@
         {
           "id": "scope",
           "type": "text",
-          "text": "The 49 chip catalogue entries, qualities, uniqueness and allowed-wave lists are unchanged. Four numeric changes occur in linked Skill records; comparing LuckyDefenseChip alone misses them."
+          "text": "The 49 chip catalogue entries, qualities, uniqueness and allowed-wave lists are unchanged. Four numeric changes occur in linked Skill records."
         },
         {
           "id": "values",
@@ -210,7 +145,7 @@
         {
           "id": "shuffle",
           "type": "text",
-          "text": "Shuffle still grants 600 energizers. Contract Employees stay deployed, and their Tatari types are now excluded from the replacement pool. Ordinary replacement units inherit the replaced slots’ grid positions and Horde levels. Candidate selection and historical-level bookkeeping were rewritten. This does not guarantee that all replacements differ from your previous ordinary Tatari types; unusual edge cases have not been tested in a live battle."
+          "text": "Shuffle still grants 600 energizers and will shuffle from both the deployed and undeployed Tatari pool.\n\nContract Employees stay deployed, and their Tatari types are now excluded from the replacement pool. Ordinary replacement units inherit the replaced slots’ grid positions and Horde levels."
         }
       ]
     },
@@ -221,7 +156,7 @@
         {
           "id": "method",
           "type": "text",
-          "text": "59 displayed value changes affect 42 existing skills in 30 Tatari families. The table uses current source values, including helper skills and buffs—not the OldValue tooltip comparison metadata. Shared effects can appear on multiple skill cards. Family names below use the base form."
+          "text": "59 displayed value changes affect 42 existing skills in 30 Tatari families. The table uses current source values, including helper skills and buff tooltips."
         },
         {
           "id": "values",
@@ -235,358 +170,419 @@
           "rows": [
             [
               "Frostnip",
-              "Ice Burst (1191)",
+              "Ice Burst",
               "Freeze chance",
               "45% → 60%"
             ],
             [
               "Frostnip",
-              "Frost Path (1193)",
+              "Frost Path",
               "Freeze chance",
               "45% → 60%"
             ],
             [
               "Frugling",
-              "Quick Slice (1392)",
+              "Quick Slice",
               "Duration",
               "6 → 8"
             ],
             [
               "Frugling",
-              "Fruit Rain (1393)",
+              "Fruit Rain",
               "Duration",
               "3 → 4"
             ],
             [
               "Manteeny",
-              "Petal Blades (1891)",
+              "Petal Blades",
               "Damage factor",
               "220% → 180%"
             ],
             [
               "Manteeny",
-              "Wild Slashes (1893)",
+              "Wild Slashes",
               "Damage factor",
               "80% → 70%"
             ],
             [
               "Voltfawn",
-              "Bolt Trigger (2092)",
+              "Bolt Trigger",
               "Trigger chance",
               "20% → 30%"
             ],
             [
               "Voltfawn",
-              "Bolt Cleaver (2093)",
+              "Bolt Cleaver",
               "Paralysis chance",
               "45% → 60%"
             ],
             [
               "Sparkit",
-              "Flame Sprout (2293)",
+              "Flame Sprout",
               "Minimum trigger interval",
               "3 → 2"
             ],
             [
               "Sparkit",
-              "Flame Sprout (2293)",
+              "Flame Sprout",
               "Maximum trigger interval",
               "5 → 4"
             ],
             [
               "Goonbug",
-              "Vital Fumes (2391)",
+              "Vital Fumes",
               "ATK increase",
               "15% → 20%"
             ],
             [
               "Punchimp",
-              "Barricade (2492)",
+              "Barricade",
               "Duration",
               "3 → 4"
             ],
             [
               "Punchimp",
-              "Staff Cyclone (2493)",
+              "Staff Cyclone",
               "Damage factor",
               "180% → 190%"
             ],
             [
               "Voltkit",
-              "Target Lock (2592)",
+              "Target Lock",
               "Damage factor",
               "100% → 120%"
             ],
             [
               "Voltkit",
-              "Bolt Slash (2593)",
+              "Bolt Slash",
               "Damage factor",
               "600% → 720%"
             ],
             [
               "Waddledo",
-              "Ice Strike (2691)",
+              "Ice Strike",
               "Damage factor",
               "200% → 240%"
             ],
             [
               "Pandaroo",
-              "Bambattle (2893)",
+              "Bambattle",
               "Effective hits",
               "24 → 30"
             ],
             [
               "Sparkeet",
-              "Full Charge (3593)",
+              "Full Charge",
               "Minimum cooldown",
               "15 → 12"
             ],
             [
               "Sparkeet",
-              "Full Charge (3593)",
+              "Full Charge",
               "Maximum cooldown",
               "30 → 24"
             ],
             [
               "Souphog",
-              "Free Snacks (3792)",
+              "Free Snacks",
               "Maximum trigger interval",
               "10 → 8"
             ],
             [
               "Sackling",
-              "Spider Lair (3893)",
+              "Spider Lair",
               "Damage factor",
               "240% → 270%"
             ],
             [
               "Sackling",
-              "Spider Lair (3893)",
+              "Spider Lair",
               "Inherited HP ratio",
               "8% → 12%"
             ],
             [
               "Shardsnail",
-              "Gem Burst (3992)",
+              "Gem Burst",
               "Damage factor",
               "140% → 160%"
             ],
             [
               "Shardsnail",
-              "Gem Resonance (3993)",
+              "Gem Resonance",
               "Damage factor",
               "180% → 200%"
             ],
             [
               "Shardsnail",
-              "Gem Resonance (3993)",
+              "Gem Resonance",
               "Crystallize chance",
               "20% → 30%"
             ],
             [
               "Humbug",
-              "Boom Ball (4491)",
+              "Boom Ball",
               "Damage factor",
               "125% → 160%"
             ],
             [
               "Fluffle",
-              "Cloud Crash (4592)",
+              "Cloud Crash",
               "Cloud damage factor",
               "200% → 240%"
             ],
             [
               "Fluffle",
-              "Grim Skies (4593)",
+              "Grim Skies",
               "Dark cloud damage factor",
               "220% → 240%"
             ],
             [
               "Dewgrub",
-              "Aqua Flutter (4691)",
+              "Aqua Flutter",
               "Damage factor",
               "45% → 200%"
             ],
             [
               "Dewgrub",
-              "Torrential Flutter (4693)",
+              "Torrential Flutter",
               "Damage factor",
               "18% → 100%"
             ],
             [
               "Dewgrub",
-              "Torrential Flutter (4693)",
+              "Torrential Flutter",
               "Minimum cooldown",
               "16 → 12"
             ],
             [
               "Dewgrub",
-              "Torrential Flutter (4693)",
+              "Torrential Flutter",
               "Maximum cooldown",
               "20 → 18"
             ],
             [
               "Dewgrub",
-              "Torrential Flutter (4693)",
+              "Torrential Flutter",
               "Sleep chance",
               "12% → 50%"
             ],
             [
               "Fumekit",
-              "Firework Frenzy (4793)",
+              "Firework Frenzy",
               "Minimum cooldown",
               "18 → 12"
             ],
             [
               "Fumekit",
-              "Firework Frenzy (4793)",
+              "Firework Frenzy",
               "Maximum cooldown",
               "22 → 18"
             ],
             [
               "Taptail",
-              "Karmic Gains (4993)",
+              "Karmic Gains",
               "Projectile count",
               "8 → 10"
             ],
             [
               "Kittazap",
-              "Golden Charity (5092)",
+              "Golden Charity",
               "Target count",
               "2 → 3"
             ],
             [
               "Flameow",
-              "More Jewels (5293)",
+              "More Jewels",
               "Damage factor",
               "20% → 150%"
             ],
             [
               "Drilleroo",
-              "Crowd Crusher (5492)",
+              "Crowd Crusher",
               "Base shield ratio",
               "7% → 10%"
             ],
             [
               "Drilleroo",
-              "Crowd Crusher (5492)",
+              "Crowd Crusher",
               "Extra shield ratio",
               "0.01 → 0.015"
             ],
             [
               "Maskfry",
-              "Primordial Boon (5692)",
+              "Primordial Boon",
               "Shield ratio",
               "40% → 28%"
             ],
             [
               "Momopo",
-              "Pink Protection (5992)",
+              "Pink Protection",
               "Base blocks",
               "4 → 6"
             ],
             [
               "Momopo",
-              "Pink Protection (5992)",
+              "Pink Protection",
               "Extra blocks per evolution",
               "1 → 2"
             ],
             [
               "Glowfly",
-              "Luminous Bolt (6091)",
+              "Luminous Bolt",
               "Ongoing healing (% Max HP)",
               "2.5 → 3"
             ],
             [
               "Glowfly",
-              "Luminous Bolt (6091)",
+              "Luminous Bolt",
               "Burst healing (% Max HP)",
               "7.5 → 9"
             ],
             [
               "Glowfly",
-              "Fulgur Fusion (6092)",
+              "Fulgur Fusion",
               "Ongoing healing (% Max HP)",
               "2.5 → 3"
             ],
             [
               "Glowfly",
-              "Fulgur Fusion (6092)",
+              "Fulgur Fusion",
               "Burst healing (% Max HP)",
               "7.5 → 9"
             ],
             [
               "Glowfly",
-              "Radiant Glow (6093)",
+              "Radiant Glow",
               "Ongoing healing (% Max HP)",
               "2.5 → 3"
             ],
             [
               "Glowfly",
-              "Radiant Glow (6093)",
+              "Radiant Glow",
               "Burst healing (% Max HP)",
               "7.5 → 9"
             ],
             [
               "Snowcub",
-              "Always Cola (6191)",
+              "Always Cola",
               "Total trigger chance",
               "30% → 40%"
             ],
             [
               "Poakie",
-              "Croaker Chant (6292)",
+              "Croaker Chant",
               "Minimum cooldown",
               "14 → 16"
             ],
             [
               "Poakie",
-              "Croaker Chant (6292)",
+              "Croaker Chant",
               "Maximum cooldown",
               "20 → 22"
             ],
             [
               "Poakie",
-              "Oil Onsen (6293)",
+              "Oil Onsen",
               "Ignite damage factor",
               "50% → 40%"
             ],
             [
               "Poakie",
-              "Oil Onsen (6293)",
+              "Oil Onsen",
               "Extra damage factor",
               "450% → 400%"
             ],
             [
               "Budboo",
-              "Bitter Bane (6391)",
+              "Bitter Bane",
               "AoE damage factor",
               "100% → 80%"
             ],
             [
               "Ringtail",
-              "Con Man's Code (6491)",
+              "Con Man's Code",
               "Returned healing factor",
               "20% → 40%"
             ],
             [
               "Ringtail",
-              "Con Man's Code (6491)",
+              "Con Man's Code",
               "ATK steal modifier",
               "-5% → -4%"
             ],
             [
               "Ringtail",
-              "Con Man's Code (6491)",
+              "Con Man's Code",
               "ATK increase",
               "15% → 24%"
             ],
             [
               "Popa",
-              "Possum Support (6991)",
+              "Possum Support",
               "Healing factor",
               "15% → 20%"
             ]
+          ],
+          "rowTones": [
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "nerf",
+            "nerf",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "nerf",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "buff",
+            "nerf",
+            "nerf",
+            "nerf",
+            "nerf",
+            "nerf",
+            "buff",
+            "nerf",
+            "buff",
+            "buff"
           ]
         }
       ]
@@ -603,7 +599,7 @@
             "Energy recovery is unchanged: start at 400, initially gain 25 every 5 seconds, decrease the periodic gain by 5 every 90 seconds, and gain 4 per normal kill or 100 per boss kill.",
             "The rank, season-rank and wave reward tables and the balance table are unchanged.",
             "Horde’s configured level reference remains 500. Normal account-level inputs and Supabase saves accept 1–3,600.",
-            "New parameters 39=200 and 40=5 remain unmapped. The official override differs from the default parameter table; its selection is not established."
+            "New parameters 39 and 40 remain unknown."
           ]
         },
         {
@@ -628,11 +624,6 @@
             "Meaning and consumer binding of new Horde parameters 39 (200) and 40 (5)",
             "Selection of the official Horde parameter override and unusual Shuffle edge cases"
           ]
-        },
-        {
-          "id": "source",
-          "type": "text",
-          "text": "Evidence: recovered Unit, Pet, ProfilePicture, UnitLevel, UnitAttrLevel, LuckyDefenseSeasonConfig, LuckyDefenseConfig and PetCollectible records, plus decoded English language data. Raw game code and packages are kept offline."
         }
       ]
     }

@@ -2325,7 +2325,7 @@
     "page": "information/patch-165921.html",
     "block": "text-intro",
     "label": "Introduction",
-    "default": "Checked 21 October 2026 against patch 165921. These are companion-site findings from recovered configuration data, separate from official patch notes.",
+    "default": "Checked 21 October 2026 new patch. These are companion-site findings, separate from official patch notes.",
     "order": 1,
     "section": "intro",
     "sectionTitle": "Introduction"
@@ -2342,8 +2342,8 @@
   {
     "page": "information/patch-165921.html",
     "block": "note-status-evidence",
-    "label": "Info box · Useful patch data; live identity unverified. Patch 165921 contains the additions below. Its exa",
-    "default": "Useful patch data; live identity unverified. Patch 165921 contains the additions below. Its exact relationship to the live server payload has not been established. Unchanged website datasets are not automatically verified for this patch.",
+    "label": "Info box · Patch data are not in-game verified. New Patch contains the additions below. Unchanged website ",
+    "default": "Patch data are not in-game verified. New Patch contains the additions below. Unchanged website datasets are not automatically verified for this patch.",
     "order": 3,
     "section": "status",
     "sectionTitle": "What has been checked"
@@ -2351,8 +2351,8 @@
   {
     "page": "information/patch-165921.html",
     "block": "text-status-scope",
-    "label": "Text · The stats calculator and My Tatari now support recorded account levels 1–3,600. The Horde / Gol",
-    "default": "The stats calculator and My Tatari now support recorded account levels 1–3,600. The Horde / Goldrush calculator remains a fixed level-500 comparison. Existing values through level 2,400 match the previous export exactly.",
+    "label": "Text · With new level cap at 3,600, the stats calculator and My Tatari now support recorded account le",
+    "default": "With new level cap at 3,600, the stats calculator and My Tatari now support recorded account levels 1–3,600. The Horde / Goldrush calculator remains a fixed level-500 comparison.",
     "order": 4,
     "section": "status",
     "sectionTitle": "What has been checked"
@@ -2369,8 +2369,8 @@
   {
     "page": "information/patch-165921.html",
     "block": "text-tatari-bonobean",
-    "label": "Text · Bonobean (UnitID 68), Titanape, Grangutan and Primakong are now integrated across My Tatari, th",
-    "default": "Bonobean (UnitID 68), Titanape, Grangutan and Primakong are now integrated across My Tatari, the database, stats calculator, evolution planner, Horde guide/drafter and tierlist tools. Normal and Glitter portraits use the supplied images. Food levels 0–16, evolution trials and source-resolved regular/Horde skills are included.",
+    "label": "Text · Bonobean, Titanape, Grangutan and Primakong are now integrated across My Tatari, the database, ",
+    "default": "Bonobean, Titanape, Grangutan and Primakong are now integrated across My Tatari, the database, stats calculator, evolution planner, Horde guide/drafter and tierlist tools.",
     "order": 6,
     "section": "tatari",
     "sectionTitle": "Bonobean and account levels"
@@ -2387,18 +2387,9 @@
   {
     "page": "information/patch-165921.html",
     "block": "text-horde-difficulties",
-    "label": "Text · The S3 configuration maps to parameter set 103 and lists Difficulties 1–6. Difficulty 6 uses De",
-    "default": "The S3 configuration maps to parameter set 103 and lists Difficulties 1–6. Difficulty 6 uses DefenseID 10306. The older S3 configuration listed only Difficulties 1–4.",
+    "label": "Text · The S3 lists Difficulties 1–6. The obtained data show Difficulty 6 has twice Difficulty 4’s ene",
+    "default": "The S3 lists Difficulties 1–6. The obtained data show Difficulty 6 has twice Difficulty 4’s enemy ATK and HP; DEF increases by a smaller amount.",
     "order": 8,
-    "section": "horde",
-    "sectionTitle": "Horde Season 3 configuration"
-  },
-  {
-    "page": "information/patch-165921.html",
-    "block": "note-horde-seasons",
-    "label": "Disclaimer · Season 3 waves, chip values and existing Tatari skill cards are now integrated. The six difficu",
-    "default": "Season 3 waves, chip values and existing Tatari skill cards are now integrated. The six difficulty settings retain a rank coefficient of 100 and reference the same balance and energy-recovery settings as S2.",
-    "order": 9,
     "section": "horde",
     "sectionTitle": "Horde Season 3 configuration"
   },
@@ -2407,7 +2398,7 @@
     "block": "text-collectibles-title",
     "label": "Heading · Collectible additions",
     "default": "Collectible additions",
-    "order": 10,
+    "order": 9,
     "section": "collectibles",
     "sectionTitle": "Collectible additions"
   },
@@ -2416,7 +2407,7 @@
     "block": "text-collectibles-accessories",
     "label": "Text · Original and color accessory variants are present for Zapup, Sparkit, Pandaroo, Cheerling, Lull",
     "default": "Original and color accessory variants are present for Zapup, Sparkit, Pandaroo, Cheerling, Lullely, Funglet, Taptail, Budboo, Cavyzap, Ringtail and Popa.",
-    "order": 11,
+    "order": 10,
     "section": "collectibles",
     "sectionTitle": "Collectible additions"
   },
@@ -2425,7 +2416,7 @@
     "block": "text-collectibles-limits",
     "label": "Text · The records confirm additions, not their availability on a particular account or release date. ",
     "default": "The records confirm additions, not their availability on a particular account or release date. Cosmetic records are separate from saved Glitter ownership.",
-    "order": 12,
+    "order": 11,
     "section": "collectibles",
     "sectionTitle": "Collectible additions"
   },
@@ -2434,7 +2425,7 @@
     "block": "text-events-title",
     "label": "Heading · Halloween and battle setup",
     "default": "Halloween and battle setup",
-    "order": 13,
+    "order": 12,
     "section": "events",
     "sectionTitle": "Halloween and battle setup"
   },
@@ -2443,7 +2434,7 @@
     "block": "text-events-halloween",
     "label": "Text · Trick-or-Treat reward configuration and the strings “Trick-or-Treat Time!” and “Halloween Fun!”",
     "default": "Trick-or-Treat reward configuration and the strings “Trick-or-Treat Time!” and “Halloween Fun!” are present. The event dates and exact replacement schedule are not established, so the site calendar has not been rescheduled from this evidence alone.",
-    "order": 14,
+    "order": 13,
     "section": "events",
     "sectionTitle": "Halloween and battle setup"
   },
@@ -2452,7 +2443,7 @@
     "block": "text-events-battles",
     "label": "Text · The patch contains 429 new and 404 changed StageBattle files. These counts describe files, not ",
     "default": "The patch contains 429 new and 404 changed StageBattle files. These counts describe files, not player-facing changes. Their chapter mapping is still under review; formation recommendations have not been recalibrated from the counts alone.",
-    "order": 15,
+    "order": 14,
     "section": "events",
     "sectionTitle": "Halloween and battle setup"
   },
@@ -2461,7 +2452,7 @@
     "block": "text-chips-title",
     "label": "Heading · Confirmed chip updates",
     "default": "Confirmed chip updates",
-    "order": 16,
+    "order": 15,
     "section": "chips",
     "sectionTitle": "Confirmed chip updates"
   },
@@ -2469,17 +2460,17 @@
     "page": "information/patch-165921.html",
     "block": "text-chips-scope",
     "label": "Text · The 49 chip catalogue entries, qualities, uniqueness and allowed-wave lists are unchanged. Four",
-    "default": "The 49 chip catalogue entries, qualities, uniqueness and allowed-wave lists are unchanged. Four numeric changes occur in linked Skill records; comparing LuckyDefenseChip alone misses them.",
-    "order": 17,
+    "default": "The 49 chip catalogue entries, qualities, uniqueness and allowed-wave lists are unchanged. Four numeric changes occur in linked Skill records.",
+    "order": 16,
     "section": "chips",
     "sectionTitle": "Confirmed chip updates"
   },
   {
     "page": "information/patch-165921.html",
     "block": "text-chips-shuffle",
-    "label": "Text · Shuffle still grants 600 energizers. Contract Employees stay deployed, and their Tatari types a",
-    "default": "Shuffle still grants 600 energizers. Contract Employees stay deployed, and their Tatari types are now excluded from the replacement pool. Ordinary replacement units inherit the replaced slots’ grid positions and Horde levels. Candidate selection and historical-level bookkeeping were rewritten. This does not guarantee that all replacements differ from your previous ordinary Tatari types; unusual edge cases have not been tested in a live battle.",
-    "order": 18,
+    "label": "Text · Shuffle still grants 600 energizers and will shuffle from both the deployed and undeployed Tata",
+    "default": "Shuffle still grants 600 energizers and will shuffle from both the deployed and undeployed Tatari pool.\n\nContract Employees stay deployed, and their Tatari types are now excluded from the replacement pool. Ordinary replacement units inherit the replaced slots’ grid positions and Horde levels.",
+    "order": 17,
     "section": "chips",
     "sectionTitle": "Confirmed chip updates"
   },
@@ -2488,7 +2479,7 @@
     "block": "text-skill-balance-title",
     "label": "Heading · Tatari Horde skill changes",
     "default": "Tatari Horde skill changes",
-    "order": 19,
+    "order": 18,
     "section": "skill-balance",
     "sectionTitle": "Tatari Horde skill changes"
   },
@@ -2496,8 +2487,8 @@
     "page": "information/patch-165921.html",
     "block": "text-skill-balance-method",
     "label": "Text · 59 displayed value changes affect 42 existing skills in 30 Tatari families. The table uses curr",
-    "default": "59 displayed value changes affect 42 existing skills in 30 Tatari families. The table uses current source values, including helper skills and buffs—not the OldValue tooltip comparison metadata. Shared effects can appear on multiple skill cards. Family names below use the base form.",
-    "order": 20,
+    "default": "59 displayed value changes affect 42 existing skills in 30 Tatari families. The table uses current source values, including helper skills and buff tooltips.",
+    "order": 19,
     "section": "skill-balance",
     "sectionTitle": "Tatari Horde skill changes"
   },
@@ -2506,7 +2497,7 @@
     "block": "text-mechanics-title",
     "label": "Heading · Other Horde mechanics and limits",
     "default": "Other Horde mechanics and limits",
-    "order": 21,
+    "order": 20,
     "section": "mechanics",
     "sectionTitle": "Other Horde mechanics and limits"
   },
@@ -2515,7 +2506,7 @@
     "block": "list-mechanics-unchanged-1",
     "label": "List item · All eight deployment/upgrade costs, death refunds, rank stat multipliers and skill unlock index",
     "default": "All eight deployment/upgrade costs, death refunds, rank stat multipliers and skill unlock indexes are unchanged.",
-    "order": 22,
+    "order": 21,
     "section": "mechanics",
     "sectionTitle": "Other Horde mechanics and limits"
   },
@@ -2524,7 +2515,7 @@
     "block": "list-mechanics-unchanged-2",
     "label": "List item · Energy recovery is unchanged: start at 400, initially gain 25 every 5 seconds, decrease the per",
     "default": "Energy recovery is unchanged: start at 400, initially gain 25 every 5 seconds, decrease the periodic gain by 5 every 90 seconds, and gain 4 per normal kill or 100 per boss kill.",
-    "order": 23,
+    "order": 22,
     "section": "mechanics",
     "sectionTitle": "Other Horde mechanics and limits"
   },
@@ -2533,7 +2524,7 @@
     "block": "list-mechanics-unchanged-3",
     "label": "List item · The rank, season-rank and wave reward tables and the balance table are unchanged.",
     "default": "The rank, season-rank and wave reward tables and the balance table are unchanged.",
-    "order": 24,
+    "order": 23,
     "section": "mechanics",
     "sectionTitle": "Other Horde mechanics and limits"
   },
@@ -2542,16 +2533,16 @@
     "block": "list-mechanics-unchanged-4",
     "label": "List item · Horde’s configured level reference remains 500. Normal account-level inputs and Supabase saves ",
     "default": "Horde’s configured level reference remains 500. Normal account-level inputs and Supabase saves accept 1–3,600.",
-    "order": 25,
+    "order": 24,
     "section": "mechanics",
     "sectionTitle": "Other Horde mechanics and limits"
   },
   {
     "page": "information/patch-165921.html",
     "block": "list-mechanics-unchanged-5",
-    "label": "List item · New parameters 39=200 and 40=5 remain unmapped. The official override differs from the default ",
-    "default": "New parameters 39=200 and 40=5 remain unmapped. The official override differs from the default parameter table; its selection is not established.",
-    "order": 26,
+    "label": "List item · New parameters 39 and 40 remain unknown.",
+    "default": "New parameters 39 and 40 remain unknown.",
+    "order": 25,
     "section": "mechanics",
     "sectionTitle": "Other Horde mechanics and limits"
   },
@@ -2560,7 +2551,7 @@
     "block": "text-mechanics-tooltips",
     "label": "Text · 86 existing Horde detail entries changed, but many edits only correct labels, formatting, histo",
     "default": "86 existing Horde detail entries changed, but many edits only correct labels, formatting, historical comparison values or buff/nerf arrows. Those display edits must not be counted as additional combat changes. Bonobean’s new active skill illustrates why this matters: current minimum/maximum interval fields are 22/26 seconds, while its comparison metadata lists 12/16.",
-    "order": 27,
+    "order": 26,
     "section": "mechanics",
     "sectionTitle": "Other Horde mechanics and limits"
   },
@@ -2569,7 +2560,7 @@
     "block": "text-pending-title",
     "label": "Heading · Still unverified",
     "default": "Still unverified",
-    "order": 28,
+    "order": 27,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
@@ -2578,7 +2569,7 @@
     "block": "list-pending-unknowns-1",
     "label": "List item · Goldrush weekly giftbox limit",
     "default": "Goldrush weekly giftbox limit",
-    "order": 29,
+    "order": 28,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
@@ -2587,7 +2578,7 @@
     "block": "list-pending-unknowns-2",
     "label": "List item · Boss Challenge merge changes",
     "default": "Boss Challenge merge changes",
-    "order": 30,
+    "order": 29,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
@@ -2596,7 +2587,7 @@
     "block": "list-pending-unknowns-3",
     "label": "List item · Halloween event dates and replacement timing",
     "default": "Halloween event dates and replacement timing",
-    "order": 31,
+    "order": 30,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
@@ -2605,7 +2596,7 @@
     "block": "list-pending-unknowns-4",
     "label": "List item · Exact match to the live server payload",
     "default": "Exact match to the live server payload",
-    "order": 32,
+    "order": 31,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
@@ -2614,7 +2605,7 @@
     "block": "list-pending-unknowns-5",
     "label": "List item · Meaning and consumer binding of new Horde parameters 39 (200) and 40 (5)",
     "default": "Meaning and consumer binding of new Horde parameters 39 (200) and 40 (5)",
-    "order": 33,
+    "order": 32,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
@@ -2623,16 +2614,7 @@
     "block": "list-pending-unknowns-6",
     "label": "List item · Selection of the official Horde parameter override and unusual Shuffle edge cases",
     "default": "Selection of the official Horde parameter override and unusual Shuffle edge cases",
-    "order": 34,
-    "section": "pending",
-    "sectionTitle": "Still unverified"
-  },
-  {
-    "page": "information/patch-165921.html",
-    "block": "text-pending-source",
-    "label": "Text · Evidence: recovered Unit, Pet, ProfilePicture, UnitLevel, UnitAttrLevel, LuckyDefenseSeasonConf",
-    "default": "Evidence: recovered Unit, Pet, ProfilePicture, UnitLevel, UnitAttrLevel, LuckyDefenseSeasonConfig, LuckyDefenseConfig and PetCollectible records, plus decoded English language data. Raw game code and packages are kept offline.",
-    "order": 35,
+    "order": 33,
     "section": "pending",
     "sectionTitle": "Still unverified"
   }
