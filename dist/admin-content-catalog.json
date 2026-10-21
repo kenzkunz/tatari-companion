@@ -2369,8 +2369,8 @@
   {
     "page": "information/patch-165921.html",
     "block": "text-tatari-bonobean",
-    "label": "Text · Bonobean is linked to UnitID 68. Its three Horde skills and source-resolved values are now avai",
-    "default": "Bonobean is linked to UnitID 68. Its three Horde skills and source-resolved values are now available in the Horde guide, with verified artwork. Full My Tatari ownership/evolution integration remains separate.",
+    "label": "Text · Bonobean (UnitID 68), Titanape, Grangutan and Primakong are now integrated across My Tatari, th",
+    "default": "Bonobean (UnitID 68), Titanape, Grangutan and Primakong are now integrated across My Tatari, the database, stats calculator, evolution planner, Horde guide/drafter and tierlist tools. Normal and Glitter portraits use the supplied images. Food levels 0–16, evolution trials and source-resolved regular/Horde skills are included.",
     "order": 6,
     "section": "tatari",
     "sectionTitle": "Bonobean and account levels"

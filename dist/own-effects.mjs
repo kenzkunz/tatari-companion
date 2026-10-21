@@ -1,4 +1,4 @@
-const response=await fetch('/tatari-data/effect-catalog.json');if(!response.ok)throw Error('Effect catalog unavailable.');const catalog=await response.json();
+const response=await fetch('/tatari-data/effect-catalog.json?v=bonobean1');if(!response.ok)throw Error('Effect catalog unavailable.');const catalog=await response.json();
 export const effectName=id=>catalog.effects[id]?.name||id;
 export const groupOf=id=>catalog.effects[id]?.group||'other';
 export const effectInfo=id=>catalog.effects[id];

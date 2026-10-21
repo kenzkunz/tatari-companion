@@ -37,4 +37,4 @@ Private accounts, chats, player inventories, administration, drafts and unfinish
 
 - [Patch 165921 findings](https://kenzkunz.github.io/tatari-companion/information/patch-165921.html): Reconstructed config evidence for Bonobean, account levels through 3600 and Horde S3 Difficulties 1–6. Exact live payload identity is unverified; Horde wave/chip tools now use S3 patch-165921 data.
 
-Horde patch 165921: six difficulties, 150 waves and 71 English-localized Zobo types; chip balance and existing skill details are integrated. Bonobean skill references are included in the Horde guide. The exact live payload identity and new parameter meanings remain unverified.
+Horde patch 165921: six difficulties, 150 waves and 71 English-localized Zobo types; chip balance and existing skill details are integrated. Bonobean and its four forms are integrated across account rosters, stats, trials, the database, Horde drafting and tierlists, with normal and Glitter artwork. The exact live payload identity and new parameter meanings remain unverified.

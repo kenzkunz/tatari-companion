@@ -15070,6 +15070,395 @@
         "5": "Generates 3 Windows and continuously deals small AoE damage in front of them.",
         "7": "Slacks off periodically to switch locations with 1 ally, granting them Your Turn: DMG Boost."
       }
+    },
+    {
+      "key": "68-1",
+      "unitId": 68,
+      "tier": 1,
+      "name": "Bonobean",
+      "element": 4,
+      "role": "Tank",
+      "image": "/tatari-data/portraits/Tatari__Gorilla__unit-68__evolution-1__appearance-default.webp",
+      "elementImage": "/tatari-data/images/txui_common_pet_element_grass_95992a18.webp",
+      "roleImage": "/tatari-data/images/txui_battle_pet_position_tank_7e9934c9.webp",
+      "effectCoverage": "game-data-id-catalog",
+      "playerhead": "/tatari-data/images/txui_playerhead_68_01.png",
+      "searchNames": [
+        "Bonobean",
+        "Titanape",
+        "Grangutan",
+        "Primakong",
+        "Bonobean1",
+        "Bonobean2",
+        "Bonobean3",
+        "Bonobean4",
+        "gorilla",
+        "banana",
+        "grass gorilla"
+      ],
+      "ownEffects": [
+        {
+          "effectId": "unresolved:6801:1",
+          "skillId": 6801,
+          "skillName": "Green Bean",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "buff:1",
+          "skillId": 6801,
+          "skillName": "Green Bean",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "buff:18",
+          "skillId": 6891,
+          "skillName": "Poison Play",
+          "level": 3,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:19",
+          "skillId": 6891,
+          "skillName": "Poison Play",
+          "level": 3,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:6891",
+          "skillId": 6892,
+          "skillName": "Showstopper",
+          "level": 5,
+          "kind": "horde"
+        },
+        {
+          "effectId": "unresolved:6893:1",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:3",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        },
+        {
+          "effectId": "mechanic:knockback",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        }
+      ],
+      "baseDescription": "Launches bananas that deal damage and split into smaller piercing bananas. Upon losing a certain amount of HP, hides and throws Banana Peels.",
+      "hordeDescriptions": {
+        "3": "Attacks have a chance to launch an extra moldy banana to deal single-target damage and inflict Poison.",
+        "5": "Periodically summons bananas nearby, which can merge into oranges; oranges can then merge into watermelons. Fruits continuously deal AoE damage and inflict Slicer: DEF Down. Each merge increases the amount and range of damage dealt.",
+        "7": "Periodically summons Big Bananas ahead. Enemies that attack Big Bananas are inflicted with Weak and Knockback, which forces them into other columns."
+      }
+    },
+    {
+      "key": "68-2",
+      "unitId": 68,
+      "tier": 2,
+      "name": "Titanape",
+      "element": 4,
+      "role": "Tank",
+      "image": "/tatari-data/portraits/Tatari__Gorilla__unit-68__evolution-2__appearance-default.webp",
+      "elementImage": "/tatari-data/images/txui_common_pet_element_grass_95992a18.webp",
+      "roleImage": "/tatari-data/images/txui_battle_pet_position_tank_7e9934c9.webp",
+      "effectCoverage": "game-data-id-catalog",
+      "playerhead": "/tatari-data/images/txui_playerhead_68_02.png",
+      "searchNames": [
+        "Bonobean",
+        "Titanape",
+        "Grangutan",
+        "Primakong",
+        "Bonobean1",
+        "Bonobean2",
+        "Bonobean3",
+        "Bonobean4",
+        "gorilla",
+        "banana",
+        "grass gorilla"
+      ],
+      "ownEffects": [
+        {
+          "effectId": "buff:6801",
+          "skillId": 6802,
+          "skillName": "Fresh Peel",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "unresolved:6802:2",
+          "skillId": 6802,
+          "skillName": "Fresh Peel",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "buff:1",
+          "skillId": 6802,
+          "skillName": "Fresh Peel",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "buff:18",
+          "skillId": 6891,
+          "skillName": "Poison Play",
+          "level": 3,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:19",
+          "skillId": 6891,
+          "skillName": "Poison Play",
+          "level": 3,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:6891",
+          "skillId": 6892,
+          "skillName": "Showstopper",
+          "level": 5,
+          "kind": "horde"
+        },
+        {
+          "effectId": "unresolved:6893:1",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:3",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        },
+        {
+          "effectId": "mechanic:knockback",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        }
+      ],
+      "baseDescription": "Launches bananas that deal damage and split into smaller piercing bananas. Upon losing a certain amount of HP, gains Steady: DEF Boost and throws Banana Peels.",
+      "hordeDescriptions": {
+        "3": "Attacks have a chance to launch an extra moldy banana to deal single-target damage and inflict Poison.",
+        "5": "Periodically summons bananas nearby, which can merge into oranges; oranges can then merge into watermelons. Fruits continuously deal AoE damage and inflict Slicer: DEF Down. Each merge increases the amount and range of damage dealt.",
+        "7": "Periodically summons Big Bananas ahead. Enemies that attack Big Bananas are inflicted with Weak and Knockback, which forces them into other columns."
+      }
+    },
+    {
+      "key": "68-3",
+      "unitId": 68,
+      "tier": 3,
+      "name": "Grangutan",
+      "element": 4,
+      "role": "Tank",
+      "image": "/tatari-data/portraits/Tatari__Gorilla__unit-68__evolution-3__appearance-default.webp",
+      "elementImage": "/tatari-data/images/txui_common_pet_element_grass_95992a18.webp",
+      "roleImage": "/tatari-data/images/txui_battle_pet_position_tank_7e9934c9.webp",
+      "effectCoverage": "game-data-id-catalog",
+      "playerhead": "/tatari-data/images/txui_playerhead_68_03.png",
+      "searchNames": [
+        "Bonobean",
+        "Titanape",
+        "Grangutan",
+        "Primakong",
+        "Bonobean1",
+        "Bonobean2",
+        "Bonobean3",
+        "Bonobean4",
+        "gorilla",
+        "banana",
+        "grass gorilla"
+      ],
+      "ownEffects": [
+        {
+          "effectId": "buff:6801",
+          "skillId": 6803,
+          "skillName": "Grand Entrance",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "unresolved:6803:2",
+          "skillId": 6803,
+          "skillName": "Grand Entrance",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "buff:1",
+          "skillId": 6803,
+          "skillName": "Grand Entrance",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "buff:18",
+          "skillId": 6891,
+          "skillName": "Poison Play",
+          "level": 3,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:19",
+          "skillId": 6891,
+          "skillName": "Poison Play",
+          "level": 3,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:6891",
+          "skillId": 6892,
+          "skillName": "Showstopper",
+          "level": 5,
+          "kind": "horde"
+        },
+        {
+          "effectId": "unresolved:6893:1",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:3",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        },
+        {
+          "effectId": "mechanic:knockback",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        }
+      ],
+      "baseDescription": "Launches bananas that deal damage and split into smaller piercing bananas. Upon losing a certain amount of HP, recovers HP, gains Steady: DEF Boost, and throws Banana Peels.",
+      "hordeDescriptions": {
+        "3": "Attacks have a chance to launch an extra moldy banana to deal single-target damage and inflict Poison.",
+        "5": "Periodically summons bananas nearby, which can merge into oranges; oranges can then merge into watermelons. Fruits continuously deal AoE damage and inflict Slicer: DEF Down. Each merge increases the amount and range of damage dealt.",
+        "7": "Periodically summons Big Bananas ahead. Enemies that attack Big Bananas are inflicted with Weak and Knockback, which forces them into other columns."
+      }
+    },
+    {
+      "key": "68-4",
+      "unitId": 68,
+      "tier": 4,
+      "name": "Primakong",
+      "element": 4,
+      "role": "Tank",
+      "image": "/tatari-data/portraits/Tatari__Gorilla__unit-68__evolution-4__appearance-default.webp",
+      "elementImage": "/tatari-data/images/txui_common_pet_element_grass_95992a18.webp",
+      "roleImage": "/tatari-data/images/txui_battle_pet_position_tank_7e9934c9.webp",
+      "effectCoverage": "game-data-id-catalog",
+      "playerhead": "/tatari-data/images/txui_playerhead_68_04.png",
+      "searchNames": [
+        "Bonobean",
+        "Titanape",
+        "Grangutan",
+        "Primakong",
+        "Bonobean1",
+        "Bonobean2",
+        "Bonobean3",
+        "Bonobean4",
+        "gorilla",
+        "banana",
+        "grass gorilla"
+      ],
+      "ownEffects": [
+        {
+          "effectId": "buff:6801",
+          "skillId": 6804,
+          "skillName": "Jungle Star",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "unresolved:6804:2",
+          "skillId": 6804,
+          "skillName": "Jungle Star",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "buff:1",
+          "skillId": 6804,
+          "skillName": "Jungle Star",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "unresolved:6804:4",
+          "skillId": 6804,
+          "skillName": "Jungle Star",
+          "level": null,
+          "kind": "normal"
+        },
+        {
+          "effectId": "buff:18",
+          "skillId": 6891,
+          "skillName": "Poison Play",
+          "level": 3,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:19",
+          "skillId": 6891,
+          "skillName": "Poison Play",
+          "level": 3,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:6891",
+          "skillId": 6892,
+          "skillName": "Showstopper",
+          "level": 5,
+          "kind": "horde"
+        },
+        {
+          "effectId": "unresolved:6893:1",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        },
+        {
+          "effectId": "buff:3",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        },
+        {
+          "effectId": "mechanic:knockback",
+          "skillId": 6893,
+          "skillName": "Banana Bash",
+          "level": 7,
+          "kind": "horde"
+        }
+      ],
+      "baseDescription": "Launches bananas that deal damage and split into smaller piercing bananas. Upon losing a certain amount of HP, recovers HP, gains Steady: DEF Boost, and throws Banana Peels. Primakong carries Aura: Grass whenever on the field.",
+      "hordeDescriptions": {
+        "3": "Attacks have a chance to launch an extra moldy banana to deal single-target damage and inflict Poison.",
+        "5": "Periodically summons bananas nearby, which can merge into oranges; oranges can then merge into watermelons. Fruits continuously deal AoE damage and inflict Slicer: DEF Down. Each merge increases the amount and range of damage dealt.",
+        "7": "Periodically summons Big Bananas ahead. Enemies that attack Big Bananas are inflicted with Weak and Knockback, which forces them into other columns."
+      }
     }
-  ]
+  ],
+  "bonobeanSourceVersion": "0.50.1-patch-165921"
 }

@@ -16,7 +16,8 @@ const skills=new Map(roster.units.flatMap(u=>u.forms.flatMap(f=>f.skills.horde))
 assert.equal(audit.changes.length,59);
 for(const change of audit.changes){let expected=change.new;if(expected&&typeof expected==='object')expected=Object.values(expected)[0];assert(skills.get(change.id).details.some(d=>d.value===expected),`Missing updated skill ${change.id}: ${expected}`);}
 assert.deepEqual(additions.units[0].forms[0].skills.horde.map(s=>s.id),[6891,6892,6893]);
-for(const form of additions.units[0].forms){assert((await stat('dist/tatari-data/'+form.portrait)).isFile());for(const s of [...form.skills.normal,...form.skills.horde])assert(!/[\u3400-\u9fff]|\$\{\d+\}|#\.[A-Za-z]/.test(JSON.stringify([s.name,s.description,s.details])));}
+const text=v=>typeof v==='string'?v:v?.en||'';
+for(const form of additions.units[0].forms){assert((await stat('dist/tatari-data/'+form.portrait)).isFile());for(const s of [...form.skills.normal,...form.skills.horde])assert(!/[\u3400-\u9fff]|\$\{\d+\}|#\.[A-Za-z]/.test(JSON.stringify([text(s.name),text(s.description),...s.details.flatMap(d=>[text(d.title),text(d.text)])])));}
 const html=await readFile('dist/my-tatari.html','utf8'),stats=await readFile('dist/tatari-stats.mjs','utf8');
 assert(/id="roster-level"[^>]*max="3600"/.test(html));assert(stats.includes('level.max=3600'));assert(stats.includes("level.readOnly=statMode==='fixed500'"));
 console.log('Passed all S3 difficulties/waves, 71 localized Zobo identities and assets, chip balances, skill updates, Bonobean references and 3,600 account-level controls.');

@@ -28,7 +28,7 @@
         {
           "id": "bonobean",
           "type": "text",
-          "text": "Bonobean is linked to UnitID 68. Its three Horde skills and source-resolved values are now available in the Horde guide, with verified artwork. Full My Tatari ownership/evolution integration remains separate."
+          "text": "Bonobean (UnitID 68), Titanape, Grangutan and Primakong are now integrated across My Tatari, the database, stats calculator, evolution planner, Horde guide/drafter and tierlist tools. Normal and Glitter portraits use the supplied images. Food levels 0–16, evolution trials and source-resolved regular/Horde skills are included."
         },
         {
           "id": "coverage",
@@ -51,8 +51,8 @@
               "Existing formulas retained; new levels use recorded tables, not extrapolation"
             ],
             [
-              "Bonobean Horde skill cards",
-              "Included in the Horde guide; account roster integration is separate"
+              "Bonobean integration",
+              "All four forms, normal/Glitter artwork, account saves, stats, trials and drafting tools"
             ]
           ]
         }

@@ -1,10 +1,11 @@
 import assert from 'node:assert/strict';
 await import('./horde-patch-check.mjs');
+await import('./bonobean-check.mjs');
 import {readFile,stat} from 'node:fs/promises';
 import {searchMatches,minimumStars,coreStats,calculatedStats,databaseDefaults,compactStat} from '../dist/tatari-model.mjs';
 const data=JSON.parse(await readFile(new URL('../dist/tatari-data/roster.json',import.meta.url),'utf8'));
 assert.deepEqual(coreStats({ATKStandard:100,DEFStandard:200,HPStandard:300},{ATKCoef:1.2,ATKAdd:10,DEFCoef:2,DEFAdd:20,HPCoef:1,HPAdd:60},{ATK:2,DEF:2,HP:5}),{ATK:260,DEF:840,HP:1800});
-assert.equal(data.units.length,67);assert.equal(data.units.reduce((n,u)=>n+u.forms.length,0),248);
+assert.equal(data.units.length,68);assert.equal(data.units.reduce((n,u)=>n+u.forms.length,0),252);
 const frost=data.units.find(u=>u.id===11);
 for(const query of ['Frostpaw','Frostnip2','cat'])assert(searchMatches(frost,query));assert(!searchMatches(frost,'missing xyz'));
 assert.deepEqual(frost.forms.map(f=>minimumStars(frost,f)),[0,3,6,24]);
@@ -28,8 +29,8 @@ assert(!/#\.[A-Za-z][A-Za-z0-9]*#/.test(JSON.stringify(data)), 'Unresolved skill
 for(const u of data.units)for(const f of u.forms)for(const skills of Object.values(f.skills))assert(skills.every(s=>!JSON.stringify(s.name).includes('不用翻译')), 'Internal helper skill leaked into public cards');
 
 const hordeIds=new Set();for(const u of data.units)for(const f of u.forms){assert(f.skills.normal.every(s=>!JSON.stringify(s.name).includes('不用翻译')));for(const s of f.skills.horde){hordeIds.add(s.id);assert(s.details.length>0,'Missing Horde details '+s.id);assert([3,5,7].includes(s.unlockLevel));assert(!/\$\{\d+\}|#\.[A-Za-z]/.test(JSON.stringify(s)),'Unresolved Horde value '+s.id);}}
-assert.equal(hordeIds.size,201);
+assert.equal(hordeIds.size,204);
 const ice=frost.forms[0].skills.horde[0];assert.deepEqual(ice.details.map(d=>d.text),['180%','30%','Unable to move or attack.','60%','1.5s']);
-console.log('Audited all 67 families / 248 forms; no internal normal cards; 201 Horde skills have resolved in-game detail rows.');
+console.log('Audited all 68 families / 252 forms; no internal normal cards; 204 Horde skills have resolved in-game detail rows.');
 
-const {hordeSkillCards}=await import('../dist/horde-cards-model.mjs');for(const unit of data.units)for(const form of unit.forms){const cards=hordeSkillCards(form);assert.deepEqual(cards.map(c=>c.label),['Regular','Lv 3','Lv 5','Lv 7']);assert.deepEqual(cards[0].skills,form.skills.normal);assert.deepEqual(cards.slice(1).map(c=>c.skills[0].id),form.skills.horde.map(s=>s.id));assert(cards.every(c=>c.skills.length));}console.log('Passed four visible Horde cards for all 248 forms, with source rank data preserved.');
+const {hordeSkillCards}=await import('../dist/horde-cards-model.mjs');for(const unit of data.units)for(const form of unit.forms){const cards=hordeSkillCards(form);assert.deepEqual(cards.map(c=>c.label),['Regular','Lv 3','Lv 5','Lv 7']);assert.deepEqual(cards[0].skills,form.skills.normal);assert.deepEqual(cards.slice(1).map(c=>c.skills[0].id),form.skills.horde.map(s=>s.id));assert(cards.every(c=>c.skills.length));}console.log('Passed four visible Horde cards for all 252 forms, with source rank data preserved.');

@@ -8,7 +8,7 @@ assert.deepEqual(validateRoster(roster,catalog),roster);assert.notEqual(rosterKe
 for(const field of ['tier','stars','food']){const bad=structuredClone(roster);bad.units[catalog.units[0].id][field]=999;assert.throws(()=>validateRoster(bad,catalog));}
 for(const level of [0,1.5,3601,100000])assert.throws(()=>validateRoster({...roster,accountLevel:level},catalog));
 assert.throws(()=>validateRoster({...roster,units:{999:{owned:true,tier:1,stars:1,food:0}}},catalog));
-console.log('Passed all 67 roster families, supported tiers/food/stars, invalid inputs and account storage separation.');
+console.log('Passed all 68 roster families, supported tiers/food/stars, invalid inputs and account storage separation.');
 
 assert.equal(starCost(29,catalog),7);assert.equal(starCost(30,catalog),9);assert.equal(starCost(42,catalog),11);assert.equal(starCost(83,catalog),26);assert.equal(starCost(84,catalog),0);
 const legacy={version:1,accountLevel:1,units:{1:{owned:true,tier:1,stars:30,food:0}}};assert.equal(validateRoster(legacy,catalog).units[1].copies,0);

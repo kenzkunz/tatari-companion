@@ -19,6 +19,13 @@
         "id": 6893,
         "type": "active"
       }
+    ],
+    "fullIntegration": true,
+    "forms": [
+      "Bonobean",
+      "Titanape",
+      "Grangutan",
+      "Primakong"
     ]
   },
   "accountLevels": {

@@ -3332,6 +3332,63 @@
       "evolution": 2,
       "appearance": "default",
       "image": "portraits/Tatari__Boar__unit-9__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 68,
+      "englishName": "Gorilla",
+      "evolution": 1,
+      "appearance": "default",
+      "image": "portraits/Tatari__Gorilla__unit-68__evolution-1__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 68,
+      "englishName": "Gorilla",
+      "evolution": 1,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Gorilla__unit-68__evolution-1__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 68,
+      "englishName": "Gorilla",
+      "evolution": 2,
+      "appearance": "default",
+      "image": "portraits/Tatari__Gorilla__unit-68__evolution-2__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 68,
+      "englishName": "Gorilla",
+      "evolution": 2,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Gorilla__unit-68__evolution-2__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 68,
+      "englishName": "Gorilla",
+      "evolution": 3,
+      "appearance": "default",
+      "image": "portraits/Tatari__Gorilla__unit-68__evolution-3__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 68,
+      "englishName": "Gorilla",
+      "evolution": 3,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Gorilla__unit-68__evolution-3__appearance-color_1.webp"
+    },
+    {
+      "stableUnitId": 68,
+      "englishName": "Gorilla",
+      "evolution": 4,
+      "appearance": "default",
+      "image": "portraits/Tatari__Gorilla__unit-68__evolution-4__appearance-default.webp"
+    },
+    {
+      "stableUnitId": 68,
+      "englishName": "Gorilla",
+      "evolution": 4,
+      "appearance": "color_1",
+      "image": "portraits/Tatari__Gorilla__unit-68__evolution-4__appearance-color_1.webp"
     }
-  ]
+  ],
+  "bonobeanSourceVersion": "0.50.1-patch-165921"
 }

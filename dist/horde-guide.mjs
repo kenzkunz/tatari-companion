@@ -1,5 +1,5 @@
 import {withoutAuraDescription,withoutAuraDetails} from './horde-skill-presentation.mjs?v=aura-section3';
-import {isSkillEffectDetail} from './skill-effect-style.mjs';
+import {isSkillEffectDetail} from './skill-effect-style.mjs?v=bonobean1';
 import {hordeSkillCards} from '/horde-cards-model.mjs';
 const $=id=>document.getElementById(id),fmt=n=>Math.round(n).toLocaleString('en-US');
 const text=v=>typeof v==='string'?v:v?.en||v?.zh||'';
@@ -55,9 +55,8 @@ for(const id of ['level-from','level-to'])$(id).addEventListener('change',render
 renderWaves();renderChips();renderLevel();
 
 try{
-  const roster=await fetch('/tatari-data/roster.json?v=horde165921').then(r=>{if(!r.ok)throw Error('Tatari data unavailable');return r.json();});
-  const additions=await fetch('/guide-data/horde-tatari-additions.json?v=165921').then(r=>{if(!r.ok)throw Error('New Horde skill data unavailable');return r.json();});
-  const units=[...roster.units,...additions.units].filter(u=>u.forms.some(f=>f.skills.horde?.length)).sort((a,b)=>text(a.forms[0].name).localeCompare(text(b.forms[0].name)));
+  const roster=await fetch('/tatari-data/roster.json?v=bonobean1').then(r=>{if(!r.ok)throw Error('Tatari data unavailable');return r.json();});
+  const units=roster.units.filter(u=>u.forms.some(f=>f.skills.horde?.length)).sort((a,b)=>text(a.forms[0].name).localeCompare(text(b.forms[0].name)));
   $('skill-tatari').replaceChildren(...units.map(u=>{const o=node('option',text(u.forms[0].name));o.value=u.id;return o;}));$('skill-tatari').value=units.some(u=>u.id===11)?'11':String(units[0].id);
   const trigger=$('skill-picker'),options=$('skill-options');
   const optionButtons=units.map(u=>{const b=node('button',undefined,'horde-tatari-option');b.type='button';b.setAttribute('role','option');b.dataset.unit=u.id;b.append(picture('/tatari-data/'+u.forms[0].portrait),node('span',text(u.forms[0].name)));b.addEventListener('click',()=>{$('skill-tatari').value=u.id;changeFamily();closePicker();trigger.focus();});return b;});options.replaceChildren(...optionButtons);

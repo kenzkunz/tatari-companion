@@ -1,4 +1,4 @@
-import {appearances} from './tierlist-appearances.mjs?v=1';
+import {appearances} from './tierlist-appearances.mjs?v=bonobean1';
 export {appearances};
 export const modes=['Horde','Arena','Boss','Custom'];
 export const defaults=()=>({schema:1,title:'My Tatari tierlist',gameMode:'Custom',appearance:'normal',imageStyle:'icon',tier:4,notes:'',background:'#fffef1',view:'list',chart:{left:'Low',right:'High',top:'High',bottom:'Low',positions:{}},rows:['S','A','B','C','D','E'].map((label,i)=>({label,color:['#ff7f7f','#ffbf7f','#ffdf7f','#ffff7f','#bfff7f','#7fff7f'][i],units:[]}))});
