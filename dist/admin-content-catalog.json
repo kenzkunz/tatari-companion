@@ -2441,8 +2441,8 @@
   {
     "page": "information/patch-165921.html",
     "block": "text-events-battles",
-    "label": "Text · The patch contains 429 new and 404 changed StageBattle files. These counts describe files, not ",
-    "default": "The patch contains 429 new and 404 changed StageBattle files. These counts describe files, not player-facing changes. Their chapter mapping is still under review; formation recommendations have not been recalibrated from the counts alone.",
+    "label": "Text · All 429 new and 404 changed battle setups are now mapped and included in the website’s battle d",
+    "default": "All 429 new and 404 changed battle setups are now mapped and included in the website’s battle dataset. The changed setups affect 404 stages in chapters 24–29. Of the new files, 404 preserve earlier setups under new references for later chapters; 25 contain Season 3 Horde waves. Enemy level, star and ATK/DEF/HP multiplier records are unchanged. The formation planner’s Stage mode now shows the configured enemy roster, lanes and spawn sequence. This updates encounter data, not battle-simulation accuracy.",
     "order": 14,
     "section": "events",
     "sectionTitle": "Halloween and battle setup"

@@ -14,12 +14,12 @@ function renderWaves(){
   const waves=selectedWaves(),normal=waves.reduce((a,w)=>a+w.normal,0),bosses=waves.reduce((a,w)=>a+w.bosses,0),income=waves.reduce((a,w)=>a+w.income,0);
   $('wave-summary').textContent=waves.length+' waves · '+fmt(normal)+' normal enemies + '+bosses+' bosses · '+fmt(income)+' base kill Energy Candy per player if all configured enemies are defeated.';
   $('wave-list').replaceChildren(...waves.map(w=>{
-    const d=node('details'),summary=node('summary'),boss=node('span',undefined,'horde-wave-bosses'),label=node('span','Wave '+w.wave,'horde-wave-label'),amount=node('span','+'+fmt(w.income),'horde-wave-income');
-    amount.append(picture('/guide-assets/horde/energizer.png','Energizers'));boss.append(...w.enemies.filter(e=>e.boss).map(enemyTag));summary.append(label,boss,amount);
+    const d=node('details'),summary=node('summary'),label=node('span','Wave '+w.wave,'horde-wave-label'),amount=node('span','+'+fmt(w.income),'horde-wave-income');
+    amount.append(picture('/guide-assets/horde/energizer.png','Energizers'));summary.append(label,amount);
     const detail=node('div',undefined,'horde-wave-detail'),roster=node('div',undefined,'horde-wave-enemies');
     detail.append(node('p',w.normal+' normal + '+w.bosses+' boss enemies · ATK ×'+w.atk+' / HP ×'+w.hp+' / DEF ×'+w.defense+(w.chip?' · Chip selection-round definition':'')));
-    roster.append(...w.enemies.map(enemyTag));detail.append(roster);d.append(summary,detail);return d;
-  }));renderBudget();
+    roster.append(...w.enemies.filter(e=>!e.boss).map(enemyTag));detail.append(roster);d.append(summary,detail);return d;
+  }));let pool=$('horde-boss-pool');if(!pool){pool=node('section');pool.id='horde-boss-pool';$('wave-list').after(pool)}pool.replaceChildren(node('h3','Configured boss pool'),node('p','Bosses are shown as candidates, not a guaranteed per-wave lineup. The wave figures above describe configuration counts.'));const bossTags=node('div',undefined,'horde-wave-enemies');bossTags.append(...[...new Map(waves.flatMap(w=>w.enemies.filter(e=>e.boss)).map(e=>[e.id,e])).values()].map(e=>enemyTag({...e,count:1})));pool.append(bossTags);renderBudget();
 }
 function renderChips(){
   const search=$('chip-search').value.trim().toLowerCase(),quality=$('chip-quality').value,category=$('chip-category').value,wave=$('chip-wave').value;

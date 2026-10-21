@@ -1,3 +1,4 @@
+await import('./battle-data-check.mjs');
 import assert from 'node:assert/strict';
 import {readFile,stat} from 'node:fs/promises';
 const read=async p=>JSON.parse(await readFile('dist/'+p,'utf8'));
