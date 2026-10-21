@@ -94,4 +94,6 @@
 .public-card .card-stars,.public-card .card-name,.public-card .card-state,.public-card .foil-badge{z-index:2}
 @keyframes foil-sweep{0%,20%{transform:translateX(-40%);opacity:0}35%{opacity:.45}65%{opacity:.45}80%,100%{transform:translateX(40%);opacity:0}}
 @keyframes foil-glimmer{0%,10%,65%,100%{opacity:0;transform:scale(.35) rotate(-12deg)}28%{opacity:.95;transform:scale(1.12) rotate(0)}43%{opacity:.55;transform:scale(.8) rotate(8deg)}}
-@media(prefers-reduced-motion:reduce){.foil-glint,.foil-overlay::after{animation:none}.foil-glint{opacity:.55;transform:none}.foil-overlay::after{transform:translateX(0);opacity:.18}}
+/* Reduced motion keeps a slow opacity-only twinkle; no sweep, scaling or rotation. */
+@keyframes foil-glimmer-soft{0%,100%{opacity:.12}45%{opacity:.8}70%{opacity:.3}}
+@media(prefers-reduced-motion:reduce){.foil-glint{animation:foil-glimmer-soft 8s ease-in-out infinite;animation-delay:calc(var(--sparkle-index)*-1.29s);transform:none}.foil-overlay::after{animation:none;transform:translateX(0);opacity:.18}}
