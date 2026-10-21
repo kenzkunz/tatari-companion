@@ -2369,8 +2369,8 @@
   {
     "page": "information/patch-165921.html",
     "block": "text-tatari-bonobean",
-    "label": "Text · Bonobean is linked to UnitID 68. Its Horde configuration includes two passive skills (6891 and ",
-    "default": "Bonobean is linked to UnitID 68. Its Horde configuration includes two passive skills (6891 and 6892) and one active skill (6893). This confirms the records exist; detailed skill behavior and complete artwork integration are still under review.",
+    "label": "Text · Bonobean is linked to UnitID 68. Its three Horde skills and source-resolved values are now avai",
+    "default": "Bonobean is linked to UnitID 68. Its three Horde skills and source-resolved values are now available in the Horde guide, with verified artwork. Full My Tatari ownership/evolution integration remains separate.",
     "order": 6,
     "section": "tatari",
     "sectionTitle": "Bonobean and account levels"
@@ -2396,8 +2396,8 @@
   {
     "page": "information/patch-165921.html",
     "block": "note-horde-seasons",
-    "label": "Disclaimer · The detailed wave, chip and economy tables currently shown in the Horde guide remain Season 2 r",
-    "default": "The detailed wave, chip and economy tables currently shown in the Horde guide remain Season 2 reference data. They have not been relabelled as Season 3. Specific chip numbers and Horde skill balance changes are not verified by these findings.",
+    "label": "Disclaimer · Season 3 waves, chip values and existing Tatari skill cards are now integrated. The six difficu",
+    "default": "Season 3 waves, chip values and existing Tatari skill cards are now integrated. The six difficulty settings retain a rank coefficient of 100 and reference the same balance and energy-recovery settings as S2.",
     "order": 9,
     "section": "horde",
     "sectionTitle": "Horde Season 3 configuration"
@@ -2458,10 +2458,118 @@
   },
   {
     "page": "information/patch-165921.html",
+    "block": "text-chips-title",
+    "label": "Heading · Confirmed chip updates",
+    "default": "Confirmed chip updates",
+    "order": 16,
+    "section": "chips",
+    "sectionTitle": "Confirmed chip updates"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-chips-scope",
+    "label": "Text · The 49 chip catalogue entries, qualities, uniqueness and allowed-wave lists are unchanged. Four",
+    "default": "The 49 chip catalogue entries, qualities, uniqueness and allowed-wave lists are unchanged. Four numeric changes occur in linked Skill records; comparing LuckyDefenseChip alone misses them.",
+    "order": 17,
+    "section": "chips",
+    "sectionTitle": "Confirmed chip updates"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-chips-shuffle",
+    "label": "Text · Shuffle still grants 600 energizers. Contract Employees stay deployed, and their Tatari types a",
+    "default": "Shuffle still grants 600 energizers. Contract Employees stay deployed, and their Tatari types are now excluded from the replacement pool. Ordinary replacement units inherit the replaced slots’ grid positions and Horde levels. Candidate selection and historical-level bookkeeping were rewritten. This does not guarantee that all replacements differ from your previous ordinary Tatari types; unusual edge cases have not been tested in a live battle.",
+    "order": 18,
+    "section": "chips",
+    "sectionTitle": "Confirmed chip updates"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-skill-balance-title",
+    "label": "Heading · Tatari Horde skill changes",
+    "default": "Tatari Horde skill changes",
+    "order": 19,
+    "section": "skill-balance",
+    "sectionTitle": "Tatari Horde skill changes"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-skill-balance-method",
+    "label": "Text · 59 displayed value changes affect 42 existing skills in 30 Tatari families. The table uses curr",
+    "default": "59 displayed value changes affect 42 existing skills in 30 Tatari families. The table uses current source values, including helper skills and buffs—not the OldValue tooltip comparison metadata. Shared effects can appear on multiple skill cards. Family names below use the base form.",
+    "order": 20,
+    "section": "skill-balance",
+    "sectionTitle": "Tatari Horde skill changes"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-mechanics-title",
+    "label": "Heading · Other Horde mechanics and limits",
+    "default": "Other Horde mechanics and limits",
+    "order": 21,
+    "section": "mechanics",
+    "sectionTitle": "Other Horde mechanics and limits"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "list-mechanics-unchanged-1",
+    "label": "List item · All eight deployment/upgrade costs, death refunds, rank stat multipliers and skill unlock index",
+    "default": "All eight deployment/upgrade costs, death refunds, rank stat multipliers and skill unlock indexes are unchanged.",
+    "order": 22,
+    "section": "mechanics",
+    "sectionTitle": "Other Horde mechanics and limits"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "list-mechanics-unchanged-2",
+    "label": "List item · Energy recovery is unchanged: start at 400, initially gain 25 every 5 seconds, decrease the per",
+    "default": "Energy recovery is unchanged: start at 400, initially gain 25 every 5 seconds, decrease the periodic gain by 5 every 90 seconds, and gain 4 per normal kill or 100 per boss kill.",
+    "order": 23,
+    "section": "mechanics",
+    "sectionTitle": "Other Horde mechanics and limits"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "list-mechanics-unchanged-3",
+    "label": "List item · The rank, season-rank and wave reward tables and the balance table are unchanged.",
+    "default": "The rank, season-rank and wave reward tables and the balance table are unchanged.",
+    "order": 24,
+    "section": "mechanics",
+    "sectionTitle": "Other Horde mechanics and limits"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "list-mechanics-unchanged-4",
+    "label": "List item · Horde’s configured level reference remains 500. Normal account-level inputs and Supabase saves ",
+    "default": "Horde’s configured level reference remains 500. Normal account-level inputs and Supabase saves accept 1–3,600.",
+    "order": 25,
+    "section": "mechanics",
+    "sectionTitle": "Other Horde mechanics and limits"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "list-mechanics-unchanged-5",
+    "label": "List item · New parameters 39=200 and 40=5 remain unmapped. The official override differs from the default ",
+    "default": "New parameters 39=200 and 40=5 remain unmapped. The official override differs from the default parameter table; its selection is not established.",
+    "order": 26,
+    "section": "mechanics",
+    "sectionTitle": "Other Horde mechanics and limits"
+  },
+  {
+    "page": "information/patch-165921.html",
+    "block": "text-mechanics-tooltips",
+    "label": "Text · 86 existing Horde detail entries changed, but many edits only correct labels, formatting, histo",
+    "default": "86 existing Horde detail entries changed, but many edits only correct labels, formatting, historical comparison values or buff/nerf arrows. Those display edits must not be counted as additional combat changes. Bonobean’s new active skill illustrates why this matters: current minimum/maximum interval fields are 22/26 seconds, while its comparison metadata lists 12/16.",
+    "order": 27,
+    "section": "mechanics",
+    "sectionTitle": "Other Horde mechanics and limits"
+  },
+  {
+    "page": "information/patch-165921.html",
     "block": "text-pending-title",
     "label": "Heading · Still unverified",
     "default": "Still unverified",
-    "order": 16,
+    "order": 28,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
@@ -2470,52 +2578,52 @@
     "block": "list-pending-unknowns-1",
     "label": "List item · Goldrush weekly giftbox limit",
     "default": "Goldrush weekly giftbox limit",
-    "order": 17,
+    "order": 29,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
   {
     "page": "information/patch-165921.html",
     "block": "list-pending-unknowns-2",
-    "label": "List item · Horde chip balance values",
-    "default": "Horde chip balance values",
-    "order": 18,
+    "label": "List item · Boss Challenge merge changes",
+    "default": "Boss Challenge merge changes",
+    "order": 30,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
   {
     "page": "information/patch-165921.html",
     "block": "list-pending-unknowns-3",
-    "label": "List item · Specific Horde skill balance changes",
-    "default": "Specific Horde skill balance changes",
-    "order": 19,
+    "label": "List item · Halloween event dates and replacement timing",
+    "default": "Halloween event dates and replacement timing",
+    "order": 31,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
   {
     "page": "information/patch-165921.html",
     "block": "list-pending-unknowns-4",
-    "label": "List item · Boss Challenge merge changes",
-    "default": "Boss Challenge merge changes",
-    "order": 20,
+    "label": "List item · Exact match to the live server payload",
+    "default": "Exact match to the live server payload",
+    "order": 32,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
   {
     "page": "information/patch-165921.html",
     "block": "list-pending-unknowns-5",
-    "label": "List item · Halloween event dates and replacement timing",
-    "default": "Halloween event dates and replacement timing",
-    "order": 21,
+    "label": "List item · Meaning and consumer binding of new Horde parameters 39 (200) and 40 (5)",
+    "default": "Meaning and consumer binding of new Horde parameters 39 (200) and 40 (5)",
+    "order": 33,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
   {
     "page": "information/patch-165921.html",
     "block": "list-pending-unknowns-6",
-    "label": "List item · Exact match to the live server payload",
-    "default": "Exact match to the live server payload",
-    "order": 22,
+    "label": "List item · Selection of the official Horde parameter override and unusual Shuffle edge cases",
+    "default": "Selection of the official Horde parameter override and unusual Shuffle edge cases",
+    "order": 34,
     "section": "pending",
     "sectionTitle": "Still unverified"
   },
@@ -2524,7 +2632,7 @@
     "block": "text-pending-source",
     "label": "Text · Evidence: recovered Unit, Pet, ProfilePicture, UnitLevel, UnitAttrLevel, LuckyDefenseSeasonConf",
     "default": "Evidence: recovered Unit, Pet, ProfilePicture, UnitLevel, UnitAttrLevel, LuckyDefenseSeasonConfig, LuckyDefenseConfig and PetCollectible records, plus decoded English language data. Raw game code and packages are kept offline.",
-    "order": 23,
+    "order": 35,
     "section": "pending",
     "sectionTitle": "Still unverified"
   }

@@ -4346,7 +4346,12 @@
         "defenseId": 10306
       }
     ],
-    "waveAndChipTables": "not yet integrated; S2 reference remains separate"
+    "waveAndChipTables": "S3 waves, chip values and existing Tatari skill details integrated from patch 165921",
+    "waveRecords": 150,
+    "zoboTypes": 71,
+    "skillValueChanges": 59,
+    "affectedSkills": 42,
+    "affectedFamilies": 30
   },
   "collectibles": {
     "accessories": [
@@ -4391,11 +4396,11 @@
   },
   "unverified": [
     "Goldrush weekly giftbox limit",
-    "Horde chip balance values",
-    "Specific Horde skill balance changes",
     "Boss Challenge merge changes",
     "Halloween event dates and replacement timing",
-    "Exact match to the live server payload"
+    "Exact match to the live server payload",
+    "Meaning and consumer binding of new Horde parameters 39 (200) and 40 (5)",
+    "Selection of the official Horde parameter override and unusual Shuffle edge cases"
   ],
   "sourceHashes": {
     "Unit.lua": "aaa39a328b430855a6cecf0673ce809143b8d311786ed44be44d67e04086a012",

@@ -16,7 +16,7 @@ const community=installCommunity({status});
 const visual=installVisualEditor($('content-text'));
 const media=installMedia({getActive:()=>active,getPage:()=>$('page-select').value,run,status});
 const root=new URL('.',import.meta.url);
-const blockCatalog=await fetch(new URL('./admin-content-catalog.json?v=patch165921',root)).then(r=>r.ok?r.json():[]).catch(()=>[]);
+const blockCatalog=await fetch(new URL('./admin-content-catalog.json?v=horde165921',root)).then(r=>r.ok?r.json():[]).catch(()=>[]);
 const blockMetadata=new Map(blockCatalog.map(b=>[b.page+'#'+b.block,b]));
 async function rpc(action,payload={}){const {data,error}=await supabase.rpc('admin_workspace',{p_action:action,p_payload:payload});if(error)throw Error(error.message);return data;}
 function status(text){$('admin-status').textContent=text;}

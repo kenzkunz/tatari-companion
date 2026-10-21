@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+await import('./horde-patch-check.mjs');
 import {readFile,stat} from 'node:fs/promises';
 import {searchMatches,minimumStars,coreStats,calculatedStats,databaseDefaults,compactStat} from '../dist/tatari-model.mjs';
 const data=JSON.parse(await readFile(new URL('../dist/tatari-data/roster.json',import.meta.url),'utf8'));
@@ -28,7 +29,7 @@ for(const u of data.units)for(const f of u.forms)for(const skills of Object.valu
 
 const hordeIds=new Set();for(const u of data.units)for(const f of u.forms){assert(f.skills.normal.every(s=>!JSON.stringify(s.name).includes('不用翻译')));for(const s of f.skills.horde){hordeIds.add(s.id);assert(s.details.length>0,'Missing Horde details '+s.id);assert([3,5,7].includes(s.unlockLevel));assert(!/\$\{\d+\}|#\.[A-Za-z]/.test(JSON.stringify(s)),'Unresolved Horde value '+s.id);}}
 assert.equal(hordeIds.size,201);
-const ice=frost.forms[0].skills.horde[0];assert.deepEqual(ice.details.map(d=>d.text),['180%','30%','Unable to move or attack.','45%','1.5s']);
+const ice=frost.forms[0].skills.horde[0];assert.deepEqual(ice.details.map(d=>d.text),['180%','30%','Unable to move or attack.','60%','1.5s']);
 console.log('Audited all 67 families / 248 forms; no internal normal cards; 201 Horde skills have resolved in-game detail rows.');
 
 const {hordeSkillCards}=await import('../dist/horde-cards-model.mjs');for(const unit of data.units)for(const form of unit.forms){const cards=hordeSkillCards(form);assert.deepEqual(cards.map(c=>c.label),['Regular','Lv 3','Lv 5','Lv 7']);assert.deepEqual(cards[0].skills,form.skills.normal);assert.deepEqual(cards.slice(1).map(c=>c.skills[0].id),form.skills.horde.map(s=>s.id));assert(cards.every(c=>c.skills.length));}console.log('Passed four visible Horde cards for all 248 forms, with source rank data preserved.');
