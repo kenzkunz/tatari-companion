@@ -1,35 +1,55 @@
 import {formationCost} from './drafter-energizer.mjs';
-let costConfig;
+let costConfig,chipConfig;
+const chipImages=new Map();
+async function chipImage(url){if(!chipImages.has(url))chipImages.set(url,(async()=>{const image=new Image();image.src=url;await image.decode();return image})().catch(error=>{chipImages.delete(url);throw error}));return chipImages.get(url)}
+
 import {formationName} from './formation-name.mjs';
 import {boards,owner} from './drafter-model-v2.mjs';
-export async function drawFormation({canvas,draft,known,summaries,title,author,notes='',theme='light',everything}){
+export async function drawFormation({canvas,draft,known,summaries,title,author,notes='',theme='light',everything,outputWidth=null}){
  await document.fonts.ready;
- const b=boards[draft.gameMode],width=everything?1160:680,boardWidth=everything?520:600,cell=boardWidth/b.cols,boardHeight=cell*b.rows,x0=40,y0=draft.gameMode==='horde'&&draft.mode==='duo'?176:132;
- const dark=theme==='dark',paper=dark?'#2f3136':'#f2f3f4',ink=dark?'#f2f0e8':'#282625',muted=dark?'#b8bdc7':'#6c6353';const ctx=canvas.getContext('2d'),players=draft.mode==='duo'?[1,2]:[1],columnWidth=players.length===2?524:1080;
+ const b=boards[draft.gameMode],width=everything?1160:680,boardWidth=everything?520:600,cell=boardWidth/b.cols,boardHeight=cell*b.rows,x0=40,y0=draft.gameMode==='horde'?176:132;
+ const selectedChips=draft.gameMode==='horde'?(draft.chips||[]).filter(chip=>draft.mode==='duo'||chip.player===1):[];
+ const dark=theme==='dark',paper=dark?'#2f3136':'#f2f3f4',ink=dark?'#f2f0e8':'#282625',muted=dark?'#b8bdc7':'#6c6353';const ctx=canvas.getContext('2d'),chipAnchors={},players=draft.mode==='duo'?[1,2]:[1],columnWidth=players.length===2?524:1080;
  const layouts=summaries.map(summary=>({...summary,groups:summary.groups.map(group=>{let x=0,row=0;const items=group.items.map(item=>{const active=new Set(item.providers.filter(p=>p.active).map(p=>p.key)).size;const future=item.providers.filter(p=>!p.active);const level=future.length?Math.min(...future.map(p=>p.level)):null;const label=item.name+(level?' · Lv '+level:'');ctx.font='600 18px Poppins,sans-serif';const width=Math.min(columnWidth,ctx.measureText(label).width+24);if(x&&x+width>columnWidth){x=0;row++}const result={label,width,x,row,future:active===0&&future.length>0};x+=width+10;return result});return {...group,items,height:42+(row+1)*44}})}));
  const benches=players.map(player=>({player,keys:[...new Set([...draft.cells.flatMap((c,i)=>c&&owner(i,draft.mode,c)===player?[c.key]:[]),...draft.steps.filter(s=>s.player===player).flatMap(s=>s.keys)])]}));
  const benchHeight=52+benches.reduce((n,b)=>n+38+Math.max(1,Math.ceil(b.keys.length/14))*82,0);
  const planHeight=players.reduce((height,p)=>height+58+draft.steps.filter(s=>s.player===p).reduce((n,s)=>n+70+(s.note?28:0),0),50);
  const summaryY=y0+Math.max(boardHeight, everything?planHeight:0)+42;
  const effectsHeight=Math.max(0,...layouts.map(s=>48+s.groups.reduce((n,g)=>n+g.height+12,0)));
- canvas.width=width;canvas.height=(everything?summaryY+benchHeight+effectsHeight+64:y0+boardHeight+60);
- ctx.fillStyle=paper;ctx.fillRect(0,0,width,canvas.height);ctx.fillStyle=ink;ctx.font='bold 30px Poppins,sans-serif';ctx.fillText(short(title||draft.name||'Untitled formation',everything?60:36),40,52);ctx.font='16px Poppins,sans-serif';ctx.fillStyle=muted;ctx.fillText(formationName(draft),40,84);if(author)ctx.fillText('By '+short(author,60),40,110);
- if(draft.gameMode==='horde'&&draft.mode==='duo'){
+ const height=everything?summaryY+benchHeight+effectsHeight+64:y0+boardHeight+60,scale=outputWidth?outputWidth/width:1;canvas.width=Math.round(width*scale);canvas.height=Math.round(height*scale);ctx.scale(scale,scale);
+ ctx.fillStyle=paper;ctx.fillRect(0,0,width,height);ctx.fillStyle=ink;ctx.font='bold 30px Poppins,sans-serif';ctx.fillText(short(title||draft.name||'Untitled formation',everything?60:36),40,52);ctx.font='16px Poppins,sans-serif';ctx.fillStyle=muted;ctx.fillText(formationName(draft),40,84);if(author)ctx.fillText('By '+short(author,60),40,110);
+ if(draft.gameMode==='horde'){
  costConfig??=fetch('/drafter-energizer-costs.json').then(r=>{if(!r.ok)throw Error('Could not load Energizer costs.');return r.json()}).catch(e=>{costConfig=null;throw e});
  const costs=formationCost(draft.cells,draft.mode,(await costConfig).costs),icon=new Image();icon.src='/guide-assets/horde/energizer.png';await icon.decode();
- const y=132,right=x0+boardWidth;tag(ctx,'P1',x0,y,playerColor(1),'#282625',16);ctx.drawImage(icon,x0+44,y,28,28);ctx.font='600 18px Poppins,sans-serif';ctx.fillStyle=ink;ctx.fillText(costs.p1.toLocaleString('en'),x0+80,y+21);
- ctx.font='600 16px Poppins,sans-serif';const tagWidth=ctx.measureText('P2').width+16;tag(ctx,'P2',right-tagWidth,y,playerColor(2),'#282625',16);ctx.drawImage(icon,right-tagWidth-36,y,28,28);ctx.font='600 18px Poppins,sans-serif';ctx.fillStyle=ink;ctx.textAlign='right';ctx.fillText(costs.p2.toLocaleString('en'),right-tagWidth-44,y+21);ctx.textAlign='left';
+ const y=132,right=x0+boardWidth;tag(ctx,'P1',x0,y,playerColor(1),'#282625',16);ctx.drawImage(icon,x0+44,y,28,28);ctx.font='600 18px Poppins,sans-serif';ctx.fillStyle=ink;ctx.fillText(costs.p1.toLocaleString('en'),x0+80,y+21);chipAnchors[1]=x0+80+ctx.measureText(costs.p1.toLocaleString('en')).width+10;
+ if(draft.mode==='duo'){ctx.font='600 16px Poppins,sans-serif';const tagWidth=ctx.measureText('P2').width+16;tag(ctx,'P2',right-tagWidth,y,playerColor(2),'#282625',16);ctx.drawImage(icon,right-tagWidth-36,y,28,28);ctx.font='600 18px Poppins,sans-serif';ctx.fillStyle=ink;ctx.textAlign='right';ctx.fillText(costs.p2.toLocaleString('en'),right-tagWidth-44,y+21);chipAnchors[2]=right-tagWidth-44-ctx.measureText(costs.p2.toLocaleString('en')).width-10;ctx.textAlign='left';}
  }
  const keys=[...new Set([...draft.cells.filter(Boolean).map(c=>c.key),...draft.steps.flatMap(s=>s.keys)])];
  const load=field=>Promise.all(keys.map(async key=>{const image=new Image();image.src=known.get(key)?.[field]||known.get(key)?.image;try{await image.decode();return[key,image]}catch{return[key,null]}}));
  const images=new Map(await load('image')),heads=new Map(await load('playerhead'));
  const art=(key,x,y,w,h,head=false)=>{const image=(head?heads:images).get(key);if(image){const ratio=Math.min(w/image.width,h/image.height);ctx.drawImage(image,x+(w-image.width*ratio)/2,y+(h-image.height*ratio)/2,image.width*ratio,image.height*ratio)}};
  for(let i=0;i<draft.cells.length;i++){const c=draft.cells[i],x=x0+i%b.cols*cell,y=y0+Math.floor(i/b.cols)*cell;ctx.fillStyle=(Math.floor(i/b.cols)+i%b.cols)%2?(draft.gameMode==='dojo'?'#5d83cf':'#9bae3a'):(draft.gameMode==='dojo'?'#6b96dd':'#8ba738');ctx.fillRect(x+3,y+3,cell-6,cell-6);if(c){art(c.key,x+7,y+8,cell-14,cell-18);if(draft.mode==='duo')tag(ctx,'P'+owner(i,draft.mode,c),x+3,y+3,playerColor(owner(i,draft.mode,c)),'#282625',14);if(draft.gameMode==='horde'){ctx.font='600 14px Poppins,sans-serif';const levelWidth=ctx.measureText('L'+c.level).width+16;tag(ctx,'L'+c.level,x+cell-3-levelWidth,y+cell-3-28,'#282625','#fff',14)}}}
+ if(selectedChips.length){
+ chipConfig??=fetch('/guide-data/horde.json?v=horde165921').then(r=>{if(!r.ok)throw Error('Could not load selected chips.');return r.json()}).catch(error=>{chipConfig=null;throw error});
+ const catalog=(await chipConfig).chips,chipSize=28,chipGap=6,chipY=132;
+ const items=await Promise.all(selectedChips.map(async choice=>{const chip=catalog.find(c=>c.id===choice.id);if(!chip)throw Error('Selected chip is not available.');const quality=({3:'blue',5:'gold',7:'rainbow'})[chip.quality];if(!quality)throw Error('Selected chip quality is not available.');const [icon,frame]=await Promise.all([chipImage(chip.icon),chipImage('/guide-assets/horde/'+quality+'bg.png')]);return {...choice,chip,icon,frame}}));
+ for(const player of players){
+ const list=items.filter(c=>c.player===player);if(!list.length)continue;
+ const groupWidth=list.length*(chipSize+chipGap)-chipGap;
+ const start=player===1?chipAnchors[1]:chipAnchors[2]-groupWidth;
+ for(const [i,item] of list.entries()){
+ const x=start+i*(chipSize+chipGap),size=item.chip.sizing||{width:40,height:40,x:0,y:0},scale=chipSize/56;
+ ctx.drawImage(item.frame,x,chipY,chipSize,chipSize);
+ ctx.drawImage(item.icon,x+chipSize/2+(size.x-size.width/2)*scale,chipY+chipSize/2+(size.y-size.height/2)*scale,size.width*scale,size.height*scale);
+ }
+ }
+ }
+
  if(everything){const px=610;let py=154;ctx.font='bold 20px Poppins,sans-serif';ctx.fillStyle='#282625';ctx.fillText('LEVEL-UP PRIORITY',px,py);py+=28;for(const p of players){tag(ctx,'P'+p,px,py,playerColor(p),'#282625',16);py+=44;for(const [index,s] of draft.steps.filter(s=>s.player===p).entries()){ctx.fillStyle='#282625';ctx.font='600 18px Poppins,sans-serif';ctx.fillText((index+1)+'.',px,py+29);s.keys.slice(0,6).forEach((key,i)=>art(key,px+34+i*52,py,46,46,true));tag(ctx,s.target?'Lv '+s.target:'Any level',px+354,py+9,'#fff1b5','#6c5011',16);py+=60;if(s.note){ctx.font='16px Poppins,sans-serif';ctx.fillStyle='#51483a';ctx.fillText(short(s.note,48),px+34,py);py+=28}py+=10}}}
  if(everything){let by=summaryY;ctx.font='bold 20px Poppins,sans-serif';ctx.fillStyle='#51483a';ctx.fillText('BENCH',40,by+20);by+=52;for(const bench of benches){tag(ctx,'P'+bench.player,40,by,playerColor(bench.player),'#282625',16);by+=38;bench.keys.forEach((key,i)=>{const x=40+(i%14)*76,y=by+Math.floor(i/14)*82;art(key,x,y,58,58,true);ctx.font='12px Poppins,sans-serif';ctx.fillStyle='#51483a';ctx.fillText(short(known.get(key)?.name||'',11),x,y+74)});by+=Math.max(1,Math.ceil(bench.keys.length/14))*82}
  for(const [index,summary] of layouts.entries()){const x=40+index*560;let y=summaryY+benchHeight;tag(ctx,'P'+summary.player,x,y,playerColor(summary.player),'#282625',16);y+=48;for(const group of summary.groups){ctx.font='bold 18px Poppins,sans-serif';ctx.fillStyle='#51483a';ctx.fillText(group.name.toUpperCase(),x,y+20);for(const item of group.items){const tx=x+item.x,ty=y+34+item.row*44;ctx.fillStyle=group.name==='Debuffs'?'#faeaea':group.name==='Heals'?'#eaf4eb':'#fff1b5';ctx.strokeStyle=group.name==='Debuffs'?'#cf6570':'#b59237';ctx.setLineDash(item.future?[5,3]:[]);ctx.beginPath();ctx.roundRect(tx,ty,item.width,34,6);ctx.fill();ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#282625';ctx.font='600 18px Poppins,sans-serif';ctx.fillText(item.label,tx+12,ty+24,item.width-24)}y+=group.height+12}}
  }
- ctx.fillStyle=muted;ctx.font='14px Poppins,sans-serif';ctx.fillText('Clash of Critters Companion App · Formation Planner',40,canvas.height-24);
+ ctx.fillStyle=muted;ctx.font='14px Poppins,sans-serif';ctx.fillText('Clash of Critters Companion App · Formation Planner',40,height-24);
 }
 function playerColor(p){return p===1?'#1ea5fe':'#f72a57'}
 function short(text,max){text=String(text);return text.length>max?text.slice(0,max-1)+'…':text}
