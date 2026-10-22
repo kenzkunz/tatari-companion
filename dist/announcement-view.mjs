@@ -1,6 +1,6 @@
 let stylesheetReady;
 export function renderAnnouncement(values){
- if(!stylesheetReady)stylesheetReady=new Promise(resolve=>{const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('./site-announcement.css?v=ticker2',import.meta.url).href;css.onload=resolve;css.onerror=resolve;document.head.append(css);});
+ if(!stylesheetReady)stylesheetReady=new Promise(resolve=>{const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('./site-announcement.css?v=ticker3',import.meta.url).href;css.onload=resolve;css.onerror=resolve;document.head.append(css);});
  const bar=document.createElement('aside');bar.className='announcement';bar.setAttribute('aria-label','Site announcement');bar.hidden=values.visibility!=='Visible';
  const mark=document.createElement('span');mark.className='announcement-mark';mark.textContent=values.label;
  const copy=document.createElement('p');copy.className='announcement-copy';const title=document.createElement('strong');title.textContent=values.headline;const track=document.createElement('span');track.className='announcement-track';const content=document.createElement('span');content.className='announcement-text';content.append(title,document.createTextNode(values.message));track.append(content);copy.append(track);copy.tabIndex=0;copy.setAttribute('aria-label','Announcement text');bar.append(mark,copy);
