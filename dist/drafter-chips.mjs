@@ -16,3 +16,5 @@ export function chipTargets(chip,draft,known,player){
  else condition='Formation or battle effect; no individual stat targets';
  return {targets,condition};
 }
+
+export function chipClaimedBy(chip,draft,player){return draft.mode==='duo'&&chip.unique?(draft.chips||[]).find(c=>c.id===chip.id&&c.player!==player)?.player??null:null}
