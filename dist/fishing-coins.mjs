@@ -1,4 +1,4 @@
-import {fishResult} from './fishing-coins-model.mjs';
+import {fishResult} from './fishing-coins-model.mjs?v=decimal2';
 import {confirmDialog} from './site-dialogs.mjs?v=1';
 const data=await(await fetch('/fishing-data.json')).json(),key='tatari-fishing-coins-v1',fmt=n=>n.toLocaleString('en-US'),grid=document.getElementById('fish-grid');let saved={};try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch{}if(!saved||typeof saved!=='object'||Array.isArray(saved))saved={};
 const cards=[];const order=[1, 39, 38, 28, 27, 23, 20, 5, 4, 3, 2, 41, 40, 32, 31, 30, 29, 26, 24, 21, 9, 8, 7, 6, 43, 42, 37, 36, 35, 34, 33, 25, 22, 17, 16, 15, 14, 13, 12, 11, 10];data.fish.sort((a,b)=>order.indexOf(a.id)-order.indexOf(b.id));

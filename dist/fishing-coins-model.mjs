@@ -1,5 +1,5 @@
 export function parseWeight(value,fish){
- const text=String(value).trim();if(!text)return {state:'blank'};
+ const text=String(value).trim().replace(',','.');if(!text)return {state:'blank'};
  if(!/^\d+(?:\.\d{1,2})?$/.test(text))return {state:'invalid',message:'Use a positive weight with up to 2 decimals.'};
  const [whole,fraction='']=text.split('.'),raw=Number(whole)*100+Number(fraction.padEnd(2,'0'));
  if(!Number.isSafeInteger(raw)||raw>fish.maxRaw)return {state:'invalid',message:'Maximum '+(fish.maxRaw/100).toLocaleString('en-US')+' kg.'};

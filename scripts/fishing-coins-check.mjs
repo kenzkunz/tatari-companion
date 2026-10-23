@@ -7,3 +7,8 @@ for(const [id,kg,expected] of examples)assert.equal(fishResult(kg,fish.find(f=>f
 assert.equal(fish.length,41);
 for(const f of fish){assert.equal(fishResult(String(f.maxRaw/100),f).gain,0);assert.equal(fishResult('0',f).gain,coinValue(f.maxRaw,f.price));assert.equal(fishResult('',f).state,'blank');for(const bad of ['-1','NaN','Infinity','1e3','0.001',String(f.maxRaw/100+1)])assert.equal(fishResult(bad,f).state,'invalid');if(f.minRaw>1)assert.equal(fishResult('0.01',f).state,'invalid')}
 console.log('Passed all 16 screenshot coin values, 41 fish maxima, uncaught/blank records and invalid input boundaries.');
+
+for(const [id,kg] of examples){const f=fish.find(f=>f.id===id);assert.deepEqual(fishResult(kg.replace('.',','),f),fishResult(kg,f));}
+for(const f of fish){assert.equal(fishResult(String(f.maxRaw/100).replace('.',','),f).gain,0);for(const bad of ['1,2.3','1.2,3','1,,2','1,234','1,234.56','1.234,56'])assert.equal(fishResult(bad,f).state,'invalid');}
+assert.deepEqual(fishResult(' 589,14 ',fish.find(f=>f.id===1)),fishResult('589.14',fish.find(f=>f.id===1)));
+console.log('Passed comma/dot equivalence for all screenshot examples and maxima, whitespace and rejection of mixed/grouped separators.');
