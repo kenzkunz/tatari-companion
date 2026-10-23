@@ -1,9 +1,9 @@
 import {confirmDialog,notify} from './site-dialogs.mjs?v=1';
 import {renderChart} from './tierlist-chart.mjs?v=20261015-1';
-import {defaults,cleanList,moveUnit,entryFor,artworkFor,appearances,encodeList,decodeList} from './tierlist-model.mjs?v=bonobean1';
+import {defaults,cleanList,moveUnit,entryFor,artworkFor,appearances,encodeList,decodeList} from './tierlist-model.mjs?v=public-data2';
 import {drawTierlist} from './tierlist-render.mjs?v=bonobean1';
 import {saveTierlist,readTierlist} from './tierlist-api.mjs?v=20261015-1';
-import {searchMatches} from './tatari-model.mjs';
+import {searchMatches} from './tatari-model.mjs?v=public-data2';
 const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n},key='tatari-tierlist-v1';let state=defaults(),units=[],elementFilter=0,selected=null,dragged=null,recordId=null,revision=null;
 const status=s=>{$('maker-status').textContent=s;if($('tierlist-share').open)$('share-status').textContent=s};
 function persist(){try{localStorage.setItem(key,JSON.stringify(state));status('Saved in this browser.')}catch{status('Browser storage unavailable. Use a share link to keep your list.')}}

@@ -9,4 +9,4 @@ export function moveUnit(state,id,row,index){state.rows.forEach(r=>r.units=r.uni
 export function encodeList(s){return btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(s))))}
 export function decodeList(s){if(s.length>60000)throw Error('Tierlist link is too long.');return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(s),c=>c.charCodeAt(0))))}
 
-export function artworkFor(entry,imageStyle='icon'){if(imageStyle!=='character'||!entry.form.portrait)return entry.src;if(entry.appearance==='Normal')return 'tatari-data/'+entry.form.portrait;if(entry.appearance==='Glitter')return 'tatari-data/'+entry.form.portrait.replace('appearance-default','appearance-color_1');return entry.src}
+export function artworkFor(entry,imageStyle='icon'){if(imageStyle!=='character'||!entry.form.portrait)return entry.src;if(entry.appearance==='Normal')return 'tatari-data/'+entry.form.portrait;if(entry.appearance==='Glitter')return 'tatari-data/'+(entry.form.glitterPortrait||entry.form.portrait);return entry.src}

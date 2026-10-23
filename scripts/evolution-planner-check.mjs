@@ -9,10 +9,10 @@ const frozen=JSON.stringify(roster),goal=planGoal(catalog,roster,{unit:13,target
 const starter=planGoal(catalog,roster,{unit:1,target:2});assert.equal(starter.wishboxes,0);assert(starter.copies>0);assert(!starter.wishboxEligible);
 assert.throws(()=>planGoal(catalog,roster,{unit:14,target:2}));assert.throws(()=>planGoal(catalog,roster,{unit:13,target:2}));assert.throws(()=>validateGoals(Array.from({length:6},(_,i)=>({unit:i,target:2}))));assert.throws(()=>validateGoals([{unit:13,target:3},{unit:13,target:4}]));
 const frost=planGoal(catalog,roster,{unit:11,target:4});assert.equal(frost.copies,0);assert(frost.requirements[0].automatic&&frost.requirements[0].done);const event=frost.requirements.find(q=>q.events.length);assert.deepEqual(questEvents(event),['Fishing Contest','Raft Race']);
-const own=frost.requirements.find(q=>q.condition.includes('PetTIDCountByElementStar'));assert(own.automatic);assert.equal(own.current,1);
+const own=frost.requirements.find(q=>q.requirement.kind==='owned-stars');assert(own.automatic);assert.equal(own.current,1);
 const completed=assessQuest(event,{...roster,catalog},null,event.target);assert(completed.done);assert(!completed.automatic);
 const windows=eventWindows([frost,goal],schedule,Date.UTC(2026,9,19));assert(windows.some(w=>w.name==='Fishing Contest'));assert(windows.some(w=>w.name==='Raft Race'));assert.equal(new Set(windows.map(w=>w.name)).size,windows.length);assert(windows.every(w=>w.end>Date.UTC(2026,9,19)));
-const acquire=catalog.units.flatMap(u=>u.forms).flatMap(f=>f.trial?.quests||[]).find(q=>q.condition==='ed.ConditionX.Counter(63)>=30');assert(acquire);assert.equal(assessQuest(acquire,{...roster,catalog},null,0).missing,30);
+const acquire=catalog.units.flatMap(u=>u.forms).flatMap(f=>f.trial?.quests||[]).find(q=>q.requirement.kind==='manual'&&q.numericProgress&&q.target===30);assert(acquire);assert.equal(assessQuest(acquire,{...roster,catalog},null,0).missing,30);
 console.log('Passed five-goal limit, copy sums, saved progress deduction, starter ineligibility, food and companion checks, manual trial progress, event alternatives and UTC opportunities.');
 
 const {completedGoalRoster}=await import('../dist/evolution-planner-model.mjs');
@@ -35,5 +35,5 @@ const actual={stars:minimum.stars,food:minimum.food,copies:0};
 const confirmed=completedGoalRoster(catalog,roster,goalToFinish,actual);assert.equal(confirmed.units[13].tier,4);assert.equal(confirmed.units[13].stars,minimum.stars);assert.equal(confirmed.units[13].food,minimum.food);assert.deepEqual(confirmed.units[11],roster.units[11]);
 assert.throws(()=>completedGoalRoster(catalog,roster,goalToFinish,{...actual,copies:999}),/copy progress/);
 await assert.rejects(()=>finishEvolution(catalog,'actor-one',{...goalToFinish,expected:roster.units[13],settings:actual},{load:async()=>({roster:latest,revision:19}),save:async()=>{throw Error('Unexpected save')}}),/changed on another device/);
-const optionalUnit=catalog.units.find(u=>u.forms.some(f=>f.trial?.quests?.some(q=>q.condition.includes(' or ed.ConditionX.PetFeedLevelRank'))));assert(optionalUnit);assert(finishMinimums(optionalUnit,4).food<16);
+const optionalUnit=catalog.units.find(u=>u.forms.some(f=>f.trial?.quests?.some(q=>q.requirement.foodAlternative)));assert(optionalUnit);assert(finishMinimums(optionalUnit,4).food<16);
 console.log('Passed finish minimums, explicit actual values, invalid copies, selected-unit conflicts and optional food alternatives (offline).');

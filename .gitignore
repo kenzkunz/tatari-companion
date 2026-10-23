@@ -33,3 +33,14 @@ design-rollbacks/public-chrome/
 *.xapk
 *.aab
 *.unitypackage
+
+# Local browser session files
+.playwright-cli/
+
+# Generated database sync exports and one-off content seed
+supabase/sync/
+supabase/generated/patch-165921-content.sql
+
+/supabase/
+
+/supabase/

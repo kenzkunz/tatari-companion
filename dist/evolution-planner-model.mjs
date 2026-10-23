@@ -1,16 +1,15 @@
-import {starCost,validateRoster} from './my-tatari-model.mjs?v=patch165921';
+import {starCost,validateRoster} from './my-tatari-model.mjs?v=public-data2';
 import {DAY,regularAt,pvpAt,hordeAt} from './schedule-model.mjs';
 export const MAX_GOALS=5;
-const elements={Water:2,Fire:3,Grass:4,Electric:5,Earth:6};
 export const trialKey=(unit,form,quest)=>unit+':'+form+':'+quest;
 export function copiesNeeded(catalog,stars,copies,target){if(stars>=target)return 0;let total=0;for(let s=stars;s<target;s++){const cost=starCost(s,catalog);if(!Number.isFinite(cost)||cost<=0)throw Error('Star cost data unavailable.');total+=cost}return Math.max(0,total-copies)}
-export function questEvents(quest){const c=quest.condition||'',events=new Set();for(const [id,name] of [[54,'Fishing Contest'],[53,'Raft Race'],[43,'Treasure Hunt'],[76,'Cozy Farm'],[77,'Zobo Shooter'],[29,'Gold Rush'],[70,'Gold Rush']])if(c.includes('Counter('+id+')'))events.add(name);if(quest.text.en.includes('Horde Invasion'))events.add('Horde Invasion');return [...events]}
-export function assessQuest(quest,roster,levels,manual){const c=(quest.condition||'').replaceAll('\\',''),target=quest.target||1;let current=0,automatic=false,m;
- if(m=c.match(/^ed\.ConditionX\.PetFeedLevel(?:Rank)?\((\d+)\)>=(\d+)$/)){current=roster.units[m[1]]?.food||0;automatic=true}
- else if(m=c.match(/^ed\.ConditionX\.PetTIDCountByElementStar\("(\w+)",(\d+),"Blue"\)>=(\d+)$/)){current=Object.entries(roster.units).filter(([id,v])=>v.owned&&v.stars>=Number(m[2])&&roster.catalog.units.find(u=>u.id===Number(id))?.element===elements[m[1]]).length;automatic=true}
- else if(levels&&(m=c.match(/^ed\.ConditionX\.BadgeCountByElement\("(\w+)"\)>=(\d+)$/))){current=levels[elements[m[1]]]||0;automatic=true}
- else if(levels&&c.match(/^ed\.ConditionX\.BadgeCount\(\)>=(\d+)$/)){current=Object.values(levels).reduce((a,b)=>a+b,0);automatic=true}
- else if((m=c.match(/ or ed\.ConditionX\.PetFeedLevelRank\((\d+)\)>=(\d+)$/))&&(roster.units[m[1]]?.food||0)>=Number(m[2])){current=target;automatic=true}
+export function questEvents(quest){return [...(quest.events||[])];}
+export function assessQuest(quest,roster,levels,manual){const rule=quest.requirement||{kind:'manual'},target=quest.target||1;let current=0,automatic=false;
+ if(rule.kind==='food'){current=roster.units[rule.unit]?.food||0;automatic=true}
+ else if(rule.kind==='owned-stars'){current=Object.entries(roster.units).filter(([id,v])=>v.owned&&v.stars>=rule.stars&&roster.catalog.units.find(u=>u.id===Number(id))?.element===rule.element).length;automatic=true}
+ else if(levels&&rule.kind==='element-badges'){current=levels[rule.element]||0;automatic=true}
+ else if(levels&&rule.kind==='badges'){current=Object.values(levels).reduce((a,b)=>a+b,0);automatic=true}
+ else if(rule.foodAlternative&&(roster.units[rule.foodAlternative.unit]?.food||0)>=rule.foodAlternative.minimum){current=target;automatic=true}
  if(!automatic)current=Math.max(0,Math.min(target,Number(manual)||0));
  return {...quest,current,target,done:current>=target,missing:Math.max(0,target-current),automatic,events:questEvents(quest)};
 }
@@ -18,5 +17,5 @@ export function planGoal(catalog,roster,goal,progress={},levels=null){const unit
 export function validateGoals(goals){if(!Array.isArray(goals)||goals.length>MAX_GOALS||new Set(goals.map(g=>g.unit)).size!==goals.length)throw Error('Choose up to five different Tatari.');return goals}
 export function eventWindows(plans,schedule,now=Date.now()){const needed=new Map();for(const p of plans)for(const q of p.requirements.filter(q=>!q.done))for(const name of q.events){if(!needed.has(name))needed.set(name,new Set());needed.get(name).add(p.unit.id)}const found=new Map();const add=(name,start,end)=>{if(needed.has(name)&&!found.has(name))found.set(name,{name,start,end,live:start<=now&&now<end,units:[...needed.get(name)]})};for(let t=now;t<now+45*DAY;t+=DAY){const r=regularAt(t,schedule.events.regular);add(r.name,r.start,r.end);const p=pvpAt(t,schedule.events.pvp);if(p.name.startsWith('Gold Rush'))add('Gold Rush',p.start,p.end)}const h=hordeAt(now,schedule.horde),start=h.live?now:h.end,end=h.live?h.end:start+(schedule.horde.cycle_seconds-schedule.horde.rest_seconds)*1000;add('Horde Invasion',start,end);return [...found.values()].sort((a,b)=>a.start-b.start)}
 
-export function finishMinimums(unit,target){let stars=1,food=unit.feedingStages[0].stage;for(const f of unit.forms.filter(f=>f.evolution<target)){stars=Math.max(stars,f.trial?.requiredStars||1);for(const q of f.trial?.quests||[]){const m=(q.condition||'').replaceAll('\\','').match(/^ed\.ConditionX\.PetFeedLevel(?:Rank)?\((\d+)\)>=(\d+)$/);if(m&&Number(m[1])===unit.id)food=Math.max(food,Number(m[2]))}}return {stars,food}}
+export function finishMinimums(unit,target){let stars=1,food=unit.feedingStages[0].stage;for(const f of unit.forms.filter(f=>f.evolution<target)){stars=Math.max(stars,f.trial?.requiredStars||1);for(const q of f.trial?.quests||[]){const rule=q.requirement;if(rule?.kind==='food'&&rule.unit===unit.id)food=Math.max(food,rule.minimum)}}return {stars,food}}
 export function completedGoalRoster(catalog,roster,goal,settings){const unit=catalog.units.find(u=>u.id===goal.unit),owned=roster.units[goal.unit];if(!unit?.forms.some(f=>f.evolution===goal.target)||!owned?.owned)throw Error('This Tatari or goal is no longer available. Refresh your roster.');if(owned.tier>=goal.target)return structuredClone(roster);const v=settings||owned,min=finishMinimums(unit,goal.target);if(!Number.isInteger(v.stars)||v.stars<min.stars||v.stars>84)throw Error('This evolution needs at least '+min.stars+' stars. Enter your current star level.');if(!unit.feedingStages.some(f=>f.stage===v.food)||v.food<min.food)throw Error('This evolution needs at least food level '+min.food+'. Enter your current food level.');const cost=starCost(v.stars,catalog);if(!Number.isInteger(v.copies)||v.copies<0||v.copies>Math.max(0,cost-1))throw Error('Choose valid copy progress for your current star level.');const next=structuredClone(roster);next.units[goal.unit]={...owned,tier:goal.target,stars:v.stars,food:v.food,copies:v.copies};validateRoster({version:1,accountLevel:roster.accountLevel,units:{[goal.unit]:next.units[goal.unit]}},catalog);return next}

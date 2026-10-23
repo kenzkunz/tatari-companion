@@ -21,11 +21,11 @@ console.log('Passed E–SSS food thresholds and lowest-attribute grade selection
 
 const ordered=sortRosterUnits(catalog.units.slice(0,4),{1:{owned:false,tier:4,stars:84},2:{owned:true,tier:2,stars:20},3:{owned:true,tier:3,stars:10},4:{owned:true,tier:2,stars:40}});assert.deepEqual(ordered.map(u=>u.id),[3,4,2,1]);assert.deepEqual(catalog.units.slice(0,4).map(u=>u.id),[1,2,3,4]);console.log('Passed ownership, descending tier and descending star sorting without catalog mutation.');
 
-catalog.portraits=JSON.parse(await readFile('dist/tatari-data/portrait-index.json','utf8')).images;let glitterCount=0;for(const u of catalog.units)for(const form of u.forms){assert.equal(rosterPortrait(u,{tier:form.evolution,glitter:false},catalog),form.portrait);if(hasGlitter(u,form.evolution,catalog)){const path=rosterPortrait(u,{tier:form.evolution,glitter:true},catalog);assert(path.includes('appearance-color_1'));await readFile('dist/tatari-data/'+path);glitterCount++}else assert.equal(rosterPortrait(u,{tier:form.evolution,glitter:true},catalog),form.portrait)}console.log('Verified '+glitterCount+' Glitter form mappings and missing-art fallback.');
+catalog.portraits=JSON.parse(await readFile('dist/tatari-data/portrait-index.json','utf8')).images;let glitterCount=0;for(const u of catalog.units)for(const form of u.forms){assert.equal(rosterPortrait(u,{tier:form.evolution,glitter:false},catalog),form.portrait);if(hasGlitter(u,form.evolution,catalog)){const path=rosterPortrait(u,{tier:form.evolution,glitter:true},catalog);assert.notEqual(path,form.portrait);await readFile('dist/tatari-data/'+path);glitterCount++}else assert.equal(rosterPortrait(u,{tier:form.evolution,glitter:true},catalog),form.portrait)}console.log('Verified '+glitterCount+' Glitter form mappings and missing-art fallback.');
 
 const full=structuredClone(legacy);full.units[1].copies=9;assert.equal(validateRoster(full,catalog).units[1].copies,8);console.log('Passed required-minus-one progress cap and normalization of older full-progress saves.');
 
-await import('./my-tatari-db-check.mjs');
+
 
 const ui=await readFile('dist/my-tatari.mjs','utf8');assert(ui.includes("$('roster-login').hidden=!!user"));assert(ui.includes("if(!ready||saving||actor==='preview')return false"));console.log('Passed login-required editing on localhost and production, without guest editing.');
 

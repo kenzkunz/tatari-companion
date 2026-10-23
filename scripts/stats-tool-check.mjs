@@ -33,6 +33,15 @@ console.log('Passed independent Spa percentages, additive stacking, tier restric
 
 const {buildStandard,applyOwnedTatari}=await import('../dist/tatari-stats-model.mjs');
 data.levelStandards=JSON.parse(await readFile('dist/tatari-data/level-standards.json','utf8'));
+assert.equal(Object.keys(data.levelStandards.levels).length,3600,'Active level table must cover levels 1–3600');
+for(let level=1;level<=3600;level++){
+  const progressRows=data.levelStandards.levels[level];
+  assert(progressRows && Object.keys(progressRows).length>0,'Missing active level '+level);
+  for(const [progress,values] of Object.entries(progressRows)){
+    assert(values.length===5,'Expected one value per element at level '+level+', progress '+progress);
+    assert(values.every(value=>Number.isFinite(value)&&value>0),'Invalid active level data at level '+level+', progress '+progress);
+  }
+}
 for(const element of [2,3,4,5,6])assert.deepEqual(buildStandard(data,element,{statMode:'normal',level:500,progress:0}),Object.fromEntries(['ATK','HP','DEF'].map(k=>[k+'Standard',data.standards500[element][k+'Standard']])));
 assert.deepEqual(buildStandard(data,2,{statMode:'normal',level:1}),{ATKStandard:15,HPStandard:50,DEFStandard:5});
 for(const element of [2,3,4,5,6])for(const level of [1,32,33,500,1739,2400,2401,3600])for(const progress of Object.keys(data.levelStandards.levels[level]))assert(Object.values(buildStandard(data,element,{statMode:'normal',level,progress})).every(n=>Number.isFinite(n)&&n>0));
@@ -43,4 +52,3 @@ assert(resolveBuild(data,{...input,food:0,statMode:'normal',level:1}).values.ATK
 const saved={accountLevel:1739,units:{11:{owned:true,tier:4,stars:27,food:0}}};const before=JSON.stringify(saved),manual={...input,level:500};const applied=applyOwnedTatari(manual,saved);assert.equal(applied.level,1739);assert.equal(applied.food,0);assert.equal(manual.food,8);assert.equal(JSON.stringify(saved),before);assert.throws(()=>applyOwnedTatari({...manual,pet:22},saved));
 const normalSpa=resolveBuild(data,{...input,statMode:'normal',level:1739,spa:{ATK:20}});const normalCore=coreStats(buildStandard(data,2,{statMode:'normal',level:1739}),data.stars[input.stars],result.form.growth);assert(Math.abs(normalSpa.values.ATK-normal.values.ATK-normalCore.ATK*.2)<1e-6);
 console.log('Passed normal levels 1–3600, element upgrade steps, exact level-500 parity, stage-zero food, account roster copying and level-aware Spa.');
-await import('./patch-165921-check.mjs');

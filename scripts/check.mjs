@@ -13,7 +13,7 @@ async function files(dir) {
   }
   return result;
 }
-for (const base of ['/', '/milkroad-test/']) {
+for (const base of ['/', '/companion-test/']) {
   await build(base);
   const root=resolve('_site');let checked=0;
   const {albumShareText}=await import(pathToFileURL(join(root,'album-model.mjs')).href+'?base='+encodeURIComponent(base));

@@ -17,7 +17,7 @@ export function rosterTier(unit,evolution){return evolution-(unit.id>=1&&unit.id
 // Evolution trials define the minimum stars for reaching a form, not a maximum:
 // players can keep raising stars without completing the next evolution trial.
 export function tierStarRange(unit,tier){if(!unit.forms.some(f=>f.evolution===tier))throw Error('Unsupported tier');return {min:Math.max(1,...unit.forms.filter(f=>f.evolution<tier).map(f=>f.trial?.requiredStars??1)),max:84}}
-export function tierFoodMinimum(unit,tier){if(!unit.forms.some(f=>f.evolution===tier))throw Error('Unsupported tier');let food=unit.feedingStages[0].stage;for(const f of unit.forms.filter(f=>f.evolution<tier))for(const q of f.trial?.quests??[]){const m=(q.condition||'').replaceAll('\\','').match(/^ed\.ConditionX\.PetFeedLevel(?:Rank)?\((\d+)\)>=(\d+)$/);if(m&&Number(m[1])===unit.id)food=Math.max(food,Number(m[2]))}if(!unit.feedingStages.some(f=>f.stage===food))throw Error('Food minimum unavailable');return food}
+export function tierFoodMinimum(unit,tier){if(!unit.forms.some(f=>f.evolution===tier))throw Error('Unsupported tier');let food=unit.feedingStages[0].stage;for(const f of unit.forms.filter(f=>f.evolution<tier))for(const q of f.trial?.quests??[]){const rule=q.requirement;if(rule?.kind==='food'&&rule.unit===unit.id)food=Math.max(food,rule.minimum)}if(!unit.feedingStages.some(f=>f.stage===food))throw Error('Food minimum unavailable');return food}
 export function bulkTierPlan(catalog,roster,ids,displayTier,{minimumFood=true}={}){
  if(!Number.isInteger(displayTier)||displayTier<0||displayTier>4)throw Error('Choose a tier from 0 to 4');
  const next=structuredClone(roster),changes=[],skipped=[];

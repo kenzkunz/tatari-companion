@@ -1,7 +1,7 @@
 import {notify} from './site-dialogs.mjs?v=1';
 import {supabase,currentUser,login} from './auth-client.mjs';
 import {validateSubmission} from './admin-model.mjs';
-import {supportHeads} from './farm-support-assets.mjs';
+import {supportHeads} from './farm-support-assets.mjs?v=public-data2';
 const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n},picture=(path,alt,cls)=>{const n=el('img',undefined,cls);n.src=new URL(path,import.meta.url);n.alt=alt;return n};let crops=[],rows=[],busy=false,selectedCrop=0,user=null,revision=0;const revealed=new Map();let currentCycle=Math.floor(Date.now()/43200000);
 async function rpc(name,args={}){const {data,error}=await supabase.rpc(name,args);if(error)throw Error(error.message);return data}
 function status(text){$('farm-status').textContent=text;if($('farm-submit-dialog').open)$('submit-status').textContent=text}

@@ -1,4 +1,4 @@
-import {calculatedStats,coreStats} from './tatari-model.mjs?v=normal-level1';
+import {calculatedStats,coreStats} from './tatari-model.mjs?v=public-data2';
 export function resolveBuild(data,build){
  const unit=data.units.find(u=>u.id===Number(build.pet)),form=unit?.forms.find(f=>f.evolution===Number(build.tier));
  if(!unit||!form)throw Error('Choose a Tatari and available tier.');

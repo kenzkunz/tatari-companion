@@ -12,11 +12,5 @@ const footer=catalog.records.find(r=>r.key==='footer');assert.throws(()=>validat
 const farm=catalog.records.find(r=>r.key==='guide:cozy-farm');assert.throws(()=>validateEditorValues(farm,{...farm.defaults,'rewards.1.threshold':0}));assert.throws(()=>validateEditorValues(farm,{...farm.defaults,'rewards.0.items.0.amount':-1}));
 const gold=guideDerived('goldrush',{tiles:[{perMinute:7,perHour:1}]});assert.equal(gold.tiles[0].perHour,420);
 for(const key of ['guide:horde','guide:spa-audit'])assert.equal(Object.keys(catalog.records.find(r=>r.key===key).schema).length,0);
-const uid=await readFile('supabase/020_uid_listing_consistency.sql','utf8');assert(uid.includes('deleted_at=null,verified_at=now()'));assert(uid.includes('is distinct from r.revision'));assert(uid.includes('returning * into after_row'));assert(uid.includes('replacement_id'));assert(uid.includes('and l.deleted_at is null'));
 assert.equal(new URL('rest/v1/rpc/published_site_data','https://example.supabase.co').pathname,'/rest/v1/rpc/published_site_data');const publicLoader=await readFile('dist/site-data.mjs','utf8');assert(publicLoader.includes("new URL('rest/v1/rpc/published_site_data',SUPABASE_URL)"));
-const sql=await readFile('supabase/021_admin_site_data.sql','utf8');assert(sql.includes('public.is_site_admin()'));assert(sql.includes('r.draft_values'));assert(sql.includes('public.publish_match_schedule(next_values)'));assert(sql.includes('from public,anon,authenticated'));assert(sql.includes('def.cycle_days'));
-console.log('Passed all 10 source catalogs, locked derived fields, anchor-aware rotations, duplicate-event rejection, bounds, dates, safe URLs, prototype defense and recomputed hourly values. SQL checks are structural; use rollback tests for database behavior.');
-
-await import('./community-check.mjs');
-
-await import('./announcement-check.mjs');
+console.log('Passed all 10 source catalogs, locked derived fields, anchor-aware rotations, duplicate-event rejection, bounds, dates, safe URLs, prototype defense and recomputed hourly values.');

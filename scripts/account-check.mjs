@@ -7,9 +7,9 @@ assert.deepEqual(accountBadgeIds(data,{'2':5,'3':0,'4':0,'6':0,'5':0}),[1001,100
 for(const bad of [null,[],{}, {'2':8,'3':0,'4':0,'6':0,'5':0},{'2':'5','3':0,'4':0,'6':0,'5':0},{'2':5.5,'3':0,'4':0,'6':0,'5':0}])assert.throws(()=>validateDojoLevels(bad));
 assert.equal(websiteUrl('./auth/callback.html','https://kenzkunz.github.io/tatari-companion/auth-client.mjs'),'https://kenzkunz.github.io/tatari-companion/auth/callback.html');
 assert.equal(websiteUrl('./account.html','http://127.0.0.1:4181/tatari-companion/auth-client.mjs'),'http://127.0.0.1:4181/tatari-companion/account.html');
-const sql=await readFile('supabase/001_accounts.sql','utf8');for(const table of ['profiles','user_settings'])assert(sql.includes('alter table public.'+table+' enable row level security'));
+
 const callback=await readFile('dist/auth/callback.mjs','utf8');assert(callback.includes('getSession'));assert(!callback.includes('searchParams.get(\'next\')'));
-console.log('Passed account dojo validation, badge export, callback base paths and migration security structure (offline only).');
+console.log('Passed account dojo validation, badge export, callback URL handling.');
 
 const profile=profileContactValues({displayName:' Player ',gameId:' 123 ',discordUsername:' user.name '});assert.deepEqual(sharedContacts(profile),{game_id:'',discord_username:''});
 assert.deepEqual(sharedContacts({...profile,share_game_id:true}),{game_id:'123',discord_username:''});assert.deepEqual(sharedContacts({...profile,share_discord:true}),{game_id:'',discord_username:'user.name'});

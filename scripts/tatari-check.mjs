@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-await import('./horde-patch-check.mjs');
+await import('./horde-guide-check.mjs');
 await import('./bonobean-check.mjs');
 import {readFile,stat} from 'node:fs/promises';
 import {searchMatches,minimumStars,coreStats,calculatedStats,databaseDefaults,compactStat} from '../dist/tatari-model.mjs';

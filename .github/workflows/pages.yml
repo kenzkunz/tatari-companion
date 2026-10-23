@@ -1,4 +1,4 @@
-name: Deploy MilkRoad to GitHub Pages
+name: Deploy Clash of Critters Companion
 on:
   push:
     branches: [main]

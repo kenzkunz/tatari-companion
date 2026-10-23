@@ -14,7 +14,7 @@ catalog.portraits=index.images;
 for(const form of unit.forms){
  const settings={owned:true,tier:form.evolution,stars:84,food:16,copies:0,glitter:true};
  assert(validateRoster({version:1,accountLevel:3600,units:{68:settings}},catalog).units[68].glitter);
- const portrait=rosterPortrait(unit,settings,catalog);assert(portrait.includes('appearance-color_1'));await readFile('dist/tatari-data/'+portrait);
+ const portrait=rosterPortrait(unit,settings,catalog);assert.notEqual(portrait,form.portrait);await readFile('dist/tatari-data/'+portrait);
  const key='68-'+form.evolution;assert(drafter.entries.some(e=>e.key===key));assert(rangeTiles(ranges,{key,level:1,mode:'horde',cols:6,rows:6,index:32,enemyRows:6}).attack.size>0);
  for(const marker of [key,key+'-flash']){const entry=entryFor(catalog.units,marker);assert(entry);await readFile('dist/'+artworkFor(entry,'icon'));await readFile('dist/'+artworkFor(entry,'character'));}
  assert(effects.forms[key].some(s=>s.effectId==='buff:6891'&&s.level===5));assert(effects.forms[key].some(s=>s.effectId==='mechanic:knockback'&&s.level===7));
