@@ -6,7 +6,7 @@ export function coreStats(standard,star,growth){return Object.fromEntries(['ATK'
 
 export function calculatedStats(data,unit,form,{stars,foodStage,badgeIds=[],aurora=0,spaIds=[],spaGuest=false,lowerTierSpa=false,standardOverride=null}){
  const standard=standardOverride??data.standards500[unit.element],star=data.stars[stars],feed=unit.feedingStages.find(r=>r.stage===Number(foodStage));
- if(!standard||!star||!feed)throw Error('Choose a recorded star count and food stage.');
+ if(!standard||!star||!feed)throw Error('Choose a supported star count and food level.');
  const bonuses=Object.fromEntries(['ATK','HP','DEF'].map(a=>[a,feed[a+'PR']+Number(aurora)]));
  for(const id of new Set(badgeIds)){const badge=data.badges.find(b=>b.id===Number(id)&&b.element===unit.element);if(badge)for(const a of Object.keys(bonuses))bonuses[a]+=badge[a+'PR'];}
  if(form.evolution>=4||lowerTierSpa)for(const id of new Set(spaIds)){const effect=data.spa.find(s=>s.id===Number(id));if(effect)bonuses[effect.stat.slice(0,-2)]+=effect[spaGuest?'guest':'owner'];}

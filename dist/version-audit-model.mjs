@@ -4,10 +4,10 @@ export function compareSnapshots(before,after,registry,idFor){
  const flat=(value,path='$',result={})=>{if(value!==null&&typeof value==='object'){result[path+'@type']=Array.isArray(value)?'array':'object';for(const k of Object.keys(value).sort())flat(value[k],path+'.'+k,result);}else result[path]=value;return result;};
  for(const guide of registry.guides){const old=before.guides[guide.key],next=after.guides[guide.key];coverage.push({guideKey:guide.key,title:guide.title,sources:guide.sources.length,present:guide.sources.filter(s=>next?.sources[s.file]?.present).length});
   for(const source of guide.sources){const a=old?.sources[source.file],b=next?.sources[source.file];const common={guideKey:guide.key,title:guide.title,source:source.file,sections:source.sections??[],kind:'source_changed'};
-   if(!b?.present){add({...common,kind:'missing_source',path:'$',before:a?.present?'Available':'Missing',after:'Missing',note:'This source is unavailable. Do not treat this guide as current.'});continue;}
+   if(!b?.present){add({...common,kind:'missing_source',path:'$',before:a?.present?'Available':'Missing',after:'Missing',note:'Some information is unavailable. This guide may need updating.'});continue;}
    if(a?.hash===b.hash)continue;
    if(source.kind==='data'&&a?.present){const left=flat(a.data),right=flat(b.data);for(const key of [...new Set([...Object.keys(left),...Object.keys(right)])].sort()){if(JSON.stringify(left[key])===JSON.stringify(right[key]))continue;add({...common,kind:'data_changed',path:key,before:JSON.stringify(left[key])?.slice(0,500)??'(absent)',after:JSON.stringify(right[key])?.slice(0,500)??'(absent)',note:'Review the affected explanation, table and calculation. This does not automatically change the website.'});}}
-   else add({...common,path:'$',before:a?.hash??'(absent)',after:b.hash,note:source.kind==='code'?'A source file changed. This may be UI or mechanics; inspect the diff before drawing conclusions.':'A reviewed dataset was added or replaced.'});
+   else add({...common,path:'$',before:a?.hash??'(absent)',after:b.hash,note:source.kind==='code'?'A website file changed. Review the differences before updating this guide.':'A reviewed dataset was added or replaced.'});
   }
  }
  return {formatVersion:1,fromVersion:before.gameVersion,toVersion:after.gameVersion,generatedAt:after.capturedAt,coverage,findings,totalChanges:total,truncated:total>findings.length};

@@ -1,15 +1,1 @@
-{
-  "version": "0.49.1",
-  "source": "Curated Horde rank.cost configuration",
-  "costs": [
-    100,
-    100,
-    120,
-    120,
-    150,
-    150,
-    180,
-    180
-  ],
-  "includes": "Initial deployment plus upgrades to selected level; excludes chips and refunds"
-}
+{"version":"0.49.1","costs":[100,100,120,120,150,150,180,180],"includes":"Initial deployment plus upgrades to selected level; excludes chips and refunds"}

@@ -10,7 +10,7 @@ export function sortRosterUnits(units,records){return [...units].sort((a,b)=>{co
 export function rosterPortrait(unit,record,catalog){const form=unit.forms.find(f=>f.evolution===record.tier)||unit.forms[0];return record.glitter?(catalog.portraits?.find(p=>p.stableUnitId===unit.id&&p.evolution===form.evolution&&p.appearance==='color_1')?.image||form.portrait):form.portrait}
 export function hasGlitter(unit,tier,catalog){return !!catalog.portraits?.some(p=>p.stableUnitId===unit.id&&p.evolution===tier&&p.appearance==='color_1')}
 
-// Pet.lua UnitQuality 2 families (IDs 1–10) begin at display tier 0.
+// Starter families begin at display tier 0.
 // Keep stored evolution IDs unchanged for portraits, stats and existing saves.
 export function rosterTier(unit,evolution){return evolution-(unit.id>=1&&unit.id<=10?1:0)}
 

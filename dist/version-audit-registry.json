@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "baselineNote": "Existing website data is a baseline, not proof that all current live mechanics are verified.",
+  "baselineNote": "Some guides may need checking after a game update.",
   "guides": [
     {
       "key": "cozy-farm",
@@ -361,7 +361,7 @@
       ],
       "openQuestions": [
         "Live server behavior and descriptions still need human review.",
-        "Rally deduction/count progression is an observational model, not verified server code."
+        "Rally costs are estimates based on battle reports."
       ]
     },
     {
@@ -477,7 +477,7 @@
         },
         {
           "key": "limits",
-          "title": "What still needs verification"
+          "title": "Still being checked"
         }
       ],
       "sources": [

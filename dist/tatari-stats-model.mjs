@@ -23,7 +23,7 @@ export function buildStandard(data,element,build){
  const level=Number(build.level),progress=Number(build.progress??0),table=data.levelStandards;
  if(!Number.isInteger(level)||!Number.isInteger(progress))throw Error('Choose a whole account level and element upgrade step.');
  const step=table?.levels?.[level]?.[progress],index=table?.elements.indexOf(element),attr=step?.[index],values=table?.standards?.[attr];
- if(!values)throw Error('No game data for this level and upgrade step. Supported account levels: 1–3600.');
+ if(!values)throw Error('Stats are unavailable for this level and upgrade step. Choose a supported level from 1–3,600.');
  return Object.fromEntries(table.stats.map((stat,i)=>[stat+'Standard',values[i]]));
 }
 export function applyOwnedTatari(build,roster){const owned=roster?.units?.[build.pet];if(!owned?.owned)throw Error('This Tatari is not marked owned in My Tatari.');return {...build,tier:owned.tier,stars:owned.stars,food:owned.food,level:roster.accountLevel}}

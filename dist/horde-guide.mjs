@@ -12,12 +12,12 @@ const enemyTag=e=>{const n=node('span',undefined,'horde-enemy-tag');n.append(pic
 
 function renderWaves(){
   const waves=selectedWaves(),normal=waves.reduce((a,w)=>a+w.normal,0),bosses=waves.reduce((a,w)=>a+w.bosses,0),income=waves.reduce((a,w)=>a+w.income,0);
-  $('wave-summary').textContent=waves.length+' waves · '+fmt(normal)+' normal enemies + '+bosses+' bosses · '+fmt(income)+' base kill Energy Candy per player if all configured enemies are defeated.';
+  $('wave-summary').textContent=waves.length+' waves · '+fmt(normal)+' normal enemies + '+bosses+' bosses · '+fmt(income)+' base kill Energy Candy per player if every listed enemy is defeated.';
   $('wave-list').replaceChildren(...waves.map(w=>{
     const d=node('details'),summary=node('summary'),boss=node('span',undefined,'horde-wave-bosses'),label=node('span','Wave '+w.wave,'horde-wave-label'),amount=node('span','+'+fmt(w.income),'horde-wave-income');
     amount.append(picture('/guide-assets/horde/energizer.png','Energizers'));boss.append(...w.enemies.filter(e=>e.boss).map(enemyTag));summary.append(label,boss,amount);
     const detail=node('div',undefined,'horde-wave-detail'),roster=node('div',undefined,'horde-wave-enemies');
-    detail.append(node('p',w.normal+' normal + '+w.bosses+' boss enemies · ATK ×'+w.atk+' / HP ×'+w.hp+' / DEF ×'+w.defense+(w.chip?' · Chip selection-round definition':'')));
+    detail.append(node('p',w.normal+' normal + '+w.bosses+' boss enemies · ATK ×'+w.atk+' / HP ×'+w.hp+' / DEF ×'+w.defense+(w.chip?' · Chip selection':'')));
     roster.append(...w.enemies.map(enemyTag));detail.append(roster);d.append(summary,detail);return d;
   }));renderBudget();
 }

@@ -13,6 +13,6 @@ for(let level=1;level<=3600;level++){
   assert(steps&&steps[0],`Missing level ${level}`);
   for(const values of Object.values(steps))for(const id of values)assert(data.standards[id]?.length===3&&data.standards[id].every(n=>Number.isFinite(n)&&n>0));
 }
-assert.equal(patch.livePayloadIdentity,'unverified');
+assert(!Object.hasOwn(patch,'livePayloadIdentity'),'Private provenance is excluded from the public patch summary');
 assert.deepEqual(patch.horde.difficulties.map(d=>d.difficulty),[1,2,3,4,5,6]);
 console.log('Passed all 3,600 recorded levels, standard references and exact legacy-data preservation.');

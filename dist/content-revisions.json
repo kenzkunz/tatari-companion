@@ -1,0 +1,110 @@
+{
+  "events/cozy-farm.html": {
+    "text-13": {
+      "e7dbceaa3074bc968ea4ec439fcfb602ec8789787aadee7cd9528eb9facc73a4": "Enter your support Tatari’s stars, evolution tier and food level to estimate its support bonus."
+    }
+  },
+  "events/fishing.html": {
+    "text-6": {
+      "3aeea7b800774294f93e86233b08089f1af374a0025c564054e1e281bcc4f524": "Your Luck Level combines your rod level and active bait bonuses. Higher luck changes both rarity chances and weight-tier chances. It does not identify which fish will appear next."
+    }
+  },
+  "events/horde.html": {
+    "text-17": {
+      "5c3b23c969fcb41ab5ef3b251c2f684ff502667e27a6e39447b64a80f845064d": "Choose a difficulty to view its Zobo lineup and stat multipliers."
+    },
+    "text-18": {
+      "71c2389846b6ea106fc6dc612fa1d307b8e74b1a5974bc77aa49f7dc868655b1": "Summons and enemies that escape can affect what happens during battle. ATK / DEF / HP values are wave multipliers, not a boss’s final stats."
+    },
+    "note-1": {
+      "a203d73796dbea66485da4dc657313a1df74c237534d415e692ea28609414e75": "Season 3 reference: Each difficulty has 25 waves. Browse the enemies and stat multipliers below. Lineups may change with future updates."
+    },
+    "note-4": {
+      "300f89512bfc2d718f3973785935ba8adb20a3b0dc3b1275ccf7d3af63ef0a06": "Parting Gift adds its own refund. The chip describes +40 Energy Candy when one of your Tatari is knocked down. The base refund changes with the Tatari’s Horde level: 40 / 40 / 60 / 60 / 80 / 80 / 100 / 100 by level, rather than a universal +100 at every level."
+    }
+  },
+  "events/island-goldrush.html": {
+    "text-3": {
+      "7d55aa22396c10855531805fad8a53d94c8e574dc348f415b137d34cbba689f0": "@rich-v1:[{\"text\":\"The main goal is to build your league's point production by claiming tiles and clams across the six event days. Coordinate a strategy with your league, choose useful routes and high-value tiles, and capture or retake tiles effectively. Attacks contain individual opponent fights: your Tatari skills and formation decide those fights, while Energy Drinks cover the battle cost.\"}]"
+    },
+    "text-5": {
+      "3c2b47baa4071b20df78a7676400d903f361627bf8b3e4655432383db506347b": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"Super Drinks\"}]},{\"text\":\" are cans used for Dunerush Tournament. Super Drinks substitute for Energy Drinks at a 1:1 rate.\"}]"
+    },
+    "text-14": {
+      "09342f429744fbc373564c73af9850eed42d96c43974d26e4f0595f6387fdd23": "Use the event screen for actual start, preparation, battle and settlement countdowns. These are day-based rules, not a prediction of the next server calendar date. These percentages apply to base production: 50% means 0.5×, and 120% means 1.2×."
+    },
+    "text-37": {
+      "f419cfc59d8cd413679e9833cd316f8236fad9ef81bdf77db4bbf4a8d59c54e1": "Attack completed means your daily attack count before the rally. Tile HP means the remaining defenders on that tile. This estimate is based on player battle reports. Actual results may vary."
+    },
+    "note-8": {
+      "978b7b94bc9d987984b46b761e4b4c53e88afd7291c469039799c787a0692e7b": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"Skipping the animation does not create extra hits.\"}]},{\"text\":\" Skipping gets you to the result faster. It does not guarantee the last hit; the exact order of simultaneous attacks is unclear.\"}]"
+    },
+    "note-13": {
+      "dbf9c432e7cdce2b2ffaef64e93e57a941667017f235c0a31b3d57276a6fca3c": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"Kills and daily attacks are separate counters.\"}]},{\"text\":\" One attack can show several opponent fights. Do not assume 11 kills automatically means +20% exhaustion.\"}]"
+    },
+    "list-9": {
+      "b846c8d43957323e888dc73dc6505a1b2a61851e5325dfd954430c5f65ab6958": "Sharing cans through rallies. A rally on a tile with few defenders remaining may finish early and return unused cans to contributors. The listed participation reward is 50 cans. Eligibility without attacking still needs confirmation."
+    }
+  },
+  "events/sparkly-spa.html": {
+    "text-29": {
+      "0063afeccdb545febd1345adc87dc6a2b59748ff38273dad658d97e6d0717ba8": "Duplicate Sparkle appearances convert into Glitter Fruits. Check the reward amount shown on the result screen; duplicates are not confirmed to always give one fruit. Each supported Tatari has five Standard and two Rare appearances. Sparkle appearances are cosmetic; the Spa’s temporary buffs are separate.",
+      "c7b640a4d9cffdcbb2e03f2c4db194060962f9a14d1179734e8bbb5dee35f3d7": "@rich-v1:[{\"text\":\"Duplicate Sparkle appearances convert into +1 Glitter Fruits \"},{\"tag\":\"em\",\"children\":[{\"text\":\"(There's currently a visual tooltip bug that show you +5 Glitter Fruits upon your first Sparkle obtained variant, you won't receive +5 at any means)\"}]},{\"text\":\". Each supported Tatari has five Standard and two Rare appearances. Sparkle appearances are cosmetic; the Spa’s temporary buffs are separate.\"}]"
+    },
+    "text-33": {
+      "5ea2d915cb557e051662d7196e3f4b47f9d118dc838ab6e6a0ab801c748fcdc6": "Still being checked"
+    },
+    "text-34": {
+      "f0b062fc014f5aafb822fa0e89cb5b32794113fa4054eef5641c3e6ab91d0603": ""
+    },
+    "note-4": {
+      "e60974736d3a33cf604443df76c792c276cb2759a8825a2556d166899de84a8a": "The values above already include the host bonus. Do not double them again. Final combat stats also depend on other bonuses."
+    },
+    "note-8": {
+      "9b98f9634ed7930ea5273ac928d32853480c7283edaf1e9504431c1894ccb062": "A community-made Spa guide. Some details, including pity resets, are still being checked."
+    }
+  },
+  "information/patch-notes.html": {
+    "text-updates-title": {
+      "6b5c21f60545df091851ee70dabd076d88fd2a1182512816c3e3ef18b6858b59": ""
+    },
+    "text-updates-intro": {
+      "3a07008d336a54e51d7b3fd1f81ad785df296a681d48d413c505a6746f43c8b9": ""
+    }
+  },
+  "information/patch-165921.html": {
+    "note-status-evidence": {
+      "0dc821825180fc49a2454f4817f609fcb33fe3496c33792a60fcd3b4f22331f0": "These are companion-site findings, separate from the official patch notes. Some changes still need confirmation in-game."
+    },
+    "text-status-scope": {
+      "d1710a368f2ea52dd3cd3446215aceb7069897cbc90c4b9077ad20f0fa47d6c5": "My Tatari and the stats calculator now support levels 1–3,600. The Horde / Goldrush calculator remains a fixed level-500 comparison."
+    },
+    "text-horde-title": {
+      "a285f2ad05f31d9c443c8cc630eccb88accaa7ff199405de5943f40b26020620": "Horde Season 3 updates"
+    },
+    "text-events-halloween": {
+      "592d38f63f6610ea725b5818732c92d5e7cdb9b8a21fd0e37f4162bfbdf418e1": "Halloween Pinball content includes “Trick-or-Treat Time!” and “Halloween Fun!” Event dates are still unconfirmed."
+    },
+    "text-events-battles": {
+      "b6c78bec34fdd2cb72a4807878fa5cae650c46501fd40201fdb07de79ed704e7": "Enemy formations were updated for stages in chapters 24–29, alongside Horde Season 3 wave lineups."
+    },
+    "text-skill-balance-method": {
+      "0f98656602c70593f21cd6072c3180c4eca18d6ea6ae4b3e96b2dec8b987afa9": "The table below compares the previous and updated skill values, including related buffs and effects."
+    },
+    "list-mechanics-unchanged-4": {
+      "58f7879fb4cc802d00fd51f689e9dea8aca73e2fd3b30dd8cf6c51418faa3621": "Horde comparisons remain at level 500. Normal account-level inputs support levels 1–3,600."
+    },
+    "list-mechanics-unchanged-5": {
+      "407fc481ed00a0ca0902201cde59097d72db4c20369b7ecea3dd839ac62e6dc7": ""
+    },
+    "text-pending-title": {
+      "4f3469f2000ac6f204c65c85b21920ccba1852564a933e6ed7779d76866e1dcc": "Still being checked"
+    },
+    "list-pending-unknowns-4": {
+      "9a7591e2f24af5e39d435391380a7288e464244729d2e3c62587c19491c62b79": "Confirming that these changes match the current game update"
+    },
+    "list-pending-unknowns-5": {
+      "10e4578a9d3eeaa4aa0e87503e5dae9aa6b077b0841ac05e01f9a6d16f668e94": ""
+    }
+  }
+}

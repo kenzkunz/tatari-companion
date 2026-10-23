@@ -1,8 +1,6 @@
 {
   "patch": "165921",
   "checkedAt": "2026-10-21",
-  "sourceType": "reconstructed-config",
-  "livePayloadIdentity": "unverified",
   "bonobean": {
     "unitId": 68,
     "name": "Bonobean",
@@ -4393,30 +4391,13 @@
     ]
   },
   "halloween": {
-    "configured": true,
-    "dates": "unverified"
-  },
-  "stageBattleFiles": {
-    "new": 429,
-    "changed": 404,
-    "chapterMapping": "unverified"
+    "dates": "unverified",
+    "included": true
   },
   "unverified": [
     "Goldrush weekly giftbox limit",
     "Boss Challenge merge changes",
     "Halloween event dates and replacement timing",
-    "Exact match to the live server payload",
-    "Meaning and consumer binding of new Horde parameters 39 (200) and 40 (5)",
-    "Selection of the official Horde parameter override and unusual Shuffle edge cases"
-  ],
-  "sourceHashes": {
-    "Unit.lua": "aaa39a328b430855a6cecf0673ce809143b8d311786ed44be44d67e04086a012",
-    "Pet.lua": "31359b4b7c63ebd18959b0136a2cdf6c62dbf0df9f11a7df3a913fea95848c7f",
-    "UnitLevel.lua": "07f880d520177aa4d2308958494882bd6d87d95d33647802820677a1b48c2515",
-    "LuckyDefenseConfig.lua": "148581b6c4562e0a287bd13fc58bd4dbf9d4be3e8280625a4b5b5bcf7c6e009f",
-    "LuckyDefenseSeasonConfig.lua": "1064a4b0fac464a80c8b42ea02f90b4404b38ae20a7f75023b857678b0990fb6",
-    "ProfilePicture.lua": "894500ffea68cb8922bbd2023c3dc6b5b5e08068571311a6f98f7ffcf42af4ab",
-    "LanguageDbEN.luac": "fa3a7fa7f20b7d26d7e0eea59ee3333430188280c7feff34ee3d3f0eb1d6567d",
-    "PetCollectible.lua": "e134121a225cf9d835c70c927d6ed68fcbc137bb8bcb2173d6b13ce7909f3401"
-  }
+    "Exact match to the live server payload"
+  ]
 }
