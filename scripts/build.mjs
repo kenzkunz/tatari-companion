@@ -1,3 +1,4 @@
+import {assertPublicFiles} from './public-files-check.mjs';
 import {generateImageWorker} from './generate-image-worker.mjs';
 import {shareThumbnail} from './share-thumbnail.mjs';
 import {cp, readdir, readFile, writeFile, mkdir, rm} from 'node:fs/promises';
@@ -8,6 +9,7 @@ export function normalizeBase(value = '/') {
 }
 export async function build(base = '/', destination = '_site') {
   base = normalizeBase(base);
+  await assertPublicFiles('dist');
   const out = resolve(destination);
   if (out !== resolve('_site')) throw Error('Output must be the project _site directory');
   await rm(out, {recursive:true, force:true});

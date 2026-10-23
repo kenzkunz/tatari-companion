@@ -1,3 +1,4 @@
+import './public-files-guard-check.mjs';
 import {pathToFileURL} from 'node:url';
 import assert from 'node:assert/strict';
 import {readFile, readdir, stat} from 'node:fs/promises';

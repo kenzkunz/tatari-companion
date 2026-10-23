@@ -1,6 +1,5 @@
 # Tatari data and calculation
 
-Public data is a curated JSON export. No Lua files, APK files, source dumps or private paths are published.
 
 Stats use the user-supplied formula: Growth * (Standard * StarCoef + StarAdd) * (1 + (FeedPR + BadgePR + AuroraPct + SpaPR) / 100). Values are full selected-tier/star/stage records, not cumulative. Stage zero food is included.
 
@@ -17,5 +16,3 @@ Database display defaults: acquisition stars from the preceding evolution requir
 ## Calculator account settings and normal levels
 
 The Stats Calculator has independent Use My Tatari settings and Use My Badges controls for each comparison side. They require login and read existing private Supabase records only. While enabled, corresponding inputs follow a snapshot of saved settings and are read-only; changing Tatari selects owned families only. Unchecking enables hypothetical edits without writing to the account. Auth changes clear imported personal inputs. Spa percentages remain manual because they are not saved in the roster.
-
-Normal mode resolves UnitLevel[accountLevel][progress] to the Tatari element's attribute level, then UnitAttrLevel to ATK/HP/DEF standards. It applies the existing star, growth, food, badge and Spa formula to those standards. The curated level-standards.json records source version and SHA256 hashes. Source coverage is account levels 1–3600 (patch 165921 reconstructed tables; exact live-server payload identity remains unverified), with only recorded progress steps available; it does not extrapolate beyond them. Account roster stores no within-level upgrade progress, so imported settings start at progress 0 and the calculator allows manual selection. Horde / Goldrush mode retains the existing fixed 500/progress-0 calculation and does not model battle-specific effects or Horde rank. Database baseline calculations stay unchanged.

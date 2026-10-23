@@ -2,7 +2,7 @@
 
 ## How the pieces fit
 
-- Local extraction/research: compare new game configuration, localization and relevant Lua against the prior release. Raw Lua/APKs/private exports remain local.
+- Update review: compare new gameplay information and descriptions with the previous website release.
 - Reviewed website data: prepare public-safe guide JSON and any calculation changes in a staging folder.
 - GitHub repository: stores the registry, comparison tool, reviewed website code and SQL migrations.
 - Supabase: stores private audit imports, finding reviews and guide/section verification history.
@@ -27,7 +27,7 @@ Example uses 0.50.1 as a future version label, not a claim that it has released.
 
    `node scripts/audit-game-version.mjs --prepare --version 0.50.1`
 
-2. Ask Codex to research the new game data, descriptions and relevant Lua. Update the corresponding reviewed files under `.game-audits/staging/0.50.1/`. Record evidence and unresolved mechanics. Do not simply change the version label and treat the copied data as a new game release.
+2. Review the new game update and prepare the corresponding website files under `.game-audits/staging/0.50.1/`. Record confirmed changes and unresolved questions; changing a version label does not validate the contents.
 
 3. Capture the reviewed candidate:
 
@@ -50,7 +50,6 @@ Example uses 0.50.1 as a future version label, not a claim that it has released.
 - Snapshot capture refuses to overwrite a file unless `--overwrite` is explicitly supplied. Use distinct paths to retain candidate and accepted snapshots.
 - Reports contain up to 1,000 findings and flag truncation. Missing sources are findings, not an implicit pass.
 - The capture reads only files named by `dist/version-audit-registry.json`, rejects private-account data keys and refuses source symlinks outside the selected directory. Sources must remain public-safe reviewed data, not full raw exports.
-- The audit compares the registered datasets and website calculation sources. It is not an automated APK/Lua decompiler or official patch feed. New localization, server behavior and unregistered mechanics require research and registry maintenance.
 - Snapshots/reports are ignored by Git. Private dashboard review archives include notes/account IDs and should stay out of the public repository.
 - The dashboard keeps the latest 50 reports and recent review history in its view; database records are retained. Review revisions reject stale updates. Reimporting a report does not erase reviews.
 

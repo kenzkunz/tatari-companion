@@ -20,3 +20,16 @@ design-rollbacks/template-*/
 
 # Shared chrome rollback backups
 design-rollbacks/public-chrome/
+
+# Private game-source and package files
+*.lua
+*.luac
+*.luae
+*.luajit
+*.ljbc
+*.lpak
+*.apk
+*.apks
+*.xapk
+*.aab
+*.unitypackage

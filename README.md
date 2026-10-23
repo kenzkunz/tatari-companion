@@ -1,6 +1,5 @@
 # MilkRoad · Clash of Critters companion
 
-Static Clash of Critters companion website with event guides, resource calculators, album and trading pages, a schedule and Treasure Hunt solver. Editable site files live in `dist/`; generated deployment files live in `_site/`. Private Lua research, APKs, bot files, player exports and credentials are not included.
 
 ## Deploy
 
@@ -93,5 +92,3 @@ Pinballs earned is gross rewards, re-fired is reward pinballs reinvested after e
 `horde-guide.mjs` provides chip search/filtering, difficulty selection, expandable waves, the Energizer income and upgrade worksheets, and an accessible Tatari picker. Curated data is in `guide-data/horde.json`; selected supplied artwork is in `guide-assets/horde/`. Only visible Tatari cards are loaded through the existing roster and Horde card model.
 
 The S2 roster is identical across four difficulties; wave stat multipliers differ. Estimated Energizers obtained include starting balance, configured kill income and passive income using a 30-second window per completed wave. The estimate excludes chip income, death refunds and spending. Actual battle duration can differ. Rank costs use the normalized CSV header, avoiding the earlier undefined-level/zero-cost issue.
-
-Eligible chip waves describe offer pools. A unique chip is assigned to one player for the run; all offered exact chip IDs are excluded from that player's later offers, even if skipped. Daily and seasonal rewards should be checked on the in-game Horde Invasion screen. Raw Lua, private SQLite databases, bytecode research and source-path manifests are not included.

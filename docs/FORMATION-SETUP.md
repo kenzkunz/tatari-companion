@@ -16,10 +16,10 @@ Validation completed offline in an isolated PostgreSQL-compatible PGlite instanc
 
 
 ## Backend Support validation (game 0.49.1)
-Chip 32 links skill 1100032, implemented as HorseCannon. Skill configuration sets front count to 1 and boost to 45; buff 1100032 sets DmgUp 0.45 and is non-stackable. The implementation collects living units filtered to the chip owner's UID, excludes the candidate itself, compares equal grid X and greater grid Y, and adds the buff only when the count equals one. Rear Guard's deployment-area comparison confirms lower grid Y is the rear. The evaluator checks periodically at a four-second interval; the planner shows static eligibility, not timing or deaths. Source review is based on extracted game configuration and bytecode control flow, not a live battle test.
+The planner previews formation geometry and skill tags. It does not simulate a live battle.
 
 ## Exile chip adjacency (15 October 2026)
 
 Exile (chip 29, skill 1100029 / Skill_ld_chip_Loner) checks the shared friendly camp for four orthogonal neighbours. Both P1 and P2 Tatari block isolation; diagonals do not. Eligibility/highlights remain limited to the chip owner. Backend Support continues to use its separate owner-only rule.
 
-This correction follows the user-supplied v0.49.1 recovered-client evidence: player ownership is separate from BattleCamp.player, and the Loner skill queries orthogonal cells by camp. It is a strong static-code inference, not a live-match observation. The drafter models deployed Tatari as present/alive; it does not simulate deaths or dynamic battle changes. No raw bytecode or private extraction archive is published.
+The planner previews formation geometry and skill tags. It does not simulate a live battle.

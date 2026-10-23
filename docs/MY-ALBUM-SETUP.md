@@ -8,7 +8,6 @@ No Gold Exchange event is seeded. ALL 17 gold cards remain locked until an admin
 
 The page checks the server exchange status every minute and when loading. Never use the device clock for eligibility. Future matching/contact RPCs must use album_tradeable_inventory or equivalent server-side checks.
 
-Album metadata/artwork is curated from the user-supplied Autumn Tales outcome handoff, 15 sets, 135 cards, 17 gold, version 0.49.1. Original card art and supplied plus/minus UI images are copied. No Lua/APK/config dump is published.
 
 Set priority: High=3, Normal=2, Low=1. Trade preferences describe cards the user wants to RECEIVE, relative to cards they GIVE. Any Stars overrides those narrower options when matching is built.
 
