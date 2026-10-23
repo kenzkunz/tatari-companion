@@ -1,0 +1,663 @@
+{
+  "version": "165921",
+  "weightScale": 100,
+  "priceDivisor": 1000,
+  "fish": [
+    {
+      "id": 1,
+      "name": "Chnoogfish",
+      "quality": 5,
+      "price": 76,
+      "minRaw": 20000,
+      "maxRaw": 60000,
+      "bounds": [
+        20000,
+        25000,
+        30000,
+        35000,
+        60000
+      ],
+      "icon": "/fishing-assets/1.webp"
+    },
+    {
+      "id": 2,
+      "name": "Sailfish",
+      "quality": 4,
+      "price": 79,
+      "minRaw": 10000,
+      "maxRaw": 33500,
+      "bounds": [
+        10000,
+        14500,
+        18500,
+        24000,
+        33500
+      ],
+      "icon": "/fishing-assets/2.webp"
+    },
+    {
+      "id": 3,
+      "name": "Ribbonfish",
+      "quality": 4,
+      "price": 94,
+      "minRaw": 9000,
+      "maxRaw": 28000,
+      "bounds": [
+        9000,
+        12000,
+        15000,
+        20000,
+        28000
+      ],
+      "icon": "/fishing-assets/3.webp"
+    },
+    {
+      "id": 4,
+      "name": "Whaleshark",
+      "quality": 4,
+      "price": 1,
+      "minRaw": 850000,
+      "maxRaw": 2600000,
+      "bounds": [
+        850000,
+        1200000,
+        1400000,
+        1600000,
+        2600000
+      ],
+      "icon": "/fishing-assets/4.webp"
+    },
+    {
+      "id": 5,
+      "name": "Shoeshark",
+      "quality": 4,
+      "price": 7,
+      "minRaw": 125000,
+      "maxRaw": 360000,
+      "bounds": [
+        125000,
+        168000,
+        200000,
+        240000,
+        360000
+      ],
+      "icon": "/fishing-assets/5.webp"
+    },
+    {
+      "id": 20,
+      "name": "Red Stingray",
+      "quality": 4,
+      "price": 1100,
+      "minRaw": 600,
+      "maxRaw": 2400,
+      "bounds": [
+        600,
+        1000,
+        1500,
+        1800,
+        2400
+      ],
+      "icon": "/fishing-assets/20.webp"
+    },
+    {
+      "id": 23,
+      "name": "Dolphinfish",
+      "quality": 4,
+      "price": 912,
+      "minRaw": 800,
+      "maxRaw": 2900,
+      "bounds": [
+        800,
+        1300,
+        1600,
+        2000,
+        2900
+      ],
+      "icon": "/fishing-assets/23.webp"
+    },
+    {
+      "id": 27,
+      "name": "Lionfish",
+      "quality": 4,
+      "price": 14760,
+      "minRaw": 50,
+      "maxRaw": 180,
+      "bounds": [
+        50,
+        80,
+        100,
+        120,
+        180
+      ],
+      "icon": "/fishing-assets/27.webp"
+    },
+    {
+      "id": 28,
+      "name": "Hammerhead",
+      "quality": 4,
+      "price": 91,
+      "minRaw": 10000,
+      "maxRaw": 28000,
+      "bounds": [
+        10000,
+        13000,
+        15000,
+        18000,
+        28000
+      ],
+      "icon": "/fishing-assets/28.webp"
+    },
+    {
+      "id": 38,
+      "name": "Bluefin Tuna",
+      "quality": 4,
+      "price": 37,
+      "minRaw": 20000,
+      "maxRaw": 70000,
+      "bounds": [
+        20000,
+        30000,
+        40000,
+        60000,
+        70000
+      ],
+      "icon": "/fishing-assets/38.webp"
+    },
+    {
+      "id": 39,
+      "name": "Cutlassfish",
+      "quality": 4,
+      "price": 8888,
+      "minRaw": 100,
+      "maxRaw": 300,
+      "bounds": [
+        100,
+        130,
+        160,
+        200,
+        300
+      ],
+      "icon": "/fishing-assets/39.webp"
+    },
+    {
+      "id": 6,
+      "name": "Garfish",
+      "quality": 3,
+      "price": 311,
+      "minRaw": 1500,
+      "maxRaw": 5100,
+      "bounds": [
+        1500,
+        2400,
+        3000,
+        3600,
+        5100
+      ],
+      "icon": "/fishing-assets/6.webp"
+    },
+    {
+      "id": 7,
+      "name": "Guppy",
+      "quality": 3,
+      "price": 113310,
+      "minRaw": 1,
+      "maxRaw": 14,
+      "bounds": [
+        1,
+        7,
+        10,
+        12,
+        14
+      ],
+      "icon": "/fishing-assets/7.webp"
+    },
+    {
+      "id": 8,
+      "name": "Astonifish",
+      "quality": 3,
+      "price": 12519,
+      "minRaw": 27,
+      "maxRaw": 127,
+      "bounds": [
+        27,
+        60,
+        80,
+        100,
+        127
+      ],
+      "icon": "/fishing-assets/8.webp"
+    },
+    {
+      "id": 9,
+      "name": "Pixelfish",
+      "quality": 3,
+      "price": 37631,
+      "minRaw": 12,
+      "maxRaw": 42,
+      "bounds": [
+        12,
+        20,
+        25,
+        30,
+        42
+      ],
+      "icon": "/fishing-assets/9.webp"
+    },
+    {
+      "id": 21,
+      "name": "Moorish Idol",
+      "quality": 3,
+      "price": 33383,
+      "minRaw": 10,
+      "maxRaw": 47,
+      "bounds": [
+        10,
+        22,
+        30,
+        40,
+        47
+      ],
+      "icon": "/fishing-assets/21.webp"
+    },
+    {
+      "id": 24,
+      "name": "Piranha",
+      "quality": 3,
+      "price": 5090,
+      "minRaw": 60,
+      "maxRaw": 310,
+      "bounds": [
+        60,
+        150,
+        200,
+        250,
+        310
+      ],
+      "icon": "/fishing-assets/24.webp"
+    },
+    {
+      "id": 26,
+      "name": "Mackerel",
+      "quality": 3,
+      "price": 3080,
+      "minRaw": 150,
+      "maxRaw": 500,
+      "bounds": [
+        150,
+        250,
+        300,
+        350,
+        500
+      ],
+      "icon": "/fishing-assets/26.webp"
+    },
+    {
+      "id": 29,
+      "name": "Flatfish",
+      "quality": 3,
+      "price": 154,
+      "minRaw": 3000,
+      "maxRaw": 10000,
+      "bounds": [
+        3000,
+        5000,
+        6000,
+        7000,
+        10000
+      ],
+      "icon": "/fishing-assets/29.webp"
+    },
+    {
+      "id": 30,
+      "name": "Sturgeon",
+      "quality": 3,
+      "price": 23,
+      "minRaw": 20000,
+      "maxRaw": 68000,
+      "bounds": [
+        20000,
+        33000,
+        41000,
+        47000,
+        68000
+      ],
+      "icon": "/fishing-assets/30.webp"
+    },
+    {
+      "id": 31,
+      "name": "Clownfish",
+      "quality": 3,
+      "price": 38562,
+      "minRaw": 3,
+      "maxRaw": 42,
+      "bounds": [
+        3,
+        20,
+        30,
+        36,
+        42
+      ],
+      "icon": "/fishing-assets/31.webp"
+    },
+    {
+      "id": 32,
+      "name": "Humphead Wrasse",
+      "quality": 3,
+      "price": 46,
+      "minRaw": 12000,
+      "maxRaw": 35000,
+      "bounds": [
+        12000,
+        16000,
+        19000,
+        23500,
+        35000
+      ],
+      "icon": "/fishing-assets/32.webp"
+    },
+    {
+      "id": 40,
+      "name": "White Shrimp",
+      "quality": 3,
+      "price": 84951,
+      "minRaw": 5,
+      "maxRaw": 20,
+      "bounds": [
+        5,
+        8,
+        12,
+        15,
+        20
+      ],
+      "icon": "/fishing-assets/40.webp"
+    },
+    {
+      "id": 41,
+      "name": "Octopus",
+      "quality": 3,
+      "price": 251,
+      "minRaw": 1400,
+      "maxRaw": 6300,
+      "bounds": [
+        1400,
+        3000,
+        4000,
+        5000,
+        6300
+      ],
+      "icon": "/fishing-assets/41.webp"
+    },
+    {
+      "id": 10,
+      "name": "Carp",
+      "quality": 2,
+      "price": 8904,
+      "minRaw": 32,
+      "maxRaw": 125,
+      "bounds": [
+        32,
+        50,
+        65,
+        80,
+        125
+      ],
+      "icon": "/fishing-assets/10.webp"
+    },
+    {
+      "id": 11,
+      "name": "Frog",
+      "quality": 2,
+      "price": 12030,
+      "minRaw": 26,
+      "maxRaw": 90,
+      "bounds": [
+        26,
+        40,
+        45,
+        50,
+        90
+      ],
+      "icon": "/fishing-assets/11.webp"
+    },
+    {
+      "id": 12,
+      "name": "Jackfish",
+      "quality": 2,
+      "price": 15923,
+      "minRaw": 18,
+      "maxRaw": 70,
+      "bounds": [
+        18,
+        30,
+        35,
+        40,
+        70
+      ],
+      "icon": "/fishing-assets/12.webp"
+    },
+    {
+      "id": 13,
+      "name": "Sun Carp",
+      "quality": 2,
+      "price": 2326,
+      "minRaw": 112,
+      "maxRaw": 480,
+      "bounds": [
+        112,
+        200,
+        250,
+        300,
+        480
+      ],
+      "icon": "/fishing-assets/13.webp"
+    },
+    {
+      "id": 14,
+      "name": "Sunfish",
+      "quality": 2,
+      "price": 23286,
+      "minRaw": 15,
+      "maxRaw": 48,
+      "bounds": [
+        15,
+        18,
+        24,
+        30,
+        48
+      ],
+      "icon": "/fishing-assets/14.webp"
+    },
+    {
+      "id": 15,
+      "name": "Crab",
+      "quality": 2,
+      "price": 15474,
+      "minRaw": 12,
+      "maxRaw": 72,
+      "bounds": [
+        12,
+        30,
+        40,
+        50,
+        72
+      ],
+      "icon": "/fishing-assets/15.webp"
+    },
+    {
+      "id": 16,
+      "name": "Bass",
+      "quality": 2,
+      "price": 1547,
+      "minRaw": 128,
+      "maxRaw": 720,
+      "bounds": [
+        128,
+        300,
+        400,
+        500,
+        720
+      ],
+      "icon": "/fishing-assets/16.webp"
+    },
+    {
+      "id": 17,
+      "name": "Magnetfish",
+      "quality": 2,
+      "price": 74370,
+      "minRaw": 3,
+      "maxRaw": 15,
+      "bounds": [
+        3,
+        6,
+        8,
+        11,
+        15
+      ],
+      "icon": "/fishing-assets/17.webp"
+    },
+    {
+      "id": 22,
+      "name": "Squid",
+      "quality": 2,
+      "price": 4065,
+      "minRaw": 22,
+      "maxRaw": 275,
+      "bounds": [
+        22,
+        100,
+        180,
+        250,
+        275
+      ],
+      "icon": "/fishing-assets/22.webp"
+    },
+    {
+      "id": 25,
+      "name": "Bream",
+      "quality": 2,
+      "price": 1488,
+      "minRaw": 174,
+      "maxRaw": 750,
+      "bounds": [
+        174,
+        300,
+        400,
+        500,
+        750
+      ],
+      "icon": "/fishing-assets/25.webp"
+    },
+    {
+      "id": 33,
+      "name": "Sardine",
+      "quality": 2,
+      "price": 62843,
+      "minRaw": 5,
+      "maxRaw": 17,
+      "bounds": [
+        5,
+        7,
+        9,
+        11,
+        17
+      ],
+      "icon": "/fishing-assets/33.webp"
+    },
+    {
+      "id": 34,
+      "name": "Clam",
+      "quality": 2,
+      "price": 68210,
+      "minRaw": 3,
+      "maxRaw": 16,
+      "bounds": [
+        3,
+        6,
+        10,
+        12,
+        16
+      ],
+      "icon": "/fishing-assets/34.webp"
+    },
+    {
+      "id": 35,
+      "name": "Tilapia",
+      "quality": 2,
+      "price": 637,
+      "minRaw": 500,
+      "maxRaw": 1700,
+      "bounds": [
+        500,
+        700,
+        900,
+        1000,
+        1700
+      ],
+      "icon": "/fishing-assets/35.webp"
+    },
+    {
+      "id": 36,
+      "name": "Goldfish",
+      "quality": 2,
+      "price": 15923,
+      "minRaw": 18,
+      "maxRaw": 70,
+      "bounds": [
+        18,
+        30,
+        35,
+        40,
+        70
+      ],
+      "icon": "/fishing-assets/36.webp"
+    },
+    {
+      "id": 37,
+      "name": "Pike",
+      "quality": 2,
+      "price": 3385,
+      "minRaw": 100,
+      "maxRaw": 350,
+      "bounds": [
+        100,
+        130,
+        160,
+        200,
+        350
+      ],
+      "icon": "/fishing-assets/37.webp"
+    },
+    {
+      "id": 42,
+      "name": "Carp",
+      "quality": 2,
+      "price": 646,
+      "minRaw": 250,
+      "maxRaw": 1800,
+      "bounds": [
+        250,
+        700,
+        1000,
+        1300,
+        1800
+      ],
+      "icon": "/fishing-assets/42.webp"
+    },
+    {
+      "id": 43,
+      "name": "Canned Herring",
+      "quality": 2,
+      "price": 29092,
+      "minRaw": 10,
+      "maxRaw": 40,
+      "bounds": [
+        10,
+        15,
+        20,
+        25,
+        40
+      ],
+      "icon": "/fishing-assets/43.webp"
+    }
+  ]
+}
