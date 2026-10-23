@@ -34,7 +34,7 @@ for (const base of ['/', '/milkroad-test/']) {
     }
     if(file.endsWith('.mjs')) assert(!/(["'`])\/(?!\/)(?:assets|data\.json|worker\.mjs)/.test(text.replaceAll(base,'SITEBASE/')),file);
   }
-  for(const route of ['schedule','resources','events/cozy-farm','drafter/arena']) {
+  for(const route of ['schedule','resources','events/cozy-farm','events/horde']) {
     assert.equal(await readFile('_site/'+route+'/index.html','utf8'),await readFile('_site/'+route+'.html','utf8'));
   }
   assert((await readFile('_site/my-badges.mjs','utf8')).includes("(i+1)+' / 7'"), 'Deployment base corrupted badge labels');

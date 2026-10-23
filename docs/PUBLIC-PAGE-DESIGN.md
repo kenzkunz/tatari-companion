@@ -22,7 +22,6 @@ Custom tools, databases and account features can use their specialized layouts w
 - `templates/public-information/design-tokens.json`: agreed measurements and colors.
 - `dist/guides.css`: existing guide components.
 - `dist/information-template.css`: scoped default refinements and reusable accordion/asset components. It does not restyle existing guides.
-- `dist/information/design-reference.html`: unlisted component reference, not a game guide. It uses shared navigation/footer and stays out of the admin content catalog.
 - `scripts/create-information-page.mjs`: generates the shared shell, page content, stable editor IDs and new-block SQL.
 
 ## Starting a page
