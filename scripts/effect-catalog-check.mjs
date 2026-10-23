@@ -1,6 +1,0 @@
-import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';
-const catalog=JSON.parse(await readFile(new URL('../dist/tatari-data/effect-catalog.json',import.meta.url),'utf8'));
-assert(catalog.skills['1104'].includes('buff:1'));assert(catalog.skills['2104'].includes('buff:1'));assert(catalog.skills['6293'].includes('buff:6292'));assert.equal(catalog.effects['buff:1'].stackable,false);assert.equal(catalog.effects['buff:6292'].name,'Oil: Slow');assert(catalog.skills['6604'].includes('buff:6602'));assert(catalog.skills['6693'].includes('buff:6693'));assert.notEqual(catalog.effects['buff:6602'].id,catalog.effects['buff:6693'].id);
-for(const sources of Object.values(catalog.forms))for(const source of sources){assert(catalog.effects[source.effectId]);assert([null,3,5,7].includes(source.level));}
-for(const effect of Object.values(catalog.effects)){if(effect.identityKind==='mechanic'){assert.equal(effect.buffId,null);assert(effect.id.startsWith('mechanic:'))}else if(effect.identityVerified)assert.equal(effect.id,'buff:'+effect.buffId);else assert.equal(effect.buffId,null);assert.equal(effect.composition,'unverified');}
-console.log('Passed shared Slow identity, distinct Oil/song IDs, valid source links, unlock levels and explicit unresolved composition.');

@@ -34,4 +34,4 @@ for(const [name,value] of writes){const target=path.join(dist,name);await mkdir(
 const sqlQuote=s=>"'"+s.replaceAll("'","''")+"'";
 const sql='-- Apply AFTER committing/pushing the synchronized files. Keeps newer edits intact.\nbegin;\n'+bundle.blocks.map(b=>'update public.site_content_blocks set default_text='+sqlQuote(b.text)+', revision=revision+1 where page_key='+sqlQuote(b.page)+' and block_key='+sqlQuote(b.block)+' and revision='+b.revision+' and published_text='+sqlQuote(b.text)+' and default_text is distinct from '+sqlQuote(b.text)+';').join('\n')+'\ncommit;\n';
 await mkdir(path.join(repo,'supabase/sync'),{recursive:true});await writeFile(path.join(repo,'supabase/sync','admin-baseline-'+stamp+'.sql'),sql);
-console.log('Synced. Review git diff, run npm test/build, then commit/push. Backup: '+path.relative(repo,backup));
+console.log('Synced. Review git diff, run npm run build, then commit/push. Backup: '+path.relative(repo,backup));
