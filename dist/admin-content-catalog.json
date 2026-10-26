@@ -623,8 +623,8 @@
   {
     "page": "events/island-goldrush.html",
     "block": "text-25",
-    "label": "Text · Tile health is not an input to that formula. Healing can restore your remaining HP while total damag",
-    "default": "Tile health is not an input to that formula. Healing can restore your remaining HP while total damage already recorded remains. The green bar in Battle Details shows remaining formation HP, not remaining cans.",
+    "label": "Text · Tile health does not change Energy Drink use. Healing can restore your team’s remaining HP, while da",
+    "default": "Tile health does not change Energy Drink use. Healing can restore your team’s remaining HP, while damage already dealt still counts. The green bar in Battle Details shows remaining formation HP, not remaining drinks.",
     "order": 37,
     "section": "battle",
     "sectionTitle": "There is a real battle behind each result"
@@ -659,8 +659,8 @@
   {
     "page": "events/island-goldrush.html",
     "block": "text-29",
-    "label": "Text · This calculator tests a simple model to check the formula using displayed formation HP multiplied by",
-    "default": "This calculator tests a simple model to check the formula using displayed formation HP multiplied by the battle HP buff. It does not predict how many cans you will lose before a battle, because opponent damage is only known after the battle result.",
+    "label": "Text · This calculator estimates Energy Drink use from your team’s battle HP and the damage dealt by the ot",
+    "default": "This calculator estimates Energy Drink use from your team’s battle HP and the damage dealt by the other team. You will only know the final amount after the fight.",
     "order": 41,
     "section": "worksheet",
     "sectionTitle": "Estimate Energy Drink Loss"
@@ -1595,8 +1595,8 @@
   {
     "page": "events/island-goldrush.html",
     "block": "note-17",
-    "label": "Text · min(available energy drink, max(3, min(50, ceil(50 × enemy damage ÷ formation battle max HP))))",
-    "default": "min(available energy drink, max(3, min(50, ceil(50 × enemy damage ÷ formation battle max HP))))",
+    "label": "Text · Energy Drink use depends on how much damage the enemy deals compared with your team’s total battle H",
+    "default": "Energy Drink use depends on how much damage the enemy deals compared with your team’s total battle HP. More damage means more drinks used, up to the game’s limit.",
     "order": 36,
     "section": "battle",
     "sectionTitle": "There is a real battle behind each result"
