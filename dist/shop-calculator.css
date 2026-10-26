@@ -1,0 +1,49 @@
+/* Shop-specific composition over the shared Resource Calculator UI. */
+body.shop-page .shop-layout{--shop-line:#d9cfba;--shop-muted:#776b55;width:100%;max-width:var(--public-content-width,1280px);grid-template-columns:minmax(0,1fr) 320px;gap:16px;margin-top:24px;margin-bottom:48px;padding:0 24px;font:14px/1.6 Poppins,system-ui,sans-serif;color:#282625}
+body.shop-page .shop-layout .calculator-panel,body.shop-page .shop-layout .rewards-panel{border:2px solid #282625;border-radius:14px;box-shadow:none;padding:22px;min-height:0}
+body.shop-page .shop-layout .calculator-content{padding:0}
+body.shop-page .shop-layout .calculator-content section{margin-top:0}
+body.shop-page .shop-layout .calculator-content h2,body.shop-page .shop-layout .rewards-panel h1{font:600 20px/1.4 Poppins,system-ui,sans-serif;text-align:left;text-transform:none;margin:0 0 16px;color:inherit}
+body.shop-page .shop-layout .input-grid{grid-template-columns:1fr 1fr;gap:16px}
+body.shop-page .shop-layout .input-card{padding:0;gap:6px;background:none;border:0;border-radius:0;font:500 13px/1.5 Poppins,system-ui,sans-serif}
+body.shop-page .shop-layout .input-card>span{margin:0;font:inherit}
+body.shop-page .shop-layout input,body.shop-page .shop-layout select{box-sizing:border-box;width:100%;min-width:0;min-height:44px;height:44px;padding:10px 12px;border:1px solid #bcad8e;border-radius:8px;background:#fffef1;color:#282625;font:400 14px/1.5 Poppins,system-ui,sans-serif;box-shadow:none}
+body.shop-page .shop-layout input[type=number]{appearance:textfield;-moz-appearance:textfield;font-variant-numeric:tabular-nums}
+.shop-layout input[type=number]::-webkit-inner-spin-button,.shop-layout input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+body.shop-page .shop-layout .calculator-content .shop-items-section{margin-top:28px}
+.shop-section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}
+body.shop-page .shop-layout .shop-section-heading h2{margin-bottom:4px}
+.shop-section-heading p{margin:0;color:var(--shop-muted);font:400 12px/1.6 Poppins,system-ui,sans-serif}
+body.shop-page .shop-layout .shop-button{min-height:44px;padding:9px 14px;border:1px solid #b78c34;border-radius:8px;background:#ffcf44;color:#282625;font:500 12px/1.5 Poppins,system-ui,sans-serif;box-shadow:none;cursor:pointer;white-space:nowrap}
+body.shop-page .shop-layout .shop-button:hover{background:#ffdb6b}
+.shop-layout .resource-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px}
+.shop-layout .shop-item{display:grid;grid-template-columns:44px minmax(0,1fr) auto 84px;align-items:center;gap:8px;min-width:0;padding:12px 0;border-bottom:1px solid var(--shop-line);border-radius:0;background:none}
+.shop-layout .shop-item>img{display:block;justify-self:center;width:40px;height:40px;object-fit:contain}
+.shop-item[data-resource=wishboxes]>img,.shop-item[data-resource=deluxe-bento]>img{width:36px;height:36px}
+.shop-item[data-resource=tatari-capsules]>img,.shop-item[data-resource=delicate-bento]>img{width:38px;height:38px}
+.shop-item[data-resource=glitter-fruit]>img{width:34px;height:34px}
+.shop-item[data-resource=spa-soap]>img{width:31px;height:31px}
+.shop-item[data-resource=scan-capsules]>img{width:32px;height:32px}
+.shop-item[data-resource=pills]>img{width:45px;height:45px}
+.shop-item-info{min-width:0}
+body.shop-page .shop-layout .shop-item h3{margin:0;font:500 13px/1.5 Poppins,system-ui,sans-serif}
+.shop-layout .shop-item>label{font:400 11px/1.5 Poppins,system-ui,sans-serif;color:var(--shop-muted)}
+body.shop-page .shop-layout .shop-item>input{padding:10px;text-align:left}
+.shop-clear-all{margin-top:20px}
+body.shop-page .shop-layout .shop-result-panel{background:#fff8dd}
+.shop-layout .result-subtitle{margin:0 0 20px;font:400 12px/1.6 Poppins,system-ui,sans-serif;text-align:left;color:var(--shop-muted)}
+.shop-percent{font:600 40px/1.2 Poppins,system-ui,sans-serif;font-variant-numeric:tabular-nums;color:#282625;margin:0 0 12px}
+.shop-result-message{min-height:42px;margin:0 0 20px;font:400 12px/1.7 Poppins,system-ui,sans-serif;color:var(--shop-muted)}
+.shop-result-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 12px;padding:16px 0;border-top:1px solid var(--shop-line);background:none;border-radius:0}
+.shop-result-row>span{font-size:12px}
+.shop-result-row>strong{font:600 15px/1.5 Poppins,system-ui,sans-serif;text-align:right;font-variant-numeric:tabular-nums}
+.shop-result-row>small{grid-column:1/-1;color:var(--shop-muted);font-size:11px}
+.shop-meter{height:8px;margin-top:8px;border:1px solid #bcad8e;border-radius:6px;background:#fffef1;overflow:hidden}
+.shop-meter span{display:block;width:0;height:100%;background:#ffcf44}
+.shop-meter-caption{margin:8px 0 0;color:var(--shop-muted);font:400 11px/1.6 Poppins,system-ui,sans-serif}
+.shop-reference-note{margin:20px 0 0;padding-top:16px;border-top:1px solid var(--shop-line);font:400 12px/1.7 Poppins,system-ui,sans-serif;color:var(--shop-muted)}
+body.shop-page .shop-layout :focus-visible{outline:2px solid #806320;outline-offset:3px}
+@media(max-width:1150px){.shop-layout .resource-list{grid-template-columns:1fr}}
+@media(max-width:800px){body.shop-page .shop-layout{grid-template-columns:1fr;padding:0 18px;margin-top:18px;gap:16px}.shop-layout .resource-list{grid-template-columns:repeat(2,minmax(0,1fr))}body.shop-page .shop-layout .calculator-panel,body.shop-page .shop-layout .rewards-panel{padding:18px}.shop-percent{font-size:36px}.shop-result-message{min-height:0}}
+@media(max-width:650px){.shop-layout .resource-list{grid-template-columns:1fr}.shop-section-heading{gap:12px}body.shop-page .shop-layout .calculator-content h2,body.shop-page .shop-layout .rewards-panel h1{font-size:18px}}
+@media(max-width:380px){body.shop-page .shop-layout{padding:0 12px}body.shop-page .shop-layout .calculator-panel,body.shop-page .shop-layout .rewards-panel{padding:14px}body.shop-page .shop-layout .input-grid{grid-template-columns:1fr}.shop-layout .shop-item{grid-template-columns:40px minmax(0,1fr) auto 76px;gap:6px}.shop-section-heading{align-items:flex-start}}

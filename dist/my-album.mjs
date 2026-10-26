@@ -2,7 +2,7 @@ import {readTradePreferences,writeTradePreferences,watchTradePreferences} from '
 import {createAlbumPage} from './album-page-view.mjs?v=foil-shine2';
 import {playerShareLink as playerLink} from './player-model.mjs?v=share-preview1';
 import {supabase,currentUser} from './auth-client.mjs';
-import {albumShareText} from './album-model.mjs?v=foil1';
+import {albumShareText} from './album-model.mjs?v=text-star-labels3';
 const $=id=>document.getElementById(id),root=new URL('./album-data/',import.meta.url);
 const preview=['localhost','127.0.0.1','[::1]'].includes(location.hostname)&&new URL(location.href).searchParams.get('preview')==='1';
 let data,user,profile={},ready=false,revision=0,tradeMode='Same Rarity',tradesLeft=3,includeGold=false,removeLowStars=false,freeLowStars=false,showFoil=false,prefsBusy=false,settingsSet=1;
