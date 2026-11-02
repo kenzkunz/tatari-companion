@@ -10895,11 +10895,11 @@
         },
         {
           "name": "multipliers",
-          "records": 8
+          "records": 10
         },
         {
           "name": "pools",
-          "records": 8
+          "records": 10
         }
       ],
       "baseline": "5c0ddb0ef617e2d9586bf17dd4af33045cb2170205fbcbb276ba7ced9bf83615"
