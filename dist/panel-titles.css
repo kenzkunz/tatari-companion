@@ -1,0 +1,37 @@
+/* Canonical panel heading typography, matching the schedule Tracker. */
+:root{--card-title-size:21px}
+@media(max-width:1100px){:root{--card-title-size:18px}}
+@media(max-width:560px){:root{--card-title-size:17px}}
+
+/* Font-only priority keeps older page-specific rules from overriding the shared title. */
+body:not(.admin-app) :is(
+  .ui-card-title,
+  .panel>h2,
+  .account-panel>h2,
+  .panel-title h2,
+  .panel-heading>h1,
+  .panel-heading>h2,
+  .section>h2,
+  .section>.section-header h2,
+  .pool-heading>h2,
+  .evo-section-heading>h2,
+  .roster-search-heading>h2,
+  .share-panel h2,
+  .calculator-panel>h2,
+  .calculator-content h2,
+  .rewards-panel>h1,
+  .shop-price-section>h2,
+  .shop-section-heading h2,
+  .build-panel>h2,
+  .result-panel>h2,
+  .trade-route>h2,
+  .guide-opening>h1,
+  .guide-content h2,
+  .community-patch>h3,
+  .creator-copy>h3,
+  .sidebar-heading>h2,
+  .month-control>h2
+){
+  font:700 var(--card-title-size)/1.2 Sora,system-ui,sans-serif!important;
+  letter-spacing:-.6px!important;
+}

@@ -6,5 +6,6 @@
 .community-badge.working{background:#e2efdb;color:#375730}.community-badge.not-working{background:#f6dbd4;color:#8a3828}.vote-button[aria-pressed=true]{background:#ffcf40;border-color:#8d6020}
 
 /* Content tabs must not inherit the global mobile menu's absolute positioning. */
+.community-page .community-nav>a{text-transform:none}
 .community-page nav.community-nav{position:static;inset:auto;flex:none;max-height:none;overflow:visible;z-index:auto;align-items:stretch}
 @media(max-width:900px){.community-page nav.community-nav{display:grid;grid-template-columns:1fr 1.35fr .85fr;width:100%;max-width:440px;margin:0 auto 18px}.community-page nav.community-nav>a{min-width:0;min-height:44px;white-space:normal;font-size:11px;line-height:1.4;padding:8px 6px;overflow-wrap:normal}}
