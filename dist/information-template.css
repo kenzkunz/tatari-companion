@@ -1,5 +1,5 @@
 /* Approved default for guides and general game information. Load after guides.css. */
-.public-info-page{--info-ink:#282625;--info-paper:#fffef1;--info-panel:#fff8dd;--info-note:#ffeb99;--info-accent:#b98212;--info-line:#ded5bf;--info-heading:Sora,system-ui,sans-serif;--info-body:Sora,system-ui,sans-serif}
+.public-info-page{--info-ink:#282625;--info-paper:#fffef1;--info-panel:#fff8dd;--info-note:#ffeb99;--info-accent:#b98212;--info-line:#ded5bf;--info-heading:Sora,system-ui,sans-serif;--info-body:Poppins,system-ui,sans-serif}
 .public-info-page .guide-shell{max-width:1180px;margin:22px auto 48px;padding:0 24px;color:var(--info-ink)}
 .public-info-page .guide-opening{display:block;padding:18px 26px}.public-info-page .guide-opening h1{font:28px/1.2 var(--info-heading);margin:0 0 12px}.public-info-page .guide-opening p{margin:0;font:14px/1.8 var(--info-body);max-width:72ch}
 .public-info-page .guide-banner{width:min(480px,100%);margin:24px auto 20px;padding:0}.public-info-page .guide-banner img{display:block;width:100%;height:auto;object-fit:contain}.public-info-page [hidden]{display:none!important}

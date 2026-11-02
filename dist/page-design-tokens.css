@@ -10,7 +10,7 @@
 .album-totals>div,.album-tradebar label,#trade-settings,.input-card{font-family:Sora,system-ui,sans-serif;font-size:var(--preview-label-size)}
 .album-tradebar button,.album-tradebar select,#trade-mode-inline,.multipliers button{font-family:Sora,system-ui,sans-serif;font-size:var(--preview-control-size);min-height:34px}
 .album-tradebar input{font-size:16px}.album-tradebar #card-search{flex:0 1 150px;width:150px;min-width:70px}
-.mode-tabs button{font-size:15px}.calculator-content h2,.modifier h3{font-size:15px}.modifier p,#album-status{font:11px/1.5 Sora,system-ui,sans-serif}
+.mode-tabs button{font-size:15px}.calculator-content h2,.modifier h3{font-size:15px}.modifier p,#album-status{font:11px/1.5 Poppins,system-ui,sans-serif}
 .album-controls-row{display:flex;align-items:center;gap:8px;margin-top:10px}.album-controls-row .album-tradebar{flex:1;min-width:0;margin-top:0}.album-controls-row .album-view-toolbar{margin:0;flex:0 0 44px;align-items:center;justify-content:center}.album-controls-row #album-view-toggle{width:44px;height:48px}
 @media(max-width:800px){:root{--preview-inset:18px}.resource-layout,.album-layout{margin-top:18px}.event-tray{scroll-padding-left:var(--preview-inset)}.event-tray button{font-size:11px}.event-tray img,.set-choice img{width:40px;height:40px}.input-card{font-size:12px}}
 @media(max-width:700px){.set-choice{flex-basis:83px}.album-tradebar label{margin-left:0;gap:5px;font-size:11px}.album-tradebar{column-gap:6px}.album-tradebar #trade-mode-inline{width:128px}.album-tradebar #card-search{flex:1 1 85px;width:85px}.album-tradebar #trade-settings{font-size:12px}.album-controls-row .album-view-toolbar{flex-basis:40px}.album-controls-row #album-view-toggle{width:40px;height:44px}}
@@ -33,7 +33,7 @@
 
 /* Album summary above a full-width icon picker. */
 .album-summary{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px;background:#fffef1;border:3px solid #282625;border-radius:14px;padding:12px 14px;box-shadow:0 3px #b78525;margin-bottom:12px}
-.album-identity{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:0}.album-identity>strong{font-size:17px}.album-identity>span{font:12px Sora,system-ui,sans-serif;overflow-wrap:anywhere}.album-season{font-size:17px;text-align:center;white-space:nowrap}
+.album-identity{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:0}.album-identity>strong{font-size:17px}.album-identity>span{font:12px Poppins,system-ui,sans-serif;overflow-wrap:anywhere}.album-season{font-size:17px;text-align:center;white-space:nowrap}
 .album-summary .album-totals{display:flex;justify-content:flex-end;gap:7px}.album-summary .album-totals>div{display:flex;align-items:center;white-space:nowrap;font-size:12px;padding:7px 9px;min-height:36px;margin:0;gap:7px}.album-summary .album-totals img{width:16px;height:22px}.album-summary .album-totals strong{margin-left:5px}
 .album-topbar{display:block;padding:10px 12px}.album-set-strip{gap:9px;padding:0 0 5px}.album-set-strip .set-choice{flex-basis:94px;min-height:90px;padding:8px 6px;justify-content:center}.album-set-strip .set-choice>span{display:none}.album-set-strip .set-choice img{width:72px;height:72px}.album-set-strip .set-count{font-size:12px;right:3px;top:3px}
 @media(max-width:850px){.album-summary{grid-template-columns:minmax(0,1fr) auto;gap:10px}.album-summary .album-totals{grid-column:1/-1;justify-content:center}.album-season{font-size:15px}.album-identity>strong{font-size:15px}}
