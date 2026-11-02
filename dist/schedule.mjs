@@ -1,18 +1,110 @@
-import {loadAppData} from './site-data.mjs?v=site-data5';
+import {loadAppData} from '/site-data.mjs?v=site-data5';
+import {DAY,regularAt,pvpAt,hordeAt,dayEvents} from '/schedule-model.mjs';
 
-import {upcomingTime,eventIcon} from './schedule-display.mjs';
-import {DAY,regularAt,pvpAt,hordeAt,dayEvents} from './schedule-model.mjs';
-const names=['Cozy Farm','Fishing Contest','Treasure Hunt','Raft Race','Zobo Shooter','Gold Rush #1','Gold Rush #2','Gold Rush #3','Dune Rush'];
-const checked=new Set(names);
-const $=id=>document.getElementById(id),now=new Date();let year=now.getUTCFullYear(),month=now.getUTCMonth(),monthOffset=0,data,lastDay;
-const dateLabel=ms=>new Intl.DateTimeFormat('en',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(ms);
-function countdown(end,compact=false){if(compact)return upcomingTime(end-Date.now());let s=Math.max(0,Math.floor((end-Date.now())/1000));return[Math.floor(s/3600),Math.floor(s%3600/60),s%60].map(n=>String(n).padStart(2,'0')).join(':');}
-function timer(name,icon,status,end,dim=false){const card=document.createElement('article');card.className='tracker-card'+(dim?' inactive':'');const top=document.createElement('div');top.className='tracker-name';const img=document.createElement('img');img.src='/assets/'+icon;img.alt='';const title=document.createElement('h2');title.textContent=name;top.append(img,title);if(end&&status==='Ends in'&&!dim){const badge=document.createElement('img');badge.className='live-badge';badge.src='/assets/live.png';badge.alt='Live';top.append(badge);}const bottom=document.createElement('div');bottom.className='tracker-time';const label=document.createElement('span');label.textContent=status;bottom.append(label);if(end){const clock=document.createElement('img');clock.src='/assets/time.png';clock.alt='';const value=document.createElement('span');value.dataset.end=String(end);value.dataset.format=status==='Starts in'?'compact':'clock';value.textContent=countdown(end,value.dataset.format==='compact');bottom.append(clock,value);}card.append(top,bottom);return card;}
-const icons={'Cozy Farm':'cozyfarm.png','Fishing Contest':'fishingcontest.png','Treasure Hunt':'treasurehunt.png','Raft Race':'raftrace.png','Zobo Shooter':'zoboshooter.png'};
-function trackers(){const t=Date.now(),r=regularAt(t,data.events.regular),previous=regularAt(r.start-1,data.events.regular),next=regularAt(r.end,data.events.regular),p=pvpAt(t,data.events.pvp),nextPvp=pvpAt(p.end,data.events.pvp),h=hordeAt(t,data.horde);$('trackers').replaceChildren(timer(h.live?'Horde Invasion':'Horde Settlement','hordes2.png',h.live?'Ends in':'Starts in',h.end),timer(previous.name,icons[previous.name],'Ended',null,true),timer(r.name,icons[r.name],'Ends in',r.end),timer(next.name,icons[next.name],'Starts in',next.start,true),timer(p.name+(p.registration?' Reg':''),'goldrush.png','Ends in',p.registration?p.start:p.end,p.registration),timer(p.registration?p.name:nextPvp.name+' Reg','goldrush.png','Starts in',p.registration?p.start:nextPvp.registrationDate,true));lastDay=Math.floor(t/DAY);}
-function calendar(){const first=Date.UTC(year,month,1),count=new Date(Date.UTC(year,month+1,0)).getUTCDate(),offset=(new Date(first).getUTCDay()+6)%7,today=Math.floor(Date.now()/DAY);$('month-title').textContent=new Intl.DateTimeFormat('en',{month:'long',year:'numeric',timeZone:'UTC'}).format(first).toUpperCase();const grid=$('calendar-grid');grid.replaceChildren();let maxEvents=0;for(let i=0;i<offset;i++){const blank=document.createElement('div');blank.className='day-blank';blank.setAttribute('aria-hidden','true');grid.append(blank);}for(let d=1;d<=count;d++){const ms=Date.UTC(year,month,d),events=dayEvents(ms,data).filter(e=>checked.has(e.name==='Gold Rush'?e.fullName:e.name)),button=document.createElement('button');maxEvents=Math.max(maxEvents,events.length);button.type='button';button.className='calendar-day'+(events.length?' highlighted':'')+(ms/DAY===today?' today':'');button.setAttribute('aria-label',dateLabel(ms)+(events.length?': '+events.map(e=>e.label).join(', '):': no selected events'));if(ms/DAY===today)button.setAttribute('aria-current','date');const number=document.createElement('span');number.className='day-number';number.textContent=d;button.append(number);const items=document.createElement('span');items.className='day-items';const slots=['regular','pvp'].map(category=>{const slot=document.createElement('span');slot.className='event-slot '+category+'-slot';slot.dataset.category=category;items.append(slot);return slot;});events.forEach(e=>{const slot=slots[e.name==='Gold Rush'||e.name==='Dune Rush'?1:0],icon=eventIcon(e);if(icon){const image=document.createElement('img');image.className='calendar-event-icon';image.src='/assets/'+icon;image.alt=e.label;const picture=document.createElement('picture'),source=document.createElement('source');source.media='(max-width:600px)';source.srcset='/assets/'+icon.replace('.png','-m.png');picture.className='calendar-icon-picture';picture.append(source,image);slot.append(picture);}else{const line=document.createElement('span');line.className='registration-label';line.textContent=e.label;slot.append(line);}});button.append(items);button.onclick=()=>{grid.querySelectorAll('[aria-pressed]').forEach(b=>b.removeAttribute('aria-pressed'));button.setAttribute('aria-pressed','true');$('day-summary').textContent=dateLabel(ms)+' · '+(events.length?events.map(e=>e.fullName?e.fullName+(e.registration?' registration':' · day '+e.day):e.name+' · day '+e.label.split(' D')[1]).join(' · '):'No selected events');};grid.append(button);}const remaining=(7-(offset+count)%7)%7;for(let i=0;i<remaining;i++){const blank=document.createElement('div');blank.className='day-blank';blank.setAttribute('aria-hidden','true');grid.append(blank);}grid.classList.toggle('has-double-events',maxEvents>1);$('day-summary').textContent='Calendar days follow the 00:00 UTC game reset.';}
-names.forEach(name=>{const label=document.createElement('label');const input=document.createElement('input');input.type='checkbox';input.checked=checked.has(name);input.onchange=()=>{input.checked?checked.add(name):checked.delete(name);if(data)calendar();};label.append(input,document.createTextNode(name));$('event-filters').append(label);});
-function moveMonth(delta){monthOffset=Math.max(0,Math.min(2,monthOffset+delta));const current=new Date(),date=new Date(Date.UTC(current.getUTCFullYear(),current.getUTCMonth()+monthOffset,1));year=date.getUTCFullYear();month=date.getUTCMonth();$('previous-month').disabled=monthOffset===0;$('next-month').disabled=monthOffset===2;if(data)calendar();}
-$('previous-month').onclick=()=>moveMonth(-1);$('next-month').onclick=()=>moveMonth(1);
-let touchStart;const calendarSurface=document.querySelector('.calendar-body');calendarSurface.addEventListener('touchstart',event=>{if(event.touches.length===1)touchStart={x:event.touches[0].clientX,y:event.touches[0].clientY};else touchStart=null;},{passive:true});calendarSurface.addEventListener('touchend',event=>{if(!touchStart||!event.changedTouches.length)return;const dx=event.changedTouches[0].clientX-touchStart.x,dy=event.changedTouches[0].clientY-touchStart.y;touchStart=null;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5)moveMonth(dx<0?1:-1);},{passive:true});calendarSurface.addEventListener('touchcancel',()=>touchStart=null,{passive:true});moveMonth(0);
-try{data=await loadAppData();trackers();calendar();setInterval(()=>{document.querySelectorAll('[data-end]').forEach(e=>e.textContent=countdown(Number(e.dataset.end),e.dataset.format==='compact'));const changedDay=Math.floor(Date.now()/DAY)!==lastDay;if(changedDay||[...document.querySelectorAll('[data-end]')].some(e=>Number(e.dataset.end)<=Date.now())){trackers();if(changedDay)moveMonth(0);else calendar();}},1000);}catch(error){$('trackers').textContent=error.message;$('trackers').setAttribute('role','alert');}
+const byId=id=>document.getElementById(id);
+const definitions={
+  'Cozy Farm':{short:'Farm',icon:'cozyfarm.png',guide:'cozy-farm'},
+  'Fishing Contest':{short:'Fishing',icon:'fishingcontest.png',guide:'fishing'},
+  'Treasure Hunt':{short:'Treasure',icon:'treasurehunt.png',guide:'treasure-hunt'},
+  'Raft Race':{short:'Raft',icon:'raftrace.png',guide:'raft-race'},
+  'Zobo Shooter':{short:'Zobo',icon:'zoboshooter.png',guide:'zobo-shooter'},
+  'Gold Rush #1':{short:'GR#1',icon:'goldrush.png',guide:null},
+  'Gold Rush #2':{short:'GR#2',icon:'goldrush.png',guide:null},
+  'Gold Rush #3':{short:'GR#3',icon:'goldrush.png',guide:null},
+  'Dune Rush':{short:'Dune',icon:'goldrush.png',guide:null},
+  'Horde Invasion':{short:'Horde',icon:'hordes2.png',guide:'horde'}
+};
+const filterNames=Object.keys(definitions).filter(name=>name!=='Horde Invasion');
+const checked=new Set(filterNames);
+const utcDay=()=>Math.floor(Date.now()/DAY)*DAY;
+const dateText=ms=>new Intl.DateTimeFormat('en',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'}).format(ms);
+let data,monthOffset=0,selectedDate=utcDay(),renderedDay=utcDay(),feedSignature='';
+
+function el(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;}
+function markEvent(node,name){node.dataset.event=name;return node;}
+function picture(name){const image=el('img');image.src='/assets/'+definitions[name].icon;image.alt='';image.width=38;image.height=38;return image;}
+function countdown(end){const seconds=Math.max(0,Math.floor((end-Date.now())/1000));if(seconds>=DAY/1000){const hours=Math.floor(seconds/3600);return `${Math.floor(hours/24)}d ${hours%24}h`;}return [Math.floor(seconds/3600),Math.floor(seconds/60)%60,seconds%60].map(n=>String(n).padStart(2,'0')).join(':');}
+function feed(){
+  const now=Date.now(),regular=regularAt(now,data.events.regular),nextRegular=regularAt(regular.end,data.events.regular),pvp=pvpAt(now,data.events.pvp),nextPvp=pvpAt(pvp.end,data.events.pvp),horde=hordeAt(now,data.horde);
+  const live=[{name:regular.name,phase:`Day ${regular.day} of ${data.events.regular.duration_days}`,start:regular.start,end:regular.end,label:'Ends in'}];
+  const upcoming=[{name:nextRegular.name,phase:'Next rotating event',end:nextRegular.start,label:'Starts in'}];
+  if(horde.live)live.push({name:'Horde Invasion',phase:'Invasion active',end:Math.round(horde.end),label:'Ends in'});
+  else upcoming.push({name:'Horde Invasion',phase:'Settlement in progress',end:Math.round(horde.end),label:'Starts in'});
+  if(pvp.registration)upcoming.push({name:pvp.name,phase:'Registration open',end:pvp.start,label:'Starts in'});
+  else{
+    live.push({name:pvp.name,phase:`Day ${pvp.day} of ${data.events.pvp.duration_days}`,start:pvp.start,end:pvp.end,label:'Ends in'});
+    upcoming.push({name:nextPvp.name,phase:'Registration opens next',end:nextPvp.registrationDate,label:'Opens in'});
+  }
+  live.sort((a,b)=>a.end-b.end);upcoming.sort((a,b)=>a.end-b.end);
+  return {live,upcoming};
+}
+function renderFeed(){
+  const groups=feed();
+  const list=byId('event-list');list.replaceChildren();
+  for(const [section,title] of [['live','Live now'],['upcoming','Coming up']]){
+    const group=el('section','event-group');
+    group.setAttribute('aria-label',title);
+    const heading=el('h3','event-group-title',title);
+    heading.append(el('span','',groups[section].length));group.append(heading);
+    for(const event of groups[section]){
+    const guide=definitions[event.name].guide;
+    const link=markEvent(el(guide?'a':'article','event-row'),event.name);
+    if(guide)link.href='/events/'+guide+'.html';
+    link.setAttribute('aria-label',`${event.name}: ${event.phase}.`+(guide?' Open guide.':''));
+    const content=el('div','event-row-content');content.append(el('strong','event-row-title',event.name));
+    const phase=el('span','event-phase');if(section==='live')phase.append(el('i','live-dot'));phase.append(document.createTextNode(event.phase));content.append(phase);
+    const time=el('div','event-countdown');const value=el('strong','',countdown(event.end));value.dataset.end=event.end;time.append(el('span','',event.label),value);
+    link.append(picture(event.name),content,time);
+    if(event.start){const progress=el('div','event-progress'),fill=el('i');fill.style.width=Math.min(100,Math.max(0,(Date.now()-event.start)/(event.end-event.start)*100))+'%';progress.append(fill);link.append(progress);}
+    group.append(link);
+    }
+    if(!groups[section].length)group.append(el('p','empty-events','No events right now.'));
+    list.append(group);
+  }
+  if(!list.childElementCount)list.append(el('p','empty-events','No events in this view.'));
+  feedSignature=JSON.stringify(groups);
+}
+function eventsAt(ms){return dayEvents(ms,data).filter(event=>checked.has(event.fullName||event.name));}
+function renderDetail(){
+  byId('selected-date').textContent=dateText(selectedDate);
+  byId('selected-status').textContent=selectedDate===utcDay()?'Today':'';
+  const target=byId('selected-events');target.replaceChildren();
+  for(const event of eventsAt(selectedDate)){
+    const name=event.fullName||event.name,row=markEvent(el('div','selected-event'),name),text=el('div','selected-event-text'),heading=el('div','selected-event-heading');
+    heading.append(el('strong','',name));
+    if(definitions[name].guide){const guide=el('a','','Guide');guide.href='/events/'+definitions[name].guide+'.html';guide.setAttribute('aria-label',`${name} guide`);heading.append(guide);}
+    text.append(heading,el('p','',event.registration?'Registration day':`Day ${event.day||Number(event.label.match(/D(\d+)/)?.[1])}`));
+    row.append(picture(name),text);target.append(row);
+  }
+  if(!target.childElementCount)target.append(el('p','empty-events','No events match your selected filters.'));
+}
+function renderCalendar(){
+  const today=new Date(),first=Date.UTC(today.getUTCFullYear(),today.getUTCMonth()+monthOffset,1),month=new Date(first),days=new Date(Date.UTC(month.getUTCFullYear(),month.getUTCMonth()+1,0)).getUTCDate(),offset=(month.getUTCDay()+6)%7;
+  byId('month-title').textContent=new Intl.DateTimeFormat('en',{month:'long',year:'numeric',timeZone:'UTC'}).format(first);
+  byId('previous-month').disabled=monthOffset===0;byId('next-month').disabled=monthOffset===2;
+  const grid=byId('calendar-grid');grid.replaceChildren();
+  for(let i=0;i<offset;i++){const blank=el('div','day-blank');blank.setAttribute('aria-hidden','true');grid.append(blank);}
+  for(let day=1;day<=days;day++){
+    const ms=Date.UTC(month.getUTCFullYear(),month.getUTCMonth(),day),events=eventsAt(ms),button=el('button','calendar-day'+(ms===utcDay()?' today':''));
+    button.type='button';button.dataset.date=String(ms);button.setAttribute('aria-pressed',String(ms===selectedDate));
+    button.setAttribute('aria-label',dateText(ms)+': '+(events.length?events.map(event=>(event.fullName||event.name)+(event.registration?' registration':'')).join(', '):'No selected events'));
+    if(ms===utcDay())button.setAttribute('aria-current','date');
+    button.append(el('span','day-number',day));
+    for(const event of events){const name=event.fullName||event.name,definition=definitions[name],badge=markEvent(el('span','day-event'+(event.fullName?' pvp':'')),name);badge.append(picture(name),el('span','',definition.short),el('b','',event.registration?'Reg':'D'+(event.day||event.label.match(/D(\d+)/)?.[1])));button.append(badge);}
+    button.addEventListener('click',()=>{selectedDate=ms;for(const cell of grid.querySelectorAll('[data-date]'))cell.setAttribute('aria-pressed',String(Number(cell.dataset.date)===ms));renderDetail();});grid.append(button);
+  }
+  const remaining=(7-(offset+days)%7)%7;for(let i=0;i<remaining;i++){const blank=el('div','day-blank');blank.setAttribute('aria-hidden','true');grid.append(blank);}
+  renderDetail();
+}
+function selectMonth(delta){monthOffset=Math.max(0,Math.min(2,monthOffset+delta));const date=new Date();selectedDate=monthOffset===0?utcDay():Date.UTC(date.getUTCFullYear(),date.getUTCMonth()+monthOffset,1);if(data)renderCalendar();}
+function updateFilterCount(){byId('filter-count').textContent=checked.size===filterNames.length?'All':checked.size;}
+for(const name of filterNames){const label=markEvent(el('label'),name),checkbox=el('input');checkbox.type='checkbox';checkbox.checked=true;checkbox.dataset.event=name;checkbox.addEventListener('change',()=>{checkbox.checked?checked.add(name):checked.delete(name);updateFilterCount();if(data)renderCalendar();});label.append(checkbox,document.createTextNode(name));byId('event-filters').append(label);}
+byId('show-all').addEventListener('click',()=>{for(const checkbox of byId('event-filters').querySelectorAll('input')){checkbox.checked=true;checked.add(checkbox.dataset.event);}updateFilterCount();if(data)renderCalendar();});
+byId('previous-month').addEventListener('click',()=>selectMonth(-1));byId('next-month').addEventListener('click',()=>selectMonth(1));
+byId('today-button').addEventListener('click',()=>{monthOffset=0;selectedDate=utcDay();if(data)renderCalendar();});
+document.addEventListener('click',event=>{const filters=document.querySelector('.calendar-filters');if(!filters.contains(event.target))filters.open=false;});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')document.querySelector('.calendar-filters').open=false;});
+let swipeStart;const surface=document.querySelector('.calendar-body');surface.addEventListener('touchstart',event=>{swipeStart=event.touches.length===1?{x:event.touches[0].clientX,y:event.touches[0].clientY}:null;},{passive:true});surface.addEventListener('touchend',event=>{if(!swipeStart||!event.changedTouches.length)return;const dx=event.changedTouches[0].clientX-swipeStart.x,dy=event.changedTouches[0].clientY-swipeStart.y;swipeStart=null;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)selectMonth(dx<0?1:-1);},{passive:true});surface.addEventListener('touchcancel',()=>swipeStart=null,{passive:true});
+function tick(){byId('reset-timer').textContent=countdown(utcDay()+DAY);for(const timer of document.querySelectorAll('[data-end]'))timer.textContent=countdown(Number(timer.dataset.end));if(data){const day=utcDay();if(day!==renderedDay){renderedDay=day;monthOffset=0;selectedDate=day;renderCalendar();}if(feedSignature!==JSON.stringify(feed()))renderFeed();}byId('today-label').textContent=new Intl.DateTimeFormat('en',{day:'numeric',month:'short',timeZone:'UTC'}).format(Date.now());}
+tick();setInterval(tick,1000);
+try{data=await loadAppData();renderFeed();renderCalendar();}catch{const retry=el('button','','Retry');retry.type='button';retry.addEventListener('click',()=>location.reload());const error=el('p','empty-events','Schedule data could not load. ');error.setAttribute('role','alert');error.append(retry);byId('event-list').replaceChildren(error);}

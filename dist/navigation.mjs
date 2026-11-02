@@ -1,4 +1,15 @@
 import './image-cache-register.mjs';
+const floatingNavbar=document.querySelector('.navbar');
+if(floatingNavbar&&floatingNavbar.dataset.fixedNavigationReady!=='true'){
+  floatingNavbar.dataset.fixedNavigationReady='true';
+  const spacer=document.createElement('div');
+  spacer.className='navbar-spacer';
+  spacer.setAttribute('aria-hidden','true');
+  floatingNavbar.before(spacer);
+  const syncNavbarHeight=()=>document.documentElement.style.setProperty('--public-navbar-height',`${floatingNavbar.offsetHeight}px`);
+  syncNavbarHeight();
+  new ResizeObserver(syncNavbarHeight).observe(floatingNavbar);
+}
 void import('./site-announcement.mjs?v=ticker3');
 const nav=document.getElementById('navigation'),menu=document.querySelector('.menu-toggle');
 if(nav&&menu&&nav.dataset.navigationReady!=='true'){

@@ -3,8 +3,7 @@
 @media(max-width:600px){.message-launcher{right:14px;bottom:16px}.message-launcher>img{width:68px;height:68px}.message-launcher>span{font-size:18px;padding:14px 30px 14px 20px}.message-panel{right:12px;bottom:12px;width:calc(100% - 24px);height:min(540px,calc(100dvh - 24px))}.message-compose textarea{font-size:16px}}
 
 /* Match the homepage Support button label typography. */
-.message-launcher>span:first-child{font-family:Sora,system-ui,sans-serif;font-size:clamp(16px,1.5vw,28px);font-weight:800;line-height:1;text-transform:uppercase}
-@media(max-width:900px){.message-launcher>span:first-child{font-size:16px}}
+.message-launcher>span:first-child{font-family:Sora,system-ui,sans-serif;font-size:18px;font-weight:800;line-height:1;text-transform:uppercase}
 
 .message-launcher{background:#282625;border-radius:28px;min-height:52px;padding:0 24px;box-shadow:0 4px 16px #0003}.message-launcher>span:first-child{margin:0;padding:0;background:none}.message-launcher>.message-notification{position:absolute;right:-4px;top:-4px;margin:0;min-width:20px;height:20px;padding:0 5px;border:2px solid var(--paper);border-radius:50%;background:#df4242;font:600 11px/16px Poppins,sans-serif;text-align:center;color:white}.message-notification[hidden]{display:none}.message-conversation.unread{background:var(--highlight);border-left:4px solid var(--accent-edge)}.unread-label{margin-left:auto;font:600 10px Poppins,sans-serif;color:#a72a2a}.message-chat-tools{display:flex;gap:8px}.message-chat-tools .btn{font-size:12px;min-height:36px;padding:7px 12px}.message-bubble small{display:block;margin-top:4px;color:var(--muted);font-size:10px}.presence-dot.unknown{background:#b1afa6}
 
