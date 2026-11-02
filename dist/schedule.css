@@ -14,7 +14,8 @@
 /* Date strips fill the cell; event highlights share the month-header blue. */
 .calendar-day.highlighted{border-color:#232838}.event-filters{border-color:#232838}.event-filters input{accent-color:#232838}.calendar-day{overflow:hidden}.day-number,.calendar-day.today .day-number{top:0;left:0;width:100%;height:26px;border-radius:0;background:#fff;color:#232838;font-size:13px}.calendar-day.today .day-number{background:#232838;color:#fff}.day-items{padding-top:28px}.calendar-day.today{box-shadow:none}
 @media(max-width:600px){.calendar-grid{grid-auto-rows:86px}.calendar-grid.has-double-events{grid-auto-rows:120px}.calendar-day{min-height:0}.day-number,.calendar-day.today .day-number{height:24px;font-size:12px;border-radius:0}.day-items{padding-top:25px;gap:8px}}
-.tracker-name h2{font-family:Sora,system-ui,sans-serif;font-weight:400}
+.tracker-name h2{font-family:Sora,system-ui,sans-serif;font-size:clamp(13px,1vw,18px);font-weight:800}
+@media(max-width:900px){.tracker-name h2{font-size:16px}}
 .calendar-day{align-items:flex-start;padding-top:0}.day-items{padding-top:32px}
 @media(max-width:600px){.calendar-grid.has-double-events{grid-auto-rows:104px}.day-items{padding-top:31px;gap:6px}}
 /* Reserve category rows even when one category is hidden by the filter. */
@@ -22,3 +23,7 @@
 @media(max-width:600px){.calendar-grid{grid-auto-rows:104px}.day-items{grid-template-rows:repeat(2,28px)}.event-slot{height:28px}.event-slot .calendar-event-icon{max-height:28px}}
 .tracker-name h2{flex:1;min-width:0}.tracker-name img.live-badge{width:48px;height:auto;flex-shrink:0;object-fit:contain;margin-left:auto}
 @media(max-width:600px){.tracker-name{position:relative}.tracker-name:has(.live-badge){padding-right:40px}.tracker-name img.live-badge{position:absolute;right:6px;top:6px;width:32px;height:auto}}
+
+/* Compact event tracker typography. */
+.schedule-layout .tracker-name h2{font-size:14px}
+.schedule-layout .tracker-time{font-size:12px}

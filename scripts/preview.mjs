@@ -17,6 +17,12 @@ createServer(async (req,res)=>{
     const content = await readFile(file);
     res.writeHead(200,{'Content-Type':mime[extname(file)]||'application/octet-stream'});res.end(content);
   } catch {
-    res.writeHead(404,{'Content-Type':'text/html'});res.end(await readFile(resolve(root,'404.html')));
+    try {
+      const content = await readFile(resolve(root,'404.html'));
+      res.writeHead(404,{'Content-Type':'text/html'});res.end(content);
+    } catch {
+      res.writeHead(503,{'Content-Type':'text/plain','Retry-After':'2'});
+      res.end('Preview is rebuilding. Refresh in a moment.');
+    }
   }
 }).listen(4180,'127.0.0.1',()=>console.log('Preview: http://127.0.0.1:4180'+base));
