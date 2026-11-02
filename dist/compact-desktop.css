@@ -20,7 +20,7 @@
 @media(min-width:951px){.tracker-name img.live-badge{width:48px;height:auto}.tracker-name{gap:8px}}
 
 /* Center the navigation between the brand and inactive account entry. */
-.login-muted{background:none;border:0;color:#aaa7a3;font-family:Critters,system-ui,sans-serif;font-size:18px;text-transform:uppercase;min-height:44px;padding:8px 12px;cursor:default;flex:0 0 104px}
+.login-muted{background:none;border:0;color:#aaa7a3;font-family:Sora,system-ui,sans-serif;font-size:18px;text-transform:uppercase;min-height:44px;padding:8px 12px;cursor:default;flex:0 0 104px}
 @media(min-width:901px){.navbar{gap:20px}.navbar #navigation{justify-content:center;gap:clamp(12px,2vw,38px)}.navbar #navigation>a,.navbar #navigation>details>summary{font-size:clamp(14px,1.1vw,20px)}.navbar .brand{flex:0 0 104px}}
 @media(max-width:900px){.navbar{gap:8px}.navbar .brand{margin-right:auto}.login-muted{flex:0 0 auto;font-size:16px;padding:8px}.menu-toggle{font-size:18px}}
 .calendar-grid,.calendar-grid.has-double-events{grid-auto-rows:128px}.calendar-day{min-height:0;padding:0 6px 12px}.day-items{padding-top:30px;grid-template-rows:repeat(2,38px);gap:6px;width:100%}.event-slot{height:38px;width:100%;align-items:center}.event-slot .calendar-event-icon{width:100%;max-width:100%;max-height:38px;height:auto}.calendar-day .day-number{font-size:12px}
