@@ -14,3 +14,8 @@ body .event-tray.event-tray>button>img,body nav.guide-events>a>img{
     flex:0 0 160px;min-width:160px;font-size:12px;
   }
 }
+
+/* Guides use the same button surface and active state as Resource Calculator. */
+body nav.guide-events>a{background:#fff8d7;border:2px solid #87601c;border-radius:14px;color:#232838;box-shadow:0 3px #a97625;text-decoration:none}
+body nav.guide-events>a[aria-current=page]{background:#282625;color:#fff;border-color:#282625;box-shadow:0 3px #967525}
+body nav.guide-events{gap:10px;padding-bottom:6px}
