@@ -260,3 +260,7 @@ body.drafter-studio{--paper:#fffdf5;--soft:#fff6df;--line:#e3d6b6;--muted:#88795
 .drafter-studio .studio-center .battlefield{width:fit-content;max-width:100%;box-sizing:border-box;padding:12px;margin-left:auto;margin-right:auto}
 .drafter-studio .studio-center .battlefield .board,.drafter-studio .studio-center .battlefield .enemy-field{max-width:100%;box-sizing:border-box}
 @media(max-width:700px){.drafter-studio .studio-center .battlefield{padding:10px;width:fit-content;max-width:100%}}
+
+/* Explicit frame width avoids fit-content percentage shrinkage of the grid. */
+.drafter-studio .studio-center .battlefield{width:min(100%,calc(var(--field-width,458px) + 24px));max-width:100%;padding:12px}
+@media(max-width:700px){.drafter-studio .studio-center .battlefield{width:min(100%,calc(var(--field-width,458px) + 20px));padding:10px}}
