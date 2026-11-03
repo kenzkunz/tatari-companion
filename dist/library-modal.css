@@ -1,0 +1,11 @@
+/* Shared preview dialog shell for community libraries. */
+dialog.library-preview-dialog{box-sizing:border-box;width:min(820px,calc(100vw - 28px));height:auto;max-height:90dvh;padding:0!important;border:2px solid #282625;border-radius:16px;background:#fffdf5;color:#2d2921;overflow:hidden;box-shadow:0 4px #b78525}
+dialog.library-preview-dialog[open]{display:flex;flex-direction:column}
+dialog.library-preview-dialog::backdrop{background:#17171799}
+.library-preview-dialog>.library-modal-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;margin:0;flex:none;background:#ffe4ae;border-bottom:1px solid #d6a260}
+.library-preview-dialog .library-modal-header h2{font:700 17px/1.3 Sora,sans-serif;margin:0;min-width:0;overflow-wrap:anywhere;letter-spacing:-.3px}
+.library-preview-dialog>.library-modal-body{padding:16px;min-height:0;overflow:auto;overscroll-behavior:contain;display:flex;justify-content:center;flex:1 1 auto;background:#fffdf5}
+.library-preview-dialog .library-modal-body canvas{display:block;width:100%;height:62dvh;max-height:62dvh;object-fit:contain;border-radius:0}
+.library-preview-dialog>.library-modal-footer{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px;flex:none;padding:12px 18px;margin:0;border-top:1px solid #e3d6b6;background:#fff6df}
+.library-preview-dialog .library-modal-footer .btn{font:500 11px/1.5 Poppins,sans-serif;min-height:38px;padding:8px 12px;border-radius:7px;box-shadow:none}
+@media(max-width:600px){dialog.library-preview-dialog{width:calc(100vw - 16px);max-height:94dvh}.library-preview-dialog>.library-modal-header{padding:12px 14px}.library-preview-dialog>.library-modal-body{padding:10px}.library-preview-dialog .library-modal-body canvas{height:60dvh;max-height:60dvh}.library-preview-dialog>.library-modal-footer{padding:12px;justify-content:center}.library-preview-dialog .library-modal-footer .btn{flex:1 1 auto;min-height:44px}}
