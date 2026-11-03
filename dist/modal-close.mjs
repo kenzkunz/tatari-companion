@@ -2,7 +2,7 @@ const closeSelector='button[aria-label^="Close" i],button.modal-close,button.dia
 function standardize(dialog){
  if(dialog.matches('.required-uid-dialog')||dialog.querySelector('.standard-modal-close'))return;
  let close=dialog.querySelector(closeSelector)||[...dialog.querySelectorAll('button')].find(b=>['Close','×','✕'].includes(b.textContent.trim()));
- let header=dialog.querySelector('.modal-head,.trade-dialog-heading,.badge-dialog-heading');
+ let header=dialog.querySelector('.modal-head,.trade-dialog-heading,.badge-dialog-heading,.dialog-heading,.roster-star-heading');
  if(!header){const heading=dialog.querySelector(':scope > h1,:scope > h2,:scope > h3');header=document.createElement('div');header.className='standard-modal-header';if(heading){heading.before(header);header.append(heading)}else dialog.prepend(header)}
  if(!close){close=document.createElement('button');close.type='button';close.onclick=()=>dialog.close()}
  close.classList.add('standard-modal-close');close.setAttribute('aria-label','Close dialog');close.replaceChildren(document.createTextNode('×'));header.classList.add('standard-modal-header');header.append(close);
