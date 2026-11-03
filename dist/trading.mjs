@@ -20,4 +20,4 @@ $('refresh-listings').onclick=()=>{page=0;load()};for(const id of ['trade-stars'
 $('previous-page').onclick=()=>{if(pagingBusy||displayedPage===0)return;page=displayedPage-1;load()};$('next-page').onclick=()=>{if(pagingBusy||!canAdvance)return;page=displayedPage+1;load()};supabase.auth.onAuthStateChange(()=>{setTimeout(()=>{syncSettings();load()},0)});
 try{const r=await fetch(new URL('./album-data/autumn-tales.json',import.meta.url));if(!r.ok)throw Error('Album catalog unavailable');data=await r.json();await syncSettings();await load();}catch(e){status(e.message);}
 
-let visibleTimer=setInterval(()=>{if(!document.hidden&&!settingsBusy)load()},60000);window.addEventListener('pagehide',()=>clearInterval(visibleTimer),{once:true});watchExchange(state=>{if(!preview&&state.actor?.id!==user?.id){user=state.actor;revision++;$('trader-list').replaceChildren();if(data)setTimeout(load,0)}});
+watchExchange(state=>{if(!preview&&state.actor?.id!==user?.id){user=state.actor;revision++;$('trader-list').replaceChildren();if(data)setTimeout(load,0)}});
