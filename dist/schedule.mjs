@@ -42,7 +42,7 @@ function renderFeed(){
   const groups=feed();
   const list=byId('event-list');list.replaceChildren();
   for(const [section,title] of [['live','Live now'],['upcoming','Coming up']]){
-    const group=el('section','event-group');
+    const group=el('section','event-group');group.style.setProperty('--event-count',String(Math.max(1,groups[section].length)));
     group.setAttribute('aria-label',title);
     const heading=el('h3','event-group-title',title);
     heading.append(el('span','',groups[section].length));group.append(heading);
