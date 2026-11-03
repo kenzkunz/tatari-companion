@@ -1,0 +1,244 @@
+/* Local formation workbench: setup, formation and collection. */
+body.drafter-studio{--paper:#fffdf5;--soft:#fff6df;--line:#e3d6b6;--muted:#88795e;--ink:#2d2921;--accent:#ffd347;--accent-edge:#c39528;--focus:#7f5d9e;background:#ffbd24 url('/assets/background02.webp') center top/cover no-repeat fixed;color:var(--ink);font:12px/1.6 Poppins,system-ui,sans-serif}
+.drafter-studio main.drafter{max-width:1400px;width:100%;margin:22px auto 40px;padding:0 24px}
+.studio-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:0 0 20px}.studio-heading h1{font:700 25px/1.25 Sora,sans-serif;letter-spacing:-.7px;margin:0 0 6px}.studio-heading p{font-size:11px;color:#775d24;margin:0}.studio-compare{font-size:10px;text-decoration:underline;text-underline-offset:4px;color:#80601e}
+.drafter-studio .draft-toolbar{display:flex;align-items:end;gap:14px;margin:0 0 16px;padding:15px 18px;background:var(--paper);border:1px solid #d8be7b;border-radius:12px}
+.drafter-studio .draft-toolbar>.field{flex:0 1 310px;margin:0;font-size:10px;color:var(--muted)}
+.drafter-studio .draft-toolbar>.field input{font:600 13px Poppins,sans-serif;min-height:37px;margin-top:5px;background:#fff9e9;border-color:var(--line);border-radius:7px;padding:8px 10px;color:var(--ink)}
+.drafter-studio .draft-toolbar #coop-mode{align-self:end;padding:3px;min-height:37px;background:#f0e6c9;border:0;border-radius:8px}
+.drafter-studio .draft-toolbar #coop-mode button{min-height:31px;border:0;padding:6px 12px;border-radius:5px;font-size:11px;background:none;color:#8b7952}
+.drafter-studio .draft-toolbar #coop-mode button[aria-pressed=true]{background:var(--paper);color:var(--ink);box-shadow:0 1px 3px #392a1117}
+.drafter-studio .draft-main-actions{margin-left:auto;flex-wrap:wrap;justify-content:flex-end;gap:7px;width:auto}
+.drafter-studio .btn{font:500 11px/1.5 Poppins,sans-serif;min-height:37px;border-radius:7px;padding:8px 12px;box-shadow:none}
+.drafter-studio .saved-link{font-size:10px;padding:8px;color:#8b681b}
+.drafter-studio .draft-status{font-size:10px;margin:0;min-height:0;padding:0 2px}.drafter-studio .draft-status:not(:empty){padding:2px 2px 12px}
+.drafter-studio .drafter-layout.studio-workbench{display:grid;grid-template-columns:210px minmax(0,1fr) 350px;align-items:start;gap:0;overflow:visible;background:var(--paper);border:2px solid #282625;border-radius:16px;box-shadow:0 4px #b78525}
+.studio-setup{background:#fff6df;padding:21px 16px 22px;min-width:0;border-radius:14px 0 0 14px;border-right:1px solid var(--line);align-self:stretch}
+.studio-section-heading h2{font:700 17px/1.3 Sora,sans-serif;letter-spacing:-.3px;margin:0 0 6px}.studio-section-heading p{font-size:10px;margin:0;color:var(--muted);line-height:1.7}
+.drafter-studio .studio-setup>.mode-context{padding:0;border:0;border-radius:0;background:none;margin:18px 0 0;box-shadow:none}
+.drafter-studio .mode-buttons{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:18px}
+.drafter-studio .mode-buttons button{font:500 10px/1.4 Poppins,sans-serif;padding:8px 4px;min-height:39px;background:#fffdf5;border:1px solid #e4d6ac;border-radius:7px;color:#6f634d}
+.drafter-studio .mode-buttons button[aria-pressed=true]{background:#ffdf75;border-color:#d9ad3c;color:#5c430d;font-weight:600}
+.drafter-studio .studio-setup .context-grid{display:flex;flex-direction:column;align-items:stretch;gap:13px}
+.drafter-studio .studio-setup .context-grid>.field{min-width:0;width:100%;max-width:none;margin:0;font-size:10px}
+.drafter-studio .studio-setup .context-grid input,.drafter-studio .studio-setup .context-grid select{min-height:37px;padding:8px;font-size:11px;border-radius:6px;border-color:#dbccaa}
+.drafter-studio .studio-setup .context-grid>p{font-size:9px;min-width:0;line-height:1.7;align-self:stretch;margin:0}
+.drafter-studio .studio-setup .dojo-stages .row{flex-wrap:wrap;gap:4px}
+.drafter-studio .studio-setup .dojo-stages button:not(.btn){width:29px;height:32px;font-size:10px;border-radius:5px}
+.studio-center{padding:21px 22px;min-width:0}
+.drafter-studio .studio-center>.board-panel{background:none;border:0;border-radius:0;box-shadow:none;height:auto;max-height:none;overflow:visible;padding:0;margin:0}
+.drafter-studio .studio-center .panel-title{margin-bottom:16px;align-items:center;gap:10px}
+.drafter-studio .studio-center .formation-actions{gap:6px;flex-wrap:nowrap}
+.drafter-studio .studio-center .formation-actions .btn{padding:7px 9px;font-size:10px;min-height:34px}
+.drafter-studio #board-count{font-size:9px;margin:5px 0 0;color:var(--muted)}
+.drafter-studio .board-legend{padding:0;margin-bottom:13px;gap:10px}.drafter-studio .board-legend .caption{font-size:9px}
+.drafter-studio .battlefield{margin:0 auto 13px;max-width:100%;padding:14px 9px;background:#f5efd9;border:1px solid #e0d4b2;border-radius:12px}
+.drafter-studio .board{box-shadow:0 3px 0 #40571b33}
+.drafter-studio .board-help{font-size:10px;line-height:1.7;color:var(--muted);margin-top:10px}
+.drafter-studio .selected-candidate{padding:9px 10px;border-radius:8px;margin-top:12px;background:#fff0bd;border-color:#dec273;font-size:10px}
+.drafter-studio .selected-candidate img{width:34px;height:34px}
+.drafter-studio .selected-candidate button{font-size:9px;min-height:30px;padding:5px 8px}
+.drafter-studio .studio-center>details.panel{margin:19px 0 0;border:0;border-top:1px solid var(--line);background:none;padding:15px 0 0;border-radius:0;box-shadow:none}
+.drafter-studio .studio-center>details.panel>summary{margin-bottom:0;min-height:31px;align-items:center}
+.drafter-studio .studio-center>details.panel>summary h2{font-size:15px!important;letter-spacing:-.2px!important}
+.drafter-studio .studio-center>details.panel>.collapsible-content{padding-top:15px}
+.drafter-studio .studio-center .priority-inputs{grid-template-columns:1fr;gap:10px}
+.drafter-studio .studio-center .priority-inputs>.btn{justify-self:start}
+.drafter-studio .studio-center .steps{grid-template-columns:1fr}
+.drafter-studio .studio-center #summaries{display:block}
+.drafter-studio .studio-center .player-summary+.player-summary{border-top:1px solid var(--line);padding-top:14px;margin-top:14px}
+.studio-collection{min-width:0;padding:21px 17px 20px;border-left:1px solid var(--line);align-self:stretch}
+.drafter-studio .studio-collection>#tatari-section{border:0;border-radius:0;box-shadow:none;background:none;padding:0;margin:0;height:auto;max-height:none;overflow:visible;display:flex;flex-direction:column}
+.drafter-studio .studio-collection #tatari-section>.panel-title{margin-bottom:15px;align-items:center;gap:10px}
+.drafter-studio .studio-collection #picker-title{font-size:18px!important;letter-spacing:-.4px!important}
+.drafter-studio #picker-count{font-size:9px;color:var(--muted)}
+.drafter-studio .studio-collection .picker-tabs{display:flex;gap:4px;padding:3px;background:#f1e8cf;border:0;border-radius:8px;margin-bottom:13px}
+.drafter-studio .studio-collection .picker-tabs>button{font:500 10px Poppins,sans-serif;min-height:33px;padding:6px 9px;flex:1;border:0;border-radius:5px;background:none;color:#8b7952}
+.drafter-studio .studio-collection .picker-tabs>button[aria-selected=true]{background:var(--paper);color:var(--ink);box-shadow:0 1px 3px #392a1117}
+.drafter-studio .studio-collection .picker-filters{gap:7px;margin-top:10px;margin-bottom:12px}
+.drafter-studio .studio-collection .picker-filters input,.drafter-studio .studio-collection .picker-filters select{min-height:35px;font-size:10px;padding:7px 8px;border-radius:6px;border-color:#dfd1b0}
+.drafter-studio .studio-collection #picker{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;max-height:590px;overflow:auto;min-height:0;padding:3px;align-content:start;flex:none}
+.drafter-studio .studio-collection .pick{border-radius:8px;border-color:#e1d5b8;background:#fffcf3;padding:5px;min-width:0}
+.drafter-studio .studio-collection .pick:hover{background:#fff2c0;border-color:#d0ae51}
+.drafter-studio .studio-collection .pick[aria-pressed=true]{background:#ffe595;border-color:#c89c33}
+.drafter-studio .studio-collection .pick strong{font-size:8px;line-height:1.4}
+.studio-bottom{display:grid;grid-template-columns:1.05fr 1fr;gap:16px;margin-top:17px}
+.drafter-studio .studio-bottom>.panel{margin:0;padding:20px;background:var(--paper);border:1px solid #dcc995;border-radius:12px;box-shadow:none;min-width:0}
+.drafter-studio .studio-bottom .share-panel{flex-direction:column;align-items:stretch;gap:14px}
+.drafter-studio .studio-bottom .share-panel .row{flex-wrap:wrap;gap:7px}
+.drafter-studio .studio-bottom textarea{min-height:100px;background:#fffaf0;border-color:var(--line);border-radius:8px;font-size:12px;resize:vertical}
+.drafter-studio .studio-bottom p{font-size:10px;line-height:1.8;color:var(--muted)}
+.studio-local-hint{font-size:10px;color:#846629;margin:17px 2px 0}
+.drafter-studio section{scroll-margin-top:100px}
+@media(min-width:1450px){.drafter-studio main.drafter{max-width:1450px}.drafter-studio .drafter-layout.studio-workbench{grid-template-columns:225px minmax(0,1fr) 385px}}
+@media(max-width:1180px){.drafter-studio .drafter-layout.studio-workbench{grid-template-columns:185px minmax(0,1fr) 310px}.studio-setup{padding:19px 12px}.studio-center{padding:19px 16px}.studio-collection{padding:19px 12px}.drafter-studio .studio-collection #picker{grid-template-columns:repeat(3,minmax(0,1fr))}.drafter-studio .studio-center .formation-actions .btn{font-size:9px;padding:6px}.drafter-studio .studio-center .battlefield{padding:10px 3px}}
+@media(max-width:980px){.drafter-studio .drafter-layout.studio-workbench{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.studio-setup{grid-column:1/-1;border-right:0;border-bottom:1px solid var(--line);border-radius:14px 14px 0 0;padding:17px 20px}.studio-section-heading{display:flex;align-items:center;gap:15px}.studio-section-heading p{font-size:10px}.drafter-studio .studio-setup>.mode-context{margin-top:13px}.drafter-studio .mode-buttons{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}.drafter-studio .mode-buttons button{padding:7px 10px;min-height:34px}.drafter-studio .studio-setup .context-grid{flex-direction:row;flex-wrap:wrap;gap:10px}.drafter-studio .studio-setup .context-grid>.field{flex:1;min-width:125px;max-width:250px}.drafter-studio .studio-setup .context-grid>p{flex:1;min-width:200px;align-self:center}.studio-center{padding:20px 17px}.studio-collection{padding:20px 14px}.drafter-studio .studio-collection #picker{grid-template-columns:repeat(4,minmax(0,1fr))}.drafter-studio .draft-toolbar>.field{flex-basis:230px}.drafter-studio .draft-toolbar{gap:10px}.drafter-studio .saved-link{display:none}.drafter-studio .studio-center .formation-actions .btn{font-size:10px}}
+@media(max-width:700px){.drafter-studio main.drafter{padding:0 12px;margin-top:18px}.studio-heading{margin-bottom:15px;align-items:flex-start;gap:15px}.studio-heading h1{font-size:22px}.studio-heading p{font-size:10px;max-width:230px}.studio-compare{font-size:9px;white-space:nowrap;margin-top:3px}.drafter-studio .draft-toolbar{display:grid;grid-template-columns:1fr auto;padding:13px;gap:10px}.drafter-studio .draft-toolbar>.field{width:auto;min-width:0;grid-column:1}.drafter-studio .draft-toolbar #coop-mode{grid-column:2;grid-row:1}.drafter-studio .draft-main-actions{grid-column:1/-1;margin:0;justify-content:flex-start;width:auto}.drafter-studio .draft-main-actions .btn{font-size:10px;min-height:35px;padding:7px 10px}.drafter-studio .drafter-layout.studio-workbench{display:flex;flex-direction:column;gap:0;padding-bottom:0}.studio-setup{width:100%;padding:16px 14px}.studio-section-heading{display:block}.studio-section-heading h2{font-size:16px;margin-bottom:5px}.studio-section-heading p{font-size:9px}.drafter-studio .mode-buttons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.drafter-studio .mode-buttons button{font-size:9px;padding:6px 4px}.studio-center{width:100%;padding:18px 13px}.drafter-studio .studio-center .panel-title{gap:8px}.drafter-studio .studio-center .formation-actions{gap:5px}.drafter-studio .studio-center .battlefield{padding:13px 4px}.studio-collection{border:0;padding:0;width:100%}.drafter-studio .studio-collection>#tatari-section{padding:18px 14px;border-top:1px solid var(--line)}.studio-bottom{grid-template-columns:1fr;gap:12px;margin-top:13px}.drafter-studio .studio-bottom>.panel{padding:17px}.studio-local-hint{font-size:9px}.drafter-studio .studio-center>details.panel{margin-top:16px;padding-top:13px}.drafter-studio .mobile-draft-nav{border-top:1px solid #cfb76f;background:#fff8e3}.drafter-studio .mobile-draft-nav a{font-size:11px;color:#786027}}
+
+/* Refined chip selection, compact details and consistent panel edges. */
+.drafter-studio #status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.drafter-studio #range-help{display:none}
+.drafter-studio .studio-bottom>.panel{border:2px solid #282625;border-radius:16px;box-shadow:0 4px #b78525}
+.drafter-studio .chip-selection-toolbar.has-chip-slots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;--chip-slot-size:34px;--chip-slot-gap:7px;--chip-art-scale:.875}
+.drafter-studio .chip-selection-toolbar #picker-player{grid-column:1/-1;grid-row:1;width:100%;display:flex;margin:0;min-width:0}
+.drafter-studio .chip-selection-toolbar #picker-player button{flex:1;min-width:0;min-height:36px;padding:6px 10px;white-space:nowrap}
+.drafter-studio .chip-slot-group{justify-content:center;min-width:0;padding:7px 0}
+.drafter-studio .chip-selection-toolbar.solo-chip-slots .chip-slot-group{grid-column:1/-1}
+.drafter-studio #picker.chip-picker{display:flex;flex-direction:column;gap:0;grid-template-columns:none}
+.drafter-studio .chip-picker-row{padding:8px 0}
+.drafter-studio .chip-picker-row .chip-select{min-height:40px;gap:8px;padding:3px}
+.drafter-studio .chip-select strong{font-size:11px;line-height:1.5}
+.drafter-studio .chip-select .drafter-chip-art{flex:0 0 36px;zoom:.82}
+.drafter-studio .chip-picker-row p,.drafter-studio .chip-claimed-note{font-size:10px;line-height:1.6;margin:4px 3px}
+.drafter-studio .chip-targets img{width:22px;height:22px}
+.drafter-studio [hidden]{display:none!important}
+@media(max-width:700px){
+ .drafter-studio .draft-toolbar{grid-template-columns:minmax(0,1fr)}
+ .drafter-studio .draft-toolbar>.field,.drafter-studio .draft-main-actions{grid-column:1}
+ .drafter-studio .studio-center .panel-title{flex-wrap:wrap}
+ .drafter-studio .studio-center .formation-actions{margin-left:auto;max-width:100%}
+ .drafter-studio .studio-center .battlefield{min-width:0;width:100%;box-sizing:border-box}
+ .drafter-studio .board,.drafter-studio .enemy-field{max-width:100%;box-sizing:border-box}
+ .drafter-studio .advanced-options{max-width:calc(100vw - 58px);box-sizing:border-box}
+ .drafter-studio .studio-setup .context-grid>.field{min-width:0;max-width:none;flex-basis:calc(50% - 10px)}
+ .drafter-studio .studio-bottom textarea{width:100%;box-sizing:border-box}
+ .drafter-studio .mobile-picker-dialog .chip-selection-toolbar{flex:none}
+ .drafter-studio .mobile-picker-dialog #picker-player button{min-height:40px}
+ .drafter-studio .mobile-picker-dialog .picker-player-verb{display:inline}
+ .drafter-studio .studio-bottom .share-panel .btn{white-space:normal}
+}
+@media(min-width:701px) and (max-width:840px){.drafter-studio .drafter-layout.studio-workbench{grid-template-columns:minmax(0,1fr)}.studio-collection{border-left:0;border-top:1px solid var(--line)}}
+
+/* Match the draft toolbar to the other outlined panels. */
+.drafter-studio .draft-toolbar{border:2px solid #282625;border-radius:16px;box-shadow:0 4px #b78525}
+
+
+/* Picker and context layout refinements across desktop and mobile. */
+.drafter-studio #picker .pick>span{font-size:9px;line-height:1.35;white-space:normal;overflow-wrap:anywhere;display:block}
+.drafter-studio #picker .pick{min-width:0;height:auto;min-height:92px;overflow:visible}
+.drafter-studio .studio-center #summaries>.player-summary+.player-summary{border-top:1px solid var(--line);margin-top:22px;padding-top:20px}
+.drafter-studio .studio-center #summaries>.player-summary>.player-label{display:inline-block;margin-bottom:8px}
+.drafter-studio .studio-collection #tatari-section{height:auto!important;max-height:none!important;overflow:visible!important;min-width:0}
+.drafter-studio .studio-collection #picker{max-height:min(680px,75vh);overflow-y:auto;overflow-x:hidden;padding:6px 5px 12px;scroll-padding:10px;box-sizing:border-box}
+.drafter-studio .studio-collection #tatari-section>.panel-title{flex-wrap:wrap}
+.drafter-studio .picker-tabs{min-width:0;flex-wrap:wrap}
+.drafter-studio .studio-collection .picker-tabs>button{min-width:0;padding-inline:6px}
+.drafter-studio .stage-boundary{min-width:0;margin:0;padding:10px;border:1px solid var(--line);border-radius:8px;width:100%;box-sizing:border-box}
+.drafter-studio .stage-boundary legend{font-size:10px;font-weight:600;padding:0 5px}
+.drafter-studio .stage-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.drafter-studio .stage-pair .field{margin:0;min-width:0;font-size:10px}
+.drafter-studio .stage-pair input{width:100%;box-sizing:border-box;min-width:0}
+.drafter-studio .studio-setup .context-grid>.stage-boundary{flex:1 1 150px}
+@media(max-width:700px){
+ .drafter-studio #picker .pick>span{font-size:9px}
+ .drafter-studio .mobile-picker-dialog{box-sizing:border-box;max-width:calc(100vw - 16px)}
+ .drafter-studio .mobile-picker-dialog #tatari-section{overflow:hidden!important;min-height:0;display:flex;flex-direction:column}
+ .drafter-studio .mobile-picker-dialog #picker{overflow-y:auto;overflow-x:hidden;padding:6px 5px 18px;flex:1 1 0;min-height:90px;grid-template-columns:repeat(4,minmax(0,1fr))}
+ .drafter-studio .mobile-picker-dialog #picker.chip-picker{display:flex}
+ .drafter-studio .mobile-picker-dialog .picker-filters{flex-wrap:wrap;min-width:0}
+ .drafter-studio .mobile-picker-dialog .picker-filters>*{min-width:0}
+ .drafter-studio .mobile-picker-dialog .picker-filters select{max-width:100%}
+ .drafter-studio .studio-setup .context-grid>.stage-boundary{flex-basis:100%}
+ .drafter-studio .studio-collection:empty{display:none}
+}
+@media(max-width:360px){.drafter-studio .mobile-picker-dialog #picker{grid-template-columns:repeat(3,minmax(0,1fr))}.drafter-studio .chip-selection-toolbar.has-chip-slots{--chip-slot-size:30px;--chip-slot-gap:5px}}
+
+/* Give collection names room and balance the desktop board/picker split. */
+.studio-collection-select{display:none}
+.drafter-studio #picker .pick>span{width:100%;white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:normal;word-break:normal;max-height:none;height:auto;-webkit-line-clamp:unset;line-clamp:unset}
+@media(min-width:981px){
+ .drafter-studio .drafter-layout.studio-workbench{grid-template-columns:190px minmax(0,1fr) 390px}
+ .drafter-studio .studio-collection #picker:not(.chip-picker){grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(min-width:1450px){.drafter-studio .drafter-layout.studio-workbench{grid-template-columns:210px minmax(0,1fr) 430px}}
+@media(min-width:981px) and (max-width:1180px){.drafter-studio .drafter-layout.studio-workbench{grid-template-columns:175px minmax(0,1fr) 340px}}
+@media(min-width:701px){
+ .drafter-studio .studio-collection-select{display:flex;flex-direction:column;gap:5px;margin-bottom:13px;font-size:10px;color:var(--muted)}
+ .drafter-studio .studio-collection-select select{width:100%;min-height:37px;border:1px solid var(--line);border-radius:7px;background:var(--paper);padding:7px 10px;font:500 11px Poppins,sans-serif;color:var(--ink)}
+ .drafter-studio #picker-tabs{display:none}
+ .drafter-studio .studio-collection #picker .pick{padding:7px 5px;min-height:108px}
+}
+@media(max-width:700px){.drafter-studio .mobile-picker-dialog #picker:not(.chip-picker){grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Battle setup spans the top; formation and collection share the workspace. */
+@media(min-width:701px){
+ .drafter-studio .drafter-layout.studio-workbench{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+ .drafter-studio .studio-setup{grid-column:1/-1;border-right:0;border-bottom:1px solid var(--line);border-radius:14px 14px 0 0;padding:18px 20px}
+ .drafter-studio .studio-section-heading{display:flex;align-items:center;gap:15px}
+ .drafter-studio .studio-setup>.mode-context{margin-top:14px}
+ .drafter-studio .mode-buttons{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+ .drafter-studio .mode-buttons button{min-height:34px;padding:7px 10px}
+ .drafter-studio .studio-setup .context-grid{display:flex;flex-direction:row;flex-wrap:wrap;gap:12px;align-items:end}
+ .drafter-studio .studio-setup .context-grid>.field{flex:0 1 240px;min-width:140px;max-width:260px}
+ .drafter-studio .studio-setup .context-grid>.stage-boundary{flex:0 1 260px}
+ .drafter-studio .studio-collection{border-top:0;border-left:1px solid var(--line)}
+ .drafter-studio .studio-collection #picker:not(.chip-picker){grid-template-columns:repeat(auto-fill,minmax(86px,1fr));gap:7px}
+ .drafter-studio .studio-collection #picker .pick{min-height:94px;padding:7px 5px 6px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:5px;position:relative}
+}
+.drafter-studio #picker .pick img:not(.tiny-element){width:46px;height:46px;object-fit:contain;flex:none}
+.drafter-studio #picker .pick>span{font-size:9px;line-height:1.4;min-height:25px;text-align:center;display:block;width:100%;overflow-wrap:anywhere}
+.drafter-studio #picker .pick .tiny-element{position:absolute;left:4px;top:4px;width:12px;height:12px}
+.drafter-studio #picker .pick .tiny-tier{position:absolute;right:4px;top:4px;font-size:8px;line-height:1.3}
+@media(max-width:700px){.drafter-studio #picker .pick{min-height:94px;padding:7px 5px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:5px;position:relative}}
+
+/* Compact segmented collection selector and tighter card spacing. */
+.drafter-studio #picker-tabs{display:flex;flex-wrap:nowrap;gap:4px;padding:3px;background:#f1e8cf;border:1px solid var(--line);border-radius:8px;margin-bottom:12px}
+.drafter-studio #picker-tabs button{flex:1;min-width:0;min-height:34px;padding:6px 8px;font-size:11px;border:0;border-radius:5px}
+.drafter-studio #picker-tabs button[aria-pressed=true]{background:#ffd347;color:var(--ink);box-shadow:0 1px 2px #392a1120}
+@media(min-width:701px){.drafter-studio .drafter-layout.studio-workbench{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.drafter-studio .studio-center{padding:18px 16px}.drafter-studio .studio-collection #picker:not(.chip-picker){grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:5px}}
+.drafter-studio #picker .pick,.drafter-studio .studio-collection #picker .pick{min-height:0;height:auto;padding:5px 4px 4px;gap:2px}
+.drafter-studio #picker .pick img:not(.tiny-element){width:42px;height:42px}
+.drafter-studio #picker .pick>span{min-height:0;margin:0;font-size:9px;line-height:1.25}
+
+/* Single-line names: fewer, wider cards instead of wrapped labels. */
+.drafter-studio .studio-collection #picker:not(.chip-picker),.drafter-studio .mobile-picker-dialog #picker:not(.chip-picker){grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:5px}
+.drafter-studio #picker .pick>span{font-size:8px;line-height:1.4;white-space:nowrap;overflow-wrap:normal;word-break:normal;width:auto;max-width:100%;min-width:0;letter-spacing:-.15px}
+@media(max-width:360px){.drafter-studio .mobile-picker-dialog #picker:not(.chip-picker){grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Fit each collection to its longest measured name, including card padding. */
+.drafter-studio .studio-collection #picker:not(.chip-picker),.drafter-studio .mobile-picker-dialog #picker:not(.chip-picker){grid-template-columns:repeat(auto-fill,minmax(var(--name-card-width,78px),1fr))}
+
+/* Scroll rows at their natural card height; never compress them to dialog height. */
+@media(max-width:700px){
+ .drafter-studio .mobile-picker-dialog #picker:not(.chip-picker){display:grid;grid-auto-rows:minmax(78px,max-content);align-content:start;align-items:stretch;row-gap:7px;column-gap:5px;flex:1 1 0;min-height:0}
+ .drafter-studio .mobile-picker-dialog #picker .pick{box-sizing:border-box;min-height:78px;height:auto;padding:8px 4px 5px;gap:3px;overflow:hidden;flex-shrink:0}
+ .drafter-studio .mobile-picker-dialog #picker .pick img:not(.tiny-element){width:42px;height:42px;flex:0 0 42px}
+ .drafter-studio .mobile-picker-dialog #picker .pick>span{font:400 8px/1.4 Poppins,sans-serif;white-space:nowrap;margin:0;flex:none}
+ .drafter-studio .mobile-picker-dialog #picker.chip-picker{display:flex;flex-direction:column;align-items:stretch}
+ .drafter-studio .mobile-picker-dialog .chip-picker-row{flex-shrink:0}
+}
+
+/* Equal inner spacing on every side of the formation body. */
+.drafter-studio .studio-center{padding:20px}
+@media(max-width:700px){.drafter-studio .studio-center{padding:16px}}
+
+.drafter-studio .element-count{display:inline-flex;align-items:center;gap:4px}
+.drafter-studio .element-count .summary-element-icon{width:13px;height:13px;object-fit:contain;flex:none}
+
+/* Match Zobo type selection to the player selection box. */
+.drafter-studio #zobo-type{display:flex;width:100%;max-width:none;box-sizing:border-box;padding:3px;gap:3px;margin:0 0 10px;min-height:44px}
+.drafter-studio #zobo-type button{flex:1;min-width:0;min-height:36px;padding:6px 10px;font-size:11px;line-height:20px}
+@media(max-width:700px){.drafter-studio #zobo-type button{min-height:40px}}
+
+/* Heading and mode selection share a row when space permits. */
+.drafter-studio .studio-section-heading{display:flex;align-items:center;flex-wrap:wrap;gap:12px 18px}
+.drafter-studio .studio-section-heading h2{margin:0;flex:none}
+.drafter-studio .studio-section-heading .mode-buttons{display:flex;flex-wrap:wrap;gap:6px;margin:0}
+@media(max-width:700px){.drafter-studio .studio-section-heading .mode-buttons{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Shared modal heading treatment and compact responsive picker chrome. */
+.drafter-studio dialog .modal-head h2,.drafter-studio dialog .modal-head h3,.drafter-studio #mobile-picker-title{font:700 17px/1.3 Sora,sans-serif!important;letter-spacing:-.3px!important;margin:0}
+.drafter-studio #mobile-picker-feedback{display:none}
+@media(max-width:700px){
+ .drafter-studio #picker-tabs{touch-action:pan-y;user-select:none}
+ .drafter-studio .mobile-picker-dialog .mobile-picker-head{padding:12px 14px;flex:none}
+ .drafter-studio .mobile-picker-dialog #picker-tabs,.drafter-studio .mobile-picker-dialog #picker-player,.drafter-studio .mobile-picker-dialog #zobo-type{flex-shrink:0}
+ .drafter-studio .mobile-picker-dialog #picker:not(.chip-picker){grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--name-card-width,78px)),1fr))}
+ .drafter-studio .mobile-picker-dialog #tatari-section{min-width:0}
+ .drafter-studio .mobile-picker-dialog .picker-filters{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .drafter-studio .mobile-picker-dialog .picker-filters label{min-width:0}
+ .drafter-studio .mobile-picker-dialog .picker-filters select{width:100%;box-sizing:border-box}
+}
+@media(max-height:600px) and (max-width:700px){.drafter-studio .mobile-picker-dialog{height:calc(100dvh - 12px);max-height:calc(100dvh - 12px)}.drafter-studio .mobile-picker-dialog .mobile-picker-head{padding:6px 12px}.drafter-studio .mobile-picker-dialog #picker-tabs{margin-bottom:6px}.drafter-studio .mobile-picker-dialog .picker-filters{margin:6px 0}}
+
+.drafter-studio #picker .pick>span{font-family:Poppins,sans-serif}
