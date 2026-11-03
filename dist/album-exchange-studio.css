@@ -1,0 +1,9 @@
+.exchange-studio .trading-layout>.panel,.exchange-studio .trader-table{border:2px solid #282625;border-radius:16px;box-shadow:0 4px #b78525}
+.album-modal-studio dialog.site-modal{box-sizing:border-box;padding:0;border:2px solid #282625;border-radius:16px;background:#fffdf5;color:#2d2921;overflow:hidden;max-height:90dvh;box-shadow:0 4px #b78525}
+.album-modal-studio dialog.site-modal[open]{display:flex;flex-direction:column}
+.album-modal-studio dialog.site-modal>.modal-head{flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;margin:0;background:#ffe4ae;border-bottom:1px solid #d6a260}
+.album-modal-studio dialog.site-modal>.modal-head h3{font:700 17px/1.3 Sora,sans-serif;margin:0;letter-spacing:-.3px}
+.album-modal-studio dialog.site-modal>.modal-body{flex:1 1 auto;min-height:0;overflow-y:auto;padding:18px;margin:0;background:#fffdf5;overscroll-behavior:contain}
+.album-modal-studio dialog.site-modal>.modal-footer{display:flex;align-items:center;justify-content:center;flex:none;gap:8px;padding:12px 18px;margin:0;border-top:1px solid #e3d6b6;background:#fff6df}
+.album-modal-studio dialog.site-modal .btn{font:500 11px/1.5 Poppins,sans-serif;min-height:38px;padding:8px 14px;border-radius:7px;box-shadow:none}
+@media(max-width:600px){.album-modal-studio dialog.site-modal{max-height:92dvh;max-width:calc(100vw - 16px)}.album-modal-studio dialog.site-modal>.modal-head{padding:12px 14px}.album-modal-studio dialog.site-modal>.modal-body{padding:14px}.album-modal-studio dialog.site-modal .btn{min-height:44px}}
