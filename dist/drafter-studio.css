@@ -242,3 +242,14 @@ body.drafter-studio{--paper:#fffdf5;--soft:#fff6df;--line:#e3d6b6;--muted:#88795
 @media(max-height:600px) and (max-width:700px){.drafter-studio .mobile-picker-dialog{height:calc(100dvh - 12px);max-height:calc(100dvh - 12px)}.drafter-studio .mobile-picker-dialog .mobile-picker-head{padding:6px 12px}.drafter-studio .mobile-picker-dialog #picker-tabs{margin-bottom:6px}.drafter-studio .mobile-picker-dialog .picker-filters{margin:6px 0}}
 
 .drafter-studio #picker .pick>span{font-family:Poppins,sans-serif}
+
+/* Larger selected chips with square, undistorted artwork. */
+.drafter-studio .chip-selection-toolbar.has-chip-slots{--chip-slot-size:51px;--chip-slot-gap:9px;--chip-art-scale:1.3125}
+.drafter-studio .chip-slot{aspect-ratio:1;box-sizing:border-box}
+.drafter-studio .chip-slot .drafter-chip-art{aspect-ratio:1;background-size:contain;background-position:center;background-repeat:no-repeat}
+.drafter-studio .chip-slot .drafter-chip-art img{object-fit:contain}
+@media(max-width:360px){.drafter-studio .chip-selection-toolbar.has-chip-slots{--chip-slot-size:45px;--chip-slot-gap:5px;--chip-art-scale:1.125}}
+
+/* Anchor tile labels directly to the tile corners. */
+.drafter-studio .board-cell .cell-player{top:0;left:0;margin:0;border-radius:4px 0 4px 0}
+.drafter-studio .board-cell .cell-level{bottom:0;right:0;margin:0;border-radius:4px 0 4px 0}
