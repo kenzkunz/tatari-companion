@@ -47,3 +47,5 @@
 .tracker-top .event-progress{width:100%;flex-shrink:0}
 @media(max-width:1100px){.tracker-top .event-row{padding:13px 9px 11px}.tracker-top .event-row[data-event] .event-row-title{font-size:11px}}
 @media(max-width:600px){.tracker-top .event-row{min-height:145px;padding:13px 8px 11px}.tracker-top .event-row>img{width:32px;height:32px}.tracker-top .event-row[data-event] .event-row-title{font-size:11px}}
+/* Match the guide paper's outer outline. */
+.tracker-top .event-sidebar,.tracker-top .calendar-panel{border:3px solid #282625;border-radius:16px;box-shadow:0 4px #b78525}
