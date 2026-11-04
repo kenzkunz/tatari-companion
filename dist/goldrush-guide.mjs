@@ -1,16 +1,24 @@
-import {loadGuideData} from './site-data.mjs?v=site-data5';
+import {loadGuideData} from './site-data.mjs?v=sandy1';
 const $=id=>document.getElementById(id),fmt=n=>Number(n).toLocaleString('en-US',{maximumFractionDigits:2});
 const el=(tag,value,cls)=>{const n=document.createElement(tag);if(value!==undefined)n.textContent=value;if(cls)n.className=cls;return n;};
 const img=(src,alt='')=>{const n=el('img');n.src=src;n.alt=alt;n.loading='lazy';return n;};
-const data=await loadGuideData('goldrush');
+const baseData=await loadGuideData('goldrush');
+let data=baseData;
 function supply(n){const v=el('span',undefined,'gold-icon-value');v.append(el('span',fmt(n)),img(data.assets.drink,'Energy Drinks'));return v;}
 function iconText(icon,text,alt=''){const v=el('span',undefined,'gold-icon-value');v.append(img(icon,alt),el('span',text));return v;}
 function exhaustionValue(value){const n=el('span',undefined,'gold-icon-value');n.append(el('strong','+'+value+'%'),img(data.assets.exhausted,'Exhaustion'));return n;}
 function points(n){return iconText(data.assets.points,fmt(n),'Points');}
 function row(values){const r=el('tr');for(const v of values){const c=el('td');c.append(v instanceof Node?v:document.createTextNode(String(v)));r.append(c);}return r;}
-$('gold-tile-rows').replaceChildren(...data.tiles.map(t=>row([t.name,t.defenders,iconText(data.assets.productionPoints,fmt(t.perMinute),'Clam points'),iconText(data.assets.productionPoints,fmt(t.perHour),'Clam points')])));
-$('daily-rows').replaceChildren(...data.daily.map(d=>row(['Day '+d.Day,Object.keys(d.ShellGridIDs).length?'Active clam day':'—','+'+d.ScoreRatePct+'%'])));
-$('role-rows').replaceChildren(...[['leader','League Leader',1,'5%','Manage titles, mark tiles and post announcements'],['elite','Elite',2,'5%','Mark tiles and post announcements'],['vanguard','Vanguard',4,'3%','Mark tiles and post announcements'],[null,'Member','—','0%','Follow the league plan']].map(([art,name,count,discount,desc])=>{const title=el('span',undefined,'gold-icon-value');if(art)title.append(img(data.assets[art]));title.append(el('span',name));return row([title,count,discount,desc]);}));
+function renderMode(){
+ data=$('gold-mode').value==='tournament'?{...baseData,...baseData.tournament}:baseData;
+ $('gold-tile-rows').replaceChildren(...data.tiles.map(t=>row([t.name,t.defenders,iconText(data.assets.productionPoints,fmt(t.perMinute),'Gold points'),iconText(data.assets.productionPoints,fmt(t.perHour),'Gold points')])));
+ $('daily-rows').replaceChildren(...data.daily.map(d=>row(['Day '+d.Day,d.mirages?d.mirages+' Mirage sites':d.cities?'Lost City':'No special objective',d.ScoreRatePct+'% ('+fmt(d.ScoreRatePct/100)+'×)',d.capacity,d.arena?'Open':'Closed'])));
+ $('role-rows').replaceChildren(...data.roles.map(r=>{const title=el('span',undefined,'gold-icon-value');if(r.art)title.append(img(data.assets[r.art]));title.append(el('span',r.name));return row([title,r.slots??'—',r.discount+'%',r.art?(r.art==='leader'?'Manage titles, mark tiles, post announcements'+(data.leagues===8?', approve league transfers':'')+'; ':'Mark tiles, post announcements; ')+'1 officer rally / day from the next day':'Follow the league plan']);}));
+ $('mode-leagues').textContent=data.leagues+' competing leagues';$('mode-team-size').textContent=data.teamSize+' players';$('mode-capacity').textContent=data.leagues===4?'50 teams per day':'10 → 20 teams across Days 1–6';
+ $('mode-summary').textContent=data.name+' · '+data.leagues+' leagues · '+data.teamSize+'-player teams. Tables below follow this selection.';
+ $('reward-league').replaceChildren(...Array.from({length:data.leagues},(_,i)=>{const o=el('option','Rank '+(i+1));o.value=i+1;return o;}));
+ rewards();
+}
 const normal=data.buffs.filter(b=>b.Level<=10);
 $('boost-rows').replaceChildren(...normal.map(b=>row([iconText(data.assets.boost,'Lv '+b.Level,'Boost'),supply(b.Cost),'+'+b.ATKPR+'%','+'+b.HPPR+'%','+'+b.DEFPR+'%'])));
 $('cost-level').replaceChildren(...normal.map(b=>{const o=el('option','Lv '+b.Level+' - '+b.Cost+' Cans');o.value=b.Level;return o;}));$('cost-level').value='10';
@@ -23,9 +31,8 @@ $('loss-buff').replaceChildren(...[0,...normal.map(b=>b.HPPR)].map(v=>{const o=e
 function loss(){const base=numeric('loss-hp',.001,1000000)*1000,buff=Number($('loss-buff').value),damage=numeric('loss-damage',0,1000000000),hp=base*(1+buff/100),unrounded=50*damage/hp,rounded=Math.ceil(unrounded),raw=Math.max(3,Math.min(50,rounded));const box=el('div',undefined,'gold-result-lines');for(const [label,value] of [['Modeled battle maximum HP',fmt(hp)],['Damage / modeled maximum HP',fmt(damage/hp*100)+'%'],['Before rounding and limits',fmt(unrounded)],['Estimated Energy Drink Loss',supply(raw)]]){const n=el('span');n.append(el('span',label),value instanceof Node?value:el('strong',value));box.append(n);}$('loss-result').replaceChildren(box);}
 for(const id of ['loss-hp','loss-buff','loss-damage'])$(id).addEventListener('input',loss);
 loss();
-$('clam-gallery').replaceChildren(...[['clamclosed','Closed clam','Check the event countdown'],['clamwhole','Whole clam','100% owner harvest ratio'],['clamwrecked','Wrecked clam','70% owner harvest ratio'],['clamdamaged','Damaged clam','40% owner harvest ratio'],['clambase','Intact','Turns into an occupied Large Sea Crystal at 0%']].map(([icon,name,note])=>{const f=el('figure'),art=el('div',undefined,'gold-clam-art'),picture=img(data.assets[icon],name),size=data.clamSizing[icon];picture.style.width=size.width+'px';picture.style.height=size.height+'px';picture.style.left='calc(50% + '+size.x+'px)';picture.style.top='calc(50% + '+size.y+'px)';art.append(picture);f.append(art,el('figcaption',name),el('small',note));return f;}));
-$('rally-rows').replaceChildren(...[[2000,4,11],[4000,8,12],[6000,12,13]].map(([price,people,level])=>{const b=data.buffs.find(b=>b.Level===level);return row([supply(price),people,iconText(data.assets.boost,'Lv '+level,'Boost'),'+'+b.ATKPR+'%','+'+b.HPPR+'%']);}));
-for(let n=1;n<=6;n++){const o=el('option','Day '+n);o.value=n;$('reward-day').append(o);}for(let n=1;n<=4;n++){const o=el('option','Rank '+n);o.value=n;$('reward-league').append(o);}
+$('rally-rows').replaceChildren(...[[2000,4,11],[4000,8,12],[6000,12,13],[6000,30,13]].map(([price,people,level])=>{const b=data.buffs.find(b=>b.Level===level);return row([supply(price),people,iconText(data.assets.boost,'Lv '+level,'Boost'),'+'+b.ATKPR+'%','+'+b.HPPR+'%']);}));
+for(let n=1;n<=6;n++){const o=el('option','Day '+n);o.value=n;$('reward-day').append(o);}
 function rewardList(items){const n=el('div',undefined,'gold-reward-items');for(const r of items){const v=el('span',undefined,'gold-reward-item');v.title=r.name;v.setAttribute('aria-label',fmt(r.amount)+' '+r.name);v.append(img(r.icon,''),el('b',fmt(r.amount)));if(!(r.type===12&&r.id===110002003))v.append(el('span',r.name));n.append(v);}return n;}
 function sumRewards(entries){const totals=new Map();for(const entry of entries)for(const r of entry){const key=r.type+':'+r.id;if(!totals.has(key))totals.set(key,{...r,amount:0});totals.get(key).amount+=r.amount;}return [...totals.values()];}
 function rewards(){const kind=$('reward-category').value;$('reward-day-label').hidden=kind!=='leagueDaily';$('reward-league-label').hidden=kind!=='leagueFinal';let entries=[];
@@ -68,3 +75,6 @@ function rallyCalculator(){
 }
 for(const id of ['rally-size','rally-attacks','rally-role','rally-spa','rally-tile-hp','rally-avg-kills'])$(id).addEventListener('input',rallyCalculator);
 rallyCalculator();
+
+$('gold-mode').addEventListener('change',renderMode);
+renderMode();

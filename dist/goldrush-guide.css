@@ -34,3 +34,8 @@ body[data-guide=goldrush] .guide-banner.gold-banner{display:block;width:min(480p
 body[data-guide=goldrush] .gold-banner img{display:block;width:100%;height:auto;object-fit:contain}
 
 body[data-guide=goldrush] #loss-hp,body[data-guide=goldrush] #loss-damage{font-size:14px}
+
+body[data-guide=goldrush] .gold-banner{display:block;width:min(470px,100%);padding:0;border:0;border-radius:0;background:none;box-shadow:none}
+body[data-guide=goldrush] .gold-banner img{display:block;width:100%;height:auto;max-width:470px;object-fit:contain}
+body[data-guide=goldrush] .gold-banner figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.gold-mode-controls{margin-top:0}.gold-mode-controls label{max-width:100%}#mode-summary{margin:8px 0 18px}

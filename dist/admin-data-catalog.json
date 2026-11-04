@@ -10906,12 +10906,12 @@
     },
     {
       "key": "guide:goldrush",
-      "title": "Island Goldrush",
+      "title": "Sandy Maze Goldrush",
       "source": "guide-data/goldrush.json",
       "locked": "IDs, artwork, choice-box alternatives, probabilities and formulas are locked. Totals are recalculated from source quantities.",
       "schema": {
         "tiles.0.defenders": {
-          "label": "Small Seabed defenders",
+          "label": "Small Plain defenders",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10919,7 +10919,7 @@
           "integer": true
         },
         "tiles.0.perMinute": {
-          "label": "Small Seabed points per minute",
+          "label": "Small Plain points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10927,7 +10927,7 @@
           "integer": true
         },
         "tiles.1.defenders": {
-          "label": "Seabed defenders",
+          "label": "Plain defenders",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10935,7 +10935,7 @@
           "integer": true
         },
         "tiles.1.perMinute": {
-          "label": "Seabed points per minute",
+          "label": "Plain points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10943,7 +10943,7 @@
           "integer": true
         },
         "tiles.2.defenders": {
-          "label": "Small Sea Crystal defenders",
+          "label": "Dune defenders",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10951,7 +10951,7 @@
           "integer": true
         },
         "tiles.2.perMinute": {
-          "label": "Small Sea Crystal points per minute",
+          "label": "Dune points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10959,7 +10959,7 @@
           "integer": true
         },
         "tiles.3.defenders": {
-          "label": "Sea Crystal defenders",
+          "label": "Small Gold Mine defenders",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10967,7 +10967,7 @@
           "integer": true
         },
         "tiles.3.perMinute": {
-          "label": "Sea Crystal points per minute",
+          "label": "Small Gold Mine points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10975,7 +10975,7 @@
           "integer": true
         },
         "tiles.4.defenders": {
-          "label": "Large Sea Crystal defenders",
+          "label": "Gold Mine defenders",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10983,7 +10983,7 @@
           "integer": true
         },
         "tiles.4.perMinute": {
-          "label": "Large Sea Crystal points per minute",
+          "label": "Gold Mine points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10991,7 +10991,7 @@
           "integer": true
         },
         "tiles.5.defenders": {
-          "label": "Coral Crystal defenders",
+          "label": "Precious Gold Mine defenders",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10999,7 +10999,7 @@
           "integer": true
         },
         "tiles.5.perMinute": {
-          "label": "Coral Crystal points per minute",
+          "label": "Precious Gold Mine points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -14295,15 +14295,15 @@
         "mvp.0.rewards.3.amount": 1,
         "mvp.1.rewards.0.amount": 25,
         "mvp.1.rewards.1.amount": 2400,
-        "mvp.1.rewards.2.amount": 160,
+        "mvp.1.rewards.2.amount": 150,
         "mvp.1.rewards.3.amount": 1,
         "mvp.2.rewards.0.amount": 20,
         "mvp.2.rewards.1.amount": 1800,
-        "mvp.2.rewards.2.amount": 150,
+        "mvp.2.rewards.2.amount": 120,
         "mvp.2.rewards.3.amount": 1,
         "mvp.3.rewards.0.amount": 20,
         "mvp.3.rewards.1.amount": 1200,
-        "mvp.3.rewards.2.amount": 140,
+        "mvp.3.rewards.2.amount": 100,
         "mvp.3.rewards.3.amount": 1
       },
       "readOnlySummary": [
@@ -14321,11 +14321,11 @@
         },
         {
           "name": "assets",
-          "records": 15
+          "records": 16
         },
         {
           "name": "buffs",
-          "records": 13
+          "records": 14
         },
         {
           "name": "exhaustion",
@@ -14362,9 +14362,33 @@
         {
           "name": "mvp",
           "records": 4
+        },
+        {
+          "name": "name",
+          "records": 1
+        },
+        {
+          "name": "leagues",
+          "records": 1
+        },
+        {
+          "name": "teamSize",
+          "records": 1
+        },
+        {
+          "name": "tournament",
+          "records": 10
+        },
+        {
+          "name": "roles",
+          "records": 4
+        },
+        {
+          "name": "mirageRewards",
+          "records": 2
         }
       ],
-      "baseline": "afd6e42842fc3be78bdc7a043e4f285881df57bf1cc75b82d67767bab972877e"
+      "baseline": "93fe290927ccbf954241867a0407ba07852f8bdfbf76b587a843773b7ba60913"
     },
     {
       "key": "guide:horde",

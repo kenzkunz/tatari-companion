@@ -25,10 +25,14 @@
   },
   "events/island-goldrush.html": {
     "text-3": {
-      "7d55aa22396c10855531805fad8a53d94c8e574dc348f415b137d34cbba689f0": "@rich-v1:[{\"text\":\"The main goal is to build your league's point production by claiming tiles and clams across the six event days. Coordinate a strategy with your league, choose useful routes and high-value tiles, and capture or retake tiles effectively. Attacks contain individual opponent fights: your Tatari skills and formation decide those fights, while Energy Drinks cover the battle cost.\"}]"
+      "7d55aa22396c10855531805fad8a53d94c8e574dc348f415b137d34cbba689f0": "@rich-v1:[{\"text\":\"The main goal is to build your league's point production by claiming tiles and clams across the six event days. Coordinate a strategy with your league, choose useful routes and high-value tiles, and capture or retake tiles effectively. Attacks contain individual opponent fights: your Tatari skills and formation decide those fights, while Energy Drinks cover the battle cost.\"}]",
+      "a72bf6172b67dac5c208e4216751f8e64a9d3b23ffb3bf3780804fafe040490f": "Build your league’s score by capturing territory and winning Mirage battles across six event days. The regular event is Sandy Maze; the eight-league tournament is Lost City. Coordinate routes and high-value targets with your league. Your Tatari formation decides the opponent fights, while Energy Drinks cover the battle cost.",
+      "9762e1a50232d72e0fc22482b7614781830b7fff20c3117f50f208ebfe66d7cf": "Build your league’s score by capturing territory and winning Mirage battles across six event days. The regular event is Sandy Maze; the eight-league tournament is Lost City. Coordinate routes and high-value targets with your league. Your Tatari formation decides the opponent fights, while Energy Drinks cover the battle cost."
     },
     "text-5": {
-      "3c2b47baa4071b20df78a7676400d903f361627bf8b3e4655432383db506347b": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"Super Drinks\"}]},{\"text\":\" are cans used for Dunerush Tournament. Super Drinks substitute for Energy Drinks at a 1:1 rate.\"}]"
+      "3c2b47baa4071b20df78a7676400d903f361627bf8b3e4655432383db506347b": "@rich-v1:[{\"tag\":\"strong\",\"children\":[{\"text\":\"Super Drinks\"}]},{\"text\":\" are cans used for Dunerush Tournament. Super Drinks substitute for Energy Drinks at a 1:1 rate.\"}]",
+      "c6662d2d665a833551368e7ad8692f3ed2be91a1385366f8d2b842ec29058c13": "Super Drinks are the tournament battle resource. Check the event screen before converting or spending drinks.",
+      "6cd5a8ad07b3fa17882e9a92f583b3f4b9a4020dfae91b03b24810c590e08d4a": "Super Drinks are the tournament battle resource. Check the event screen before converting or spending drinks."
     },
     "text-14": {
       "09342f429744fbc373564c73af9850eed42d96c43974d26e4f0595f6387fdd23": "Use the event screen for actual start, preparation, battle and settlement countdowns. These are day-based rules, not a prediction of the next server calendar date. These percentages apply to base production: 50% means 0.5×, and 120% means 1.2×."
@@ -44,6 +48,48 @@
     },
     "list-9": {
       "b846c8d43957323e888dc73dc6505a1b2a61851e5325dfd954430c5f65ab6958": "Sharing cans through rallies. A rally on a tile with few defenders remaining may finish early and return unused cans to contributors. The listed participation reward is 50 cans. Eligibility without attacking still needs confirmation."
+    },
+    "text-1": {
+      "bb47d2293ea75693c973c5aed23958bb47886640f54e1db1a5bfd1dedb682799": "Claim sandy territory, race for Mirage points, and help your league uncover the Lost City."
+    },
+    "note-5": {
+      "9cd5a49b65bd5640f31fb1be3812ff054ab55b0ede41c6abe16ea2b238dc5b4b": "Choose the event you are playing. Sandy Maze has four leagues and Mirages on Days 1, 3 and 5. Lost City has eight leagues, ancient clues and city battles on Days 3 and 6. The old underwater clam schedule does not apply to these maps."
+    },
+    "text-11": {
+      "49974d10f00d815353dfd9a54b29ad74c01a56c7568e427ddd0813a743157111": "Base values are shown before the daily production rate. When the matching league owns its home territory, shield levels increase defender capacity by 40%, 100% or 300%. These are percentage bonuses, not fixed defender counts."
+    },
+    "text-13": {
+      "5c9aeca47feee361acdd54406a727f2dd20633c90541aea59002c52ff9740190": "Both events last six battle days, but their special objectives appear on different days. Choose your mode above to see its schedule, defender counts and rewards.",
+      "df1dbab07e6148f30a681cf1b12e31f5138f61f04436f8413895932e91e3ad56": "Both events last six battle days, but their special objectives appear on different days. Choose your mode above to see its schedule, defender counts and rewards."
+    },
+    "note-10": {
+      "ee71450375c56243a98e7720860ce97c61268b2c844207d7bbb3edf3eb0e0ac7": "Officer appointments and leadership transfers share a daily limit. Check the remaining actions in the event screen. Removing a title completely does not consume an action. A league leader may be replaced automatically after more than 24 hours of inactivity.",
+      "8bc03548dc379cb50753135c2cbd0661825499102c1ecd5e1c3fe5df0be5b46e": "Officer appointments and leadership transfers share a daily limit. Check the remaining actions in the event screen. Removing a title completely does not consume an action. A league leader may be replaced automatically after more than 24 hours of inactivity."
+    },
+    "text-31": {
+      "20530bbc3413c1de2a6cf335f090913dd9c802cb4a5246913c6762e8b5da3ec3": "Mirages, ancient clues and the Lost City"
+    },
+    "text-32": {
+      "10dbf16406d4d02332358a3f18f003e725e66e8fc38297b5ea9901122580c568": "Sandy Maze Mirages appear on Days 1, 3 and 5. Leagues compete by total kills in each Mirage; the league in first place when the countdown ends earns the points. Mirage locations can vary, so check the active sites in your event."
+    },
+    "note-18": {
+      "afb636c0927064fbad784356a9bacf661e3cef05a1276a747a54b1ba3fef2122": "Lost City tournament only: Mirages appear on Days 1, 2, 4 and 5. Each Mirage winner earns points and one ancient clue. Clues add a stacking kill-count bonus in Lost City battles and remain active until the tournament ends. The city opens on Days 3 and 6, and its top three leagues earn points."
+    },
+    "text-34": {
+      "43a63ccad8fb4b2566e110b679d074d674311f2265f3244e7b54a0e3a90d479d": "Normal rallies have three sizes: 4, 8 or 12 participants. The new officer rally allows 30 participants at the Lv 13 boost. Each League Leader, Elite and Vanguard receives one officer-rally use per day, starting the day after appointment; unused uses expire that day.",
+      "40d857ebb063f62de8cb7b73b4ac68890ab51abc468095fde22812c6cc5265ce": "Normal rallies have three sizes: 4, 8 or 12 participants. The new officer rally allows 30 participants at the Lv 13 boost. Each League Leader, Elite and Vanguard receives one officer-rally use per day, starting the day after appointment; unused uses expire that day."
+    },
+    "text-35": {
+      "127a480ca98b9efd5ec4ff81e6787dfa71d99a2f685292f6fdb6a6051391a2fb": "Normal rally tiers unlock after spending 1,000, 3,000 or 5,000 drinks respectively. Their preparation timer is five minutes. The officer rally has a separate daily-use limit and no spending unlock. Check its final charge on the confirmation screen; the calculator below covers normal rallies only."
+    },
+    "text-39": {
+      "449f24147c5746e262fd985b5506ced7ed7b9a162ca666fa3ec40e03a0dd61c0": "The 19-step team milestone track is unchanged, from 200 to 100,000 team points. Select a milestone to see the combined rewards through that threshold."
+    },
+    "list-5": {
+      "d38e0e1101259a42a25ec79696296cf21e9a7941d3849229ab8c04b0d344d0f0": "Coordinate targets and protection. Follow league marks and announcements before Mirage or Lost City settlement."
+    },
+    "list-6": {
+      "4623c594adcd220a2fcce86e76f223028caee2536b3e9a92f11f117c01535c20": "Use the right objective days. Sandy Maze has Mirage battles on Days 1, 3 and 5. In Lost City, collect clues before city battles on Days 3 and 6."
     }
   },
   "events/sparkly-spa.html": {
