@@ -2604,7 +2604,7 @@
     "page": "events/artifact-adventure.html",
     "block": "text-intro",
     "label": "Introduction",
-    "default": "Explore the ruins with three teammates, improve your Torch, and build a collection of valuable artifacts. Here’s how to manage Zobo encounters and work toward milestone and ranking rewards.",
+    "default": "Explore the ruins with three teammates, improve your Torch, and build a collection of valuable artifacts. Here’s how to manage Zobo encounters and work toward milestone rewards and better team records.",
     "order": 1,
     "section": "intro",
     "sectionTitle": "Introduction"
@@ -2896,32 +2896,5 @@
     "order": 33,
     "section": "milestones",
     "sectionTitle": "Personal milestone rewards"
-  },
-  {
-    "page": "events/artifact-adventure.html",
-    "block": "text-ranking-rewards-title",
-    "label": "Heading · Ranking rewards",
-    "default": "Ranking rewards",
-    "order": 34,
-    "section": "ranking-rewards",
-    "sectionTitle": "Ranking rewards"
-  },
-  {
-    "page": "events/artifact-adventure.html",
-    "block": "text-ranking-rewards-block-1",
-    "label": "Text · Team codex value determines ranking. Rewards extend through rank 50. Candy quantities below are",
-    "default": "Team codex value determines ranking. Rewards extend through rank 50. Candy quantities below are base amounts; check your reward panel for the amount that applies to your progress.",
-    "order": 35,
-    "section": "ranking-rewards",
-    "sectionTitle": "Ranking rewards"
-  },
-  {
-    "page": "events/artifact-adventure.html",
-    "block": "text-ranking-rewards-block-3",
-    "label": "Text · Rank 1 receives the diamond title, ranks 2–5 the gold title, ranks 6–10 the silver title, and r",
-    "default": "Rank 1 receives the diamond title, ranks 2–5 the gold title, ranks 6–10 the silver title, and ranks 11–20 the copper title. These titles last six days.",
-    "order": 36,
-    "section": "ranking-rewards",
-    "sectionTitle": "Ranking rewards"
   }
 ]
