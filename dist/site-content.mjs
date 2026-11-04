@@ -1,4 +1,4 @@
-import {displayContent} from './content-revisions.mjs?v=split2';
+import {displayContent} from './content-revisions.mjs?v=tidy3';
 import {applyBox,applyBanner} from './guide-media.mjs';
 import {renderFormatted} from './content-format.mjs';
 import {supabase} from './auth-client.mjs';

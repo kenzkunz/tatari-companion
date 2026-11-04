@@ -63,9 +63,9 @@
       "49974d10f00d815353dfd9a54b29ad74c01a56c7568e427ddd0813a743157111": "Base values are shown before the daily production rate. When the matching league owns its home territory, shield levels increase defender capacity by 40%, 100% or 300%. These are percentage bonuses, not fixed defender counts."
     },
     "text-13": {
-      "5c9aeca47feee361acdd54406a727f2dd20633c90541aea59002c52ff9740190": "Sandy Maze has six battle days. Mirages appear on Days 1, 3 and 5. The table shows territory league-point production and the team capacity for each day.",
-      "df1dbab07e6148f30a681cf1b12e31f5138f61f04436f8413895932e91e3ad56": "Sandy Maze has six battle days. Mirages appear on Days 1, 3 and 5. The table shows territory league-point production and the team capacity for each day.",
-      "6e60781c05a9f754d573a3cc53c491b236ae1bd23bda5182cc5501e9d50076dc": "Sandy Maze has six battle days. Mirages appear on Days 1, 3 and 5. The table shows territory league-point production and the team capacity for each day."
+      "5c9aeca47feee361acdd54406a727f2dd20633c90541aea59002c52ff9740190": "Sandy Maze has six battle days. Mirages appear on Days 1, 3 and 5. The table shows territory league-point production for each day.",
+      "df1dbab07e6148f30a681cf1b12e31f5138f61f04436f8413895932e91e3ad56": "Sandy Maze has six battle days. Mirages appear on Days 1, 3 and 5. The table shows territory league-point production for each day.",
+      "6e60781c05a9f754d573a3cc53c491b236ae1bd23bda5182cc5501e9d50076dc": "Sandy Maze has six battle days. Mirages appear on Days 1, 3 and 5. The table shows territory league-point production for each day."
     },
     "note-10": {
       "ee71450375c56243a98e7720860ce97c61268b2c844207d7bbb3edf3eb0e0ac7": "Officer appointments and leadership transfers share a daily limit. Check the remaining actions in the event screen. Removing a title completely does not consume an action. A league leader may be replaced automatically after more than 24 hours of inactivity.",
@@ -79,8 +79,8 @@
       "10dbf16406d4d02332358a3f18f003e725e66e8fc38297b5ea9901122580c568": "Sandy Maze Mirages appear on Days 1, 3 and 5. Leagues compete by total kills in each Mirage; the league in first place when the countdown ends earns the points. Mirage locations can vary, so check the active sites in your event."
     },
     "note-18": {
-      "afb636c0927064fbad784356a9bacf661e3cef05a1276a747a54b1ba3fef2122": "Mirage rewards are League Points. The league with the most kills when the countdown ends receives the objective’s league-point reward. These points count toward league rankings; they are separate from personal Merit Points and team milestone progress.",
-      "dc22e2984083150ec85566734c40bc8456398f157a25ed054b5f060ec290de29": "Mirage rewards are League Points. The league with the most kills when the countdown ends receives the objective’s league-point reward. These points count toward league rankings; they are separate from personal Merit Points and team milestone progress."
+      "afb636c0927064fbad784356a9bacf661e3cef05a1276a747a54b1ba3fef2122": "Mirage rewards are League Points. The league with the most kills when the countdown ends receives the objective’s league-point reward. These points count toward league rankings.",
+      "dc22e2984083150ec85566734c40bc8456398f157a25ed054b5f060ec290de29": "Mirage rewards are League Points. The league with the most kills when the countdown ends receives the objective’s league-point reward. These points count toward league rankings."
     },
     "text-34": {
       "43a63ccad8fb4b2566e110b679d074d674311f2265f3244e7b54a0e3a90d479d": "Normal rallies have three sizes: 4, 8 or 12 participants. The new officer rally allows 30 participants at the Lv 13 boost. Each League Leader, Elite and Vanguard receives one officer-rally use per day, starting the day after appointment; unused uses expire that day.",
