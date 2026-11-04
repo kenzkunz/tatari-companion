@@ -23,7 +23,7 @@ $('zoom-in').onclick=()=>setZoom(zoom+.5);$('zoom-out').onclick=()=>setZoom(zoom
 $('undo').onclick=()=>{const changes=history[mapKey()].pop();if(!changes)return;for(const [id,previous] of changes){if(previous)state[mapKey()][id]=previous;else delete state[mapKey()][id];color(map().tiles.find(t=>t.id===id));}persist();$('tile-status').textContent='Last change undone.';};
 $('clear-map').onclick=()=>{const changes=map().tiles.filter(t=>owner(t).id).map(t=>[t.id,owner(t).id,0]);if(!changes.length)return;history[mapKey()].push(changes);state[mapKey()]={};for(const t of map().tiles)color(t);persist();$('tile-status').textContent='Map cleared. Use Undo to restore it.';};
 new ResizeObserver(()=>setZoom(zoom)).observe(viewport);
-try{const response=await fetch(new URL('./map-layout.json?v=mirage5',import.meta.url));if(!response.ok)throw Error('Map unavailable');data=await response.json();for(const [key,m] of Object.entries(data.maps))if(!savedModes.has(key))state[key]={...(m.defaultOwners||{}),...state[key]};render();}catch{$('map-summary').textContent='The map could not load. Please reload the page.';$('save-status').textContent='';}
+try{const response=await fetch(new URL('./map-layout.json?v=lost7',import.meta.url));if(!response.ok)throw Error('Map unavailable');data=await response.json();for(const [key,m] of Object.entries(data.maps))if(!savedModes.has(key))state[key]={...(m.defaultOwners||{}),...state[key]};render();}catch{$('map-summary').textContent='The map could not load. Please reload the page.';$('save-status').textContent='';}
 
 $('map-theme').addEventListener('change',()=>{if(!data)return;theme=$('map-theme').value;render();});
 $('map-day').addEventListener('change',()=>{if(!data)return;day=Number($('map-day').value);render();});
