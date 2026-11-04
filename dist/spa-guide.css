@@ -13,3 +13,5 @@ body[data-guide=spa] .spa-skin-gallery summary .spa-row-head{width:32px;height:3
 body[data-guide=spa] .spa-skin-grid{padding:14px;background:#fff8dd;border-top:1px solid #ded5bf}
 
 body[data-guide=spa] .spa-banner{display:block;width:min(480px,100%);margin:24px auto;padding:0;background:transparent;border:0;border-radius:0}body[data-guide=spa] .spa-banner img{display:block;width:100%;height:auto;object-fit:contain}
+
+body[data-guide=spa] .spa-buff-list summary .spa-buff-icon{display:block;width:32px;height:32px;min-width:32px;max-width:32px;flex:0 0 32px;overflow:hidden}

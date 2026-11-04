@@ -105,8 +105,10 @@
   },
   "events/sparkly-spa.html": {
     "text-29": {
-      "0063afeccdb545febd1345adc87dc6a2b59748ff38273dad658d97e6d0717ba8": "Duplicate Sparkle appearances convert into Glitter Fruits. Check the reward amount shown on the result screen; duplicates are not confirmed to always give one fruit. Each supported Tatari has five Standard and two Rare appearances. Sparkle appearances are cosmetic; the Spa’s temporary buffs are separate.",
-      "c7b640a4d9cffdcbb2e03f2c4db194060962f9a14d1179734e8bbb5dee35f3d7": "@rich-v1:[{\"text\":\"Duplicate Sparkle appearances convert into +1 Glitter Fruits \"},{\"tag\":\"em\",\"children\":[{\"text\":\"(There's currently a visual tooltip bug that show you +5 Glitter Fruits upon your first Sparkle obtained variant, you won't receive +5 at any means)\"}]},{\"text\":\". Each supported Tatari has five Standard and two Rare appearances. Sparkle appearances are cosmetic; the Spa’s temporary buffs are separate.\"}]"
+      "0063afeccdb545febd1345adc87dc6a2b59748ff38273dad658d97e6d0717ba8": "Duplicate Sparkle appearances convert into +1 Glitter Fruit. Each supported Tatari has five Standard and two Rare appearances. Sparkle appearances are cosmetic; the Spa’s temporary buffs are separate.",
+      "c7b640a4d9cffdcbb2e03f2c4db194060962f9a14d1179734e8bbb5dee35f3d7": "Duplicate Sparkle appearances convert into +1 Glitter Fruit. Each supported Tatari has five Standard and two Rare appearances. Sparkle appearances are cosmetic; the Spa’s temporary buffs are separate.",
+      "0cd6f6ee8770d0d21db2b86527a6ec63cdabbb0598955ef8baeb8ccd25a7fd05": "Duplicate Sparkle appearances convert into +1 Glitter Fruit. Each supported Tatari has five Standard and two Rare appearances. Sparkle appearances are cosmetic; the Spa’s temporary buffs are separate.",
+      "046280fd610a3283fd3161031bb016fdf2cfcd13598bbdadb9ce1327e2c782fa": "Duplicate Sparkle appearances convert into +1 Glitter Fruit. Each supported Tatari has five Standard and two Rare appearances. Sparkle appearances are cosmetic; the Spa’s temporary buffs are separate."
     },
     "text-33": {
       "5ea2d915cb557e051662d7196e3f4b47f9d118dc838ab6e6a0ab801c748fcdc6": "Check your active spa",
@@ -132,8 +134,9 @@
       "f45197c31d4474ee93548c753d126dbda339e71e683bbb4d9827992ed1974c60": "Spa Soap and upgrades"
     },
     "text-5": {
-      "e217a7022aab48e6a8a81247c59d7b27b04d68f58f7b7de298f9f6bc02507128": "Sandy Maze Goldrush MVP rewards give 180, 150, 120 or 100 Spa Soap for league ranks I–IV. Check the in-game shop for other available sources.",
-      "3bb569e7c06473d92704905a1c4a74c858d0ed7794371d84e59be6919bb83cd3": "Sandy Maze Goldrush MVP rewards give 180, 150, 120 or 100 Spa Soap for league ranks I–IV. Check the in-game shop for other available sources."
+      "e217a7022aab48e6a8a81247c59d7b27b04d68f58f7b7de298f9f6bc02507128": "Sandy Maze Goldrush MVP rewards give 180, 150, 120 or 100 Spa Soap for league ranks I–IV. Other Soap offers depend on shop availability.",
+      "3bb569e7c06473d92704905a1c4a74c858d0ed7794371d84e59be6919bb83cd3": "Sandy Maze Goldrush MVP rewards give 180, 150, 120 or 100 Spa Soap for league ranks I–IV. Other Soap offers depend on shop availability.",
+      "f625b976f904c0624d4ec0bfd43c8dd940c069b1d0b1f9bf4f99187439de1eb5": "Sandy Maze Goldrush MVP rewards give 180, 150, 120 or 100 Spa Soap for league ranks I–IV. Other Soap offers depend on shop availability."
     },
     "text-8": {
       "d8edfd3679e3c8d4ee79b0d44164e8f726fa73d02fd27596fdba5e89ec98fe2a": "Gain 50 Sparkle progress at daily settlement at every spa level."
@@ -184,11 +187,13 @@
       "25b7a683de9b2b2481ca3e48fac26fab8c9f3ae044990f93ef15705a94f00b9a": "Weekly buff rotation"
     },
     "text-27": {
-      "e888b4f8a84025cca0c41fb764f370a7e4a7ed41ae8dfe9e2b2d06cccbe6a5e4": "The weekly special pair follows the UTC calendar using the game’s server time. Opening a spa locks that pair for its entire session; upgrading changes its strength, not its combination. A rotation affects newly opened spas only."
+      "e888b4f8a84025cca0c41fb764f370a7e4a7ed41ae8dfe9e2b2d06cccbe6a5e4": "The weekly special pair follows the UTC calendar using the game’s server time starting from patch 0.51 on November 5, 2026. Opening a spa locks that pair for its entire session; upgrading changes its strength, not its combination. A rotation affects newly opened spas only.",
+      "e847070695dd802d93e50a2ac7ce75293a0732869a0605dd47b0d0b50f1e2de1": "The weekly special pair follows the UTC calendar using the game’s server time starting from patch 0.51 on November 5, 2026. Opening a spa locks that pair for its entire session; upgrading changes its strength, not its combination. A rotation affects newly opened spas only."
     },
     "note-6": {
-      "3348ccdad39ee494ccf7260f5c8a522ceefdfbfbefc18aba510fa822ee574c84": "This is the opening schedule, not a live reading of your account. An existing spa can still have the previous pair. Check the in-game opening preview before spending Soap.",
-      "ec42f5174d1c8675533f10606807fda98a7a78533de1502884b085af4417d3c3": "This is the opening schedule, not a live reading of your account. An existing spa can still have the previous pair. Check the in-game opening preview before spending Soap."
+      "3348ccdad39ee494ccf7260f5c8a522ceefdfbfbefc18aba510fa822ee574c84": "This is the opening schedule, not a live reading of your account. An existing spa can still have the previous pair. Review the opening preview before spending Soap.",
+      "ec42f5174d1c8675533f10606807fda98a7a78533de1502884b085af4417d3c3": "This is the opening schedule, not a live reading of your account. An existing spa can still have the previous pair. Review the opening preview before spending Soap.",
+      "c71deccbe31b044b396274a76f031b847a56542eadad555e65a4d627f03b4ee4": "This is the opening schedule, not a live reading of your account. An existing spa can still have the previous pair. Review the opening preview before spending Soap."
     },
     "list-1": {
       "8f114ca2997047b4db8c071af713d544dc091d067d3c76c40c11816a3562fd9a": "Keep your chosen spa active at the end of the UTC day. Sparkle progress is a fixed buff at all four upgrade levels."
