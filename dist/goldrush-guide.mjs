@@ -14,8 +14,8 @@ function renderGuide(){
  $('daily-rows').replaceChildren(...data.daily.map(d=>row(['Day '+d.Day,d.mirages?d.mirages+' Mirage sites':d.cities?'Lost City':'No special objective',d.ScoreRatePct+'% ('+fmt(d.ScoreRatePct/100)+'×)',...(data.leagues===8?[d.arena?'Open':'Closed']:[])])));
  $('role-rows').replaceChildren(...data.roles.map(r=>{const title=el('span',undefined,'gold-icon-value');if(r.art)title.append(img(data.assets[r.art]));title.append(el('span',r.name));return row([title,r.slots??'—',r.discount+'%',r.art?(r.art==='leader'?'Manage titles, mark tiles, post announcements'+(data.leagues===8?', approve league transfers':'')+'; ':'Mark tiles, post announcements; ')+'1 officer rally / day from the next day':'Follow the league plan']);}));
  $('mode-leagues').textContent=data.leagues+' competing leagues';$('mode-team-size').textContent=data.teamSize+' players';$('mode-capacity').textContent=data.leagues===4?'50 teams per day':'10 → 20 teams across Days 1–6';
- $('mode-summary').textContent=data.name+' · '+data.leagues+' leagues · '+data.teamSize+'-player teams. Tables on this page apply to this event.';
- $('objective-rows').replaceChildren(...data.objectives.map(o=>row([o.name,o.leaguePoints.map((n,i)=>o.name==='Lost City'?(i+1)+': '+fmt(n):fmt(n)).join(o.name==='Lost City'?' · ':' or '),data.leagues===4?'1st-place league':o.clueBonus?'1 clue · +'+o.clueBonus+'% Lost City kill count':'No new clue'])));
+ if($('mode-summary'))$('mode-summary').textContent=data.name+' · '+data.leagues+' leagues · '+data.teamSize+'-player teams. Tables on this page apply to this event.';
+ $('objective-rows').replaceChildren(...data.objectives.map(o=>row([o.name,iconText(data.assets.productionPoints,o.leaguePoints.map((n,i)=>o.name==='Lost City'?(i+1)+': '+fmt(n):fmt(n)).join(o.name==='Lost City'?' · ':' or '),'League Points'),data.leagues===4?'1st-place league':o.clueBonus?'1 clue · +'+o.clueBonus+'% Lost City kill count':'No new clue'])));
  $('reward-league').replaceChildren(...Array.from({length:data.leagues},(_,i)=>{const o=el('option','Rank '+(i+1));o.value=i+1;return o;}));
  rewards();
 }

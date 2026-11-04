@@ -76,7 +76,8 @@
       "cf0d2fc0926b218df4a16097ae17a7d8b15217f3c82ded038fac472afa58e7cc": "Mirage battles"
     },
     "text-32": {
-      "10dbf16406d4d02332358a3f18f003e725e66e8fc38297b5ea9901122580c568": "Sandy Maze Mirages appear on Days 1, 3 and 5. Leagues compete by total kills in each Mirage; the league in first place when the countdown ends earns the points. Mirage locations can vary, so check the active sites in your event."
+      "10dbf16406d4d02332358a3f18f003e725e66e8fc38297b5ea9901122580c568": "@rich-v1:[{\"text\":\"Sandy Maze Mirages appear on Days 1, 3 and 5. Leagues compete by total kills in each Mirage; the league in first place when the countdown ends earns the points. Check \"},{\"tag\":\"a\",\"href\":\"/map.html\",\"children\":[{\"text\":\"Goldrush Map\"}]},{\"text\":\" for Mirage locations.\"}]",
+      "0bb66587266f4807126df479ccad3f7abd5d61aa998524c633cf1116bda38e01": "@rich-v1:[{\"text\":\"Sandy Maze Mirages appear on Days 1, 3 and 5. Leagues compete by total kills in each Mirage; the league in first place when the countdown ends earns the points. Check \"},{\"tag\":\"a\",\"href\":\"/map.html\",\"children\":[{\"text\":\"Goldrush Map\"}]},{\"text\":\" for Mirage locations.\"}]"
     },
     "note-18": {
       "afb636c0927064fbad784356a9bacf661e3cef05a1276a747a54b1ba3fef2122": "Mirage rewards are League Points. The league with the most kills when the countdown ends receives the objective’s league-point reward. These points count toward league rankings.",
