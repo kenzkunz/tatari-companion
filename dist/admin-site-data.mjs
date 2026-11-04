@@ -1,5 +1,5 @@
 import {confirmDialog} from './site-dialogs.mjs?v=1';
-import {applySourceValues,guideDerived,validateEditorValues} from './site-data-model.mjs?v=site-data5';
+import {applySourceValues,guideDerived,validateEditorValues} from './site-data-model.mjs?v=events6';
 import {regularAt,pvpAt,DAY} from './schedule-model.mjs';
 import {renderFooter} from './site-footer.mjs?v=footer2';
 import {renderAnnouncement} from './announcement-view.mjs?v=ticker2';

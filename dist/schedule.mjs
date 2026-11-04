@@ -1,5 +1,5 @@
-import {loadAppData} from '/site-data.mjs?v=site-data5';
-import {DAY,regularAt,pvpAt,hordeAt,dayEvents} from '/schedule-model.mjs';
+import {loadAppData} from '/site-data.mjs?v=events6';
+import {DAY,regularAt,pvpAt,hordeAt,dayEvents} from '/schedule-model.mjs?v=events6';
 
 const byId=id=>document.getElementById(id);
 const definitions={
@@ -7,6 +7,7 @@ const definitions={
   'Fishing Contest':{short:'Fishing',icon:'fishingcontest.png',guide:'fishing'},
   'Treasure Hunt':{short:'Treasure',icon:'treasurehunt.png',guide:'treasure-hunt'},
   'Raft Race':{short:'Raft',icon:'raftrace.png',guide:'raft-race'},
+  'Artifact Adventure':{short:'Adv',icon:'adventure-icon.webp',guide:'artifact-adventure'},
   'Zobo Shooter':{short:'Zobo',icon:'zoboshooter.png',guide:'zobo-shooter'},
   'Gold Rush #1':{short:'GR#1',icon:'goldrush.png',guide:null},
   'Gold Rush #2':{short:'GR#2',icon:'goldrush.png',guide:null},
@@ -18,6 +19,7 @@ const filterNames=Object.keys(definitions).filter(name=>name!=='Horde Invasion')
 const checked=new Set(filterNames);
 const utcDay=()=>Math.floor(Date.now()/DAY)*DAY;
 const dateText=ms=>new Intl.DateTimeFormat('en',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'}).format(ms);
+let spaData;
 let data,monthOffset=0,selectedDate=utcDay(),renderedDay=utcDay(),feedSignature='';
 
 function el(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;}
@@ -27,7 +29,7 @@ function countdown(end){const seconds=Math.max(0,Math.floor((end-Date.now())/100
 function feed(){
   const now=Date.now(),regular=regularAt(now,data.events.regular),nextRegular=regularAt(regular.end,data.events.regular),pvp=pvpAt(now,data.events.pvp),nextPvp=pvpAt(pvp.end,data.events.pvp),horde=hordeAt(now,data.horde);
   const live=[{name:regular.name,phase:`Day ${regular.day} of ${data.events.regular.duration_days}`,start:regular.start,end:regular.end,label:'Ends in'}];
-  const upcoming=[{name:nextRegular.name,phase:'Next rotating event',end:nextRegular.start,label:'Starts in'}];
+  const upcoming=[{name:nextRegular.name,phase:nextRegular.name==='Artifact Adventure'&&now>=nextRegular.start-DAY?'Enrollment open':'Next rotating event',end:nextRegular.start,label:'Starts in'}];
   if(horde.live)live.push({name:'Horde Invasion',phase:'Invasion active',end:Math.round(horde.end),label:'Ends in'});
   else upcoming.push({name:'Horde Invasion',phase:'Settlement in progress',end:Math.round(horde.end),label:'Starts in'});
   if(pvp.registration)upcoming.push({name:pvp.name,phase:'Registration open',end:pvp.start,label:'Starts in'});
@@ -76,8 +78,19 @@ function renderDetail(){
     text.append(heading,el('p','',event.registration?'Registration day':`Day ${event.day||Number(event.label.match(/D(\d+)/)?.[1])}`));
     row.append(picture(name),text);target.append(row);
   }
-  if(!target.childElementCount)target.append(el('p','empty-events','No events match your selected filters.'));
+  if(!target.childElementCount)target.append(el('p','empty-events','No events match your selected filters.'));renderSpa();
 }
+
+function renderSpa(){
+  const target=byId('spa-week-effects'),label=byId('spa-week-label'),next=byId('spa-next-week');if(!target)return;
+  const selected=new Date(selectedDate).toISOString().slice(0,10),period=spaData?.periods.find(p=>selected>=p.start&&selected<=p.end);target.replaceChildren();
+  if(!period){label.textContent=dateText(selectedDate);target.append(el('p','empty-events','Spa opening dates are not available for this day.'));next.textContent='';return;}
+  const short=ms=>new Intl.DateTimeFormat('en',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(ms);
+  label.textContent=short(Date.parse(period.start))+' – '+short(Date.parse(period.end))+' · UTC';
+  for(const id of period.groups){const effect=spaData.buffs[id],card=el('div','spa-week-effect'),icon=el('span','spa-week-icon'),text=el('div');icon.innerHTML=effect.icon;text.append(el('strong','',effect.name),el('p','',effect.description));card.append(icon,text);target.append(card);}
+  const following=spaData.periods[spaData.periods.indexOf(period)+1];next.textContent=following?'Next pair · '+short(Date.parse(following.start))+': '+following.groups.map(id=>spaData.buffs[id].name).join(' + '):'';
+}
+
 function renderCalendar(){
   const today=new Date(),first=Date.UTC(today.getUTCFullYear(),today.getUTCMonth()+monthOffset,1),month=new Date(first),days=new Date(Date.UTC(month.getUTCFullYear(),month.getUTCMonth()+1,0)).getUTCDate(),offset=(month.getUTCDay()+6)%7;
   byId('month-title').textContent=new Intl.DateTimeFormat('en',{month:'long',year:'numeric',timeZone:'UTC'}).format(first);
@@ -107,4 +120,4 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')document.que
 let swipeStart;const surface=document.querySelector('.calendar-body');surface.addEventListener('touchstart',event=>{swipeStart=event.touches.length===1?{x:event.touches[0].clientX,y:event.touches[0].clientY}:null;},{passive:true});surface.addEventListener('touchend',event=>{if(!swipeStart||!event.changedTouches.length)return;const dx=event.changedTouches[0].clientX-swipeStart.x,dy=event.changedTouches[0].clientY-swipeStart.y;swipeStart=null;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)selectMonth(dx<0?1:-1);},{passive:true});surface.addEventListener('touchcancel',()=>swipeStart=null,{passive:true});
 function tick(){byId('reset-timer').textContent=countdown(utcDay()+DAY);for(const timer of document.querySelectorAll('[data-end]'))timer.textContent=countdown(Number(timer.dataset.end));if(data){const day=utcDay();if(day!==renderedDay){renderedDay=day;monthOffset=0;selectedDate=day;renderCalendar();}if(feedSignature!==JSON.stringify(feed()))renderFeed();}byId('today-label').textContent=new Intl.DateTimeFormat('en',{day:'numeric',month:'short',timeZone:'UTC'}).format(Date.now());}
 tick();setInterval(tick,1000);
-try{data=await loadAppData();renderFeed();renderCalendar();}catch{const retry=el('button','','Retry');retry.type='button';retry.addEventListener('click',()=>location.reload());const error=el('p','empty-events','Schedule data could not load. ');error.setAttribute('role','alert');error.append(retry);byId('event-list').replaceChildren(error);}
+try{[data,spaData]=await Promise.all([loadAppData(),fetch(new URL('./spa-calendar.json?v=events6',import.meta.url)).then(response=>{if(!response.ok)throw Error('Spa dates unavailable');return response.json();}).catch(()=>null)]);renderFeed();renderCalendar();}catch{const retry=el('button','','Retry');retry.type='button';retry.addEventListener('click',()=>location.reload());const error=el('p','empty-events','Schedule data could not load. ');error.setAttribute('role','alert');error.append(retry);byId('event-list').replaceChildren(error);}

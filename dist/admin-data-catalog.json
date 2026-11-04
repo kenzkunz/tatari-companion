@@ -12,11 +12,12 @@
           "group": "Regular rotation",
           "type": "string",
           "options": [
+            "Fishing Contest",
             "Treasure Hunt",
             "Raft Race",
+            "Artifact Adventure",
             "Zobo Shooter",
-            "Cozy Farm",
-            "Fishing Contest"
+            "Cozy Farm"
           ]
         },
         "events.regular.events.1": {
@@ -24,11 +25,12 @@
           "group": "Regular rotation",
           "type": "string",
           "options": [
+            "Fishing Contest",
             "Treasure Hunt",
             "Raft Race",
+            "Artifact Adventure",
             "Zobo Shooter",
-            "Cozy Farm",
-            "Fishing Contest"
+            "Cozy Farm"
           ]
         },
         "events.regular.events.2": {
@@ -36,11 +38,12 @@
           "group": "Regular rotation",
           "type": "string",
           "options": [
+            "Fishing Contest",
             "Treasure Hunt",
             "Raft Race",
+            "Artifact Adventure",
             "Zobo Shooter",
-            "Cozy Farm",
-            "Fishing Contest"
+            "Cozy Farm"
           ]
         },
         "events.regular.events.3": {
@@ -48,11 +51,12 @@
           "group": "Regular rotation",
           "type": "string",
           "options": [
+            "Fishing Contest",
             "Treasure Hunt",
             "Raft Race",
+            "Artifact Adventure",
             "Zobo Shooter",
-            "Cozy Farm",
-            "Fishing Contest"
+            "Cozy Farm"
           ]
         },
         "events.regular.events.4": {
@@ -60,11 +64,12 @@
           "group": "Regular rotation",
           "type": "string",
           "options": [
+            "Fishing Contest",
             "Treasure Hunt",
             "Raft Race",
+            "Artifact Adventure",
             "Zobo Shooter",
-            "Cozy Farm",
-            "Fishing Contest"
+            "Cozy Farm"
           ]
         },
         "events.regular.anchor.date": {
@@ -78,11 +83,12 @@
           "group": "Regular rotation",
           "type": "string",
           "options": [
+            "Fishing Contest",
             "Treasure Hunt",
             "Raft Race",
+            "Artifact Adventure",
             "Zobo Shooter",
-            "Cozy Farm",
-            "Fishing Contest"
+            "Cozy Farm"
           ]
         },
         "events.regular.duration_days": {
@@ -185,16 +191,29 @@
           "min": 0,
           "max": 604799,
           "integer": true
+        },
+        "events.regular.events.5": {
+          "label": "Position 6",
+          "group": "Regular rotation",
+          "type": "string",
+          "options": [
+            "Fishing Contest",
+            "Treasure Hunt",
+            "Raft Race",
+            "Artifact Adventure",
+            "Zobo Shooter",
+            "Cozy Farm"
+          ]
         }
       },
       "defaults": {
-        "events.regular.events.0": "Treasure Hunt",
-        "events.regular.events.1": "Raft Race",
-        "events.regular.events.2": "Zobo Shooter",
-        "events.regular.events.3": "Cozy Farm",
-        "events.regular.events.4": "Fishing Contest",
-        "events.regular.anchor.date": "2026-09-24",
-        "events.regular.anchor.event": "Treasure Hunt",
+        "events.regular.events.0": "Fishing Contest",
+        "events.regular.events.1": "Treasure Hunt",
+        "events.regular.events.2": "Raft Race",
+        "events.regular.events.3": "Artifact Adventure",
+        "events.regular.events.4": "Zobo Shooter",
+        "events.regular.anchor.date": "2026-11-05",
+        "events.regular.anchor.event": "Fishing Contest",
         "events.regular.duration_days": 3,
         "events.pvp.events.0": "Gold Rush #1",
         "events.pvp.events.1": "Gold Rush #2",
@@ -205,9 +224,10 @@
         "events.pvp.duration_days": 6,
         "events.pvp.registration_days": 1,
         "horde.cycle_seconds": 14400,
-        "horde.rest_seconds": 3600
+        "horde.rest_seconds": 3600,
+        "events.regular.events.5": "Cozy Farm"
       },
-      "baseline": "1fc812c37ff00b4f0e48d9b3356d18462477bf0ca1a38ea00ae724b5a9aace3e"
+      "baseline": "d6fe414353c966623e4a9520f89f87736d3922426d548f072859e057e01c669e"
     },
     {
       "key": "footer",
