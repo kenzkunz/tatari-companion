@@ -2599,5 +2599,329 @@
     "order": 31,
     "section": "pending",
     "sectionTitle": "Still being checked"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-intro",
+    "label": "Introduction",
+    "default": "Explore the ruins with three teammates, improve your Torch, and build a collection of valuable artifacts. Here’s how to manage Zobo encounters and work toward milestone and ranking rewards.",
+    "order": 1,
+    "section": "intro",
+    "sectionTitle": "Introduction"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-overview-title",
+    "label": "Heading · How to play",
+    "default": "How to play",
+    "order": 2,
+    "section": "overview",
+    "sectionTitle": "How to play"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "note-overview-quick-start",
+    "label": "Info box · Form a team of four, collect Torches from the Pinball Machine, and explore for artifacts. Push ",
+    "default": "Form a team of four, collect Torches from the Pinball Machine, and explore for artifacts. Push deeper for rarer finds or retreat to protect your bag.",
+    "order": 3,
+    "section": "overview",
+    "sectionTitle": "How to play"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "list-overview-steps-1",
+    "label": "Step · Team up during enrollment. Enrollment takes place the day before the event. Invite three other ",
+    "default": "Team up during enrollment. Enrollment takes place the day before the event. Invite three other trainers; remaining vacancies are filled by matchmaking when enrollment ends.",
+    "order": 4,
+    "section": "overview",
+    "sectionTitle": "How to play"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "list-overview-steps-2",
+    "label": "Step · Choose a Tatari and multiplier. Each advance spends Torches equal to the selected multiplier. A",
+    "default": "Choose a Tatari and multiplier. Each advance spends Torches equal to the selected multiplier. Artifact value for the session scales by that multiplier.",
+    "order": 5,
+    "section": "overview",
+    "sectionTitle": "How to play"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "list-overview-steps-3",
+    "label": "Step · Advance through the ruins. Find artifacts, receive a buff, open a chest, or encounter a Zobo.",
+    "default": "Advance through the ruins. Find artifacts, receive a buff, open a chest, or encounter a Zobo.",
+    "order": 6,
+    "section": "overview",
+    "sectionTitle": "How to play"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "list-overview-steps-4",
+    "label": "Step · Fight or retreat at a Zobo. Winning lets you collect its guarded artifact and continue. Losing ",
+    "default": "Fight or retreat at a Zobo. Winning lets you collect its guarded artifact and continue. Losing ends the session and takes some artifacts from your bag. Retreating ends the session safely and refunds the Torches spent on that encounter.",
+    "order": 7,
+    "section": "overview",
+    "sectionTitle": "How to play"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "list-overview-steps-5",
+    "label": "Step · Claim personal milestones and improve your team codex. These are two different ways to earn rew",
+    "default": "Claim personal milestones and improve your team codex. These are two different ways to earn rewards.",
+    "order": 8,
+    "section": "overview",
+    "sectionTitle": "How to play"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-overview-block-3",
+    "label": "Text · Use the event countdown for enrollment, exploration, and reward collection. Opening times can d",
+    "default": "Use the event countdown for enrollment, exploration, and reward collection. Opening times can differ between event groups.",
+    "order": 9,
+    "section": "overview",
+    "sectionTitle": "How to play"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-torches-title",
+    "label": "Heading · Torches & multipliers",
+    "default": "Torches & multipliers",
+    "order": 10,
+    "section": "torches",
+    "sectionTitle": "Torches & multipliers"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-torches-block-1",
+    "label": "Text · The starting Torch grant is 50. During the event, the Pinball Machine supplies more Torches. Mu",
+    "default": "The starting Torch grant is 50. During the event, the Pinball Machine supplies more Torches. Multipliers change the Torch cost and artifact value together; a higher multiplier does not itself promise rarer artifacts.",
+    "order": 11,
+    "section": "torches",
+    "sectionTitle": "Torches & multipliers"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-torches-block-3",
+    "label": "Text · Torch upgrades improve the reward draw stage: draw stage = current adventure stage + (Torch lev",
+    "default": "Torch upgrades improve the reward draw stage: draw stage = current adventure stage + (Torch level − 1) × 2. For example, a level 5 Torch at adventure stage 1 uses the stage 9 reward row. This changes reward draws, not your physical progress through the ruins.",
+    "order": 12,
+    "section": "torches",
+    "sectionTitle": "Torches & multipliers"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-torches-block-5",
+    "label": "Text · Claim the Torch Upgrade rewards at 900,000, 1,900,000, 5,500,000, and 20,000,000 personal point",
+    "default": "Claim the Torch Upgrade rewards at 900,000, 1,900,000, 5,500,000, and 20,000,000 personal points. The maximum Torch level is 5.",
+    "order": 13,
+    "section": "torches",
+    "sectionTitle": "Torches & multipliers"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-buffs-title",
+    "label": "Heading · Exploration buffs",
+    "default": "Exploration buffs",
+    "order": 14,
+    "section": "buffs",
+    "sectionTitle": "Exploration buffs"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-buffs-block-2",
+    "label": "Text · Rarity and value grade are different. Golden Touch guarantees the S value grade for the next ar",
+    "default": "Rarity and value grade are different. Golden Touch guarantees the S value grade for the next artifact; it does not guarantee red rarity.",
+    "order": 15,
+    "section": "buffs",
+    "sectionTitle": "Exploration buffs"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-encounters-title",
+    "label": "Heading · Zobos, support & retreat",
+    "default": "Zobos, support & retreat",
+    "order": 16,
+    "section": "encounters",
+    "sectionTitle": "Zobos, support & retreat"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-encounters-block-1",
+    "label": "Text · These encounters use a chance check. Your Tatari’s combat strength does not determine the displ",
+    "default": "These encounters use a chance check. Your Tatari’s combat strength does not determine the displayed win chance. Online teammates provide Friend Support up to level 3: +5, +8, or +10 percentage points.",
+    "order": 17,
+    "section": "encounters",
+    "sectionTitle": "Zobos, support & retreat"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "note-encounters-chance-label",
+    "label": "Info box · The table shows the displayed encounter chances. A displayed chance below 100% still carries ri",
+    "default": "The table shows the displayed encounter chances. A displayed chance below 100% still carries risk; check the encounter panel before choosing to fight.",
+    "order": 18,
+    "section": "encounters",
+    "sectionTitle": "Zobos, support & retreat"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-encounters-block-4",
+    "label": "Text · Retreat protects the artifacts currently in your bag and refunds only the Torches used for the ",
+    "default": "Retreat protects the artifacts currently in your bag and refunds only the Torches used for the triggering encounter. It does not refund all Torches spent earlier in the session. A defeat ends the session and removes part of your bag.",
+    "order": 19,
+    "section": "encounters",
+    "sectionTitle": "Zobos, support & retreat"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-encounters-encounter-details-1-block-1",
+    "label": "Text · After an encounter, the advance counter resets. The first unprotected advance has no encounter.",
+    "default": "After an encounter, the advance counter resets. The first unprotected advance has no encounter. The next table separates the chance on an advance you actually reach from the share of encounters that occur at that count. Divine Protection pauses the counter.",
+    "order": 20,
+    "section": "encounters",
+    "sectionTitle": "Zobos, support & retreat"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-scoring-title",
+    "label": "Heading · Personal points & team codex",
+    "default": "Personal points & team codex",
+    "order": 21,
+    "section": "scoring",
+    "sectionTitle": "Personal points & team codex"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-scoring-block-2",
+    "label": "Text · Finding another copy of an artifact is useful when it improves the value already recorded in th",
+    "default": "Finding another copy of an artifact is useful when it improves the value already recorded in the team codex. Team ranking is based on those best records, rather than simply adding every duplicate found by all four trainers.",
+    "order": 22,
+    "section": "scoring",
+    "sectionTitle": "Personal points & team codex"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-scoring-block-3",
+    "label": "Text · Coordinate with your teammates so you can explore while they are online for Friend Support. Upg",
+    "default": "Coordinate with your teammates so you can explore while they are online for Friend Support. Upgrade your Torch as soon as its milestone reward is available, and weigh the displayed fight chance against the artifacts you would risk losing.",
+    "order": 23,
+    "section": "scoring",
+    "sectionTitle": "Personal points & team codex"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-artifact-catalog-title",
+    "label": "Heading · Artifacts & value grades",
+    "default": "Artifacts & value grades",
+    "order": 24,
+    "section": "artifact-catalog",
+    "sectionTitle": "Artifacts & value grades"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-artifact-catalog-block-1",
+    "label": "Text · There are 20 artifacts across blue, purple, gold, and red rarities. Within each rarity, artifac",
+    "default": "There are 20 artifacts across blue, purple, gold, and red rarities. Within each rarity, artifacts also have D, C, B, A, and S value grades. The ranges below are base values before the session multiplier.",
+    "order": 25,
+    "section": "artifact-catalog",
+    "sectionTitle": "Artifacts & value grades"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-artifact-catalog-block-3",
+    "label": "Text · Golden Touch replaces the normal grade roll with S grade for the next artifact find.",
+    "default": "Golden Touch replaces the normal grade roll with S grade for the next artifact find.",
+    "order": 26,
+    "section": "artifact-catalog",
+    "sectionTitle": "Artifacts & value grades"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-advance-odds-title",
+    "label": "Heading · Reward draw chances",
+    "default": "Reward draw chances",
+    "order": 27,
+    "section": "advance-odds",
+    "sectionTitle": "Reward draw chances"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-advance-odds-block-1",
+    "label": "Text · Use the adjusted reward draw stage from the Torch formula. The percentages below apply when the",
+    "default": "Use the adjusted reward draw stage from the Torch formula. The percentages below apply when the advance does not produce a Zobo encounter. They are separate from the encounter chances above. Reward rows stop improving at draw stage 28.",
+    "order": 28,
+    "section": "advance-odds",
+    "sectionTitle": "Reward draw chances"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-chests-title",
+    "label": "Heading · Chest rewards",
+    "default": "Chest rewards",
+    "order": 29,
+    "section": "chests",
+    "sectionTitle": "Chest rewards"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-chests-block-1",
+    "label": "Text · These are the rewards for a chest opened at 100×. Scale the quantities with the session multipl",
+    "default": "These are the rewards for a chest opened at 100×. Scale the quantities with the session multiplier: at 50×, halve them. If an item would round below one, the reward is replaced with Pinballs. Candy depends on your stage-clear progress; the amount below is the base amount.",
+    "order": 30,
+    "section": "chests",
+    "sectionTitle": "Chest rewards"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-milestones-title",
+    "label": "Heading · Personal milestone rewards",
+    "default": "Personal milestone rewards",
+    "order": 31,
+    "section": "milestones",
+    "sectionTitle": "Personal milestone rewards"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-milestones-block-1",
+    "label": "Text · There are 50 personal milestones, ending at 40,000,000 points. Candy amounts are base amounts a",
+    "default": "There are 50 personal milestones, ending at 40,000,000 points. Candy amounts are base amounts and can vary with stage-clear progress.",
+    "order": 32,
+    "section": "milestones",
+    "sectionTitle": "Personal milestone rewards"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-milestones-block-3",
+    "label": "Text · After the last milestone, the repeat reward is 1 Glitter Fruit per additional 500,000 points.",
+    "default": "After the last milestone, the repeat reward is 1 Glitter Fruit per additional 500,000 points.",
+    "order": 33,
+    "section": "milestones",
+    "sectionTitle": "Personal milestone rewards"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-ranking-rewards-title",
+    "label": "Heading · Ranking rewards",
+    "default": "Ranking rewards",
+    "order": 34,
+    "section": "ranking-rewards",
+    "sectionTitle": "Ranking rewards"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-ranking-rewards-block-1",
+    "label": "Text · Team codex value determines ranking. Rewards extend through rank 50. Candy quantities below are",
+    "default": "Team codex value determines ranking. Rewards extend through rank 50. Candy quantities below are base amounts; check your reward panel for the amount that applies to your progress.",
+    "order": 35,
+    "section": "ranking-rewards",
+    "sectionTitle": "Ranking rewards"
+  },
+  {
+    "page": "events/artifact-adventure.html",
+    "block": "text-ranking-rewards-block-3",
+    "label": "Text · Rank 1 receives the diamond title, ranks 2–5 the gold title, ranks 6–10 the silver title, and r",
+    "default": "Rank 1 receives the diamond title, ranks 2–5 the gold title, ranks 6–10 the silver title, and ranks 11–20 the copper title. These titles last six days.",
+    "order": 36,
+    "section": "ranking-rewards",
+    "sectionTitle": "Ranking rewards"
   }
 ]
