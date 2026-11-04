@@ -10905,6 +10905,133 @@
       "baseline": "5c0ddb0ef617e2d9586bf17dd4af33045cb2170205fbcbb276ba7ced9bf83615"
     },
     {
+      "key": "guide:horde",
+      "title": "Horde",
+      "source": "guide-data/horde.json",
+      "locked": "Read-only mechanics dataset. Horde costs, waves and stats are shared with the drafter; Spa mechanics contain reviewed and unresolved source data. Update these through a tested data release.",
+      "schema": {},
+      "defaults": {},
+      "readOnlySummary": [
+        {
+          "name": "version",
+          "records": 1
+        },
+        {
+          "name": "season",
+          "records": 1
+        },
+        {
+          "name": "waves",
+          "records": 150
+        },
+        {
+          "name": "chips",
+          "records": 49
+        },
+        {
+          "name": "ranks",
+          "records": 8
+        }
+      ],
+      "baseline": "0477d2f2e773147b406b06411e1c3a5c9dd4b3c680b5f1f64005000f26431fd7"
+    },
+    {
+      "key": "guide:spa-audit",
+      "title": "Sparkly Spa",
+      "source": "guide-data/spa-audit.json",
+      "locked": "Read-only mechanics dataset. Horde costs, waves and stats are shared with the drafter; Spa mechanics contain reviewed and unresolved source data. Update these through a tested data release.",
+      "schema": {},
+      "defaults": {},
+      "readOnlySummary": [
+        {
+          "name": "version",
+          "records": 1
+        },
+        {
+          "name": "buffs",
+          "records": 32
+        },
+        {
+          "name": "parameters",
+          "records": 9
+        },
+        {
+          "name": "skinCounts",
+          "records": 4
+        }
+      ],
+      "baseline": "0477d2f2e773147b406b06411e1c3a5c9dd4b3c680b5f1f64005000f26431fd7"
+    },
+    {
+      "key": "announcement",
+      "title": "Announcements",
+      "source": "announcement-defaults.json",
+      "locked": "One shared announcement below the navbar. Hidden turns it off across public pages. A new published version appears again to visitors who dismissed an older version.",
+      "schema": {
+        "visibility": {
+          "label": "Visibility",
+          "group": "Announcement",
+          "type": "string",
+          "maxLength": 500,
+          "options": [
+            "Hidden",
+            "Visible"
+          ]
+        },
+        "label": {
+          "label": "Small label",
+          "group": "Announcement",
+          "type": "string",
+          "maxLength": 500
+        },
+        "headline": {
+          "label": "Headline",
+          "group": "Announcement",
+          "type": "string",
+          "maxLength": 500
+        },
+        "message": {
+          "label": "Message",
+          "group": "Announcement",
+          "type": "string",
+          "maxLength": 500
+        },
+        "extraLabel": {
+          "label": "Button text (optional)",
+          "group": "Announcement",
+          "type": "string",
+          "maxLength": 500
+        },
+        "extraUrl": {
+          "label": "Button HTTPS URL (optional)",
+          "group": "Announcement",
+          "type": "string",
+          "maxLength": 500,
+          "format": "url"
+        },
+        "dismissible": {
+          "label": "Allow dismissal",
+          "group": "Announcement",
+          "type": "string",
+          "maxLength": 500,
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      },
+      "defaults": {
+        "visibility": "Hidden",
+        "label": "NEW UPDATE",
+        "headline": "Foil cards are here.",
+        "message": "Track your foil collection and find the variant you need.",
+        "extraLabel": "View My Album",
+        "extraUrl": "https://kenzkunz.github.io/tatari-companion/my-album.html",
+        "dismissible": "Yes"
+      },
+      "baseline": "11780ba9bae9c3f52d904d4a897831a089b6ad8dd55150f2d0baae2d0700ebb3"
+    },
+    {
       "key": "guide:goldrush",
       "title": "Sandy Maze Goldrush",
       "source": "guide-data/goldrush.json",
@@ -10919,7 +11046,7 @@
           "integer": true
         },
         "tiles.0.perMinute": {
-          "label": "Small Plain points per minute",
+          "label": "Small Plain league points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10935,7 +11062,7 @@
           "integer": true
         },
         "tiles.1.perMinute": {
-          "label": "Plain points per minute",
+          "label": "Plain league points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10951,7 +11078,7 @@
           "integer": true
         },
         "tiles.2.perMinute": {
-          "label": "Dune points per minute",
+          "label": "Dune league points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10967,7 +11094,7 @@
           "integer": true
         },
         "tiles.3.perMinute": {
-          "label": "Small Gold Mine points per minute",
+          "label": "Small Gold Mine league points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10983,7 +11110,7 @@
           "integer": true
         },
         "tiles.4.perMinute": {
-          "label": "Gold Mine points per minute",
+          "label": "Gold Mine league points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -10999,7 +11126,7 @@
           "integer": true
         },
         "tiles.5.perMinute": {
-          "label": "Precious Gold Mine points per minute",
+          "label": "Precious Gold Mine league points per minute",
           "group": "Tiles",
           "type": "number",
           "min": 0,
@@ -11007,7 +11134,7 @@
           "integer": true
         },
         "attackRewards.0.reward.0.amount": {
-          "label": "Row 1 · Points",
+          "label": "Row 1 · Merit Points",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11015,7 +11142,7 @@
           "integer": true
         },
         "attackRewards.0.rally_reward.0.amount": {
-          "label": "Row 1 · Points (rally)",
+          "label": "Row 1 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11031,7 +11158,7 @@
           "integer": true
         },
         "attackRewards.1.rally_reward.0.amount": {
-          "label": "Row 2 · Points (rally)",
+          "label": "Row 2 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11039,7 +11166,7 @@
           "integer": true
         },
         "attackRewards.2.reward.0.amount": {
-          "label": "Row 3 · Points",
+          "label": "Row 3 · Merit Points",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11047,7 +11174,7 @@
           "integer": true
         },
         "attackRewards.2.rally_reward.0.amount": {
-          "label": "Row 3 · Points (rally)",
+          "label": "Row 3 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11063,7 +11190,7 @@
           "integer": true
         },
         "attackRewards.3.rally_reward.0.amount": {
-          "label": "Row 4 · Points (rally)",
+          "label": "Row 4 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11071,7 +11198,7 @@
           "integer": true
         },
         "attackRewards.4.reward.0.amount": {
-          "label": "Row 5 · Points",
+          "label": "Row 5 · Merit Points",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11079,7 +11206,7 @@
           "integer": true
         },
         "attackRewards.4.rally_reward.0.amount": {
-          "label": "Row 5 · Points (rally)",
+          "label": "Row 5 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11095,7 +11222,7 @@
           "integer": true
         },
         "attackRewards.5.rally_reward.0.amount": {
-          "label": "Row 6 · Points (rally)",
+          "label": "Row 6 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11103,7 +11230,7 @@
           "integer": true
         },
         "attackRewards.6.reward.0.amount": {
-          "label": "Row 7 · Points",
+          "label": "Row 7 · Merit Points",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11111,7 +11238,7 @@
           "integer": true
         },
         "attackRewards.6.rally_reward.0.amount": {
-          "label": "Row 7 · Points (rally)",
+          "label": "Row 7 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11127,7 +11254,7 @@
           "integer": true
         },
         "attackRewards.7.rally_reward.0.amount": {
-          "label": "Row 8 · Points (rally)",
+          "label": "Row 8 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11135,7 +11262,7 @@
           "integer": true
         },
         "attackRewards.8.reward.0.amount": {
-          "label": "Row 9 · Points",
+          "label": "Row 9 · Merit Points",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11143,7 +11270,7 @@
           "integer": true
         },
         "attackRewards.8.rally_reward.0.amount": {
-          "label": "Row 9 · Points (rally)",
+          "label": "Row 9 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11159,7 +11286,7 @@
           "integer": true
         },
         "attackRewards.9.rally_reward.0.amount": {
-          "label": "Row 10 · Points (rally)",
+          "label": "Row 10 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11167,7 +11294,7 @@
           "integer": true
         },
         "attackRewards.10.reward.0.amount": {
-          "label": "Row 11 · Points",
+          "label": "Row 11 · Merit Points",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11175,7 +11302,7 @@
           "integer": true
         },
         "attackRewards.10.rally_reward.0.amount": {
-          "label": "Row 11 · Points (rally)",
+          "label": "Row 11 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11191,7 +11318,7 @@
           "integer": true
         },
         "attackRewards.11.rally_reward.0.amount": {
-          "label": "Row 12 · Points (rally)",
+          "label": "Row 12 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11199,7 +11326,7 @@
           "integer": true
         },
         "attackRewards.12.reward.0.amount": {
-          "label": "Row 13 · Points",
+          "label": "Row 13 · Merit Points",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11207,7 +11334,7 @@
           "integer": true
         },
         "attackRewards.12.rally_reward.0.amount": {
-          "label": "Row 13 · Points (rally)",
+          "label": "Row 13 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11223,7 +11350,7 @@
           "integer": true
         },
         "attackRewards.13.rally_reward.0.amount": {
-          "label": "Row 14 · Points (rally)",
+          "label": "Row 14 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11231,7 +11358,7 @@
           "integer": true
         },
         "attackRewards.14.reward.0.amount": {
-          "label": "Row 15 · Points",
+          "label": "Row 15 · Merit Points",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -11239,7 +11366,7 @@
           "integer": true
         },
         "attackRewards.14.rally_reward.0.amount": {
-          "label": "Row 15 · Points (rally)",
+          "label": "Row 15 · Merit Points (rally)",
           "group": "attackRewards",
           "type": "number",
           "min": 0,
@@ -13223,7 +13350,7 @@
           "integer": true
         },
         "teamMilestones.0.points": {
-          "label": "Milestone 1 points",
+          "label": "Milestone 1 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13247,7 +13374,7 @@
           "integer": true
         },
         "teamMilestones.1.points": {
-          "label": "Milestone 2 points",
+          "label": "Milestone 2 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13271,7 +13398,7 @@
           "integer": true
         },
         "teamMilestones.2.points": {
-          "label": "Milestone 3 points",
+          "label": "Milestone 3 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13295,7 +13422,7 @@
           "integer": true
         },
         "teamMilestones.3.points": {
-          "label": "Milestone 4 points",
+          "label": "Milestone 4 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13327,7 +13454,7 @@
           "integer": true
         },
         "teamMilestones.4.points": {
-          "label": "Milestone 5 points",
+          "label": "Milestone 5 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13351,7 +13478,7 @@
           "integer": true
         },
         "teamMilestones.5.points": {
-          "label": "Milestone 6 points",
+          "label": "Milestone 6 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13383,7 +13510,7 @@
           "integer": true
         },
         "teamMilestones.6.points": {
-          "label": "Milestone 7 points",
+          "label": "Milestone 7 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13415,7 +13542,7 @@
           "integer": true
         },
         "teamMilestones.7.points": {
-          "label": "Milestone 8 points",
+          "label": "Milestone 8 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13447,7 +13574,7 @@
           "integer": true
         },
         "teamMilestones.8.points": {
-          "label": "Milestone 9 points",
+          "label": "Milestone 9 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13479,7 +13606,7 @@
           "integer": true
         },
         "teamMilestones.9.points": {
-          "label": "Milestone 10 points",
+          "label": "Milestone 10 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13511,7 +13638,7 @@
           "integer": true
         },
         "teamMilestones.10.points": {
-          "label": "Milestone 11 points",
+          "label": "Milestone 11 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13543,7 +13670,7 @@
           "integer": true
         },
         "teamMilestones.11.points": {
-          "label": "Milestone 12 points",
+          "label": "Milestone 12 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13575,7 +13702,7 @@
           "integer": true
         },
         "teamMilestones.12.points": {
-          "label": "Milestone 13 points",
+          "label": "Milestone 13 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13607,7 +13734,7 @@
           "integer": true
         },
         "teamMilestones.13.points": {
-          "label": "Milestone 14 points",
+          "label": "Milestone 14 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13639,7 +13766,7 @@
           "integer": true
         },
         "teamMilestones.14.points": {
-          "label": "Milestone 15 points",
+          "label": "Milestone 15 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13671,7 +13798,7 @@
           "integer": true
         },
         "teamMilestones.15.points": {
-          "label": "Milestone 16 points",
+          "label": "Milestone 16 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13703,7 +13830,7 @@
           "integer": true
         },
         "teamMilestones.16.points": {
-          "label": "Milestone 17 points",
+          "label": "Milestone 17 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13735,7 +13862,7 @@
           "integer": true
         },
         "teamMilestones.17.points": {
-          "label": "Milestone 18 points",
+          "label": "Milestone 18 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -13767,7 +13894,7 @@
           "integer": true
         },
         "teamMilestones.18.points": {
-          "label": "Milestone 19 points",
+          "label": "Milestone 19 team points",
           "group": "Team milestones",
           "type": "number",
           "min": 0,
@@ -14321,7 +14448,7 @@
         },
         {
           "name": "assets",
-          "records": 16
+          "records": 17
         },
         {
           "name": "buffs",
@@ -14376,146 +14503,4538 @@
           "records": 1
         },
         {
-          "name": "tournament",
-          "records": 10
+          "name": "roles",
+          "records": 4
+        },
+        {
+          "name": "guideTitle",
+          "records": 1
+        },
+        {
+          "name": "inGameTitle",
+          "records": 1
+        },
+        {
+          "name": "objectives",
+          "records": 1
+        },
+        {
+          "name": "scoring",
+          "records": 3
+        }
+      ],
+      "baseline": "7864bb0426cca4c5e41cd452df7900623a96d69918e9d5e648802d43147365c5"
+    },
+    {
+      "key": "guide:dunerush",
+      "title": "Dunerush: Lost City",
+      "source": "guide-data/dunerush.json",
+      "locked": "IDs, artwork, choice-box alternatives, probabilities and formulas are locked. Totals are recalculated from source quantities.",
+      "schema": {
+        "tiles.0.defenders": {
+          "label": "Small Plain defenders",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.0.perMinute": {
+          "label": "Small Plain league points per minute",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.1.defenders": {
+          "label": "Plain defenders",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.1.perMinute": {
+          "label": "Plain league points per minute",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.2.defenders": {
+          "label": "Dune defenders",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.2.perMinute": {
+          "label": "Dune league points per minute",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.3.defenders": {
+          "label": "Small Gold Mine defenders",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.3.perMinute": {
+          "label": "Small Gold Mine league points per minute",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.4.defenders": {
+          "label": "Gold Mine defenders",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.4.perMinute": {
+          "label": "Gold Mine league points per minute",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.5.defenders": {
+          "label": "Precious Gold Mine defenders",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.5.perMinute": {
+          "label": "Precious Gold Mine league points per minute",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.6.defenders": {
+          "label": "Chromatic Mines defenders",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "tiles.6.perMinute": {
+          "label": "Chromatic Mines league points per minute",
+          "group": "Tiles",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.0.reward.0.amount": {
+          "label": "Row 1 · Merit Points",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.0.rally_reward.0.amount": {
+          "label": "Row 1 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.1.reward.0.amount": {
+          "label": "Row 2 · Pinballs",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.1.rally_reward.0.amount": {
+          "label": "Row 2 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.2.reward.0.amount": {
+          "label": "Row 3 · Merit Points",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.2.rally_reward.0.amount": {
+          "label": "Row 3 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.3.reward.0.amount": {
+          "label": "Row 4 · Candy",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.3.rally_reward.0.amount": {
+          "label": "Row 4 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.4.reward.0.amount": {
+          "label": "Row 5 · Merit Points",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.4.rally_reward.0.amount": {
+          "label": "Row 5 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.5.reward.0.amount": {
+          "label": "Row 6 · Tatari Capsule",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.5.rally_reward.0.amount": {
+          "label": "Row 6 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.6.reward.0.amount": {
+          "label": "Row 7 · Merit Points",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.6.rally_reward.0.amount": {
+          "label": "Row 7 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.7.reward.0.amount": {
+          "label": "Row 8 · Pinballs",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.7.rally_reward.0.amount": {
+          "label": "Row 8 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.8.reward.0.amount": {
+          "label": "Row 9 · Merit Points",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.8.rally_reward.0.amount": {
+          "label": "Row 9 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.9.reward.0.amount": {
+          "label": "Row 10 · Tatari Capsule",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.9.rally_reward.0.amount": {
+          "label": "Row 10 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.10.reward.0.amount": {
+          "label": "Row 11 · Merit Points",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.10.rally_reward.0.amount": {
+          "label": "Row 11 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.11.reward.0.amount": {
+          "label": "Row 12 · Candy",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.11.rally_reward.0.amount": {
+          "label": "Row 12 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.12.reward.0.amount": {
+          "label": "Row 13 · Merit Points",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.12.rally_reward.0.amount": {
+          "label": "Row 13 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.13.reward.0.amount": {
+          "label": "Row 14 · Pinballs",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.13.rally_reward.0.amount": {
+          "label": "Row 14 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.14.reward.0.amount": {
+          "label": "Row 15 · Merit Points",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "attackRewards.14.rally_reward.0.amount": {
+          "label": "Row 15 · Merit Points (rally)",
+          "group": "attackRewards",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.0.rewards.0.amount": {
+          "label": "Row 1 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.0.rewards.1.amount": {
+          "label": "Row 1 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.0.rewards.2.amount": {
+          "label": "Row 1 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.1.rewards.0.amount": {
+          "label": "Row 2 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.1.rewards.1.amount": {
+          "label": "Row 2 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.1.rewards.2.amount": {
+          "label": "Row 2 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.2.rewards.0.amount": {
+          "label": "Row 3 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.2.rewards.1.amount": {
+          "label": "Row 3 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.3.rewards.0.amount": {
+          "label": "Row 4 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.3.rewards.1.amount": {
+          "label": "Row 4 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.4.rewards.0.amount": {
+          "label": "Row 5 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.4.rewards.1.amount": {
+          "label": "Row 5 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.5.rewards.0.amount": {
+          "label": "Row 6 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.5.rewards.1.amount": {
+          "label": "Row 6 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.6.rewards.0.amount": {
+          "label": "Row 7 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.6.rewards.1.amount": {
+          "label": "Row 7 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.7.rewards.0.amount": {
+          "label": "Row 8 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.7.rewards.1.amount": {
+          "label": "Row 8 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.8.rewards.0.amount": {
+          "label": "Row 9 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.8.rewards.1.amount": {
+          "label": "Row 9 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.8.rewards.2.amount": {
+          "label": "Row 9 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.9.rewards.0.amount": {
+          "label": "Row 10 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.9.rewards.1.amount": {
+          "label": "Row 10 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.9.rewards.2.amount": {
+          "label": "Row 10 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.10.rewards.0.amount": {
+          "label": "Row 11 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.10.rewards.1.amount": {
+          "label": "Row 11 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.11.rewards.0.amount": {
+          "label": "Row 12 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.11.rewards.1.amount": {
+          "label": "Row 12 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.12.rewards.0.amount": {
+          "label": "Row 13 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.12.rewards.1.amount": {
+          "label": "Row 13 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.13.rewards.0.amount": {
+          "label": "Row 14 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.13.rewards.1.amount": {
+          "label": "Row 14 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.14.rewards.0.amount": {
+          "label": "Row 15 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.14.rewards.1.amount": {
+          "label": "Row 15 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.15.rewards.0.amount": {
+          "label": "Row 16 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.15.rewards.1.amount": {
+          "label": "Row 16 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.16.rewards.0.amount": {
+          "label": "Row 17 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.16.rewards.1.amount": {
+          "label": "Row 17 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.16.rewards.2.amount": {
+          "label": "Row 17 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.16.rewards.3.amount": {
+          "label": "Row 17 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.17.rewards.0.amount": {
+          "label": "Row 18 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.17.rewards.1.amount": {
+          "label": "Row 18 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.17.rewards.2.amount": {
+          "label": "Row 18 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.17.rewards.3.amount": {
+          "label": "Row 18 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.18.rewards.0.amount": {
+          "label": "Row 19 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.18.rewards.1.amount": {
+          "label": "Row 19 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.18.rewards.2.amount": {
+          "label": "Row 19 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.18.rewards.3.amount": {
+          "label": "Row 19 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.19.rewards.0.amount": {
+          "label": "Row 20 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.19.rewards.1.amount": {
+          "label": "Row 20 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.19.rewards.2.amount": {
+          "label": "Row 20 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.20.rewards.0.amount": {
+          "label": "Row 21 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.20.rewards.1.amount": {
+          "label": "Row 21 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.21.rewards.0.amount": {
+          "label": "Row 22 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.21.rewards.1.amount": {
+          "label": "Row 22 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.22.rewards.0.amount": {
+          "label": "Row 23 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.22.rewards.1.amount": {
+          "label": "Row 23 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.23.rewards.0.amount": {
+          "label": "Row 24 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.23.rewards.1.amount": {
+          "label": "Row 24 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.24.rewards.0.amount": {
+          "label": "Row 25 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.24.rewards.1.amount": {
+          "label": "Row 25 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.24.rewards.2.amount": {
+          "label": "Row 25 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.24.rewards.3.amount": {
+          "label": "Row 25 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.25.rewards.0.amount": {
+          "label": "Row 26 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.25.rewards.1.amount": {
+          "label": "Row 26 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.25.rewards.2.amount": {
+          "label": "Row 26 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.25.rewards.3.amount": {
+          "label": "Row 26 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.26.rewards.0.amount": {
+          "label": "Row 27 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.26.rewards.1.amount": {
+          "label": "Row 27 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.26.rewards.2.amount": {
+          "label": "Row 27 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.26.rewards.3.amount": {
+          "label": "Row 27 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.27.rewards.0.amount": {
+          "label": "Row 28 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.27.rewards.1.amount": {
+          "label": "Row 28 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.27.rewards.2.amount": {
+          "label": "Row 28 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.27.rewards.3.amount": {
+          "label": "Row 28 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.28.rewards.0.amount": {
+          "label": "Row 29 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.28.rewards.1.amount": {
+          "label": "Row 29 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.28.rewards.2.amount": {
+          "label": "Row 29 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.29.rewards.0.amount": {
+          "label": "Row 30 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.29.rewards.1.amount": {
+          "label": "Row 30 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.29.rewards.2.amount": {
+          "label": "Row 30 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.30.rewards.0.amount": {
+          "label": "Row 31 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.30.rewards.1.amount": {
+          "label": "Row 31 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.31.rewards.0.amount": {
+          "label": "Row 32 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.31.rewards.1.amount": {
+          "label": "Row 32 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.32.rewards.0.amount": {
+          "label": "Row 33 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.32.rewards.1.amount": {
+          "label": "Row 33 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.32.rewards.2.amount": {
+          "label": "Row 33 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.32.rewards.3.amount": {
+          "label": "Row 33 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.33.rewards.0.amount": {
+          "label": "Row 34 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.33.rewards.1.amount": {
+          "label": "Row 34 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.33.rewards.2.amount": {
+          "label": "Row 34 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.33.rewards.3.amount": {
+          "label": "Row 34 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.34.rewards.0.amount": {
+          "label": "Row 35 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.34.rewards.1.amount": {
+          "label": "Row 35 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.34.rewards.2.amount": {
+          "label": "Row 35 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.34.rewards.3.amount": {
+          "label": "Row 35 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.35.rewards.0.amount": {
+          "label": "Row 36 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.35.rewards.1.amount": {
+          "label": "Row 36 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.35.rewards.2.amount": {
+          "label": "Row 36 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.35.rewards.3.amount": {
+          "label": "Row 36 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.36.rewards.0.amount": {
+          "label": "Row 37 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.36.rewards.1.amount": {
+          "label": "Row 37 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.36.rewards.2.amount": {
+          "label": "Row 37 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.37.rewards.0.amount": {
+          "label": "Row 38 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.37.rewards.1.amount": {
+          "label": "Row 38 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.37.rewards.2.amount": {
+          "label": "Row 38 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.38.rewards.0.amount": {
+          "label": "Row 39 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.38.rewards.1.amount": {
+          "label": "Row 39 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.38.rewards.2.amount": {
+          "label": "Row 39 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.39.rewards.0.amount": {
+          "label": "Row 40 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.39.rewards.1.amount": {
+          "label": "Row 40 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.39.rewards.2.amount": {
+          "label": "Row 40 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.40.rewards.0.amount": {
+          "label": "Row 41 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.40.rewards.1.amount": {
+          "label": "Row 41 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.40.rewards.2.amount": {
+          "label": "Row 41 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.40.rewards.3.amount": {
+          "label": "Row 41 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.41.rewards.0.amount": {
+          "label": "Row 42 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.41.rewards.1.amount": {
+          "label": "Row 42 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.41.rewards.2.amount": {
+          "label": "Row 42 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.41.rewards.3.amount": {
+          "label": "Row 42 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.42.rewards.0.amount": {
+          "label": "Row 43 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.42.rewards.1.amount": {
+          "label": "Row 43 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.42.rewards.2.amount": {
+          "label": "Row 43 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.42.rewards.3.amount": {
+          "label": "Row 43 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.43.rewards.0.amount": {
+          "label": "Row 44 · Glitter Fruit",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.43.rewards.1.amount": {
+          "label": "Row 44 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.43.rewards.2.amount": {
+          "label": "Row 44 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.43.rewards.3.amount": {
+          "label": "Row 44 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.44.rewards.0.amount": {
+          "label": "Row 45 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.44.rewards.1.amount": {
+          "label": "Row 45 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.44.rewards.2.amount": {
+          "label": "Row 45 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.45.rewards.0.amount": {
+          "label": "Row 46 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.45.rewards.1.amount": {
+          "label": "Row 46 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.45.rewards.2.amount": {
+          "label": "Row 46 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.46.rewards.0.amount": {
+          "label": "Row 47 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.46.rewards.1.amount": {
+          "label": "Row 47 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.46.rewards.2.amount": {
+          "label": "Row 47 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.47.rewards.0.amount": {
+          "label": "Row 48 · Tatari Wishbox",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.47.rewards.1.amount": {
+          "label": "Row 48 · Tatari Capsule",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueDaily.47.rewards.2.amount": {
+          "label": "Row 48 · Candy",
+          "group": "leagueDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.0.rewards.0.amount": {
+          "label": "Row 1 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.0.rewards.1.amount": {
+          "label": "Row 1 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.0.rewards.2.amount": {
+          "label": "Row 1 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.1.rewards.0.amount": {
+          "label": "Row 2 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.1.rewards.1.amount": {
+          "label": "Row 2 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.1.rewards.2.amount": {
+          "label": "Row 2 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.2.rewards.0.amount": {
+          "label": "Row 3 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.2.rewards.1.amount": {
+          "label": "Row 3 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.2.rewards.2.amount": {
+          "label": "Row 3 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.3.rewards.0.amount": {
+          "label": "Row 4 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.3.rewards.1.amount": {
+          "label": "Row 4 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.3.rewards.2.amount": {
+          "label": "Row 4 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.4.rewards.0.amount": {
+          "label": "Row 5 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.4.rewards.1.amount": {
+          "label": "Row 5 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.4.rewards.2.amount": {
+          "label": "Row 5 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.5.rewards.0.amount": {
+          "label": "Row 6 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.5.rewards.1.amount": {
+          "label": "Row 6 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.5.rewards.2.amount": {
+          "label": "Row 6 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.6.rewards.0.amount": {
+          "label": "Row 7 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.6.rewards.1.amount": {
+          "label": "Row 7 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.6.rewards.2.amount": {
+          "label": "Row 7 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.7.rewards.0.amount": {
+          "label": "Row 8 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.7.rewards.1.amount": {
+          "label": "Row 8 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.7.rewards.2.amount": {
+          "label": "Row 8 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.8.rewards.0.amount": {
+          "label": "Row 9 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.8.rewards.1.amount": {
+          "label": "Row 9 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.8.rewards.2.amount": {
+          "label": "Row 9 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.9.rewards.0.amount": {
+          "label": "Row 10 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.9.rewards.1.amount": {
+          "label": "Row 10 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.9.rewards.2.amount": {
+          "label": "Row 10 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.10.rewards.0.amount": {
+          "label": "Row 11 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.10.rewards.1.amount": {
+          "label": "Row 11 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.10.rewards.2.amount": {
+          "label": "Row 11 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.11.rewards.0.amount": {
+          "label": "Row 12 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.11.rewards.1.amount": {
+          "label": "Row 12 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.11.rewards.2.amount": {
+          "label": "Row 12 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.12.rewards.0.amount": {
+          "label": "Row 13 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.12.rewards.1.amount": {
+          "label": "Row 13 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.12.rewards.2.amount": {
+          "label": "Row 13 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.13.rewards.0.amount": {
+          "label": "Row 14 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.13.rewards.1.amount": {
+          "label": "Row 14 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.13.rewards.2.amount": {
+          "label": "Row 14 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.14.rewards.0.amount": {
+          "label": "Row 15 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.14.rewards.1.amount": {
+          "label": "Row 15 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.14.rewards.2.amount": {
+          "label": "Row 15 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.15.rewards.0.amount": {
+          "label": "Row 16 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.15.rewards.1.amount": {
+          "label": "Row 16 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.15.rewards.2.amount": {
+          "label": "Row 16 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.16.rewards.0.amount": {
+          "label": "Row 17 · Super Drink",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.16.rewards.1.amount": {
+          "label": "Row 17 · Silver Brick",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamDaily.16.rewards.2.amount": {
+          "label": "Row 17 · Candy",
+          "group": "teamDaily",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.0.rewards.0.amount": {
+          "label": "Row 1 · Golden Legend",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.0.rewards.1.amount": {
+          "label": "Row 1 · Rainbow Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.0.rewards.2.amount": {
+          "label": "Row 1 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.0.rewards.3.amount": {
+          "label": "Row 1 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.1.rewards.0.amount": {
+          "label": "Row 2 · Deluxe Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.1.rewards.1.amount": {
+          "label": "Row 2 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.1.rewards.2.amount": {
+          "label": "Row 2 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.2.rewards.0.amount": {
+          "label": "Row 3 · Deluxe Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.2.rewards.1.amount": {
+          "label": "Row 3 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.2.rewards.2.amount": {
+          "label": "Row 3 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.3.rewards.0.amount": {
+          "label": "Row 4 · Deluxe Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.3.rewards.1.amount": {
+          "label": "Row 4 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.3.rewards.2.amount": {
+          "label": "Row 4 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.4.rewards.0.amount": {
+          "label": "Row 5 · Deluxe Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.4.rewards.1.amount": {
+          "label": "Row 5 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.4.rewards.2.amount": {
+          "label": "Row 5 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.5.rewards.0.amount": {
+          "label": "Row 6 · Deluxe Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.5.rewards.1.amount": {
+          "label": "Row 6 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.5.rewards.2.amount": {
+          "label": "Row 6 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.6.rewards.0.amount": {
+          "label": "Row 7 · Deluxe Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.6.rewards.1.amount": {
+          "label": "Row 7 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.6.rewards.2.amount": {
+          "label": "Row 7 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.7.rewards.0.amount": {
+          "label": "Row 8 · Deluxe Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.7.rewards.1.amount": {
+          "label": "Row 8 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.7.rewards.2.amount": {
+          "label": "Row 8 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.8.rewards.0.amount": {
+          "label": "Row 9 · Deluxe Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.8.rewards.1.amount": {
+          "label": "Row 9 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.8.rewards.2.amount": {
+          "label": "Row 9 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.9.rewards.0.amount": {
+          "label": "Row 10 · Deluxe Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.9.rewards.1.amount": {
+          "label": "Row 10 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.9.rewards.2.amount": {
+          "label": "Row 10 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.10.rewards.0.amount": {
+          "label": "Row 11 · Standard Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.10.rewards.1.amount": {
+          "label": "Row 11 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.10.rewards.2.amount": {
+          "label": "Row 11 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.11.rewards.0.amount": {
+          "label": "Row 12 · Standard Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.11.rewards.1.amount": {
+          "label": "Row 12 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.11.rewards.2.amount": {
+          "label": "Row 12 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.12.rewards.0.amount": {
+          "label": "Row 13 · Standard Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.12.rewards.1.amount": {
+          "label": "Row 13 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.12.rewards.2.amount": {
+          "label": "Row 13 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.13.rewards.0.amount": {
+          "label": "Row 14 · Standard Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.13.rewards.1.amount": {
+          "label": "Row 14 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.13.rewards.2.amount": {
+          "label": "Row 14 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.14.rewards.0.amount": {
+          "label": "Row 15 · Standard Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.14.rewards.1.amount": {
+          "label": "Row 15 · Gold Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.14.rewards.2.amount": {
+          "label": "Row 15 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.15.rewards.0.amount": {
+          "label": "Row 16 · Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.15.rewards.1.amount": {
+          "label": "Row 16 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.16.rewards.0.amount": {
+          "label": "Row 17 · Card Pack",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamFinal.16.rewards.1.amount": {
+          "label": "Row 17 · Silver Brick",
+          "group": "teamFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.0.rewards.0.amount": {
+          "label": "Row 1 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.0.rewards.1.amount": {
+          "label": "Row 1 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.0.rewards.2.amount": {
+          "label": "Row 1 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.0.rewards.3.amount": {
+          "label": "Row 1 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.1.rewards.0.amount": {
+          "label": "Row 2 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.1.rewards.1.amount": {
+          "label": "Row 2 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.1.rewards.2.amount": {
+          "label": "Row 2 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.1.rewards.3.amount": {
+          "label": "Row 2 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.2.rewards.0.amount": {
+          "label": "Row 3 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.2.rewards.1.amount": {
+          "label": "Row 3 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.2.rewards.2.amount": {
+          "label": "Row 3 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.2.rewards.3.amount": {
+          "label": "Row 3 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.3.rewards.0.amount": {
+          "label": "Row 4 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.3.rewards.1.amount": {
+          "label": "Row 4 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.3.rewards.2.amount": {
+          "label": "Row 4 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.3.rewards.3.amount": {
+          "label": "Row 4 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.4.rewards.0.amount": {
+          "label": "Row 5 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.4.rewards.1.amount": {
+          "label": "Row 5 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.4.rewards.2.amount": {
+          "label": "Row 5 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.4.rewards.3.amount": {
+          "label": "Row 5 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.5.rewards.0.amount": {
+          "label": "Row 6 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.5.rewards.1.amount": {
+          "label": "Row 6 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.5.rewards.2.amount": {
+          "label": "Row 6 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.5.rewards.3.amount": {
+          "label": "Row 6 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.6.rewards.0.amount": {
+          "label": "Row 7 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.6.rewards.1.amount": {
+          "label": "Row 7 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.6.rewards.2.amount": {
+          "label": "Row 7 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.6.rewards.3.amount": {
+          "label": "Row 7 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.7.rewards.0.amount": {
+          "label": "Row 8 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.7.rewards.1.amount": {
+          "label": "Row 8 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.7.rewards.2.amount": {
+          "label": "Row 8 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.7.rewards.3.amount": {
+          "label": "Row 8 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.8.rewards.0.amount": {
+          "label": "Row 9 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.8.rewards.1.amount": {
+          "label": "Row 9 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.8.rewards.2.amount": {
+          "label": "Row 9 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.8.rewards.3.amount": {
+          "label": "Row 9 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.9.rewards.0.amount": {
+          "label": "Row 10 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.9.rewards.1.amount": {
+          "label": "Row 10 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.9.rewards.2.amount": {
+          "label": "Row 10 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.9.rewards.3.amount": {
+          "label": "Row 10 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.10.rewards.0.amount": {
+          "label": "Row 11 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.10.rewards.1.amount": {
+          "label": "Row 11 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.10.rewards.2.amount": {
+          "label": "Row 11 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.10.rewards.3.amount": {
+          "label": "Row 11 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.11.rewards.0.amount": {
+          "label": "Row 12 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.11.rewards.1.amount": {
+          "label": "Row 12 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.11.rewards.2.amount": {
+          "label": "Row 12 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.11.rewards.3.amount": {
+          "label": "Row 12 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.12.rewards.0.amount": {
+          "label": "Row 13 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.12.rewards.1.amount": {
+          "label": "Row 13 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.12.rewards.2.amount": {
+          "label": "Row 13 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.12.rewards.3.amount": {
+          "label": "Row 13 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.13.rewards.0.amount": {
+          "label": "Row 14 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.13.rewards.1.amount": {
+          "label": "Row 14 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.13.rewards.2.amount": {
+          "label": "Row 14 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.13.rewards.3.amount": {
+          "label": "Row 14 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.14.rewards.0.amount": {
+          "label": "Row 15 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.14.rewards.1.amount": {
+          "label": "Row 15 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.14.rewards.2.amount": {
+          "label": "Row 15 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.14.rewards.3.amount": {
+          "label": "Row 15 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.15.rewards.0.amount": {
+          "label": "Row 16 · Glitter Fruit",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.15.rewards.1.amount": {
+          "label": "Row 16 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.15.rewards.2.amount": {
+          "label": "Row 16 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.15.rewards.3.amount": {
+          "label": "Row 16 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.16.rewards.0.amount": {
+          "label": "Row 17 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.16.rewards.1.amount": {
+          "label": "Row 17 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.16.rewards.2.amount": {
+          "label": "Row 17 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.17.rewards.0.amount": {
+          "label": "Row 18 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.17.rewards.1.amount": {
+          "label": "Row 18 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.17.rewards.2.amount": {
+          "label": "Row 18 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.18.rewards.0.amount": {
+          "label": "Row 19 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.18.rewards.1.amount": {
+          "label": "Row 19 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.18.rewards.2.amount": {
+          "label": "Row 19 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.19.rewards.0.amount": {
+          "label": "Row 20 · Tatari Wishbox",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.19.rewards.1.amount": {
+          "label": "Row 20 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.19.rewards.2.amount": {
+          "label": "Row 20 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.20.rewards.0.amount": {
+          "label": "Row 21 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.20.rewards.1.amount": {
+          "label": "Row 21 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.21.rewards.0.amount": {
+          "label": "Row 22 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.21.rewards.1.amount": {
+          "label": "Row 22 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.22.rewards.0.amount": {
+          "label": "Row 23 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.22.rewards.1.amount": {
+          "label": "Row 23 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.23.rewards.0.amount": {
+          "label": "Row 24 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.23.rewards.1.amount": {
+          "label": "Row 24 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.24.rewards.0.amount": {
+          "label": "Row 25 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.24.rewards.1.amount": {
+          "label": "Row 25 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.25.rewards.0.amount": {
+          "label": "Row 26 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.25.rewards.1.amount": {
+          "label": "Row 26 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.26.rewards.0.amount": {
+          "label": "Row 27 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.26.rewards.1.amount": {
+          "label": "Row 27 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.27.rewards.0.amount": {
+          "label": "Row 28 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.27.rewards.1.amount": {
+          "label": "Row 28 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.28.rewards.0.amount": {
+          "label": "Row 29 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.28.rewards.1.amount": {
+          "label": "Row 29 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.29.rewards.0.amount": {
+          "label": "Row 30 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.29.rewards.1.amount": {
+          "label": "Row 30 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.30.rewards.0.amount": {
+          "label": "Row 31 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.30.rewards.1.amount": {
+          "label": "Row 31 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.31.rewards.0.amount": {
+          "label": "Row 32 · Candy",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "leagueFinal.31.rewards.1.amount": {
+          "label": "Row 32 · Tatari Capsule",
+          "group": "leagueFinal",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.0.points": {
+          "label": "Milestone 1 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.0.rewards.0.amount": {
+          "label": "Row 1 · Tatari Wishbox",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.0.rewards.1.amount": {
+          "label": "Row 1 · Energy Drink",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.1.points": {
+          "label": "Milestone 2 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.1.rewards.0.amount": {
+          "label": "Row 2 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.1.rewards.1.amount": {
+          "label": "Row 2 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.2.points": {
+          "label": "Milestone 3 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.2.rewards.0.amount": {
+          "label": "Row 3 · Tatari Wishbox",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.2.rewards.1.amount": {
+          "label": "Row 3 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.3.points": {
+          "label": "Milestone 4 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.3.rewards.0.amount": {
+          "label": "Row 4 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.3.rewards.1.amount": {
+          "label": "Row 4 · Energy Drink",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.3.rewards.2.amount": {
+          "label": "Row 4 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.4.points": {
+          "label": "Milestone 5 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.4.rewards.0.amount": {
+          "label": "Row 5 · Tatari Wishbox",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.4.rewards.1.amount": {
+          "label": "Row 5 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.5.points": {
+          "label": "Milestone 6 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.5.rewards.0.amount": {
+          "label": "Row 6 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.5.rewards.1.amount": {
+          "label": "Row 6 · Energy Drink",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.5.rewards.2.amount": {
+          "label": "Row 6 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.6.points": {
+          "label": "Milestone 7 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.6.rewards.0.amount": {
+          "label": "Row 7 · Tatari Wishbox",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.6.rewards.1.amount": {
+          "label": "Row 7 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.6.rewards.2.amount": {
+          "label": "Row 7 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.7.points": {
+          "label": "Milestone 8 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.7.rewards.0.amount": {
+          "label": "Row 8 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.7.rewards.1.amount": {
+          "label": "Row 8 · Energy Drink",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.7.rewards.2.amount": {
+          "label": "Row 8 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.8.points": {
+          "label": "Milestone 9 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.8.rewards.0.amount": {
+          "label": "Row 9 · Tatari Wishbox",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.8.rewards.1.amount": {
+          "label": "Row 9 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.8.rewards.2.amount": {
+          "label": "Row 9 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.9.points": {
+          "label": "Milestone 10 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.9.rewards.0.amount": {
+          "label": "Row 10 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.9.rewards.1.amount": {
+          "label": "Row 10 · Energy Drink",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.9.rewards.2.amount": {
+          "label": "Row 10 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.10.points": {
+          "label": "Milestone 11 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.10.rewards.0.amount": {
+          "label": "Row 11 · Tatari Wishbox",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.10.rewards.1.amount": {
+          "label": "Row 11 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.10.rewards.2.amount": {
+          "label": "Row 11 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.11.points": {
+          "label": "Milestone 12 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.11.rewards.0.amount": {
+          "label": "Row 12 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.11.rewards.1.amount": {
+          "label": "Row 12 · Energy Drink",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.11.rewards.2.amount": {
+          "label": "Row 12 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.12.points": {
+          "label": "Milestone 13 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.12.rewards.0.amount": {
+          "label": "Row 13 · Tatari Wishbox",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.12.rewards.1.amount": {
+          "label": "Row 13 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.12.rewards.2.amount": {
+          "label": "Row 13 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.13.points": {
+          "label": "Milestone 14 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.13.rewards.0.amount": {
+          "label": "Row 14 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.13.rewards.1.amount": {
+          "label": "Row 14 · Energy Drink",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.13.rewards.2.amount": {
+          "label": "Row 14 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.14.points": {
+          "label": "Milestone 15 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.14.rewards.0.amount": {
+          "label": "Row 15 · Tatari Wishbox",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.14.rewards.1.amount": {
+          "label": "Row 15 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.14.rewards.2.amount": {
+          "label": "Row 15 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.15.points": {
+          "label": "Milestone 16 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.15.rewards.0.amount": {
+          "label": "Row 16 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.15.rewards.1.amount": {
+          "label": "Row 16 · Energy Drink",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.15.rewards.2.amount": {
+          "label": "Row 16 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.16.points": {
+          "label": "Milestone 17 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.16.rewards.0.amount": {
+          "label": "Row 17 · Tatari Wishbox",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.16.rewards.1.amount": {
+          "label": "Row 17 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.16.rewards.2.amount": {
+          "label": "Row 17 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.17.points": {
+          "label": "Milestone 18 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.17.rewards.0.amount": {
+          "label": "Row 18 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.17.rewards.1.amount": {
+          "label": "Row 18 · Energy Drink",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.17.rewards.2.amount": {
+          "label": "Row 18 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.18.points": {
+          "label": "Milestone 19 team points",
+          "group": "Team milestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.18.rewards.0.amount": {
+          "label": "Row 19 · Tatari Wishbox",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.18.rewards.1.amount": {
+          "label": "Row 19 · Tatari Capsule",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "teamMilestones.18.rewards.2.amount": {
+          "label": "Row 19 · Bento",
+          "group": "teamMilestones",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.0.rewards.0.amount": {
+          "label": "Row 1 · Golden Legend (Permanent)",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.0.rewards.1.amount": {
+          "label": "Row 1 · Glitter Fruit",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.0.rewards.2.amount": {
+          "label": "Row 1 · Pinballs",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.0.rewards.3.amount": {
+          "label": "Row 1 · Spa Soap",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.0.rewards.4.amount": {
+          "label": "Row 1 · Giftbox",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.1.rewards.0.amount": {
+          "label": "Row 2 · Golden Legend (Permanent)",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.1.rewards.1.amount": {
+          "label": "Row 2 · Glitter Fruit",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.1.rewards.2.amount": {
+          "label": "Row 2 · Pinballs",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.1.rewards.3.amount": {
+          "label": "Row 2 · Spa Soap",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.1.rewards.4.amount": {
+          "label": "Row 2 · Giftbox",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.2.rewards.0.amount": {
+          "label": "Row 3 · Golden Legend (Permanent)",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.2.rewards.1.amount": {
+          "label": "Row 3 · Glitter Fruit",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.2.rewards.2.amount": {
+          "label": "Row 3 · Pinballs",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.2.rewards.3.amount": {
+          "label": "Row 3 · Spa Soap",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.2.rewards.4.amount": {
+          "label": "Row 3 · Giftbox",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.3.rewards.0.amount": {
+          "label": "Row 4 · Glitter Fruit",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.3.rewards.1.amount": {
+          "label": "Row 4 · Pinballs",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.3.rewards.2.amount": {
+          "label": "Row 4 · Spa Soap",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.3.rewards.3.amount": {
+          "label": "Row 4 · Giftbox",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.4.rewards.0.amount": {
+          "label": "Row 5 · Glitter Fruit",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.4.rewards.1.amount": {
+          "label": "Row 5 · Pinballs",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.4.rewards.2.amount": {
+          "label": "Row 5 · Spa Soap",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.4.rewards.3.amount": {
+          "label": "Row 5 · Giftbox",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.5.rewards.0.amount": {
+          "label": "Row 6 · Glitter Fruit",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.5.rewards.1.amount": {
+          "label": "Row 6 · Pinballs",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.5.rewards.2.amount": {
+          "label": "Row 6 · Giftbox",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.6.rewards.0.amount": {
+          "label": "Row 7 · Glitter Fruit",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.6.rewards.1.amount": {
+          "label": "Row 7 · Pinballs",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.6.rewards.2.amount": {
+          "label": "Row 7 · Giftbox",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.7.rewards.0.amount": {
+          "label": "Row 8 · Glitter Fruit",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.7.rewards.1.amount": {
+          "label": "Row 8 · Pinballs",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        },
+        "mvp.7.rewards.2.amount": {
+          "label": "Row 8 · Giftbox",
+          "group": "mvp",
+          "type": "number",
+          "min": 0,
+          "max": 1000000000,
+          "integer": true
+        }
+      },
+      "defaults": {
+        "tiles.0.defenders": 300,
+        "tiles.0.perMinute": 1,
+        "tiles.1.defenders": 480,
+        "tiles.1.perMinute": 3,
+        "tiles.2.defenders": 960,
+        "tiles.2.perMinute": 6,
+        "tiles.3.defenders": 1620,
+        "tiles.3.perMinute": 10,
+        "tiles.4.defenders": 2280,
+        "tiles.4.perMinute": 16,
+        "tiles.5.defenders": 3000,
+        "tiles.5.perMinute": 30,
+        "tiles.6.defenders": 0,
+        "tiles.6.perMinute": 35,
+        "attackRewards.0.reward.0.amount": 5,
+        "attackRewards.0.rally_reward.0.amount": 3,
+        "attackRewards.1.reward.0.amount": 5,
+        "attackRewards.1.rally_reward.0.amount": 5,
+        "attackRewards.2.reward.0.amount": 10,
+        "attackRewards.2.rally_reward.0.amount": 5,
+        "attackRewards.3.reward.0.amount": 1200,
+        "attackRewards.3.rally_reward.0.amount": 10,
+        "attackRewards.4.reward.0.amount": 10,
+        "attackRewards.4.rally_reward.0.amount": 5,
+        "attackRewards.5.reward.0.amount": 1,
+        "attackRewards.5.rally_reward.0.amount": 5,
+        "attackRewards.6.reward.0.amount": 15,
+        "attackRewards.6.rally_reward.0.amount": 10,
+        "attackRewards.7.reward.0.amount": 5,
+        "attackRewards.7.rally_reward.0.amount": 5,
+        "attackRewards.8.reward.0.amount": 15,
+        "attackRewards.8.rally_reward.0.amount": 5,
+        "attackRewards.9.reward.0.amount": 1,
+        "attackRewards.9.rally_reward.0.amount": 10,
+        "attackRewards.10.reward.0.amount": 20,
+        "attackRewards.10.rally_reward.0.amount": 5,
+        "attackRewards.11.reward.0.amount": 2400,
+        "attackRewards.11.rally_reward.0.amount": 5,
+        "attackRewards.12.reward.0.amount": 25,
+        "attackRewards.12.rally_reward.0.amount": 10,
+        "attackRewards.13.reward.0.amount": 10,
+        "attackRewards.13.rally_reward.0.amount": 5,
+        "attackRewards.14.reward.0.amount": 50,
+        "attackRewards.14.rally_reward.0.amount": 10,
+        "leagueDaily.0.rewards.0.amount": 1,
+        "leagueDaily.0.rewards.1.amount": 20,
+        "leagueDaily.0.rewards.2.amount": 70000,
+        "leagueDaily.1.rewards.0.amount": 1,
+        "leagueDaily.1.rewards.1.amount": 10,
+        "leagueDaily.1.rewards.2.amount": 45000,
+        "leagueDaily.2.rewards.0.amount": 10,
+        "leagueDaily.2.rewards.1.amount": 30000,
+        "leagueDaily.3.rewards.0.amount": 5,
+        "leagueDaily.3.rewards.1.amount": 15000,
+        "leagueDaily.4.rewards.0.amount": 3,
+        "leagueDaily.4.rewards.1.amount": 15000,
+        "leagueDaily.5.rewards.0.amount": 3,
+        "leagueDaily.5.rewards.1.amount": 13000,
+        "leagueDaily.6.rewards.0.amount": 1,
+        "leagueDaily.6.rewards.1.amount": 12000,
+        "leagueDaily.7.rewards.0.amount": 1,
+        "leagueDaily.7.rewards.1.amount": 10000,
+        "leagueDaily.8.rewards.0.amount": 1,
+        "leagueDaily.8.rewards.1.amount": 20,
+        "leagueDaily.8.rewards.2.amount": 70000,
+        "leagueDaily.9.rewards.0.amount": 1,
+        "leagueDaily.9.rewards.1.amount": 10,
+        "leagueDaily.9.rewards.2.amount": 45000,
+        "leagueDaily.10.rewards.0.amount": 10,
+        "leagueDaily.10.rewards.1.amount": 30000,
+        "leagueDaily.11.rewards.0.amount": 5,
+        "leagueDaily.11.rewards.1.amount": 15000,
+        "leagueDaily.12.rewards.0.amount": 3,
+        "leagueDaily.12.rewards.1.amount": 15000,
+        "leagueDaily.13.rewards.0.amount": 3,
+        "leagueDaily.13.rewards.1.amount": 13000,
+        "leagueDaily.14.rewards.0.amount": 1,
+        "leagueDaily.14.rewards.1.amount": 12000,
+        "leagueDaily.15.rewards.0.amount": 1,
+        "leagueDaily.15.rewards.1.amount": 10000,
+        "leagueDaily.16.rewards.0.amount": 5,
+        "leagueDaily.16.rewards.1.amount": 2,
+        "leagueDaily.16.rewards.2.amount": 20,
+        "leagueDaily.16.rewards.3.amount": 70000,
+        "leagueDaily.17.rewards.0.amount": 3,
+        "leagueDaily.17.rewards.1.amount": 1,
+        "leagueDaily.17.rewards.2.amount": 10,
+        "leagueDaily.17.rewards.3.amount": 45000,
+        "leagueDaily.18.rewards.0.amount": 2,
+        "leagueDaily.18.rewards.1.amount": 1,
+        "leagueDaily.18.rewards.2.amount": 10,
+        "leagueDaily.18.rewards.3.amount": 30000,
+        "leagueDaily.19.rewards.0.amount": 1,
+        "leagueDaily.19.rewards.1.amount": 5,
+        "leagueDaily.19.rewards.2.amount": 15000,
+        "leagueDaily.20.rewards.0.amount": 5,
+        "leagueDaily.20.rewards.1.amount": 15000,
+        "leagueDaily.21.rewards.0.amount": 5,
+        "leagueDaily.21.rewards.1.amount": 13000,
+        "leagueDaily.22.rewards.0.amount": 1,
+        "leagueDaily.22.rewards.1.amount": 12000,
+        "leagueDaily.23.rewards.0.amount": 1,
+        "leagueDaily.23.rewards.1.amount": 10000,
+        "leagueDaily.24.rewards.0.amount": 5,
+        "leagueDaily.24.rewards.1.amount": 3,
+        "leagueDaily.24.rewards.2.amount": 20,
+        "leagueDaily.24.rewards.3.amount": 70000,
+        "leagueDaily.25.rewards.0.amount": 3,
+        "leagueDaily.25.rewards.1.amount": 2,
+        "leagueDaily.25.rewards.2.amount": 10,
+        "leagueDaily.25.rewards.3.amount": 45000,
+        "leagueDaily.26.rewards.0.amount": 2,
+        "leagueDaily.26.rewards.1.amount": 1,
+        "leagueDaily.26.rewards.2.amount": 10,
+        "leagueDaily.26.rewards.3.amount": 30000,
+        "leagueDaily.27.rewards.0.amount": 1,
+        "leagueDaily.27.rewards.1.amount": 1,
+        "leagueDaily.27.rewards.2.amount": 5,
+        "leagueDaily.27.rewards.3.amount": 15000,
+        "leagueDaily.28.rewards.0.amount": 1,
+        "leagueDaily.28.rewards.1.amount": 5,
+        "leagueDaily.28.rewards.2.amount": 15000,
+        "leagueDaily.29.rewards.0.amount": 1,
+        "leagueDaily.29.rewards.1.amount": 5,
+        "leagueDaily.29.rewards.2.amount": 13000,
+        "leagueDaily.30.rewards.0.amount": 5,
+        "leagueDaily.30.rewards.1.amount": 12000,
+        "leagueDaily.31.rewards.0.amount": 5,
+        "leagueDaily.31.rewards.1.amount": 10000,
+        "leagueDaily.32.rewards.0.amount": 10,
+        "leagueDaily.32.rewards.1.amount": 5,
+        "leagueDaily.32.rewards.2.amount": 25,
+        "leagueDaily.32.rewards.3.amount": 70000,
+        "leagueDaily.33.rewards.0.amount": 5,
+        "leagueDaily.33.rewards.1.amount": 3,
+        "leagueDaily.33.rewards.2.amount": 15,
+        "leagueDaily.33.rewards.3.amount": 45000,
+        "leagueDaily.34.rewards.0.amount": 3,
+        "leagueDaily.34.rewards.1.amount": 2,
+        "leagueDaily.34.rewards.2.amount": 10,
+        "leagueDaily.34.rewards.3.amount": 30000,
+        "leagueDaily.35.rewards.0.amount": 2,
+        "leagueDaily.35.rewards.1.amount": 1,
+        "leagueDaily.35.rewards.2.amount": 5,
+        "leagueDaily.35.rewards.3.amount": 15000,
+        "leagueDaily.36.rewards.0.amount": 1,
+        "leagueDaily.36.rewards.1.amount": 5,
+        "leagueDaily.36.rewards.2.amount": 15000,
+        "leagueDaily.37.rewards.0.amount": 1,
+        "leagueDaily.37.rewards.1.amount": 5,
+        "leagueDaily.37.rewards.2.amount": 13000,
+        "leagueDaily.38.rewards.0.amount": 1,
+        "leagueDaily.38.rewards.1.amount": 5,
+        "leagueDaily.38.rewards.2.amount": 12000,
+        "leagueDaily.39.rewards.0.amount": 1,
+        "leagueDaily.39.rewards.1.amount": 5,
+        "leagueDaily.39.rewards.2.amount": 10000,
+        "leagueDaily.40.rewards.0.amount": 15,
+        "leagueDaily.40.rewards.1.amount": 15,
+        "leagueDaily.40.rewards.2.amount": 40,
+        "leagueDaily.40.rewards.3.amount": 70000,
+        "leagueDaily.41.rewards.0.amount": 8,
+        "leagueDaily.41.rewards.1.amount": 10,
+        "leagueDaily.41.rewards.2.amount": 20,
+        "leagueDaily.41.rewards.3.amount": 45000,
+        "leagueDaily.42.rewards.0.amount": 5,
+        "leagueDaily.42.rewards.1.amount": 5,
+        "leagueDaily.42.rewards.2.amount": 10,
+        "leagueDaily.42.rewards.3.amount": 30000,
+        "leagueDaily.43.rewards.0.amount": 2,
+        "leagueDaily.43.rewards.1.amount": 3,
+        "leagueDaily.43.rewards.2.amount": 5,
+        "leagueDaily.43.rewards.3.amount": 15000,
+        "leagueDaily.44.rewards.0.amount": 1,
+        "leagueDaily.44.rewards.1.amount": 5,
+        "leagueDaily.44.rewards.2.amount": 15000,
+        "leagueDaily.45.rewards.0.amount": 1,
+        "leagueDaily.45.rewards.1.amount": 5,
+        "leagueDaily.45.rewards.2.amount": 13000,
+        "leagueDaily.46.rewards.0.amount": 1,
+        "leagueDaily.46.rewards.1.amount": 5,
+        "leagueDaily.46.rewards.2.amount": 12000,
+        "leagueDaily.47.rewards.0.amount": 1,
+        "leagueDaily.47.rewards.1.amount": 5,
+        "leagueDaily.47.rewards.2.amount": 10000,
+        "teamDaily.0.rewards.0.amount": 300,
+        "teamDaily.0.rewards.1.amount": 12,
+        "teamDaily.0.rewards.2.amount": 10000,
+        "teamDaily.1.rewards.0.amount": 240,
+        "teamDaily.1.rewards.1.amount": 12,
+        "teamDaily.1.rewards.2.amount": 7500,
+        "teamDaily.2.rewards.0.amount": 220,
+        "teamDaily.2.rewards.1.amount": 12,
+        "teamDaily.2.rewards.2.amount": 5000,
+        "teamDaily.3.rewards.0.amount": 200,
+        "teamDaily.3.rewards.1.amount": 10,
+        "teamDaily.3.rewards.2.amount": 4500,
+        "teamDaily.4.rewards.0.amount": 200,
+        "teamDaily.4.rewards.1.amount": 10,
+        "teamDaily.4.rewards.2.amount": 4000,
+        "teamDaily.5.rewards.0.amount": 180,
+        "teamDaily.5.rewards.1.amount": 8,
+        "teamDaily.5.rewards.2.amount": 3750,
+        "teamDaily.6.rewards.0.amount": 180,
+        "teamDaily.6.rewards.1.amount": 8,
+        "teamDaily.6.rewards.2.amount": 3500,
+        "teamDaily.7.rewards.0.amount": 180,
+        "teamDaily.7.rewards.1.amount": 8,
+        "teamDaily.7.rewards.2.amount": 3250,
+        "teamDaily.8.rewards.0.amount": 180,
+        "teamDaily.8.rewards.1.amount": 8,
+        "teamDaily.8.rewards.2.amount": 3000,
+        "teamDaily.9.rewards.0.amount": 180,
+        "teamDaily.9.rewards.1.amount": 8,
+        "teamDaily.9.rewards.2.amount": 2750,
+        "teamDaily.10.rewards.0.amount": 150,
+        "teamDaily.10.rewards.1.amount": 6,
+        "teamDaily.10.rewards.2.amount": 2500,
+        "teamDaily.11.rewards.0.amount": 120,
+        "teamDaily.11.rewards.1.amount": 6,
+        "teamDaily.11.rewards.2.amount": 2250,
+        "teamDaily.12.rewards.0.amount": 100,
+        "teamDaily.12.rewards.1.amount": 5,
+        "teamDaily.12.rewards.2.amount": 2000,
+        "teamDaily.13.rewards.0.amount": 80,
+        "teamDaily.13.rewards.1.amount": 4,
+        "teamDaily.13.rewards.2.amount": 1750,
+        "teamDaily.14.rewards.0.amount": 60,
+        "teamDaily.14.rewards.1.amount": 3,
+        "teamDaily.14.rewards.2.amount": 1500,
+        "teamDaily.15.rewards.0.amount": 40,
+        "teamDaily.15.rewards.1.amount": 2,
+        "teamDaily.15.rewards.2.amount": 1250,
+        "teamDaily.16.rewards.0.amount": 30,
+        "teamDaily.16.rewards.1.amount": 1,
+        "teamDaily.16.rewards.2.amount": 1000,
+        "teamFinal.0.rewards.0.amount": 1,
+        "teamFinal.0.rewards.1.amount": 1,
+        "teamFinal.0.rewards.2.amount": 30,
+        "teamFinal.0.rewards.3.amount": 60,
+        "teamFinal.1.rewards.0.amount": 1,
+        "teamFinal.1.rewards.1.amount": 30,
+        "teamFinal.1.rewards.2.amount": 60,
+        "teamFinal.2.rewards.0.amount": 1,
+        "teamFinal.2.rewards.1.amount": 30,
+        "teamFinal.2.rewards.2.amount": 60,
+        "teamFinal.3.rewards.0.amount": 1,
+        "teamFinal.3.rewards.1.amount": 28,
+        "teamFinal.3.rewards.2.amount": 55,
+        "teamFinal.4.rewards.0.amount": 1,
+        "teamFinal.4.rewards.1.amount": 28,
+        "teamFinal.4.rewards.2.amount": 55,
+        "teamFinal.5.rewards.0.amount": 1,
+        "teamFinal.5.rewards.1.amount": 25,
+        "teamFinal.5.rewards.2.amount": 50,
+        "teamFinal.6.rewards.0.amount": 1,
+        "teamFinal.6.rewards.1.amount": 25,
+        "teamFinal.6.rewards.2.amount": 50,
+        "teamFinal.7.rewards.0.amount": 1,
+        "teamFinal.7.rewards.1.amount": 25,
+        "teamFinal.7.rewards.2.amount": 50,
+        "teamFinal.8.rewards.0.amount": 1,
+        "teamFinal.8.rewards.1.amount": 25,
+        "teamFinal.8.rewards.2.amount": 50,
+        "teamFinal.9.rewards.0.amount": 1,
+        "teamFinal.9.rewards.1.amount": 25,
+        "teamFinal.9.rewards.2.amount": 50,
+        "teamFinal.10.rewards.0.amount": 1,
+        "teamFinal.10.rewards.1.amount": 20,
+        "teamFinal.10.rewards.2.amount": 40,
+        "teamFinal.11.rewards.0.amount": 1,
+        "teamFinal.11.rewards.1.amount": 15,
+        "teamFinal.11.rewards.2.amount": 30,
+        "teamFinal.12.rewards.0.amount": 1,
+        "teamFinal.12.rewards.1.amount": 12,
+        "teamFinal.12.rewards.2.amount": 24,
+        "teamFinal.13.rewards.0.amount": 1,
+        "teamFinal.13.rewards.1.amount": 8,
+        "teamFinal.13.rewards.2.amount": 16,
+        "teamFinal.14.rewards.0.amount": 1,
+        "teamFinal.14.rewards.1.amount": 4,
+        "teamFinal.14.rewards.2.amount": 8,
+        "teamFinal.15.rewards.0.amount": 1,
+        "teamFinal.15.rewards.1.amount": 4,
+        "teamFinal.16.rewards.0.amount": 1,
+        "teamFinal.16.rewards.1.amount": 2,
+        "leagueFinal.0.rewards.0.amount": 50,
+        "leagueFinal.0.rewards.1.amount": 20,
+        "leagueFinal.0.rewards.2.amount": 630000,
+        "leagueFinal.0.rewards.3.amount": 180,
+        "leagueFinal.1.rewards.0.amount": 45,
+        "leagueFinal.1.rewards.1.amount": 18,
+        "leagueFinal.1.rewards.2.amount": 567000,
+        "leagueFinal.1.rewards.3.amount": 160,
+        "leagueFinal.2.rewards.0.amount": 40,
+        "leagueFinal.2.rewards.1.amount": 16,
+        "leagueFinal.2.rewards.2.amount": 504000,
+        "leagueFinal.2.rewards.3.amount": 140,
+        "leagueFinal.3.rewards.0.amount": 35,
+        "leagueFinal.3.rewards.1.amount": 15,
+        "leagueFinal.3.rewards.2.amount": 420000,
+        "leagueFinal.3.rewards.3.amount": 130,
+        "leagueFinal.4.rewards.0.amount": 40,
+        "leagueFinal.4.rewards.1.amount": 16,
+        "leagueFinal.4.rewards.2.amount": 504000,
+        "leagueFinal.4.rewards.3.amount": 140,
+        "leagueFinal.5.rewards.0.amount": 32,
+        "leagueFinal.5.rewards.1.amount": 15,
+        "leagueFinal.5.rewards.2.amount": 402000,
+        "leagueFinal.5.rewards.3.amount": 120,
+        "leagueFinal.6.rewards.0.amount": 25,
+        "leagueFinal.6.rewards.1.amount": 12,
+        "leagueFinal.6.rewards.2.amount": 319000,
+        "leagueFinal.6.rewards.3.amount": 100,
+        "leagueFinal.7.rewards.0.amount": 20,
+        "leagueFinal.7.rewards.1.amount": 10,
+        "leagueFinal.7.rewards.2.amount": 270000,
+        "leagueFinal.7.rewards.3.amount": 80,
+        "leagueFinal.8.rewards.0.amount": 25,
+        "leagueFinal.8.rewards.1.amount": 12,
+        "leagueFinal.8.rewards.2.amount": 319000,
+        "leagueFinal.8.rewards.3.amount": 100,
+        "leagueFinal.9.rewards.0.amount": 20,
+        "leagueFinal.9.rewards.1.amount": 9,
+        "leagueFinal.9.rewards.2.amount": 256000,
+        "leagueFinal.9.rewards.3.amount": 80,
+        "leagueFinal.10.rewards.0.amount": 15,
+        "leagueFinal.10.rewards.1.amount": 6,
+        "leagueFinal.10.rewards.2.amount": 200000,
+        "leagueFinal.10.rewards.3.amount": 70,
+        "leagueFinal.11.rewards.0.amount": 12,
+        "leagueFinal.11.rewards.1.amount": 5,
+        "leagueFinal.11.rewards.2.amount": 180000,
+        "leagueFinal.11.rewards.3.amount": 60,
+        "leagueFinal.12.rewards.0.amount": 15,
+        "leagueFinal.12.rewards.1.amount": 6,
+        "leagueFinal.12.rewards.2.amount": 200000,
+        "leagueFinal.12.rewards.3.amount": 70,
+        "leagueFinal.13.rewards.0.amount": 10,
+        "leagueFinal.13.rewards.1.amount": 5,
+        "leagueFinal.13.rewards.2.amount": 144000,
+        "leagueFinal.13.rewards.3.amount": 50,
+        "leagueFinal.14.rewards.0.amount": 7,
+        "leagueFinal.14.rewards.1.amount": 4,
+        "leagueFinal.14.rewards.2.amount": 108000,
+        "leagueFinal.14.rewards.3.amount": 40,
+        "leagueFinal.15.rewards.0.amount": 6,
+        "leagueFinal.15.rewards.1.amount": 3,
+        "leagueFinal.15.rewards.2.amount": 90000,
+        "leagueFinal.15.rewards.3.amount": 30,
+        "leagueFinal.16.rewards.0.amount": 2,
+        "leagueFinal.16.rewards.1.amount": 48000,
+        "leagueFinal.16.rewards.2.amount": 25,
+        "leagueFinal.17.rewards.0.amount": 2,
+        "leagueFinal.17.rewards.1.amount": 38400,
+        "leagueFinal.17.rewards.2.amount": 24,
+        "leagueFinal.18.rewards.0.amount": 2,
+        "leagueFinal.18.rewards.1.amount": 28800,
+        "leagueFinal.18.rewards.2.amount": 19,
+        "leagueFinal.19.rewards.0.amount": 1,
+        "leagueFinal.19.rewards.1.amount": 24000,
+        "leagueFinal.19.rewards.2.amount": 14,
+        "leagueFinal.20.rewards.0.amount": 45000,
+        "leagueFinal.20.rewards.1.amount": 21,
+        "leagueFinal.21.rewards.0.amount": 36000,
+        "leagueFinal.21.rewards.1.amount": 17,
+        "leagueFinal.22.rewards.0.amount": 27000,
+        "leagueFinal.22.rewards.1.amount": 12,
+        "leagueFinal.23.rewards.0.amount": 22500,
+        "leagueFinal.23.rewards.1.amount": 10,
+        "leagueFinal.24.rewards.0.amount": 42000,
+        "leagueFinal.24.rewards.1.amount": 20,
+        "leagueFinal.25.rewards.0.amount": 33600,
+        "leagueFinal.25.rewards.1.amount": 16,
+        "leagueFinal.26.rewards.0.amount": 25200,
+        "leagueFinal.26.rewards.1.amount": 12,
+        "leagueFinal.27.rewards.0.amount": 21000,
+        "leagueFinal.27.rewards.1.amount": 10,
+        "leagueFinal.28.rewards.0.amount": 39000,
+        "leagueFinal.28.rewards.1.amount": 15,
+        "leagueFinal.29.rewards.0.amount": 31200,
+        "leagueFinal.29.rewards.1.amount": 13,
+        "leagueFinal.30.rewards.0.amount": 23400,
+        "leagueFinal.30.rewards.1.amount": 10,
+        "leagueFinal.31.rewards.0.amount": 19500,
+        "leagueFinal.31.rewards.1.amount": 8,
+        "teamMilestones.0.points": 200,
+        "teamMilestones.0.rewards.0.amount": 1,
+        "teamMilestones.0.rewards.1.amount": 100,
+        "teamMilestones.1.points": 500,
+        "teamMilestones.1.rewards.0.amount": 5,
+        "teamMilestones.1.rewards.1.amount": 3,
+        "teamMilestones.2.points": 1000,
+        "teamMilestones.2.rewards.0.amount": 1,
+        "teamMilestones.2.rewards.1.amount": 3,
+        "teamMilestones.3.points": 2000,
+        "teamMilestones.3.rewards.0.amount": 5,
+        "teamMilestones.3.rewards.1.amount": 100,
+        "teamMilestones.3.rewards.2.amount": 3,
+        "teamMilestones.4.points": 3000,
+        "teamMilestones.4.rewards.0.amount": 2,
+        "teamMilestones.4.rewards.1.amount": 5,
+        "teamMilestones.5.points": 4500,
+        "teamMilestones.5.rewards.0.amount": 10,
+        "teamMilestones.5.rewards.1.amount": 200,
+        "teamMilestones.5.rewards.2.amount": 5,
+        "teamMilestones.6.points": 6000,
+        "teamMilestones.6.rewards.0.amount": 2,
+        "teamMilestones.6.rewards.1.amount": 10,
+        "teamMilestones.6.rewards.2.amount": 5,
+        "teamMilestones.7.points": 8000,
+        "teamMilestones.7.rewards.0.amount": 15,
+        "teamMilestones.7.rewards.1.amount": 300,
+        "teamMilestones.7.rewards.2.amount": 10,
+        "teamMilestones.8.points": 10000,
+        "teamMilestones.8.rewards.0.amount": 2,
+        "teamMilestones.8.rewards.1.amount": 20,
+        "teamMilestones.8.rewards.2.amount": 10,
+        "teamMilestones.9.points": 12000,
+        "teamMilestones.9.rewards.0.amount": 20,
+        "teamMilestones.9.rewards.1.amount": 400,
+        "teamMilestones.9.rewards.2.amount": 10,
+        "teamMilestones.10.points": 15000,
+        "teamMilestones.10.rewards.0.amount": 3,
+        "teamMilestones.10.rewards.1.amount": 25,
+        "teamMilestones.10.rewards.2.amount": 15,
+        "teamMilestones.11.points": 20000,
+        "teamMilestones.11.rewards.0.amount": 30,
+        "teamMilestones.11.rewards.1.amount": 600,
+        "teamMilestones.11.rewards.2.amount": 15,
+        "teamMilestones.12.points": 26000,
+        "teamMilestones.12.rewards.0.amount": 3,
+        "teamMilestones.12.rewards.1.amount": 30,
+        "teamMilestones.12.rewards.2.amount": 15,
+        "teamMilestones.13.points": 32000,
+        "teamMilestones.13.rewards.0.amount": 30,
+        "teamMilestones.13.rewards.1.amount": 800,
+        "teamMilestones.13.rewards.2.amount": 20,
+        "teamMilestones.14.points": 40000,
+        "teamMilestones.14.rewards.0.amount": 3,
+        "teamMilestones.14.rewards.1.amount": 30,
+        "teamMilestones.14.rewards.2.amount": 20,
+        "teamMilestones.15.points": 50000,
+        "teamMilestones.15.rewards.0.amount": 30,
+        "teamMilestones.15.rewards.1.amount": 1000,
+        "teamMilestones.15.rewards.2.amount": 20,
+        "teamMilestones.16.points": 60000,
+        "teamMilestones.16.rewards.0.amount": 5,
+        "teamMilestones.16.rewards.1.amount": 30,
+        "teamMilestones.16.rewards.2.amount": 20,
+        "teamMilestones.17.points": 80000,
+        "teamMilestones.17.rewards.0.amount": 40,
+        "teamMilestones.17.rewards.1.amount": 2000,
+        "teamMilestones.17.rewards.2.amount": 25,
+        "teamMilestones.18.points": 100000,
+        "teamMilestones.18.rewards.0.amount": 5,
+        "teamMilestones.18.rewards.1.amount": 40,
+        "teamMilestones.18.rewards.2.amount": 25,
+        "mvp.0.rewards.0.amount": 1,
+        "mvp.0.rewards.1.amount": 30,
+        "mvp.0.rewards.2.amount": 2400,
+        "mvp.0.rewards.3.amount": 180,
+        "mvp.0.rewards.4.amount": 1,
+        "mvp.1.rewards.0.amount": 1,
+        "mvp.1.rewards.1.amount": 25,
+        "mvp.1.rewards.2.amount": 2400,
+        "mvp.1.rewards.3.amount": 150,
+        "mvp.1.rewards.4.amount": 1,
+        "mvp.2.rewards.0.amount": 1,
+        "mvp.2.rewards.1.amount": 20,
+        "mvp.2.rewards.2.amount": 1800,
+        "mvp.2.rewards.3.amount": 150,
+        "mvp.2.rewards.4.amount": 1,
+        "mvp.3.rewards.0.amount": 20,
+        "mvp.3.rewards.1.amount": 1200,
+        "mvp.3.rewards.2.amount": 120,
+        "mvp.3.rewards.3.amount": 1,
+        "mvp.4.rewards.0.amount": 15,
+        "mvp.4.rewards.1.amount": 800,
+        "mvp.4.rewards.2.amount": 120,
+        "mvp.4.rewards.3.amount": 1,
+        "mvp.5.rewards.0.amount": 15,
+        "mvp.5.rewards.1.amount": 600,
+        "mvp.5.rewards.2.amount": 1,
+        "mvp.6.rewards.0.amount": 10,
+        "mvp.6.rewards.1.amount": 400,
+        "mvp.6.rewards.2.amount": 1,
+        "mvp.7.rewards.0.amount": 5,
+        "mvp.7.rewards.1.amount": 400,
+        "mvp.7.rewards.2.amount": 1
+      },
+      "readOnlySummary": [
+        {
+          "name": "tiles",
+          "records": 7
+        },
+        {
+          "name": "clamSizing",
+          "records": 5
+        },
+        {
+          "name": "version",
+          "records": 1
+        },
+        {
+          "name": "assets",
+          "records": 17
+        },
+        {
+          "name": "buffs",
+          "records": 14
+        },
+        {
+          "name": "exhaustion",
+          "records": 7
+        },
+        {
+          "name": "daily",
+          "records": 6
+        },
+        {
+          "name": "attackRewards",
+          "records": 15
+        },
+        {
+          "name": "leagueDaily",
+          "records": 48
+        },
+        {
+          "name": "teamDaily",
+          "records": 17
+        },
+        {
+          "name": "teamFinal",
+          "records": 17
+        },
+        {
+          "name": "leagueFinal",
+          "records": 32
+        },
+        {
+          "name": "teamMilestones",
+          "records": 19
+        },
+        {
+          "name": "mvp",
+          "records": 8
+        },
+        {
+          "name": "name",
+          "records": 1
+        },
+        {
+          "name": "leagues",
+          "records": 1
+        },
+        {
+          "name": "teamSize",
+          "records": 1
         },
         {
           "name": "roles",
           "records": 4
         },
         {
-          "name": "mirageRewards",
+          "name": "guideTitle",
+          "records": 1
+        },
+        {
+          "name": "inGameTitle",
+          "records": 1
+        },
+        {
+          "name": "objectives",
           "records": 2
+        },
+        {
+          "name": "scoring",
+          "records": 3
         }
       ],
-      "baseline": "93fe290927ccbf954241867a0407ba07852f8bdfbf76b587a843773b7ba60913"
-    },
-    {
-      "key": "guide:horde",
-      "title": "Horde",
-      "source": "guide-data/horde.json",
-      "locked": "Read-only mechanics dataset. Horde costs, waves and stats are shared with the drafter; Spa mechanics contain reviewed and unresolved source data. Update these through a tested data release.",
-      "schema": {},
-      "defaults": {},
-      "readOnlySummary": [
-        {
-          "name": "version",
-          "records": 1
-        },
-        {
-          "name": "season",
-          "records": 1
-        },
-        {
-          "name": "waves",
-          "records": 150
-        },
-        {
-          "name": "chips",
-          "records": 49
-        },
-        {
-          "name": "ranks",
-          "records": 8
-        }
-      ],
-      "baseline": "0477d2f2e773147b406b06411e1c3a5c9dd4b3c680b5f1f64005000f26431fd7"
-    },
-    {
-      "key": "guide:spa-audit",
-      "title": "Sparkly Spa",
-      "source": "guide-data/spa-audit.json",
-      "locked": "Read-only mechanics dataset. Horde costs, waves and stats are shared with the drafter; Spa mechanics contain reviewed and unresolved source data. Update these through a tested data release.",
-      "schema": {},
-      "defaults": {},
-      "readOnlySummary": [
-        {
-          "name": "version",
-          "records": 1
-        },
-        {
-          "name": "buffs",
-          "records": 32
-        },
-        {
-          "name": "parameters",
-          "records": 9
-        },
-        {
-          "name": "skinCounts",
-          "records": 4
-        }
-      ],
-      "baseline": "0477d2f2e773147b406b06411e1c3a5c9dd4b3c680b5f1f64005000f26431fd7"
-    },
-    {
-      "key": "announcement",
-      "title": "Announcements",
-      "source": "announcement-defaults.json",
-      "locked": "One shared announcement below the navbar. Hidden turns it off across public pages. A new published version appears again to visitors who dismissed an older version.",
-      "schema": {
-        "visibility": {
-          "label": "Visibility",
-          "group": "Announcement",
-          "type": "string",
-          "maxLength": 500,
-          "options": [
-            "Hidden",
-            "Visible"
-          ]
-        },
-        "label": {
-          "label": "Small label",
-          "group": "Announcement",
-          "type": "string",
-          "maxLength": 500
-        },
-        "headline": {
-          "label": "Headline",
-          "group": "Announcement",
-          "type": "string",
-          "maxLength": 500
-        },
-        "message": {
-          "label": "Message",
-          "group": "Announcement",
-          "type": "string",
-          "maxLength": 500
-        },
-        "extraLabel": {
-          "label": "Button text (optional)",
-          "group": "Announcement",
-          "type": "string",
-          "maxLength": 500
-        },
-        "extraUrl": {
-          "label": "Button HTTPS URL (optional)",
-          "group": "Announcement",
-          "type": "string",
-          "maxLength": 500,
-          "format": "url"
-        },
-        "dismissible": {
-          "label": "Allow dismissal",
-          "group": "Announcement",
-          "type": "string",
-          "maxLength": 500,
-          "options": [
-            "Yes",
-            "No"
-          ]
-        }
-      },
-      "defaults": {
-        "visibility": "Hidden",
-        "label": "NEW UPDATE",
-        "headline": "Foil cards are here.",
-        "message": "Track your foil collection and find the variant you need.",
-        "extraLabel": "View My Album",
-        "extraUrl": "https://kenzkunz.github.io/tatari-companion/my-album.html",
-        "dismissible": "Yes"
-      },
-      "baseline": "11780ba9bae9c3f52d904d4a897831a089b6ad8dd55150f2d0baae2d0700ebb3"
+      "baseline": "da43bbbaec70a851a585c0f4fcbcc3ed87f287c3a456ffdce494446f7dc76b61"
     }
   ]
 }

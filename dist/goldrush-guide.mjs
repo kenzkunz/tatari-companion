@@ -1,21 +1,22 @@
-import {loadGuideData} from './site-data.mjs?v=sandy1';
+import {loadGuideData} from './site-data.mjs?v=split2';
 const $=id=>document.getElementById(id),fmt=n=>Number(n).toLocaleString('en-US',{maximumFractionDigits:2});
 const el=(tag,value,cls)=>{const n=document.createElement(tag);if(value!==undefined)n.textContent=value;if(cls)n.className=cls;return n;};
 const img=(src,alt='')=>{const n=el('img');n.src=src;n.alt=alt;n.loading='lazy';return n;};
-const baseData=await loadGuideData('goldrush');
-let data=baseData;
+const guideKey=document.body.dataset.goldrushEvent==='dunerush'?'dunerush':'goldrush';
+const data=await loadGuideData(guideKey);
 function supply(n){const v=el('span',undefined,'gold-icon-value');v.append(el('span',fmt(n)),img(data.assets.drink,'Energy Drinks'));return v;}
 function iconText(icon,text,alt=''){const v=el('span',undefined,'gold-icon-value');v.append(img(icon,alt),el('span',text));return v;}
 function exhaustionValue(value){const n=el('span',undefined,'gold-icon-value');n.append(el('strong','+'+value+'%'),img(data.assets.exhausted,'Exhaustion'));return n;}
-function points(n){return iconText(data.assets.points,fmt(n),'Points');}
+function points(n){return el('span',fmt(n)+' Team Points');}
 function row(values){const r=el('tr');for(const v of values){const c=el('td');c.append(v instanceof Node?v:document.createTextNode(String(v)));r.append(c);}return r;}
-function renderMode(){
- data=$('gold-mode').value==='tournament'?{...baseData,...baseData.tournament}:baseData;
- $('gold-tile-rows').replaceChildren(...data.tiles.map(t=>row([t.name,t.defenders,iconText(data.assets.productionPoints,fmt(t.perMinute),'Gold points'),iconText(data.assets.productionPoints,fmt(t.perHour),'Gold points')])));
- $('daily-rows').replaceChildren(...data.daily.map(d=>row(['Day '+d.Day,d.mirages?d.mirages+' Mirage sites':d.cities?'Lost City':'No special objective',d.ScoreRatePct+'% ('+fmt(d.ScoreRatePct/100)+'×)',d.capacity,d.arena?'Open':'Closed'])));
+function renderGuide(){
+ $('gold-tile-rows').replaceChildren(...data.tiles.map(t=>row([t.name,t.defenders,iconText(data.assets.productionPoints,fmt(t.perMinute),'League Points'),iconText(data.assets.productionPoints,fmt(t.perHour),'League Points')])));
+ $('daily-rows').replaceChildren(...data.daily.map(d=>row(['Day '+d.Day,d.mirages?d.mirages+' Mirage sites':d.cities?'Lost City':'No special objective',d.ScoreRatePct+'% ('+fmt(d.ScoreRatePct/100)+'×)',d.capacity,...(data.leagues===8?[d.arena?'Open':'Closed']:[])])));
  $('role-rows').replaceChildren(...data.roles.map(r=>{const title=el('span',undefined,'gold-icon-value');if(r.art)title.append(img(data.assets[r.art]));title.append(el('span',r.name));return row([title,r.slots??'—',r.discount+'%',r.art?(r.art==='leader'?'Manage titles, mark tiles, post announcements'+(data.leagues===8?', approve league transfers':'')+'; ':'Mark tiles, post announcements; ')+'1 officer rally / day from the next day':'Follow the league plan']);}));
  $('mode-leagues').textContent=data.leagues+' competing leagues';$('mode-team-size').textContent=data.teamSize+' players';$('mode-capacity').textContent=data.leagues===4?'50 teams per day':'10 → 20 teams across Days 1–6';
- $('mode-summary').textContent=data.name+' · '+data.leagues+' leagues · '+data.teamSize+'-player teams. Tables below follow this selection.';
+ $('mode-summary').textContent=data.name+' · '+data.leagues+' leagues · '+data.teamSize+'-player teams. Tables on this page apply to this event.';
+ $('scoring-rows').replaceChildren(...data.scoring.map(s=>row([s.icon?iconText(s.icon,s.name,s.name):s.name,s.description])));
+ $('objective-rows').replaceChildren(...data.objectives.map(o=>row([o.name,o.leaguePoints.map((n,i)=>o.name==='Lost City'?(i+1)+': '+fmt(n):fmt(n)).join(o.name==='Lost City'?' · ':' or '),data.leagues===4?'1st-place league':o.clueBonus?'1 clue · +'+o.clueBonus+'% Lost City kill count':'No new clue'])));
  $('reward-league').replaceChildren(...Array.from({length:data.leagues},(_,i)=>{const o=el('option','Rank '+(i+1));o.value=i+1;return o;}));
  rewards();
 }
@@ -33,7 +34,7 @@ for(const id of ['loss-hp','loss-buff','loss-damage'])$(id).addEventListener('in
 loss();
 $('rally-rows').replaceChildren(...[[2000,4,11],[4000,8,12],[6000,12,13],[6000,30,13]].map(([price,people,level])=>{const b=data.buffs.find(b=>b.Level===level);return row([supply(price),people,iconText(data.assets.boost,'Lv '+level,'Boost'),'+'+b.ATKPR+'%','+'+b.HPPR+'%']);}));
 for(let n=1;n<=6;n++){const o=el('option','Day '+n);o.value=n;$('reward-day').append(o);}
-function rewardList(items){const n=el('div',undefined,'gold-reward-items');for(const r of items){const v=el('span',undefined,'gold-reward-item');v.title=r.name;v.setAttribute('aria-label',fmt(r.amount)+' '+r.name);v.append(img(r.icon,''),el('b',fmt(r.amount)));if(!(r.type===12&&r.id===110002003))v.append(el('span',r.name));n.append(v);}return n;}
+function rewardList(items){const n=el('div',undefined,'gold-reward-items');for(const r of items){const v=el('span',undefined,'gold-reward-item');v.title=r.name;v.setAttribute('aria-label',fmt(r.amount)+' '+r.name);v.append(img(r.icon,''),el('b',fmt(r.amount)));v.append(el('span',r.name));n.append(v);}return n;}
 function sumRewards(entries){const totals=new Map();for(const entry of entries)for(const r of entry){const key=r.type+':'+r.id;if(!totals.has(key))totals.set(key,{...r,amount:0});totals.get(key).amount+=r.amount;}return [...totals.values()];}
 function rewards(){const kind=$('reward-category').value;$('reward-day-label').hidden=kind!=='leagueDaily';$('reward-league-label').hidden=kind!=='leagueFinal';let entries=[];
  $('gold-attack-total').hidden=kind!=='attack';if(kind==='attack')$('gold-attack-total').replaceChildren(el('strong','Total attack rewards'),el('p','Select a kill threshold to see the rewards earned through that row.'));
@@ -76,5 +77,4 @@ function rallyCalculator(){
 for(const id of ['rally-size','rally-attacks','rally-role','rally-spa','rally-tile-hp','rally-avg-kills'])$(id).addEventListener('input',rallyCalculator);
 rallyCalculator();
 
-$('gold-mode').addEventListener('change',renderMode);
-renderMode();
+renderGuide();
