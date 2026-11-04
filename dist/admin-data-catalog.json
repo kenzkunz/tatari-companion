@@ -10939,7 +10939,7 @@
       "key": "guide:spa-audit",
       "title": "Sparkly Spa",
       "source": "guide-data/spa-audit.json",
-      "locked": "Read-only mechanics dataset. Horde costs, waves and stats are shared with the drafter; Spa mechanics contain reviewed and unresolved source data. Update these through a tested data release.",
+      "locked": "Read-only Spa reference values. Updated together with the guide.",
       "schema": {},
       "defaults": {},
       "readOnlySummary": [
@@ -10948,12 +10948,12 @@
           "records": 1
         },
         {
-          "name": "buffs",
-          "records": 32
+          "name": "levels",
+          "records": 4
         },
         {
-          "name": "parameters",
-          "records": 9
+          "name": "buffs",
+          "records": 40
         },
         {
           "name": "skinCounts",

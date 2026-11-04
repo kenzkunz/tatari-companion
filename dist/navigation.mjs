@@ -23,7 +23,7 @@ document.getElementById('support')?.addEventListener('click',()=>location.assign
 
 void import('./account-nav.mjs?v=discord-modal1');
 
-void import('./site-content.mjs?v=tidy3');
+void import('./site-content.mjs?v=spa4');
 
 void import('./site-footer.mjs?v=footer2');
 

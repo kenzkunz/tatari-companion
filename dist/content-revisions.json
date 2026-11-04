@@ -108,7 +108,8 @@
       "c7b640a4d9cffdcbb2e03f2c4db194060962f9a14d1179734e8bbb5dee35f3d7": "@rich-v1:[{\"text\":\"Duplicate Sparkle appearances convert into +1 Glitter Fruits \"},{\"tag\":\"em\",\"children\":[{\"text\":\"(There's currently a visual tooltip bug that show you +5 Glitter Fruits upon your first Sparkle obtained variant, you won't receive +5 at any means)\"}]},{\"text\":\". Each supported Tatari has five Standard and two Rare appearances. Sparkle appearances are cosmetic; the Spa’s temporary buffs are separate.\"}]"
     },
     "text-33": {
-      "5ea2d915cb557e051662d7196e3f4b47f9d118dc838ab6e6a0ab801c748fcdc6": "Still being checked"
+      "5ea2d915cb557e051662d7196e3f4b47f9d118dc838ab6e6a0ab801c748fcdc6": "Check your active spa",
+      "36363bf09117c00ad076b3ee2af4b59e0e5940c6e0ce4d2dd0786daa09ddb496": "Check your active spa"
     },
     "text-34": {
       "f0b062fc014f5aafb822fa0e89cb5b32794113fa4054eef5641c3e6ab91d0603": ""
@@ -117,7 +118,92 @@
       "e60974736d3a33cf604443df76c792c276cb2759a8825a2556d166899de84a8a": "The values above already include the host bonus. Do not double them again. Final combat stats also depend on other bonuses."
     },
     "note-8": {
-      "9b98f9634ed7930ea5273ac928d32853480c7283edaf1e9504431c1894ccb062": "A community-made Spa guide. Some details, including pity resets, are still being checked."
+      "9b98f9634ed7930ea5273ac928d32853480c7283edaf1e9504431c1894ccb062": "The weekly schedule describes newly opened spas. Your active spa’s displayed buffs, level and closing time determine its current benefits.",
+      "1007a2e90af280a95be8f0751c177b9ecc73a6b63c19e1c6498625efc780eb6b": "The weekly schedule describes newly opened spas. Your active spa’s displayed buffs, level and closing time determine its current benefits."
+    },
+    "text-1": {
+      "241e849f87201d2f736517c33e1ee30e9dae4e093efc7495ead99396a1fbcb8e": "Upgrade your spa, compare weekly buffs and collect Sparkle Tatari."
+    },
+    "text-3": {
+      "865264999bcccf0442548c956b80ca36fdd2265cc4897122dc3b1cfb5ad8a09b": "Open your own spa or visit a friend’s spa to give your T4 Tatari stat bonuses and daily Sparkle progress. Upgrade an active spa through four levels to improve its buffs. Two special effects rotate weekly for newly opened spas."
+    },
+    "text-4": {
+      "f45197c31d4474ee93548c753d126dbda339e71e683bbb4d9827992ed1974c60": "Spa Soap and upgrades"
+    },
+    "text-5": {
+      "e217a7022aab48e6a8a81247c59d7b27b04d68f58f7b7de298f9f6bc02507128": "Sandy Maze Goldrush MVP rewards give 180, 150, 120 or 100 Spa Soap for league ranks I–IV. Check the in-game shop for other available sources.",
+      "3bb569e7c06473d92704905a1c4a74c858d0ed7794371d84e59be6919bb83cd3": "Sandy Maze Goldrush MVP rewards give 180, 150, 120 or 100 Spa Soap for league ranks I–IV. Check the in-game shop for other available sources."
+    },
+    "text-8": {
+      "d8edfd3679e3c8d4ee79b0d44164e8f726fa73d02fd27596fdba5e89ec98fe2a": "Gain 50 Sparkle progress at daily settlement at every spa level."
+    },
+    "text-17": {
+      "74f29a956ea5a60b38628e6e0e63a6bce183151b5d23ccda9d2a16ab3f6d4970": "Increase ATK for the host and guests."
+    },
+    "text-18": {
+      "4f2cc454af147f5b74de7e1ab727c0bbc770ab0c45ce6c75d4a3b90d5399a621": "Increase HP for the host and guests."
+    },
+    "text-19": {
+      "4abddfd2b3cfed34e65adbfca3402b3aefd7f6b19cb443fcf79af804a3996c97": "Increase DEF for the host and guests."
+    },
+    "text-9": {
+      "3e9a14d4a0b4357738f0db997b373f106d956a1e33deb7a73017ffff56c03348": "Double the chance of becoming Glitter when feeding Glitter Fruit. This is not a guaranteed Glitter result."
+    },
+    "text-10": {
+      "7789bc1dc7d8ddf9b443e81abf5d5702a245ae1c69f907467734bec86e77cc7f": "An 80% chance of double feeding progress. The daily trigger limit rises at Level 3."
+    },
+    "text-13": {
+      "2f9fc2282d8d3a02667a649bd05b89679171a85305c08c476ebaa46719d66946": "Double-output chance at the Bento Maker rises from 80% to 100% at Level 3."
+    },
+    "text-14": {
+      "3119ada3bc09c936232e4472bc9df92e6941a122cab878e872a52acf600c2cef": "Increase damage dealt to bosses."
+    },
+    "text-15": {
+      "d864cf5c78b4c772b3ec31d44041e7ba2a16bbc555854cee15190a1627a06d0d": "Reduce Energy Drink costs in Goldrush."
+    },
+    "text-20": {
+      "f7ade7e00333f7bd8c3f5b052806f30211631cdcb26348c85dcb52ad1e104ced": "Increase damage dealt."
+    },
+    "text-6": {
+      "a739b9f482a08204a8396c74f6ded2c6f7ae1ef0bf89e4a74d4e66a7e8dbd725": "Spa buffs by level"
+    },
+    "text-7": {
+      "255fa87488953e73ab6ee136a1fb2b987ac53f90278f36ea76cb2d255001e95f": "Every newly opened spa has fixed ATK, HP, DEF and Sparkle progress buffs, plus the current pair of weekly specials. Expand each effect to compare all four levels. Daily limits are shared across spas and upgrades."
+    },
+    "text-23": {
+      "aff9544346128732e68b81127f53e66d7c89de59e65ca472a5622e4f25de5f70": "Host your own spa. Open it with Spa Soap, then upgrade it while active. The special-buff pair is locked when you open it and stays the same until it expires, including across a weekly rotation."
+    },
+    "text-24": {
+      "d866f3001392a6a9ef6e6cc3ce1161d71cbf1cc038ecae35d5d071b6da43d52c": "Choose a friend’s spa. The Spa Station shows available buffs, spa level and time remaining. Guests share the owner’s special-buff pair and benefit from upgrades immediately. Your Tatari can use only one spa at a time."
+    },
+    "text-25": {
+      "d3612f11bc12a91a55ae449d226853cad0f2e43950b585733763a997a787aca7": "Friends can enter directly when the owner enables free joining. Otherwise, request approval. Leaving, being removed or expiry ends the active benefits. Switching spas and upgrading do not reset daily trigger counts."
+    },
+    "text-26": {
+      "25b7a683de9b2b2481ca3e48fac26fab8c9f3ae044990f93ef15705a94f00b9a": "Weekly buff rotation"
+    },
+    "text-27": {
+      "e888b4f8a84025cca0c41fb764f370a7e4a7ed41ae8dfe9e2b2d06cccbe6a5e4": "The weekly special pair follows the UTC calendar using the game’s server time. Opening a spa locks that pair for its entire session; upgrading changes its strength, not its combination. A rotation affects newly opened spas only."
+    },
+    "note-6": {
+      "3348ccdad39ee494ccf7260f5c8a522ceefdfbfbefc18aba510fa822ee574c84": "This is the opening schedule, not a live reading of your account. An existing spa can still have the previous pair. Check the in-game opening preview before spending Soap.",
+      "ec42f5174d1c8675533f10606807fda98a7a78533de1502884b085af4417d3c3": "This is the opening schedule, not a live reading of your account. An existing spa can still have the previous pair. Check the in-game opening preview before spending Soap."
+    },
+    "list-1": {
+      "8f114ca2997047b4db8c071af713d544dc091d067d3c76c40c11816a3562fd9a": "Keep your chosen spa active at the end of the UTC day. Sparkle progress is a fixed buff at all four upgrade levels."
+    },
+    "list-3": {
+      "839e89f00318d6442d7532d69ac858d3ba8474d444f529064c0bc45531b9da80": "Select a T4 Tatari with permanent Glitter unlocked and Sparkle appearances available."
+    },
+    "text-31": {
+      "6f57da50fcff358b79a1ea0ec9272599aed81081b4917b1b8fd552811f79bb45": "Choose a Tatari family to see its five Standard and two Rare T4 appearances. New additions: Pyrodaemon, Sealord, Boltallion, Cribking and Morphanessa.",
+      "86732d8cf3747555ebed3123e96d58b155258a229da01456c803fde2a73a9e0a": "Choose a Tatari family to see its five Standard and two Rare T4 appearances. New additions: Pyrodaemon, Sealord, Boltallion, Cribking and Morphanessa."
+    },
+    "list-5": {
+      "a6d7e261462bf7788be44d2c315e13301f9446c626d13aa4a9c9ed7db5031726": "Choose the right weekly pair. Feeding, Goldrush, Bento crafting and combat favor different special buffs."
+    },
+    "list-6": {
+      "e76c47e4c2cfef8cfb753c8a381ec12c8c90ff8c821f952cfc394a4d55491927": "Upgrade early. Upgrades improve the remaining session without extending it; the level resets when you open again."
     }
   },
   "information/patch-notes.html": {
