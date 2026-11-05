@@ -1,5 +1,5 @@
-export const PAYOUTS={'Fishing Contest':['rods',1],'Raft Race':['raft',1],'Treasure Hunt':['pickaxes',1],'Cozy Farm':['fertilizer',2],'Zobo Shooter':['zobo',200]};
-export const LABELS={rods:'🎣 Fishing Rods',raft:'🛶 Rafts',pickaxes:'⛏️ Iron Pickaxes',fertilizer:'🌾 Magic Fertilizer',zobo:'🎯 Bullet Coins',energy_drinks:'🥤 Energy Drinks',pinballs:'🔵 Pinballs earned',candy:'🍬 Candy',catch_tatari:'🐾 Catch Tatari',blue_card_packs:'🔵 Blue Card Packs',boost_x2_minutes:'✨ ×2 Boost (min)'};
+export const PAYOUTS={'Fishing Contest':['rods',1],'Raft Race':['raft',1],'Treasure Hunt':['pickaxes',1],'Cozy Farm':['fertilizer',2],'Zobo Shooter':['zobo',200],'Artifact Adventure':['torches',1]};
+export const LABELS={torches:'Torches',rods:'🎣 Fishing Rods',raft:'🛶 Rafts',pickaxes:'⛏️ Iron Pickaxes',fertilizer:'🌾 Magic Fertilizer',zobo:'🎯 Bullet Coins',energy_drinks:'🥤 Energy Drinks',pinballs:'🔵 Pinballs earned',candy:'🍬 Candy',catch_tatari:'🐾 Catch Tatari',blue_card_packs:'🔵 Blue Card Packs',boost_x2_minutes:'✨ ×2 Boost (min)'};
 export const UNLOCKS={1:0,2:0,3:240,5:360,10:600,20:1200,40:2400,60:4800,100:7200,150:7200,200:7200};
 const PROBS={party:.251,event:.22,gold_candy:.22,jackpot:.017,card_hole:.033,unmodelled:.004};
 export const unlocked=amount=>Object.entries(UNLOCKS).filter(([,n])=>amount>=n).map(([m])=>Number(m));

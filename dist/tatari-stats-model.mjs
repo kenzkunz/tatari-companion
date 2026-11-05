@@ -9,7 +9,7 @@ export function resolveBuild(data,build){
  const values=calculatedStats(data,unit,form,{stars:build.stars,foodStage:build.food,badgeIds:build.badgeMode==='pick'?build.badges:[],standardOverride:standard});
  const spa=Object.fromEntries(['ATK','HP','DEF'].map(stat=>[stat,Number(build.spa?.[stat]??0)]));
  if(Object.values(spa).some(value=>!Number.isFinite(value)||value<0||value>100))throw Error('Spa buffs must be 0–100%.');
- if(form.evolution>=4||build.lowerTierSpa){const core=coreStats(standard,data.stars[build.stars],form.growth);for(const stat of Object.keys(spa))values[stat]+=core[stat]*spa[stat]/100;}
+ if(form.evolution>=4){const core=coreStats(standard,data.stars[build.stars],form.growth);for(const stat of Object.keys(spa))values[stat]+=core[stat]*spa[stat]/100;}
  const grades=Object.fromEntries(['ATK','HP','DEF'].map(a=>[a,({0:'E',5:'D',10:'C',25:'B',40:'A',50:'S',55:'SS',60:'SSS'})[feed[a+'PR']]]));
  return {unit,form,feed,values,grades};
 }

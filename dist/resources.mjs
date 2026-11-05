@@ -1,11 +1,11 @@
-import {loadAppData} from './site-data.mjs?v=site-data5';
+import {loadAppData} from './site-data.mjs?v=adventure8';
 
-import {PAYOUTS,UNLOCKS,unlocked} from './engine.mjs';
+import {PAYOUTS,UNLOCKS,unlocked} from './engine.mjs?v=adventure1';
 const $=id=>document.getElementById(id),fmt=n=>Math.round(n).toLocaleString('en-US');
-const worker=new Worker('/worker.mjs?v=pinball-accounting1',{type:'module'}),pending=new Map();let counter=0,revision=0,data,mode='have',multiplier=60,refire=true,gold=true,delay;
-const eventIcons={'Fishing Contest':'fishingcontest.png','Cozy Farm':'cozyfarm.png','Treasure Hunt':'treasurehunt.png','Raft Race':'raftrace.png','Zobo Shooter':'zoboshooter.png'};
-const resourceNames={rods:'Fishing Rods',fertilizer:'Magic Fertilizer',pickaxes:'Iron Pickaxes',raft:'Rafts',zobo:'Bullet Coins',energy_drinks:'Energy Drinks',pinballs:'Pinballs earned (gross)',reinvested:'Pinballs re-fired',remaining:'Pinballs remaining',candy:'Candy',catch_tatari:'Capsule / Catch Tatari',blue_card_packs:'Blue Card Packs',boost_x2_minutes:'×2 Boost',jackpot:'Star Hits',card_hole:'Card Hole hits'};
-const resourceIcons={rods:'fishrod.png',fertilizer:'cozyfarm.png',pickaxes:'treasurehunt.png',raft:'raftrace.png',zobo:'zoboshooter.png',energy_drinks:'cans.png',pinballs:'pb.png',reinvested:'pb.png',remaining:'pb.png',candy:'candy.png',catch_tatari:'catch.webp',blue_card_packs:'bluecard.png',boost_x2_minutes:'x2.png',jackpot:'jackpot.png',card_hole:'cards.png'};
+const worker=new Worker('/worker.mjs?v=adventure1',{type:'module'}),pending=new Map();let counter=0,revision=0,data,mode='have',multiplier=60,refire=true,gold=true,delay;
+const eventIcons={'Fishing Contest':'fishingcontest.png','Cozy Farm':'cozyfarm.png','Treasure Hunt':'treasurehunt.png','Raft Race':'raftrace.png','Zobo Shooter':'zoboshooter.png','Artifact Adventure':'adventure-icon.webp'};
+const resourceNames={torches:'Torches',rods:'Fishing Rods',fertilizer:'Magic Fertilizer',pickaxes:'Iron Pickaxes',raft:'Rafts',zobo:'Bullet Coins',energy_drinks:'Energy Drinks',pinballs:'Pinballs earned (gross)',reinvested:'Pinballs re-fired',remaining:'Pinballs remaining',candy:'Candy',catch_tatari:'Capsule / Catch Tatari',blue_card_packs:'Blue Card Packs',boost_x2_minutes:'×2 Boost',jackpot:'Star Hits',card_hole:'Card Hole hits'};
+const resourceIcons={torches:'torch.webp',rods:'fishrod.png',fertilizer:'cozyfarm.png',pickaxes:'treasurehunt.png',raft:'raftrace.png',zobo:'zoboshooter.png',energy_drinks:'cans.png',pinballs:'pb.png',reinvested:'pb.png',remaining:'pb.png',candy:'candy.png',catch_tatari:'catch.webp',blue_card_packs:'bluecard.png',boost_x2_minutes:'x2.png',jackpot:'jackpot.png',card_hole:'cards.png'};
 worker.onmessage=({data:message})=>{const p=pending.get(message.id);if(!p)return;pending.delete(message.id);message.error?p.reject(Error(message.error)):p.resolve(message.result);};
 worker.onerror=()=>{pending.forEach(p=>p.reject(Error('Could not finish the estimate. Please reload and try again.')));pending.clear();};
 function calculate(kind,input){return new Promise((resolve,reject)=>{const id=++counter;pending.set(id,{resolve,reject});worker.postMessage({id,kind,input,party:data.party});});}
