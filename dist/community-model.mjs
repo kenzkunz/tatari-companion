@@ -13,3 +13,5 @@ export const communityLabel=(kind,v)=>kind==='code'?v?.code||'Untitled code':kin
 
 export function codeWorkingStatus(entry,votes={}){if(entry.status_override==='Working'||entry.status_override==='Not working')return entry.status_override;return effectiveCodeStatus(entry)==='Expired'||Number(votes.dislikes||0)>Number(entry.dislike_threshold??10)?'Not working':'Working';}
 export function patchStatus(entry,today=new Date().toISOString().slice(0,10)){return entry.released_on>today?'Upcoming patch':'Patch notes';}
+
+export function orderCreators(rows){const ordered=[...rows].sort((a,b)=>Number(b.content.featured)-Number(a.content.featured));const isChannel=(row,handle)=>{try{return new URL(row.content.channel_url).pathname.replace(/\/videos\/?$/,'').replace(/\/$/,'').toLowerCase()==='/@'+handle}catch{return false}};const index=ordered.findIndex(row=>isChannel(row,'esbarj'));if(index>=0&&ordered.some(row=>isChannel(row,'peterviriyaa'))){const [row]=ordered.splice(index,1);ordered.splice(ordered.findIndex(row=>isChannel(row,'peterviriyaa'))+1,0,row)}return ordered;}
