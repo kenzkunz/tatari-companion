@@ -1,5 +1,5 @@
-import {loadAppData} from '/site-data.mjs?v=events6';
-import {DAY,regularAt,pvpAt,hordeAt,dayEvents} from '/schedule-model.mjs?v=events6';
+import {loadAppData} from '/site-data.mjs?v=events7';
+import {DAY,regularAt,pvpAt,hordeAt,dayEvents} from '/schedule-model.mjs?v=events7';
 
 const byId=id=>document.getElementById(id);
 const definitions={
@@ -29,7 +29,7 @@ function countdown(end){const seconds=Math.max(0,Math.floor((end-Date.now())/100
 function feed(){
   const now=Date.now(),regular=regularAt(now,data.events.regular),nextRegular=regularAt(regular.end,data.events.regular),pvp=pvpAt(now,data.events.pvp),nextPvp=pvpAt(pvp.end,data.events.pvp),horde=hordeAt(now,data.horde);
   const live=[{name:regular.name,phase:`Day ${regular.day} of ${data.events.regular.duration_days}`,start:regular.start,end:regular.end,label:'Ends in'}];
-  const upcoming=[{name:nextRegular.name,phase:nextRegular.name==='Artifact Adventure'&&now>=nextRegular.start-DAY?'Enrollment open':'Next rotating event',end:nextRegular.start,label:'Starts in'}];
+  const upcoming=[{name:nextRegular.name,phase:'Next rotating event',end:nextRegular.start,label:'Starts in'}];
   if(horde.live)live.push({name:'Horde Invasion',phase:'Invasion active',end:Math.round(horde.end),label:'Ends in'});
   else upcoming.push({name:'Horde Invasion',phase:'Settlement in progress',end:Math.round(horde.end),label:'Starts in'});
   if(pvp.registration)upcoming.push({name:pvp.name,phase:'Registration open',end:pvp.start,label:'Starts in'});
