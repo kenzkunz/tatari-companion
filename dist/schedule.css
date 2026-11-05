@@ -17,16 +17,16 @@
 @media(min-width:561px) and (max-width:800px){.event-group{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:18px}.event-group-title{grid-column:1/-1}.event-group .event-row{padding-top:13px}}
 @media(max-width:560px){.event-group{margin-top:18px}.event-group+.event-group{padding-top:15px;border-top:1px solid var(--line)}.event-group-title{padding-bottom:1px}}
 /* One event palette, shared by calendar tags, timers, details and filters. */
-[data-event="Cozy Farm"]{--event-bg:#e4f2da;--event-ink:#325e27;--event-accent:#639e43}
-[data-event="Fishing Contest"]{--event-bg:#dceffa;--event-ink:#205b78;--event-accent:#3c91bf}
-[data-event="Treasure Hunt"]{--event-bg:#eee4fa;--event-ink:#69418d;--event-accent:#9a70bd}
-[data-event="Raft Race"]{--event-bg:#d9f1ed;--event-ink:#22675f;--event-accent:#389c8d}
-[data-event="Zobo Shooter"]{--event-bg:#f9dfed;--event-ink:#8a365f;--event-accent:#c86496}
-[data-event="Gold Rush #1"]{--event-bg:#fff0ba;--event-ink:#795815;--event-accent:#c39a22}
-[data-event="Gold Rush #2"]{--event-bg:#ffe2c8;--event-ink:#884914;--event-accent:#cb7d32}
-[data-event="Gold Rush #3"]{--event-bg:#fadcd5;--event-ink:#8d4030;--event-accent:#c56d55}
-[data-event="Dune Rush"]{--event-bg:#eedfc9;--event-ink:#6d5235;--event-accent:#a08054}
-[data-event="Horde Invasion"]{--event-bg:#e0e3fb;--event-ink:#444d8c;--event-accent:#6c79c0}
+[data-event="Cozy Farm"]{--event-bg:#168332;--event-ink:#ffffff;--event-accent:#168332}
+[data-event="Fishing Contest"]{--event-bg:#0669ca;--event-ink:#ffffff;--event-accent:#0669ca}
+[data-event="Treasure Hunt"]{--event-bg:#7b22ce;--event-ink:#ffffff;--event-accent:#7b22ce}
+[data-event="Raft Race"]{--event-bg:#007b78;--event-ink:#ffffff;--event-accent:#007b78}
+[data-event="Zobo Shooter"]{--event-bg:#c21868;--event-ink:#ffffff;--event-accent:#c21868}
+[data-event="Gold Rush #1"]{--event-bg:#ffd21c;--event-ink:#282625;--event-accent:#ffd21c}
+[data-event="Gold Rush #2"]{--event-bg:#f47100;--event-ink:#282625;--event-accent:#f47100}
+[data-event="Gold Rush #3"]{--event-bg:#d22b35;--event-ink:#ffffff;--event-accent:#d22b35}
+[data-event="Dune Rush"]{--event-bg:#984310;--event-ink:#ffffff;--event-accent:#984310}
+[data-event="Horde Invasion"]{--event-bg:#3547c9;--event-ink:#ffffff;--event-accent:#3547c9}
 .day-event[data-event]{background:var(--event-bg);color:var(--event-ink)}
 .event-row[data-event] .event-row-title{display:table;max-width:100%;padding:3px 6px;border-radius:5px;background:var(--event-bg);color:var(--event-ink)}
 .event-row[data-event] .event-progress i{background:var(--event-accent)}
@@ -76,3 +76,4 @@
 .event-sidebar>.reset-clock>span{font:400 10px/1.5 Poppins,system-ui,sans-serif;color:var(--ink)}
 .event-sidebar>.reset-clock small{display:block;font:400 8px/1.5 Poppins,system-ui,sans-serif;color:var(--muted);margin-top:3px}
 .event-sidebar>.reset-clock>strong{font:600 12px/1.3 Sora,system-ui,sans-serif;color:var(--ink);font-variant-numeric:tabular-nums}
+[data-event="Artifact Adventure"]{--event-bg:#ff9400;--event-ink:#282625;--event-accent:#ff9400}
