@@ -111,3 +111,4 @@ body.database-studio{--paper:#fffdf5;--soft:#fff6df;--line:#e3d6b6;--muted:#8879
 .database-studio .element-filters{display:flex;justify-content:space-between;width:100%;gap:6px;margin:0;box-sizing:border-box}
 .database-studio .element-filters button{flex:1;max-width:none;min-width:0;border-radius:7px;height:36px}
 @media(max-width:700px){.database-studio .element-filters button{height:40px}}
+.database-studio :is(label,button,input,select,textarea){font-family:Poppins,system-ui,sans-serif}
