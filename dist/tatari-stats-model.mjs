@@ -26,4 +26,4 @@ export function buildStandard(data,element,build){
  if(!values)throw Error('Stats are unavailable for this level and upgrade step. Choose a supported level from 1–3,600.');
  return Object.fromEntries(table.stats.map((stat,i)=>[stat+'Standard',values[i]]));
 }
-export function applyOwnedTatari(build,roster){const owned=roster?.units?.[build.pet];if(!owned?.owned)throw Error('This Tatari is not marked owned in My Tatari.');return {...build,tier:owned.tier,stars:owned.stars,food:owned.food,level:roster.accountLevel}}
+export function applyOwnedTatari(build,roster){const owned=roster?.units?.[build.pet];if(!owned?.owned)throw Error('This Tatari is not marked owned in My Tatari.');return {...build,tier:owned.tier,stars:owned.stars,food:owned.food,level:roster.accountLevel,progress:roster.accountProgress??0}}

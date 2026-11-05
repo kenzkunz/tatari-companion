@@ -1,8 +1,8 @@
 import {tierFrame} from './tatari-assets.mjs';
 import {finishEvolution} from './evolution-planner-client.mjs?v=public-data2';
 import {currentUser,supabase,loadSettings,accountUrl} from './auth-client.mjs';
-import {loadRoster} from './my-tatari-client.mjs';
-import {rosterTier,starCost,foodGrade} from './my-tatari-model.mjs?v=public-data2';
+import {loadRoster} from './my-tatari-client.mjs?v=account-progression1';
+import {rosterTier,starCost,foodGrade} from './my-tatari-model.mjs?v=account-progression1';
 import {loadAppData} from './site-data.mjs?v=site-data5';
 import {MAX_GOALS,completedGoalRoster,finishMinimums,planGoal,validateGoals,trialKey,eventWindows} from './evolution-planner-model.mjs?v=public-data2';
 const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n},root=new URL('./tatari-data/',import.meta.url);

@@ -1,4 +1,4 @@
-import {starCost,validateRoster} from './my-tatari-model.mjs?v=public-data2';
+import {starCost,validateRoster} from './my-tatari-model.mjs?v=account-progression1';
 import {DAY,regularAt,pvpAt,hordeAt} from './schedule-model.mjs';
 export const MAX_GOALS=5;
 export const trialKey=(unit,form,quest)=>unit+':'+form+':'+quest;

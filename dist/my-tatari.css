@@ -37,3 +37,5 @@ body{background:#ffbd24 url('/assets/background02.webp') center top/cover fixed}
 .roster-bulk-tools{color:#282625}.roster-bulk-tools strong,.roster-bulk-tools label{color:#282625}.roster-bulk-tools select{color:#282625;background:#fffef1;border:1px solid #c9b589;border-radius:8px;font:inherit}
 
 .roster-bulk-tools input[type=checkbox]{flex:none;width:20px;height:20px;min-height:20px;margin:0;accent-color:#7542af}
+
+.roster-level-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;min-width:0}.roster-settings .roster-level-fields .field{flex-direction:column;align-items:flex-start;gap:6px}.roster-level-fields input{width:110px;max-width:100%;box-sizing:border-box}@media(max-width:600px){.roster-level-fields{width:100%;gap:12px}.roster-settings .roster-level-fields input{width:100%}}
