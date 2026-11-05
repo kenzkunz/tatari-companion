@@ -19,7 +19,7 @@ const filterNames=Object.keys(definitions).filter(name=>name!=='Horde Invasion')
 const checked=new Set(filterNames);
 const utcDay=()=>Math.floor(Date.now()/DAY)*DAY;
 const dateText=ms=>new Intl.DateTimeFormat('en',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'}).format(ms);
-let spaData;
+let spaData,showSpa=false;
 let data,monthOffset=0,selectedDate=utcDay(),renderedDay=utcDay(),feedSignature='';
 
 function el(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;}
@@ -102,7 +102,9 @@ function renderCalendar(){
     button.type='button';button.dataset.date=String(ms);button.setAttribute('aria-pressed',String(ms===selectedDate));
     button.setAttribute('aria-label',dateText(ms)+': '+(events.length?events.map(event=>(event.fullName||event.name)+(event.registration?' registration':'')).join(', '):'No selected events'));
     if(ms===utcDay())button.setAttribute('aria-current','date');
-    button.append(el('span','day-number',day));
+    const top=el('span','calendar-day-top');top.append(el('span','day-number',day));
+    if(showSpa){const date=new Date(ms).toISOString().slice(0,10),period=spaData?.periods.find(p=>date>=p.start&&date<=p.end);if(period){const icons=el('span','day-spa-icons'),names=period.groups.map(id=>spaData.buffs[id].name);icons.title=names.join(' + ');icons.setAttribute('aria-hidden','true');for(const id of period.groups){const icon=el('span');icon.innerHTML=spaData.buffs[id].icon;icons.append(icon);}top.append(icons);button.setAttribute('aria-label',button.getAttribute('aria-label')+'. Spa: '+names.join(' and '));}}
+    button.append(top);
     for(const event of events){const name=event.fullName||event.name,definition=definitions[name],badge=markEvent(el('span','day-event'+(event.fullName?' pvp':'')),name);badge.append(picture(name),el('span','',definition.short),el('b','',event.registration?'Reg':'D'+(event.day||event.label.match(/D(\d+)/)?.[1])));button.append(badge);}
     button.addEventListener('click',()=>{selectedDate=ms;for(const cell of grid.querySelectorAll('[data-date]'))cell.setAttribute('aria-pressed',String(Number(cell.dataset.date)===ms));renderDetail();});grid.append(button);
   }
@@ -114,6 +116,7 @@ function updateFilterCount(){byId('filter-count').textContent=checked.size===fil
 for(const name of filterNames){const label=markEvent(el('label'),name),checkbox=el('input');checkbox.type='checkbox';checkbox.checked=true;checkbox.dataset.event=name;checkbox.addEventListener('change',()=>{checkbox.checked?checked.add(name):checked.delete(name);updateFilterCount();if(data)renderCalendar();});label.append(checkbox,document.createTextNode(name));byId('event-filters').append(label);}
 byId('show-all').addEventListener('click',()=>{for(const checkbox of byId('event-filters').querySelectorAll('input')){checkbox.checked=true;checked.add(checkbox.dataset.event);}updateFilterCount();if(data)renderCalendar();});
 byId('previous-month').addEventListener('click',()=>selectMonth(-1));byId('next-month').addEventListener('click',()=>selectMonth(1));
+byId('spa-toggle').addEventListener('click',()=>{showSpa=!showSpa;byId('spa-toggle').setAttribute('aria-pressed',String(showSpa));byId('spa-toggle').setAttribute('aria-label',(showSpa?'Hide':'Show')+' Spa buffs on calendar');if(data)renderCalendar();});
 byId('today-button').addEventListener('click',()=>{monthOffset=0;selectedDate=utcDay();if(data)renderCalendar();});
 document.addEventListener('click',event=>{const filters=document.querySelector('.calendar-filters');if(!filters.contains(event.target))filters.open=false;});
 document.addEventListener('keydown',event=>{if(event.key==='Escape')document.querySelector('.calendar-filters').open=false;});
