@@ -29,15 +29,15 @@ export function automaticScreenshotPlan(catalog,roster,detections){
   const match=detection.matches?.[0],unit=catalog.units.find(u=>u.id===match?.unit),before=unit&&roster.units[unit.id],result={detection,status:'skipped',name:unit?.forms[0].name.en||'Unread card'};results.push(result);
   if(!unit||!detection.identityReadable){result.name='Unread Tatari';result.reason='Tatari identity is unclear.';continue;}
   const star=detection.stars?.[0];if(!star||!detection.starReadable){result.reason='Star pattern is unclear or partly covered.';continue;}
-  let form;if(detection.background?.value===4)form=unit.forms.find(f=>rosterTier(unit,f.evolution)===4);else if(before?.owned)form=unit.forms.find(f=>f.evolution===before.tier);
-  if(!form){result.reason=detection.background?.value===4?'T4 is not available for this match.':'Tier background is unclear; no saved tier to keep.';continue;}
+  let form;if(Number.isInteger(detection.background?.value))form=unit.forms.find(f=>rosterTier(unit,f.evolution)===detection.background.value);else if(before?.owned)form=unit.forms.find(f=>f.evolution===before.tier);
+  if(!form){result.reason=Number.isInteger(detection.background?.value)?'Detected tier is unavailable for this Tatari match.':'Tier background is unclear; no saved tier to keep.';continue;}
   const stars=Number(star.value),minimum=tierStarRange(unit,form.evolution).min;
   if(!Number.isInteger(stars)||stars<minimum||stars>84){result.reason='Star reading does not match the detected tier.';continue;}
   if(before?.owned&&stars<before.stars){result.reason='Star reading is below the saved value.';continue;}
   const grade=detection.grades?.[0]?.value,stages=gradeStages(unit,grade,catalog);if(!stages.length){result.reason='Food letter is unclear.';continue;}
   const food=Math.min(...stages),after={owned:true,tier:form.evolution,stars,food,copies:before?.stars===stars?(before.copies??0):0,glitter:before?.glitter??false};
   after.copies=Math.min(after.copies,Math.max(0,(starCost(stars,catalog)||0)-1));
-  Object.assign(result,{name:form.name.en,unit:unit.id,tier:rosterTier(unit,form.evolution),stars,food,grade,status:'ready',tierSource:detection.background?.value===4?'rainbow background':'saved tier'});
+  Object.assign(result,{name:form.name.en,unit:unit.id,tier:rosterTier(unit,form.evolution),stars,food,grade,status:'ready',tierSource:Number.isInteger(detection.background?.value)?detection.background.source+' background':'saved tier'});
   const candidate={id:unit.id,name:form.name.en,before,after,result};if(!candidates.has(unit.id))candidates.set(unit.id,[]);candidates.get(unit.id).push(candidate);
  }
  for(const list of candidates.values()){
