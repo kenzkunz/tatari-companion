@@ -84,11 +84,13 @@ function renderDetail(){
 function renderSpa(){
   const target=byId('spa-week-effects'),label=byId('spa-week-label'),next=byId('spa-next-week');if(!target)return;
   const selected=new Date(selectedDate).toISOString().slice(0,10),period=spaData?.periods.find(p=>selected>=p.start&&selected<=p.end);target.replaceChildren();
-  if(!period){label.textContent=dateText(selectedDate);target.append(el('p','empty-events','Spa opening dates are not available for this day.'));next.textContent='';return;}
+  if(!period){label.textContent=dateText(selectedDate);target.append(el('p','empty-events','Spa opening dates are not available for this day.'));next.replaceChildren();return;}
   const short=ms=>new Intl.DateTimeFormat('en',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(ms);
   label.textContent=short(Date.parse(period.start))+' – '+short(Date.parse(period.end))+' · UTC';
-  for(const id of period.groups){const effect=spaData.buffs[id],card=el('div','spa-week-effect'),icon=el('span','spa-week-icon'),text=el('div');icon.innerHTML=effect.icon;text.append(el('strong','',effect.name),el('p','',effect.description));card.append(icon,text);target.append(card);}
-  const following=spaData.periods[spaData.periods.indexOf(period)+1];next.textContent=following?'Next pair · '+short(Date.parse(following.start))+': '+following.groups.map(id=>spaData.buffs[id].name).join(' + '):'';
+  const addEffects=(container,groups)=>{for(const id of groups){const effect=spaData.buffs[id],card=el('div','spa-week-effect'),icon=el('span','spa-week-icon'),text=el('div');icon.innerHTML=effect.icon;text.append(el('strong','',effect.name),el('p','',effect.description));card.append(icon,text);container.append(card);}};
+  addEffects(target,period.groups);
+  const following=spaData.periods[spaData.periods.indexOf(period)+1];next.replaceChildren();
+  if(following){const effects=el('div','spa-week-effects');next.append(el('p','spa-week-label','Next week · '+short(Date.parse(following.start))+' – '+short(Date.parse(following.end))+' · UTC'),effects);addEffects(effects,following.groups);}
 }
 
 function renderCalendar(){
