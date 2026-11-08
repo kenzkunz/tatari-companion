@@ -13,11 +13,11 @@
   "offers": {
     "Surprise Spinwheel": {
       "short": "Spin",
-      "icon": "jackpot.png"
+      "icon": "popup-spin.png"
     },
     "Feeding Pack": {
       "short": "Feed",
-      "icon": "candy.png"
+      "icon": "popup-food.png"
     },
     "Piggy Bank": {
       "short": "Piggy",
@@ -29,4 +29,3 @@
     }
   }
 }
-
