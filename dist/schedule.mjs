@@ -19,7 +19,7 @@ const filterNames=Object.keys(definitions).filter(name=>name!=='Horde Invasion')
 const checked=new Set(filterNames);
 const utcDay=()=>Math.floor(Date.now()/DAY)*DAY;
 const dateText=ms=>new Intl.DateTimeFormat('en',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'}).format(ms);
-let spaData,showSpa=false;
+let spaData,popupData,showSpa=false,showPopup=false;
 let data,monthOffset=0,selectedDate=utcDay(),renderedDay=utcDay(),feedSignature='';
 
 function el(tag,className,text){const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=text;return node;}
@@ -78,7 +78,23 @@ function renderDetail(){
     text.append(heading,el('p','',event.registration?'Registration day':`Day ${event.day||Number(event.label.match(/D(\d+)/)?.[1])}`));
     row.append(picture(name),text);target.append(row);
   }
-  if(!target.childElementCount)target.append(el('p','empty-events','No events match your selected filters.'));renderSpa();
+  if(!target.childElementCount)target.append(el('p','empty-events','No events match your selected filters.'));renderSpa();renderPopup();
+}
+
+
+function offerPicture(name){const image=el('img');image.src='/assets/'+popupData.offers[name].icon;image.alt='';image.width=36;image.height=36;return image;}
+const offerDate=ms=>new Intl.DateTimeFormat('en',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(ms);
+function renderPopup(){
+  const target=byId('popup-offers-list');target.replaceChildren();
+  byId('popup-offers-label').textContent='For '+dateText(selectedDate);
+  if(!popupData){target.append(el('p','empty-events','Offer dates could not load. Refresh to try again.'));return;}
+  let offer=regularAt(selectedDate,popupData);
+  for(let i=0;i<4;i++){
+    const card=el('article','popup-offer-card'+(i===0?' selected-offer':'')),heading=el('div','popup-offer-heading');
+    heading.append(offerPicture(offer.name),el('h3','',offer.name));
+    card.append(el('span','popup-offer-status',i===0?'Selected · Day '+offer.day+' of 3':i===1?'Up next':'Coming up'),heading,el('p','',offerDate(offer.start)+' – '+offerDate(offer.end-DAY)));
+    target.append(card);offer=regularAt(offer.end,popupData);
+  }
 }
 
 function renderSpa(){
@@ -108,6 +124,7 @@ function renderCalendar(){
     if(showSpa){const date=new Date(ms).toISOString().slice(0,10),period=spaData?.periods.find(p=>date>=p.start&&date<=p.end);if(period){const icons=el('span','day-spa-icons'),names=period.groups.map(id=>spaData.buffs[id].name);icons.title=names.join(' + ');icons.setAttribute('aria-hidden','true');for(const id of period.groups){const icon=el('span');icon.innerHTML=spaData.buffs[id].icon;icons.append(icon);}top.append(icons);button.setAttribute('aria-label',button.getAttribute('aria-label')+'. Spa: '+names.join(' and '));}}
     button.append(top);
     for(const event of events){const name=event.fullName||event.name,definition=definitions[name],badge=markEvent(el('span','day-event'+(event.fullName?' pvp':'')),name);badge.append(picture(name),el('span','',definition.short),el('b','',event.registration?'Reg':'D'+(event.day||event.label.match(/D(\d+)/)?.[1])));button.append(badge);}
+    if(showPopup&&popupData){const offer=regularAt(ms,popupData),badge=el('span','day-event day-popup-offer');badge.title=offer.name+' · Day '+offer.day+' of 3';badge.append(offerPicture(offer.name),el('span','',popupData.offers[offer.name].short),el('b','','D'+offer.day));button.append(badge);button.setAttribute('aria-label',button.getAttribute('aria-label')+'. PopUp Offer: '+offer.name+', day '+offer.day+' of 3');}
     button.addEventListener('click',()=>{selectedDate=ms;for(const cell of grid.querySelectorAll('[data-date]'))cell.setAttribute('aria-pressed',String(Number(cell.dataset.date)===ms));renderDetail();});grid.append(button);
   }
   const remaining=(7-(offset+days)%7)%7;for(let i=0;i<remaining;i++){const blank=el('div','day-blank');blank.setAttribute('aria-hidden','true');grid.append(blank);}
@@ -119,10 +136,11 @@ for(const name of filterNames){const label=markEvent(el('label'),name),checkbox=
 byId('show-all').addEventListener('click',()=>{for(const checkbox of byId('event-filters').querySelectorAll('input')){checkbox.checked=true;checked.add(checkbox.dataset.event);}updateFilterCount();if(data)renderCalendar();});
 byId('previous-month').addEventListener('click',()=>selectMonth(-1));byId('next-month').addEventListener('click',()=>selectMonth(1));
 byId('spa-toggle').addEventListener('click',()=>{showSpa=!showSpa;byId('spa-toggle').setAttribute('aria-pressed',String(showSpa));byId('spa-toggle').setAttribute('aria-label',(showSpa?'Hide':'Show')+' Spa buffs on calendar');if(data)renderCalendar();});
+byId('popup-toggle').addEventListener('click',()=>{showPopup=!showPopup;byId('popup-toggle').setAttribute('aria-pressed',String(showPopup));byId('popup-toggle').setAttribute('aria-label',(showPopup?'Hide':'Show')+' PopUp Offers on calendar');if(data)renderCalendar();});
 byId('today-button').addEventListener('click',()=>{monthOffset=0;selectedDate=utcDay();if(data)renderCalendar();});
 document.addEventListener('click',event=>{const filters=document.querySelector('.calendar-filters');if(!filters.contains(event.target))filters.open=false;});
 document.addEventListener('keydown',event=>{if(event.key==='Escape')document.querySelector('.calendar-filters').open=false;});
 let swipeStart;const surface=document.querySelector('.calendar-body');surface.addEventListener('touchstart',event=>{swipeStart=event.touches.length===1?{x:event.touches[0].clientX,y:event.touches[0].clientY}:null;},{passive:true});surface.addEventListener('touchend',event=>{if(!swipeStart||!event.changedTouches.length)return;const dx=event.changedTouches[0].clientX-swipeStart.x,dy=event.changedTouches[0].clientY-swipeStart.y;swipeStart=null;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)selectMonth(dx<0?1:-1);},{passive:true});surface.addEventListener('touchcancel',()=>swipeStart=null,{passive:true});
 function tick(){byId('reset-timer').textContent=countdown(utcDay()+DAY);for(const timer of document.querySelectorAll('[data-end]'))timer.textContent=countdown(Number(timer.dataset.end));if(data){const day=utcDay();if(day!==renderedDay){renderedDay=day;monthOffset=0;selectedDate=day;renderCalendar();}if(feedSignature!==JSON.stringify(feed()))renderFeed();}byId('today-label').textContent=new Intl.DateTimeFormat('en',{day:'numeric',month:'short',timeZone:'UTC'}).format(Date.now());}
 tick();setInterval(tick,1000);
-try{[data,spaData]=await Promise.all([loadAppData(),fetch(new URL('./spa-calendar.json?v=chosen-icons10',import.meta.url)).then(response=>{if(!response.ok)throw Error('Spa dates unavailable');return response.json();}).catch(()=>null)]);renderFeed();renderCalendar();}catch{const retry=el('button','','Retry');retry.type='button';retry.addEventListener('click',()=>location.reload());const error=el('p','empty-events','Schedule data could not load. ');error.setAttribute('role','alert');error.append(retry);byId('event-list').replaceChildren(error);}
+try{[data,spaData,popupData]=await Promise.all([loadAppData(),fetch(new URL('./spa-calendar.json?v=chosen-icons10',import.meta.url)).then(response=>{if(!response.ok)throw Error('Spa dates unavailable');return response.json();}).catch(()=>null),fetch(new URL('./popup-offers.json?v=1',import.meta.url)).then(response=>{if(!response.ok)throw Error('Offer dates unavailable');return response.json();}).catch(()=>null)]);renderFeed();renderCalendar();}catch{const retry=el('button','','Retry');retry.type='button';retry.addEventListener('click',()=>location.reload());const error=el('p','empty-events','Schedule data could not load. ');error.setAttribute('role','alert');error.append(retry);byId('event-list').replaceChildren(error);}

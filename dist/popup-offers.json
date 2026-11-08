@@ -1,0 +1,32 @@
+{
+  "events": [
+    "Surprise Spinwheel",
+    "Feeding Pack",
+    "Piggy Bank",
+    "Feast Special"
+  ],
+  "duration_days": 3,
+  "anchor": {
+    "date": "2026-11-09",
+    "event": "Feeding Pack"
+  },
+  "offers": {
+    "Surprise Spinwheel": {
+      "short": "Spin",
+      "icon": "jackpot.png"
+    },
+    "Feeding Pack": {
+      "short": "Feed",
+      "icon": "candy.png"
+    },
+    "Piggy Bank": {
+      "short": "Piggy",
+      "icon": "popup-piggy.png"
+    },
+    "Feast Special": {
+      "short": "Feast",
+      "icon": "popup-feast.png"
+    }
+  }
+}
+
