@@ -1,6 +1,7 @@
 import {assertPublicFiles} from './public-files-check.mjs';
 import {generateImageWorker} from './generate-image-worker.mjs';
 import {shareThumbnail} from './share-thumbnail.mjs';
+import {addVisitorAnalytics} from './visitor-analytics.mjs';
 import {cp, readdir, readFile, writeFile, mkdir, rm} from 'node:fs/promises';
 import {resolve, join, relative} from 'node:path';
 export function normalizeBase(value = '/') {
@@ -28,6 +29,7 @@ export async function build(base = '/', destination = '_site') {
       if (entry.name.endsWith('.html')) {
         text = shareThumbnail(text);
         const page = relative(out, file).replaceAll('\\','/');
+        text = addVisitorAnalytics(text,page);
         text = text.replace(/href=(["'])#/g, 'href=$1' + base + page + '#');
         // Also makes relative URLs and fragment navigation safe on nested aliases and 404s.
         text = text.replace(/<head>/i, '<head><base href="' + base + '">');
