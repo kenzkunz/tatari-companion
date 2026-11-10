@@ -39,7 +39,7 @@ function projectStarProgress(stars,bar,catalog){
 export function automaticScreenshotPlan(catalog,roster,detections){
  const next=structuredClone(roster),results=[],candidates=new Map(),changes=[];
  for(const detection of detections){
-  const match=detection.matches?.[0],unit=catalog.units.find(u=>u.id===match?.unit),before=unit&&roster.units[unit.id],result={detection,status:'skipped',name:unit?.forms[0].name.en||'Unread card'};results.push(result);
+  const match=detection.matches?.[0],unit=catalog.units.find(u=>u.id===match?.unit),before=unit&&roster.units[unit.id],bar=detection.progress,result={detection,status:'skipped',name:unit?.forms[0].name.en||'Unread card',progressNote:bar?`Copy bar read: ${bar.copies}/${bar.cost}.`:null};results.push(result);
   if(!unit||!detection.identityReadable){result.name='Unread Tatari';result.reason='Tatari identity is unclear.';continue;}
   const star=detection.stars?.[0];if(!star||!detection.starReadable){result.reason='Star pattern is unclear or partly covered.';continue;}
   const stars=Number(star.value);
@@ -71,7 +71,11 @@ export function automaticScreenshotPlan(catalog,roster,detections){
    result.progressNote=upgraded?`Read ${bar.copies}/${bar.cost} → ${after.stars} stars${remaining?` with ${after.copies}/${remaining} copies remaining`: ' (maximum)'}.`: `Star progress: ${after.copies}/${remaining}`;
   }else if(readings.size>1)result.progressNote='Conflicting copy counts; star progress was not imported.';
   else if(after.stars===84&&result.detection.progress){const bar=result.detection.progress;result.progressNote=`Read ${bar.copies}/${bar.cost}. This Tatari is already at max stars.`;}
-  else if(after.stars<84)result.progressNote='Star progress not read or verified.';
+  else if(after.stars<84){
+   const bar=result.detection.progress;
+   result.progressNote=bar?`Read ${bar.copies}/${bar.cost}. Expected ${starCost(after.stars,catalog)} copies for the detected star level; copy progress was skipped.`:
+    result.detection.progressBottom?'Copy bar found, but the numbers could not be read.':'Copy bar is missing or obscured.';
+  }
   if(before?.owned&&after.stars<before.stars){for(const c of list){c.result.status='skipped';c.result.reason='Star reading is below the saved value.';}continue;}
   if(after.stars<tierStarRange(unit,after.tier).min){for(const c of list){c.result.status='skipped';c.result.reason='Star reading does not match the tier.';}continue;}
   const form=unit.forms.find(f=>f.evolution===after.tier);first.name=result.name=form.name.en;result.stars=after.stars;result.tier=rosterTier(unit,after.tier);

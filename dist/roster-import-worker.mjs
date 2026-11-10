@@ -1,5 +1,5 @@
-import {readStarProgress} from './roster-progress-reader.mjs?v=2';
-let templates=[],atlas;
+import {readStarProgress} from './roster-progress-reader.mjs?v=3';
+let templates=[],atlas,starCosts={};
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 function canvas(w,h){if(typeof OffscreenCanvas!=='undefined')return new OffscreenCanvas(w,h);const c=document.createElement('canvas');c.width=w;c.height=h;return c}
 function sourceCanvas(source){if(!source.data)return source;const c=canvas(source.width,source.height);c.getContext('2d').putImageData(new ImageData(new Uint8ClampedArray(source.data),source.width,source.height),0,0);return c}
@@ -132,7 +132,7 @@ function outlineFit(card,t){
  if(fit){const f=fit;for(let h=f.h-4;h<=f.h+4;h+=4)for(let y=f.y-3;y<=f.y+3;y+=3)for(let cx=f.cx-2;cx<=f.cx+2;cx+=2)compare(h,y,cx,2,f.angle);}
  return best;
 }
-function recognize(image,box){const data=pixels(image,box.x,box.y,box.w,box.h,64,78); const starData=normalizeStarLight(data),edge=edgePower(starData),stars=templates.filter(t=>t.kind==='star').map(t=>({value:t.value,score:starScore(starData,t,edge)})).sort((a,b)=>a.score-b.score).slice(0,4);const grades=templates.filter(t=>t.kind==='grade').map(t=>({value:t.value,score:artScore(data,t,'grade')})).sort((a,b)=>a.score-b.score).slice(0,3);data.portraitBottom=stars[0].value>=73&&stars[0].score<0?52:61;const hist=histogram(data,64,78,12,19,63,data.portraitBottom),elem=element(data),ranked=[],roles=templates.filter(t=>t.kind==='role').map(t=>({value:t.value,score:roleScore(data,t)})).sort((a,b)=>a.score-b.score),roleMargin=roles[1]?.score-roles[0]?.score,role=roleMargin>1000?roles[0].value:null;
+function recognize(image,box){const data=pixels(image,box.x,box.y,box.w,box.h,64,78); const starData=normalizeStarLight(data),edge=edgePower(starData),stars=templates.filter(t=>t.kind==='star').map(t=>({value:t.value,score:starScore(starData,t,edge)})).sort((a,b)=>a.score-b.score);const grades=templates.filter(t=>t.kind==='grade').map(t=>({value:t.value,score:artScore(data,t,'grade')})).sort((a,b)=>a.score-b.score).slice(0,3);data.portraitBottom=stars[0].value>=73&&stars[0].score<0?52:61;const hist=histogram(data,64,78,12,19,63,data.portraitBottom),elem=element(data),ranked=[],roles=templates.filter(t=>t.kind==='role').map(t=>({value:t.value,score:roleScore(data,t)})).sort((a,b)=>a.score-b.score),roleMargin=roles[1]?.score-roles[0]?.score,role=roleMargin>1000?roles[0].value:null;
  for(const t of templates.filter(t=>t.kind==='portrait')){if(elem&&t.element!==elem)continue;let score=-1;for(const h of t.hist)score=Math.max(score,similarity(hist,h));ranked.push({unit:t.unit,tier:t.tier,glitter:t.glitter,score,roleMismatch:!!role&&t.role!==role,elementMismatch:!!elem&&t.element!==elem,template:t});}
  ranked.sort((a,b)=>(b.score-(b.elementMismatch?.12:0))-(a.score-(a.elementMismatch?.12:0)));ranked.splice(32);for(const r of ranked){const shape=shapeScore(data,r.template);r.histScore=r.score;r.portraitCost=shape;r.score=.35*r.score+.65*(1-Math.min(shape/18000,1))-(r.roleMismatch?.04:0)-(r.elementMismatch?.03:0);delete r.roleMismatch;delete r.elementMismatch;}ranked.sort((a,b)=>b.score-a.score);const first=ranked[0],runner=ranked.find(c=>c.unit!==first?.unit);let identityReadable=first?.score>.6&&(!runner||first.score-runner.score>.05);
  if(!identityReadable&&first?.score>.48){const expanded=ranked.map(c=>({unit:c.unit,score:.35*c.histScore+.65*(1-Math.min(shapeScore(data,c.template,true)/18000,1))})).sort((a,b)=>b.score-a.score),best=expanded[0],second=expanded.find(c=>c.unit!==best.unit);identityReadable=best.unit===first.unit&&best.score>.56&&(!second||best.score-second.score>.07);}
@@ -159,13 +159,25 @@ function recognize(image,box){const data=pixels(image,box.x,box.y,box.w,box.h,64
  }
  for(const candidate of ranked)delete candidate.template;const used=new Set(),matches=[];for(const p of ranked){if(used.has(p.unit))continue;used.add(p.unit);matches.push(p);if(matches.length===6)break;}
 
- return {box,progress:readStarProgress(image,box,pixels),matches,stars,grades,element:elem,role,background:backgroundTier(data),gradeReadable:grades[0].score<9000&&grades[1].score-grades[0].score>400,starReadable:stars[0].score < -1800 && stars[1].score-stars[0].score>Math.max(550,Math.abs(stars[0].score)*.12),identityReadable};}
+ const {reading,previewBottom}=readStarProgress(image,box,pixels);
+ const [bestStar,starRunner]=stars,margin=Math.max(550,Math.abs(bestStar.score)*.12);
+ let starReadable=bestStar.score < -1800&&starRunner.score-bestStar.score>margin;
+ // A legible copy cost can rule out similar strips that need a different number of copies.
+ if(!starReadable&&previewBottom&&reading&&bestStar.score < -3500&&starRunner.score-bestStar.score>250&&starCosts[bestStar.value]===reading.cost){
+  const sameCost=stars.slice(1).find(star=>starCosts[star.value]===reading.cost);
+  starReadable=!sameCost||sameCost.score-bestStar.score>margin;
+ }
+ return {box,progress:reading,progressBottom:previewBottom,matches,stars:stars.slice(0,4),grades,element:elem,role,background:backgroundTier(data),gradeReadable:grades[0].score<9000&&grades[1].score-grades[0].score>400,starReadable,identityReadable};}
 export async function processMessage(data,emit){try{
- if(data.type==='load'){atlas=sourceCanvas(data.atlas);const starAtlas=sourceCanvas(data.starAtlas);templates=[];for(const entry of data.templates){const bitmap=cropCanvas(entry.sheet==='stars'?starAtlas:atlas,entry.x,entry.y,entry.w,entry.h),t={...entry,bitmap};if(t.kind==='portrait'){const p=pixels(bitmap,0,0,bitmap.width,bitmap.height,40,40);t.hist=[1,.7,.5].map(part=>histogram(p,40,40,0,0,40,Math.floor(40*part)));}if(t.kind==='star'){t.versions=[];for(const h of (t.value>=73?[24,25,26,27,28,29,30,31,32,33,34]:[14,15,16,17,18,19,20,21,22])){const w=Math.round(bitmap.width/bitmap.height*h);if(w<=90)t.versions.push({w,h,data:pixels(bitmap,0,0,bitmap.width,bitmap.height,w,h)});}}templates.push(t);}emit({type:'ready'});return;}
+ if(data.type==='load'){starCosts=data.starCosts??{};atlas=sourceCanvas(data.atlas);const starAtlas=sourceCanvas(data.starAtlas);templates=[];for(const entry of data.templates){const bitmap=cropCanvas(entry.sheet==='stars'?starAtlas:atlas,entry.x,entry.y,entry.w,entry.h),t={...entry,bitmap};if(t.kind==='portrait'){const p=pixels(bitmap,0,0,bitmap.width,bitmap.height,40,40);t.hist=[1,.7,.5].map(part=>histogram(p,40,40,0,0,40,Math.floor(40*part)));}if(t.kind==='star'){t.versions=[];for(const h of (t.value>=73?[24,25,26,27,28,29,30,31,32,33,34]:[14,15,16,17,18,19,20,21,22])){const w=Math.round(bitmap.width/bitmap.height*h);if(w<=90)t.versions.push({w,h,data:pixels(bitmap,0,0,bitmap.width,bitmap.height,w,h)});}}templates.push(t);}emit({type:'ready'});return;}
  if(data.type==='scan'){const image=sourceCanvas(data.image),boxes=borders(image);const cards=[];for(let i=0;i<boxes.length;i++){if(data.cancelled?.())throw Error('Import cancelled.');const {aligned,...box}=boxes[i];let card=recognize(image,box);
  if((!card.identityReadable||!card.starReadable)&&aligned&&['x','y','w','h'].some(k=>aligned[k]!==box[k])){
   const retry=recognize(image,aligned),sameIdentity=!card.identityReadable||retry.identityReadable&&retry.matches[0]?.unit===card.matches[0]?.unit,sameStars=!card.starReadable||retry.starReadable&&retry.stars[0]?.value===card.stars[0]?.value;
   if(sameIdentity&&sameStars&&((!card.identityReadable&&retry.identityReadable)||(!card.starReadable&&retry.starReadable)))card=retry;
+ }
+ if(!card.progress&&aligned&&(aligned.w!==box.w||aligned.y!==box.y)){
+  const {reading,previewBottom}=readStarProgress(image,aligned,pixels);
+  card.progress=reading;card.progressBottom=previewBottom??card.progressBottom;
  }
  cards.push(card);emit({type:'progress',done:i+1,total:boxes.length});if(typeof document!=='undefined')await new Promise(resolve=>setTimeout(resolve,0));}image.close?.();emit({type:'result',cards});}
  }catch(error){emit({type:'error',message:error.message||'The screenshot could not be read.'});}}

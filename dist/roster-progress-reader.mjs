@@ -45,10 +45,57 @@ function readLine(data,w,h,threshold,fill){
  if(glyphScores.some(scores=>scores[0][1]>.29||(scores[1]&& (scores[0][1]>.25||scores[1][1]-scores[0][1]<.022))))return null;
  return /^(0|[1-9]\d{0,3})\/[1-9]\d?$/.test(text)?text:null;
 }
+function findProgressBar(image,box,pixels){
+ const x=Math.round(box.x+box.w*.12),y=Math.round(box.y+box.w*1.18);
+ const w=Math.round(box.w*.76),h=Math.min(image.height-y,Math.round(box.w*.37));
+ if(x+w>image.width||h<box.w*.2)return null;
+ const data=pixels(image,x,y,w,h),dark=new Float32Array(h),interior=new Float32Array(h);
+ for(let row=0;row<h;row++)for(let col=0;col<w;col++){
+  const i=(row*w+col)*4,r=data[i],g=data[i+1],b=data[i+2];
+  if(Math.max(r,g,b)<44)dark[row]+=1/w;
+  if((r<85&&g>=r&&b>r+12&&b>45)||(g>130&&g>r+22&&b>140)||(g>150&&r>85&&b<135))interior[row]+=1/w;
+ }
+ let best=null;
+ for(let top=0;top<h;top++){
+  if(dark[top]<.62)continue;
+  const minHeight=Math.round(box.w*.13),maxHeight=Math.round(box.w*.22);
+  for(let bottom=top+minHeight;bottom<=top+maxHeight&&bottom<h;bottom++){
+   if(dark[bottom]<.62)continue;
+   const count=bottom-top-1;
+   let fill=0;
+   for(let row=top+1;row<bottom;row++)fill+=interior[row];
+   fill/=count;
+   if(fill<.64)continue;
+   const score=fill+(dark[top]+dark[bottom])*.12;
+   if(!best||score>best.score)best={top,bottom,score};
+  }
+ }
+ return best?{x:box.x,y:y+best.top,w:box.w,h:best.bottom-best.top+1}:null;
+}
+
+function readCrop(image,rect,pixels,fill,width=rect.w){
+ const height=Math.round(rect.h*width/rect.w);
+ const data=pixels(image,rect.x,rect.y,rect.w,rect.h,width,height),votes=new Map();
+ for(const threshold of [135,145,155,165,175,185]){
+  const value=readLine(data,width,height,threshold,fill);
+  if(value)votes.set(value,(votes.get(value)||0)+1);
+ }
+ const ranked=[...votes].sort((a,b)=>b[1]-a[1]);
+ return ranked[0]?.[1]>=2&&ranked[0][1]>(ranked[1]?.[1]??0)?ranked[0][0]:null;
+}
+
 export function readStarProgress(image,box,pixels){
- const x=Math.round(box.x+box.w*.17),y=Math.round(box.y+box.w*1.22),w=Math.round(box.w*.66),h=Math.round(box.w*.23);
- if(y+h>image.height||x+w>image.width)return null;
- const data=pixels(image,x,y,w,h),votes=new Map(),fill=blueFill(image,box,pixels);for(const threshold of [145,155,165,175]){const value=readLine(data,w,h,threshold,fill);if(value)votes.set(value,(votes.get(value)||0)+1);}
- const ranked=[...votes].sort((a,b)=>b[1]-a[1]);if(!ranked.length||ranked[0][1]<2||ranked[0][1]===ranked[1]?.[1])return null;
- const [copies,cost]=ranked[0][0].split('/').map(Number);return {copies,cost};
+ const bar=findProgressBar(image,box,pixels);
+ const previewBottom=bar?bar.y+bar.h:null;
+ const x=Math.round(box.x+box.w*.17),w=Math.round(box.w*.66);
+ const rect=bar?{x,y:Math.max(0,bar.y-2),w,h:bar.h+4}:
+  {x,y:Math.round(box.y+box.w*1.22),w,h:Math.round(box.w*.23)};
+ if(rect.y+rect.h>image.height||rect.x+rect.w>image.width)return {reading:null,previewBottom};
+ const fill=blueFill(image,box,pixels);
+ const native=readCrop(image,rect,pixels,fill);
+ const scaled=native?null:readCrop(image,rect,pixels,fill,132);
+ const value=native??scaled;
+ if(!value)return {reading:null,previewBottom};
+ const [copies,cost]=value.split('/').map(Number);
+ return {reading:{copies,cost},previewBottom};
 }

@@ -2,3 +2,5 @@
 
 .screenshot-import-actions .btn{min-height:44px;padding:9px 16px;border:1px solid #9e742b;border-radius:8px;background:#ffd342;color:#282625;font:600 12px Poppins,system-ui,sans-serif}.screenshot-import-actions .btn.secondary{background:#fffaf0;border-color:#c9b589}
 .screenshot-import-result{display:grid;grid-template-columns:82px minmax(0,1fr);gap:14px;padding:14px 0;border-top:1px solid #e3d6b6;align-items:start}.screenshot-import-result canvas{width:82px;height:auto;display:block;border-radius:6px}.screenshot-import-result h3{margin:0 0 6px;font:600 14px/1.5 Poppins,sans-serif}.screenshot-import-result p{margin:0 0 6px;font-size:12px}.screenshot-import-result small{font-size:11px;color:#76674f}.screenshot-import-upload input{min-height:44px}
+
+.screenshot-import-result small{display:block}
