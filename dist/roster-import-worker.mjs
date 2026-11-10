@@ -1,4 +1,4 @@
-import {readStarProgress} from './roster-progress-reader.mjs?v=1';
+import {readStarProgress} from './roster-progress-reader.mjs?v=2';
 let templates=[],atlas;
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 function canvas(w,h){if(typeof OffscreenCanvas!=='undefined')return new OffscreenCanvas(w,h);const c=document.createElement('canvas');c.width=w;c.height=h;return c}
@@ -36,7 +36,15 @@ function borders(image){
   }
   return best?{...box,y:best.y}:null;
  }
- const boxes=[];for(let y=startY;y+median*1.18<h;y+=stepY)for(let col=0;col<columns;col++){let x=Math.round(firstX+col*stepX),bw=median,best=-1;for(let shift=-7;shift<=7;shift++)for(let dw=-6;dw<=3;dw++){const xx=Math.round(firstX+col*stepX)+shift,ww=median+dw;if(xx<0||xx+ww>w)continue;const evidence=sideEvidence(xx,y)+sideEvidence(Math.round(xx+ww-1),y)-Math.abs(dw)*.002;if(evidence>best){best=evidence;x=xx;bw=ww;}}if(best<1.3){const nx=Math.round(firstX+col*stepX);let green=0,count=0;for(let yy=Math.round(y+median*.17);yy<y+median*.23;yy++)for(let xx=Math.round(nx+median*.25);xx<nx+median*.9;xx++){if(xx<0||xx>=w||yy<0||yy>=h)continue;const k=(yy*w+xx)*4,r=data[k],g=data[k+1],b=data[k+2];count++;if(g>145&&g>r*1.03&&b<145)green++;}if(!count||green/count<.5)continue;x=nx;bw=median;}const box={x,y:Math.round(y),w:Math.round(bw),h:Math.round(median*1.206)};boxes.push({...box,aligned:align(box)});}return boxes;
+ // The game's fixed bottom panel can cut through a row of cards. Its dark edge
+ // spans the entire viewport, unlike a card border or the space between rows.
+ let footer=h, darkRows=0;
+ for(let y=h-1;y>=Math.round(h*.65);y--){
+  let covered=0;for(let x=0;x<w;x+=4)covered+=dark[y*w+x];
+  if(covered/Math.ceil(w/4)>.88){darkRows++;if(darkRows>=Math.max(5,Math.round(median*.055)))footer=y;}
+  else darkRows=0;
+ }
+ const boxes=[];for(let y=startY;y+median*1.13<footer;y+=stepY)for(let col=0;col<columns;col++){let x=Math.round(firstX+col*stepX),bw=median,best=-1;for(let shift=-7;shift<=7;shift++)for(let dw=-6;dw<=3;dw++){const xx=Math.round(firstX+col*stepX)+shift,ww=median+dw;if(xx<0||xx+ww>w)continue;const evidence=sideEvidence(xx,y)+sideEvidence(Math.round(xx+ww-1),y)-Math.abs(dw)*.002;if(evidence>best){best=evidence;x=xx;bw=ww;}}if(best<1.3){const nx=Math.round(firstX+col*stepX);let green=0,count=0;for(let yy=Math.round(y+median*.17);yy<y+median*.23;yy++)for(let xx=Math.round(nx+median*.25);xx<nx+median*.9;xx++){if(xx<0||xx>=w||yy<0||yy>=h)continue;const k=(yy*w+xx)*4,r=data[k],g=data[k+1],b=data[k+2];count++;if(g>145&&g>r*1.03&&b<145)green++;}if(!count||green/count<.5)continue;x=nx;bw=median;}const box={x,y:Math.round(y),w:Math.round(bw),h:Math.round(median*1.206)};boxes.push({...box,aligned:align(box)});}return boxes;
 }
 function artScore(card,t,kind){
  let best=Infinity;const src=t.bitmap;
@@ -56,8 +64,74 @@ function normalizeStarLight(data){const levels=[];for(let y=59;y<77;y++)for(let 
 function edgePower(data){const out=new Float32Array(64*78),weights=[1,2,3,2,1];for(let y=48;y<78;y++)for(let x=0;x<64;x++){let power=0;for(let c=0;c<3;c++){let blur=0;for(let dy=-2;dy<=2;dy++)for(let dx=-2;dx<=2;dx++)blur+=data[(clamp(y+dy,0,77)*64+clamp(x+dx,0,63))*4+c]*weights[dy+2]*weights[dx+2];power+=(data[(y*64+x)*4+c]-blur/81)**2;}out[y*64+x]=power/3;}return out;}
 function wingScore(card,t){let best=Infinity;for(const {w,h,data} of t.versions)for(const cx of [30,31,32,33,34])for(const cy of [64,65,66,67,68,69,70]){const xx=Math.round(cx-w/2),yy=Math.round(cy-h/2);let sum=0,area=0;for(let y=Math.max(49,yy);y<Math.min(78,yy+h);y++)for(let x=Math.max(0,xx);x<Math.min(64,xx+w);x++){const i=((y-yy)*w+x-xx)*4,k=(y*64+x)*4,a=data[i+3]/255;if(a<.8)continue;sum+=a*((card[k]-data[i])**2+(card[k+1]-data[i+1])**2+(card[k+2]-data[i+2])**2)/3;area+=a;}if(area>400)best=Math.min(best,sum/area);}return best-6000;}
 function starScore(card,t,edge){if(t.value>=73)return wingScore(card,t);let best=Infinity,bestColor=1,bestArea=1;for(const version of t.versions){const {w,h,data}=version;for(const cx of [30,31,32,33,34])for(const cy of [67,68,69,70,71,72,73]){const xx=Math.round(cx-w/2),yy=Math.round(cy-h/2),left=Math.max(0,xx),right=Math.min(64,xx+w),top=Math.max(t.value>=73?49:59,yy),bottom=Math.min(78,yy+h);let score=0,area=0;for(let y=top;y<bottom;y++)for(let x=left;x<right;x++){const i=((y-yy)*w+x-xx)*4,k=(y*64+x)*4,a=data[i+3]/255;area+=a;score+=a*(((card[k]-data[i])**2+(card[k+1]-data[i+1])**2+(card[k+2]-data[i+2])**2)/3-5*edge[y*64+x]);}if(score<best){best=score;bestArea=area;const target=[],reference=[],mask=[];for(let y=top;y<bottom;y++)for(let x=left;x<right;x++){const i=((y-yy)*w+x-xx)*4,k=(y*64+x)*4;target.push(card[k],card[k+1],card[k+2],255);reference.push(data[i],data[i+1],data[i+2],255);mask.push(data[i+3]/255);}const globalColor=1-similarity(hueHistogram(target,mask),hueHistogram(reference,mask)),local=[];for(let slot=0;slot<6;slot++){const aa=Math.max(left,Math.round(slot*64/6)),bb=Math.min(right,Math.round((slot+1)*64/6)),tt=[],rr=[],mm=[];for(let y=top;y<bottom;y++)for(let x=aa;x<bb;x++){const i=((y-yy)*w+x-xx)*4,k=(y*64+x)*4;tt.push(card[k],card[k+1],card[k+2],255);rr.push(data[i],data[i+1],data[i+2],255);mm.push(data[i+3]/255);}const rh=hueHistogram(rr,mm);if(similarity(rh,rh)>.1)local.push(1-similarity(hueHistogram(tt,mm),rh));}bestColor=.25*globalColor+.75*(local.length?local.reduce((a,b)=>a+b,0)/local.length:globalColor);}}}return .7*best/Math.max(80,bestArea)+24000*bestColor;}
-function backgroundTier(card){let total=0,pastel=0,green=0;const hues=new Uint16Array(12);for(let y=12;y<25;y++)for(let x=18;x<60;x++){const i=(y*64+x)*4,r=card[i],g=card[i+1],b=card[i+2],max=Math.max(r,g,b),min=Math.min(r,g,b),d=max-min;if(max<=130||d<=20)continue;total++;if(g>r*1.12&&g>b*1.12)green++;if(min>110&&max>190)pastel++;let hue=max===r?((g-b)/d%6):max===g?(b-r)/d+2:(r-g)/d+4;if(hue<0)hue+=6;hues[Math.floor(hue*2)%12]++;}const spread=[...hues].filter(n=>n>total*.04).length;if(total>80&&pastel/total>.65&&green/total<.2&&spread>=3)return {value:4,source:'rainbow'};for(const patch of [[43,60,14,24],[51,60,12,38]]){const votes={purple:0,yellow:0,red:0,blue:0,green:0};let valid=0;for(let y=patch[2];y<patch[3];y++)for(let x=patch[0];x<patch[1];x++){const k=(y*64+x)*4,r=card[k],g=card[k+1],b=card[k+2],hi=Math.max(r,g,b),lo=Math.min(r,g,b);if(hi<120||hi-lo<55)continue;valid++;if(r>g*1.3&&b>g*1.3)votes.purple++;else if(r>170&&g>120&&r>g*1.04&&b<120)votes.yellow++;else if(r>g*1.5&&r>b*1.5)votes.red++;else if(b>r*1.3&&b>g*1.05)votes.blue++;else if(g>r*1.1&&g>b*1.1)votes.green++;}const winner=Object.entries(votes).sort((a,b)=>b[1]-a[1])[0];if(valid>70&&winner[1]/valid>.75&&winner[0]!=='green')return {value:{purple:1,yellow:2,red:3,blue:0}[winner[0]],source:winner[0]};}return {value:null,source:'unresolved'};}
+function backgroundPatch(card,left,right,top,bottom,matches){
+ let count=0;
+ for(let y=top;y<bottom;y++)for(let x=left;x<right;x++){
+  const i=(y*64+x)*4;
+  if(matches(card[i],card[i+1],card[i+2]))count++;
+ }
+ return count/((right-left)*(bottom-top));
+}
+function upperBackground(card){
+ const magenta=(r,g,b)=>r>210&&g<72&&b>72&&b<137;
+ const warm=(r,g,b)=>r>210&&g<135&&b>45&&b<130&&r-g>95;
+ if(backgroundPatch(card,15,29,5,12,magenta)>.7&&backgroundPatch(card,52,61,13,21,warm)>.45)return {value:3,source:'red'};
+ const pastelPink=(r,g,b)=>r>211&&g>157&&g<222&&b>231&&b-g>32;
+ const mint=(r,g,b)=>g>229&&b>202&&r>87&&r<226&&g-r>32;
+ const pale=(r,g,b)=>Math.min(r,g,b)>208;
+ const upperPink=backgroundPatch(card,16,29,8,14,pastelPink);
+ const sidePink=backgroundPatch(card,16,28,17,24,pastelPink);
+ const rightMint=backgroundPatch(card,55,60,17,25,mint);
+ const rightPale=backgroundPatch(card,54,60,12,16,pale);
+ if((upperPink>.5&&rightPale>.5)||(rightMint>.48&&rightPale>.5)||(sidePink>.19&&rightPale>.65&&backgroundPatch(card,54,60,12,16,mint)>.10))return {value:4,source:'rainbow'};
+ return null;
+}
+function backgroundTier(card){let total=0,pastel=0,green=0;const hues=new Uint16Array(12);for(let y=12;y<25;y++)for(let x=18;x<60;x++){const i=(y*64+x)*4,r=card[i],g=card[i+1],b=card[i+2],max=Math.max(r,g,b),min=Math.min(r,g,b),d=max-min;if(max<=130||d<=20)continue;total++;if(g>r*1.12&&g>b*1.12)green++;if(min>110&&max>190)pastel++;let hue=max===r?((g-b)/d%6):max===g?(b-r)/d+2:(r-g)/d+4;if(hue<0)hue+=6;hues[Math.floor(hue*2)%12]++;}const spread=[...hues].filter(n=>n>total*.04).length;if(total>80&&pastel/total>.65&&green/total<.2&&spread>=3)return {value:4,source:'rainbow'};for(const patch of [[43,60,14,24],[51,60,12,38]]){const votes={purple:0,yellow:0,red:0,blue:0,green:0};let valid=0;for(let y=patch[2];y<patch[3];y++)for(let x=patch[0];x<patch[1];x++){const k=(y*64+x)*4,r=card[k],g=card[k+1],b=card[k+2],hi=Math.max(r,g,b),lo=Math.min(r,g,b);if(hi<120||hi-lo<55)continue;valid++;if(r>g*1.3&&b>g*1.3)votes.purple++;else if(r>170&&g>120&&r>g*1.04&&b<120)votes.yellow++;else if(r>g*1.5&&r>b*1.5)votes.red++;else if(b>r*1.3&&b>g*1.05)votes.blue++;else if(g>r*1.1&&g>b*1.1)votes.green++;}const winner=Object.entries(votes).sort((a,b)=>b[1]-a[1])[0];if(valid>70&&winner[1]/valid>.75&&winner[0]!=='green')return {value:{purple:1,yellow:2,red:3,blue:0}[winner[0]],source:winner[0]};}return upperBackground(card)??{value:null,source:'unresolved'};}
 function roleScore(card,t){let best=Infinity;for(const h of [11,13,15]){const w=Math.round(t.bitmap.width/t.bitmap.height*h),art=pixels(t.bitmap,0,0,t.bitmap.width,t.bitmap.height,w,h);for(const xx of [2,3,4])for(const yy of [29,31,33]){let score=0,count=0;for(let y=0;y<h;y++)for(let x=0;x<w;x++){const i=(y*w+x)*4,k=((y+yy)*64+x+xx)*4,a=art[i+3]/255;score+=a*((card[k]-art[i])**2+(card[k+1]-art[i+1])**2+(card[k+2]-art[i+2])**2)/3;count+=a;}best=Math.min(best,score/(count||1));}}return best;}
+function contour(data,w,h,alpha=false){
+ const result=new Float32Array(w*h);
+ for(let y=1;y<h-1;y++)for(let x=1;x<w-1;x++){
+  const i=(y*w+x)*4;
+  if(alpha&&[i-4,i+4,i-w*4,i+w*4].some(k=>data[k+3]<200))continue;
+  let edge=0;
+  for(let c=0;c<3;c++)edge+=Math.abs(data[i+4+c]-data[i-4+c])+Math.abs(data[i+w*4+c]-data[i-w*4+c]);
+  result[y*w+x]=Math.min(edge/180,1);
+ }
+ return result;
+}
+function outlineFit(card,t){
+ let best=Infinity,fit;
+ const rotations=new Map();
+ const compare=(h,y,cx,step,angle)=>{const originalY=y;
+    let art=portraitPixels(t,h);
+  if(angle){
+   const key=h*100+angle;
+   if(!rotations.has(key)){
+    const size=Math.ceil(Math.hypot(art.w,h)),out=canvas(size,size),ctx=out.getContext('2d');
+    ctx.translate(size/2,size/2);ctx.rotate(angle*Math.PI/180);
+    ctx.drawImage(t.bitmap,-art.w/2,-h/2,art.w,h);
+    rotations.set(key,{w:size,h:size,data:ctx.getImageData(0,0,size,size).data});
+   }
+   art=rotations.get(key);y=Math.round(y+(h-art.h)/2);
+  }
+  const hh=art.h;art.contour??=contour(art.data,art.w,hh,true);
+  const xx=Math.round(cx-art.w/2);
+  let n=0,sum=0,weight=0;
+  for(let yy=Math.max(13,y+1);yy<Math.min(card.portraitBottom,y+hh-1);yy+=step)
+   for(let x=Math.max(14,xx+1);x<Math.min(62,xx+art.w-1);x+=step){
+    const i=(yy-y)*art.w+x-xx,k=yy*64+x;
+    if(art.data[i*4+3]<220)continue;
+    const a=art.contour[i],b=card.contour[k],w=.25+a;
+    const color=(Math.abs(card[k*4]-art.data[i*4])+Math.abs(card[k*4+1]-art.data[i*4+1])+Math.abs(card[k*4+2]-art.data[i*4+2]))/765;
+    const blackness=1-Math.min(card[k*4],card[k*4+1],card[k*4+2])/255,templateBlack=1-Math.min(art.data[i*4],art.data[i*4+1],art.data[i*4+2])/255;sum+=w*(.42*color+.25*Math.abs(a-b)+.33*Math.abs(blackness-templateBlack));weight+=w;n++;
+   }
+  const cost=n*step*step>=600?sum/weight:Infinity;
+  if(cost<best){best=cost;fit={h,y:originalY,cx,angle};}
+ };
+ for(const angle of [-24,-12,0,12,24])for(let h=44;h<=116;h+=8)for(let y=-20;y<=36;y+=7)for(let cx=24;cx<=48;cx+=6)compare(h,y,cx,3,angle);
+ if(fit){const f=fit;for(let h=f.h-4;h<=f.h+4;h+=4)for(let y=f.y-3;y<=f.y+3;y+=3)for(let cx=f.cx-2;cx<=f.cx+2;cx+=2)compare(h,y,cx,2,f.angle);}
+ return best;
+}
 function recognize(image,box){const data=pixels(image,box.x,box.y,box.w,box.h,64,78); const starData=normalizeStarLight(data),edge=edgePower(starData),stars=templates.filter(t=>t.kind==='star').map(t=>({value:t.value,score:starScore(starData,t,edge)})).sort((a,b)=>a.score-b.score).slice(0,4);const grades=templates.filter(t=>t.kind==='grade').map(t=>({value:t.value,score:artScore(data,t,'grade')})).sort((a,b)=>a.score-b.score).slice(0,3);data.portraitBottom=stars[0].value>=73&&stars[0].score<0?52:61;const hist=histogram(data,64,78,12,19,63,data.portraitBottom),elem=element(data),ranked=[],roles=templates.filter(t=>t.kind==='role').map(t=>({value:t.value,score:roleScore(data,t)})).sort((a,b)=>a.score-b.score),roleMargin=roles[1]?.score-roles[0]?.score,role=roleMargin>1000?roles[0].value:null;
  for(const t of templates.filter(t=>t.kind==='portrait')){if(elem&&t.element!==elem)continue;let score=-1;for(const h of t.hist)score=Math.max(score,similarity(hist,h));ranked.push({unit:t.unit,tier:t.tier,glitter:t.glitter,score,roleMismatch:!!role&&t.role!==role,elementMismatch:!!elem&&t.element!==elem,template:t});}
  ranked.sort((a,b)=>(b.score-(b.elementMismatch?.12:0))-(a.score-(a.elementMismatch?.12:0)));ranked.splice(32);for(const r of ranked){const shape=shapeScore(data,r.template);r.histScore=r.score;r.portraitCost=shape;r.score=.35*r.score+.65*(1-Math.min(shape/18000,1))-(r.roleMismatch?.04:0)-(r.elementMismatch?.03:0);delete r.roleMismatch;delete r.elementMismatch;}ranked.sort((a,b)=>b.score-a.score);const first=ranked[0],runner=ranked.find(c=>c.unit!==first?.unit);let identityReadable=first?.score>.6&&(!runner||first.score-runner.score>.05);
@@ -67,6 +141,21 @@ function recognize(image,box){const data=pixels(image,box.x,box.y,box.w,box.h,64
   const alternatives=templates.filter(t=>t.kind==='portrait'&&t.element===elem&&t.role===role&&t.unit!==first.unit);
   const rival=Math.max(-Infinity,...alternatives.map(t=>.35*Math.max(...t.hist.map(h=>similarity(hist,h)))+.65*(1-Math.min(Math.min(shapeScore(data,t),shapeScore(data,t,true))/18000,1))));
   if(first.score-rival>.075)identityReadable=true;
+ }
+ if(!identityReadable&&elem&&roles[0]?.score<4300&&roleMargin>850&&stars[0].score < -1800){
+  // The element and role narrow the comparison. Outline and shadow matching account
+  // for tilted portraits and appearance effects that shift the sprite palette.
+  data.contour=contour(data,64,78);
+  const poseMatches=templates.filter(t=>t.kind==='portrait'&&t.element===elem&&t.role===roles[0].value).map(t=>{
+   const histScore=Math.max(...t.hist.map(h=>similarity(hist,h)));
+   const portraitCost=outlineFit(data,t);
+   return {unit:t.unit,tier:t.tier,glitter:t.glitter,histScore,portraitCost,score:1-portraitCost+.06*histScore};
+  }).sort((a,b)=>b.score-a.score);
+  const best=poseMatches[0],second=poseMatches.find(candidate=>candidate.unit!==best?.unit);
+  const margin=best&&second?best.score-second.score:0;
+  if((best?.score>.84&&margin>.014)||(best?.score>.80&&margin>.03&&best.unit===first?.unit)){
+   ranked.unshift(best);identityReadable=true;
+  }
  }
  for(const candidate of ranked)delete candidate.template;const used=new Set(),matches=[];for(const p of ranked){if(used.has(p.unit))continue;used.add(p.unit);matches.push(p);if(matches.length===6)break;}
 
