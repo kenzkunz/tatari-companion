@@ -36,13 +36,19 @@ export function automaticScreenshotPlan(catalog,roster,detections){
   if(before?.owned&&stars<before.stars){result.reason='Star reading is below the saved value.';continue;}
   const grade=detection.gradeReadable===false?null:detection.grades?.[0]?.value,stages=gradeStages(unit,grade,catalog);
   const food=stages.length?Math.min(...stages):before?.food??unit.feedingStages[0].stage,after={owned:true,tier:form.evolution,stars,food,copies:before?.stars===stars?(before.copies??0):0,glitter:before?.glitter??false};
-  after.copies=Math.min(after.copies,Math.max(0,(starCost(stars,catalog)||0)-1));
-  Object.assign(result,{name:form.name.en,unit:unit.id,tier:rosterTier(unit,form.evolution),stars,food,grade,foodSource:stages.length?'letter minimum':before?.owned?'saved level':'starting level',status:'ready',tierSource:Number.isInteger(detection.background?.value)?detection.background.source+' background':'saved tier'});
+  const cost=starCost(stars,catalog),bar=detection.progress;
+  const copyReading=cost>0&&bar?.cost===cost&&Number.isInteger(bar.copies)&&bar.copies>=0&&bar.copies<cost?bar.copies:null;
+  if(copyReading!==null)after.copies=copyReading;
+  const progressNote=copyReading!==null?`Star progress: ${copyReading}/${cost}`:bar&&cost>0&&bar.cost===cost&&bar.copies>=cost?`Read ${bar.copies}/${bar.cost}. Ready-to-upgrade counts are not saved.`:bar&&stars===84?`Read ${bar.copies}/${bar.cost}. This Tatari is already at max stars.`:cost>0?'Star progress not read or verified.':'';
+  Object.assign(result,{name:form.name.en,unit:unit.id,tier:rosterTier(unit,form.evolution),stars,food,grade,copyReading,progressNote,foodSource:stages.length?'letter minimum':before?.owned?'saved level':'starting level',status:'ready',tierSource:Number.isInteger(detection.background?.value)?detection.background.source+' background':'saved tier'});
   const candidate={id:unit.id,name:form.name.en,before,after,result};if(!candidates.has(unit.id))candidates.set(unit.id,[]);candidates.get(unit.id).push(candidate);
  }
  for(const list of candidates.values()){
-  const signatures=new Set(list.map(c=>JSON.stringify(c.after)));if(signatures.size>1){for(const c of list){c.result.status='skipped';c.result.reason='Conflicting screenshots for this Tatari.';}continue;}
-  const first=list[0];for(const c of list.slice(1)){c.result.status='skipped';c.result.reason='Duplicate card.';}
+  const signatures=new Set(list.map(c=>JSON.stringify({...c.after,copies:0})));if(signatures.size>1){for(const c of list){c.result.status='skipped';c.result.reason='Conflicting screenshots for this Tatari.';}continue;}
+  const first=list[0],readings=new Set(list.map(c=>c.result.copyReading).filter(n=>n!==null));
+  if(readings.size===1){const source=list.find(c=>c.result.copyReading!==null);first.after.copies=source.result.copyReading;first.result.progressNote=source.result.progressNote;}
+  if(readings.size>1){first.after.copies=first.before?.stars===first.after.stars?(first.before.copies??0):0;first.result.progressNote='Conflicting copy counts; star progress was not imported.';}
+  for(const c of list.slice(1)){c.result.status='skipped';c.result.reason='Duplicate card.';}
   if(JSON.stringify(first.before)===JSON.stringify(first.after)){first.result.status='unchanged';continue;}
   next.units[first.id]=first.after;changes.push(first);
  }
