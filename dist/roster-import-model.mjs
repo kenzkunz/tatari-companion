@@ -68,7 +68,7 @@ export function automaticScreenshotPlan(catalog,roster,detections){
    after.stars=projection.stars;after.copies=projection.copies;
    if(upgraded&&before?.owned&&unit.forms.some(f=>f.evolution===before.tier)&&tierStarRange(unit,before.tier).min<=after.stars){after.tier=before.tier;result.tierSource='saved tier';}
    const remaining=starCost(after.stars,catalog);
-   result.progressNote=upgraded?`Read ${bar.copies}/${bar.cost} → ${after.stars} stars${remaining?` with ${after.copies}/${remaining} copies remaining`: ' (maximum)'}.`: `Star progress: ${after.copies}/${remaining}`;
+   result.progressNote=upgraded?`Read ${bar.copies}/${bar.cost} → ${after.stars} stars${remaining?` with ${after.copies}/${remaining} copies remaining`: ' (maximum)'}.`: `Star progress: ${after.copies}/${remaining}${bar.method==='fill'?' (read from bar fill)':''}`;
   }else if(readings.size>1)result.progressNote='Conflicting copy counts; star progress was not imported.';
   else if(after.stars===84&&result.detection.progress){const bar=result.detection.progress;result.progressNote=`Read ${bar.copies}/${bar.cost}. This Tatari is already at max stars.`;}
   else if(after.stars<84){

@@ -1,4 +1,4 @@
-import {readStarProgress} from './roster-progress-reader.mjs?v=3';
+import {readStarProgress,copiesFromFill} from './roster-progress-reader.mjs?v=4';
 let templates=[],atlas,starCosts={};
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
 function canvas(w,h){if(typeof OffscreenCanvas!=='undefined')return new OffscreenCanvas(w,h);const c=document.createElement('canvas');c.width=w;c.height=h;return c}
@@ -159,7 +159,7 @@ function recognize(image,box){const data=pixels(image,box.x,box.y,box.w,box.h,64
  }
  for(const candidate of ranked)delete candidate.template;const used=new Set(),matches=[];for(const p of ranked){if(used.has(p.unit))continue;used.add(p.unit);matches.push(p);if(matches.length===6)break;}
 
- const {reading,previewBottom}=readStarProgress(image,box,pixels);
+ const {reading,previewBottom,fill}=readStarProgress(image,box,pixels);
  const [bestStar,starRunner]=stars,margin=Math.max(550,Math.abs(bestStar.score)*.12);
  let starReadable=bestStar.score < -1800&&starRunner.score-bestStar.score>margin;
  // A legible copy cost can rule out similar strips that need a different number of copies.
@@ -167,7 +167,8 @@ function recognize(image,box){const data=pixels(image,box.x,box.y,box.w,box.h,64
   const sameCost=stars.slice(1).find(star=>starCosts[star.value]===reading.cost);
   starReadable=!sameCost||sameCost.score-bestStar.score>margin;
  }
- return {box,progress:reading,progressBottom:previewBottom,matches,stars:stars.slice(0,4),grades,element:elem,role,background:backgroundTier(data),gradeReadable:grades[0].score<9000&&grades[1].score-grades[0].score>400,starReadable,identityReadable};}
+ const progress=reading??(starReadable?copiesFromFill(fill,starCosts[bestStar.value]):null);
+ return {box,progress,progressBottom:previewBottom,matches,stars:stars.slice(0,4),grades,element:elem,role,background:backgroundTier(data),gradeReadable:grades[0].score<9000&&grades[1].score-grades[0].score>400,starReadable,identityReadable};}
 export async function processMessage(data,emit){try{
  if(data.type==='load'){starCosts=data.starCosts??{};atlas=sourceCanvas(data.atlas);const starAtlas=sourceCanvas(data.starAtlas);templates=[];for(const entry of data.templates){const bitmap=cropCanvas(entry.sheet==='stars'?starAtlas:atlas,entry.x,entry.y,entry.w,entry.h),t={...entry,bitmap};if(t.kind==='portrait'){const p=pixels(bitmap,0,0,bitmap.width,bitmap.height,40,40);t.hist=[1,.7,.5].map(part=>histogram(p,40,40,0,0,40,Math.floor(40*part)));}if(t.kind==='star'){t.versions=[];for(const h of (t.value>=73?[24,25,26,27,28,29,30,31,32,33,34]:[14,15,16,17,18,19,20,21,22])){const w=Math.round(bitmap.width/bitmap.height*h);if(w<=90)t.versions.push({w,h,data:pixels(bitmap,0,0,bitmap.width,bitmap.height,w,h)});}}templates.push(t);}emit({type:'ready'});return;}
  if(data.type==='scan'){const image=sourceCanvas(data.image),boxes=borders(image);const cards=[];for(let i=0;i<boxes.length;i++){if(data.cancelled?.())throw Error('Import cancelled.');const {aligned,...box}=boxes[i];let card=recognize(image,box);
@@ -176,8 +177,8 @@ export async function processMessage(data,emit){try{
   if(sameIdentity&&sameStars&&((!card.identityReadable&&retry.identityReadable)||(!card.starReadable&&retry.starReadable)))card=retry;
  }
  if(!card.progress&&aligned&&(aligned.w!==box.w||aligned.y!==box.y)){
-  const {reading,previewBottom}=readStarProgress(image,aligned,pixels);
-  card.progress=reading;card.progressBottom=previewBottom??card.progressBottom;
+  const {reading,previewBottom,fill}=readStarProgress(image,aligned,pixels);
+  card.progress=reading??(card.starReadable?copiesFromFill(fill,starCosts[card.stars[0].value]):null);card.progressBottom=previewBottom??card.progressBottom;
  }
  cards.push(card);emit({type:'progress',done:i+1,total:boxes.length});if(typeof document!=='undefined')await new Promise(resolve=>setTimeout(resolve,0));}image.close?.();emit({type:'result',cards});}
  }catch(error){emit({type:'error',message:error.message||'The screenshot could not be read.'});}}

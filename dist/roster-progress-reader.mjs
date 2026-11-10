@@ -73,6 +73,46 @@ function findProgressBar(image,box,pixels){
  return best?{x:box.x,y:y+best.top,w:box.w,h:best.bottom-best.top+1}:null;
 }
 
+function measureFill(image,bar,pixels){
+ const {x,y,w,h}=bar,data=pixels(image,x,y,w,h);
+ const rows=Array.from({length:h},(_,row)=>row).filter(row=>row>=h*.17&&row<h*.33||row>=h*.70&&row<h*.85);
+ const height=rows.length;
+ const colors=new Uint8Array(w);
+ for(let col=0;col<w;col++){
+  let cyan=0,navy=0,green=0;
+  for(const row of rows){
+   const i=(row*w+col)*4,r=data[i],g=data[i+1],b=data[i+2];
+   if(g>122&&b>148&&g-r>42&&b-r>50)cyan++;
+   else if(r>=17&&r<=72&&g>=r&&g<=98&&b>g+7&&b<=132)navy++;
+   else if(g>145&&r>85&&b<135)green++;
+  }
+  if(green>height*.42)return null;
+  if(cyan>height*.56)colors[col]=1;
+  else if(navy>height*.56)colors[col]=2;
+ }
+ let left=colors.findIndex(color=>color>0),right=colors.findLastIndex(color=>color>0);
+ if(left<0||left>w*.085||right<w*.91)return null;
+ const span=right-left+1,lastCyan=colors.findLastIndex(color=>color===1);
+ if(lastCyan<0){
+  if(colors.filter(color=>color===2).length<span*.75)return null;
+  return {ratio:0,uncertainty:0};
+ }
+ if(colors[left]!==1||lastCyan>=right-w*.035)return null;
+ const nextNavy=colors.indexOf(2,lastCyan+1);
+ if(nextNavy<0||nextNavy-lastCyan>w*.07)return null;
+ const cyan=colors.slice(left,lastCyan+1),navy=colors.slice(nextNavy,right+1);
+ if(cyan.filter(color=>color===1).length<cyan.length*.68||navy.filter(color=>color===2).length<navy.length*.68)return null;
+ return {ratio:(lastCyan+nextNavy+1-2*left)/(2*span),uncertainty:(nextNavy-lastCyan+1)/(2*span)};
+}
+
+export function copiesFromFill(fill,cost){
+ if(!fill||!Number.isInteger(cost)||cost<1||cost>11)return null;
+ // Allow for the outline and rounded end consuming some of the visible fill.
+ const exact=(fill.ratio===0?0:fill.ratio+.035)*cost,copies=Math.round(exact);
+ if(copies>=cost||Math.abs(exact-copies)+fill.uncertainty*cost>.29)return null;
+ return {copies,cost,method:'fill'};
+}
+
 function readCrop(image,rect,pixels,fill,width=rect.w){
  const height=Math.round(rect.h*width/rect.w);
  const data=pixels(image,rect.x,rect.y,rect.w,rect.h,width,height),votes=new Map();
@@ -93,9 +133,9 @@ export function readStarProgress(image,box,pixels){
  if(rect.y+rect.h>image.height||rect.x+rect.w>image.width)return {reading:null,previewBottom};
  const fill=blueFill(image,box,pixels);
  const native=readCrop(image,rect,pixels,fill);
- const scaled=native?null:readCrop(image,rect,pixels,fill,132);
- const value=native??scaled;
- if(!value)return {reading:null,previewBottom};
+ const scaled=native?[]:[96,132,176].filter(width=>width!==rect.w).map(width=>readCrop(image,rect,pixels,fill,width)).filter(Boolean);
+ const value=native??(new Set(scaled).size===1?scaled[0]:null);
+ if(!value)return {reading:null,previewBottom,fill:bar&&measureFill(image,bar,pixels)};
  const [copies,cost]=value.split('/').map(Number);
  return {reading:{copies,cost},previewBottom};
 }
