@@ -16,3 +16,9 @@ body[data-guide="horde-season-4-preview-7m2k"] #avatar-frames .info-icon-value{g
 .preview-journal-cover{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;display:block;background:var(--info-paper)}
 @media(max-width:920px){.preview-skill-grid,.preview-journal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.preview-skill-grid,.preview-journal-grid{grid-template-columns:1fr}body[data-guide="horde-season-4-preview-7m2k"] .guide-content section>h2{font-size:20px}body[data-guide="horde-season-4-preview-7m2k"] #avatar-frames .info-icon-value img{width:62px;height:62px}}
+
+#rooster .preview-portrait-row{grid-template-columns:repeat(4,minmax(0,1fr));margin:8px 0 18px;gap:clamp(4px,1vw,12px)}
+#rooster .preview-portrait-row figure{min-width:0;padding:clamp(2px,1vw,12px)}
+#rooster .preview-portrait-row img{width:85px;height:auto;aspect-ratio:1}
+#rooster .preview-portrait-row figcaption{overflow-wrap:anywhere;margin-top:4px}
+@media(max-width:520px){#rooster .preview-portrait-row figcaption{font-size:11px;line-height:1.25}}
