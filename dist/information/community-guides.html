@@ -35,13 +35,14 @@
   <link rel="stylesheet" href="/community.css?v=title-case1">
 <link rel="stylesheet" href="/panel-titles.css?v=tracker2">
   <style>
-    .guide-card-intro { flex-wrap: wrap; align-items: flex-start; gap: 8px 16px; padding: 16px; }
-    .guide-card-intro .creator-copy { flex: 1 1 20rem; min-width: 0; }
+    .guide-card-intro { display: grid; grid-template-columns: clamp(54px, 10vw, 112px) minmax(0, 1fr); align-items: start; gap: 6px 16px; padding: 16px; }
+    .guide-card-thumb { grid-column: 1; grid-row: 1 / span 2; display: block; width: 100%; height: auto; }
+    .guide-card-intro .creator-copy { grid-column: 2; min-width: 0; }
     .public-info-page .guide-content .guide-card-highlights li { font-size: 10px; line-height: 1.5; max-width: none; }
     .guide-card-highlights { margin: 0; padding-inline-start: 1.25em; }
     .guide-card-intro .creator-copy > p { margin: 0 0 6px; }
     .guide-card-intro .guide-card-highlights li + li { margin-top: 3px; }
-    .guide-card-tags { order: 1; margin-inline-start: auto; justify-content: flex-end; max-width: 100%; }
+    .guide-card-tags { grid-column: 2; justify-content: flex-end; }
     .guide-card-footer { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 10px 16px; background: #fffef1; }
     .guide-card-footer .guide-card-link { margin: 0 0 0 auto; }
     .guide-card-link .discord-guide-button { background: #7289da; border-color: #7289da; color: #fff; }
@@ -64,6 +65,7 @@
           <div class="community-entries">
             <article class="community-creator" aria-labelledby="caban-evolution-title">
               <header class="creator-intro guide-card-intro">
+                <img class="guide-card-thumb" src="/assets/creators/caban-evolution-guide.png" alt="" width="1334" height="1570" decoding="async">
                 <div class="creator-actions guide-card-tags" role="group" aria-label="Guide topics">
                   <span class="community-badge">Beginners</span>
                   <span class="community-badge">Tierlist</span>
