@@ -1,0 +1,18 @@
+body[data-guide="horde-season-4-preview-7m2k"] .guide-content section>h2{font:800 22px/1.3 Sora,system-ui,sans-serif;margin:0 0 12px}
+body[data-guide="horde-season-4-preview-7m2k"] #avatar-frames .info-icon-value img{width:80px;height:80px}
+body[data-guide="horde-season-4-preview-7m2k"] #avatar-frames .info-icon-value{gap:12px}
+.preview-boss-list{display:flex;flex-wrap:wrap;gap:6px 12px}
+.preview-icon-label{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.preview-icon{width:36px;height:36px;object-fit:contain;flex:none}
+.preview-skill-grid,.preview-journal-grid{display:grid;gap:12px;margin:16px 0;min-width:0}
+.preview-skill-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.preview-journal-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.preview-card{min-width:0;background:var(--info-panel);border:1px solid var(--info-line);border-radius:12px;overflow:hidden}
+.preview-skill-grid .preview-card,.preview-journal-copy{padding:13px}
+.public-info-page .guide-content .preview-card h3{font-weight:800;margin:3px 0 8px;overflow-wrap:anywhere}
+.public-info-page .guide-content .preview-card p{font-size:13px;line-height:1.5;margin:0 0 8px}
+.public-info-page .guide-content .preview-card .preview-level{font:700 12px/1.5 Sora,system-ui,sans-serif;color:var(--info-ink);background:var(--info-note);display:inline-block;padding:3px 7px;border-radius:5px}
+.preview-card dl{margin:8px 0 0;font-size:12px}.preview-card dl div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 6px;border-top:1px solid var(--info-line);padding:5px 0}.preview-card dd{margin:0;font-weight:600}
+.preview-journal-cover{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;display:block;background:var(--info-paper)}
+@media(max-width:920px){.preview-skill-grid,.preview-journal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.preview-skill-grid,.preview-journal-grid{grid-template-columns:1fr}body[data-guide="horde-season-4-preview-7m2k"] .guide-content section>h2{font-size:20px}body[data-guide="horde-season-4-preview-7m2k"] #avatar-frames .info-icon-value img{width:62px;height:62px}}
