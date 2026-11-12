@@ -22,3 +22,25 @@ body[data-guide="horde-season-4-preview-7m2k"] #avatar-frames .info-icon-value{g
 #rooster .preview-portrait-row img{width:85px;height:auto;aspect-ratio:1}
 #rooster .preview-portrait-row figcaption{overflow-wrap:anywhere;margin-top:4px}
 @media(max-width:520px){#rooster .preview-portrait-row figcaption{font-size:11px;line-height:1.25}}
+
+.tg-login th:first-child {width:4rem}
+.guide-table.tg-login tbody :is(th,td) {padding-block:.3rem}
+.tg-rewards {display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.15rem;list-style:none;padding:0;margin:0}
+.tg-rewards li {display:flex;align-items:center;gap:.35rem}
+.tg-rewards img {width:34px;height:34px;object-fit:contain;flex:none}
+.tg-gold td {white-space:nowrap;font-variant-numeric:tabular-nums}
+.guide-table.tg-gold tbody td.tg-buffed {background:#d8f0d8;color:#174321}
+
+.tg-gold-value {display:inline-flex;align-items:center;gap:.35rem}
+.tg-gold-value img {width:24px;height:24px;object-fit:contain;flex:none}
+
+#chips .tg-chip-art {display:inline-grid;place-items:center;width:56px;height:56px;flex:none;background-size:100% 100%;background-repeat:no-repeat}
+#chips .tg-chip-art .preview-icon {width:42px;height:42px;object-fit:contain}
+#chips .tg-chip-blue {background-image:url("/guide-assets/horde/bluebg.png")}
+#chips .tg-chip-gold {background-image:url("/guide-assets/horde/goldbg.png")}
+#chips .tg-chip-rainbow {background-image:url("/guide-assets/horde/rainbowbg.png")}
+
+
+
+.guide-paper .guide-table :is(th,td) {text-align:left;vertical-align:middle}
+.guide-paper .guide-table :is(.preview-icon-label,.preview-boss-list,.tg-rewards) {justify-content:flex-start}
