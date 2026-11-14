@@ -84,6 +84,9 @@ try {
   const artifacts = await response.json();
   cards.push(...artifacts.map(makeCard));
   const picker = get('files');
+  const importButton = get('import');
+  importButton.addEventListener('click', () => picker.click());
+  importButton.disabled = false;
   picker.addEventListener('change', async () => {
     const files = [...picker.files];
     picker.value = '';
@@ -93,7 +96,7 @@ try {
       status.textContent = 'Choose up to six screenshots at a time.';
       return;
     }
-    picker.disabled = true;
+    importButton.disabled = true;
     status.textContent = 'Reading codex screenshots…';
     try {
       const {readCodexFiles} = await import('./adventure-import.mjs');
@@ -119,7 +122,7 @@ try {
     } catch {
       status.textContent = 'Screenshot import could not start. Reload and try again.';
     } finally {
-      picker.disabled = false;
+      importButton.disabled = false;
     }
   });
   update();

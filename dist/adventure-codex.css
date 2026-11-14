@@ -4,16 +4,14 @@
 .adventure-codex .fish-card label { white-space: normal; }
 .adventure-codex .fish-card .fish-art { aspect-ratio: 1.15; }
 .adventure-codex .fish-art > img { padding: 7px 7px 20px; }
-.adventure-codex .collection-tools { display: flex; flex-wrap: wrap; }
-.adventure-codex .collection-tools > p { flex-basis: 100%; }
-.adventure-codex .fish-search { flex: 1 1 150px; }
-.adventure-codex .fish-search input { width: 100%; box-sizing: border-box; }
 .adventure-codex [hidden] { display: none; }
 @media (max-width: 700px) {
   .adventure-codex .fish-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding-inline: 8px; }
 }
 
-.codex-upload { padding: 0 14px 14px; color: #fff; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-size: .8rem; }
-.codex-upload label { font-weight: 600; }
-.codex-upload input { max-width: 100%; }
-.codex-upload p { flex-basis: 100%; margin: 0; }
+
+@media (max-width: 700px) {
+  .adventure-codex .collection-tools { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .adventure-codex .collection-tools .fish-search { grid-column: 1 / -1; }
+  .adventure-codex .collection-tools > button { white-space: normal; }
+}
