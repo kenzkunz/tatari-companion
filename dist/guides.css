@@ -60,3 +60,5 @@ body[data-guide="cozy-farm"] .reward-entry{cursor:pointer;border-radius:8px}body
 
 body[data-guide="artifact-adventure"] .reward-entry{grid-template-columns:155px minmax(0,1fr);min-height:44px}body[data-guide="artifact-adventure"] .fish-milestone{flex-wrap:nowrap}body[data-guide="artifact-adventure"] .fish-milestone span{min-width:0}
 @media(max-width:650px){body[data-guide="artifact-adventure"] .reward-entry{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:12px}body[data-guide="artifact-adventure"] .fish-reward-items{gap:8px 14px}}
+
+#artifact-result{background:#fff8dd;border-color:#d4b05a}#artifact-result>span{flex-wrap:wrap;justify-content:center;text-align:center}#artifact-result strong{font-size:clamp(1rem,2.6vw,1.7rem)}
