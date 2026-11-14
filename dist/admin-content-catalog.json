@@ -2882,8 +2882,8 @@
   {
     "page": "events/artifact-adventure.html",
     "block": "text-milestones-block-1",
-    "label": "Text · There are 50 personal milestones, ending at 40,000,000 points. Candy amounts are base amounts a",
-    "default": "There are 50 personal milestones, ending at 40,000,000 points. Candy amounts are base amounts and can vary with stage-clear progress.",
+    "label": "Text · There are 50 personal milestones, ending at 28,000,000 points. Candy amounts are base amounts a",
+    "default": "There are 50 personal milestones, ending at 28,000,000 points. Candy amounts are base amounts and can vary with stage-clear progress.",
     "order": 32,
     "section": "milestones",
     "sectionTitle": "Personal milestone rewards"
