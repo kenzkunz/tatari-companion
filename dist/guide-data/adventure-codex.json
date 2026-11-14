@@ -16,6 +16,22 @@
     ]
   },
   {
+    "id": 3,
+    "name": "Gold Scarab",
+    "rarity": "Red",
+    "min": 5000,
+    "max": 9961,
+    "icon": "/guide-assets/adventure/artifact-3.webp",
+    "gradeBounds": [
+      5000,
+      6250,
+      7500,
+      8000,
+      8888,
+      9961
+    ]
+  },
+  {
     "id": 2,
     "name": "Sacred Scepter",
     "rarity": "Red",
@@ -32,19 +48,19 @@
     ]
   },
   {
-    "id": 3,
-    "name": "Gold Scarab",
-    "rarity": "Red",
-    "min": 5000,
-    "max": 9961,
-    "icon": "/guide-assets/adventure/artifact-3.webp",
+    "id": 4,
+    "name": "Obsidian Cat Statue",
+    "rarity": "Gold",
+    "min": 2000,
+    "max": 5000,
+    "icon": "/guide-assets/adventure/artifact-4.webp",
     "gradeBounds": [
-      5000,
-      6250,
-      7500,
-      8000,
-      8888,
-      9961
+      2000,
+      2500,
+      3000,
+      3500,
+      4000,
+      5000
     ]
   },
   {
@@ -80,22 +96,6 @@
     ]
   },
   {
-    "id": 4,
-    "name": "Obsidian Cat Statue",
-    "rarity": "Gold",
-    "min": 2000,
-    "max": 5000,
-    "icon": "/guide-assets/adventure/artifact-4.webp",
-    "gradeBounds": [
-      2000,
-      2500,
-      3000,
-      3500,
-      4000,
-      5000
-    ]
-  },
-  {
     "id": 7,
     "name": "Eye of Horus",
     "rarity": "Gold",
@@ -112,22 +112,6 @@
     ]
   },
   {
-    "id": 8,
-    "name": "Lavish Robes",
-    "rarity": "Purple",
-    "min": 1200,
-    "max": 2500,
-    "icon": "/guide-assets/adventure/artifact-8.webp",
-    "gradeBounds": [
-      1200,
-      1350,
-      1500,
-      1800,
-      2200,
-      2500
-    ]
-  },
-  {
     "id": 11,
     "name": "Canopic Jar",
     "rarity": "Purple",
@@ -141,6 +125,38 @@
       2000,
       2100,
       2800
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Mummeow",
+    "rarity": "Purple",
+    "min": 1200,
+    "max": 2600,
+    "icon": "/guide-assets/adventure/artifact-9.webp",
+    "gradeBounds": [
+      1200,
+      1350,
+      1500,
+      1800,
+      2300,
+      2600
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Lavish Robes",
+    "rarity": "Purple",
+    "min": 1200,
+    "max": 2500,
+    "icon": "/guide-assets/adventure/artifact-8.webp",
+    "gradeBounds": [
+      1200,
+      1350,
+      1500,
+      1800,
+      2200,
+      2500
     ]
   },
   {
@@ -192,22 +208,6 @@
     ]
   },
   {
-    "id": 9,
-    "name": "Mummeow",
-    "rarity": "Purple",
-    "min": 1200,
-    "max": 2600,
-    "icon": "/guide-assets/adventure/artifact-9.webp",
-    "gradeBounds": [
-      1200,
-      1350,
-      1500,
-      1800,
-      2300,
-      2600
-    ]
-  },
-  {
     "id": 20,
     "name": "Feline Hourglass",
     "rarity": "Blue",
@@ -221,38 +221,6 @@
       600,
       700,
       778
-    ]
-  },
-  {
-    "id": 14,
-    "name": "Choco Coins",
-    "rarity": "Blue",
-    "min": 300,
-    "max": 667,
-    "icon": "/guide-assets/adventure/artifact-14.webp",
-    "gradeBounds": [
-      300,
-      375,
-      450,
-      600,
-      660,
-      667
-    ]
-  },
-  {
-    "id": 19,
-    "name": "Clay Bowl",
-    "rarity": "Blue",
-    "min": 260,
-    "max": 650,
-    "icon": "/guide-assets/adventure/artifact-19.webp",
-    "gradeBounds": [
-      260,
-      350,
-      440,
-      540,
-      640,
-      650
     ]
   },
   {
@@ -285,6 +253,38 @@
       550,
       660,
       700
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Choco Coins",
+    "rarity": "Blue",
+    "min": 300,
+    "max": 667,
+    "icon": "/guide-assets/adventure/artifact-14.webp",
+    "gradeBounds": [
+      300,
+      375,
+      450,
+      600,
+      660,
+      667
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Clay Bowl",
+    "rarity": "Blue",
+    "min": 260,
+    "max": 650,
+    "icon": "/guide-assets/adventure/artifact-19.webp",
+    "gradeBounds": [
+      260,
+      350,
+      440,
+      540,
+      640,
+      650
     ]
   },
   {
