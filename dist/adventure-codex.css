@@ -12,3 +12,8 @@
 @media (max-width: 700px) {
   .adventure-codex .fish-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding-inline: 8px; }
 }
+
+.codex-upload { padding: 0 14px 14px; color: #fff; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; font-size: .8rem; }
+.codex-upload label { font-weight: 600; }
+.codex-upload input { max-width: 100%; }
+.codex-upload p { flex-basis: 100%; margin: 0; }

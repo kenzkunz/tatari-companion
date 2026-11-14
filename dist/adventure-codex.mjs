@@ -83,6 +83,45 @@ try {
   if (!response.ok) throw new Error('Artifact data is unavailable.');
   const artifacts = await response.json();
   cards.push(...artifacts.map(makeCard));
+  const picker = get('files');
+  picker.addEventListener('change', async () => {
+    const files = [...picker.files];
+    picker.value = '';
+    if (!files.length) return;
+    status.hidden = false;
+    if (files.length > 6) {
+      status.textContent = 'Choose up to six screenshots at a time.';
+      return;
+    }
+    picker.disabled = true;
+    status.textContent = 'Reading codex screenshots…';
+    try {
+      const {readCodexFiles} = await import('./adventure-import.mjs');
+      const {records, summary} = await readCodexFiles(files, artifacts);
+      const changes = cards.filter(({artifact, input}) =>
+        records.has(artifact.id) && records.get(artifact.id) > (parseRecord(input) ?? 0));
+      status.textContent = summary;
+      if (!changes.length) return;
+      const accepted = await confirmDialog(summary + ' Save ' + changes.length + ' new or higher records?', {
+        title: 'Import artifact records', action: 'Save records'
+      });
+      if (!accepted) return;
+      let imported = 0;
+      for (const {artifact, input} of changes) {
+        const value = records.get(artifact.id);
+        if (value <= (parseRecord(input) ?? 0)) continue;
+        input.value = String(value);
+        imported++;
+      }
+      update();
+      status.textContent = imported + ' records imported. ' + summary;
+      persist();
+    } catch {
+      status.textContent = 'Screenshot import could not start. Reload and try again.';
+    } finally {
+      picker.disabled = false;
+    }
+  });
   update();
   get('search').addEventListener('input', event => {
     const query = event.target.value.trim().toLowerCase();
