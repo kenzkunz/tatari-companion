@@ -48,22 +48,6 @@
     ]
   },
   {
-    "id": 4,
-    "name": "Obsidian Cat Statue",
-    "rarity": "Gold",
-    "min": 2000,
-    "max": 5000,
-    "icon": "/guide-assets/adventure/artifact-4.webp",
-    "gradeBounds": [
-      2000,
-      2500,
-      3000,
-      3500,
-      4000,
-      5000
-    ]
-  },
-  {
     "id": 5,
     "name": "Heart Pendant",
     "rarity": "Gold",
@@ -93,6 +77,22 @@
       3300,
       4000,
       4100
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Obsidian Cat Statue",
+    "rarity": "Gold",
+    "min": 2000,
+    "max": 5000,
+    "icon": "/guide-assets/adventure/artifact-4.webp",
+    "gradeBounds": [
+      2000,
+      2500,
+      3000,
+      3500,
+      4000,
+      5000
     ]
   },
   {
@@ -128,38 +128,6 @@
     ]
   },
   {
-    "id": 9,
-    "name": "Mummeow",
-    "rarity": "Purple",
-    "min": 1200,
-    "max": 2600,
-    "icon": "/guide-assets/adventure/artifact-9.webp",
-    "gradeBounds": [
-      1200,
-      1350,
-      1500,
-      1800,
-      2300,
-      2600
-    ]
-  },
-  {
-    "id": 10,
-    "name": "Marked Tablet",
-    "rarity": "Purple",
-    "min": 1500,
-    "max": 2200,
-    "icon": "/guide-assets/adventure/artifact-10.webp",
-    "gradeBounds": [
-      1500,
-      1650,
-      1800,
-      2000,
-      2100,
-      2200
-    ]
-  },
-  {
     "id": 11,
     "name": "Canopic Jar",
     "rarity": "Purple",
@@ -173,22 +141,6 @@
       2000,
       2100,
       2800
-    ]
-  },
-  {
-    "id": 12,
-    "name": "Royal Perfume",
-    "rarity": "Purple",
-    "min": 900,
-    "max": 2100,
-    "icon": "/guide-assets/adventure/artifact-12.webp",
-    "gradeBounds": [
-      900,
-      1200,
-      1500,
-      1800,
-      2000,
-      2100
     ]
   },
   {
@@ -208,6 +160,70 @@
     ]
   },
   {
+    "id": 10,
+    "name": "Marked Tablet",
+    "rarity": "Purple",
+    "min": 1500,
+    "max": 2200,
+    "icon": "/guide-assets/adventure/artifact-10.webp",
+    "gradeBounds": [
+      1500,
+      1650,
+      1800,
+      2000,
+      2100,
+      2200
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Royal Perfume",
+    "rarity": "Purple",
+    "min": 900,
+    "max": 2100,
+    "icon": "/guide-assets/adventure/artifact-12.webp",
+    "gradeBounds": [
+      900,
+      1200,
+      1500,
+      1800,
+      2000,
+      2100
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Mummeow",
+    "rarity": "Purple",
+    "min": 1200,
+    "max": 2600,
+    "icon": "/guide-assets/adventure/artifact-9.webp",
+    "gradeBounds": [
+      1200,
+      1350,
+      1500,
+      1800,
+      2300,
+      2600
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Feline Hourglass",
+    "rarity": "Blue",
+    "min": 300,
+    "max": 778,
+    "icon": "/guide-assets/adventure/artifact-20.webp",
+    "gradeBounds": [
+      300,
+      400,
+      500,
+      600,
+      700,
+      778
+    ]
+  },
+  {
     "id": 14,
     "name": "Choco Coins",
     "rarity": "Blue",
@@ -221,70 +237,6 @@
       600,
       660,
       667
-    ]
-  },
-  {
-    "id": 15,
-    "name": "Mystic Herbs",
-    "rarity": "Blue",
-    "min": 300,
-    "max": 750,
-    "icon": "/guide-assets/adventure/artifact-15.webp",
-    "gradeBounds": [
-      300,
-      400,
-      500,
-      600,
-      700,
-      750
-    ]
-  },
-  {
-    "id": 16,
-    "name": "Spectral Fesikh",
-    "rarity": "Blue",
-    "min": 150,
-    "max": 610,
-    "icon": "/guide-assets/adventure/artifact-16.webp",
-    "gradeBounds": [
-      150,
-      300,
-      450,
-      500,
-      600,
-      610
-    ]
-  },
-  {
-    "id": 17,
-    "name": "Papyrus Tapestry",
-    "rarity": "Blue",
-    "min": 400,
-    "max": 620,
-    "icon": "/guide-assets/adventure/artifact-17.webp",
-    "gradeBounds": [
-      400,
-      450,
-      500,
-      600,
-      610,
-      620
-    ]
-  },
-  {
-    "id": 18,
-    "name": "Djedya See Me",
-    "rarity": "Blue",
-    "min": 200,
-    "max": 700,
-    "icon": "/guide-assets/adventure/artifact-18.webp",
-    "gradeBounds": [
-      200,
-      300,
-      400,
-      550,
-      660,
-      700
     ]
   },
   {
@@ -304,19 +256,67 @@
     ]
   },
   {
-    "id": 20,
-    "name": "Feline Hourglass",
+    "id": 15,
+    "name": "Mystic Herbs",
     "rarity": "Blue",
     "min": 300,
-    "max": 778,
-    "icon": "/guide-assets/adventure/artifact-20.webp",
+    "max": 750,
+    "icon": "/guide-assets/adventure/artifact-15.webp",
     "gradeBounds": [
       300,
       400,
       500,
       600,
       700,
-      778
+      750
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Djedya See Me",
+    "rarity": "Blue",
+    "min": 200,
+    "max": 700,
+    "icon": "/guide-assets/adventure/artifact-18.webp",
+    "gradeBounds": [
+      200,
+      300,
+      400,
+      550,
+      660,
+      700
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Papyrus Tapestry",
+    "rarity": "Blue",
+    "min": 400,
+    "max": 620,
+    "icon": "/guide-assets/adventure/artifact-17.webp",
+    "gradeBounds": [
+      400,
+      450,
+      500,
+      600,
+      610,
+      620
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Spectral Fesikh",
+    "rarity": "Blue",
+    "min": 150,
+    "max": 610,
+    "icon": "/guide-assets/adventure/artifact-16.webp",
+    "gradeBounds": [
+      150,
+      300,
+      450,
+      500,
+      600,
+      610
     ]
   }
 ]
