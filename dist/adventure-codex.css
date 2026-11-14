@@ -1,0 +1,14 @@
+.adventure-codex .fish-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; padding-inline: 14px; }
+.adventure-codex .collection-total > span { flex-wrap: wrap; }
+.adventure-codex .fish-card h3 { display: grid; place-items: center; min-height: 3em; margin: 0; padding: 5px; font-size: .83rem; line-height: 1.2; color: #17172a; overflow-wrap: anywhere; }
+.adventure-codex .fish-card label { white-space: normal; }
+.adventure-codex .fish-card .fish-art { aspect-ratio: 1.15; }
+.adventure-codex .fish-art > img { padding: 7px 7px 20px; }
+.adventure-codex .collection-tools { display: flex; flex-wrap: wrap; }
+.adventure-codex .collection-tools > p { flex-basis: 100%; }
+.adventure-codex .fish-search { flex: 1 1 150px; }
+.adventure-codex .fish-search input { width: 100%; box-sizing: border-box; }
+.adventure-codex [hidden] { display: none; }
+@media (max-width: 700px) {
+  .adventure-codex .fish-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding-inline: 8px; }
+}

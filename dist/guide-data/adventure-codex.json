@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Tutankhamun Mask",
+    "rarity": "Red",
+    "min": 5555,
+    "max": 10000,
+    "icon": "/guide-assets/adventure/artifact-1.webp"
+  },
+  {
+    "id": 2,
+    "name": "Sacred Scepter",
+    "rarity": "Red",
+    "min": 6000,
+    "max": 9100,
+    "icon": "/guide-assets/adventure/artifact-2.webp"
+  },
+  {
+    "id": 3,
+    "name": "Gold Scarab",
+    "rarity": "Red",
+    "min": 5000,
+    "max": 9961,
+    "icon": "/guide-assets/adventure/artifact-3.webp"
+  },
+  {
+    "id": 4,
+    "name": "Obsidian Cat Statue",
+    "rarity": "Gold",
+    "min": 2000,
+    "max": 5000,
+    "icon": "/guide-assets/adventure/artifact-4.webp"
+  },
+  {
+    "id": 5,
+    "name": "Heart Pendant",
+    "rarity": "Gold",
+    "min": 2600,
+    "max": 4200,
+    "icon": "/guide-assets/adventure/artifact-5.webp"
+  },
+  {
+    "id": 6,
+    "name": "Serpent Bracelet",
+    "rarity": "Gold",
+    "min": 2300,
+    "max": 4100,
+    "icon": "/guide-assets/adventure/artifact-6.webp"
+  },
+  {
+    "id": 7,
+    "name": "Eye of Horus",
+    "rarity": "Gold",
+    "min": 2000,
+    "max": 4100,
+    "icon": "/guide-assets/adventure/artifact-7.webp"
+  },
+  {
+    "id": 8,
+    "name": "Lavish Robes",
+    "rarity": "Purple",
+    "min": 1200,
+    "max": 2500,
+    "icon": "/guide-assets/adventure/artifact-8.webp"
+  },
+  {
+    "id": 9,
+    "name": "Mummeow",
+    "rarity": "Purple",
+    "min": 1200,
+    "max": 2600,
+    "icon": "/guide-assets/adventure/artifact-9.webp"
+  },
+  {
+    "id": 10,
+    "name": "Marked Tablet",
+    "rarity": "Purple",
+    "min": 1500,
+    "max": 2200,
+    "icon": "/guide-assets/adventure/artifact-10.webp"
+  },
+  {
+    "id": 11,
+    "name": "Canopic Jar",
+    "rarity": "Purple",
+    "min": 1000,
+    "max": 2800,
+    "icon": "/guide-assets/adventure/artifact-11.webp"
+  },
+  {
+    "id": 12,
+    "name": "Royal Perfume",
+    "rarity": "Purple",
+    "min": 900,
+    "max": 2100,
+    "icon": "/guide-assets/adventure/artifact-12.webp"
+  },
+  {
+    "id": 13,
+    "name": "Majestic Bird",
+    "rarity": "Purple",
+    "min": 1500,
+    "max": 2400,
+    "icon": "/guide-assets/adventure/artifact-13.webp"
+  },
+  {
+    "id": 14,
+    "name": "Choco Coins",
+    "rarity": "Blue",
+    "min": 300,
+    "max": 667,
+    "icon": "/guide-assets/adventure/artifact-14.webp"
+  },
+  {
+    "id": 15,
+    "name": "Mystic Herbs",
+    "rarity": "Blue",
+    "min": 300,
+    "max": 750,
+    "icon": "/guide-assets/adventure/artifact-15.webp"
+  },
+  {
+    "id": 16,
+    "name": "Spectral Fesikh",
+    "rarity": "Blue",
+    "min": 150,
+    "max": 610,
+    "icon": "/guide-assets/adventure/artifact-16.webp"
+  },
+  {
+    "id": 17,
+    "name": "Papyrus Tapestry",
+    "rarity": "Blue",
+    "min": 400,
+    "max": 620,
+    "icon": "/guide-assets/adventure/artifact-17.webp"
+  },
+  {
+    "id": 18,
+    "name": "Djedya See Me",
+    "rarity": "Blue",
+    "min": 200,
+    "max": 700,
+    "icon": "/guide-assets/adventure/artifact-18.webp"
+  },
+  {
+    "id": 19,
+    "name": "Clay Bowl",
+    "rarity": "Blue",
+    "min": 260,
+    "max": 650,
+    "icon": "/guide-assets/adventure/artifact-19.webp"
+  },
+  {
+    "id": 20,
+    "name": "Feline Hourglass",
+    "rarity": "Blue",
+    "min": 300,
+    "max": 778,
+    "icon": "/guide-assets/adventure/artifact-20.webp"
+  }
+]

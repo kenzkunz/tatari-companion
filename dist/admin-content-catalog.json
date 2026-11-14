@@ -2711,8 +2711,8 @@
   {
     "page": "events/artifact-adventure.html",
     "block": "text-torches-block-5",
-    "label": "Text · Claim the Torch Upgrade rewards at 900,000, 1,900,000, 5,500,000, and 20,000,000 personal point",
-    "default": "Claim the Torch Upgrade rewards at 900,000, 1,900,000, 5,500,000, and 20,000,000 personal points. The maximum Torch level is 5.",
+    "label": "Text · Claim the Torch Upgrade rewards at 900,000, 1,900,000, 5,000,000, and 14,000,000 personal point",
+    "default": "Claim the Torch Upgrade rewards at 900,000, 1,900,000, 5,000,000, and 14,000,000 personal points. The maximum Torch level is 5.",
     "order": 13,
     "section": "torches",
     "sectionTitle": "Torches & multipliers"
