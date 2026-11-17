@@ -10,7 +10,7 @@ if(floatingNavbar&&floatingNavbar.dataset.fixedNavigationReady!=='true'){
   syncNavbarHeight();
   new ResizeObserver(syncNavbarHeight).observe(floatingNavbar);
 }
-void import('./site-announcement.mjs?v=ticker3');
+void import('./site-announcement.mjs?v=closure1');
 const nav=document.getElementById('navigation'),menu=document.querySelector('.menu-toggle');
 if(nav&&menu&&nav.dataset.navigationReady!=='true'){
 nav.dataset.navigationReady='true';
