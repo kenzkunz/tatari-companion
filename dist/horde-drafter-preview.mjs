@@ -20,7 +20,7 @@ const rangeOptions={attack:false,skill:false};
 try{Object.assign(rangeOptions,JSON.parse(localStorage.getItem('milkroad-range-options')||'{}'))}catch{}
 // Skill preview is suspended while attack tiles are reviewed; ignore any saved skill preference.
 rangeOptions.skill=false;
-const rangeReady=fetch('/drafter-ranges.json?v=beaver1').then(r=>{if(!r.ok)throw Error('Range data unavailable');return r.json()}).then(data=>{rangeData=data;paintRanges()}).catch(()=>{});
+const rangeReady=fetch('/drafter-ranges.json?v=roost1').then(r=>{if(!r.ok)throw Error('Range data unavailable');return r.json()}).then(data=>{rangeData=data;paintRanges()}).catch(()=>{});
 const labels={2:'Water',3:'Fire',4:'Grass',5:'Lightning',6:'Rock'};let recordId=null,recordRevision=null;let entries=[],known=new Map(),candidate=null,pickPlayer=1,player=1,selectedPriority=new Set(),editing=null;let draft={schema:1,ownershipVersion:2,gameMode:'horde',context:{},name:'',mode:'duo',cells:Array(36).fill(null),steps:[]};
 const mobilePickerMedia=matchMedia('(max-width:700px)');let mobilePickerDialog=null,mobilePickerTarget=null;
 function status(text){$('status').textContent=text;if(mobilePickerDialog?.open)$('mobile-picker-feedback').textContent=text}

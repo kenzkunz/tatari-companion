@@ -28,7 +28,7 @@ function renderChips(){
   $('chip-list').replaceChildren(...chips.map(c=>{
     const row=node('article',undefined,'horde-chip'),copy=node('div'),heading=node('div',undefined,'horde-chip-title'),q={3:'Blue',5:'Gold',7:'Rainbow'}[c.quality]||'Quality '+c.quality;
     heading.append(node('strong',c.name),node('span',q,'horde-quality '+q.toLowerCase()));copy.append(heading,node('p',c.description),node('small',c.category+' · Eligible selection waves: '+c.waves.join(', ')+(c.unique?' · Exclusive to one player per run':'')));
-    const art=node('span',undefined,'horde-chip-art');art.style.backgroundImage='url('+({Blue:'/guide-assets/horde/bluebg.png',Gold:'/guide-assets/horde/goldbg.png',Rainbow:'/guide-assets/horde/rainbowbg.png'}[q])+')';const img=picture(c.icon);img.style.width=c.sizing.width+'px';img.style.height=c.sizing.height+'px';img.style.left='calc(50% + '+c.sizing.x+'px)';img.style.top='calc(50% + '+c.sizing.y+'px)';art.append(img);row.append(art,copy);return row;
+    const art=node('span',undefined,'horde-chip-art');art.style.backgroundImage='url('+({Blue:'/guide-assets/horde/bluebg.png',Gold:'/guide-assets/horde/goldbg.png',Rainbow:'/guide-assets/horde/rainbowbg.png'}[q])+')';const img=picture(c.icon);const sizing=c.sizing??{width:40,height:40,x:0,y:0};img.style.width=sizing.width+'px';img.style.height=sizing.height+'px';img.style.left='calc(50% + '+sizing.x+'px)';img.style.top='calc(50% + '+sizing.y+'px)';art.append(img);row.append(art,copy);return row;
   }));if(!chips.length)$('chip-list').append(node('p','No chips match. Try another name or clear a filter.'));
 }
 let total=0;
@@ -52,7 +52,7 @@ for(const id of ['chip-search','chip-quality','chip-category','chip-wave'])$(id)
 $('budget-wave').addEventListener('input',renderBudget);
 $('wave-difficulty').addEventListener('change',renderWaves);
 for(const id of ['level-from','level-to'])$(id).addEventListener('change',renderLevel);
-renderWaves();renderChips();renderLevel();
+renderWaves();renderLevel();renderChips();
 
 try{
   const roster=await fetch('/tatari-data/roster.json?v=global0521').then(r=>{if(!r.ok)throw Error('Tatari data unavailable');return r.json();});
