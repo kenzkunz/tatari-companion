@@ -4,6 +4,9 @@ export function chipTargets(chip,draft,known,player){
  const elements={Water:2,Fire:3,Grass:4,Rock:6,Lightning:5};const element=chip.name.match(/^(Water|Fire|Grass|Rock|Lightning) Form/);
  let targets=[],condition='';
  if(element)targets=team.filter(m=>m.entry.element===elements[element[1]]);
+ else if(chip.id>=50&&chip.id<=67){const role=['Guardian','Tank','DPS','Healer','Support','Specialist'][(chip.id-50)%6];targets=team.filter(m=>m.entry.role===role)}
+ else if(chip.id===68)targets=team.filter(m=>m.level<=5);
+ else if(chip.id===69){targets=team;condition='When knocked down, with enough Energizers to revive'}
  else if([26,28,37].includes(chip.id)){targets=team;if(chip.id===28)condition='When attacking bosses';if(chip.id===37)condition='When countered by the enemy element'}
  else if([27,30].includes(chip.id))targets=team.filter(m=>Math.floor(m.index/cols)<2);
  else if(chip.id===31)targets=team.filter(m=>Math.floor(m.index/cols)>=4);

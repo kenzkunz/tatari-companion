@@ -6,7 +6,7 @@ const text=v=>typeof v==='string'?v:v?.en||v?.zh||'';
 const node=(tag,value,className)=>{const n=document.createElement(tag);if(value!==undefined)n.textContent=value;if(className)n.className=className;return n;};
 const picture=(src,alt='')=>{const n=node('img');n.src=src;n.alt=alt;n.loading='lazy';return n;};
 const energyValue=value=>{const n=node('span',undefined,'horde-energy-value');n.append(picture('/guide-assets/horde/energizer.png','Energizers'),node('span',fmt(value)));return n;};
-const data=await fetch('/guide-data/horde.json?v=horde165921').then(r=>{if(!r.ok)throw Error('Horde data unavailable');return r.json();});
+const data=await fetch('/guide-data/horde.json?v=horde179122').then(r=>{if(!r.ok)throw Error('Horde data unavailable');return r.json();});
 const selectedWaves=()=>data.waves.filter(w=>w.difficulty===Number($('wave-difficulty').value));
 const enemyTag=e=>{const n=node('span',undefined,'horde-enemy-tag');n.append(picture(e.icon),node('span',e.name+(e.count>1?' ×'+e.count:'')));return n;};
 
@@ -17,7 +17,7 @@ function renderWaves(){
     const d=node('details'),summary=node('summary'),boss=node('span',undefined,'horde-wave-bosses'),label=node('span','Wave '+w.wave,'horde-wave-label'),amount=node('span','+'+fmt(w.income),'horde-wave-income');
     amount.append(picture('/guide-assets/horde/energizer.png','Energizers'));boss.append(...w.enemies.filter(e=>e.boss).map(enemyTag));summary.append(label,boss,amount);
     const detail=node('div',undefined,'horde-wave-detail'),roster=node('div',undefined,'horde-wave-enemies');
-    detail.append(node('p',w.normal+' normal + '+w.bosses+' boss enemies · ATK ×'+w.atk+' / HP ×'+w.hp+' / DEF ×'+w.defense+(w.chip?' · Chip selection':'')));
+    detail.append(node('p',w.normal+' normal + '+w.bosses+' boss enemies · ATK ×'+w.atk+' / Regular HP ×'+w.hp+' / Boss HP ×'+w.bossHp+' / DEF ×'+w.defense+(w.chip?' · Chip selection':'')));
     roster.append(...w.enemies.map(enemyTag));detail.append(roster);d.append(summary,detail);return d;
   }));renderBudget();
 }
@@ -55,7 +55,7 @@ for(const id of ['level-from','level-to'])$(id).addEventListener('change',render
 renderWaves();renderChips();renderLevel();
 
 try{
-  const roster=await fetch('/tatari-data/roster.json?v=spa-trials51').then(r=>{if(!r.ok)throw Error('Tatari data unavailable');return r.json();});
+  const roster=await fetch('/tatari-data/roster.json?v=global0521').then(r=>{if(!r.ok)throw Error('Tatari data unavailable');return r.json();});
   const units=roster.units.filter(u=>u.forms.some(f=>f.skills.horde?.length)).sort((a,b)=>text(a.forms[0].name).localeCompare(text(b.forms[0].name)));
   $('skill-tatari').replaceChildren(...units.map(u=>{const o=node('option',text(u.forms[0].name));o.value=u.id;return o;}));$('skill-tatari').value=units.some(u=>u.id===11)?'11':String(units[0].id);
   const trigger=$('skill-picker'),options=$('skill-options');
