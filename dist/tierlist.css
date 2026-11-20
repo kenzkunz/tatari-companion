@@ -41,8 +41,8 @@
 #rank-board .selected-tatari-wrap{flex:0 0 80px;width:80px;height:80px}
 #rank-board .tatari-remove{top:2px;right:2px}
 
-.tier-maker .tatari-tile.chip-tile,#rank-board .rank-items .tatari-tile.chip-tile{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:3px;width:80px;height:94px;min-height:94px;padding:3px 2px;flex:0 0 80px}
+.tier-maker .tatari-tile.chip-tile,#rank-board .rank-items .tatari-tile.chip-tile{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:3px;width:80px;height:78px;min-height:78px;padding:3px 2px;flex:0 0 80px}
 .tierlist-chip-art{position:relative;display:block;flex:none;width:56px;height:56px;background-size:100% 100%;background-repeat:no-repeat;overflow:hidden}
 .tier-maker .chip-tile .tierlist-chip-art img,#rank-board .rank-items .chip-tile .tierlist-chip-art img{position:absolute;max-width:none;max-height:none;transform:translate(-50%,-50%);object-fit:contain}
-.tierlist-chip-name{display:block;max-width:76px;font:600 10px/1.25 Poppins,sans-serif;text-align:center;white-space:normal;overflow-wrap:anywhere;color:var(--board-ink,var(--ink))}
-#rank-board .selected-tatari-wrap:has(.chip-tile){height:94px}
+.tier-maker .chip-tile .tierlist-chip-name{display:block;max-width:76px;font:600 10px/1.25 Poppins,sans-serif;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--board-ink,var(--ink))}
+#rank-board .selected-tatari-wrap:has(.chip-tile){height:78px}
