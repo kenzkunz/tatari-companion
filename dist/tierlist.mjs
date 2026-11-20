@@ -19,6 +19,7 @@ function tile(id){const entry=entryFor(units,id,state.tier),f=entry.form,n=el('b
 }else n.append(img);n.setAttribute('aria-label',name+' Â· tier '+f.evolution+' Â· '+entry.appearance);n.title=name+' Â· tier '+f.evolution+' Â· '+entry.appearance;n.setAttribute('aria-pressed',String(selected===id));n.onclick=e=>{e.stopPropagation();selected=selected===id?null:id;render();status(selected===null?'Selection cleared.':name+' selected. Choose a ranking row or return to pool.')};n.ondragstart=e=>{dragged=id;e.dataTransfer.setData('text/plain',String(id));e.dataTransfer.effectAllowed='move'};n.ondragend=()=>{dragged=null;document.querySelectorAll('.drop-over').forEach(n=>n.classList.remove('drop-over'))};return n}
 function place(id,index){if(!entryFor(units,id,state.tier))return;if(state.view==='chart'){delete state.chart.positions[id]}else moveUnit(state,id,index);selected=null;persist();render()}
 function syncItemControls(){
+ document.querySelector('.pool-heading h2').textContent=({tatari:'Unranked Tatari',zobo:'Unranked Zobo',chips:'Unranked Chips'})[state.itemKind];
  document.querySelectorAll('[data-item-kind]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.itemKind===state.itemKind)));
  for(const selector of ['.appearance-selection','.tier-selection','#element-filter','.image-style-selection'])document.querySelector(selector)?.toggleAttribute('hidden',state.itemKind!=='tatari');
  document.getElementById('zobo-filters').hidden=state.itemKind!=='zobo';
