@@ -1,7 +1,7 @@
 import {libraryPager} from './library-pagination.mjs';
 import {confirmDialog} from './site-dialogs.mjs?v=1';
 import {listTierlists,manageTierlist,likeTierlist} from './tierlist-api.mjs?v=20261015-1';
-import {cleanList} from './tierlist-model.mjs?v=categories1';import {drawTierlist} from './tierlist-render.mjs?v=categories1';
+import {cleanList} from './tierlist-model.mjs?v=chip-art1';import {drawTierlist} from './tierlist-render.mjs?v=chip-art1';
 const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n};let mine=new URL(location.href).searchParams.get('view')==='mine',records=[],units=[],generation=0;
 const status=s=>{$('library-status').textContent=s;$('library-status').dataset.visible=String(!/^Loading tierlists|^\d+ tierlists\.$/.test(s))};
 const observer=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){observer.unobserve(e.target);e.target.render?.()}},{rootMargin:'100px'});

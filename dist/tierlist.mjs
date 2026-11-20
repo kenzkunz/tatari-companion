@@ -1,13 +1,22 @@
 import {confirmDialog,notify} from './site-dialogs.mjs?v=1';
 import {renderChart} from './tierlist-chart.mjs?v=20261015-1';
-import {tierlistItems,defaults,cleanList,moveUnit,entryFor,artworkFor,appearances,encodeList,decodeList} from './tierlist-model.mjs?v=categories1';
-import {drawTierlist} from './tierlist-render.mjs?v=categories1';
+import {tierlistItems,defaults,cleanList,moveUnit,entryFor,artworkFor,appearances,encodeList,decodeList} from './tierlist-model.mjs?v=chip-art1';
+import {drawTierlist} from './tierlist-render.mjs?v=chip-art1';
 import {saveTierlist,readTierlist} from './tierlist-api.mjs?v=20261015-1';
 import {searchMatches} from './tatari-model.mjs?v=public-data2';
 const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n},key='tatari-tierlist-v1';let state=defaults(),units=[],elementFilter=0,selected=null,dragged=null,recordId=null,revision=null;
 const status=s=>{$('maker-status').textContent=s;$('maker-status').dataset.visible=String(s!=='Saved in this browser.'&&s!=='Loading Tatariâ€¦');if($('tierlist-share').open)$('share-status').textContent=s};
 function persist(){try{localStorage.setItem(key,JSON.stringify(state));status('Saved in this browser.')}catch{status('Browser storage unavailable. Use a share link to keep your list.')}}
-function tile(id){const entry=entryFor(units,id,state.tier),f=entry.form,n=el('button',undefined,'tatari-tile'),img=el('img');n.type='button';n.draggable=true;n.dataset.id=id;const name=typeof f.name==='string'?f.name:f.name.en||f.name.zh;img.src=new URL('./'+artworkFor(entry,state.imageStyle),import.meta.url);img.alt='';img.loading='lazy';img.draggable=false;n.append(img);n.setAttribute('aria-label',name+' Â· tier '+f.evolution+' Â· '+entry.appearance);n.title=name+' Â· tier '+f.evolution+' Â· '+entry.appearance;n.setAttribute('aria-pressed',String(selected===id));n.onclick=e=>{e.stopPropagation();selected=selected===id?null:id;render();status(selected===null?'Selection cleared.':name+' selected. Choose a ranking row or return to pool.')};n.ondragstart=e=>{dragged=id;e.dataTransfer.setData('text/plain',String(id));e.dataTransfer.effectAllowed='move'};n.ondragend=()=>{dragged=null;document.querySelectorAll('.drop-over').forEach(n=>n.classList.remove('drop-over'))};return n}
+function tile(id){const entry=entryFor(units,id,state.tier),f=entry.form,n=el('button',undefined,'tatari-tile'),img=el('img');n.type='button';n.draggable=true;n.dataset.id=id;const name=typeof f.name==='string'?f.name:f.name.en||f.name.zh;img.src=new URL('./'+artworkFor(entry,state.imageStyle),import.meta.url);img.alt='';img.loading='lazy';img.draggable=false;if(entry.item?.kind==='chips'){
+ n.classList.add('chip-tile');
+ const art=el('span',undefined,'tierlist-chip-art'),label=el('span',name,'tierlist-chip-name');
+ const quality=({3:'blue',5:'gold',7:'rainbow'})[entry.item.quality];
+ art.style.backgroundImage='url('+new URL('./guide-assets/horde/'+quality+'bg.png',import.meta.url).href+')';
+ const sizing=entry.item.sizing??{width:40,height:40,x:0,y:0};
+ img.style.width=sizing.width+'px';img.style.height=sizing.height+'px';
+ img.style.left='calc(50% + '+sizing.x+'px)';img.style.top='calc(50% + '+sizing.y+'px)';
+ art.append(img);n.append(art,label);
+}else n.append(img);n.setAttribute('aria-label',name+' Â· tier '+f.evolution+' Â· '+entry.appearance);n.title=name+' Â· tier '+f.evolution+' Â· '+entry.appearance;n.setAttribute('aria-pressed',String(selected===id));n.onclick=e=>{e.stopPropagation();selected=selected===id?null:id;render();status(selected===null?'Selection cleared.':name+' selected. Choose a ranking row or return to pool.')};n.ondragstart=e=>{dragged=id;e.dataTransfer.setData('text/plain',String(id));e.dataTransfer.effectAllowed='move'};n.ondragend=()=>{dragged=null;document.querySelectorAll('.drop-over').forEach(n=>n.classList.remove('drop-over'))};return n}
 function place(id,index){if(!entryFor(units,id,state.tier))return;if(state.view==='chart'){delete state.chart.positions[id]}else moveUnit(state,id,index);selected=null;persist();render()}
 function syncItemControls(){
  document.querySelectorAll('[data-item-kind]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.itemKind===state.itemKind)));

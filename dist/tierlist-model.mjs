@@ -1,4 +1,4 @@
-import {tierlistItems} from './tierlist-items.mjs?v=categories1';
+import {tierlistItems} from './tierlist-items.mjs?v=chip-art1';
 export {tierlistItems};
 import {appearances} from './tierlist-appearances.mjs?v=beaver1';
 export {appearances};
