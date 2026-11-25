@@ -9,13 +9,6 @@ for (const view of document.querySelectorAll('[data-odds-view]')) {
   update();
 }
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-for (const img of document.querySelectorAll('#sharpup .info-asset-grid img')) {
-  const animated = img.getAttribute('src');
-  const still = animated.replace('-idle.webp', '.png');
-  const update = () => { img.src = reducedMotion.matches ? still : animated; };
-  reducedMotion.addEventListener('change', update);
-  update();
-}
 for (const img of document.querySelectorAll('img[data-still-src]')) {
   const animated = img.getAttribute('src');
   const toggle = img.closest('figure').querySelector('[data-animation-toggle]');
