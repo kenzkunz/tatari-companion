@@ -14,3 +14,19 @@
 @media(max-width:800px){.public-info-page .guide-shell{padding:0 14px}.public-info-page .guide-opening{padding:16px 18px}.public-info-page .guide-content{padding:0 18px 22px}.public-info-page .guide-banner{margin:18px auto 14px}.info-asset-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 .public-info-page .guide-table .balance-buff td:last-child{background:#e4f2e4;color:#214d2b}.public-info-page .guide-table .balance-nerf td:last-child{background:#f9e4e1;color:#702d29}.public-info-page .balance-label{display:inline-block;font-weight:600;margin-left:6px;font-size:11px}
+
+/* Skill cards: the Tatari database card style, for information pages that describe skills. */
+.public-info-page .info-skill-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}.public-info-page .info-skill-list[data-card-count="3"]{grid-template-columns:repeat(3,minmax(0,1fr))}.public-info-page .info-skill-list[data-card-count="1"]{grid-template-columns:minmax(0,1fr)}
+.public-info-page .info-skill-card{display:flex;flex-direction:column;min-width:0;box-sizing:border-box;border:1px solid #d8c49b;border-radius:14px;background:#fffef1;padding:18px;box-shadow:0 4px 0 #00000008;color:#282625}
+.public-info-page .info-skill-card .skill-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.public-info-page .guide-content .info-skill-card h3{font:600 16px/1.4 var(--info-body);margin:0;color:#232838}.public-info-page .info-skill-card .horde-skill-level{font:600 14px/1.4 var(--info-body);white-space:nowrap;color:#232838}
+.public-info-page .guide-content .info-skill-card .skill-description{font:13px/1.5 var(--info-body);margin:14px 0 16px;max-width:none}.public-info-page .info-skill-card .skill-form-name{display:block;margin-bottom:6px;font-size:12px}
+.public-info-page .info-skill-card .horde-detail-rows{display:flex;flex-direction:column;gap:6px}.public-info-page .info-skill-card .horde-detail-row{background:#fff6df;border-radius:8px;padding:9px 12px;color:#232838;font:12px/1.4 var(--info-body)}.public-info-page .info-skill-card .horde-detail-row strong{display:block;font-weight:600}.public-info-page .info-skill-card .horde-detail-row span{display:block;margin-top:3px}.public-info-page .info-skill-card .horde-detail-row.skill-effect-slot{background:#ffdf71}
+@media(max-width:800px){.public-info-page .info-skill-list[data-card-count="3"]{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.public-info-page .info-skill-list,.public-info-page .info-skill-list[data-card-count="3"]{grid-template-columns:minmax(0,1fr)}}
+
+.public-info-page .info-skill-list,.public-info-page .info-skill-list[data-card-count]{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:calc((100% - 24px)/3);grid-template-rows:auto auto auto;gap:0 12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;padding-bottom:8px;touch-action:pan-x}
+.public-info-page .info-skill-card{display:grid;grid-template-rows:subgrid;grid-row:span 3;scroll-snap-align:start}
+.public-info-page .info-skill-list[data-card-count="4"]{grid-auto-columns:calc((100% - 36px)/4)}
+.public-info-page .info-skill-list[data-card-count="2"]{grid-auto-columns:calc((100% - 12px)/2)}
+.public-info-page .info-skill-list[data-card-count="1"]{grid-auto-columns:100%}
+@media(max-width:800px){.public-info-page .info-skill-list,.public-info-page .info-skill-list[data-card-count]{grid-auto-columns:calc((100% - 12px)/2)}}
+@media(max-width:600px){.public-info-page .info-skill-list,.public-info-page .info-skill-list[data-card-count]{grid-auto-columns:100%}}

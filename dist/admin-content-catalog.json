@@ -2896,5 +2896,293 @@
     "order": 33,
     "section": "milestones",
     "sectionTitle": "Personal milestone rewards"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-intro",
+    "label": "Introduction",
+    "default": "A quick look at the next update (version 0.53.1), as it appears in the Pioneer test build checked on 25 November 2026.",
+    "order": 1,
+    "section": "intro",
+    "sectionTitle": "Introduction"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-status-title",
+    "label": "Heading · Read this first",
+    "default": "Read this first",
+    "order": 2,
+    "section": "status",
+    "sectionTitle": "Read this first"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "note-status-scope",
+    "label": "Disclaimer · Expected release: 2 December. This is a preview, so details can still change before release. Ot",
+    "default": "Expected release: 2 December. This is a preview, so details can still change before release. Other updates are already covered by Bacon in the Pioneer thread on the official Discord.",
+    "order": 3,
+    "section": "status",
+    "sectionTitle": "Read this first"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "list-status-summary-1",
+    "label": "List item · New Tatari: the Sharpup line (Sharpup, Scrawurst, Sketchund, Scribbadger), a Rock DPS that figh",
+    "default": "New Tatari: the Sharpup line (Sharpup, Scrawurst, Sketchund, Scribbadger), a Rock DPS that fights with pencils.",
+    "order": 4,
+    "section": "status",
+    "sectionTitle": "Read this first"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "list-status-summary-2",
+    "label": "List item · New mode: Whirling Wallop, a merge-and-defend mode with 11 named stages and element bonuses.",
+    "default": "New mode: Whirling Wallop, a merge-and-defend mode with 11 named stages and element bonuses.",
+    "order": 5,
+    "section": "status",
+    "sectionTitle": "Read this first"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "list-status-summary-3",
+    "label": "List item · City of Gold pass with a Maple Mansion Pinball Machine skin.",
+    "default": "City of Gold pass with a Maple Mansion Pinball Machine skin.",
+    "order": 6,
+    "section": "status",
+    "sectionTitle": "Read this first"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "list-status-summary-4",
+    "label": "List item · Horde Invasion wording fixes and Zobo adjustments, plus Artifact Adventure invites.",
+    "default": "Horde Invasion wording fixes and Zobo adjustments, plus Artifact Adventure invites.",
+    "order": 7,
+    "section": "status",
+    "sectionTitle": "Read this first"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-sharpup-title",
+    "label": "Heading · New Tatari: Sharpup line",
+    "default": "New Tatari: Sharpup line",
+    "order": 8,
+    "section": "sharpup",
+    "sectionTitle": "New Tatari: Sharpup line"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-sharpup-skills-title",
+    "label": "Text · Skills",
+    "default": "Skills",
+    "order": 9,
+    "section": "sharpup",
+    "sectionTitle": "New Tatari: Sharpup line"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "skill-sharpup-skills-1",
+    "label": "Skill card · Swift Lead",
+    "default": "Launches a piercing, close-range pencil. The pencil’s damage decreases with distance. Sometimes launches an eraser that dispels enemy buffs.",
+    "order": 10,
+    "section": "sharpup",
+    "sectionTitle": "New Tatari: Sharpup line"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "skill-sharpup-skills-2",
+    "label": "Skill card · Sharp Point",
+    "default": "Launches a piercing pencil. The pencil’s damage decreases with distance. Sometimes launches an eraser that dispels enemy buffs.",
+    "order": 11,
+    "section": "sharpup",
+    "sectionTitle": "New Tatari: Sharpup line"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "skill-sharpup-skills-3",
+    "label": "Skill card · Grand Stroke",
+    "default": "Launches a piercing pencil that inflicts stackable Scribble: DEF Down. The pencil’s damage decreases with distance. Sometimes launches an eraser that dispels enemy buffs.",
+    "order": 12,
+    "section": "sharpup",
+    "sectionTitle": "New Tatari: Sharpup line"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "skill-sharpup-skills-4",
+    "label": "Skill card · Swift Lead",
+    "default": "Launches a piercing pencil that inflicts stackable Scribble: DEF Down. The pencil’s damage decreases with distance. Sometimes launches an eraser that dispels enemy buffs. Scribbadger carries Aura: Rock whenever on the field.",
+    "order": 13,
+    "section": "sharpup",
+    "sectionTitle": "New Tatari: Sharpup line"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "note-sharpup-range",
+    "label": "Info box · Sharpup’s pencil reaches 4 tiles; the later tiers reach 6. Two tiers share the English skill na",
+    "default": "Sharpup’s pencil reaches 4 tiles; the later tiers reach 6. Two tiers share the English skill name Swift Lead in this build, which may still be corrected.",
+    "order": 14,
+    "section": "sharpup",
+    "sectionTitle": "New Tatari: Sharpup line"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-sharpup-horde-title",
+    "label": "Text · Horde skills",
+    "default": "Horde skills",
+    "order": 15,
+    "section": "sharpup",
+    "sectionTitle": "New Tatari: Sharpup line"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "skill-sharpup-horde-1",
+    "label": "Skill card · Extra Sharp",
+    "default": "Periodically summons a pencil sharpener in front. When projectiles pass through, the sharpener launches extra small pencils to deal damage. When this Tatari’s pencils pass through, they fly farther and deal greater damage.",
+    "order": 16,
+    "section": "sharpup",
+    "sectionTitle": "New Tatari: Sharpup line"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "skill-sharpup-horde-2",
+    "label": "Skill card · Shaving Grace",
+    "default": "Periodically scatters shavings to the left and right of a pencil sharpener. Passing enemies take damage and are inflicted with Slow. If no pencil sharpener exists on the field, summons one first.",
+    "order": 17,
+    "section": "sharpup",
+    "sectionTitle": "New Tatari: Sharpup line"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "skill-sharpup-horde-3",
+    "label": "Skill card · Off the Page",
+    "default": "Sketches the ally 1 tile ahead and summons a Tatari Copy that has all the ally’s skills. The Tatari Copy will continuously lose HP.",
+    "order": 18,
+    "section": "sharpup",
+    "sectionTitle": "New Tatari: Sharpup line"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-whirling-wallop-title",
+    "label": "Heading · New mode: Whirling Wallop",
+    "default": "New mode: Whirling Wallop",
+    "order": 19,
+    "section": "whirling-wallop",
+    "sectionTitle": "New mode: Whirling Wallop"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-whirling-wallop-how",
+    "label": "Text · Drag and merge Tatari to defend the camp van, using contraptions on each map such as oil barrel",
+    "default": "Drag and merge Tatari to defend the camp van, using contraptions on each map such as oil barrels you can smash open. Your Tatari’s weapons spin around them automatically and hit any Zobo that gets close. Stages must be cleared in order, can be replayed, and each stage’s reward can be claimed once.",
+    "order": 20,
+    "section": "whirling-wallop",
+    "sectionTitle": "New mode: Whirling Wallop"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-whirling-wallop-heroes",
+    "label": "Text · Five families take part: Frostnip, Blueflick, Manteeny, Punchimp and Zapuni. Merging raises the",
+    "default": "Five families take part: Frostnip, Blueflick, Manteeny, Punchimp and Zapuni. Merging raises the tier: T1–T2 swing one blade, T3–T4 swing two, and damage per hit goes from 2 (T1) to 4 (T2–T3) to 6 (T4).",
+    "order": 21,
+    "section": "whirling-wallop",
+    "sectionTitle": "New mode: Whirling Wallop"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "note-whirling-wallop-unlock",
+    "label": "Info box · The stages unlock one by one as you progress through the main story. The listed reward is the s",
+    "default": "The stages unlock one by one as you progress through the main story. The listed reward is the stage reward in this build.",
+    "order": 22,
+    "section": "whirling-wallop",
+    "sectionTitle": "New mode: Whirling Wallop"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-pass-title",
+    "label": "Heading · City of Gold pass and Maple Mansion",
+    "default": "City of Gold pass and Maple Mansion",
+    "order": 23,
+    "section": "pass",
+    "sectionTitle": "City of Gold pass and Maple Mansion"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-pass-about",
+    "label": "Text · A new pass called City of Gold (premium version: Sandy Pass). It runs for four weeks with a fre",
+    "default": "A new pass called City of Gold (premium version: Sandy Pass). It runs for four weeks with a fresh set of weekly quests each week and has 40 levels, needing 56,880 keys in total to reach level 40. After level 40, every 50 more keys gives 10 Pinballs and 1,000 Candy.",
+    "order": 24,
+    "section": "pass",
+    "sectionTitle": "City of Gold pass and Maple Mansion"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-pass-other",
+    "label": "Text · Other levels mostly hand out Pinballs, Candy, Tatari Capsules, Tatari Scan Capsules, Bento and ",
+    "default": "Other levels mostly hand out Pinballs, Candy, Tatari Capsules, Tatari Scan Capsules, Bento and Tatari Wishboxes. Buying the premium pass mid-event unlocks the premium rewards for every level you have already reached.",
+    "order": 25,
+    "section": "pass",
+    "sectionTitle": "City of Gold pass and Maple Mansion"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-horde-title",
+    "label": "Heading · Horde Invasion adjustments",
+    "default": "Horde Invasion adjustments",
+    "order": 26,
+    "section": "horde",
+    "sectionTitle": "Horde Invasion adjustments"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-horde-text",
+    "label": "Text · Many chip and skill descriptions are reworded. Most class and position chips now say “HP” inste",
+    "default": "Many chip and skill descriptions are reworded. Most class and position chips now say “HP” instead of “Max HP”, and the level-up chip now states that only one Tatari is upgraded. Banana Bash no longer says “periodically”.",
+    "order": 27,
+    "section": "horde",
+    "sectionTitle": "Horde Invasion adjustments"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "note-horde-perf",
+    "label": "Info box · The game can now switch itself to Low Performance Mode when the connection is unstable or the f",
+    "default": "The game can now switch itself to Low Performance Mode when the connection is unstable or the frame rate drops.",
+    "order": 28,
+    "section": "horde",
+    "sectionTitle": "Horde Invasion adjustments"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "text-adventure-title",
+    "label": "Heading · Artifact Adventure",
+    "default": "Artifact Adventure",
+    "order": 29,
+    "section": "adventure",
+    "sectionTitle": "Artifact Adventure"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "list-adventure-text-1",
+    "label": "List item · New Adventure Invite: you can notify offline friends that you’re playing Artifact Adventure. Th",
+    "default": "New Adventure Invite: you can notify offline friends that you’re playing Artifact Adventure. They need notifications turned on to receive it.",
+    "order": 30,
+    "section": "adventure",
+    "sectionTitle": "Artifact Adventure"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "list-adventure-text-2",
+    "label": "List item · Visual effects are reworked for the deeper layers.",
+    "default": "Visual effects are reworked for the deeper layers.",
+    "order": 31,
+    "section": "adventure",
+    "sectionTitle": "Artifact Adventure"
+  },
+  {
+    "page": "information/preview.html",
+    "block": "list-adventure-text-3",
+    "label": "List item · Rule of Threes and similar buffs now also apply to artifacts dropped by Zobos.",
+    "default": "Rule of Threes and similar buffs now also apply to artifacts dropped by Zobos.",
+    "order": 32,
+    "section": "adventure",
+    "sectionTitle": "Artifact Adventure"
   }
 ]
