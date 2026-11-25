@@ -95,3 +95,11 @@ body[data-guide="pioneerpreview"] .info-skill-card .horde-detail-row:not(.skill-
 body[data-guide="pioneerpreview"] .info-skill-card .horde-detail-row:not(.skill-effect-slot) strong{font-weight:400}
 @media(max-width:1000px){body[data-guide="pioneerpreview"] .info-skill-list[data-card-count="4"]{grid-auto-columns:calc((100% - 12px)/2)}}
 @media(max-width:600px){body[data-guide="pioneerpreview"] .info-skill-list[data-card-count]{grid-auto-columns:100%}}
+body[data-guide="pioneerpreview"] #sharpup .info-asset-grid img{width:100px;max-width:100%;height:100px;object-fit:contain;aspect-ratio:1}
+body[data-guide="pioneerpreview"] .guide-table[data-info-table$="-final"]{min-width:760px}
+body[data-guide="pioneerpreview"] .guide-table[data-info-table$="-final"] .info-icon-value{font-size:11px}
+body[data-guide="pioneerpreview"] .guide-table[data-info-table$="-final"] .info-icon-value img{width:32px;height:32px}
+body[data-guide="pioneerpreview"] #whirling-wallop .info-illustration{max-width:704px}
+body[data-guide="pioneerpreview"] #whirling-wallop .guide-table[data-info-table$="-stages"]{min-width:630px}
+body[data-guide="pioneerpreview"] .guide-table[data-info-table$="-final"] tbody tr:nth-child(4n+1) td{border-top:2px solid #c4a55d}
+body[data-guide="pioneerpreview"] .info-illustration [data-animation-toggle]{margin-top:12px;cursor:pointer}
