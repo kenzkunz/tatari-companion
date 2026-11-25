@@ -30,3 +30,15 @@
 .public-info-page .info-skill-list[data-card-count="1"]{grid-auto-columns:100%}
 @media(max-width:800px){.public-info-page .info-skill-list,.public-info-page .info-skill-list[data-card-count]{grid-auto-columns:calc((100% - 12px)/2)}}
 @media(max-width:600px){.public-info-page .info-skill-list,.public-info-page .info-skill-list[data-card-count]{grid-auto-columns:100%}}
+
+/* Keep evolution variants in matching rows, with readable horizontally scrolling skill cards. */
+.public-info-page .info-asset-grid[data-columns="4"]{grid-template-columns:repeat(4,minmax(0,1fr))}
+.public-info-page .info-asset-grid[data-columns="4"] figure{padding:8px 4px}
+.public-info-page .info-asset-grid[data-columns="4"] img{width:140px;height:auto;aspect-ratio:1}
+.public-info-page .info-skill-list[data-card-count="4"]{grid-auto-columns:max(240px,calc((100% - 36px)/4))}
+.public-info-page .info-skill-list[data-card-count="3"]{grid-auto-columns:max(240px,calc((100% - 24px)/3))}
+.public-info-page .guide-table td{overflow-wrap:break-word}
+@media(max-width:600px){.public-info-page .info-asset-grid[data-columns="4"] figcaption{font-size:10px;line-height:1.4}.public-info-page .info-skill-list[data-card-count]{grid-auto-columns:100%}}
+
+.public-info-page .info-skill-list[data-card-count]{grid-template-rows:none;align-items:start}
+.public-info-page .info-skill-card{display:flex;grid-template-rows:none;grid-row:auto}
