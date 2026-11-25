@@ -3189,7 +3189,7 @@
     "page": "information/pioneerpreview.html",
     "block": "text-intro",
     "label": "Introduction",
-    "default": "A first look at the next update (version 0.53.1), as it appears in the Pioneer test build checked on 25 November 2026. Pioneer content can still change, move or be dropped before it reaches the regular servers.",
+    "default": "Sharpup, Whirling Wallop, Maple Mansion and the other changes taking shape in version 0.53.1.",
     "order": 1,
     "section": "intro",
     "sectionTitle": "Introduction"
@@ -3197,74 +3197,74 @@
   {
     "page": "information/pioneerpreview.html",
     "block": "text-status-title",
-    "label": "Heading · Read this first",
-    "default": "Read this first",
+    "label": "Heading · What’s coming",
+    "default": "What’s coming",
     "order": 2,
     "section": "status",
-    "sectionTitle": "Read this first"
+    "sectionTitle": "What’s coming"
   },
   {
     "page": "information/pioneerpreview.html",
-    "block": "note-status-scope",
-    "label": "Disclaimer · Preview, not confirmed in-game. Everything below comes from the Pioneer build. Values show how ",
-    "default": "Preview, not confirmed in-game. Everything below comes from the Pioneer build. Values show how things are set up right now, not how they will feel in play, and release dates are unknown unless the official notes give one. Where the official update notes already describe a change, that is mentioned.",
+    "block": "text-status-scope",
+    "label": "Text · This preview covers the Pioneer build checked on 25 November 2026. Features and values may chan",
+    "default": "This preview covers the Pioneer build checked on 25 November 2026. Features and values may change before the regular-server release; dates are not confirmed unless announced.",
     "order": 3,
     "section": "status",
-    "sectionTitle": "Read this first"
+    "sectionTitle": "What’s coming"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "list-status-summary-1",
-    "label": "List item · New Tatari: the Sharpup line (Sharpup, Scrawurst, Sketchund, Scribbadger), a Rock DPS that figh",
-    "default": "New Tatari: the Sharpup line (Sharpup, Scrawurst, Sketchund, Scribbadger), a Rock DPS that fights with pencils.",
+    "label": "List item · Sharpup: a Rock DPS line with piercing pencils, erasers and an ally-copy Horde skill.",
+    "default": "Sharpup: a Rock DPS line with piercing pencils, erasers and an ally-copy Horde skill.",
     "order": 4,
     "section": "status",
-    "sectionTitle": "Read this first"
+    "sectionTitle": "What’s coming"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "list-status-summary-2",
-    "label": "List item · New mode: Whirling Wallop, a merge-and-defend mode with 11 named stages and element bonuses.",
-    "default": "New mode: Whirling Wallop, a merge-and-defend mode with 11 named stages and element bonuses.",
+    "label": "List item · Whirling Wallop: merge Tatari and defend the camp van with spinning weapons.",
+    "default": "Whirling Wallop: merge Tatari and defend the camp van with spinning weapons.",
     "order": 5,
     "section": "status",
-    "sectionTitle": "Read this first"
+    "sectionTitle": "What’s coming"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "list-status-summary-3",
-    "label": "List item · Island Goldrush: more Super Drinks from daily team ranks, bigger final rewards in leagues 2–4 a",
-    "default": "Island Goldrush: more Super Drinks from daily team ranks, bigger final rewards in leagues 2–4 and a new per-Mirage exhaustion.",
+    "label": "List item · City of Gold: a new pass with permanent Maple Pinball cosmetics.",
+    "default": "City of Gold: a new pass with permanent Maple Pinball cosmetics.",
     "order": 6,
     "section": "status",
-    "sectionTitle": "Read this first"
+    "sectionTitle": "What’s coming"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "list-status-summary-4",
-    "label": "List item · City of Gold pass with a Maple Mansion Pinball Machine skin, camp Blueprints, six new camp enco",
-    "default": "City of Gold pass with a Maple Mansion Pinball Machine skin, camp Blueprints, six new camp encounters and 51 new collectibles.",
+    "label": "List item · More changes: Goldrush rewards, detailed Pinball odds, camp Blueprints and Horde adjustments.",
+    "default": "More changes: Goldrush rewards, detailed Pinball odds, camp Blueprints and Horde adjustments.",
     "order": 7,
     "section": "status",
-    "sectionTitle": "Read this first"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "list-status-summary-5",
-    "label": "List item · Horde Invasion: clearer chip and skill wording, plus several Zobo skill adjustments.",
-    "default": "Horde Invasion: clearer chip and skill wording, plus several Zobo skill adjustments.",
-    "order": 8,
-    "section": "status",
-    "sectionTitle": "Read this first"
+    "sectionTitle": "What’s coming"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "text-sharpup-title",
-    "label": "Heading · New Tatari: Sharpup line",
-    "default": "New Tatari: Sharpup line",
+    "label": "Heading · Sharpup & evolutions",
+    "default": "Sharpup & evolutions",
+    "order": 8,
+    "section": "sharpup",
+    "sectionTitle": "Sharpup & evolutions"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-sharpup-forms-heading",
+    "label": "Subheading · Normal & Glitter forms",
+    "default": "Normal & Glitter forms",
     "order": 9,
     "section": "sharpup",
-    "sectionTitle": "New Tatari: Sharpup line"
+    "sectionTitle": "Sharpup & evolutions"
   },
   {
     "page": "information/pioneerpreview.html",
@@ -3273,365 +3273,419 @@
     "default": "Sharpup launches piercing pencils for 160% ATK, with damage decreasing as they travel. Every fourth attack uses an eraser for 180% ATK and dispels enemy buffs. Normal targeting range is 4 tiles at T1 and 6 tiles at T2–T4; the T1 pencil itself can travel 4.2 tiles.",
     "order": 10,
     "section": "sharpup",
-    "sectionTitle": "New Tatari: Sharpup line"
+    "sectionTitle": "Sharpup & evolutions"
   },
   {
     "page": "information/pioneerpreview.html",
-    "block": "note-sharpup-swipe",
-    "label": "Info box · Skill cards sit side by side. Swipe or scroll sideways to compare all four evolutions and the t",
-    "default": "Skill cards sit side by side. Swipe or scroll sideways to compare all four evolutions and the three Horde upgrades.",
+    "block": "text-sharpup-swipe",
+    "label": "Text · Compare the regular skills below. On smaller screens, swipe sideways through the cards.",
+    "default": "Compare the regular skills below. On smaller screens, swipe sideways through the cards.",
     "order": 11,
     "section": "sharpup",
-    "sectionTitle": "New Tatari: Sharpup line"
+    "sectionTitle": "Sharpup & evolutions"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-sharpup-regular-heading",
+    "label": "Subheading · Regular skills",
+    "default": "Regular skills",
+    "order": 12,
+    "section": "sharpup",
+    "sectionTitle": "Sharpup & evolutions"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "skill-sharpup-skills-1",
     "label": "Skill card · Swift Lead",
-    "default": "Launches a piercing, close-range pencil. The pencil’s damage decreases with distance. Sometimes launches an eraser that dispels enemy buffs.",
-    "order": 12,
+    "default": "Piercing pencil attacks; every fourth attack becomes a buff-dispelling eraser.",
+    "order": 13,
     "section": "sharpup",
-    "sectionTitle": "New Tatari: Sharpup line"
+    "sectionTitle": "Sharpup & evolutions"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "skill-sharpup-skills-2",
     "label": "Skill card · Sharp Point",
-    "default": "Launches a piercing pencil. The pencil’s damage decreases with distance. Sometimes launches an eraser that dispels enemy buffs.",
-    "order": 13,
+    "default": "Longer targeting range, with the same pencil and eraser cycle.",
+    "order": 14,
     "section": "sharpup",
-    "sectionTitle": "New Tatari: Sharpup line"
+    "sectionTitle": "Sharpup & evolutions"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "skill-sharpup-skills-3",
     "label": "Skill card · Grand Stroke",
-    "default": "Launches a piercing pencil that inflicts stackable Scribble: DEF Down. The pencil’s damage decreases with distance. Sometimes launches an eraser that dispels enemy buffs.",
-    "order": 14,
+    "default": "Adds stackable Scribble: DEF Down to pencil hits.",
+    "order": 15,
     "section": "sharpup",
-    "sectionTitle": "New Tatari: Sharpup line"
+    "sectionTitle": "Sharpup & evolutions"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "skill-sharpup-skills-4",
     "label": "Skill card · Swift Lead",
-    "default": "Launches a piercing pencil that inflicts stackable Scribble: DEF Down. The pencil’s damage decreases with distance. Sometimes launches an eraser that dispels enemy buffs. Scribbadger carries Aura: Rock whenever on the field.",
-    "order": 15,
+    "default": "Keeps Scribble: DEF Down and adds a team-wide Rock aura.",
+    "order": 16,
     "section": "sharpup",
-    "sectionTitle": "New Tatari: Sharpup line"
+    "sectionTitle": "Sharpup & evolutions"
   },
   {
     "page": "information/pioneerpreview.html",
-    "block": "note-sharpup-arena",
-    "label": "Info box · Against other Tatari, the pencil and eraser deal 55% of their normal damage. Two tiers share th",
-    "default": "Against other Tatari, the pencil and eraser deal 55% of their normal damage. Two tiers share the English skill name Swift Lead in this build, which may still be corrected.",
-    "order": 16,
+    "block": "text-sharpup-arena",
+    "label": "Text · Arena factor: 55%. Pencil and eraser damage against other Tatari is multiplied by 0.55. The cur",
+    "default": "Arena factor: 55%. Pencil and eraser damage against other Tatari is multiplied by 0.55. The current English names use Swift Lead at both T1 and T4.",
+    "order": 17,
     "section": "sharpup",
-    "sectionTitle": "New Tatari: Sharpup line"
+    "sectionTitle": "Sharpup & evolutions"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-sharpup-horde-heading",
+    "label": "Subheading · Horde upgrades",
+    "default": "Horde upgrades",
+    "order": 18,
+    "section": "sharpup",
+    "sectionTitle": "Sharpup & evolutions"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "skill-sharpup-horde-1",
     "label": "Skill card · Extra Sharp",
     "default": "Periodically summons a pencil sharpener in front. When projectiles pass through, the sharpener launches extra small pencils to deal damage. When this Tatari’s pencils pass through, they fly farther and deal greater damage.",
-    "order": 17,
+    "order": 19,
     "section": "sharpup",
-    "sectionTitle": "New Tatari: Sharpup line"
+    "sectionTitle": "Sharpup & evolutions"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "skill-sharpup-horde-2",
     "label": "Skill card · Shaving Grace",
     "default": "Periodically scatters shavings to the left and right of a pencil sharpener. Passing enemies take damage and are inflicted with Slow. If no pencil sharpener exists on the field, summons one first.",
-    "order": 18,
+    "order": 20,
     "section": "sharpup",
-    "sectionTitle": "New Tatari: Sharpup line"
+    "sectionTitle": "Sharpup & evolutions"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "skill-sharpup-horde-3",
     "label": "Skill card · Off the Page",
     "default": "Sketches the ally 1 tile ahead and summons a Tatari Copy that has all the ally’s skills. The Tatari Copy will continuously lose HP.",
-    "order": 19,
+    "order": 21,
     "section": "sharpup",
-    "sectionTitle": "New Tatari: Sharpup line"
+    "sectionTitle": "Sharpup & evolutions"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "text-whirling-wallop-title",
-    "label": "Heading · New mode: Whirling Wallop",
-    "default": "New mode: Whirling Wallop",
-    "order": 20,
+    "label": "Heading · Whirling Wallop",
+    "default": "Whirling Wallop",
+    "order": 22,
     "section": "whirling-wallop",
-    "sectionTitle": "New mode: Whirling Wallop"
+    "sectionTitle": "Whirling Wallop"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "text-whirling-wallop-how",
     "label": "Text · Drag and merge Tatari to defend the camp van, using contraptions on each map such as oil barrel",
     "default": "Drag and merge Tatari to defend the camp van, using contraptions on each map such as oil barrels you can smash open. Your Tatari’s weapons spin around them automatically and hit any Zobo that gets close. Stages must be cleared in order, can be replayed, and each stage’s reward can be claimed once.",
-    "order": 21,
+    "order": 23,
     "section": "whirling-wallop",
-    "sectionTitle": "New mode: Whirling Wallop"
+    "sectionTitle": "Whirling Wallop"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "text-whirling-wallop-heroes",
     "label": "Text · Five families take part: Frostnip, Blueflick, Manteeny, Punchimp and Zapuni. Merging raises the",
     "default": "Five families take part: Frostnip, Blueflick, Manteeny, Punchimp and Zapuni. Merging raises the tier: T1–T2 swing one blade, T3–T4 swing two, and damage per hit goes from 2 (T1) to 4 (T2–T3) to 6 (T4).",
-    "order": 22,
+    "order": 24,
     "section": "whirling-wallop",
-    "sectionTitle": "New mode: Whirling Wallop"
+    "sectionTitle": "Whirling Wallop"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "note-whirling-wallop-unlock",
     "label": "Info box · Whirling Wallop is announced to unlock at Stage 3-80. The 30 Pinballs shown above are collectio",
     "default": "Whirling Wallop is announced to unlock at Stage 3-80. The 30 Pinballs shown above are collection rewards; wave-clear rewards are separate. The first named stage also lists 60 Pinballs for its final wave, while later stages include other items alongside Pinballs.",
-    "order": 23,
-    "section": "whirling-wallop",
-    "sectionTitle": "New mode: Whirling Wallop"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "text-goldrush-title",
-    "label": "Heading · Island Goldrush changes",
-    "default": "Island Goldrush changes",
-    "order": 24,
-    "section": "goldrush",
-    "sectionTitle": "Island Goldrush changes"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "text-goldrush-intro",
-    "label": "Text · These match the official update notes. Regular Goldrush daily team ranking rewards now give not",
-    "default": "These match the official update notes. Regular Goldrush daily team ranking rewards now give noticeably more Super Drinks. Silver Bricks and Candy are unchanged.",
     "order": 25,
-    "section": "goldrush",
-    "sectionTitle": "Island Goldrush changes"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "text-goldrush-final-intro",
-    "label": "Text · Final league rewards go up for the top teams in leagues 2–4. League 1 is unchanged.",
-    "default": "Final league rewards go up for the top teams in leagues 2–4. League 1 is unchanged.",
-    "order": 26,
-    "section": "goldrush",
-    "sectionTitle": "Island Goldrush changes"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "text-goldrush-haze",
-    "label": "Text · Mirage Haze is a new, separate exhaustion. Attacking the same Mirage many times makes each atta",
-    "default": "Mirage Haze is a new, separate exhaustion. Attacking the same Mirage many times makes each attack cost more Energy Drinks, and this stacks with normal exhaustion. Two schedules are set up: one for Mirages and a gentler one for the bigger Lost City target.",
-    "order": 27,
-    "section": "goldrush",
-    "sectionTitle": "Island Goldrush changes"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "list-goldrush-more-1",
-    "label": "List item · Mirages and the Lost City give free daily attacks when they first appear; unused free attacks e",
-    "default": "Mirages and the Lost City give free daily attacks when they first appear; unused free attacks expire at the end of the day.",
-    "order": 28,
-    "section": "goldrush",
-    "sectionTitle": "Island Goldrush changes"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "list-goldrush-more-2",
-    "label": "List item · From 9 December 2026, 00:00 UTC, drinks can also be earned during the enrollment phase (date fr",
-    "default": "From 9 December 2026, 00:00 UTC, drinks can also be earned during the enrollment phase (date from the official notes).",
-    "order": 29,
-    "section": "goldrush",
-    "sectionTitle": "Island Goldrush changes"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "list-goldrush-more-3",
-    "label": "List item · Mirage and Lost City spawn spots and tile layouts are reshuffled.",
-    "default": "Mirage and Lost City spawn spots and tile layouts are reshuffled.",
-    "order": 30,
-    "section": "goldrush",
-    "sectionTitle": "Island Goldrush changes"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "list-goldrush-more-4",
-    "label": "List item · The Mirage battle results screen shows how many more kills you need to pass the league ahead (f",
-    "default": "The Mirage battle results screen shows how many more kills you need to pass the league ahead (for example “3 kills away from No. 1”).",
-    "order": 31,
-    "section": "goldrush",
-    "sectionTitle": "Island Goldrush changes"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "list-goldrush-more-5",
-    "label": "List item · Single-attack results get a quick battle-report button, and the rally screen now shows your cur",
-    "default": "Single-attack results get a quick battle-report button, and the rally screen now shows your current exhaustion and its rules.",
-    "order": 32,
-    "section": "goldrush",
-    "sectionTitle": "Island Goldrush changes"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "list-goldrush-more-6",
-    "label": "List item · A rally is cancelled automatically if your side captures the target tile before the countdown e",
-    "default": "A rally is cancelled automatically if your side captures the target tile before the countdown ends.",
-    "order": 33,
-    "section": "goldrush",
-    "sectionTitle": "Island Goldrush changes"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "list-goldrush-more-7",
-    "label": "List item · Friend Spas: if the Goldrush MVP opens their spa within a week after Goldrush ends, their teamm",
-    "default": "Friend Spas: if the Goldrush MVP opens their spa within a week after Goldrush ends, their teammates get the same combat stat buffs there. Spas with this bonus are marked.",
-    "order": 34,
-    "section": "goldrush",
-    "sectionTitle": "Island Goldrush changes"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "text-pinball-title",
-    "label": "Heading · Pinball capsule reward chances",
-    "default": "Pinball capsule reward chances",
-    "order": 35,
-    "section": "pinball",
-    "sectionTitle": "Pinball capsule reward chances"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "text-pinball-how",
-    "label": "Text · The new Capsule Reward Chances tooltip explains the capsule bumper at the upper left of the Pin",
-    "default": "The new Capsule Reward Chances tooltip explains the capsule bumper at the upper left of the Pinball Machine. These counts are completed capsule progress bars, not the number of pinballs fired. The count resets daily.",
-    "order": 36,
-    "section": "pinball",
-    "sectionTitle": "Pinball capsule reward chances"
-  },
-  {
-    "page": "information/pioneerpreview.html",
-    "block": "note-pinball-meaning",
-    "label": "Info box · This is a new explanation of the odds. It does not, by itself, mean those odds have changed. Di",
-    "default": "This is a new explanation of the odds. It does not, by itself, mean those odds have changed. Displayed percentages may total slightly under 100% because of rounding.",
-    "order": 37,
-    "section": "pinball",
-    "sectionTitle": "Pinball capsule reward chances"
+    "section": "whirling-wallop",
+    "sectionTitle": "Whirling Wallop"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "text-pass-title",
-    "label": "Heading · City of Gold pass and Maple Mansion",
-    "default": "City of Gold pass and Maple Mansion",
-    "order": 38,
+    "label": "Heading · City of Gold & Maple Mansion",
+    "default": "City of Gold & Maple Mansion",
+    "order": 26,
     "section": "pass",
-    "sectionTitle": "City of Gold pass and Maple Mansion"
+    "sectionTitle": "City of Gold & Maple Mansion"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "text-pass-about",
     "label": "Text · A new pass called City of Gold (premium version: Sandy Pass) has 40 levels and four sets of wee",
     "default": "A new pass called City of Gold (premium version: Sandy Pass) has 40 levels and four sets of weekly quests. Reaching level 40 requires 3,120 keys in total. After the final level, every 50 additional keys gives 10 Pinballs and 1,000 Candy.",
-    "order": 39,
+    "order": 27,
     "section": "pass",
-    "sectionTitle": "City of Gold pass and Maple Mansion"
+    "sectionTitle": "City of Gold & Maple Mansion"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "text-pass-other",
     "label": "Text · Other levels mostly hand out Pinballs, Candy, Tatari Capsules, Tatari Scan Capsules, Bento and ",
     "default": "Other levels mostly hand out Pinballs, Candy, Tatari Capsules, Tatari Scan Capsules, Bento and Tatari Wishboxes. Buying the premium pass mid-event unlocks the premium rewards for every level you have already reached.",
-    "order": 40,
+    "order": 28,
     "section": "pass",
-    "sectionTitle": "City of Gold pass and Maple Mansion"
+    "sectionTitle": "City of Gold & Maple Mansion"
   },
   {
     "page": "information/pioneerpreview.html",
-    "block": "text-camp-title",
-    "label": "Heading · Blueprints and camp encounters",
-    "default": "Blueprints and camp encounters",
+    "block": "note-pass-permanent",
+    "label": "Info box · Keep the cosmetics Maple Mansion and Maple Pinballs are permanent once unlocked. The extra 100 ",
+    "default": "Keep the cosmetics Maple Mansion and Maple Pinballs are permanent once unlocked. The extra 100 Pinball Tree storage lasts only while the pass benefit is active.",
+    "order": 29,
+    "section": "pass",
+    "sectionTitle": "City of Gold & Maple Mansion"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-goldrush-title",
+    "label": "Heading · Island Goldrush",
+    "default": "Island Goldrush",
+    "order": 30,
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-goldrush-intro",
+    "label": "Text · These match the official update notes. Regular Goldrush daily team ranking rewards now give not",
+    "default": "These match the official update notes. Regular Goldrush daily team ranking rewards now give noticeably more Super Drinks. Silver Bricks and Candy are unchanged.",
+    "order": 31,
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-goldrush-reward-summary",
+    "label": "Text · Daily Super Drinks increase across the ranking table. Top-place final rewards also improve in l",
+    "default": "Daily Super Drinks increase across the ranking table. Top-place final rewards also improve in leagues 2–4. Open the reward tables for the full comparison.",
+    "order": 32,
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-goldrush-final-details-1-final-intro",
+    "label": "Text · Final league rewards go up for the top teams in leagues 2–4. League 1 is unchanged.",
+    "default": "Final league rewards go up for the top teams in leagues 2–4. League 1 is unchanged.",
+    "order": 33,
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-goldrush-haze-heading",
+    "label": "Subheading · Mirage Haze",
+    "default": "Mirage Haze",
+    "order": 34,
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-goldrush-haze",
+    "label": "Text · Mirage Haze is a new, separate exhaustion. Attacking the same Mirage many times makes each atta",
+    "default": "Mirage Haze is a new, separate exhaustion. Attacking the same Mirage many times makes each attack cost more Energy Drinks, and this stacks with normal exhaustion. Two schedules are set up: one for Mirages and a gentler one for the bigger Lost City target.",
+    "order": 35,
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "list-goldrush-more-1",
+    "label": "List item · Mirages and the Lost City give free daily attacks when they first appear; unused free attacks e",
+    "default": "Mirages and the Lost City give free daily attacks when they first appear; unused free attacks expire at the end of the day.",
+    "order": 36,
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "list-goldrush-more-2",
+    "label": "List item · From 9 December 2026, 00:00 UTC, drinks can also be earned during the enrollment phase (date fr",
+    "default": "From 9 December 2026, 00:00 UTC, drinks can also be earned during the enrollment phase (date from the official notes).",
+    "order": 37,
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "list-goldrush-more-3",
+    "label": "List item · Mirage and Lost City spawn spots and tile layouts are reshuffled.",
+    "default": "Mirage and Lost City spawn spots and tile layouts are reshuffled.",
+    "order": 38,
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "list-goldrush-more-4",
+    "label": "List item · The Mirage battle results screen shows how many more kills you need to pass the league ahead (f",
+    "default": "The Mirage battle results screen shows how many more kills you need to pass the league ahead (for example “3 kills away from No. 1”).",
+    "order": 39,
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "list-goldrush-more-5",
+    "label": "List item · Single-attack results get a quick battle-report button, and the rally screen now shows your cur",
+    "default": "Single-attack results get a quick battle-report button, and the rally screen now shows your current exhaustion and its rules.",
+    "order": 40,
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "list-goldrush-more-6",
+    "label": "List item · A rally is cancelled automatically if your side captures the target tile before the countdown e",
+    "default": "A rally is cancelled automatically if your side captures the target tile before the countdown ends.",
     "order": 41,
-    "section": "camp",
-    "sectionTitle": "Blueprints and camp encounters"
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
   },
   {
     "page": "information/pioneerpreview.html",
-    "block": "text-camp-blueprints",
-    "label": "Text · Blueprints let you save your camp layout, share it with friends or post it to a public Blueprin",
-    "default": "Blueprints let you save your camp layout, share it with friends or post it to a public Blueprint Plaza with Hot Blueprints and favorites. Applying a Blueprint moves your existing buildings into place and offers to buy any missing ones; buildings that can’t be put away stay where they are. Batch selection lets you move or remove several tiles and buildings at once.",
+    "block": "list-goldrush-more-7",
+    "label": "List item · Friend Spas: if the Goldrush MVP opens their spa within a week after Goldrush ends, their teamm",
+    "default": "Friend Spas: if the Goldrush MVP opens their spa within a week after Goldrush ends, their teammates get the same combat stat buffs there. Spas with this bonus are marked.",
     "order": 42,
-    "section": "camp",
-    "sectionTitle": "Blueprints and camp encounters"
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
   },
   {
     "page": "information/pioneerpreview.html",
-    "block": "text-camp-encounters",
-    "label": "Text · Six new camp encounters follow a desert, City of Gold theme: an oasis that turns out to be a mi",
-    "default": "Six new camp encounters follow a desert, City of Gold theme: an oasis that turns out to be a mirage, a jar of gold coins that are really chocolate, an antique bronze mirror, a mural of a noble kitty, a hidden sand-bath compartment and a sand-pit trap. They become eligible once an account is at least 10 days old; this does not guarantee an encounter immediately.",
+    "block": "list-goldrush-more-8",
+    "label": "List item · Mirages and the Lost City share the free-attack allowance for the day. Their extra exhaustion i",
+    "default": "Mirages and the Lost City share the free-attack allowance for the day. Their extra exhaustion is tracked separately for each area and adds to drink exhaustion.",
     "order": 43,
-    "section": "camp",
-    "sectionTitle": "Blueprints and camp encounters"
+    "section": "goldrush",
+    "sectionTitle": "Island Goldrush"
   },
   {
     "page": "information/pioneerpreview.html",
-    "block": "note-camp-choices",
-    "label": "Info box · For each of these six encounters, both choices give the same reward. Pick whichever outcome you",
-    "default": "For each of these six encounters, both choices give the same reward. Pick whichever outcome you prefer.",
+    "block": "text-pinball-title",
+    "label": "Heading · Pinball odds",
+    "default": "Pinball odds",
     "order": 44,
-    "section": "camp",
-    "sectionTitle": "Blueprints and camp encounters"
+    "section": "pinball",
+    "sectionTitle": "Pinball odds"
   },
   {
     "page": "information/pioneerpreview.html",
-    "block": "text-collectibles-title",
-    "label": "Heading · New collectibles",
-    "default": "New collectibles",
+    "block": "text-pinball-slot-note",
+    "label": "Text · The new tooltips separate the chance of landing on a slot from the reward rolled after landing.",
+    "default": "The new tooltips separate the chance of landing on a slot from the reward rolled after landing. Pick an unlock state below to compare the outcomes outside and during Goldrush battles.",
     "order": 45,
-    "section": "collectibles",
-    "sectionTitle": "New collectibles"
+    "section": "pinball",
+    "sectionTitle": "Pinball odds"
   },
   {
     "page": "information/pioneerpreview.html",
-    "block": "text-collectibles-count",
-    "label": "Text · 51 new collectibles are added. Several English names in this build are still untranslated, so t",
-    "default": "51 new collectibles are added. Several English names in this build are still untranslated, so the site’s names are used here.",
+    "block": "text-pinball-label-check",
+    "label": "Text · The Goldrush column uses the current tooltip label Radish Run. Its live event behavior still ne",
+    "default": "The Goldrush column uses the current tooltip label Radish Run. Its live event behavior still needs checking.",
     "order": 46,
-    "section": "collectibles",
-    "sectionTitle": "New collectibles"
+    "section": "pinball",
+    "sectionTitle": "Pinball odds"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-pinball-capsule-heading",
+    "label": "Subheading · Capsule rewards",
+    "default": "Capsule rewards",
+    "order": 47,
+    "section": "pinball",
+    "sectionTitle": "Pinball odds"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-pinball-how",
+    "label": "Text · The new Capsule Reward Chances tooltip explains the capsule bumper at the upper left of the Pin",
+    "default": "The new Capsule Reward Chances tooltip explains the capsule bumper at the upper left of the Pinball Machine. These counts are completed capsule progress bars, not the number of pinballs fired. The count resets daily.",
+    "order": 48,
+    "section": "pinball",
+    "sectionTitle": "Pinball odds"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-pinball-meaning",
+    "label": "Text · These are displayed outcome percentages, conditional on reaching that slot or completing the ca",
+    "default": "These are displayed outcome percentages, conditional on reaching that slot or completing the capsule bar. They are not the chance per Pinball fired. Rounding can leave a small difference from 100%; the new tooltips alone do not indicate a rate increase.",
+    "order": 49,
+    "section": "pinball",
+    "sectionTitle": "Pinball odds"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "text-horde-title",
-    "label": "Heading · Horde Invasion adjustments",
-    "default": "Horde Invasion adjustments",
-    "order": 47,
+    "label": "Heading · Horde Invasion",
+    "default": "Horde Invasion",
+    "order": 50,
     "section": "horde",
-    "sectionTitle": "Horde Invasion adjustments"
+    "sectionTitle": "Horde Invasion"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "text-horde-text",
     "label": "Text · Matching the official notes, many chip and skill descriptions are reworded. Most class and posi",
     "default": "Matching the official notes, many chip and skill descriptions are reworded. Most class and position chips now say “HP” instead of “Max HP”, and the level-up chip now states that only one Tatari is upgraded. Banana Bash no longer says “periodically”.",
-    "order": 48,
+    "order": 51,
     "section": "horde",
-    "sectionTitle": "Horde Invasion adjustments"
+    "sectionTitle": "Horde Invasion"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "note-horde-perf",
     "label": "Info box · The game can now switch itself to Low Performance Mode when the connection is unstable or the f",
     "default": "The game can now switch itself to Low Performance Mode when the connection is unstable or the frame rate drops, which fits the notes about smoother Horde battles. Performance itself can only be judged in-game.",
-    "order": 49,
+    "order": 52,
     "section": "horde",
-    "sectionTitle": "Horde Invasion adjustments"
+    "sectionTitle": "Horde Invasion"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "list-horde-hidden-fixes-1",
+    "label": "List item · The Wall rechecks eligible Tatari every 4 seconds, in addition to reacting to movement. Its lis",
+    "default": "The Wall rechecks eligible Tatari every 4 seconds, in addition to reacting to movement. Its listed HP, DEF and damage modifiers are unchanged.",
+    "order": 53,
+    "section": "horde",
+    "sectionTitle": "Horde Invasion"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "list-horde-hidden-fixes-2",
+    "label": "List item · Fate Roll checks unique-chip ownership before choosing its random chip.",
+    "default": "Fate Roll checks unique-chip ownership before choosing its random chip.",
+    "order": 54,
+    "section": "horde",
+    "sectionTitle": "Horde Invasion"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "list-horde-hidden-fixes-3",
+    "label": "List item · The River and Gorilla’s fence have effect-positioning and layering fixes; these are separate fr",
+    "default": "The River and Gorilla’s fence have effect-positioning and layering fixes; these are separate from their skill stat values.",
+    "order": 55,
+    "section": "horde",
+    "sectionTitle": "Horde Invasion"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "text-adventure-title",
     "label": "Heading · Artifact Adventure",
     "default": "Artifact Adventure",
-    "order": 50,
+    "order": 56,
     "section": "adventure",
     "sectionTitle": "Artifact Adventure"
   },
@@ -3640,7 +3694,7 @@
     "block": "list-adventure-text-1",
     "label": "List item · New Adventure Invite: you can notify offline friends that you’re playing Artifact Adventure. Th",
     "default": "New Adventure Invite: you can notify offline friends that you’re playing Artifact Adventure. They need notifications turned on to receive it.",
-    "order": 51,
+    "order": 57,
     "section": "adventure",
     "sectionTitle": "Artifact Adventure"
   },
@@ -3649,7 +3703,7 @@
     "block": "list-adventure-text-2",
     "label": "List item · Visual effects are reworked for the deeper layers.",
     "default": "Visual effects are reworked for the deeper layers.",
-    "order": 52,
+    "order": 58,
     "section": "adventure",
     "sectionTitle": "Artifact Adventure"
   },
@@ -3658,7 +3712,7 @@
     "block": "list-adventure-text-3",
     "label": "List item · The official notes add that Rule of Threes and similar buffs now also apply to artifacts droppe",
     "default": "The official notes add that Rule of Threes and similar buffs now also apply to artifacts dropped by Zobos; that part can only be checked in-game.",
-    "order": 53,
+    "order": 59,
     "section": "adventure",
     "sectionTitle": "Artifact Adventure"
   },
@@ -3667,7 +3721,7 @@
     "block": "text-spa-title",
     "label": "Heading · Sparkly Spa details",
     "default": "Sparkly Spa details",
-    "order": 54,
+    "order": 60,
     "section": "spa",
     "sectionTitle": "Sparkly Spa details"
   },
@@ -3676,7 +3730,7 @@
     "block": "list-spa-rules-1",
     "label": "List item · The Spa Station includes friends and teammates from your previous Goldrush. A badge marks spas ",
     "default": "The Spa Station includes friends and teammates from your previous Goldrush. A badge marks spas with a teammate bonus.",
-    "order": 55,
+    "order": 61,
     "section": "spa",
     "sectionTitle": "Sparkly Spa details"
   },
@@ -3685,7 +3739,7 @@
     "block": "list-spa-rules-2",
     "label": "List item · If the Goldrush MVP opens a spa within one week after Goldrush ends, their Goldrush teammates c",
     "default": "If the Goldrush MVP opens a spa within one week after Goldrush ends, their Goldrush teammates can receive the same combat stat buffs there. The bonus lasts until that spa closes.",
-    "order": 56,
+    "order": 62,
     "section": "spa",
     "sectionTitle": "Sparkly Spa details"
   },
@@ -3694,7 +3748,7 @@
     "block": "list-spa-rules-3",
     "label": "List item · Sparkle progress uses the buffs active at the end of the calendar day and must be claimed the f",
     "default": "Sparkle progress uses the buffs active at the end of the calendar day and must be claimed the following day, including the spa’s final day. Unclaimed progress does not carry over.",
-    "order": 57,
+    "order": 63,
     "section": "spa",
     "sectionTitle": "Sparkly Spa details"
   },
@@ -3703,7 +3757,7 @@
     "block": "list-spa-rules-4",
     "label": "List item · Upgrading or changing spas does not reset daily trigger limits or alter the previous day’s earn",
     "default": "Upgrading or changing spas does not reset daily trigger limits or alter the previous day’s earned Sparkle progress.",
-    "order": 58,
+    "order": 64,
     "section": "spa",
     "sectionTitle": "Sparkly Spa details"
   },
@@ -3712,53 +3766,170 @@
     "block": "list-spa-rules-5",
     "label": "List item · Sparkle progress can be assigned to an eligible T4 Tatari with its Glitter form unlocked and Sp",
     "default": "Sparkle progress can be assigned to an eligible T4 Tatari with its Glitter form unlocked and Sparkle skins available. Unlocks from a friend’s spa are Standard Sparkle skins; duplicates become Glitter Fruit.",
-    "order": 59,
+    "order": 65,
     "section": "spa",
     "sectionTitle": "Sparkly Spa details"
   },
   {
     "page": "information/pioneerpreview.html",
+    "block": "text-camp-title",
+    "label": "Heading · Blueprints and camp encounters",
+    "default": "Blueprints and camp encounters",
+    "order": 66,
+    "section": "camp",
+    "sectionTitle": "Blueprints and camp encounters"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-camp-blueprint-heading",
+    "label": "Subheading · Save & share your camp",
+    "default": "Save & share your camp",
+    "order": 67,
+    "section": "camp",
+    "sectionTitle": "Blueprints and camp encounters"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-camp-blueprints",
+    "label": "Text · Blueprints let you save your camp layout, share it with friends or post it to a public Blueprin",
+    "default": "Blueprints let you save your camp layout, share it with friends or post it to a public Blueprint Plaza with Hot Blueprints and favorites. Applying a Blueprint moves your existing buildings into place and offers to buy any missing ones; buildings that can’t be put away stay where they are. Batch selection lets you move or remove several tiles and buildings at once.",
+    "order": 68,
+    "section": "camp",
+    "sectionTitle": "Blueprints and camp encounters"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-camp-encounter-heading",
+    "label": "Subheading · Six desert encounters",
+    "default": "Six desert encounters",
+    "order": 69,
+    "section": "camp",
+    "sectionTitle": "Blueprints and camp encounters"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-camp-encounters",
+    "label": "Text · Six new camp encounters follow a desert, City of Gold theme: an oasis that turns out to be a mi",
+    "default": "Six new camp encounters follow a desert, City of Gold theme: an oasis that turns out to be a mirage, a jar of gold coins that are really chocolate, an antique bronze mirror, a mural of a noble kitty, a hidden sand-bath compartment and a sand-pit trap. They become eligible once an account is at least 10 days old; this does not guarantee an encounter immediately.",
+    "order": 70,
+    "section": "camp",
+    "sectionTitle": "Blueprints and camp encounters"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "note-camp-choices",
+    "label": "Info box · For each of these six encounters, both choices give the same reward. Pick whichever outcome you",
+    "default": "For each of these six encounters, both choices give the same reward. Pick whichever outcome you prefer.",
+    "order": 71,
+    "section": "camp",
+    "sectionTitle": "Blueprints and camp encounters"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-collectibles-title",
+    "label": "Heading · New collectibles",
+    "default": "New collectibles",
+    "order": 72,
+    "section": "collectibles",
+    "sectionTitle": "New collectibles"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-collectibles-count",
+    "label": "Text · 51 new collectibles are added. Several English names in this build are still untranslated, so t",
+    "default": "51 new collectibles are added. Several English names in this build are still untranslated, so the site’s names are used here.",
+    "order": 73,
+    "section": "collectibles",
+    "sectionTitle": "New collectibles"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-interface-title",
+    "label": "Heading · Other interface changes",
+    "default": "Other interface changes",
+    "order": 74,
+    "section": "interface",
+    "sectionTitle": "Other interface changes"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-interface-collection",
+    "label": "Text · A new Collection Hub brings together entries such as Mail, Missions, Settings and Pinball appea",
+    "default": "A new Collection Hub brings together entries such as Mail, Missions, Settings and Pinball appearances. Pinball machine and ball appearances can be selected separately.",
+    "order": 75,
+    "section": "interface",
+    "sectionTitle": "Other interface changes"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-interface-odds",
+    "label": "Text · Bento descriptions now explicitly say that each element has the same chance. Other food and car",
+    "default": "Bento descriptions now explicitly say that each element has the same chance. Other food and card explanations also clarify how items within the same category are selected; clearer wording does not automatically mean the underlying odds increased.",
+    "order": 76,
+    "section": "interface",
+    "sectionTitle": "Other interface changes"
+  },
+  {
+    "page": "information/pioneerpreview.html",
     "block": "text-pending-title",
-    "label": "Heading · Still unknown",
-    "default": "Still unknown",
-    "order": 60,
+    "label": "Heading · What still needs checking",
+    "default": "What still needs checking",
+    "order": 77,
     "section": "pending",
-    "sectionTitle": "Still unknown"
+    "sectionTitle": "What still needs checking"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "list-pending-list-1",
-    "label": "List item · Release dates for the new Tatari, Whirling Wallop, the pass and the Maple Mansion skin.",
-    "default": "Release dates for the new Tatari, Whirling Wallop, the pass and the Maple Mansion skin.",
-    "order": 61,
+    "label": "List item · Regular-server release dates and which features will be available to every player.",
+    "default": "Regular-server release dates and which features will be available to every player.",
+    "order": 78,
     "section": "pending",
-    "sectionTitle": "Still unknown"
+    "sectionTitle": "What still needs checking"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "list-pending-list-2",
-    "label": "List item · How the Sharpup line is obtained.",
-    "default": "How the Sharpup line is obtained.",
-    "order": 62,
+    "label": "List item · The shared Mirage free-attack allowance and exact Blueprint limits.",
+    "default": "The shared Mirage free-attack allowance and exact Blueprint limits.",
+    "order": 79,
     "section": "pending",
-    "sectionTitle": "Still unknown"
+    "sectionTitle": "What still needs checking"
   },
   {
     "page": "information/pioneerpreview.html",
     "block": "list-pending-list-3",
-    "label": "List item · Whether every Pioneer value carries over unchanged to the regular servers.",
-    "default": "Whether every Pioneer value carries over unchanged to the regular servers.",
-    "order": 63,
+    "label": "List item · Whether buying the new pass includes any immediate level bonus; no bonus is assumed here.",
+    "default": "Whether buying the new pass includes any immediate level bonus; no bonus is assumed here.",
+    "order": 80,
     "section": "pending",
-    "sectionTitle": "Still unknown"
+    "sectionTitle": "What still needs checking"
   },
   {
     "page": "information/pioneerpreview.html",
-    "block": "note-pending-tools",
-    "label": "Info box · The Tatari database, calculators and Goldrush guide will be updated once these changes go live ",
-    "default": "The Tatari database, calculators and Goldrush guide will be updated once these changes go live on the regular servers.",
-    "order": 64,
+    "block": "list-pending-list-4",
+    "label": "List item · Whether card-pack changes affect normal openings. A higher normal-opening rate is not confirmed",
+    "default": "Whether card-pack changes affect normal openings. A higher normal-opening rate is not confirmed.",
+    "order": 81,
     "section": "pending",
-    "sectionTitle": "Still unknown"
+    "sectionTitle": "What still needs checking"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "list-pending-list-5",
+    "label": "List item · The live behavior behind the Goldrush tooltip’s Radish Run label.",
+    "default": "The live behavior behind the Goldrush tooltip’s Radish Run label.",
+    "order": 82,
+    "section": "pending",
+    "sectionTitle": "What still needs checking"
+  },
+  {
+    "page": "information/pioneerpreview.html",
+    "block": "text-pending-tools",
+    "label": "Text · The main guides and tools will follow the regular-server release. Until then, use this page as ",
+    "default": "The main guides and tools will follow the regular-server release. Until then, use this page as a preview rather than a live-server ruleset.",
+    "order": 83,
+    "section": "pending",
+    "sectionTitle": "What still needs checking"
   }
 ]

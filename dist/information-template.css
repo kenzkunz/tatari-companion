@@ -42,3 +42,56 @@
 
 .public-info-page .info-skill-list[data-card-count]{grid-template-rows:none;align-items:start}
 .public-info-page .info-skill-card{display:flex;grid-template-rows:none;grid-row:auto}
+
+.public-info-page .info-accordion summary{white-space:normal;overflow-wrap:anywhere;width:100%;min-width:0;box-sizing:border-box}
+.public-info-page .info-accordion summary::before{flex:none}
+/* Pioneer preview: use the guide shell, with compact artwork and readable comparisons. */
+body[data-guide="pioneerpreview"] .guide-content>section{padding:26px 0;border-bottom:1px solid var(--info-line);scroll-margin-top:95px}
+body[data-guide="pioneerpreview"] .guide-content>section:last-child{border:0}
+body[data-guide="pioneerpreview"] .guide-opening{padding:24px 26px;border-bottom:1px solid #d7c89d}
+body[data-guide="pioneerpreview"] .guide-opening h1{font-weight:700;font-size:30px;letter-spacing:-.7px;max-width:24ch}
+body[data-guide="pioneerpreview"] .guide-content h2{font-weight:700;letter-spacing:-.4px}
+body[data-guide="pioneerpreview"] .guide-content h3{font:600 15px/1.5 var(--info-body);margin:24px 0 10px}
+body[data-guide="pioneerpreview"] .guide-content p{margin:10px 0;max-width:none}
+body[data-guide="pioneerpreview"] #status ul{padding-left:20px;margin-bottom:0}
+body[data-guide="pioneerpreview"] #status li{padding:3px 0}
+body[data-guide="pioneerpreview"] #sharpup .info-asset-grid{gap:12px 8px;margin:18px 0 24px}
+body[data-guide="pioneerpreview"] #sharpup .info-asset-grid figure{border:0;background:none;padding:0;position:relative}
+body[data-guide="pioneerpreview"] #sharpup .info-asset-grid img{width:100%;max-width:160px;aspect-ratio:1;object-fit:contain;display:block;margin:auto}
+body[data-guide="pioneerpreview"] #sharpup .info-asset-grid figcaption{margin:2px 0;font-size:11px;font-weight:600}
+body[data-guide="pioneerpreview"] #sharpup .info-asset-grid figure:first-child:before,body[data-guide="pioneerpreview"] #sharpup .info-asset-grid figure:nth-child(5):before{content:'NORMAL';display:block;font:600 10px/1.5 var(--info-body);letter-spacing:1px;color:#746440;text-align:left}
+body[data-guide="pioneerpreview"] #sharpup .info-asset-grid figure:nth-child(5):before{content:'GLITTER'}
+body[data-guide="pioneerpreview"] #sharpup .info-asset-grid figure:not(:first-child):not(:nth-child(5)){padding-top:15px}
+body[data-guide="pioneerpreview"] .info-skill-card{padding:14px;border-radius:9px;box-shadow:none}
+body[data-guide="pioneerpreview"] .info-skill-card .skill-heading{flex-direction:column-reverse;gap:5px}
+body[data-guide="pioneerpreview"] .info-skill-card .horde-skill-level{font-size:11px;color:#806324}
+body[data-guide="pioneerpreview"] .info-skill-card .horde-detail-row{border-radius:4px;padding:8px 9px}
+body[data-guide="pioneerpreview"] .info-skill-card .horde-detail-row:not(.skill-effect-slot){display:flex;justify-content:space-between;gap:10px;background:transparent;border-bottom:1px solid #ebe1cc;padding:8px 0}
+body[data-guide="pioneerpreview"] .info-skill-card .horde-detail-row:not(.skill-effect-slot) strong{font-weight:500}
+body[data-guide="pioneerpreview"] .info-skill-card .skill-description{line-height:1.7}
+body[data-guide="pioneerpreview"] .info-accordion{border-left:0;border-right:0}
+body[data-guide="pioneerpreview"] .info-accordion summary{text-transform:none;cursor:pointer}
+body[data-guide="pioneerpreview"] .info-accordion-body{background:transparent;padding:12px 0}
+body[data-guide="pioneerpreview"] .guide-table th{background:#eee9db;font-weight:600}
+body[data-guide="pioneerpreview"] .guide-table td{vertical-align:top}
+body[data-guide="pioneerpreview"] .guide-table tr:last-child td{border-bottom:0}
+body[data-guide="pioneerpreview"] .info-odds{padding:16px;border:1px solid #d7c89d;border-radius:9px;background:#fff8dd;margin:18px 0}
+body[data-guide="pioneerpreview"] .info-odds>label{display:block;font:600 12px/1.5 var(--info-body);margin-bottom:8px}
+body[data-guide="pioneerpreview"] .info-odds select{width:100%;min-height:44px;padding:10px 30px 10px 12px;border:1px solid #bcaa7f;border-radius:6px;background:#fffef1;color:#282625;font:13px var(--info-body)}
+body[data-guide="pioneerpreview"] .info-odds h4{font:600 13px/1.6 var(--info-body);margin:18px 0 4px}
+body[data-guide="pioneerpreview"] .info-odds .guide-table{table-layout:fixed}
+body[data-guide="pioneerpreview"] .info-odds .guide-table th:first-child{width:42%}
+body[data-guide="pioneerpreview"] .info-illustration{margin:16px auto;max-width:430px;text-align:center}
+body[data-guide="pioneerpreview"] .info-illustration img{width:100%;height:auto;border-radius:10px;display:block}
+body[data-guide="pioneerpreview"] .info-illustration figcaption{font:12px/1.7 var(--info-body);color:#746440;margin-top:10px}
+body[data-guide="pioneerpreview"] #whirling-wallop .info-asset-grid img{width:135px;height:135px}
+body[data-guide="pioneerpreview"] #pass .info-asset-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+body[data-guide="pioneerpreview"] #pass .info-asset-grid figure{border:0;background:transparent;padding:4px}
+body[data-guide="pioneerpreview"] #pass .info-asset-grid img{width:100%;max-width:110px;height:100px}
+body[data-guide="pioneerpreview"] #pending{color:#665c48}
+@media(max-width:600px){body[data-guide="pioneerpreview"] .guide-opening{padding:20px 18px}body[data-guide="pioneerpreview"] .guide-opening h1{font-size:26px}body[data-guide="pioneerpreview"] .guide-content>section{padding:22px 0}body[data-guide="pioneerpreview"] .info-odds{padding:12px}body[data-guide="pioneerpreview"] .info-odds .guide-table th,body[data-guide="pioneerpreview"] .info-odds .guide-table td{padding:8px 5px;font-size:11px}body[data-guide="pioneerpreview"] #pass .info-asset-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body[data-guide="pioneerpreview"] #sharpup .info-asset-grid{gap:14px 4px}body[data-guide="pioneerpreview"] #sharpup .info-asset-grid figcaption{font-size:9px}}
+body[data-guide="pioneerpreview"] .info-skill-list[data-card-count="4"]{grid-auto-columns:calc((100% - 36px)/4)}
+body[data-guide="pioneerpreview"] .info-skill-card .horde-detail-row:not(.skill-effect-slot) span{margin:0;text-align:right;flex:0 0 auto;max-width:52%;font-weight:600}
+body[data-guide="pioneerpreview"] .info-skill-card .horde-detail-row:not(.skill-effect-slot) strong{font-weight:400}
+@media(max-width:1000px){body[data-guide="pioneerpreview"] .info-skill-list[data-card-count="4"]{grid-auto-columns:calc((100% - 12px)/2)}}
+@media(max-width:600px){body[data-guide="pioneerpreview"] .info-skill-list[data-card-count]{grid-auto-columns:100%}}
